@@ -756,6 +756,14 @@
   ],
   "staff": [
     {
+      "name": "川上 凛",
+      "role": "スタイリスト",
+      "history": "美容師歴4年",
+      "salon": "fleurami",
+      "bio": "艶のある美しいカラーが得意です。お客様の骨格・肌色に合わせた色をご提案します。",
+      "imageSrc": "/images/admin/staff-2-1782195045005.jpg"
+    },
+    {
       "name": "西内 みゆき",
       "role": "トップスタイリスト",
       "history": "美容師歴20年以上",
@@ -772,30 +780,6 @@
       "imageSrc": "/images/admin/staff-1-1782195037653.jpg"
     },
     {
-      "name": "川上 凛",
-      "role": "スタイリスト",
-      "history": "美容師歴4年",
-      "salon": "fleurami",
-      "bio": "艶のある美しいカラーが得意です。お客様の骨格・肌色に合わせた色をご提案します。",
-      "imageSrc": "/images/admin/staff-2-1782195045005.jpg"
-    },
-    {
-      "name": "西森 心大",
-      "role": "マネージャー",
-      "history": "美容師歴15年",
-      "salon": "Riv.by fleurami",
-      "bio": "くせ毛・うねりのお悩みを縮毛矯正で解決します。扱いやすい髪へと導きます。",
-      "imageSrc": "/images/admin/staff-3-1782195051015.jpg"
-    },
-    {
-      "name": "細川 彩香",
-      "role": "スタイリスト",
-      "history": "美容師歴8年",
-      "salon": "Riv.by fleurami",
-      "bio": "大人女性の髪の悩みに丁寧に寄り添います。白髪ぼかし・グレイカラーが得意です。",
-      "imageSrc": "/images/admin/staff-4-1782195059188.jpg"
-    },
-    {
       "name": "沢村 瑞希",
       "role": "スタイリスト",
       "history": "美容師歴4年",
@@ -810,6 +794,22 @@
       "salon": "Riv.by fleurami",
       "bio": "お客様の「なりたい」を全力でサポートします。",
       "imageSrc": "/images/admin/staff-6-1782195072738.jpg"
+    },
+    {
+      "name": "細川 彩香",
+      "role": "スタイリスト",
+      "history": "美容師歴8年",
+      "salon": "Riv.by fleurami",
+      "bio": "大人女性の髪の悩みに丁寧に寄り添います。白髪ぼかし・グレイカラーが得意です。",
+      "imageSrc": "/images/admin/staff-4-1782195059188.jpg"
+    },
+    {
+      "name": "西森 心大",
+      "role": "マネージャー",
+      "history": "美容師歴15年",
+      "salon": "Riv.by fleurami",
+      "bio": "くせ毛・うねりのお悩みを縮毛矯正で解決します。扱いやすい髪へと導きます。",
+      "imageSrc": "/images/admin/staff-3-1782195051015.jpg"
     },
     {
       "name": "やすい",
