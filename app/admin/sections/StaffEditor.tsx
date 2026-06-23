@@ -8,27 +8,52 @@ import { TextField } from "../components/FormField";
 import type { StaffMember } from "@/lib/content";
 import Image from "next/image";
 
+const SALON_TABS = [
+  { label: "fleurami", value: "fleurami" },
+  { label: "Riv.by fleurami", value: "Riv.by fleurami" },
+  { label: "Raffine", value: "Raffine" },
+] as const;
+
+type SalonValue = typeof SALON_TABS[number]["value"];
+
 export default function StaffEditor({ initial }: { initial: StaffMember[] }) {
   const [data, setData] = useState<StaffMember[]>(initial);
+  const [activeTab, setActiveTab] = useState<SalonValue>("fleurami");
   const [isPending, startTransition] = useTransition();
   const [saveStatus, setSaveStatus] = useState<"idle" | "success" | "error">("idle");
   const [saveError, setSaveError] = useState<string>("");
 
-  function update(i: number, field: keyof StaffMember, value: string) {
+  // 現在タブの staff と全体インデックスのペア
+  const tabEntries = data
+    .map((member, index) => ({ member, index }))
+    .filter(({ member }) => member.salon === activeTab);
+
+  function update(globalIdx: number, field: keyof StaffMember, value: string) {
     const next = [...data];
-    next[i] = { ...next[i], [field]: value };
+    next[globalIdx] = { ...next[globalIdx], [field]: value };
     setData(next);
   }
 
   function add() {
     setData((prev) => [
       ...prev,
-      { name: "", role: "スタイリスト", salon: "", bio: "", imageSrc: "" },
+      { name: "", role: "スタイリスト", salon: activeTab, bio: "", imageSrc: "" },
     ]);
   }
 
-  function remove(i: number) {
-    setData((prev) => prev.filter((_, idx) => idx !== i));
+  function remove(globalIdx: number) {
+    setData((prev) => prev.filter((_, idx) => idx !== globalIdx));
+  }
+
+  // タブ内での順番入れ替え（全体配列の該当2要素をスワップ）
+  function move(globalIdx: number, direction: -1 | 1) {
+    const pos = tabEntries.findIndex((e) => e.index === globalIdx);
+    const targetPos = pos + direction;
+    if (targetPos < 0 || targetPos >= tabEntries.length) return;
+    const targetGlobalIdx = tabEntries[targetPos].index;
+    const next = [...data];
+    [next[globalIdx], next[targetGlobalIdx]] = [next[targetGlobalIdx], next[globalIdx]];
+    setData(next);
   }
 
   function handleSave() {
@@ -48,10 +73,11 @@ export default function StaffEditor({ initial }: { initial: StaffMember[] }) {
   const preview = (
     <div className="py-12 px-4">
       <p className="text-xs tracking-[0.3em] text-[#B8956A] mb-2 uppercase text-center">Staff</p>
-      <h2 className="text-2xl font-semibold text-[#2A2A2A] mb-8 text-center">スタッフ紹介</h2>
+      <h2 className="text-2xl font-semibold text-[#2A2A2A] mb-2 text-center">スタッフ紹介</h2>
+      <p className="text-xs text-[#888] text-center mb-6">{activeTab}</p>
       <div className="grid grid-cols-2 gap-4 max-w-3xl mx-auto">
-        {data.map((member, i) => (
-          <div key={i} className="border border-[#E8E4E0] overflow-hidden">
+        {tabEntries.map(({ member, index }) => (
+          <div key={index} className="border border-[#E8E4E0] overflow-hidden">
             {member.imageSrc ? (
               <div className="relative h-40 w-full">
                 <Image src={member.imageSrc} alt={member.name} fill className="object-cover" unoptimized />
@@ -73,7 +99,7 @@ export default function StaffEditor({ initial }: { initial: StaffMember[] }) {
             </div>
           </div>
         ))}
-        {data.length === 0 && (
+        {tabEntries.length === 0 && (
           <p className="text-sm text-[#888] col-span-2 text-center">スタッフがいません</p>
         )}
       </div>
@@ -89,37 +115,78 @@ export default function StaffEditor({ initial }: { initial: StaffMember[] }) {
       saveStatus={saveStatus}
       saveError={saveError}
     >
+      {/* 店舗タブ */}
+      <div className="flex border-b border-[#333] -mx-6 px-6 mb-5">
+        {SALON_TABS.map((tab) => {
+          const count = data.filter((m) => m.salon === tab.value).length;
+          return (
+            <button
+              key={tab.value}
+              type="button"
+              onClick={() => setActiveTab(tab.value)}
+              className={`text-xs px-4 py-2.5 transition-colors whitespace-nowrap ${
+                activeTab === tab.value
+                  ? "text-[#B8956A] border-b-2 border-[#B8956A] -mb-px"
+                  : "text-gray-400 hover:text-white"
+              }`}
+            >
+              {tab.label}
+              <span className="ml-1 text-[10px] opacity-60">({count})</span>
+            </button>
+          );
+        })}
+      </div>
+
+      {/* スタッフカード一覧 */}
       <div className="space-y-5">
-        {data.map((member, i) => (
-          <div key={i} className="bg-[#1a1a1a] border border-[#333] rounded-sm p-4 space-y-3">
-            <div className="flex items-center justify-between">
-              <span className="text-xs text-[#B8956A]">スタッフ {i + 1}</span>
+        {tabEntries.map(({ member, index }, pos) => (
+          <div key={index} className="bg-[#1a1a1a] border border-[#333] rounded-sm p-4 space-y-3">
+            {/* ヘッダー行 */}
+            <div className="flex items-center gap-2">
+              <div className="flex flex-col gap-0.5">
+                <button
+                  type="button"
+                  onClick={() => move(index, -1)}
+                  disabled={pos === 0}
+                  className="text-[10px] text-gray-400 hover:text-white disabled:opacity-20 leading-none px-1 py-0.5"
+                >▲</button>
+                <button
+                  type="button"
+                  onClick={() => move(index, 1)}
+                  disabled={pos === tabEntries.length - 1}
+                  className="text-[10px] text-gray-400 hover:text-white disabled:opacity-20 leading-none px-1 py-0.5"
+                >▼</button>
+              </div>
+              <span className="text-xs text-[#B8956A] flex-1">スタッフ {pos + 1}</span>
               <button
                 type="button"
-                onClick={() => remove(i)}
+                onClick={() => remove(index)}
                 className="text-xs text-red-400 hover:text-red-300 transition-colors"
               >
                 削除
               </button>
             </div>
-            <TextField label="名前" value={member.name} onChange={(v) => update(i, "name", v)} />
-            <TextField label="役職" value={member.role} onChange={(v) => update(i, "role", v)} placeholder="スタイリスト / アイリスト" />
-            <TextField label="サロン" value={member.salon} onChange={(v) => update(i, "salon", v)} placeholder="Riv.by fleurami" />
-            <TextField label="紹介文" value={member.bio} onChange={(v) => update(i, "bio", v)} multiline rows={3} />
+
+            <TextField label="名前" value={member.name} onChange={(v) => update(index, "name", v)} />
+            <TextField label="役職" value={member.role} onChange={(v) => update(index, "role", v)} placeholder="スタイリスト / アイリスト" />
+            <TextField label="サロン" value={member.salon} onChange={(v) => update(index, "salon", v)} placeholder="Riv.by fleurami" />
+            <TextField label="経歴" value={member.history ?? ""} onChange={(v) => update(index, "history", v)} placeholder="例: 経験15年" />
+            <TextField label="紹介文" value={member.bio} onChange={(v) => update(index, "bio", v)} multiline rows={3} />
             <ImageUpload
               label="写真"
               value={member.imageSrc}
-              onChange={(v) => update(i, "imageSrc", v)}
-              section={`staff-${i}`}
+              onChange={(v) => update(index, "imageSrc", v)}
+              section={`staff-${index}`}
             />
           </div>
         ))}
+
         <button
           type="button"
           onClick={add}
           className="text-xs text-[#B8956A] hover:text-white transition-colors border border-dashed border-[#444] w-full py-3 rounded-sm"
         >
-          + スタッフを追加
+          + {activeTab} にスタッフを追加
         </button>
       </div>
     </SectionLayout>
