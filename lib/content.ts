@@ -89,16 +89,8 @@ export interface SiteContent {
     cta2: string;
     images: string[];
   };
-  salons: {
-    riv: SalonContent;
-    fleurami: SalonContent;
-    raffine: SalonContent;
-  };
-  menus: {
-    riv: MenuCategory[];
-    fleurami: MenuCategory[];
-    raffine: MenuCategory[];
-  };
+  salons: Record<string, SalonContent>;
+  menus: Record<string, MenuCategory[]>;
   topFaq: FaqItem[];
   popularMenus: PopularMenu[];
   quickLinks: QuickLinkCard[];

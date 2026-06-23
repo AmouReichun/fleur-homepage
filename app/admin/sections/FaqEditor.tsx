@@ -3,15 +3,18 @@
 import { useState, useTransition } from "react";
 import { saveContent } from "../actions";
 import SectionLayout from "../components/SectionLayout";
-import type { FaqItem } from "@/lib/content";
+import type { FaqItem, SalonContent } from "@/lib/content";
 
-const SALON_OPTIONS = [
-  { key: "fleurami", label: "fleurami" },
-  { key: "riv", label: "Riv.by fleurami" },
-  { key: "raffine", label: "Raffine" },
-];
-
-export default function FaqEditor({ initial }: { initial: FaqItem[] }) {
+export default function FaqEditor({
+  initial,
+  salons,
+  salonOrder,
+}: {
+  initial: FaqItem[];
+  salons: Record<string, SalonContent>;
+  salonOrder: string[];
+}) {
+  const SALON_OPTIONS = salonOrder.map((k) => ({ key: k, label: salons[k]?.name ?? k }));
   const [data, setData] = useState<FaqItem[]>(initial);
   const [isPending, startTransition] = useTransition();
   const [saveStatus, setSaveStatus] = useState<"idle" | "success" | "error">("idle");
@@ -23,7 +26,7 @@ export default function FaqEditor({ initial }: { initial: FaqItem[] }) {
     setData(next);
   }
 
-  function add() { setData((prev) => [...prev, { q: "", a: "", salon: "fleurami" }]); }
+  function add() { setData((prev) => [...prev, { q: "", a: "", salon: SALON_OPTIONS[0]?.key ?? "" }]); }
   function remove(i: number) { setData((prev) => prev.filter((_, idx) => idx !== i)); }
 
   function handleSave() {

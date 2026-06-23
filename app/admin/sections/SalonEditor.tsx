@@ -8,7 +8,7 @@ import ImageUpload from "../components/ImageUpload";
 import type { SalonContent, FaqItem } from "@/lib/content";
 
 interface SalonEditorProps {
-  salonKey: "riv" | "fleurami" | "raffine";
+  salonKey: string;
   initial: SalonContent;
 }
 
@@ -65,7 +65,7 @@ export default function SalonEditor({ salonKey, initial }: SalonEditorProps) {
     handleSave(updated);
   }
 
-  const bgClass = salonKey === "riv" ? "bg-[#F5F0EA]" : salonKey === "fleurami" ? "bg-[#F0E8E8]" : "bg-[#E8E4E0]";
+  const bgClass = "bg-[#F5F0EA]";
 
   const preview = (
     <div>

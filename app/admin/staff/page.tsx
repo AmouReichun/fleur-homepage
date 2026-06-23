@@ -8,7 +8,7 @@ export default function AdminStaffPage() {
     <div className="flex h-screen">
       <AdminSidebar />
       <div className="flex-1 overflow-hidden flex flex-col">
-        <StaffEditor initial={content.staff} />
+        <StaffEditor initial={content.staff} salons={content.salons} salonOrder={content.salonOrder} />
       </div>
     </div>
   );

@@ -38,6 +38,27 @@ export async function logoutAction() {
   redirect("/admin/login");
 }
 
+export async function addSalon(key: string, name: string, salonType: string, area: string) {
+  const current = await getContentLatest();
+  if (current.salons[key]) return { success: false, error: "同じキーのサロンが既に存在します" };
+  current.salons[key] = {
+    salonType, name, nameReading: "", area, tagline: "", description: "",
+    features: [], address: "", phone: "", hoursWeekday: "", hoursSaturday: "",
+    closed: "", parking: "", hotpepperUrl: "", instagramUrl: "", imageSrc: "",
+    mapEmbedUrl: "", faq: [],
+  };
+  current.menus[key] = [];
+  current.salonOrder.push(key);
+  const newJson = JSON.stringify(current, null, 2);
+  try { fs.writeFileSync(CONTENT_PATH, newJson); } catch { /* read-only on Vercel */ }
+  if (process.env.GITHUB_TOKEN && process.env.GITHUB_OWNER && process.env.GITHUB_REPO) {
+    try { await commitToGitHub(newJson); } catch (e) {
+      return { success: false, error: e instanceof Error ? e.message : String(e) };
+    }
+  }
+  return { success: true };
+}
+
 export async function saveSalonOrder(order: string[]) {
   const current = await getContentLatest();
   current.salonOrder = order;

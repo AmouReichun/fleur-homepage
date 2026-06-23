@@ -3,30 +3,24 @@
 import { useState, useTransition } from "react";
 import { saveContent } from "../actions";
 import SectionLayout from "../components/SectionLayout";
-import type { MenuCategory, MenuItem } from "@/lib/content";
+import type { MenuCategory, MenuItem, SalonContent } from "@/lib/content";
 
-interface MenuEditorData {
-  riv: MenuCategory[];
-  fleurami: MenuCategory[];
-  raffine: MenuCategory[];
-}
-
-type SalonTab = "riv" | "fleurami" | "raffine";
-
-const salonLabels: Record<SalonTab, string> = {
-  riv: "Riv.by fleurami",
-  fleurami: "fleurami",
-  raffine: "Raffine",
-};
-
-export default function MenuEditor({ initial }: { initial: MenuEditorData }) {
-  const [data, setData] = useState<MenuEditorData>(initial);
-  const [activeTab, setActiveTab] = useState<SalonTab>("fleurami");
+export default function MenuEditor({
+  initial,
+  salons,
+  salonOrder,
+}: {
+  initial: Record<string, MenuCategory[]>;
+  salons: Record<string, SalonContent>;
+  salonOrder: string[];
+}) {
+  const [data, setData] = useState<Record<string, MenuCategory[]>>(initial);
+  const [activeTab, setActiveTab] = useState<string>(salonOrder[0] ?? "");
   const [isPending, startTransition] = useTransition();
   const [saveStatus, setSaveStatus] = useState<"idle" | "success" | "error">("idle");
   const [saveError, setSaveError] = useState<string>("");
 
-  const categories = data[activeTab];
+  const categories = data[activeTab] ?? [];
 
   function updateCategories(cats: MenuCategory[]) {
     setData((prev) => ({ ...prev, [activeTab]: cats }));
@@ -94,11 +88,11 @@ export default function MenuEditor({ initial }: { initial: MenuEditorData }) {
     });
   }
 
+  const activeName = salons[activeTab]?.name ?? activeTab;
+
   const preview = (
     <div className="p-6">
-      <p className="text-xs tracking-[0.3em] text-[#B8956A] mb-1 uppercase">
-        {salonLabels[activeTab]}
-      </p>
+      <p className="text-xs tracking-[0.3em] text-[#B8956A] mb-1 uppercase">{activeName}</p>
       <h2 className="text-xl font-semibold text-[#2A2A2A] mb-6">メニュー</h2>
       {categories.map((cat, i) => (
         <div key={i} className="mb-6">
@@ -107,24 +101,15 @@ export default function MenuEditor({ initial }: { initial: MenuEditorData }) {
           </p>
           <div className="space-y-2">
             {cat.items.map((item, j) => (
-              <div
-                key={j}
-                className="bg-[#FAFAF8] border border-[#E8E4E0] p-4 flex justify-between items-start gap-4"
-              >
+              <div key={j} className="bg-[#FAFAF8] border border-[#E8E4E0] p-4 flex justify-between items-start gap-4">
                 <div>
                   <p className="text-sm font-semibold text-[#2A2A2A]">{item.name || "（名前）"}</p>
-                  {item.desc && (
-                    <p className="text-xs text-[#888]">{item.desc}</p>
-                  )}
+                  {item.desc && <p className="text-xs text-[#888]">{item.desc}</p>}
                 </div>
-                <p className="text-sm font-medium text-[#B8956A] whitespace-nowrap">
-                  {item.price || "—"}
-                </p>
+                <p className="text-sm font-medium text-[#B8956A] whitespace-nowrap">{item.price || "—"}</p>
               </div>
             ))}
-            {cat.items.length === 0 && (
-              <p className="text-xs text-[#888] italic">（メニューなし）</p>
-            )}
+            {cat.items.length === 0 && <p className="text-xs text-[#888] italic">（メニューなし）</p>}
           </div>
         </div>
       ))}
@@ -141,19 +126,19 @@ export default function MenuEditor({ initial }: { initial: MenuEditorData }) {
       saveError={saveError}
     >
       {/* Salon tabs */}
-      <div className="flex border-b border-[#333] -mx-6 px-6 mb-4">
-        {(["fleurami", "riv", "raffine"] as SalonTab[]).map((tab) => (
+      <div className="flex flex-wrap border-b border-[#333] -mx-6 px-6 mb-4">
+        {salonOrder.map((key) => (
           <button
-            key={tab}
+            key={key}
             type="button"
-            onClick={() => setActiveTab(tab)}
+            onClick={() => setActiveTab(key)}
             className={`text-xs px-4 py-2.5 transition-colors ${
-              activeTab === tab
+              activeTab === key
                 ? "text-[#B8956A] border-b-2 border-[#B8956A] -mb-px"
                 : "text-gray-400 hover:text-white"
             }`}
           >
-            {salonLabels[tab]}
+            {salons[key]?.name ?? key}
           </button>
         ))}
       </div>
@@ -169,17 +154,13 @@ export default function MenuEditor({ initial }: { initial: MenuEditorData }) {
                   onClick={() => moveCategory(catIdx, -1)}
                   disabled={catIdx === 0}
                   className="text-[10px] text-gray-400 hover:text-white disabled:opacity-20 leading-none px-1 py-0.5"
-                >
-                  ▲
-                </button>
+                >▲</button>
                 <button
                   type="button"
                   onClick={() => moveCategory(catIdx, 1)}
                   disabled={catIdx === categories.length - 1}
                   className="text-[10px] text-gray-400 hover:text-white disabled:opacity-20 leading-none px-1 py-0.5"
-                >
-                  ▼
-                </button>
+                >▼</button>
               </div>
               <input
                 type="text"
@@ -218,9 +199,7 @@ export default function MenuEditor({ initial }: { initial: MenuEditorData }) {
                     type="button"
                     onClick={() => removeItem(catIdx, itemIdx)}
                     className="text-red-400 hover:text-red-300 text-xs px-2 py-2 transition-colors"
-                  >
-                    ✕
-                  </button>
+                  >✕</button>
                 </div>
               ))}
             </div>
@@ -237,7 +216,7 @@ export default function MenuEditor({ initial }: { initial: MenuEditorData }) {
         <button
           type="button"
           onClick={addCategory}
-          className="text-xs text-[#B8956A] hover:text-white transition-colors py-1 border border-dashed border-[#444] w-full py-3 rounded-sm"
+          className="text-xs text-[#B8956A] hover:text-white transition-colors border border-dashed border-[#444] w-full py-3 rounded-sm"
         >
           + カテゴリー追加
         </button>

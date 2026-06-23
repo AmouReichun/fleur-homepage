@@ -8,7 +8,7 @@ export default function AdminFaqPage() {
     <div className="flex h-screen">
       <AdminSidebar />
       <div className="flex-1 overflow-hidden flex flex-col">
-        <FaqEditor initial={content.topFaq} />
+        <FaqEditor initial={content.topFaq} salons={content.salons} salonOrder={content.salonOrder} />
       </div>
     </div>
   );

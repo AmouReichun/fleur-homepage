@@ -8,7 +8,7 @@ export default function AdminMenusPage() {
     <div className="flex h-screen">
       <AdminSidebar />
       <div className="flex-1 overflow-hidden flex flex-col">
-        <MenuEditor initial={content.menus} />
+        <MenuEditor initial={content.menus} salons={content.salons} salonOrder={content.salonOrder} />
       </div>
     </div>
   );

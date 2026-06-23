@@ -4,20 +4,25 @@ import { useState, useTransition } from "react";
 import { saveContent } from "../actions";
 import SectionLayout from "../components/SectionLayout";
 import ImageUpload from "../components/ImageUpload";
-import type { NewsItem } from "@/lib/content";
-
-const SALON_OPTIONS = [
-  { value: "", label: "全店舗共通" },
-  { value: "fleurami", label: "fleurami" },
-  { value: "riv", label: "Riv.by fleurami" },
-  { value: "raffine", label: "Raffine" },
-];
+import type { NewsItem, SalonContent } from "@/lib/content";
 
 function today() {
   return new Date().toISOString().slice(0, 10);
 }
 
-export default function NewsEditor({ initial }: { initial: NewsItem[] }) {
+export default function NewsEditor({
+  initial,
+  salons,
+  salonOrder,
+}: {
+  initial: NewsItem[];
+  salons: Record<string, SalonContent>;
+  salonOrder: string[];
+}) {
+  const SALON_OPTIONS = [
+    { value: "", label: "全店舗共通" },
+    ...salonOrder.map((k) => ({ value: k, label: salons[k]?.name ?? k })),
+  ];
   const [data, setData] = useState<NewsItem[]>(initial);
   const [isPending, startTransition] = useTransition();
   const [saveStatus, setSaveStatus] = useState<"idle" | "success" | "error">("idle");

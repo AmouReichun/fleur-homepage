@@ -15,11 +15,6 @@ const otherSections = [
 
 export default function AdminPage() {
   const content = getContent();
-  const salonTypes: Record<string, string> = {
-    riv: content.salons.riv.salonType,
-    fleurami: content.salons.fleurami.salonType,
-    raffine: content.salons.raffine.salonType,
-  };
 
   return (
     <div className="flex h-screen">
@@ -34,7 +29,7 @@ export default function AdminPage() {
           {/* 店舗管理（並び替え付き） */}
           <section>
             <h2 className="text-xs text-gray-400 uppercase tracking-wider mb-3">店舗管理</h2>
-            <SalonOrderEditor initialOrder={content.salonOrder} salonTypes={salonTypes} />
+            <SalonOrderEditor initialOrder={content.salonOrder} salons={content.salons} />
           </section>
 
           {/* その他セクション */}

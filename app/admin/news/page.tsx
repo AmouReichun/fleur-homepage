@@ -8,7 +8,7 @@ export default function AdminNewsPage() {
     <div className="flex h-screen">
       <AdminSidebar />
       <div className="flex-1 overflow-hidden flex flex-col">
-        <NewsEditor initial={content.news ?? []} />
+        <NewsEditor initial={content.news ?? []} salons={content.salons} salonOrder={content.salonOrder} />
       </div>
     </div>
   );

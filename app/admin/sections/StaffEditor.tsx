@@ -5,20 +5,21 @@ import { saveContent } from "../actions";
 import SectionLayout from "../components/SectionLayout";
 import ImageUpload from "../components/ImageUpload";
 import { TextField } from "../components/FormField";
-import type { StaffMember } from "@/lib/content";
+import type { StaffMember, SalonContent } from "@/lib/content";
 import Image from "next/image";
 
-const SALON_TABS = [
-  { label: "fleurami", value: "fleurami" },
-  { label: "Riv.by fleurami", value: "Riv.by fleurami" },
-  { label: "Raffine", value: "Raffine" },
-] as const;
-
-type SalonValue = typeof SALON_TABS[number]["value"];
-
-export default function StaffEditor({ initial }: { initial: StaffMember[] }) {
+export default function StaffEditor({
+  initial,
+  salons,
+  salonOrder,
+}: {
+  initial: StaffMember[];
+  salons: Record<string, SalonContent>;
+  salonOrder: string[];
+}) {
+  const SALON_TABS = salonOrder.map((k) => ({ label: salons[k]?.name ?? k, value: salons[k]?.name ?? k }));
   const [data, setData] = useState<StaffMember[]>(initial);
-  const [activeTab, setActiveTab] = useState<SalonValue>("fleurami");
+  const [activeTab, setActiveTab] = useState<string>(SALON_TABS[0]?.value ?? "");
   const [isPending, startTransition] = useTransition();
   const [saveStatus, setSaveStatus] = useState<"idle" | "success" | "error">("idle");
   const [saveError, setSaveError] = useState<string>("");
