@@ -36,6 +36,14 @@ export default function SalonEditor({ salonKey, initial }: SalonEditorProps) {
     setData((prev) => ({ ...prev, faq: prev.faq.filter((_, idx) => idx !== i) }));
   }
 
+  function moveFaq(i: number, direction: -1 | 1) {
+    const next = [...data.faq];
+    const target = i + direction;
+    if (target < 0 || target >= next.length) return;
+    [next[i], next[target]] = [next[target], next[i]];
+    setData((prev) => ({ ...prev, faq: next }));
+  }
+
   function handleSave(overrideData?: SalonContent) {
     const payload = overrideData ?? data;
     startTransition(async () => {
@@ -203,7 +211,23 @@ export default function SalonEditor({ salonKey, initial }: SalonEditorProps) {
           {data.faq.map((item, i) => (
             <div key={i} className="bg-white border border-[#E0DCD8] rounded-lg p-4 space-y-2">
               <div className="flex items-center justify-between mb-1">
-                <span className="text-xs font-semibold text-[#B8956A]">質問 {i + 1}</span>
+                <div className="flex items-center gap-2">
+                  <div className="flex flex-col gap-0.5">
+                    <button
+                      type="button"
+                      onClick={() => moveFaq(i, -1)}
+                      disabled={i === 0}
+                      className="text-[10px] text-[#999] hover:text-[#B8956A] disabled:opacity-20 leading-none px-1"
+                    >▲</button>
+                    <button
+                      type="button"
+                      onClick={() => moveFaq(i, 1)}
+                      disabled={i === data.faq.length - 1}
+                      className="text-[10px] text-[#999] hover:text-[#B8956A] disabled:opacity-20 leading-none px-1"
+                    >▼</button>
+                  </div>
+                  <span className="text-xs font-semibold text-[#B8956A]">質問 {i + 1}</span>
+                </div>
                 <button type="button" onClick={() => removeFaq(i)} className="text-xs text-red-400 hover:text-red-600 transition-colors">削除</button>
               </div>
               <textarea
