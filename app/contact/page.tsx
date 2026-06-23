@@ -7,7 +7,7 @@ import ContactForm from "@/app/components/ContactForm";
 export const metadata: Metadata = {
   title: "お問い合わせ",
   description:
-    "fleurami GROUPへのお問い合わせはこちら。店舗に関するご質問、採用に関するご相談など、お気軽にお問い合わせください。",
+    "fleur GROUPへのお問い合わせはこちら。店舗に関するご質問、採用に関するご相談など、お気軽にお問い合わせください。",
   alternates: { canonical: "https://fleurami-group.jp/contact" },
 };
 

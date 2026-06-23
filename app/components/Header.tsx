@@ -42,7 +42,7 @@ export default function Header() {
               solid ? "text-site-text" : "text-white"
             }`}
           >
-            fleurami GROUP
+            fleur GROUP
           </Link>
 
           <nav className="hidden md:flex items-center gap-8 lg:gap-10">

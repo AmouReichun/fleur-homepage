@@ -7,7 +7,7 @@ import StaffTabs from "@/app/components/StaffTabs";
 export const metadata: Metadata = {
   title: "スタッフ紹介",
   description:
-    "fleurami GROUPのスタッフ紹介。fleurami・Riv.by fleurami・Raffineで活躍するスタイリスト・アイリストをご紹介します。",
+    "fleur GROUPのスタッフ紹介。fleurami・Riv.by fleurami・Raffineで活躍するスタイリスト・アイリストをご紹介します。",
   alternates: { canonical: "https://fleurami-group.jp/staff" },
 };
 

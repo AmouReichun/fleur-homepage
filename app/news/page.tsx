@@ -5,7 +5,7 @@ import { breadcrumbSchema } from "@/lib/structured-data";
 
 export const metadata: Metadata = {
   title: "最新情報",
-  description: "fleurami GROUPのキャンペーン・お知らせ・最新情報をお届けします。",
+  description: "fleur GROUPのキャンペーン・お知らせ・最新情報をお届けします。",
   alternates: { canonical: "https://fleurami-group.jp/news" },
 };
 

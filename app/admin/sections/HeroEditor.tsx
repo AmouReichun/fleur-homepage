@@ -101,7 +101,7 @@ export default function HeroEditor({ initial }: { initial: HeroData }) {
       )}
       <div className="relative w-full max-w-4xl mx-auto px-4 py-16 text-center">
         <p className={`text-xs tracking-[0.3em] mb-4 uppercase ${hasImage ? "text-white/80" : "text-[#B8956A]"}`}>
-          fleurami GROUP
+          fleur GROUP
         </p>
         <h1 className={`text-xl font-semibold leading-snug mb-4 ${hasImage ? "text-white" : "text-[#2A2A2A]"}`}>
           {data.title || "（タイトルを入力）"}

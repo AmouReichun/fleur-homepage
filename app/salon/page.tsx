@@ -6,7 +6,7 @@ import { breadcrumbSchema } from "@/lib/structured-data";
 export const metadata: Metadata = {
   title: "店舗案内",
   description:
-    "fleurami GROUPは高知市・香南市で美容室2店舗（Riv.by fleurami・fleurami）とアイラッシュサロン1店舗（Raffine）を展開しています。",
+    "fleur GROUPは高知市・香南市で美容室2店舗（Riv.by fleurami・fleurami）とアイラッシュサロン1店舗（Raffine）を展開しています。",
   alternates: { canonical: "https://fleurami-group.jp/salon" },
 };
 

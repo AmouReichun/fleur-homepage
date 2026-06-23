@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "管理画面 | fleurami GROUP",
+  title: "管理画面 | fleur GROUP",
   robots: "noindex, nofollow",
 };
 

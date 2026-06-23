@@ -22,7 +22,7 @@ export default function LoginPage() {
       <div className="w-full max-w-sm">
         <div className="text-center mb-8">
           <p className="text-xs tracking-[0.3em] text-[#B8956A] mb-3 uppercase font-medium">Admin</p>
-          <h1 className="text-2xl font-semibold text-[#1A1A1A]">fleurami GROUP</h1>
+          <h1 className="text-2xl font-semibold text-[#1A1A1A]">fleur GROUP</h1>
           <p className="text-sm text-[#888] mt-1">管理画面へログイン</p>
         </div>
 

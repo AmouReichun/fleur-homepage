@@ -1,7 +1,7 @@
 export const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  name: "fleurami GROUP",
+  name: "fleur GROUP",
   url: "https://fleurami-group.jp",
   description:
     "高知市・香南市で美容室2店舗（Riv.by fleurami・fleurami）、アイラッシュサロン1店舗（Raffine）を展開するグループ。",
@@ -67,7 +67,7 @@ export const rivSalonSchema = {
     },
   ],
   sameAs: ["https://beauty.hotpepper.jp/slnH000634137/"],
-  parentOrganization: { "@type": "Organization", name: "fleurami GROUP" },
+  parentOrganization: { "@type": "Organization", name: "fleur GROUP" },
 };
 
 export const fleuramiSalonSchema = {
@@ -109,7 +109,7 @@ export const fleuramiSalonSchema = {
     },
   ],
   sameAs: ["https://beauty.hotpepper.jp/slnH000528388/"],
-  parentOrganization: { "@type": "Organization", name: "fleurami GROUP" },
+  parentOrganization: { "@type": "Organization", name: "fleur GROUP" },
 };
 
 export const raffineSalonSchema = {
@@ -150,7 +150,7 @@ export const raffineSalonSchema = {
     },
   ],
   sameAs: ["https://beauty.hotpepper.jp/kr/slnH000767549/"],
-  parentOrganization: { "@type": "Organization", name: "fleurami GROUP" },
+  parentOrganization: { "@type": "Organization", name: "fleur GROUP" },
 };
 
 export const faqPageSchema = {
@@ -199,10 +199,10 @@ export const faqPageSchema = {
     },
     {
       "@type": "Question",
-      name: "fleurami GROUPはどこにありますか？",
+      name: "fleur GROUPはどこにありますか？",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "fleurami GROUPは高知県内に3店舗展開しています。fleurami（香南市野市町西野230、電話0887-56-5566）、Riv.by fleurami（高知市南川添9-21、電話088-884-5566）、Raffine（高知市はりまや町1-4-8、電話090-7120-5566）です。",
+        text: "fleur GROUPは高知県内に3店舗展開しています。fleurami（香南市野市町西野230、電話0887-56-5566）、Riv.by fleurami（高知市南川添9-21、電話088-884-5566）、Raffine（高知市はりまや町1-4-8、電話090-7120-5566）です。",
       },
     },
   ],

@@ -40,7 +40,7 @@ export default function CompanyEditor({ initial }: { initial: CompanyData }) {
   }
 
   const rows = [
-    { label: "グループ名", value: "fleurami GROUP" },
+    { label: "グループ名", value: "fleur GROUP" },
     { label: "会社名", value: data.name },
     { label: "代表者", value: data.representative },
     { label: "設立", value: data.founded },

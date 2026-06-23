@@ -35,7 +35,7 @@ export default function AdminSidebar() {
       <div className="px-5 py-5 border-b border-[#E8E4E0]">
         <Link href="/admin" className="block">
           <p className="text-[10px] tracking-[0.25em] text-[#B8956A] uppercase font-medium mb-0.5">Admin</p>
-          <p className="text-base font-semibold text-[#1A1A1A]">fleurami GROUP</p>
+          <p className="text-base font-semibold text-[#1A1A1A]">fleur GROUP</p>
         </Link>
       </div>
 

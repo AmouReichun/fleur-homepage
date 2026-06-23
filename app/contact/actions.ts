@@ -31,7 +31,7 @@ export async function sendContact(formData: FormData) {
 
   try {
     await resend.emails.send({
-      from: "fleurami GROUP お問い合わせ <noreply@fleurami-group.jp>",
+      from: "fleur GROUP お問い合わせ <noreply@fleurami-group.jp>",
       to: toEmail,
       replyTo: email,
       subject: `【お問い合わせ】${typeLabel[type] ?? type} - ${name}様`,

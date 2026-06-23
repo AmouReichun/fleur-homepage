@@ -26,11 +26,11 @@ const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: {
-    default: "fleurami GROUP | 高知の美容室・アイラッシュサロン",
-    template: "%s | fleurami GROUP",
+    default: "fleur GROUP | 高知の美容室・アイラッシュサロン",
+    template: "%s | fleur GROUP",
   },
   description:
-    "高知市・香南市で美容室2店舗（Riv.by fleurami・fleurami）、アイラッシュサロン1店舗（Raffine）を展開するfleurami GROUP。髪質改善・白髪ぼかし・縮毛矯正・まつげパーマ・眉毛WAXなど幅広いメニューをご用意しています。",
+    "高知市・香南市で美容室2店舗（Riv.by fleurami・fleurami）、アイラッシュサロン1店舗（Raffine）を展開するfleur GROUP。髪質改善・白髪ぼかし・縮毛矯正・まつげパーマ・眉毛WAXなど幅広いメニューをご用意しています。",
   keywords: [
     "高知 美容室",
     "高知市 髪質改善",
@@ -49,9 +49,9 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "ja_JP",
-    siteName: "fleurami GROUP",
+    siteName: "fleur GROUP",
     url: BASE_URL,
-    title: "fleurami GROUP | 高知の美容室・アイラッシュサロン",
+    title: "fleur GROUP | 高知の美容室・アイラッシュサロン",
     description:
       "高知市・香南市で3サロンを展開。髪質改善・白髪ぼかし・縮毛矯正・まつげパーマ・眉毛WAX。",
     images: [
@@ -59,13 +59,13 @@ export const metadata: Metadata = {
         url: "/images/admin/hero-1782190629178.png",
         width: 1200,
         height: 630,
-        alt: "fleurami GROUP | 高知の美容室・アイラッシュサロン",
+        alt: "fleur GROUP | 高知の美容室・アイラッシュサロン",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "fleurami GROUP | 高知の美容室・アイラッシュサロン",
+    title: "fleur GROUP | 高知の美容室・アイラッシュサロン",
     description:
       "高知市・香南市で3サロンを展開。髪質改善・白髪ぼかし・縮毛矯正・まつげパーマ・眉毛WAX。",
     images: ["/images/admin/hero-1782190629178.png"],

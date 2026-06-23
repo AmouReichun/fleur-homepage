@@ -7,7 +7,7 @@ import MenuTabs from "@/app/components/MenuTabs";
 export const metadata: Metadata = {
   title: "メニュー一覧",
   description:
-    "fleurami GROUPのメニュー一覧。髪質改善・白髪ぼかし・縮毛矯正・艶カラー（Riv.by fleurami / fleurami）、まつげパーマ・ラッシュリフト・眉毛WAX（Raffine）など幅広くご用意しています。",
+    "fleur GROUPのメニュー一覧。髪質改善・白髪ぼかし・縮毛矯正・艶カラー（Riv.by fleurami / fleurami）、まつげパーマ・ラッシュリフト・眉毛WAX（Raffine）など幅広くご用意しています。",
   alternates: { canonical: "https://fleurami-group.jp/menu" },
 };
 
