@@ -43,9 +43,6 @@ export default function MenuPage() {
             <span className="text-[10px] tracking-[0.45em] text-site-accent uppercase">Menu</span>
           </div>
           <h1 className="font-serif text-4xl sm:text-5xl font-light text-site-text">メニュー一覧</h1>
-          <p className="text-xs text-site-muted mt-4 tracking-wider">
-            表示順は管理画面の「店舗の順番」設定に連動しています
-          </p>
         </div>
       </div>
 
