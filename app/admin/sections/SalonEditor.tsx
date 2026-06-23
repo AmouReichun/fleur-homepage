@@ -190,6 +190,13 @@ export default function SalonEditor({ salonKey, initial }: SalonEditorProps) {
         section={`salon-${salonKey}`}
       />
 
+      <StringListField
+        label="メニュー備考・ご注意事項"
+        values={data.menuNotes ?? []}
+        onChange={(v) => update("menuNotes", v)}
+        placeholder="例: 当日キャンセルはキャンセル料が発生します"
+      />
+
       <div className="border-t border-[#E0DCD8] pt-4 mt-2">
         <p className="text-xs text-[#888] font-semibold mb-3 uppercase tracking-wider">❓ よくある質問（FAQ）</p>
         <div className="space-y-3">

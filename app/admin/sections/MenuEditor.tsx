@@ -40,6 +40,14 @@ export default function MenuEditor({ initial }: { initial: MenuEditorData }) {
     updateCategories(categories.filter((_, idx) => idx !== i));
   }
 
+  function moveCategory(i: number, direction: -1 | 1) {
+    const next = [...categories];
+    const target = i + direction;
+    if (target < 0 || target >= next.length) return;
+    [next[i], next[target]] = [next[target], next[i]];
+    updateCategories(next);
+  }
+
   function updateCategoryName(i: number, name: string) {
     const next = [...categories];
     next[i] = { ...next[i], category: name };
@@ -154,18 +162,36 @@ export default function MenuEditor({ initial }: { initial: MenuEditorData }) {
       <div className="space-y-6">
         {categories.map((cat, catIdx) => (
           <div key={catIdx} className="bg-[#1a1a1a] border border-[#333] rounded-sm p-4">
-            <div className="flex items-center justify-between mb-3">
+            <div className="flex items-center gap-2 mb-3">
+              <div className="flex flex-col gap-0.5">
+                <button
+                  type="button"
+                  onClick={() => moveCategory(catIdx, -1)}
+                  disabled={catIdx === 0}
+                  className="text-[10px] text-gray-400 hover:text-white disabled:opacity-20 leading-none px-1 py-0.5"
+                >
+                  ▲
+                </button>
+                <button
+                  type="button"
+                  onClick={() => moveCategory(catIdx, 1)}
+                  disabled={catIdx === categories.length - 1}
+                  className="text-[10px] text-gray-400 hover:text-white disabled:opacity-20 leading-none px-1 py-0.5"
+                >
+                  ▼
+                </button>
+              </div>
               <input
                 type="text"
                 value={cat.category}
                 onChange={(e) => updateCategoryName(catIdx, e.target.value)}
                 placeholder="カテゴリー名"
-                className="flex-1 bg-[#242424] border border-[#444] text-white text-sm px-3 py-2 rounded-sm focus:outline-none focus:border-[#B8956A] transition-colors mr-3"
+                className="flex-1 bg-[#242424] border border-[#444] text-white text-sm px-3 py-2 rounded-sm focus:outline-none focus:border-[#B8956A] transition-colors"
               />
               <button
                 type="button"
                 onClick={() => removeCategory(catIdx)}
-                className="text-xs text-red-400 hover:text-red-300 transition-colors"
+                className="text-xs text-red-400 hover:text-red-300 transition-colors flex-shrink-0"
               >
                 削除
               </button>

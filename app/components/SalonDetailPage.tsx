@@ -118,6 +118,19 @@ export default function SalonDetailPage({ salonKey }: { salonKey: string }) {
               ))}
             </div>
             <p className="text-xs text-site-muted mt-5 text-center">※価格は税込みです</p>
+            {salon.menuNotes && salon.menuNotes.length > 0 && (
+              <div className="mt-6 border border-site-greige bg-white p-5">
+                <p className="text-xs font-medium text-site-text mb-3 tracking-wider">ご予約時のご注意</p>
+                <ul className="space-y-1.5">
+                  {salon.menuNotes.map((note, i) => (
+                    <li key={i} className="text-xs text-site-muted leading-relaxed flex gap-2">
+                      <span className="text-site-accent flex-shrink-0">・</span>
+                      {note}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
           </div>
         </section>
       )}

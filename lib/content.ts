@@ -36,6 +36,7 @@ export interface SalonContent {
   imageSrc: string;
   mapEmbedUrl: string;
   faq: FaqItem[];
+  menuNotes?: string[];
 }
 
 export interface PopularMenu {
