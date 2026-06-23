@@ -42,7 +42,7 @@ export default function RecruitEditor({ initial }: { initial: RecruitData }) {
   function handleSave() {
     startTransition(async () => {
       try {
-        const res = await saveContent("recruit", data);
+        const res = await saveContent("recruit", JSON.stringify(data));
         if (res.success) {
           setSaveStatus("success");
           setSaveError("");

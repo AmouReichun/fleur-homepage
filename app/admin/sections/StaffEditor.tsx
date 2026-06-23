@@ -60,7 +60,7 @@ export default function StaffEditor({
   function handleSave() {
     startTransition(async () => {
       try {
-        const res = await saveContent("staff", data);
+        const res = await saveContent("staff", JSON.stringify(data));
         if (res.success) {
           setSaveStatus("success");
           setSaveError("");

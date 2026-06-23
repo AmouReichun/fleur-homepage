@@ -70,7 +70,9 @@ export async function saveSalonOrder(order: string[]) {
   return { success: true };
 }
 
-export async function saveContent(sectionKey: string, data: unknown) {
+export async function saveContent(sectionKey: string, dataJson: string) {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const data: any = JSON.parse(dataJson);
   const current = await getContentLatest();
 
   // Support nested keys like "salons.riv"

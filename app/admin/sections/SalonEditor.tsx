@@ -48,7 +48,7 @@ export default function SalonEditor({ salonKey, initial }: SalonEditorProps) {
     const payload = overrideData ?? data;
     startTransition(async () => {
       try {
-        const res = await saveContent(`salons.${salonKey}`, payload);
+        const res = await saveContent(`salons.${salonKey}`, JSON.stringify(payload));
         if (res.success) {
           setSaveStatus("success");
           setSaveError("");

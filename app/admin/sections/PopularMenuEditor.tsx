@@ -36,7 +36,7 @@ export default function PopularMenuEditor({ initial }: { initial: PopularMenu[] 
   function handleSave() {
     startTransition(async () => {
       try {
-        const res = await saveContent("popularMenus", items);
+        const res = await saveContent("popularMenus", JSON.stringify(items));
         if (res.success) {
           setSaveStatus("success");
           setSaveError("");

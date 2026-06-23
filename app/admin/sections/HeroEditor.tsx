@@ -73,7 +73,7 @@ export default function HeroEditor({ initial }: { initial: HeroData }) {
     const payload = overrideData ?? data;
     startTransition(async () => {
       try {
-        const res = await saveContent("hero", payload);
+        const res = await saveContent("hero", JSON.stringify(payload));
         if (res.success) {
           setSaveStatus("success");
           setSaveError("");

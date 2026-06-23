@@ -77,7 +77,7 @@ export default function MenuEditor({
   function handleSave() {
     startTransition(async () => {
       try {
-        const res = await saveContent("menus", data);
+        const res = await saveContent("menus", JSON.stringify(data));
         if (res.success) {
           setSaveStatus("success");
           setSaveError("");

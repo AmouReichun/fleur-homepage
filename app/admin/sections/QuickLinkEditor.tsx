@@ -77,7 +77,7 @@ export default function QuickLinkEditor({ initial }: { initial: QuickLinkCard[] 
   function handleSave() {
     startTransition(async () => {
       try {
-        const res = await saveContent("quickLinks", cards);
+        const res = await saveContent("quickLinks", JSON.stringify(cards));
         if (res.success) {
           setSaveStatus("success");
           setSaveError("");

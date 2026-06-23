@@ -56,7 +56,7 @@ export default function NewsEditor({
   function handleSave() {
     startTransition(async () => {
       try {
-        const res = await saveContent("news", data);
+        const res = await saveContent("news", JSON.stringify(data));
         if (res.success) {
           setSaveStatus("success");
           setSaveError("");

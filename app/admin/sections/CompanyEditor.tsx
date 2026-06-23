@@ -28,7 +28,7 @@ export default function CompanyEditor({ initial }: { initial: CompanyData }) {
   function handleSave() {
     startTransition(async () => {
       try {
-        const res = await saveContent("company", data);
+        const res = await saveContent("company", JSON.stringify(data));
         if (res.success) {
           setSaveStatus("success");
           setSaveError("");

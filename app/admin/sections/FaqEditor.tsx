@@ -32,7 +32,7 @@ export default function FaqEditor({
   function handleSave() {
     startTransition(async () => {
       try {
-        const res = await saveContent("topFaq", data);
+        const res = await saveContent("topFaq", JSON.stringify(data));
         if (res.success) {
           setSaveStatus("success");
           setSaveError("");
