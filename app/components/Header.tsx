@@ -45,12 +45,12 @@ export default function Header() {
             fleur GROUP
           </Link>
 
-          <nav className="hidden md:flex items-center gap-8 lg:gap-10">
+          <nav className="hidden lg:flex items-center gap-5 xl:gap-7">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className={`text-[11px] tracking-[0.18em] transition-colors duration-400 ${
+                className={`text-[11px] tracking-[0.08em] whitespace-nowrap transition-colors duration-400 ${
                   solid
                     ? "text-site-text hover:text-site-accent"
                     : "text-white/80 hover:text-white"
@@ -63,7 +63,7 @@ export default function Header() {
 
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden flex flex-col gap-[5px] p-2 -mr-2"
+            className="lg:hidden flex flex-col gap-[5px] p-2 -mr-2"
             aria-label={isOpen ? "メニューを閉じる" : "メニューを開く"}
           >
             <span
