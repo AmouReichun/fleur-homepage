@@ -205,12 +205,12 @@ export default async function HomePage() {
               <span className="text-[10px] tracking-[0.45em] text-site-accent uppercase">Recruit</span>
             </div>
             <h2 className="font-serif text-4xl sm:text-5xl font-light text-white leading-tight mb-6">
-              高知で一緒に<br />
-              働きませんか
+              あなたの技術と感性を、<br />
+              高知で咲かせませんか。
             </h2>
             <p className="text-sm text-white/50 leading-loose mb-12 max-w-md">
-              技術と接客の両方を大切にするグループで、<br />
-              一緒に成長しませんか。経験者・未経験者ともに歓迎しています。
+              美容師・アイリストとして、お客様の「なりたい」に<br />
+              真剣に向き合える環境を整えています。
             </p>
             <Link
               href="/recruit"
