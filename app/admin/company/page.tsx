@@ -1,12 +1,12 @@
-import { getContent } from "@/lib/content";
+import { getContentLatest } from "@/lib/content";
 import AdminSidebar from "../components/AdminSidebar";
 import CompanyEditor from "../sections/CompanyEditor";
 
-export default function AdminCompanyPage() {
-  const content = getContent();
+export default async function AdminCompanyPage() {
+  const content = await getContentLatest();
   return (
     <div className="flex h-screen">
-      <AdminSidebar />
+      <AdminSidebar content={content} />
       <div className="flex-1 overflow-hidden flex flex-col">
         <CompanyEditor initial={content.company} />
       </div>

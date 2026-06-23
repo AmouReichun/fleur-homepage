@@ -1,12 +1,12 @@
-import { getContent } from "@/lib/content";
+import { getContentLatest } from "@/lib/content";
 import AdminSidebar from "../components/AdminSidebar";
 import HeroEditor from "../sections/HeroEditor";
 
-export default function AdminHeroPage() {
-  const content = getContent();
+export default async function AdminHeroPage() {
+  const content = await getContentLatest();
   return (
     <div className="flex h-screen">
-      <AdminSidebar />
+      <AdminSidebar content={content} />
       <div className="flex-1 overflow-hidden flex flex-col">
         <HeroEditor initial={content.hero} />
       </div>

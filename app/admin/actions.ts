@@ -4,7 +4,7 @@ import fs from "fs";
 import path from "path";
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
-import { getContent } from "@/lib/content";
+import { getContentLatest } from "@/lib/content";
 
 const CONTENT_PATH = path.join(process.cwd(), "data/content.json");
 
@@ -99,27 +99,6 @@ export async function saveContent(sectionKey: string, data: unknown) {
   }
 
   return { success: true };
-}
-
-// 本番では GitHub から最新 JSON を取得して衝突を防ぐ
-async function getContentLatest() {
-  if (
-    process.env.GITHUB_TOKEN &&
-    process.env.GITHUB_OWNER &&
-    process.env.GITHUB_REPO
-  ) {
-    try {
-      const res = await fetch(
-        `https://api.github.com/repos/${process.env.GITHUB_OWNER}/${process.env.GITHUB_REPO}/contents/data/content.json`,
-        { headers: { Authorization: `Bearer ${process.env.GITHUB_TOKEN}` }, cache: "no-store" }
-      );
-      if (res.ok) {
-        const json = await res.json();
-        return JSON.parse(Buffer.from(json.content, "base64").toString("utf-8"));
-      }
-    } catch { /* fallback to local */ }
-  }
-  return getContent();
 }
 
 async function commitToGitHub(content: string) {

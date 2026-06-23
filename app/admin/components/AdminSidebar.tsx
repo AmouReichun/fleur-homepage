@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { logoutAction } from "../actions";
-import { getContent } from "@/lib/content";
+import type { SiteContent } from "@/lib/content";
 import NavLink from "./NavLink";
 
 const HAIR_TYPE = "美容室";
@@ -17,8 +17,7 @@ const otherSections = [
   { key: "company", label: "会社概要", href: "/admin/company" },
 ];
 
-export default function AdminSidebar() {
-  const content = getContent();
+export default function AdminSidebar({ content }: { content: SiteContent }) {
   const hairSalons = content.salonOrder
     .filter((k) => content.salons[k]?.salonType === HAIR_TYPE)
     .map((k) => ({ key: k, name: content.salons[k].name, href: `/admin/salon/${k}` }));

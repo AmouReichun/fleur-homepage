@@ -14,9 +14,8 @@ export default function Error({
     const msg = error?.message ?? "";
     const isChunkError =
       error?.name === "ChunkLoadError" ||
-      msg.includes("chunk") ||
       msg.includes("Loading chunk") ||
-      msg.includes("Failed to fetch");
+      (msg.includes("chunk") && !msg.includes("fetch"));
     if (isChunkError) {
       window.location.reload();
     }

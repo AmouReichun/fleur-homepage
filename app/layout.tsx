@@ -116,7 +116,7 @@ export default function RootLayout({
           {`
             window.addEventListener('error', function(e) {
               var msg = e.message || '';
-              if (e.error && (e.error.name === 'ChunkLoadError' || msg.indexOf('chunk') !== -1 || msg.indexOf('Failed to fetch') !== -1)) {
+              if (e.error && (e.error.name === 'ChunkLoadError' || (msg.indexOf('chunk') !== -1 && msg.indexOf('fetch') === -1))) {
                 window.location.reload();
               }
             });

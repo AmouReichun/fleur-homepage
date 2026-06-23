@@ -31,14 +31,19 @@ export default function FaqEditor({
 
   function handleSave() {
     startTransition(async () => {
-      const res = await saveContent("topFaq", data);
-      if (res.success) {
-        setSaveStatus("success");
-        setSaveError("");
-        setTimeout(() => setSaveStatus("idle"), 3000);
-      } else {
+      try {
+        const res = await saveContent("topFaq", data);
+        if (res.success) {
+          setSaveStatus("success");
+          setSaveError("");
+          setTimeout(() => setSaveStatus("idle"), 3000);
+        } else {
+          setSaveStatus("error");
+          setSaveError(res.error ?? "不明なエラー");
+        }
+      } catch (e) {
         setSaveStatus("error");
-        setSaveError(res.error ?? "不明なエラー");
+        setSaveError(e instanceof Error ? e.message : "保存に失敗しました");
       }
     });
   }

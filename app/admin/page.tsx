@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { getContent } from "@/lib/content";
+import { getContentLatest } from "@/lib/content";
 import AdminSidebar from "./components/AdminSidebar";
 import SalonOrderEditor from "./components/SalonOrderEditor";
 
@@ -13,12 +13,12 @@ const otherSections = [
   { key: "company", label: "会社概要", desc: "グループの基本情報", href: "/admin/company" },
 ];
 
-export default function AdminPage() {
-  const content = getContent();
+export default async function AdminPage() {
+  const content = await getContentLatest();
 
   return (
     <div className="flex h-screen">
-      <AdminSidebar />
+      <AdminSidebar content={content} />
       <main className="flex-1 overflow-y-auto p-8">
         <div className="max-w-3xl space-y-8">
           <div>
