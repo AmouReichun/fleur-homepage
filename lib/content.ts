@@ -62,6 +62,7 @@ export interface NewsItem {
   body: string;
   date: string;
   salon?: string;
+  imageSrc?: string;
 }
 
 export interface StaffMember {

@@ -3,6 +3,7 @@
 import { useState, useTransition } from "react";
 import { saveContent } from "../actions";
 import SectionLayout from "../components/SectionLayout";
+import ImageUpload from "../components/ImageUpload";
 import type { NewsItem } from "@/lib/content";
 
 const SALON_OPTIONS = [
@@ -162,6 +163,14 @@ export default function NewsEditor({ initial }: { initial: NewsItem[] }) {
                 className="bg-[#242424] border border-[#444] text-white text-sm px-3 py-2 rounded-sm focus:outline-none focus:border-[#B8956A] transition-colors w-full resize-y"
               />
             </div>
+
+            {/* 画像 */}
+            <ImageUpload
+              label="画像（任意）"
+              value={item.imageSrc ?? ""}
+              onChange={(v) => update(item.id, "imageSrc", v)}
+              section={`news-${item.id}`}
+            />
           </div>
         ))}
 

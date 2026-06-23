@@ -71,6 +71,14 @@ export default function NewsPage() {
                   <h2 className="font-serif text-lg font-semibold text-site-text mb-3">
                     {item.title}
                   </h2>
+                  {item.imageSrc && (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img
+                      src={item.imageSrc}
+                      alt={item.title}
+                      className="w-full max-h-80 object-cover mb-4"
+                    />
+                  )}
                   <p className="text-sm text-site-muted leading-relaxed whitespace-pre-line">
                     {item.body}
                   </p>
