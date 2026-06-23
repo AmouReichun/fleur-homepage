@@ -200,7 +200,7 @@ export default async function HomePage() {
               <div className="w-6 h-px bg-site-accent" />
               <span className="text-[10px] tracking-[0.45em] text-site-accent uppercase">Recruit</span>
             </div>
-            <h2 className="font-serif text-4xl sm:text-5xl font-light text-white leading-tight mb-6">
+            <h2 className="font-serif text-2xl sm:text-3xl font-light text-white leading-relaxed tracking-[0.06em] mb-6">
               あなたの技術と感性を、<br />
               高知で咲かせませんか。
             </h2>
