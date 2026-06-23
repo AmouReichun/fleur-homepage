@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: "採用情報",
   description:
     "fleurami GROUPでは美容師・アイリストを募集しています。高知市・香南市で働きたい方、技術と接客の両方を大切にしたい方、ぜひご応募ください。",
+  alternates: { canonical: "https://fleurami-group.jp/recruit" },
 };
 
 const crumbs = [

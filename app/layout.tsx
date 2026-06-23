@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Noto_Serif_JP, Noto_Sans_JP } from "next/font/google";
 import { headers } from "next/headers";
+import Script from "next/script";
 import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -19,7 +20,11 @@ const notoSansJP = Noto_Sans_JP({
   display: "swap",
 });
 
+const BASE_URL = "https://fleurami-group.jp";
+const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
+
 export const metadata: Metadata = {
+  metadataBase: new URL(BASE_URL),
   title: {
     default: "fleurami GROUP | 高知の美容室・アイラッシュサロン",
     template: "%s | fleurami GROUP",
@@ -35,11 +40,35 @@ export const metadata: Metadata = {
     "fleurami",
     "Raffine",
     "白髪ぼかし 高知",
+    "高知市 アイラッシュサロン",
+    "縮毛矯正 香南市",
   ],
+  alternates: {
+    canonical: BASE_URL,
+  },
   openGraph: {
     type: "website",
     locale: "ja_JP",
     siteName: "fleurami GROUP",
+    url: BASE_URL,
+    title: "fleurami GROUP | 高知の美容室・アイラッシュサロン",
+    description:
+      "高知市・香南市で3サロンを展開。髪質改善・白髪ぼかし・縮毛矯正・まつげパーマ・眉毛WAX。",
+    images: [
+      {
+        url: "/images/admin/hero-1782190629178.png",
+        width: 1200,
+        height: 630,
+        alt: "fleurami GROUP | 高知の美容室・アイラッシュサロン",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "fleurami GROUP | 高知の美容室・アイラッシュサロン",
+    description:
+      "高知市・香南市で3サロンを展開。髪質改善・白髪ぼかし・縮毛矯正・まつげパーマ・眉毛WAX。",
+    images: ["/images/admin/hero-1782190629178.png"],
   },
 };
 
@@ -62,6 +91,23 @@ export default function RootLayout({
             <Header />
             <main>{children}</main>
             <Footer />
+          </>
+        )}
+
+        {GA_ID && (
+          <>
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+              strategy="afterInteractive"
+            />
+            <Script id="ga4-init" strategy="afterInteractive">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', '${GA_ID}', { page_path: window.location.pathname });
+              `}
+            </Script>
           </>
         )}
       </body>

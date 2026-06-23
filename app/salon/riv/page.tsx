@@ -5,6 +5,7 @@ import SalonDetailPage from "@/app/components/SalonDetailPage";
 export const metadata: Metadata = {
   title: "Riv.by fleurami | 高知市の美容室 - 髪質改善・白髪ぼかし",
   description: "高知市の美容室「Riv.by fleurami」。髪質改善・白髪ぼかし・艶カラー・大人女性向けの似合わせカットが得意。",
+  alternates: { canonical: "https://fleurami-group.jp/salon/riv" },
 };
 
 const crumbs = [

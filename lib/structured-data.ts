@@ -14,7 +14,6 @@ export const organizationSchema = {
     "https://beauty.hotpepper.jp/slnH000528388/",
     "https://beauty.hotpepper.jp/slnH000634137/",
     "https://beauty.hotpepper.jp/kr/slnH000767549/",
-    "https://fleurami-group-blog.com",
   ],
   hasOfferCatalog: {
     "@type": "OfferCatalog",
@@ -37,26 +36,34 @@ export const rivSalonSchema = {
   description:
     "高知市の美容室。髪質改善・白髪ぼかし・艶カラー・大人女性向けの似合わせカットが得意。",
   url: "https://fleurami-group.jp/salon/riv",
+  telephone: "088-884-5566",
   address: {
     "@type": "PostalAddress",
-    addressRegion: "高知県",
+    streetAddress: "南川添9-21 フルールアミー3 2F",
     addressLocality: "高知市",
+    addressRegion: "高知県",
+    postalCode: "781-0082",
     addressCountry: "JP",
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 33.57251447334136,
+    longitude: 133.5586512753919,
   },
   areaServed: "高知市",
   priceRange: "¥¥",
   openingHoursSpecification: [
     {
       "@type": "OpeningHoursSpecification",
-      dayOfWeek: ["Tuesday", "Wednesday", "Thursday", "Friday"],
-      opens: "10:00",
-      closes: "19:00",
+      dayOfWeek: ["Wednesday", "Thursday", "Friday"],
+      opens: "09:30",
+      closes: "18:30",
     },
     {
       "@type": "OpeningHoursSpecification",
       dayOfWeek: ["Saturday", "Sunday"],
-      opens: "10:00",
-      closes: "18:00",
+      opens: "09:30",
+      closes: "18:30",
     },
   ],
   sameAs: ["https://beauty.hotpepper.jp/slnH000634137/"],
@@ -69,29 +76,35 @@ export const fleuramiSalonSchema = {
   name: "fleurami",
   alternateName: "フルールアミー",
   description:
-    "香南市の美容室。髪質改善・縮毛矯正・艶カラー・カラーカットが得意。",
+    "香南市の美容室。縮毛矯正・髪質改善・艶カラー・カットが得意。",
   url: "https://fleurami-group.jp/salon/fleurami",
+  telephone: "0887-56-5566",
   address: {
     "@type": "PostalAddress",
     streetAddress: "野市町西野230",
-    addressRegion: "高知県",
     addressLocality: "香南市",
+    addressRegion: "高知県",
     postalCode: "781-5222",
     addressCountry: "JP",
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 33.57442497334058,
+    longitude: 133.69426107539203,
   },
   areaServed: "香南市",
   priceRange: "¥¥",
   openingHoursSpecification: [
     {
       "@type": "OpeningHoursSpecification",
-      dayOfWeek: ["Monday", "Wednesday", "Thursday", "Friday"],
-      opens: "10:00",
-      closes: "19:00",
+      dayOfWeek: ["Wednesday", "Thursday", "Friday"],
+      opens: "09:00",
+      closes: "18:00",
     },
     {
       "@type": "OpeningHoursSpecification",
       dayOfWeek: ["Saturday", "Sunday"],
-      opens: "10:00",
+      opens: "09:00",
       closes: "18:00",
     },
   ],
@@ -107,11 +120,18 @@ export const raffineSalonSchema = {
   description:
     "高知市はりまや橋周辺のアイラッシュサロン。ラッシュリフト・まつげパーマ・韓国束感まつげ・眉毛WAX・メンズ眉WAXに対応。",
   url: "https://fleurami-group.jp/salon/raffine",
+  telephone: "090-7120-5566",
   address: {
     "@type": "PostalAddress",
-    addressRegion: "高知県",
+    streetAddress: "はりまや町1-4-8 TNはりまやビル3F",
     addressLocality: "高知市",
+    addressRegion: "高知県",
     addressCountry: "JP",
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 33.56076797334597,
+    longitude: 133.54073617539132,
   },
   areaServed: "高知市",
   priceRange: "¥¥",
@@ -119,14 +139,14 @@ export const raffineSalonSchema = {
     {
       "@type": "OpeningHoursSpecification",
       dayOfWeek: ["Monday", "Tuesday", "Thursday", "Friday"],
-      opens: "10:00",
-      closes: "19:00",
+      opens: "09:30",
+      closes: "18:30",
     },
     {
       "@type": "OpeningHoursSpecification",
       dayOfWeek: ["Saturday", "Sunday"],
-      opens: "10:00",
-      closes: "18:00",
+      opens: "09:30",
+      closes: "18:30",
     },
   ],
   sameAs: ["https://beauty.hotpepper.jp/kr/slnH000767549/"],
@@ -155,6 +175,14 @@ export const faqPageSchema = {
     },
     {
       "@type": "Question",
+      name: "高知市ではりまや橋近くのアイラッシュサロンはどこですか？",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "高知市はりまや橋周辺の「Raffine（ラフィーネ）」がアイラッシュサロンです。住所は高知市はりまや町1-4-8 TNはりまやビル3Fです。電話番号は090-7120-5566。",
+      },
+    },
+    {
+      "@type": "Question",
       name: "高知市でまつげパーマができるサロンはありますか？",
       acceptedAnswer: {
         "@type": "Answer",
@@ -174,15 +202,7 @@ export const faqPageSchema = {
       name: "fleurami GROUPはどこにありますか？",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "fleurami GROUPは高知県内に3店舗展開しています。fleurami（香南市野市町西野230）、Riv.by fleurami（高知市）、Raffine（高知市はりまや橋周辺）です。",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "fleurami GROUPの代表者は誰ですか？",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "fleurami GROUPの代表は今井 信人です。株式会社フルール・アミー（2006年設立）と株式会社フルール・ロータス（2025年設立）の2法人でグループを運営しています。",
+        text: "fleurami GROUPは高知県内に3店舗展開しています。fleurami（香南市野市町西野230、電話0887-56-5566）、Riv.by fleurami（高知市南川添9-21、電話088-884-5566）、Raffine（高知市はりまや町1-4-8、電話090-7120-5566）です。",
       },
     },
   ],

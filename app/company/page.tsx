@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: "会社概要",
   description:
     "fleurami GROUPの会社概要。高知市・香南市で美容室・アイラッシュサロンを展開するグループの企業情報をご覧いただけます。",
+  alternates: { canonical: "https://fleurami-group.jp/company" },
 };
 
 const crumbs = [

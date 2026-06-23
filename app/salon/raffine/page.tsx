@@ -5,6 +5,7 @@ import SalonDetailPage from "@/app/components/SalonDetailPage";
 export const metadata: Metadata = {
   title: "Raffine | 高知市のアイラッシュサロン - まつげパーマ・眉毛WAX",
   description: "高知市はりまや橋のアイラッシュサロン「Raffine」。まつげパーマ・ラッシュリフト・眉毛WAXが得意。自まつげを活かした自然な仕上がり。",
+  alternates: { canonical: "https://fleurami-group.jp/salon/raffine" },
 };
 
 const crumbs = [

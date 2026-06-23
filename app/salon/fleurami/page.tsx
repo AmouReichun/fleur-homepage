@@ -5,6 +5,7 @@ import SalonDetailPage from "@/app/components/SalonDetailPage";
 export const metadata: Metadata = {
   title: "fleurami | 香南市の美容室 - 縮毛矯正・カラー",
   description: "香南市の美容室「fleurami」。縮毛矯正・髪質改善・カラーが得意。高知県香南市野市町でくせ毛・うねりでお悩みの方に寄り添います。",
+  alternates: { canonical: "https://fleurami-group.jp/salon/fleurami" },
 };
 
 const crumbs = [
