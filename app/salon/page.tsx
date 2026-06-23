@@ -101,7 +101,7 @@ export default function SalonListPage() {
                         </div>
                         <div className="text-xs text-site-muted space-y-1 mb-6">
                           <p><span className="text-site-text font-medium">住所：</span>{salon.address}</p>
-                          <p><span className="text-site-text font-medium">平日：</span>{salon.hoursWeekday}</p>
+                          <p><span className="text-site-text font-medium">営業時間：</span>{salon.hoursWeekday === salon.hoursSaturday ? salon.hoursWeekday : `平日 ${salon.hoursWeekday} / 土曜 ${salon.hoursSaturday}`}</p>
                           <p><span className="text-site-text font-medium">定休日：</span>{salon.closed}</p>
                         </div>
                         <div className="flex flex-wrap gap-3">

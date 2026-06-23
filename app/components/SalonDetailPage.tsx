@@ -159,8 +159,9 @@ export default function SalonDetailPage({ salonKey }: { salonKey: string }) {
               { label: "サロン名", value: salon.name },
               { label: "住所", value: salon.address },
               { label: "電話", value: salon.phone },
-              { label: "平日", value: salon.hoursWeekday },
-              { label: "土曜", value: salon.hoursSaturday },
+              { label: "営業時間", value: salon.hoursWeekday === salon.hoursSaturday
+                  ? salon.hoursWeekday
+                  : `平日 ${salon.hoursWeekday} / 土曜 ${salon.hoursSaturday}` },
               { label: "定休日", value: salon.closed },
               { label: "駐車場", value: salon.parking },
             ]
