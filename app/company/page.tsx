@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { getContent } from "@/lib/content";
 import { organizationSchema, breadcrumbSchema } from "@/lib/structured-data";
 
 export const metadata: Metadata = {
@@ -14,6 +15,20 @@ const crumbs = [
 ];
 
 export default function CompanyPage() {
+  const { company, salonOrder, salons } = getContent();
+
+  const tableRows = [
+    { label: "グループ名", value: company.name },
+    { label: "代表者", value: company.representative },
+    { label: "設立", value: company.founded },
+    { label: "所在地（本部）", value: company.address },
+    { label: "電話番号", value: company.phone },
+    { label: "メールアドレス", value: company.email },
+    { label: "事業内容", value: company.business },
+    { label: "店舗数", value: `${salonOrder.length}店舗` },
+    { label: "営業エリア", value: "高知県高知市・香南市" },
+  ].filter((r) => r.value);
+
   return (
     <>
       <script
@@ -40,16 +55,7 @@ export default function CompanyPage() {
       <section className="py-12 sm:py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <div className="border border-site-greige overflow-hidden mb-12">
-            {[
-              { label: "グループ名", value: "fleurami GROUP" },
-              { label: "設立", value: "[設立年プレースホルダー]" },
-              { label: "代表者", value: "[代表者名プレースホルダー]" },
-              { label: "所在地（本部）", value: "高知県 [住所プレースホルダー]" },
-              { label: "電話番号", value: "[電話番号プレースホルダー]" },
-              { label: "事業内容", value: "美容室の経営・運営、アイラッシュサロンの経営・運営" },
-              { label: "店舗数", value: "3店舗（美容室2店舗・アイラッシュサロン1店舗）" },
-              { label: "営業エリア", value: "高知県高知市・香南市" },
-            ].map((row) => (
+            {tableRows.map((row) => (
               <div key={row.label} className="flex border-b border-site-greige last:border-b-0">
                 <div className="w-36 sm:w-44 bg-site-bg px-5 py-4 text-sm font-medium text-site-text flex-shrink-0">
                   {row.label}
@@ -75,21 +81,21 @@ export default function CompanyPage() {
           <div className="mt-12">
             <h2 className="font-serif text-2xl font-semibold text-site-text mb-6">店舗一覧</h2>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-              {[
-                { name: "Riv.by fleurami", area: "高知市", type: "美容室", href: "/salon/riv" },
-                { name: "fleurami", area: "香南市", type: "美容室", href: "/salon/fleurami" },
-                { name: "Raffine", area: "高知市 はりまや橋", type: "アイラッシュサロン", href: "/salon/raffine" },
-              ].map((salon) => (
-                <Link
-                  key={salon.name}
-                  href={salon.href}
-                  className="border border-site-greige p-5 hover:border-site-accent transition-colors duration-200 block"
-                >
-                  <p className="text-xs text-site-accent mb-1">{salon.area}</p>
-                  <p className="font-serif text-base font-semibold mb-0.5">{salon.name}</p>
-                  <p className="text-xs text-site-muted">{salon.type}</p>
-                </Link>
-              ))}
+              {salonOrder.map((key) => {
+                const s = salons[key as keyof typeof salons];
+                if (!s) return null;
+                return (
+                  <Link
+                    key={key}
+                    href={`/salon/${key}`}
+                    className="border border-site-greige p-5 hover:border-site-accent transition-colors duration-200 block"
+                  >
+                    <p className="text-xs text-site-accent mb-1">{s.area}</p>
+                    <p className="font-serif text-base font-semibold mb-0.5">{s.name}</p>
+                    <p className="text-xs text-site-muted">{s.salonType}</p>
+                  </Link>
+                );
+              })}
             </div>
           </div>
         </div>
