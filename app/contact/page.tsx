@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { getContent } from "@/lib/content";
 import { breadcrumbSchema } from "@/lib/structured-data";
 import ContactForm from "@/app/components/ContactForm";
 
@@ -16,6 +17,8 @@ const crumbs = [
 ];
 
 export default function ContactPage() {
+  const { salonOrder, salons } = getContent();
+
   return (
     <>
       <script
@@ -45,23 +48,25 @@ export default function ContactPage() {
           <div className="mb-10">
             <h2 className="font-serif text-lg font-semibold text-site-text mb-4 text-center">ご予約・各店舗へのお問い合わせ</h2>
             <div className="grid grid-cols-1 gap-3">
-              {[
-                { name: "Riv.by fleurami", area: "高知市", href: "#", type: "ホットペッパーで予約" },
-                { name: "fleurami", area: "香南市", href: "#", type: "ホットペッパーで予約" },
-                { name: "Raffine", area: "高知市 はりまや橋", href: "#", type: "ホットペッパーで予約" },
-              ].map((salon) => (
-                <a
-                  key={salon.name}
-                  href={salon.href}
-                  className="flex items-center justify-between border border-site-greige px-5 py-4 hover:border-site-accent transition-colors duration-200 group"
-                >
-                  <div>
-                    <p className="text-xs text-site-muted mb-0.5">{salon.area}</p>
-                    <p className="font-serif text-sm font-semibold">{salon.name}</p>
-                  </div>
-                  <span className="text-xs text-site-accent group-hover:underline">{salon.type} &rarr;</span>
-                </a>
-              ))}
+              {salonOrder.map((key) => {
+                const s = salons[key as keyof typeof salons];
+                if (!s) return null;
+                return (
+                  <a
+                    key={key}
+                    href={s.hotpepperUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-between border border-site-greige px-5 py-4 hover:border-site-accent transition-colors duration-200 group"
+                  >
+                    <div>
+                      <p className="text-xs text-site-muted mb-0.5">{s.area}</p>
+                      <p className="font-serif text-sm font-semibold">{s.name}</p>
+                    </div>
+                    <span className="text-xs text-site-accent group-hover:underline">ホットペッパーで予約 &rarr;</span>
+                  </a>
+                );
+              })}
             </div>
           </div>
 

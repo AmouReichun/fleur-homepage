@@ -172,7 +172,12 @@ export async function uploadImage(formData: FormData): Promise<string> {
     process.env.GITHUB_OWNER &&
     process.env.GITHUB_REPO
   ) {
-    await commitImageToGitHub(buffer, `public/images/admin/${filename}`);
+    try {
+      await commitImageToGitHub(buffer, `public/images/admin/${filename}`);
+    } catch (e) {
+      const msg = e instanceof Error ? e.message : String(e);
+      throw new Error(`画像のGitHub保存に失敗しました: ${msg}`);
+    }
   }
 
   return `/images/admin/${filename}`;
