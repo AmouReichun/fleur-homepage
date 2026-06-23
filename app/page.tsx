@@ -54,17 +54,20 @@ export default async function HomePage() {
     .filter((g) => g.items.length > 0);
   const commonFaqs = topFaq.filter((f) => !f.salon);
 
-  let recentPosts: BlogPost[] = [];
-  try {
-    const res = await fetch(`${BLOG_URL}/api/posts/recent?count=12`, {
-      next: { revalidate: 3600 },
-    });
-    if (res.ok) recentPosts = await res.json();
-  } catch {
-    // ブログが取得できない場合はスキップ
-  }
-  const hairPosts = recentPosts.filter((p) => p.category === "hair").slice(0, 5);
-  const eyelashPosts = recentPosts.filter((p) => p.category === "eyelash").slice(0, 5);
+  const fetchPosts = async (category: string) => {
+    try {
+      const res = await fetch(
+        `${BLOG_URL}/api/posts/recent?count=5&category=${category}`,
+        { next: { revalidate: 3600 } }
+      );
+      if (res.ok) return (await res.json()) as BlogPost[];
+    } catch {}
+    return [];
+  };
+  const [hairPosts, eyelashPosts] = await Promise.all([
+    fetchPosts("hair"),
+    fetchPosts("eyelash"),
+  ]);
 
   return (
     <>
