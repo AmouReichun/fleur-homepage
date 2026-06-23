@@ -63,9 +63,16 @@ export async function saveSalonOrder(order: string[]) {
   const current = await getContentLatest();
   current.salonOrder = order;
   const newJson = JSON.stringify(current, null, 2);
-  try { fs.writeFileSync(CONTENT_PATH, newJson); } catch { /* read-only on Vercel */ }
-  if (process.env.GITHUB_TOKEN && process.env.GITHUB_OWNER && process.env.GITHUB_REPO) {
-    await commitToGitHub(newJson);
+  let fsWriteOk = true;
+  try { fs.writeFileSync(CONTENT_PATH, newJson); } catch { fsWriteOk = false; }
+  const hasGitHub = !!(process.env.GITHUB_TOKEN && process.env.GITHUB_OWNER && process.env.GITHUB_REPO);
+  if (!fsWriteOk && !hasGitHub) {
+    throw new Error("GitHub 環境変数が未設定です");
+  }
+  if (hasGitHub) {
+    try { await commitToGitHub(newJson); } catch (e) {
+      throw new Error(e instanceof Error ? e.message : String(e));
+    }
   }
   return { success: true };
 }
@@ -85,13 +92,20 @@ export async function saveContent(sectionKey: string, dataJson: string) {
   obj[keys[keys.length - 1]] = data;
 
   const newJson = JSON.stringify(current, null, 2);
-  try { fs.writeFileSync(CONTENT_PATH, newJson); } catch { /* read-only on Vercel */ }
 
-  if (
-    process.env.GITHUB_TOKEN &&
-    process.env.GITHUB_OWNER &&
-    process.env.GITHUB_REPO
-  ) {
+  let fsWriteOk = true;
+  try { fs.writeFileSync(CONTENT_PATH, newJson); } catch { fsWriteOk = false; }
+
+  const hasGitHub = !!(process.env.GITHUB_TOKEN && process.env.GITHUB_OWNER && process.env.GITHUB_REPO);
+
+  if (!fsWriteOk && !hasGitHub) {
+    return {
+      success: false,
+      error: `環境変数が未設定です。Vercel ダッシュボードで GITHUB_TOKEN・GITHUB_OWNER・GITHUB_REPO を確認してください。TOKEN=${!!process.env.GITHUB_TOKEN} OWNER=${!!process.env.GITHUB_OWNER} REPO=${!!process.env.GITHUB_REPO}`,
+    };
+  }
+
+  if (hasGitHub) {
     try {
       await commitToGitHub(newJson);
     } catch (e) {
