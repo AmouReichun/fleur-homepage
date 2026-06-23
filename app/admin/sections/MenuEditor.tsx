@@ -21,7 +21,7 @@ const salonLabels: Record<SalonTab, string> = {
 
 export default function MenuEditor({ initial }: { initial: MenuEditorData }) {
   const [data, setData] = useState<MenuEditorData>(initial);
-  const [activeTab, setActiveTab] = useState<SalonTab>("riv");
+  const [activeTab, setActiveTab] = useState<SalonTab>("fleurami");
   const [isPending, startTransition] = useTransition();
   const [saveStatus, setSaveStatus] = useState<"idle" | "success" | "error">("idle");
   const [saveError, setSaveError] = useState<string>("");
@@ -142,7 +142,7 @@ export default function MenuEditor({ initial }: { initial: MenuEditorData }) {
     >
       {/* Salon tabs */}
       <div className="flex border-b border-[#333] -mx-6 px-6 mb-4">
-        {(["riv", "fleurami", "raffine"] as SalonTab[]).map((tab) => (
+        {(["fleurami", "riv", "raffine"] as SalonTab[]).map((tab) => (
           <button
             key={tab}
             type="button"

@@ -5,7 +5,7 @@ import type { MenuCategory, SalonContent } from "@/lib/content";
 
 type Category = "hair" | "eyelash";
 
-const HAIR_KEYS = ["riv", "fleurami"] as const;
+const HAIR_KEYS = ["fleurami", "riv"] as const;
 const EYELASH_KEYS = ["raffine"] as const;
 
 interface MenuTabsProps {

@@ -5,8 +5,8 @@ import { usePathname } from "next/navigation";
 import { logoutAction } from "../actions";
 
 const hairSalons = [
-  { key: "salon-riv", label: "Riv.by fleurami", href: "/admin/salon/riv" },
   { key: "salon-fleurami", label: "fleurami", href: "/admin/salon/fleurami" },
+  { key: "salon-riv", label: "Riv.by fleurami", href: "/admin/salon/riv" },
 ];
 const eyelashSalons = [
   { key: "salon-raffine", label: "Raffine", href: "/admin/salon/raffine" },

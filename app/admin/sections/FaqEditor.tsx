@@ -6,8 +6,8 @@ import SectionLayout from "../components/SectionLayout";
 import type { FaqItem } from "@/lib/content";
 
 const SALON_OPTIONS = [
-  { key: "riv", label: "Riv.by fleurami" },
   { key: "fleurami", label: "fleurami" },
+  { key: "riv", label: "Riv.by fleurami" },
   { key: "raffine", label: "Raffine" },
 ];
 
@@ -23,7 +23,7 @@ export default function FaqEditor({ initial }: { initial: FaqItem[] }) {
     setData(next);
   }
 
-  function add() { setData((prev) => [...prev, { q: "", a: "", salon: "riv" }]); }
+  function add() { setData((prev) => [...prev, { q: "", a: "", salon: "fleurami" }]); }
   function remove(i: number) { setData((prev) => prev.filter((_, idx) => idx !== i)); }
 
   function handleSave() {
