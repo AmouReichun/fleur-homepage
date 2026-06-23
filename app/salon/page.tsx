@@ -77,49 +77,61 @@ export default function SalonListPage() {
                 {salonsOfType.map((salon, i) => (
                   <div
                     key={salon.key}
-                    className={`flex flex-col lg:flex-row gap-0 border border-site-greige overflow-hidden ${
-                      i % 2 === 1 ? "lg:flex-row-reverse" : ""
-                    }`}
+                    className="border border-site-greige overflow-hidden"
                   >
-                    <div className="lg:w-5/12 bg-site-light flex items-center justify-center min-h-[240px]">
-                      {salon.imageSrc ? (
-                        // eslint-disable-next-line @next/next/no-img-element
-                        <img src={salon.imageSrc} alt={salon.name} className="w-full h-full object-cover" />
-                      ) : (
-                        <span className="text-site-muted text-sm">[店舗写真]</span>
-                      )}
+                    <div className={`flex flex-col lg:flex-row ${i % 2 === 1 ? "lg:flex-row-reverse" : ""}`}>
+                      <div className="lg:w-5/12 bg-site-light flex items-center justify-center min-h-[240px]">
+                        {salon.imageSrc ? (
+                          // eslint-disable-next-line @next/next/no-img-element
+                          <img src={salon.imageSrc} alt={salon.name} className="w-full h-full object-cover" />
+                        ) : (
+                          <span className="text-site-muted text-sm">[店舗写真]</span>
+                        )}
+                      </div>
+                      <div className="lg:w-7/12 p-7 sm:p-10">
+                        <p className="text-xs text-site-accent tracking-wider mb-2">{salon.area}</p>
+                        <h2 className="font-serif text-2xl sm:text-3xl font-semibold mb-3">{salon.name}</h2>
+                        <p className="text-sm text-site-muted leading-relaxed mb-5">{salon.description}</p>
+                        <div className="flex flex-wrap gap-1.5 mb-5">
+                          {salon.features.map((f) => (
+                            <span key={f} className="text-xs bg-site-light text-site-text px-2.5 py-1 rounded-full">
+                              {f}
+                            </span>
+                          ))}
+                        </div>
+                        <div className="text-xs text-site-muted space-y-1 mb-6">
+                          <p><span className="text-site-text font-medium">住所：</span>{salon.address}</p>
+                          <p><span className="text-site-text font-medium">平日：</span>{salon.hoursWeekday}</p>
+                          <p><span className="text-site-text font-medium">定休日：</span>{salon.closed}</p>
+                        </div>
+                        <div className="flex flex-wrap gap-3">
+                          <a
+                            href={salon.hotpepperUrl}
+                            className="bg-site-accent text-white px-6 py-2.5 text-xs font-medium tracking-wider hover:bg-opacity-90 transition-all duration-200"
+                          >
+                            ホットペッパーで予約
+                          </a>
+                          <Link
+                            href={SALON_HREFS[salon.key] ?? "#"}
+                            className="border border-site-greige text-site-text px-6 py-2.5 text-xs font-medium tracking-wider hover:border-site-accent hover:text-site-accent transition-all duration-200"
+                          >
+                            店舗詳細を見る
+                          </Link>
+                        </div>
+                      </div>
                     </div>
-                    <div className="lg:w-7/12 p-7 sm:p-10">
-                      <p className="text-xs text-site-accent tracking-wider mb-2">{salon.area}</p>
-                      <h2 className="font-serif text-2xl sm:text-3xl font-semibold mb-3">{salon.name}</h2>
-                      <p className="text-sm text-site-muted leading-relaxed mb-5">{salon.description}</p>
-                      <div className="flex flex-wrap gap-1.5 mb-5">
-                        {salon.features.map((f) => (
-                          <span key={f} className="text-xs bg-site-light text-site-text px-2.5 py-1 rounded-full">
-                            {f}
-                          </span>
-                        ))}
+                    {salon.mapEmbedUrl && (
+                      <div className="h-56 sm:h-64 border-t border-site-greige">
+                        <iframe
+                          src={salon.mapEmbedUrl}
+                          className="w-full h-full border-0"
+                          allowFullScreen
+                          loading="lazy"
+                          referrerPolicy="no-referrer-when-downgrade"
+                          title={`${salon.name} マップ`}
+                        />
                       </div>
-                      <div className="text-xs text-site-muted space-y-1 mb-6">
-                        <p><span className="text-site-text font-medium">住所：</span>{salon.address}</p>
-                        <p><span className="text-site-text font-medium">平日：</span>{salon.hoursWeekday}</p>
-                        <p><span className="text-site-text font-medium">定休日：</span>{salon.closed}</p>
-                      </div>
-                      <div className="flex flex-wrap gap-3">
-                        <a
-                          href={salon.hotpepperUrl}
-                          className="bg-site-accent text-white px-6 py-2.5 text-xs font-medium tracking-wider hover:bg-opacity-90 transition-all duration-200"
-                        >
-                          ホットペッパーで予約
-                        </a>
-                        <Link
-                          href={SALON_HREFS[salon.key] ?? "#"}
-                          className="border border-site-greige text-site-text px-6 py-2.5 text-xs font-medium tracking-wider hover:border-site-accent hover:text-site-accent transition-all duration-200"
-                        >
-                          店舗詳細を見る
-                        </Link>
-                      </div>
-                    </div>
+                    )}
                   </div>
                 ))}
               </div>
