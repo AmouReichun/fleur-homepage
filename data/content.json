@@ -701,32 +701,32 @@
   "quickLinks": [
     {
       "id": "booking",
-      "title": "24時間WEB予約",
-      "description": "ホットペッパーから予約する",
+      "title": "",
+      "description": "",
       "href": "/salon",
       "external": false,
       "imageSrc": "/images/admin/quicklinks-1782213749493.png"
     },
     {
       "id": "staff",
-      "title": "スタッフ紹介",
-      "description": "担当スタイリストを探す",
+      "title": "",
+      "description": "",
       "href": "/staff",
       "external": false,
       "imageSrc": "/images/admin/quicklinks-1782213763518.png"
     },
     {
       "id": "blog",
-      "title": "ブログ",
-      "description": "最新の施術事例・コラム",
+      "title": "",
+      "description": "",
       "href": "https://fleurami-group-blog.com",
       "external": true,
       "imageSrc": "/images/admin/quicklinks-1782213773362.png"
     },
     {
       "id": "campaign",
-      "title": "最新情報",
-      "description": "キャンペーン・お知らせ",
+      "title": "",
+      "description": "",
       "href": "/news",
       "external": false,
       "imageSrc": "/images/admin/quicklinks-1782212409286.png"
