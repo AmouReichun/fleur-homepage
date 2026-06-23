@@ -6,6 +6,7 @@ import QuickLinkGrid from "@/app/components/QuickLinkGrid";
 import SalonSlider from "@/app/components/SalonSlider";
 import PopularMenuSlider from "@/app/components/PopularMenuSlider";
 import FaqSalonGroup from "@/app/components/FaqSalonGroup";
+import BlogSlider from "@/app/components/BlogSlider";
 
 
 
@@ -55,13 +56,15 @@ export default async function HomePage() {
 
   let recentPosts: BlogPost[] = [];
   try {
-    const res = await fetch(`${BLOG_URL}/api/posts/recent?count=3`, {
+    const res = await fetch(`${BLOG_URL}/api/posts/recent?count=12`, {
       next: { revalidate: 3600 },
     });
     if (res.ok) recentPosts = await res.json();
   } catch {
     // ブログが取得できない場合はスキップ
   }
+  const hairPosts = recentPosts.filter((p) => p.category === "hair").slice(0, 5);
+  const eyelashPosts = recentPosts.filter((p) => p.category === "eyelash").slice(0, 5);
 
   return (
     <>
@@ -139,40 +142,16 @@ export default async function HomePage() {
         <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
           <SectionLabel index="03" en="Blog" ja="最新ブログ" />
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-10">
-            {recentPosts.map((post) => {
-              const postUrl = `${BLOG_URL}/${post.category}/${post.slug}`;
-              const thumbUrl = `${BLOG_URL}${post.thumbnail}`;
-              const dateLabel = post.date
-                ? `${post.date.slice(0, 4)}年${parseInt(post.date.slice(5, 7))}月`
-                : "";
-              return (
-                <a
-                  key={post.slug}
-                  href={postUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group block"
-                >
-                  <div className="overflow-hidden bg-site-light mb-5 aspect-[4/3]">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
-                      src={thumbUrl}
-                      alt={post.title}
-                      className="w-full h-full object-cover group-hover:scale-[1.04] transition-transform duration-500"
-                    />
-                  </div>
-                  <p className="text-[10px] text-site-accent tracking-[0.3em] uppercase mb-2">{post.category}</p>
-                  <h3 className="font-serif text-base font-light leading-snug mb-2 group-hover:text-site-accent transition-colors duration-200">
-                    {post.title}
-                  </h3>
-                  <p className="text-[10px] text-site-muted tracking-wider">{post.salon} — {dateLabel}</p>
-                </a>
-              );
-            })}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-20">
+            {hairPosts.length > 0 && (
+              <BlogSlider posts={hairPosts} blogUrl={BLOG_URL} en="Hair Salon" />
+            )}
+            {eyelashPosts.length > 0 && (
+              <BlogSlider posts={eyelashPosts} blogUrl={BLOG_URL} en="Eyelash Salon" />
+            )}
           </div>
 
-          <div className="mt-12">
+          <div className="mt-14">
             <Link
               href={BLOG_URL}
               target="_blank"
