@@ -883,13 +883,13 @@
     {
       "name": "艶カラー",
       "desc": "透明感・艶感のあるダメージレスカラー",
-      "salon": "Riv / fleurami",
+      "salon": "fleurami/Riv ",
       "category": "hair"
     },
     {
       "name": "縮毛矯正",
       "desc": "くせ毛・うねりをサラサラに整える",
-      "salon": "Riv / fleurami",
+      "salon": "fleurami/ Riv ",
       "category": "hair"
     },
     {
