@@ -76,27 +76,23 @@ export default async function HomePage() {
 
       {/* ─── Hero ─── */}
       <HeroSlideshow images={heroImages} hasImage={hasImage}>
-        <p className="text-[10px] tracking-[0.45em] text-white/50 uppercase mb-5">
-          Kochi, Japan — Hair & Eyelash
+        <p className="text-[10px] tracking-[0.4em] text-white/45 mb-8">
+          高知市・香南市 — 美容室・アイラッシュサロン
         </p>
-        <h1 className="font-serif text-5xl sm:text-7xl lg:text-8xl font-light text-white leading-[1.1] mb-8 whitespace-pre-line">
-          {content.hero.title || "髪と目元の美しさを叶える場所"}
+        <h1 className="font-serif text-5xl sm:text-6xl lg:text-7xl font-light text-white leading-[1.25] mb-6 whitespace-pre-line">
+          {content.hero.title || "上品なのに、\n抜け感。"}
         </h1>
         {content.hero.subtitle && (
-          <p className="text-sm text-white/60 leading-relaxed mb-8 max-w-xs whitespace-pre-line">
+          <p className="text-sm text-white/55 leading-relaxed mb-12 whitespace-pre-line">
             {content.hero.subtitle}
           </p>
         )}
-        <div className="flex items-center gap-5 mb-10">
-          <div className="w-10 h-px bg-white/40" />
-          <p className="text-xs text-white/55 tracking-[0.25em]">高知市・香南市 / 3 Salons</p>
-        </div>
         <Link
           href="/salon"
-          className="inline-flex items-center gap-4 text-xs text-white/80 tracking-[0.25em] hover:text-white transition-colors duration-300 group"
+          className="inline-flex items-center gap-4 text-xs text-white/75 tracking-[0.3em] hover:text-white transition-colors duration-300 group"
         >
           <span>{content.hero.cta1 || "店舗を見る"}</span>
-          <span className="w-12 h-px bg-white/50 group-hover:w-16 transition-all duration-400 group-hover:bg-white/80" />
+          <span className="w-12 h-px bg-white/40 group-hover:w-16 transition-all duration-400 group-hover:bg-white/70" />
         </Link>
       </HeroSlideshow>
 
