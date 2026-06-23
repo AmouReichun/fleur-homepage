@@ -80,7 +80,7 @@ export default function Header() {
       </div>
 
       {isOpen && (
-        <div className="md:hidden bg-white border-t border-gray-100">
+        <div className="lg:hidden bg-white border-t border-gray-100">
           <nav className="flex flex-col py-2">
             {navLinks.map((link) => (
               <Link
