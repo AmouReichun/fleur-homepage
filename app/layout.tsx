@@ -110,6 +110,24 @@ export default function RootLayout({
             </Script>
           </>
         )}
+
+        {/* デプロイ後の古いチャンクエラーを検知して自動リロード */}
+        <Script id="chunk-error-handler" strategy="afterInteractive">
+          {`
+            window.addEventListener('error', function(e) {
+              var msg = e.message || '';
+              if (e.error && (e.error.name === 'ChunkLoadError' || msg.indexOf('chunk') !== -1 || msg.indexOf('Failed to fetch') !== -1)) {
+                window.location.reload();
+              }
+            });
+            window.addEventListener('unhandledrejection', function(e) {
+              var msg = (e.reason && e.reason.message) || '';
+              if ((e.reason && e.reason.name === 'ChunkLoadError') || msg.indexOf('chunk') !== -1 || msg.indexOf('Loading chunk') !== -1) {
+                window.location.reload();
+              }
+            });
+          `}
+        </Script>
       </body>
     </html>
   );
