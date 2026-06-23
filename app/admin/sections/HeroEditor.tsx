@@ -57,7 +57,9 @@ export default function HeroEditor({ initial }: { initial: HeroData }) {
       formData.append("file", file);
       formData.append("section", "hero");
       const url = await uploadImage(formData);
-      setData((prev) => ({ ...prev, images: [...prev.images, url] }));
+      const updated = { ...data, images: [...data.images, url] };
+      setData(updated);
+      handleSave(updated);
     } catch {
       setUploadError("アップロードに失敗しました");
     } finally {
@@ -66,10 +68,11 @@ export default function HeroEditor({ initial }: { initial: HeroData }) {
     }
   }
 
-  function handleSave() {
+  function handleSave(overrideData?: HeroData) {
+    const payload = overrideData ?? data;
     startTransition(async () => {
       try {
-        await saveContent("hero", data);
+        await saveContent("hero", payload);
         setSaveStatus("success");
         setTimeout(() => setSaveStatus("idle"), 3000);
       } catch {

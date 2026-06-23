@@ -35,16 +35,23 @@ export default function SalonEditor({ salonKey, initial }: SalonEditorProps) {
     setData((prev) => ({ ...prev, faq: prev.faq.filter((_, idx) => idx !== i) }));
   }
 
-  function handleSave() {
+  function handleSave(overrideData?: SalonContent) {
+    const payload = overrideData ?? data;
     startTransition(async () => {
       try {
-        await saveContent(`salons.${salonKey}`, data);
+        await saveContent(`salons.${salonKey}`, payload);
         setSaveStatus("success");
         setTimeout(() => setSaveStatus("idle"), 3000);
       } catch {
         setSaveStatus("error");
       }
     });
+  }
+
+  function handleImageUpload(url: string) {
+    const updated = { ...data, imageSrc: url };
+    setData(updated);
+    handleSave(updated);
   }
 
   const bgClass = salonKey === "riv" ? "bg-[#F5F0EA]" : salonKey === "fleurami" ? "bg-[#F0E8E8]" : "bg-[#E8E4E0]";
@@ -175,7 +182,7 @@ export default function SalonEditor({ salonKey, initial }: SalonEditorProps) {
       <ImageUpload
         label="店舗・施術写真"
         value={data.imageSrc}
-        onChange={(v) => update("imageSrc", v)}
+        onChange={handleImageUpload}
         section={`salon-${salonKey}`}
       />
 
