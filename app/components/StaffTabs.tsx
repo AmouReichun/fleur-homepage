@@ -3,13 +3,11 @@
 import { useState } from "react";
 import type { StaffMember } from "@/lib/content";
 
-const SALON_TABS = [
-  { label: "fleurami", value: "fleurami" },
-  { label: "Riv.by fleurami", value: "Riv.by fleurami" },
-  { label: "Raffine", value: "Raffine" },
-] as const;
+type Category = "hair" | "eyelash";
+type HairSalon = "fleurami" | "Riv.by fleurami";
 
-type SalonValue = typeof SALON_TABS[number]["value"];
+const HAIR_SALONS: HairSalon[] = ["fleurami", "Riv.by fleurami"];
+const EYELASH_SALONS = ["Raffine"];
 
 function StaffCard({ member }: { member: StaffMember }) {
   return (
@@ -47,45 +45,85 @@ function StaffCard({ member }: { member: StaffMember }) {
 }
 
 export default function StaffTabs({ staff }: { staff: StaffMember[] }) {
-  const [activeSalon, setActiveSalon] = useState<SalonValue>("fleurami");
+  const [category, setCategory] = useState<Category>("hair");
+  const [hairSalon, setHairSalon] = useState<HairSalon>("fleurami");
 
-  const filtered = staff.filter((m) => m.salon === activeSalon);
+  function handleCategoryChange(cat: Category) {
+    setCategory(cat);
+  }
+
+  const filtered = staff.filter((m) => {
+    if (category === "hair") {
+      return m.salon === hairSalon;
+    }
+    return EYELASH_SALONS.includes(m.salon);
+  });
+
+  const countHair = staff.filter((m) => HAIR_SALONS.includes(m.salon as HairSalon)).length;
+  const countEyelash = staff.filter((m) => EYELASH_SALONS.includes(m.salon)).length;
 
   return (
     <div>
-      {/* 店舗タブ */}
+      {/* 上段：業態タブ（すべてなし） */}
       <div className="border-b border-site-greige overflow-x-auto">
         <div className="flex min-w-max">
-          {SALON_TABS.map((tab) => {
-            const count = staff.filter((m) => m.salon === tab.value).length;
-            return (
+          {([
+            { label: "美容室", value: "hair" as Category, count: countHair },
+            { label: "アイラッシュサロン", value: "eyelash" as Category, count: countEyelash },
+          ]).map((tab) => (
+            <button
+              key={tab.value}
+              onClick={() => handleCategoryChange(tab.value)}
+              className={`relative px-5 sm:px-8 py-4 text-xs tracking-[0.2em] whitespace-nowrap transition-colors duration-200 ${
+                category === tab.value
+                  ? "text-site-text font-medium"
+                  : "text-site-muted hover:text-site-text"
+              }`}
+            >
+              {tab.label}
+              <span className={`ml-1.5 text-[9px] ${category === tab.value ? "text-site-accent" : "text-site-muted/60"}`}>
+                ({tab.count})
+              </span>
+              {category === tab.value && (
+                <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-site-accent" />
+              )}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      {/* 下段：美容室の店舗タブ（すべてなし） */}
+      {category === "hair" && (
+        <div className="border-b border-site-greige/60 bg-site-bg overflow-x-auto">
+          <div className="flex min-w-max px-2">
+            {HAIR_SALONS.map((s) => (
               <button
-                key={tab.value}
-                onClick={() => setActiveSalon(tab.value)}
-                className={`relative px-5 sm:px-8 py-4 text-xs tracking-[0.2em] whitespace-nowrap transition-colors duration-200 ${
-                  activeSalon === tab.value
-                    ? "text-site-text font-medium"
+                key={s}
+                onClick={() => setHairSalon(s)}
+                className={`relative px-4 sm:px-6 py-2.5 text-[11px] tracking-[0.18em] whitespace-nowrap transition-colors duration-200 ${
+                  hairSalon === s
+                    ? "text-site-accent"
                     : "text-site-muted hover:text-site-text"
                 }`}
               >
-                {tab.label}
-                <span className={`ml-1.5 text-[9px] ${activeSalon === tab.value ? "text-site-accent" : "text-site-muted/60"}`}>
-                  ({count})
+                {s}
+                <span className="ml-1 text-[9px] text-site-muted/60">
+                  ({staff.filter((m) => m.salon === s).length})
                 </span>
-                {activeSalon === tab.value && (
-                  <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-site-accent" />
+                {hairSalon === s && (
+                  <span className="absolute bottom-0 left-0 right-0 h-px bg-site-accent/60" />
                 )}
               </button>
-            );
-          })}
+            ))}
+          </div>
         </div>
-      </div>
+      )}
 
       {/* 絞り込みラベル */}
       <div className="flex items-center gap-3 mt-10 mb-10">
         <div className="w-6 h-px bg-site-accent" />
         <p className="text-[10px] tracking-[0.35em] text-site-accent uppercase">
-          {activeSalon} スタッフ
+          {category === "hair" ? `${hairSalon} スタッフ` : "Raffine スタッフ"}
         </p>
         <span className="text-[10px] text-site-muted">— {filtered.length}名</span>
       </div>
