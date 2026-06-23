@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 
 const navLinks = [
@@ -13,6 +14,8 @@ const navLinks = [
 ];
 
 export default function Header() {
+  const pathname = usePathname();
+  const isHome = pathname === "/";
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -22,7 +25,7 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handler);
   }, []);
 
-  const solid = scrolled || isOpen;
+  const solid = !isHome || scrolled || isOpen;
 
   return (
     <header
