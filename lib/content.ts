@@ -34,6 +34,7 @@ export interface SalonContent {
   hotpepperUrl: string;
   instagramUrl: string;
   imageSrc: string;
+  nameReading?: string;
   mapEmbedUrl: string;
   faq: FaqItem[];
   menuNotes?: string[];

@@ -91,7 +91,10 @@ export default function SalonListPage() {
                       </div>
                       <div className="lg:w-7/12 p-7 sm:p-10">
                         <p className="text-xs text-site-accent tracking-wider mb-2">{salon.area}</p>
-                        <h2 className="font-serif text-2xl sm:text-3xl font-semibold mb-3">{salon.name}</h2>
+                        <h2 className="font-serif text-2xl sm:text-3xl font-semibold mb-1">{salon.name}</h2>
+                        {salon.nameReading && (
+                          <p className="text-xs text-site-muted tracking-widest mb-3">{salon.nameReading}</p>
+                        )}
                         <p className="text-sm text-site-muted leading-relaxed mb-5">{salon.description}</p>
                         <div className="flex flex-wrap gap-1.5 mb-5">
                           {salon.features.map((f) => (

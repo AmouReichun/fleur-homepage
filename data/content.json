@@ -19,6 +19,7 @@
     "riv": {
       "salonType": "美容室",
       "name": "Riv.by fleurami",
+      "nameReading": "リヴ バイ フルールアミー",
       "area": "高知市",
       "tagline": "髪質改善・白髪ぼかしの美容室",
       "description": "大人女性のための髪質改善・白髪ぼかしの美容室。毎日扱いやすく、自分らしく綺麗でいられるスタイルを提案します。",
@@ -61,6 +62,7 @@
     "fleurami": {
       "salonType": "美容室",
       "name": "fleurami",
+      "nameReading": "フルールアミー",
       "area": "香南市",
       "tagline": "縮毛矯正・艶カラーの美容室",
       "description": "香南市の美容室fleurami。縮毛矯正・艶カラーを得意としています。",
@@ -103,6 +105,7 @@
     "raffine": {
       "salonType": "アイラッシュサロン",
       "name": "Raffine",
+      "nameReading": "ラフィーネ",
       "area": "高知市 はりまや橋周辺",
       "tagline": "まつげパーマ・眉毛WAX・マツエクのアイラッシュサロン",
       "description": "高知市はりまや橋周辺のアイラッシュサロン。マツエク・ラッシュリフト・まつげパーマ・韓国束感まつげ・眉毛WAX・メンズ眉WAXに対応。",
