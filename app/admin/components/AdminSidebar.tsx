@@ -12,6 +12,7 @@ const eyelashSalons = [
   { key: "salon-raffine", label: "Raffine", href: "/admin/salon/raffine" },
 ];
 const otherSections = [
+  { key: "news", label: "最新情報", href: "/admin/news" },
   { key: "quicklinks", label: "クイックリンク", href: "/admin/quicklinks" },
   { key: "popular-menus", label: "人気メニュー（TOP）", href: "/admin/popular-menus" },
   { key: "menus", label: "メニュー・価格", href: "/admin/menus" },

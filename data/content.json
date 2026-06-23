@@ -725,9 +725,9 @@
     },
     {
       "id": "campaign",
-      "title": "キャンペーン",
-      "description": "期間限定のお得な情報",
-      "href": "/menu",
+      "title": "最新情報",
+      "description": "キャンペーン・お知らせ",
+      "href": "/news",
       "external": false,
       "imageSrc": ""
     }
@@ -875,6 +875,7 @@
     "email": "[メールアドレス未入力]",
     "business": "美容室・アイラッシュサロンの経営"
   },
+  "news": [],
   "contact": {
     "note": "お問い合わせはこちらのフォームまたは各店舗のホットペッパービューティーからどうぞ。"
   },

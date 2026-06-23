@@ -56,6 +56,14 @@ export interface QuickLinkCard {
   imageSrc: string;
 }
 
+export interface NewsItem {
+  id: string;
+  title: string;
+  body: string;
+  date: string;
+  salon?: string;
+}
+
 export interface StaffMember {
   name: string;
   role: string;
@@ -109,6 +117,7 @@ export interface SiteContent {
     email: string;
     business: string;
   };
+  news: NewsItem[];
   contact: {
     note: string;
   };

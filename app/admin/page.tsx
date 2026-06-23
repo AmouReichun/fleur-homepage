@@ -4,6 +4,7 @@ import AdminSidebar from "./components/AdminSidebar";
 import SalonOrderEditor from "./components/SalonOrderEditor";
 
 const otherSections = [
+  { key: "news", label: "最新情報", desc: "キャンペーン・お知らせの追加・編集・削除", href: "/admin/news" },
   { key: "hero", label: "ヒーローセクション", desc: "トップページのキャッチコピー・画像・ボタン", href: "/admin/hero" },
   { key: "menus", label: "メニュー・価格", desc: "各店舗のメニューと価格", href: "/admin/menus" },
   { key: "faq", label: "よくある質問", desc: "トップページのFAQセクション", href: "/admin/faq" },

@@ -8,6 +8,7 @@ const navLinks = [
   { href: "/salon", label: "店舗案内" },
   { href: "/menu", label: "メニュー" },
   { href: "/staff", label: "スタッフ" },
+  { href: "/news", label: "最新情報" },
   { href: "/recruit", label: "採用情報" },
   { href: "/company", label: "会社概要" },
   { href: "/contact", label: "お問い合わせ" },
