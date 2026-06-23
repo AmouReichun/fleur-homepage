@@ -55,7 +55,7 @@ export default function BlogSlider({
       </div>
 
       {/* スライドエリア */}
-      <div className="relative" style={{ minHeight: "320px" }}>
+      <div className="relative">
         {posts.map((post, i) => {
           const postUrl = `${blogUrl}/${post.category}/${post.slug}`;
           const thumbUrl = `${blogUrl}${post.thumbnail}`;
@@ -65,8 +65,10 @@ export default function BlogSlider({
           return (
             <div
               key={post.slug}
-              className={`absolute inset-0 transition-opacity duration-500 ${
-                i === current ? "opacity-100" : "opacity-0 pointer-events-none"
+              className={`transition-opacity duration-500 ${
+                i === current
+                  ? "opacity-100 relative"
+                  : "opacity-0 absolute inset-0 pointer-events-none"
               }`}
             >
               <a

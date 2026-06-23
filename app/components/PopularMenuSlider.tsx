@@ -43,13 +43,15 @@ export default function PopularMenuSlider({
         <div className="flex-1 h-px bg-site-greige" />
       </div>
 
-      {/* スライドエリア（固定高さでクロスフェード） */}
-      <div className="relative" style={{ minHeight: "9rem" }}>
+      {/* スライドエリア（クロスフェード） */}
+      <div className="relative">
         {items.map((item, i) => (
           <div
             key={i}
-            className={`absolute inset-0 transition-opacity duration-500 ${
-              i === current ? "opacity-100" : "opacity-0 pointer-events-none"
+            className={`transition-opacity duration-500 ${
+              i === current
+                ? "opacity-100 relative"
+                : "opacity-0 absolute inset-0 pointer-events-none"
             }`}
           >
             <div className="flex items-start gap-6 pb-7 border-b border-site-greige">
