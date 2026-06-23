@@ -1,0 +1,163 @@
+"use server";
+
+import fs from "fs";
+import path from "path";
+import { cookies } from "next/headers";
+import { redirect } from "next/navigation";
+import { getContent } from "@/lib/content";
+
+const CONTENT_PATH = path.join(process.cwd(), "data/content.json");
+
+export async function loginAction(formData: FormData) {
+  const password = formData.get("password") as string;
+  const adminPassword = process.env.ADMIN_PASSWORD;
+
+  if (!adminPassword) {
+    throw new Error("ADMIN_PASSWORD is not set");
+  }
+
+  if (password !== adminPassword) {
+    return { error: "パスワードが正しくありません" };
+  }
+
+  const cookieStore = cookies();
+  cookieStore.set("admin_session", "authenticated", {
+    httpOnly: true,
+    secure: process.env.NODE_ENV === "production",
+    sameSite: "lax",
+    maxAge: 60 * 60 * 24 * 7, // 7 days
+    path: "/",
+  });
+
+  redirect("/admin");
+}
+
+export async function logoutAction() {
+  const cookieStore = cookies();
+  cookieStore.delete("admin_session");
+  redirect("/admin/login");
+}
+
+export async function saveSalonOrder(order: string[]) {
+  const current = getContent();
+  current.salonOrder = order;
+  fs.writeFileSync(CONTENT_PATH, JSON.stringify(current, null, 2));
+  if (process.env.GITHUB_TOKEN && process.env.GITHUB_OWNER && process.env.GITHUB_REPO) {
+    await commitToGitHub(JSON.stringify(current, null, 2));
+  }
+  return { success: true };
+}
+
+export async function saveContent(sectionKey: string, data: unknown) {
+  const current = getContent();
+
+  // Support nested keys like "salons.riv"
+  const keys = sectionKey.split(".");
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  let obj: any = current;
+  for (let i = 0; i < keys.length - 1; i++) {
+    obj = obj[keys[i]];
+  }
+  obj[keys[keys.length - 1]] = data;
+
+  fs.writeFileSync(CONTENT_PATH, JSON.stringify(current, null, 2));
+
+  // GitHub API commit if env vars are set
+  if (
+    process.env.GITHUB_TOKEN &&
+    process.env.GITHUB_OWNER &&
+    process.env.GITHUB_REPO
+  ) {
+    await commitToGitHub(JSON.stringify(current, null, 2));
+  }
+
+  return { success: true };
+}
+
+async function commitToGitHub(content: string) {
+  const token = process.env.GITHUB_TOKEN!;
+  const owner = process.env.GITHUB_OWNER!;
+  const repo = process.env.GITHUB_REPO!;
+  const filePath = "data/content.json";
+
+  // Get current SHA
+  const getRes = await fetch(
+    `https://api.github.com/repos/${owner}/${repo}/contents/${filePath}`,
+    {
+      headers: {
+        Authorization: `Bearer ${token}`,
+        "Content-Type": "application/json",
+      },
+    }
+  );
+  const getJson = await getRes.json();
+  const sha = getJson.sha;
+
+  // Commit
+  await fetch(
+    `https://api.github.com/repos/${owner}/${repo}/contents/${filePath}`,
+    {
+      method: "PUT",
+      headers: {
+        Authorization: `Bearer ${token}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        message: `admin: コンテンツ更新 ${new Date().toLocaleString("ja-JP")}`,
+        content: Buffer.from(content).toString("base64"),
+        sha,
+      }),
+    }
+  );
+}
+
+export async function uploadImage(formData: FormData): Promise<string> {
+  const file = formData.get("file") as File;
+  const section = formData.get("section") as string;
+  const bytes = await file.arrayBuffer();
+  const buffer = Buffer.from(bytes);
+
+  const ext = file.name.split(".").pop();
+  const filename = `${section}-${Date.now()}.${ext}`;
+  const savePath = path.join(
+    process.cwd(),
+    "public/images/admin",
+    filename
+  );
+
+  // Create directory if it doesn't exist
+  fs.mkdirSync(path.dirname(savePath), { recursive: true });
+  fs.writeFileSync(savePath, buffer);
+
+  // Sync to GitHub if configured
+  if (
+    process.env.GITHUB_TOKEN &&
+    process.env.GITHUB_OWNER &&
+    process.env.GITHUB_REPO
+  ) {
+    await commitImageToGitHub(buffer, `public/images/admin/${filename}`);
+  }
+
+  return `/images/admin/${filename}`;
+}
+
+async function commitImageToGitHub(buffer: Buffer, filePath: string) {
+  const token = process.env.GITHUB_TOKEN!;
+  const owner = process.env.GITHUB_OWNER!;
+  const repo = process.env.GITHUB_REPO!;
+
+  await fetch(
+    `https://api.github.com/repos/${owner}/${repo}/contents/${filePath}`,
+    {
+      method: "PUT",
+      headers: {
+        Authorization: `Bearer ${token}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        message: `admin: 画像アップロード ${filePath}`,
+        content: buffer.toString("base64"),
+      }),
+    }
+  );
+}
