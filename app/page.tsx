@@ -79,11 +79,14 @@ export default async function HomePage() {
         <p className="text-[10px] tracking-[0.45em] text-white/50 uppercase mb-5">
           Kochi, Japan — Hair & Eyelash
         </p>
-        <h1 className="font-serif text-5xl sm:text-7xl lg:text-8xl font-light text-white leading-[1.1] mb-8">
-          髪と目元の<br />
-          美しさを<br />
-          <span className="text-[#D4AD80]">叶える場所</span>
+        <h1 className="font-serif text-5xl sm:text-7xl lg:text-8xl font-light text-white leading-[1.1] mb-8 whitespace-pre-line">
+          {content.hero.title || "髪と目元の美しさを叶える場所"}
         </h1>
+        {content.hero.subtitle && (
+          <p className="text-sm text-white/60 leading-relaxed mb-8 max-w-xs whitespace-pre-line">
+            {content.hero.subtitle}
+          </p>
+        )}
         <div className="flex items-center gap-5 mb-10">
           <div className="w-10 h-px bg-white/40" />
           <p className="text-xs text-white/55 tracking-[0.25em]">高知市・香南市 / 3 Salons</p>
@@ -92,7 +95,7 @@ export default async function HomePage() {
           href="/salon"
           className="inline-flex items-center gap-4 text-xs text-white/80 tracking-[0.25em] hover:text-white transition-colors duration-300 group"
         >
-          <span>店舗を見る</span>
+          <span>{content.hero.cta1 || "店舗を見る"}</span>
           <span className="w-12 h-px bg-white/50 group-hover:w-16 transition-all duration-400 group-hover:bg-white/80" />
         </Link>
       </HeroSlideshow>
