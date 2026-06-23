@@ -39,17 +39,18 @@ export async function logoutAction() {
 }
 
 export async function saveSalonOrder(order: string[]) {
-  const current = getContent();
+  const current = await getContentLatest();
   current.salonOrder = order;
-  fs.writeFileSync(CONTENT_PATH, JSON.stringify(current, null, 2));
+  const newJson = JSON.stringify(current, null, 2);
+  try { fs.writeFileSync(CONTENT_PATH, newJson); } catch { /* read-only on Vercel */ }
   if (process.env.GITHUB_TOKEN && process.env.GITHUB_OWNER && process.env.GITHUB_REPO) {
-    await commitToGitHub(JSON.stringify(current, null, 2));
+    await commitToGitHub(newJson);
   }
   return { success: true };
 }
 
 export async function saveContent(sectionKey: string, data: unknown) {
-  const current = getContent();
+  const current = await getContentLatest();
 
   // Support nested keys like "salons.riv"
   const keys = sectionKey.split(".");
@@ -60,18 +61,39 @@ export async function saveContent(sectionKey: string, data: unknown) {
   }
   obj[keys[keys.length - 1]] = data;
 
-  fs.writeFileSync(CONTENT_PATH, JSON.stringify(current, null, 2));
+  const newJson = JSON.stringify(current, null, 2);
+  try { fs.writeFileSync(CONTENT_PATH, newJson); } catch { /* read-only on Vercel */ }
 
-  // GitHub API commit if env vars are set
   if (
     process.env.GITHUB_TOKEN &&
     process.env.GITHUB_OWNER &&
     process.env.GITHUB_REPO
   ) {
-    await commitToGitHub(JSON.stringify(current, null, 2));
+    await commitToGitHub(newJson);
   }
 
   return { success: true };
+}
+
+// 本番では GitHub から最新 JSON を取得して衝突を防ぐ
+async function getContentLatest() {
+  if (
+    process.env.GITHUB_TOKEN &&
+    process.env.GITHUB_OWNER &&
+    process.env.GITHUB_REPO
+  ) {
+    try {
+      const res = await fetch(
+        `https://api.github.com/repos/${process.env.GITHUB_OWNER}/${process.env.GITHUB_REPO}/contents/data/content.json`,
+        { headers: { Authorization: `Bearer ${process.env.GITHUB_TOKEN}` }, cache: "no-store" }
+      );
+      if (res.ok) {
+        const json = await res.json();
+        return JSON.parse(Buffer.from(json.content, "base64").toString("utf-8"));
+      }
+    } catch { /* fallback to local */ }
+  }
+  return getContent();
 }
 
 async function commitToGitHub(content: string) {
@@ -125,9 +147,10 @@ export async function uploadImage(formData: FormData): Promise<string> {
     filename
   );
 
-  // Create directory if it doesn't exist
-  fs.mkdirSync(path.dirname(savePath), { recursive: true });
-  fs.writeFileSync(savePath, buffer);
+  try {
+    fs.mkdirSync(path.dirname(savePath), { recursive: true });
+    fs.writeFileSync(savePath, buffer);
+  } catch { /* read-only on Vercel — image stored via GitHub only */ }
 
   // Sync to GitHub if configured
   if (
