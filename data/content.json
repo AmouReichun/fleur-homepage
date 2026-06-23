@@ -705,7 +705,7 @@
       "description": "ホットペッパーから予約する",
       "href": "/salon",
       "external": false,
-      "imageSrc": ""
+      "imageSrc": "/images/admin/quicklinks-1782213297354.png"
     },
     {
       "id": "staff",
@@ -713,7 +713,7 @@
       "description": "担当スタイリストを探す",
       "href": "/staff",
       "external": false,
-      "imageSrc": ""
+      "imageSrc": "/images/admin/quicklinks-1782213310963.png"
     },
     {
       "id": "blog",
@@ -721,7 +721,7 @@
       "description": "最新の施術事例・コラム",
       "href": "https://fleurami-group-blog.com",
       "external": true,
-      "imageSrc": ""
+      "imageSrc": "/images/admin/quicklinks-1782213317384.png"
     },
     {
       "id": "campaign",
