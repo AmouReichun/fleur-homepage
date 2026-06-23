@@ -30,10 +30,7 @@ export default function SalonDetailPage({ salonKey }: { salonKey: string }) {
           <p className="text-xs tracking-[0.3em] text-site-accent mb-2 uppercase">{salon.area} / {salon.salonType}</p>
           <h1 className="font-serif text-3xl sm:text-4xl font-semibold text-site-text mb-1">{salon.name}</h1>
           {salon.nameReading && (
-            <p className="text-xs text-site-muted tracking-widest mb-3">{salon.nameReading}</p>
-          )}
-          {salon.tagline && (
-            <p className="text-sm sm:text-base text-site-muted max-w-xl leading-relaxed">{salon.tagline}</p>
+            <p className="text-xs text-site-muted tracking-widest">{salon.nameReading}</p>
           )}
         </div>
       </div>
