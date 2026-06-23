@@ -21,6 +21,7 @@ export default function HeroEditor({ initial }: { initial: HeroData }) {
   });
   const [isPending, startTransition] = useTransition();
   const [saveStatus, setSaveStatus] = useState<"idle" | "success" | "error">("idle");
+  const [saveError, setSaveError] = useState<string>("");
   const [uploading, setUploading] = useState(false);
   const [uploadError, setUploadError] = useState<string | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
@@ -71,12 +72,14 @@ export default function HeroEditor({ initial }: { initial: HeroData }) {
   function handleSave(overrideData?: HeroData) {
     const payload = overrideData ?? data;
     startTransition(async () => {
-      try {
-        await saveContent("hero", payload);
+      const res = await saveContent("hero", payload);
+      if (res.success) {
         setSaveStatus("success");
+        setSaveError("");
         setTimeout(() => setSaveStatus("idle"), 3000);
-      } catch {
+      } else {
         setSaveStatus("error");
+        setSaveError(res.error ?? "不明なエラー");
       }
     });
   }
@@ -128,6 +131,7 @@ export default function HeroEditor({ initial }: { initial: HeroData }) {
       onSave={handleSave}
       saving={isPending}
       saveStatus={saveStatus}
+      saveError={saveError}
     >
       <TextField label="メインタイトル" value={data.title} onChange={(v) => update("title", v)} multiline rows={3} />
       <TextField label="サブタイトル" value={data.subtitle} onChange={(v) => update("subtitle", v)} multiline rows={4} />

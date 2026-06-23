@@ -10,6 +10,7 @@ export default function QuickLinkEditor({ initial }: { initial: QuickLinkCard[] 
   const [cards, setCards] = useState<QuickLinkCard[]>(initial);
   const [isPending, startTransition] = useTransition();
   const [saveStatus, setSaveStatus] = useState<"idle" | "success" | "error">("idle");
+  const [saveError, setSaveError] = useState<string>("");
   const [uploadingId, setUploadingId] = useState<string | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
   const uploadTargetId = useRef<string | null>(null);
@@ -75,12 +76,14 @@ export default function QuickLinkEditor({ initial }: { initial: QuickLinkCard[] 
 
   function handleSave() {
     startTransition(async () => {
-      try {
-        await saveContent("quickLinks", cards);
+      const res = await saveContent("quickLinks", cards);
+      if (res.success) {
         setSaveStatus("success");
+        setSaveError("");
         setTimeout(() => setSaveStatus("idle"), 3000);
-      } catch {
+      } else {
         setSaveStatus("error");
+        setSaveError(res.error ?? "不明なエラー");
       }
     });
   }
@@ -125,6 +128,7 @@ export default function QuickLinkEditor({ initial }: { initial: QuickLinkCard[] 
       onSave={handleSave}
       saving={isPending}
       saveStatus={saveStatus}
+      saveError={saveError}
     >
       <p className="text-xs text-[#888] mb-4 leading-relaxed">
         ヒーローの直下に表示される画像グリッド。スマホ2列・タブレット3列・PC4列で表示されます。

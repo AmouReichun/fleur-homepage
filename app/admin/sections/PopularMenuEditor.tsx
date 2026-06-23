@@ -9,6 +9,7 @@ export default function PopularMenuEditor({ initial }: { initial: PopularMenu[] 
   const [items, setItems] = useState<PopularMenu[]>(initial);
   const [isPending, startTransition] = useTransition();
   const [saveStatus, setSaveStatus] = useState<"idle" | "success" | "error">("idle");
+  const [saveError, setSaveError] = useState<string>("");
 
   function update(i: number, field: keyof PopularMenu, value: string) {
     setItems((prev) => prev.map((item, idx) => idx === i ? { ...item, [field]: value } : item));
@@ -34,12 +35,14 @@ export default function PopularMenuEditor({ initial }: { initial: PopularMenu[] 
 
   function handleSave() {
     startTransition(async () => {
-      try {
-        await saveContent("popularMenus", items);
+      const res = await saveContent("popularMenus", items);
+      if (res.success) {
         setSaveStatus("success");
+        setSaveError("");
         setTimeout(() => setSaveStatus("idle"), 3000);
-      } catch {
+      } else {
         setSaveStatus("error");
+        setSaveError(res.error ?? "不明なエラー");
       }
     });
   }
@@ -107,6 +110,7 @@ export default function PopularMenuEditor({ initial }: { initial: PopularMenu[] 
       onSave={handleSave}
       saving={isPending}
       saveStatus={saveStatus}
+      saveError={saveError}
     >
       <p className="text-xs text-[#888] mb-4 leading-relaxed">
         トップページの「02. Menu 人気メニュー」に表示される項目です。順番・内容を自由に編集できます。

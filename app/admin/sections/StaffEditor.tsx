@@ -12,6 +12,7 @@ export default function StaffEditor({ initial }: { initial: StaffMember[] }) {
   const [data, setData] = useState<StaffMember[]>(initial);
   const [isPending, startTransition] = useTransition();
   const [saveStatus, setSaveStatus] = useState<"idle" | "success" | "error">("idle");
+  const [saveError, setSaveError] = useState<string>("");
 
   function update(i: number, field: keyof StaffMember, value: string) {
     const next = [...data];
@@ -32,12 +33,14 @@ export default function StaffEditor({ initial }: { initial: StaffMember[] }) {
 
   function handleSave() {
     startTransition(async () => {
-      try {
-        await saveContent("staff", data);
+      const res = await saveContent("staff", data);
+      if (res.success) {
         setSaveStatus("success");
+        setSaveError("");
         setTimeout(() => setSaveStatus("idle"), 3000);
-      } catch {
+      } else {
         setSaveStatus("error");
+        setSaveError(res.error ?? "不明なエラー");
       }
     });
   }
@@ -84,6 +87,7 @@ export default function StaffEditor({ initial }: { initial: StaffMember[] }) {
       onSave={handleSave}
       saving={isPending}
       saveStatus={saveStatus}
+      saveError={saveError}
     >
       <div className="space-y-5">
         {data.map((member, i) => (

@@ -69,7 +69,12 @@ export async function saveContent(sectionKey: string, data: unknown) {
     process.env.GITHUB_OWNER &&
     process.env.GITHUB_REPO
   ) {
-    await commitToGitHub(newJson);
+    try {
+      await commitToGitHub(newJson);
+    } catch (e) {
+      const msg = e instanceof Error ? e.message : String(e);
+      return { success: false, error: msg };
+    }
   }
 
   return { success: true };
@@ -110,13 +115,18 @@ async function commitToGitHub(content: string) {
         Authorization: `Bearer ${token}`,
         "Content-Type": "application/json",
       },
+      cache: "no-store",
     }
   );
+  if (!getRes.ok) {
+    const errBody = await getRes.text();
+    throw new Error(`GitHub GET failed: ${getRes.status} ${errBody}`);
+  }
   const getJson = await getRes.json();
   const sha = getJson.sha;
 
   // Commit
-  await fetch(
+  const putRes = await fetch(
     `https://api.github.com/repos/${owner}/${repo}/contents/${filePath}`,
     {
       method: "PUT",
@@ -131,6 +141,10 @@ async function commitToGitHub(content: string) {
       }),
     }
   );
+  if (!putRes.ok) {
+    const errBody = await putRes.text();
+    throw new Error(`GitHub PUT failed: ${putRes.status} ${errBody}`);
+  }
 }
 
 export async function uploadImage(formData: FormData): Promise<string> {

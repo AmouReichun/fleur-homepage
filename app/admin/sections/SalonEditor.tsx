@@ -16,6 +16,7 @@ export default function SalonEditor({ salonKey, initial }: SalonEditorProps) {
   const [data, setData] = useState<SalonContent>(initial);
   const [isPending, startTransition] = useTransition();
   const [saveStatus, setSaveStatus] = useState<"idle" | "success" | "error">("idle");
+  const [saveError, setSaveError] = useState<string>("");
 
   function update<K extends keyof SalonContent>(key: K, value: SalonContent[K]) {
     setData((prev) => ({ ...prev, [key]: value }));
@@ -38,12 +39,14 @@ export default function SalonEditor({ salonKey, initial }: SalonEditorProps) {
   function handleSave(overrideData?: SalonContent) {
     const payload = overrideData ?? data;
     startTransition(async () => {
-      try {
-        await saveContent(`salons.${salonKey}`, payload);
+      const res = await saveContent(`salons.${salonKey}`, payload);
+      if (res.success) {
         setSaveStatus("success");
+        setSaveError("");
         setTimeout(() => setSaveStatus("idle"), 3000);
-      } catch {
+      } else {
         setSaveStatus("error");
+        setSaveError(res.error ?? "不明なエラー");
       }
     });
   }
@@ -147,6 +150,7 @@ export default function SalonEditor({ salonKey, initial }: SalonEditorProps) {
       onSave={handleSave}
       saving={isPending}
       saveStatus={saveStatus}
+      saveError={saveError}
     >
       <TextField label="店舗名" value={data.name} onChange={(v) => update("name", v)} />
       <TextField label="エリア" value={data.area} onChange={(v) => update("area", v)} />

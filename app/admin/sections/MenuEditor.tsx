@@ -24,6 +24,7 @@ export default function MenuEditor({ initial }: { initial: MenuEditorData }) {
   const [activeTab, setActiveTab] = useState<SalonTab>("riv");
   const [isPending, startTransition] = useTransition();
   const [saveStatus, setSaveStatus] = useState<"idle" | "success" | "error">("idle");
+  const [saveError, setSaveError] = useState<string>("");
 
   const categories = data[activeTab];
 
@@ -73,12 +74,14 @@ export default function MenuEditor({ initial }: { initial: MenuEditorData }) {
 
   function handleSave() {
     startTransition(async () => {
-      try {
-        await saveContent("menus", data);
+      const res = await saveContent("menus", data);
+      if (res.success) {
         setSaveStatus("success");
+        setSaveError("");
         setTimeout(() => setSaveStatus("idle"), 3000);
-      } catch {
+      } else {
         setSaveStatus("error");
+        setSaveError(res.error ?? "不明なエラー");
       }
     });
   }
@@ -127,6 +130,7 @@ export default function MenuEditor({ initial }: { initial: MenuEditorData }) {
       onSave={handleSave}
       saving={isPending}
       saveStatus={saveStatus}
+      saveError={saveError}
     >
       {/* Salon tabs */}
       <div className="flex border-b border-[#333] -mx-6 px-6 mb-4">

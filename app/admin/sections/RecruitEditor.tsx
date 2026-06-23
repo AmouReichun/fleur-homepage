@@ -17,6 +17,7 @@ export default function RecruitEditor({ initial }: { initial: RecruitData }) {
   const [data, setData] = useState<RecruitData>(initial);
   const [isPending, startTransition] = useTransition();
   const [saveStatus, setSaveStatus] = useState<"idle" | "success" | "error">("idle");
+  const [saveError, setSaveError] = useState<string>("");
 
   function updatePosition(i: number, field: keyof RecruitPosition, value: string) {
     const next = [...data.positions];
@@ -40,12 +41,14 @@ export default function RecruitEditor({ initial }: { initial: RecruitData }) {
 
   function handleSave() {
     startTransition(async () => {
-      try {
-        await saveContent("recruit", data);
+      const res = await saveContent("recruit", data);
+      if (res.success) {
         setSaveStatus("success");
+        setSaveError("");
         setTimeout(() => setSaveStatus("idle"), 3000);
-      } catch {
+      } else {
         setSaveStatus("error");
+        setSaveError(res.error ?? "不明なエラー");
       }
     });
   }
@@ -95,6 +98,7 @@ export default function RecruitEditor({ initial }: { initial: RecruitData }) {
       onSave={handleSave}
       saving={isPending}
       saveStatus={saveStatus}
+      saveError={saveError}
     >
       <TextField
         label="ヘッドライン"

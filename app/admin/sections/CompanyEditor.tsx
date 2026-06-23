@@ -19,6 +19,7 @@ export default function CompanyEditor({ initial }: { initial: CompanyData }) {
   const [data, setData] = useState<CompanyData>(initial);
   const [isPending, startTransition] = useTransition();
   const [saveStatus, setSaveStatus] = useState<"idle" | "success" | "error">("idle");
+  const [saveError, setSaveError] = useState<string>("");
 
   function update<K extends keyof CompanyData>(key: K, value: CompanyData[K]) {
     setData((prev) => ({ ...prev, [key]: value }));
@@ -26,12 +27,14 @@ export default function CompanyEditor({ initial }: { initial: CompanyData }) {
 
   function handleSave() {
     startTransition(async () => {
-      try {
-        await saveContent("company", data);
+      const res = await saveContent("company", data);
+      if (res.success) {
         setSaveStatus("success");
+        setSaveError("");
         setTimeout(() => setSaveStatus("idle"), 3000);
-      } catch {
+      } else {
         setSaveStatus("error");
+        setSaveError(res.error ?? "不明なエラー");
       }
     });
   }
@@ -73,6 +76,7 @@ export default function CompanyEditor({ initial }: { initial: CompanyData }) {
       onSave={handleSave}
       saving={isPending}
       saveStatus={saveStatus}
+      saveError={saveError}
     >
       <TextField label="会社名（法人名）" value={data.name} onChange={(v) => update("name", v)} multiline rows={2} hint="2社ある場合は改行して入力" />
       <TextField label="代表者名" value={data.representative} onChange={(v) => update("representative", v)} multiline rows={2} hint="複数いる場合は改行して入力" />

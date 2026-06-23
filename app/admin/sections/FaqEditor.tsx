@@ -15,6 +15,7 @@ export default function FaqEditor({ initial }: { initial: FaqItem[] }) {
   const [data, setData] = useState<FaqItem[]>(initial);
   const [isPending, startTransition] = useTransition();
   const [saveStatus, setSaveStatus] = useState<"idle" | "success" | "error">("idle");
+  const [saveError, setSaveError] = useState<string>("");
 
   function update(i: number, field: keyof FaqItem, value: string) {
     const next = [...data];
@@ -27,11 +28,15 @@ export default function FaqEditor({ initial }: { initial: FaqItem[] }) {
 
   function handleSave() {
     startTransition(async () => {
-      try {
-        await saveContent("topFaq", data);
+      const res = await saveContent("topFaq", data);
+      if (res.success) {
         setSaveStatus("success");
+        setSaveError("");
         setTimeout(() => setSaveStatus("idle"), 3000);
-      } catch { setSaveStatus("error"); }
+      } else {
+        setSaveStatus("error");
+        setSaveError(res.error ?? "不明なエラー");
+      }
     });
   }
 
@@ -89,7 +94,7 @@ export default function FaqEditor({ initial }: { initial: FaqItem[] }) {
   );
 
   return (
-    <SectionLayout title="よくある質問（トップページ）" preview={preview} onSave={handleSave} saving={isPending} saveStatus={saveStatus}>
+    <SectionLayout title="よくある質問（トップページ）" preview={preview} onSave={handleSave} saving={isPending} saveStatus={saveStatus} saveError={saveError}>
       <p className="text-xs text-[#888] mb-4">各質問にサロンを紐付けると、トップページでサロン別にグループ表示されます。</p>
       <div className="space-y-3">
         {data.map((item, i) => (

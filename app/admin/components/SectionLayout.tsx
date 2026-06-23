@@ -7,6 +7,7 @@ interface SectionLayoutProps {
   onSave: () => void;
   saving: boolean;
   saveStatus: "idle" | "success" | "error";
+  saveError?: string;
 }
 
 export default function SectionLayout({
@@ -16,6 +17,7 @@ export default function SectionLayout({
   onSave,
   saving,
   saveStatus,
+  saveError,
 }: SectionLayoutProps) {
   return (
     <div className="flex flex-col h-full">
@@ -29,8 +31,8 @@ export default function SectionLayout({
             </span>
           )}
           {saveStatus === "error" && (
-            <span className="text-xs text-red-600 bg-red-50 border border-red-200 px-3 py-1 rounded-full">
-              保存に失敗しました
+            <span className="text-xs text-red-600 bg-red-50 border border-red-200 px-3 py-1 rounded-full" title={saveError}>
+              保存に失敗しました{saveError ? `：${saveError.slice(0, 60)}` : ""}
             </span>
           )}
           <button
