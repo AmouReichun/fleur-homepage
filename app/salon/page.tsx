@@ -95,7 +95,9 @@ export default async function SalonListPage() {
                         {salon.nameReading && (
                           <p className="text-xs text-site-muted tracking-widest mb-3">{salon.nameReading}</p>
                         )}
-                        <p className="text-sm text-site-muted leading-relaxed mb-5">{salon.description}</p>
+                        {salon.description && (
+                          <p className="text-sm text-site-muted leading-relaxed mb-5">{salon.description}</p>
+                        )}
                         <div className="flex flex-wrap gap-1.5 mb-5">
                           {salon.features.map((f) => (
                             <span key={f} className="text-xs bg-site-light text-site-text px-2.5 py-1 rounded-full">

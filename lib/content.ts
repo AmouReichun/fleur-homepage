@@ -150,7 +150,7 @@ export async function getContentLatest(): Promise<SiteContent> {
   return getContent();
 }
 
-// 公開ページ用: タグベースキャッシュ（保存時に revalidateTag('site-content') で即時更新）
+// 公開ページ用: 常にGitHubから最新を取得（保存後すぐ反映される）
 export async function getContentCached(): Promise<SiteContent> {
   if (
     process.env.GITHUB_TOKEN &&
@@ -162,7 +162,7 @@ export async function getContentCached(): Promise<SiteContent> {
         `https://api.github.com/repos/${process.env.GITHUB_OWNER}/${process.env.GITHUB_REPO}/contents/data/content.json`,
         {
           headers: { Authorization: `Bearer ${process.env.GITHUB_TOKEN}` },
-          next: { tags: ["site-content"] },
+          cache: "no-store",
         }
       );
       if (res.ok) {
