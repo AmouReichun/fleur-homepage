@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { getContent } from "@/lib/content";
+import { getContentCached } from "@/lib/content";
 import { breadcrumbSchema } from "@/lib/structured-data";
 import StaffTabs from "@/app/components/StaffTabs";
 
@@ -16,8 +16,8 @@ const crumbs = [
   { name: "スタッフ紹介", url: "https://fleurami-group.jp/staff" },
 ];
 
-export default function StaffPage() {
-  const content = getContent();
+export default async function StaffPage() {
+  const content = await getContentCached();
 
   return (
     <>

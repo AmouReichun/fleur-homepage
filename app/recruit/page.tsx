@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { getContent } from "@/lib/content";
+import { getContentCached } from "@/lib/content";
 import { breadcrumbSchema } from "@/lib/structured-data";
 
 export const metadata: Metadata = {
@@ -15,8 +15,8 @@ const crumbs = [
   { name: "採用情報", url: "https://fleurami-group.jp/recruit" },
 ];
 
-export default function RecruitPage() {
-  const { recruit } = getContent();
+export default async function RecruitPage() {
+  const { recruit } = await getContentCached();
 
   return (
     <>

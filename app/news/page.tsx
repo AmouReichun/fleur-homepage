@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { getContent } from "@/lib/content";
+import { getContentCached } from "@/lib/content";
 import { breadcrumbSchema } from "@/lib/structured-data";
 
 export const metadata: Metadata = {
@@ -20,8 +20,8 @@ const SALON_LABELS: Record<string, string> = {
   raffine: "Raffine",
 };
 
-export default function NewsPage() {
-  const { news } = getContent();
+export default async function NewsPage() {
+  const { news } = await getContentCached();
   const sorted = [...(news ?? [])].sort(
     (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
   );

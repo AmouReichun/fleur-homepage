@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { getContent } from "@/lib/content";
+import { getContentCached } from "@/lib/content";
 import { organizationSchema, breadcrumbSchema } from "@/lib/structured-data";
 
 export const metadata: Metadata = {
@@ -15,8 +15,8 @@ const crumbs = [
   { name: "会社概要", url: "https://fleurami-group.jp/company" },
 ];
 
-export default function CompanyPage() {
-  const { company, salonOrder, salons } = getContent();
+export default async function CompanyPage() {
+  const { company, salonOrder, salons } = await getContentCached();
 
   const tableRows = [
     { label: "グループ名", value: company.name },

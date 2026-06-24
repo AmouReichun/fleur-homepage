@@ -23,7 +23,7 @@ export default async function AdminPage() {
         <div className="max-w-3xl space-y-8">
           <div>
             <p className="text-xs tracking-[0.2em] text-[#B8956A] uppercase mb-2">Dashboard</p>
-            <h1 className="text-2xl font-semibold text-white">コンテンツ管理</h1>
+            <h1 className="text-2xl font-semibold text-[#1A1A1A]">コンテンツ管理</h1>
           </div>
 
           {/* 店舗管理（並び替え付き） */}

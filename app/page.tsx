@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { getContent } from "@/lib/content";
+import { getContentCached } from "@/lib/content";
 import { organizationSchema, faqPageSchema } from "@/lib/structured-data";
 import HeroSlideshow from "@/app/components/HeroSlideshow";
 import QuickLinkGrid from "@/app/components/QuickLinkGrid";
@@ -35,7 +35,7 @@ function SectionLabel({ index, en, ja }: { index: string; en: string; ja: string
 }
 
 export default async function HomePage() {
-  const content = getContent();
+  const content = await getContentCached();
   const salons = content.salonOrder.map((key) => {
     const s = content.salons[key as keyof typeof content.salons];
     return { key, ...s, href: `/salon/${key}` };

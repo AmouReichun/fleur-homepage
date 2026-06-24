@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { getContent } from "@/lib/content";
+import { getContentCached } from "@/lib/content";
 import { breadcrumbSchema } from "@/lib/structured-data";
 import ContactForm from "@/app/components/ContactForm";
 
@@ -16,8 +16,8 @@ const crumbs = [
   { name: "お問い合わせ", url: "https://fleurami-group.jp/contact" },
 ];
 
-export default function ContactPage() {
-  const { salonOrder, salons } = getContent();
+export default async function ContactPage() {
+  const { salonOrder, salons } = await getContentCached();
 
   return (
     <>

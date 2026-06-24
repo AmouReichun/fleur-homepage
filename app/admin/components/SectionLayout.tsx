@@ -36,7 +36,7 @@ export default function SectionLayout({
             </span>
           )}
           <button
-            onClick={onSave}
+            onClick={() => onSave()}
             disabled={saving}
             className="bg-[#B8956A] text-white text-sm px-6 py-2.5 rounded-lg hover:bg-[#A07850] transition-all disabled:opacity-50 disabled:cursor-not-allowed font-medium shadow-sm"
           >

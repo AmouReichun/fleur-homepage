@@ -126,7 +126,7 @@ export async function saveContent(content: SiteContent): Promise<void> {
   fs.writeFileSync(CONTENT_PATH, JSON.stringify(content, null, 2));
 }
 
-// 管理画面用: GitHub から最新コンテンツを取得（保存後すぐに反映される）
+// 管理画面用: 常に最新をGitHubから取得（キャッシュなし）
 export async function getContentLatest(): Promise<SiteContent> {
   if (
     process.env.GITHUB_TOKEN &&
@@ -139,6 +139,30 @@ export async function getContentLatest(): Promise<SiteContent> {
         {
           headers: { Authorization: `Bearer ${process.env.GITHUB_TOKEN}` },
           cache: "no-store",
+        }
+      );
+      if (res.ok) {
+        const json = await res.json();
+        return JSON.parse(Buffer.from(json.content, "base64").toString("utf-8"));
+      }
+    } catch { /* fallback */ }
+  }
+  return getContent();
+}
+
+// 公開ページ用: タグベースキャッシュ（保存時に revalidateTag('site-content') で即時更新）
+export async function getContentCached(): Promise<SiteContent> {
+  if (
+    process.env.GITHUB_TOKEN &&
+    process.env.GITHUB_OWNER &&
+    process.env.GITHUB_REPO
+  ) {
+    try {
+      const res = await fetch(
+        `https://api.github.com/repos/${process.env.GITHUB_OWNER}/${process.env.GITHUB_REPO}/contents/data/content.json`,
+        {
+          headers: { Authorization: `Bearer ${process.env.GITHUB_TOKEN}` },
+          next: { tags: ["site-content"] },
         }
       );
       if (res.ok) {

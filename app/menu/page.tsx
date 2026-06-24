@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { getContent } from "@/lib/content";
+import { getContentCached } from "@/lib/content";
 import { breadcrumbSchema } from "@/lib/structured-data";
 import MenuTabs from "@/app/components/MenuTabs";
 
@@ -16,8 +16,8 @@ const crumbs = [
   { name: "メニュー", url: "https://fleurami-group.jp/menu" },
 ];
 
-export default function MenuPage() {
-  const content = getContent();
+export default async function MenuPage() {
+  const content = await getContentCached();
 
   // menus と salons を Record<string, ...> 型に変換
   const menus = content.menus as unknown as Record<string, import("@/lib/content").MenuCategory[]>;

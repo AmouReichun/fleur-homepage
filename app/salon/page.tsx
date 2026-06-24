@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { getContent } from "@/lib/content";
+import { getContentCached } from "@/lib/content";
 import { breadcrumbSchema } from "@/lib/structured-data";
 
 export const metadata: Metadata = {
@@ -26,8 +26,8 @@ const TYPE_LABEL: Record<string, string> = {
   "アイラッシュサロン": "アイラッシュサロン",
 };
 
-export default function SalonListPage() {
-  const content = getContent();
+export default async function SalonListPage() {
+  const content = await getContentCached();
   const orderedSalons = content.salonOrder
     .map((key) => ({ key, ...content.salons[key as keyof typeof content.salons] }))
     .filter(Boolean);

@@ -4,6 +4,7 @@ import fs from "fs";
 import path from "path";
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
+import { revalidateTag } from "next/cache";
 import { getContentLatest } from "@/lib/content";
 
 const CONTENT_PATH = path.join(process.cwd(), "data/content.json");
@@ -74,6 +75,7 @@ export async function saveSalonOrder(order: string[]) {
       throw new Error(e instanceof Error ? e.message : String(e));
     }
   }
+  revalidateTag("site-content");
   return { success: true };
 }
 
@@ -113,6 +115,9 @@ export async function saveContent(sectionKey: string, dataJson: string) {
       return { success: false, error: msg };
     }
   }
+
+  // 公開ページのキャッシュを即時無効化
+  revalidateTag("site-content");
 
   return { success: true };
 }

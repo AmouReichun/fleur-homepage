@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { getContent } from "@/lib/content";
+import { getContentCached } from "@/lib/content";
 
 const SALON_LABELS: Record<string, string> = {
   riv: "Riv.by fleurami（高知市）",
@@ -7,8 +7,8 @@ const SALON_LABELS: Record<string, string> = {
   raffine: "Raffine（高知市 はりまや橋）",
 };
 
-export default function SalonDetailPage({ salonKey }: { salonKey: string }) {
-  const content = getContent();
+export default async function SalonDetailPage({ salonKey }: { salonKey: string }) {
+  const content = await getContentCached();
   const salon = content.salons[salonKey as keyof typeof content.salons];
   const menus = content.menus[salonKey as keyof typeof content.menus] ?? [];
   const otherSalons = content.salonOrder.filter((k) => k !== salonKey);
