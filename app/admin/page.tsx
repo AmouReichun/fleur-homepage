@@ -19,7 +19,7 @@ export default async function AdminPage() {
   return (
     <div className="flex h-screen">
       <AdminSidebar content={content} />
-      <main className="flex-1 overflow-y-auto p-8">
+      <main className="flex-1 overflow-y-auto px-5 md:px-8 pt-16 md:pt-8 pb-8">
         <div className="max-w-3xl space-y-8">
           <div>
             <p className="text-xs tracking-[0.2em] text-[#B8956A] uppercase mb-2">Dashboard</p>

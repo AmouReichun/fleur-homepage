@@ -18,7 +18,7 @@ export default function LoginPage() {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-[#F4F2EF]">
+    <div className="min-h-screen flex items-center justify-center bg-[#F4F2EF] px-4">
       <div className="w-full max-w-sm">
         <div className="text-center mb-8">
           <p className="text-xs tracking-[0.3em] text-[#B8956A] mb-3 uppercase font-medium">Admin</p>
@@ -26,7 +26,7 @@ export default function LoginPage() {
           <p className="text-sm text-[#888] mt-1">管理画面へログイン</p>
         </div>
 
-        <form onSubmit={handleSubmit} className="bg-white rounded-xl shadow-sm border border-[#E8E4E0] p-8 space-y-5">
+        <form onSubmit={handleSubmit} className="bg-white rounded-xl shadow-sm border border-[#E8E4E0] p-6 md:p-8 space-y-5">
           <div>
             <label className="block text-sm font-medium text-[#1A1A1A] mb-2">パスワード</label>
             <input

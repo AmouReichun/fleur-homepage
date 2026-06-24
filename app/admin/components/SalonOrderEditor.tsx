@@ -159,7 +159,7 @@ export default function SalonOrderEditor({
         <div className="bg-white border border-[#B8956A] rounded-xl p-5 space-y-4">
           <p className="text-sm font-semibold text-[#1A1A1A]">新規サロンを追加</p>
 
-          <div className="grid grid-cols-2 gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <div>
               <label className="block text-[11px] font-medium text-[#555] mb-1">キー（英数字・ハイフン）</label>
               <input
