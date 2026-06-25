@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { getContentCached } from "@/lib/content";
 import { breadcrumbSchema } from "@/lib/structured-data";
+import RecruitForm from "@/app/components/RecruitForm";
 
 export const metadata: Metadata = {
   title: "採用情報",
@@ -16,7 +17,14 @@ const crumbs = [
 ];
 
 export default async function RecruitPage() {
-  const { recruit } = await getContentCached();
+  const { recruit, salonOrder, salons } = await getContentCached();
+
+  const positionTitles = Array.from(
+    new Set(recruit.positions.map((p) => p.title).filter(Boolean))
+  );
+  const salonNames = salonOrder
+    .map((key) => salons[key as keyof typeof salons]?.name)
+    .filter((n): n is string => Boolean(n));
 
   return (
     <>
@@ -95,19 +103,24 @@ export default async function RecruitPage() {
 
       {/* 応募方法 */}
       <section className="py-12 sm:py-16 bg-site-light">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 text-center">
-          <h2 className="font-serif text-2xl sm:text-3xl font-semibold text-site-text mb-6">
+        <div className="max-w-2xl mx-auto px-4 sm:px-6">
+          <h2 className="font-serif text-2xl sm:text-3xl font-semibold text-site-text mb-6 text-center">
             応募方法
           </h2>
-          <p className="text-sm text-site-muted leading-relaxed mb-8">
-            まずはお問い合わせフォームよりご連絡ください。簡単な自己紹介と希望のポジション・サロンをご記入のうえお送りください。担当者よりご連絡いたします。見学のみのご相談も歓迎しています。
+          <p className="text-sm text-site-muted leading-relaxed mb-8 text-center">
+            下記の応募フォームより、希望のポジション・サロンをご記入のうえお送りください。
+            担当者より通常2〜3営業日以内にご連絡いたします。見学のみのご相談も歓迎しています。
           </p>
-          <Link
-            href="/contact"
-            className="inline-block bg-site-accent text-white px-10 py-4 text-sm font-medium tracking-wider hover:bg-opacity-90 transition-all duration-200"
-          >
-            採用についてお問い合わせする
-          </Link>
+
+          <RecruitForm positions={positionTitles} salons={salonNames} />
+
+          <p className="text-xs text-site-muted leading-relaxed mt-6 text-center">
+            一般的なお問い合わせは
+            <Link href="/contact" className="text-site-accent underline underline-offset-2 mx-1">
+              お問い合わせフォーム
+            </Link>
+            をご利用ください。
+          </p>
         </div>
       </section>
     </>
