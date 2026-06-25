@@ -52,18 +52,22 @@ function InstagramIcon({ uid }: { uid: string }) {
   );
 }
 function HpbIcon() {
-  // ホットペッパービューティーのブランドカラー（マゼンタ）バッジ。
-  // SVGテキストのベースラインずれを避けるため、divでflex中央揃え。
+  // ホットペッパービューティー = 唐辛子（ペッパー）のグリフ。
+  // 他のアイコン(LINE/Instagram)と同様、SVGで枠いっぱいに描画し見た目を揃える。
   return (
-    <span
-      className="w-full h-full flex items-center justify-center"
-      style={{ background: "#E4007F" }}
-      aria-hidden
-    >
-      <span style={{ color: "#fff", fontSize: "8px", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1 }}>
-        HPB
-      </span>
-    </span>
+    <svg viewBox="0 0 24 24" width="100%" height="100%" aria-hidden>
+      <rect width="24" height="24" rx="6" fill="#E60044" />
+      {/* ヘタ */}
+      <path
+        d="M17.9 5.1c-1.4 0-2.6.9-3.2 2.2.5.3.9.7 1.2 1.2.3-1 1-1.7 1.9-1.9.4-.1.6-.4.5-.8-.1-.5-.3-.7-.4-.7z"
+        fill="#fff"
+      />
+      {/* 実 */}
+      <path
+        d="M15.3 8.2c1.7.3 2.8 1.6 2.8 3.4 0 3.4-2.8 6.2-6.2 6.2-2.2 0-3.9-1.5-3.9-3.5 0-.5.4-.9.9-.9s.8.4.9.9c.1 1 .9 1.7 2 1.7 2.5 0 4.4-2 4.4-4.4 0-1.5-.9-2.4-2.4-2.6-.5-.1-.8-.5-.7-1 .1-.4.6-.7 1-.6z"
+        fill="#fff"
+      />
+    </svg>
   );
 }
 
