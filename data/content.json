@@ -1001,7 +1001,7 @@
   },
   "popularMenus": [
     {
-      "name": "艶カラー",
+      "name": "カラー",
       "desc": "透明感・艶感のあるダメージレスカラー",
       "salon": "fleurami/Riv ",
       "category": "hair"
@@ -1011,6 +1011,12 @@
       "desc": "くせ毛・うねりをサラサラに整える",
       "salon": "fleurami/ Riv ",
       "category": "hair"
+    },
+    {
+      "name": "＆healthy (エクパーマ)",
+      "desc": "マツエク装着後にパーマをかける新技術",
+      "salon": "Raffine",
+      "category": "eyelash"
     },
     {
       "name": "まつげパーマ",
