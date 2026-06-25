@@ -52,12 +52,18 @@ function InstagramIcon({ uid }: { uid: string }) {
   );
 }
 function HpbIcon() {
-  // ホットペッパービューティーのブランドカラー（マゼンタ）バッジ
+  // ホットペッパービューティーのブランドカラー（マゼンタ）バッジ。
+  // SVGテキストのベースラインずれを避けるため、divでflex中央揃え。
   return (
-    <svg viewBox="0 0 24 24" width="100%" height="100%" aria-hidden>
-      <rect width="24" height="24" rx="6" fill="#E4007F" />
-      <text x="12" y="15.5" textAnchor="middle" fontSize="8.2" fontWeight="700" fill="#fff" fontFamily="Arial, sans-serif" letterSpacing="-0.3">HPB</text>
-    </svg>
+    <span
+      className="w-full h-full flex items-center justify-center"
+      style={{ background: "#E4007F" }}
+      aria-hidden
+    >
+      <span style={{ color: "#fff", fontSize: "8px", fontWeight: 700, letterSpacing: "-0.02em", lineHeight: 1 }}>
+        HPB
+      </span>
+    </span>
   );
 }
 

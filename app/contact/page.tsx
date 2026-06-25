@@ -52,6 +52,7 @@ export default async function ContactPage() {
               salons={salons as unknown as Record<string, import("@/lib/content").SalonContent>}
               heading="ご予約・各店舗へのお問い合わせ"
               note="ご希望の方法でご予約・お問い合わせいただけます"
+              groupByType
             />
           </div>
 

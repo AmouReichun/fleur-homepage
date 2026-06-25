@@ -97,7 +97,7 @@ export default async function MenuPage() {
       {/* 予約 CTA（電話 / Web予約 / LINE / Instagram / ホットペッパー） */}
       <section className="py-16 bg-site-light border-t border-site-greige">
         <div className="px-6 sm:px-10 lg:px-16">
-          <ReservationChannels salonOrder={content.salonOrder} salons={salons} />
+          <ReservationChannels salonOrder={content.salonOrder} salons={salons} groupByType />
         </div>
       </section>
     </>
