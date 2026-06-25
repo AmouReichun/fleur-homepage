@@ -7,6 +7,7 @@ import SalonSlider from "@/app/components/SalonSlider";
 import PopularMenuSlider from "@/app/components/PopularMenuSlider";
 import FaqSalonGroup from "@/app/components/FaqSalonGroup";
 import BlogSlider from "@/app/components/BlogSlider";
+import Reveal from "@/app/components/Reveal";
 
 
 
@@ -25,11 +26,13 @@ type BlogPost = {
 function SectionLabel({ index, en, ja }: { index: string; en: string; ja: string }) {
   return (
     <div className="mb-12 sm:mb-16">
-      <div className="flex items-center gap-3 mb-4">
+      <Reveal className="flex items-center gap-3 mb-4">
         <div className="w-6 h-px bg-site-accent" />
         <span className="text-[10px] tracking-[0.45em] text-site-accent uppercase">{index}. {en}</span>
-      </div>
-      <h2 className="font-serif text-4xl sm:text-5xl font-light text-site-text">{ja}</h2>
+      </Reveal>
+      <Reveal delay={120}>
+        <h2 className="font-serif text-4xl sm:text-5xl font-light text-site-text">{ja}</h2>
+      </Reveal>
     </div>
   );
 }
@@ -104,7 +107,9 @@ export default async function HomePage() {
         <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
           <SectionLabel index="01" en="Salon" ja="店舗案内" />
         </div>
-        <SalonSlider salons={salons} />
+        <Reveal delay={150}>
+          <SalonSlider salons={salons} />
+        </Reveal>
       </section>
 
       {/* ─── Menu ─── */}
@@ -112,7 +117,7 @@ export default async function HomePage() {
         <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
           <SectionLabel index="02" en="Menu" ja="人気メニュー" />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-20">
+          <Reveal delay={150} className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-20">
             {popularMenus.some((m) => m.category === "hair") && (
               <PopularMenuSlider
                 items={popularMenus.filter((m) => m.category === "hair")}
@@ -125,7 +130,7 @@ export default async function HomePage() {
                 en="Eyelash Salon"
               />
             )}
-          </div>
+          </Reveal>
 
           <div className="mt-14">
             <Link
@@ -144,14 +149,14 @@ export default async function HomePage() {
         <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
           <SectionLabel index="03" en="Blog" ja="最新ブログ" />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-20">
+          <Reveal delay={150} className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-20">
             {hairPosts.length > 0 && (
               <BlogSlider posts={hairPosts} blogUrl={BLOG_URL} en="Hair Salon" />
             )}
             {eyelashPosts.length > 0 && (
               <BlogSlider posts={eyelashPosts} blogUrl={BLOG_URL} en="Eyelash Salon" />
             )}
-          </div>
+          </Reveal>
 
           <div className="mt-14">
             <Link
@@ -174,15 +179,17 @@ export default async function HomePage() {
 
           {/* 共通FAQ（サロン指定なし） */}
           {commonFaqs.length > 0 && (
-            <div className="mb-14">
+            <Reveal className="mb-14">
               <FaqSalonGroup name="共通" items={commonFaqs} />
-            </div>
+            </Reveal>
           )}
 
           {/* サロン別FAQ */}
           <div className="space-y-14">
-            {faqGroups.map((group) => (
-              <FaqSalonGroup key={group.key} name={group.name} items={group.items} />
+            {faqGroups.map((group, i) => (
+              <Reveal key={group.key} delay={i * 100}>
+                <FaqSalonGroup name={group.name} items={group.items} />
+              </Reveal>
             ))}
           </div>
 
@@ -195,7 +202,7 @@ export default async function HomePage() {
       {/* ─── Recruit ─── */}
       <section className="py-24 sm:py-36 bg-[#1a1a1a]">
         <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
-          <div className="max-w-2xl">
+          <Reveal className="max-w-2xl">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-6 h-px bg-site-accent" />
               <span className="text-[10px] tracking-[0.45em] text-site-accent uppercase">Recruit</span>
@@ -215,7 +222,7 @@ export default async function HomePage() {
               <span>採用情報を見る</span>
               <span className="w-12 h-px bg-white/40 group-hover:w-16 group-hover:bg-white/70 transition-all duration-400" />
             </Link>
-          </div>
+          </Reveal>
         </div>
       </section>
     </>
