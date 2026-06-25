@@ -73,7 +73,7 @@ function channelsForSalon(s: ReserveSalon): Ch[] {
   if (s.webReserveUrl) ch.push({ kind: "web", label: `${s.name}のWeb予約`, short: "Web予約", href: s.webReserveUrl, external: true });
   if (s.lineUrl) ch.push({ kind: "line", label: `${s.name}にLINEで予約`, short: "LINE", href: s.lineUrl, external: true });
   if (s.instagramUrl) ch.push({ kind: "instagram", label: `${s.name}にInstagramで予約`, short: "Instagram", href: s.instagramUrl, external: true });
-  if (s.hotpepperUrl) ch.push({ kind: "hpb", label: `${s.name}をホットペッパーで予約`, short: "ホットペッパー", href: s.hotpepperUrl, external: true });
+  if (s.hotpepperUrl) ch.push({ kind: "hpb", label: `${s.name}をホットペッパーで予約`, short: "ホット\nペッパー", href: s.hotpepperUrl, external: true });
   return ch;
 }
 
@@ -109,7 +109,7 @@ export default function SalonReserveIcons({
               {c.kind === "instagram" && <InstagramIcon uid={`${uid}-${c.kind}`} />}
               {c.kind === "hpb" && <HpbIcon />}
             </span>
-            {showLabels && <span className="text-[9px] text-site-muted text-center leading-tight tracking-tight">{c.short}</span>}
+            {showLabels && <span className="text-[9px] text-site-muted text-center leading-tight tracking-tight whitespace-pre-line">{c.short}</span>}
           </span>
         );
         // 各チャネルを等幅カラムにしてアイコンを整列（ラベル幅の違いでガタつかせない）
