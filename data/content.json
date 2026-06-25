@@ -1107,14 +1107,32 @@
   },
   "popularMenus": [
     {
+      "name": "髪質改善(GM）",
+      "desc": "さらさらツヤツヤの最高峰髪質改善",
+      "salon": "fleurami/Riv ",
+      "category": "hair"
+    },
+    {
       "name": "カラー",
       "desc": "透明感・艶感のあるダメージレスカラー",
       "salon": "fleurami/Riv ",
       "category": "hair"
     },
     {
+      "name": "カット",
+      "desc": "希望も似合うも叶う",
+      "salon": "fleurami/Riv ",
+      "category": "hair"
+    },
+    {
       "name": "縮毛矯正",
       "desc": "くせ毛・うねりをサラサラに整える",
+      "salon": "fleurami/ Riv ",
+      "category": "hair"
+    },
+    {
+      "name": "ツイストスパイラルパーマ",
+      "desc": "メンズに大人気の動きもボリュームもあるパーマ",
       "salon": "fleurami/ Riv ",
       "category": "hair"
     },
@@ -1127,6 +1145,12 @@
     {
       "name": "まつげパーマ",
       "desc": "自まつげを活かした自然な上向きカール",
+      "salon": "Raffine",
+      "category": "eyelash"
+    },
+    {
+      "name": "パリジェンヌ",
+      "desc": "立ち上げデザインの人気パーマ",
       "salon": "Raffine",
       "category": "eyelash"
     },
