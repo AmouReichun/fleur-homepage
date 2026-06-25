@@ -72,7 +72,7 @@ function channelsForSalon(s: ReserveSalon): Ch[] {
   if (s.phone) ch.push({ kind: "tel", label: `${s.name}に電話で予約`, short: "電話", href: `tel:${s.phone.replace(/[^0-9]/g, "")}`, external: false });
   if (s.webReserveUrl) ch.push({ kind: "web", label: `${s.name}のWeb予約`, short: "Web予約", href: s.webReserveUrl, external: true });
   if (s.lineUrl) ch.push({ kind: "line", label: `${s.name}にLINEで予約`, short: "LINE", href: s.lineUrl, external: true });
-  if (s.instagramUrl) ch.push({ kind: "instagram", label: `${s.name}にInstagramで予約`, short: "Instagram", href: s.instagramUrl, external: true });
+  if (s.instagramUrl) ch.push({ kind: "instagram", label: `${s.name}にInstagramで予約`, short: "Insta", href: s.instagramUrl, external: true });
   if (s.hotpepperUrl) ch.push({ kind: "hpb", label: `${s.name}をホットペッパーで予約`, short: "ホット\nペッパー", href: s.hotpepperUrl, external: true });
   return ch;
 }
@@ -92,7 +92,7 @@ export default function SalonReserveIcons({
   if (channels.length === 0) return null;
 
   return (
-    <div className={`flex flex-wrap gap-x-2 gap-y-3 ${align === "center" ? "justify-center" : ""}`}>
+    <div className={`flex flex-wrap gap-x-1.5 gap-y-3 ${align === "center" ? "justify-center" : ""}`}>
       {channels.map((c) => {
         const tile =
           c.kind === "tel" || c.kind === "web"
@@ -112,9 +112,9 @@ export default function SalonReserveIcons({
             {showLabels && <span className="text-[9px] text-site-muted text-center leading-tight tracking-tight whitespace-pre-line">{c.short}</span>}
           </span>
         );
-        // 各チャネルを等幅カラムにしてアイコンを整列（ラベル幅の違いでガタつかせない）
-        // ラベル非表示時はタイル幅でコンパクトに。
-        const cls = `shrink-0 ${showLabels ? "w-14" : "w-10"} flex`;
+        // 各チャネルをタイル幅(40px)の等幅カラムにして整列＋横一列に収める。
+        // ラベルは40px内に収まる短さ（長い場合は中央で折返し、タイル列は崩れない）。
+        const cls = "shrink-0 w-10 flex";
         return c.external ? (
           <a key={c.kind} href={c.href} target="_blank" rel="noopener noreferrer" className={cls} aria-label={c.label} title={c.label}>{inner}</a>
         ) : (

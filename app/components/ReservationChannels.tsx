@@ -62,7 +62,7 @@ export default function ReservationChannels({
                 <span className="text-xs font-medium text-site-text tracking-wider whitespace-nowrap">{g.type}</span>
                 <div className="flex-1 h-px bg-site-greige" />
               </div>
-              <div className={`grid grid-cols-1 gap-4 ${g.keys.length >= 2 ? "sm:grid-cols-2" : ""}`}>
+              <div className="grid grid-cols-1 gap-4">
                 {g.keys.map((key) => (
                   <SalonCard key={key} s={salons[key]} uid={key} />
                 ))}
