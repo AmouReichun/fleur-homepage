@@ -70,12 +70,11 @@ export default async function MenuPage() {
           </div>
           <h2 className="font-serif text-2xl sm:text-3xl font-light text-site-text text-center mb-3">メニューに関する記事</h2>
           <p className="text-xs text-site-muted text-center mb-8">各メニューの仕上がり・施術例は症例ブログで詳しくご紹介しています</p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
             {[
-              { href: "/hair/kamiushitsu-kaizen", label: "髪質改善の症例・効果を見る", sub: "高知市・香南市の美容室" },
-              { href: "/hair", label: "縮毛矯正・白髪ぼかし・艶カラーの記事一覧", sub: "ヘアスタイル全般" },
-              { href: "/eyelash", label: "まつげパーマ・マツエク・眉WAXの記事一覧", sub: "Raffine（高知市）" },
-              { href: "/eyelash/raffine", label: "Raffineのまつげ・眉メニューの実例を見る", sub: "高知市 はりまや橋" },
+              { href: "/hair/kamiushitsu-kaizen", label: "髪質改善の症例・効果を見る", sub: "Riv.（高知市）・fleurami（香南市）" },
+              { href: "/hair", label: "縮毛矯正・白髪ぼかし・艶カラーの記事一覧", sub: "美容室（Riv.・fleurami）" },
+              { href: "/eyelash/raffine", label: "まつげパーマ・マツエク・眉WAXの記事一覧", sub: "Raffine（高知市 はりまや橋）" },
             ].map((l) => (
               <a
                 key={l.href}
