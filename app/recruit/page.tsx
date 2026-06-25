@@ -5,6 +5,7 @@ import { breadcrumbSchema } from "@/lib/structured-data";
 import RecruitForm from "@/app/components/RecruitForm";
 import Reveal from "@/app/components/recruit/Reveal";
 import StickyRecruitCTA from "@/app/components/recruit/StickyRecruitCTA";
+import StatNumber from "@/app/components/recruit/StatNumber";
 
 export const metadata: Metadata = {
   title: "採用情報 | 高知市・香南市の美容師・アイリスト求人 - fleur GROUP",
@@ -412,16 +413,7 @@ export default async function RecruitPage() {
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-y-10 gap-x-4">
               {STATS.map((s, i) => (
                 <Reveal key={s.label} delay={(i % 4) * 70} className="text-center">
-                  <p className="font-serif text-3xl sm:text-4xl text-site-accent leading-none">
-                    {s.value ? (
-                      <>
-                        {s.value}
-                        {s.suffix && <span className="text-lg ml-0.5">{s.suffix}</span>}
-                      </>
-                    ) : (
-                      <span className="text-base text-white/40 font-sans">集計中</span>
-                    )}
-                  </p>
+                  <StatNumber value={s.value} suffix={s.suffix} />
                   <p className="text-[11px] sm:text-xs text-white/70 mt-3 tracking-wide">{s.label}</p>
                 </Reveal>
               ))}
