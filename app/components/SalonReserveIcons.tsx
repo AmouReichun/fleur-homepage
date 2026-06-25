@@ -113,7 +113,8 @@ export default function SalonReserveIcons({
           </span>
         );
         // 各チャネルを等幅カラムにしてアイコンを整列（ラベル幅の違いでガタつかせない）
-        const cls = "shrink-0 w-14 flex";
+        // ラベル非表示時はタイル幅でコンパクトに。
+        const cls = `shrink-0 ${showLabels ? "w-14" : "w-10"} flex`;
         return c.external ? (
           <a key={c.kind} href={c.href} target="_blank" rel="noopener noreferrer" className={cls} aria-label={c.label} title={c.label}>{inner}</a>
         ) : (
