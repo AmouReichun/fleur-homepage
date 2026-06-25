@@ -2,6 +2,7 @@
 
 import { useState, useRef, useCallback, useEffect } from "react";
 import Link from "next/link";
+import SalonReserveIcons from "@/app/components/SalonReserveIcons";
 
 interface SalonSlide {
   key: string;
@@ -13,6 +14,10 @@ interface SalonSlide {
   features: string[];
   imageSrc: string;
   hotpepperUrl: string;
+  phone: string;
+  instagramUrl: string;
+  lineUrl?: string;
+  webReserveUrl?: string;
 }
 
 export default function SalonSlider({ salons }: { salons: SalonSlide[] }) {
@@ -97,20 +102,14 @@ export default function SalonSlider({ salons }: { salons: SalonSlide[] }) {
                     </span>
                   ))}
                 </div>
-                <div className="flex items-center gap-6">
-                  <a
-                    href={s.hotpepperUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-xs tracking-[0.2em] text-white bg-site-accent px-6 py-3 hover:bg-opacity-90 transition-all duration-200"
-                  >
-                    予約する
-                  </a>
+                <div>
+                  <p className="text-[10px] tracking-[0.2em] text-site-accent uppercase mb-3">Reservation</p>
+                  <SalonReserveIcons salon={s} uid={s.key} />
                   <Link
                     href={s.href}
-                    className="inline-flex items-center gap-3 text-xs tracking-[0.15em] text-site-text hover:text-site-accent transition-colors duration-200 group"
+                    className="inline-flex items-center gap-3 text-xs tracking-[0.15em] text-site-text hover:text-site-accent transition-colors duration-200 group mt-7"
                   >
-                    <span>詳細を見る</span>
+                    <span>店舗詳細を見る</span>
                     <span className="w-6 h-px bg-current group-hover:w-8 transition-all duration-300" />
                   </Link>
                 </div>

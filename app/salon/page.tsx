@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { getContentCached } from "@/lib/content";
 import { breadcrumbSchema } from "@/lib/structured-data";
+import SalonReserveIcons from "@/app/components/SalonReserveIcons";
 
 export const metadata: Metadata = {
   title: "店舗案内",
@@ -110,18 +111,15 @@ export default async function SalonListPage() {
                           <p><span className="text-site-text font-medium">営業時間：</span>{salon.hoursWeekday === salon.hoursSaturday ? salon.hoursWeekday : `平日 ${salon.hoursWeekday} / 土曜 ${salon.hoursSaturday}`}</p>
                           <p><span className="text-site-text font-medium">定休日：</span>{salon.closed}</p>
                         </div>
-                        <div className="flex flex-wrap gap-3">
-                          <a
-                            href={salon.hotpepperUrl}
-                            className="bg-site-accent text-white px-6 py-2.5 text-xs font-medium tracking-wider hover:bg-opacity-90 transition-all duration-200"
-                          >
-                            ホットペッパーで予約
-                          </a>
+                        <div>
+                          <p className="text-[10px] tracking-[0.2em] text-site-accent uppercase mb-3">ご予約</p>
+                          <SalonReserveIcons salon={salon} uid={salon.key} />
                           <Link
                             href={SALON_HREFS[salon.key] ?? "#"}
-                            className="border border-site-greige text-site-text px-6 py-2.5 text-xs font-medium tracking-wider hover:border-site-accent hover:text-site-accent transition-all duration-200"
+                            className="inline-flex items-center gap-3 text-xs font-medium tracking-wider text-site-text hover:text-site-accent transition-all duration-200 mt-6 group"
                           >
-                            店舗詳細を見る
+                            <span>店舗詳細を見る</span>
+                            <span className="w-6 h-px bg-current group-hover:w-8 transition-all duration-300" />
                           </Link>
                         </div>
                       </div>
