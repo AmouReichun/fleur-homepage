@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { getContentCached } from "@/lib/content";
 import SalonBlogLinks from "@/app/components/SalonBlogLinks";
+import ReservationChannels from "@/app/components/ReservationChannels";
 
 const SALON_LABELS: Record<string, string> = {
   riv: "Riv.by fleurami（高知市）",
@@ -163,6 +164,17 @@ export default async function SalonDetailPage({ salonKey }: { salonKey: string }
           </div>
         </section>
       )}
+
+      {/* ご予約（電話 / Web予約 / LINE / Instagram / ホットペッパー） */}
+      <section className="py-12 sm:py-16 bg-site-light">
+        <div className="px-4 sm:px-6">
+          <ReservationChannels
+            salonOrder={[salonKey]}
+            salons={content.salons as unknown as Record<string, import("@/lib/content").SalonContent>}
+            heading={`${salon.name} のご予約`}
+          />
+        </div>
+      </section>
 
       {/* この店舗の最新ブログ（店舗→ブログ内部リンク） */}
       <SalonBlogLinks salonKey={salonKey} salonName={salon.name} area={salon.area} />

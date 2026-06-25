@@ -3,6 +3,7 @@ import Link from "next/link";
 import { getContentCached } from "@/lib/content";
 import { breadcrumbSchema } from "@/lib/structured-data";
 import MenuTabs from "@/app/components/MenuTabs";
+import ReservationChannels from "@/app/components/ReservationChannels";
 
 const BLOG_URL = process.env.BLOG_URL ?? "https://fleurami-group-blog.com";
 
@@ -94,28 +95,10 @@ export default async function MenuPage() {
         </div>
       </section>
 
-      {/* 予約 CTA */}
+      {/* 予約 CTA（電話 / Web予約 / LINE / Instagram / ホットペッパー） */}
       <section className="py-16 bg-site-light border-t border-site-greige">
-        <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 text-center">
-          <p className="text-sm text-site-muted mb-8 tracking-wider">ご予約はホットペッパービューティーから</p>
-          <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            {content.salonOrder.map((key) => {
-              const s = salons[key];
-              if (!s) return null;
-              return (
-                <a
-                  key={key}
-                  href={s.hotpepperUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-3 bg-site-accent text-white px-6 py-3 text-xs tracking-[0.2em] hover:bg-opacity-90 transition-all group"
-                >
-                  <span>{s.name}を予約</span>
-                  <span className="w-3 h-px bg-white group-hover:w-5 transition-all duration-300" />
-                </a>
-              );
-            })}
-          </div>
+        <div className="px-6 sm:px-10 lg:px-16">
+          <ReservationChannels salonOrder={content.salonOrder} salons={salons} />
         </div>
       </section>
     </>

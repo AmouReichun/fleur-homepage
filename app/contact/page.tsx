@@ -3,6 +3,7 @@ import Link from "next/link";
 import { getContentCached } from "@/lib/content";
 import { breadcrumbSchema } from "@/lib/structured-data";
 import ContactForm from "@/app/components/ContactForm";
+import ReservationChannels from "@/app/components/ReservationChannels";
 
 export const metadata: Metadata = {
   title: "お問い合わせ",
@@ -46,28 +47,12 @@ export default async function ContactPage() {
           </p>
 
           <div className="mb-10">
-            <h2 className="font-serif text-lg font-semibold text-site-text mb-4 text-center">ご予約・各店舗へのお問い合わせ</h2>
-            <div className="grid grid-cols-1 gap-3">
-              {salonOrder.map((key) => {
-                const s = salons[key as keyof typeof salons];
-                if (!s) return null;
-                return (
-                  <a
-                    key={key}
-                    href={s.hotpepperUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center justify-between border border-site-greige px-5 py-4 hover:border-site-accent transition-colors duration-200 group"
-                  >
-                    <div>
-                      <p className="text-xs text-site-muted mb-0.5">{s.area}</p>
-                      <p className="font-serif text-sm font-semibold">{s.name}</p>
-                    </div>
-                    <span className="text-xs text-site-accent group-hover:underline">ホットペッパーで予約 &rarr;</span>
-                  </a>
-                );
-              })}
-            </div>
+            <ReservationChannels
+              salonOrder={salonOrder}
+              salons={salons as unknown as Record<string, import("@/lib/content").SalonContent>}
+              heading="ご予約・各店舗へのお問い合わせ"
+              note="ご希望の方法でご予約・お問い合わせいただけます"
+            />
           </div>
 
           <ContactForm />

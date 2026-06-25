@@ -38,6 +38,8 @@ export interface SalonContent {
   mapEmbedUrl: string;
   faq: FaqItem[];
   menuNotes?: string[];
+  lineUrl?: string; // LINE予約URL（任意・未設定なら非表示）
+  webReserveUrl?: string; // 店舗Web予約URL（任意・未設定なら非表示）
 }
 
 export interface PopularMenu {
