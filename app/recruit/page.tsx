@@ -134,21 +134,23 @@ const STATS: { label: string; value: string; suffix?: string }[] = [
 ];
 
 /* ───────── 1日の流れ ───────── */
+// 美容師はfleuramiの例（8:30出勤〜18:00退勤）
 const DAY_HAIR = [
-  { time: "9:00", text: "出勤・朝礼／店内準備" },
+  { time: "8:30", text: "出勤・朝礼／店内準備" },
   { time: "9:30", text: "営業開始・お客様対応" },
-  { time: "12:30", text: "交代で昼休憩" },
+  { time: "13:00", text: "交代で昼休憩" },
   { time: "15:00", text: "施術の合間にレッスン" },
-  { time: "18:30", text: "最終受付" },
-  { time: "19:30", text: "片付け・退勤" },
+  { time: "17:30", text: "最終受付・片付け" },
+  { time: "18:00", text: "退勤" },
 ];
+// Raffine（9:00出勤〜18:30退勤）
 const DAY_EYE = [
-  { time: "9:30", text: "出勤・半個室の準備" },
-  { time: "10:00", text: "営業開始・施術" },
+  { time: "9:00", text: "出勤・半個室の準備" },
+  { time: "9:30", text: "営業開始・施術" },
   { time: "13:00", text: "昼休憩" },
   { time: "15:00", text: "デザイン練習・撮影" },
-  { time: "18:00", text: "最終受付" },
-  { time: "19:00", text: "片付け・退勤" },
+  { time: "18:00", text: "最終受付・片付け" },
+  { time: "18:30", text: "退勤" },
 ];
 
 /* ───────── 教育制度 ───────── */
@@ -436,12 +438,13 @@ export default async function RecruitPage() {
             </Reveal>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12">
               {[
-                { title: "美容師", data: DAY_HAIR },
-                { title: "アイリスト", data: DAY_EYE },
+                { title: "美容師", note: "fleuramiの例", data: DAY_HAIR },
+                { title: "アイリスト", note: "Raffineの例", data: DAY_EYE },
               ].map((col) => (
                 <Reveal key={col.title}>
                   <h3 className="font-serif text-lg font-medium mb-6 flex items-center gap-2">
                     <span className="w-6 h-px bg-site-accent" />{col.title}の1日
+                    <span className="text-[11px] text-site-muted font-sans">（{col.note}）</span>
                   </h3>
                   <ol className="relative border-l border-site-greige ml-2">
                     {col.data.map((d) => (
