@@ -19,9 +19,6 @@ const crumbs = [
 export default async function RecruitPage() {
   const { recruit, salonOrder, salons } = await getContentCached();
 
-  const positionTitles = Array.from(
-    new Set(recruit.positions.map((p) => p.title).filter(Boolean))
-  );
   const salonNames = salonOrder
     .map((key) => salons[key as keyof typeof salons]?.name)
     .filter((n): n is string => Boolean(n));
@@ -112,7 +109,7 @@ export default async function RecruitPage() {
             担当者より通常2〜3営業日以内にご連絡いたします。見学のみのご相談も歓迎しています。
           </p>
 
-          <RecruitForm positions={positionTitles} salons={salonNames} />
+          <RecruitForm salons={salonNames} />
 
           <p className="text-xs text-site-muted leading-relaxed mt-6 text-center">
             一般的なお問い合わせは

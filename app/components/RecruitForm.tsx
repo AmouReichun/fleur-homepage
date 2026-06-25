@@ -3,11 +3,18 @@
 import { useState, useTransition } from "react";
 import { sendApplication } from "@/app/recruit/actions";
 
+const POSITIONS = [
+  "美容師",
+  "スタイリスト",
+  "アシスタント",
+  "アイリスト",
+  "アイリスト(未経験)",
+  "その他",
+];
+
 export default function RecruitForm({
-  positions,
   salons,
 }: {
-  positions: string[];
   salons: string[];
 }) {
   const [isPending, startTransition] = useTransition();
@@ -71,13 +78,9 @@ export default function RecruitForm({
           </label>
           <select name="position" required defaultValue="" className={fieldCls}>
             <option value="" disabled>選択してください</option>
-            {positions.map((p) => (
+            {POSITIONS.map((p) => (
               <option key={p} value={p}>{p}</option>
             ))}
-            <option value="美容師">美容師</option>
-            <option value="アイリスト">アイリスト</option>
-            <option value="アシスタント">アシスタント</option>
-            <option value="その他">その他</option>
           </select>
         </div>
 
