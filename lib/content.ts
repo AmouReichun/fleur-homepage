@@ -80,6 +80,55 @@ export interface RecruitPosition {
   description: string;
 }
 
+export interface RecruitBrand {
+  key: string;
+  name: string;
+  area: string;
+  type: string;
+  copy: string;
+  strengths: string[];
+  image: string;
+  instagram: string;
+}
+export interface RecruitValue {
+  icon: string;
+  title: string;
+  text: string;
+}
+export interface RecruitStaffVoice {
+  name: string;
+  role: string;
+  brand: string;
+  years: string;
+  image: string;
+  reason: string;
+  joy: string;
+  holiday: string;
+  goal: string;
+}
+export interface RecruitStat {
+  label: string;
+  value: string;
+  suffix?: string;
+}
+export interface RecruitTimeItem {
+  time: string;
+  text: string;
+}
+export interface RecruitEduStep {
+  step: string;
+  title: string;
+  text: string;
+}
+export interface RecruitReqItem {
+  label: string;
+  value: string;
+}
+export interface RecruitFaqItem {
+  q: string;
+  a: string;
+}
+
 export interface SiteContent {
   salonOrder: string[];
   hero: {
@@ -100,6 +149,24 @@ export interface SiteContent {
     description: string;
     benefits: string[];
     positions: RecruitPosition[];
+    // 採用ページ全面リニューアル分（任意。未設定時はページ側のデフォルトを使用）
+    heroTitle?: string;
+    heroLead?: string;
+    brands?: RecruitBrand[];
+    aboutLead?: string;
+    values?: RecruitValue[];
+    staffVoices?: RecruitStaffVoice[];
+    staffVoiceNote?: string;
+    stats?: RecruitStat[];
+    dayHair?: RecruitTimeItem[];
+    dayEye?: RecruitTimeItem[];
+    dayHairNote?: string;
+    dayEyeNote?: string;
+    education?: RecruitEduStep[];
+    careerHair?: string[];
+    careerEye?: string[];
+    requirements?: RecruitReqItem[];
+    faq?: RecruitFaqItem[];
   };
   company: {
     name: string;
