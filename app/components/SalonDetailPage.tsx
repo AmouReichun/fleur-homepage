@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { getContentCached } from "@/lib/content";
+import SalonBlogLinks from "@/app/components/SalonBlogLinks";
 
 const SALON_LABELS: Record<string, string> = {
   riv: "Riv.by fleurami（高知市）",
@@ -162,6 +163,9 @@ export default async function SalonDetailPage({ salonKey }: { salonKey: string }
           </div>
         </section>
       )}
+
+      {/* この店舗の最新ブログ（店舗→ブログ内部リンク） */}
+      <SalonBlogLinks salonKey={salonKey} salonName={salon.name} area={salon.area} />
 
       {/* 店舗情報 */}
       <section className="py-12 sm:py-16 bg-white">
