@@ -1,10 +1,23 @@
 import { NextResponse } from "next/server";
 import { fetchAllRecentPosts } from "@/lib/blog/instagram-api";
 import { getStaffUploads } from "@/lib/blog/staff-uploads";
+import { getFileContent } from "@/lib/blog/github";
 import fs from "fs";
 import path from "path";
 
 export const runtime = "nodejs";
+
+// 管理画面で「非表示」にした Instagram 投稿の id 一覧を取得
+async function getIgnoredInstagramIds(): Promise<Set<string>> {
+  try {
+    const file = await getFileContent("data/ig-ignored.json");
+    if (!file) return new Set();
+    const parsed = JSON.parse(file.content);
+    return new Set(Array.isArray(parsed) ? parsed.map(String) : []);
+  } catch {
+    return new Set();
+  }
+}
 
 function getUsedInstagramIds(): Set<string> {
   const usedIds = new Set<string>();
@@ -34,7 +47,8 @@ export async function GET() {
   const staffUploads = uploads.status === "fulfilled" ? uploads.value : [];
 
   const usedIds = getUsedInstagramIds();
-  const filtered = posts.filter((p) => !usedIds.has(p.id));
+  const ignoredIds = await getIgnoredInstagramIds();
+  const filtered = posts.filter((p) => !usedIds.has(p.id) && !ignoredIds.has(p.id));
 
   return NextResponse.json({
     posts: filtered,

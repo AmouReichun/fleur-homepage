@@ -27,6 +27,7 @@ export default function GenerateClient() {
   const [fetchError, setFetchError] = useState("");
   const [selected, setSelected] = useState<Set<string>>(new Set());
   const [running, setRunning]   = useState(false);
+  const [removing, setRemoving] = useState<Set<string>>(new Set());
 
   useEffect(() => {
     fetch("/api/admin/ig-posts")
@@ -54,6 +55,52 @@ export default function GenerateClient() {
       if (next.has(id)) { next.delete(id); } else { next.add(id); }
       return next;
     });
+  }
+
+  // 生成しないアイテムを破棄（スタッフ投稿=実削除 / Instagram=一覧から非表示）
+  async function discard(item: ListItem, e: React.MouseEvent) {
+    e.stopPropagation();
+    const isUpload = item.itemType === "upload";
+    const ok = window.confirm(
+      isUpload
+        ? "このスタッフ投稿を削除しますか？（写真とメモを削除します。元に戻せません）"
+        : "このInstagram投稿を一覧から非表示にしますか？（投稿自体は削除されません）",
+    );
+    if (!ok) return;
+
+    setRemoving((prev) => new Set(prev).add(item.id));
+    try {
+      const body = isUpload
+        ? {
+            itemType: "upload",
+            jsonGithubPath: (item as UploadItem).jsonGithubPath,
+            imageGithubPath: (item as UploadItem).imageGithubPath,
+          }
+        : { itemType: "instagram", igId: item.id };
+
+      const res = await fetch("/api/admin/discard", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(body),
+      });
+      const d = await res.json().catch(() => ({}));
+      if (!res.ok || d.error) throw new Error(d.error ?? "失敗しました");
+
+      setItems((prev) => prev.filter((p) => p.id !== item.id));
+      setSelected((prev) => {
+        const next = new Set(prev);
+        next.delete(item.id);
+        return next;
+      });
+    } catch (err) {
+      window.alert((isUpload ? "削除" : "非表示") + "に失敗しました: " + (err instanceof Error ? err.message : String(err)));
+    } finally {
+      setRemoving((prev) => {
+        const next = new Set(prev);
+        next.delete(item.id);
+        return next;
+      });
+    }
   }
 
   async function generate() {
@@ -228,6 +275,19 @@ export default function GenerateClient() {
                   </p>
                 )}
               </div>
+
+              {/* 破棄ボタン（生成しないアイテムを削除/非表示） */}
+              {!isDone && !isGenerating && (
+                <button
+                  onClick={(e) => discard(item, e)}
+                  disabled={removing.has(item.id)}
+                  className="shrink-0 self-start text-[11px] px-2 py-1 transition-colors hover:opacity-80 disabled:opacity-40"
+                  style={{ color: "#9A6A6A", border: "1px solid #3A2A2A", borderRadius: "2px", background: "transparent" }}
+                  title={isUpload ? "このスタッフ投稿を削除" : "一覧から非表示にする"}
+                >
+                  {removing.has(item.id) ? "…" : isUpload ? "削除" : "非表示"}
+                </button>
+              )}
             </div>
           );
         })}
