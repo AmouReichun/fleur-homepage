@@ -3,6 +3,7 @@ import Link from "next/link";
 import { getContentCached } from "@/lib/content";
 import { breadcrumbSchema } from "@/lib/structured-data";
 import StaffTabs from "@/app/components/StaffTabs";
+import ReservationChannels from "@/app/components/ReservationChannels";
 
 export const metadata: Metadata = {
   title: "スタッフ紹介",
@@ -49,30 +50,16 @@ export default async function StaffPage() {
         </div>
       </section>
 
-      {/* 予約 CTA */}
+      {/* 予約 CTA（全チャネル） */}
       <section className="py-16 bg-site-light border-t border-site-greige">
-        <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 text-center">
-          <p className="text-sm text-site-muted mb-8 tracking-wider">
-            スタッフへのご指名はご予約時にお申し付けください
-          </p>
-          <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            {[
-              { label: "fleurami へのご予約", href: "https://beauty.hotpepper.jp/slnH000528388/" },
-              { label: "Riv.by fleurami へのご予約", href: "https://beauty.hotpepper.jp/slnH000634137/" },
-              { label: "Raffine へのご予約", href: "https://beauty.hotpepper.jp/kr/slnH000767549/" },
-            ].map((btn) => (
-              <a
-                key={btn.href}
-                href={btn.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-3 border border-site-greige text-site-text px-6 py-3 text-xs tracking-[0.15em] hover:border-site-accent hover:text-site-accent transition-all duration-200 group"
-              >
-                <span>{btn.label}</span>
-                <span className="w-4 h-px bg-current group-hover:w-6 transition-all duration-300" />
-              </a>
-            ))}
-          </div>
+        <div className="px-6 sm:px-10 lg:px-16">
+          <ReservationChannels
+            salonOrder={content.salonOrder}
+            salons={content.salons as unknown as Record<string, import("@/lib/content").SalonContent>}
+            heading="ご指名・ご予約はこちら"
+            note="スタッフへのご指名はご予約時にお申し付けください"
+            groupByType
+          />
         </div>
       </section>
     </>

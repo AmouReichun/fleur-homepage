@@ -15,6 +15,31 @@ export default async function SalonDetailPage({ salonKey }: { salonKey: string }
   const menus = content.menus[salonKey as keyof typeof content.menus] ?? [];
   const otherSalons = content.salonOrder.filter((k) => k !== salonKey);
 
+  // この店舗のスタッフ（既存データから抽出）
+  const STAFF_SALON: Record<string, string> = { riv: "Riv.by fleurami", fleurami: "fleurami", raffine: "Raffine" };
+  const salonStaff = (content.staff ?? []).filter((m) => m.salon === STAFF_SALON[salonKey]).slice(0, 6);
+
+  // 悩み別導線（AIO：悩み→対応メニュー）
+  const CONCERNS: Record<string, { q: string; a: string }[]> = {
+    fleurami: [
+      { q: "くせ毛・うねりで広がる", a: "縮毛矯正・髪質改善で扱いやすいまとまり髪へ" },
+      { q: "カラーのダメージ・パサつきが気になる", a: "髪質改善トリートメント＋艶カラーでツヤを補修" },
+      { q: "朝のスタイリングに時間がかかる", a: "似合わせカット＋クセを活かす施術で時短に" },
+      { q: "メンズで動きやボリュームが欲しい", a: "メンズパーマ・刈り上げ・フェードに対応" },
+    ],
+    riv: [
+      { q: "白髪が気になるが暗くしたくない", a: "白髪ぼかし・グレイカラーで自然に明るく" },
+      { q: "髪のうねり・パサつき・ダメージ", a: "髪質改善トリートメントでサラサラのツヤ髪へ" },
+      { q: "大人世代に似合うスタイルにしたい", a: "大人女性の似合わせカット・艶カラーをご提案" },
+    ],
+    raffine: [
+      { q: "まつげが少ない・下向きで目元が寂しい", a: "まつげパーマ・ラッシュリフトで自まつげを立ち上げ" },
+      { q: "すっぴんでも盛りたい・ボリュームが欲しい", a: "マツエク・韓国束感・LEDエクステで華やかに" },
+      { q: "眉の形・左右差が気になる", a: "眉毛WAXで黄金比に。メンズ眉WAXも対応" },
+    ],
+  };
+  const concerns = CONCERNS[salonKey] ?? [];
+
   if (!salon) return <div className="p-10 text-center text-site-muted">サロン情報が見つかりません</div>;
 
   return (
@@ -165,8 +190,68 @@ export default async function SalonDetailPage({ salonKey }: { salonKey: string }
         </section>
       )}
 
+      {/* 悩み別導線（AIO：悩み→対応メニュー） */}
+      {concerns.length > 0 && (
+        <section className="py-12 sm:py-16 bg-white">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6">
+            <h2 className="font-serif text-2xl sm:text-3xl font-semibold text-site-text mb-3 text-center">
+              こんなお悩みの方へ
+            </h2>
+            <p className="text-xs text-site-muted text-center mb-8">{salon.area}の{salon.salonType}・{salon.name}が、お悩みに合わせてご提案します</p>
+            <div className="space-y-3">
+              {concerns.map((c) => (
+                <div key={c.q} className="flex items-start gap-3 border border-site-greige bg-white p-4 sm:p-5">
+                  <span className="text-site-accent text-sm flex-shrink-0 mt-0.5">Q.</span>
+                  <div>
+                    <p className="text-sm font-medium text-site-text mb-1">{c.q}</p>
+                    <p className="text-xs text-site-muted leading-relaxed"><span className="text-site-accent mr-1">→</span>{c.a}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div className="text-center mt-7">
+              <Link href="/menu" className="inline-flex items-center gap-3 text-xs tracking-[0.2em] text-site-text hover:text-site-accent transition-colors group">
+                <span>メニュー・料金を見る</span>
+                <span className="w-6 h-px bg-current group-hover:w-9 transition-all duration-300" />
+              </Link>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* スタッフ導線（この店舗のスタッフ→スタッフ紹介へ） */}
+      {salonStaff.length > 0 && (
+        <section className="py-12 sm:py-16 bg-site-light">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6">
+            <h2 className="font-serif text-2xl sm:text-3xl font-semibold text-site-text mb-8 text-center">
+              {salon.name}のスタッフ
+            </h2>
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+              {salonStaff.map((m, i) => (
+                <Link key={`${m.name}-${i}`} href="/staff" className="group block text-center">
+                  <div className="aspect-[4/5] overflow-hidden bg-white mb-2">
+                    {m.imageSrc ? (
+                      // eslint-disable-next-line @next/next/no-img-element
+                      <img src={m.imageSrc} alt={`${m.name}（${salon.name}・${m.role}）`} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+                    ) : null}
+                  </div>
+                  <p className="text-sm font-medium text-site-text group-hover:text-site-accent transition-colors">{m.name}</p>
+                  <p className="text-[10px] text-site-muted mt-0.5">{m.role}{m.history ? `／${m.history}` : ""}</p>
+                </Link>
+              ))}
+            </div>
+            <div className="text-center mt-7">
+              <Link href="/staff" className="inline-flex items-center gap-3 text-xs tracking-[0.2em] text-site-text hover:text-site-accent transition-colors group">
+                <span>スタッフ紹介をすべて見る</span>
+                <span className="w-6 h-px bg-current group-hover:w-9 transition-all duration-300" />
+              </Link>
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* ご予約（電話 / Web予約 / LINE / Instagram / ホットペッパー） */}
-      <section className="py-12 sm:py-16 bg-site-light">
+      <section className="py-12 sm:py-16 bg-white">
         <div className="px-4 sm:px-6">
           <ReservationChannels
             salonOrder={[salonKey]}

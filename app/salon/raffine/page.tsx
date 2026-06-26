@@ -2,10 +2,16 @@ import type { Metadata } from "next";
 import { raffineSalonSchema, breadcrumbSchema } from "@/lib/structured-data";
 import SalonDetailPage from "@/app/components/SalonDetailPage";
 
+const TITLE = "Raffine | 高知市のアイラッシュサロン - まつげパーマ・眉毛WAX";
+const DESC = "高知市はりまや橋のアイラッシュサロン「Raffine」。まつげパーマ・ラッシュリフト・眉毛WAXが得意。自まつげを活かした自然な仕上がり。";
+const OG_IMG = "/images/admin/salon-raffine-1782206000346.JPG";
+
 export const metadata: Metadata = {
-  title: "Raffine | 高知市のアイラッシュサロン - まつげパーマ・眉毛WAX",
-  description: "高知市はりまや橋のアイラッシュサロン「Raffine」。まつげパーマ・ラッシュリフト・眉毛WAXが得意。自まつげを活かした自然な仕上がり。",
+  title: TITLE,
+  description: DESC,
   alternates: { canonical: "https://fleurami-group.jp/salon/raffine" },
+  openGraph: { title: TITLE, description: DESC, url: "https://fleurami-group.jp/salon/raffine", images: [OG_IMG] },
+  twitter: { card: "summary_large_image", title: TITLE, description: DESC, images: [OG_IMG] },
 };
 
 const crumbs = [
