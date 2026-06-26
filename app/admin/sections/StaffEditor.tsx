@@ -4,7 +4,7 @@ import { useState, useTransition } from "react";
 import { saveContent } from "../actions";
 import SectionLayout from "../components/SectionLayout";
 import ImageUpload from "../components/ImageUpload";
-import { TextField } from "../components/FormField";
+import { TextField, StringListField } from "../components/FormField";
 import type { StaffMember, SalonContent } from "@/lib/content";
 import Image from "next/image";
 
@@ -30,6 +30,12 @@ export default function StaffEditor({
     .filter(({ member }) => member.salon === activeTab);
 
   function update(globalIdx: number, field: keyof StaffMember, value: string) {
+    const next = [...data];
+    next[globalIdx] = { ...next[globalIdx], [field]: value };
+    setData(next);
+  }
+
+  function updateArr(globalIdx: number, field: keyof StaffMember, value: string[]) {
     const next = [...data];
     next[globalIdx] = { ...next[globalIdx], [field]: value };
     setData(next);
@@ -178,6 +184,10 @@ export default function StaffEditor({
             <TextField label="サロン" value={member.salon} onChange={(v) => update(index, "salon", v)} placeholder="Riv.by fleurami" />
             <TextField label="経歴" value={member.history ?? ""} onChange={(v) => update(index, "history", v)} placeholder="例: 経験15年" />
             <TextField label="紹介文" value={member.bio} onChange={(v) => update(index, "bio", v)} multiline rows={3} />
+            <TextField label="Instagram URL" value={member.instagramUrl ?? ""} onChange={(v) => update(index, "instagramUrl", v)} placeholder="https://www.instagram.com/..." />
+            <StringListField label="得意技術" values={member.specialties ?? []} onChange={(v) => updateArr(index, "specialties", v)} placeholder="例: 髪質改善" />
+            <StringListField label="得意年代" values={member.ageGroups ?? []} onChange={(v) => updateArr(index, "ageGroups", v)} placeholder="例: 30代" />
+            <StringListField label="得意スタイル" values={member.styles ?? []} onChange={(v) => updateArr(index, "styles", v)} placeholder="例: ショートボブ" />
             <ImageUpload
               label="写真"
               value={member.imageSrc}

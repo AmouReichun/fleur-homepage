@@ -74,6 +74,11 @@ export interface StaffMember {
   salon: string;
   bio: string;
   imageSrc: string;
+  // 拡張（任意・未設定なら非表示）
+  specialties?: string[]; // 得意技術
+  ageGroups?: string[]; // 得意年代
+  styles?: string[]; // 得意スタイル
+  instagramUrl?: string; // InstagramプロフィールURL
 }
 
 export interface RecruitPosition {

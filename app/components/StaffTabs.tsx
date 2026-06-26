@@ -34,11 +34,37 @@ function StaffCard({ member }: { member: StaffMember }) {
           <span className="w-px h-3 bg-site-greige" />
           <span className="text-[10px] text-site-muted tracking-wider">{member.role}</span>
         </div>
-        <h3 className="font-serif text-xl font-light mb-1">{member.name}</h3>
+        <div className="flex items-center gap-2 mb-1">
+          <h3 className="font-serif text-xl font-light">{member.name}</h3>
+          {member.instagramUrl && (
+            <a href={member.instagramUrl} target="_blank" rel="noopener noreferrer" aria-label={`${member.name}のInstagram`} className="text-site-muted hover:text-site-accent transition-colors">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" /><circle cx="12" cy="12" r="4" /><circle cx="17.5" cy="6.5" r="1.1" fill="currentColor" stroke="none" />
+              </svg>
+            </a>
+          )}
+        </div>
         {member.history && (
           <p className="text-[10px] text-site-muted tracking-wider mb-3">{member.history}</p>
         )}
-        <p className="text-xs text-site-muted leading-loose">{member.bio}</p>
+        <p className="text-xs text-site-muted leading-loose mb-3">{member.bio}</p>
+
+        {member.specialties && member.specialties.length > 0 && (
+          <div className="mb-2">
+            <p className="text-[9px] tracking-wider text-site-accent mb-1">得意技術</p>
+            <div className="flex flex-wrap gap-1">
+              {member.specialties.map((s) => (
+                <span key={s} className="text-[10px] text-site-text border border-site-greige px-1.5 py-0.5">{s}</span>
+              ))}
+            </div>
+          </div>
+        )}
+        {member.styles && member.styles.length > 0 && (
+          <p className="text-[10px] text-site-muted mb-0.5"><span className="text-site-accent">得意スタイル：</span>{member.styles.join("・")}</p>
+        )}
+        {member.ageGroups && member.ageGroups.length > 0 && (
+          <p className="text-[10px] text-site-muted"><span className="text-site-accent">得意年代：</span>{member.ageGroups.join("・")}</p>
+        )}
       </div>
     </div>
   );
