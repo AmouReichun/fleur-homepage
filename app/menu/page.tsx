@@ -4,6 +4,7 @@ import { getContentCached } from "@/lib/content";
 import { breadcrumbSchema } from "@/lib/structured-data";
 import MenuTabs from "@/app/components/MenuTabs";
 import ReservationChannels from "@/app/components/ReservationChannels";
+import { SERVICES } from "@/lib/services";
 
 const BLOG_URL = process.env.BLOG_URL ?? "https://fleurami-group-blog.com";
 
@@ -57,6 +58,26 @@ export default async function MenuPage() {
             menus={menus}
             salons={salons}
           />
+        </div>
+      </section>
+
+      {/* サービス別ガイド（メニュー→サービスページ内部リンク） */}
+      <section className="py-14 sm:py-16 bg-site-bg border-t border-site-greige">
+        <div className="max-w-4xl mx-auto px-6 sm:px-10">
+          <div className="flex items-center gap-3 mb-3 justify-center">
+            <div className="w-6 h-px bg-site-accent" />
+            <span className="text-[10px] tracking-[0.4em] text-site-accent uppercase">Service Guide</span>
+            <div className="w-6 h-px bg-site-accent" />
+          </div>
+          <h2 className="font-serif text-2xl sm:text-3xl font-light text-site-text text-center mb-3">サービス別の詳しい解説</h2>
+          <p className="text-xs text-site-muted text-center mb-8">お悩み・効果・FAQ・対応店舗をサービスごとにご紹介しています</p>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+            {SERVICES.map((s) => (
+              <Link key={s.slug} href={`/service/${s.slug}`} className="group border border-site-greige bg-white hover:border-site-accent transition-colors px-4 py-3 text-center">
+                <span className="text-sm font-medium text-site-text group-hover:text-site-accent transition-colors">{s.name}</span>
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
 

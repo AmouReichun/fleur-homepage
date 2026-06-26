@@ -19,23 +19,23 @@ export default async function SalonDetailPage({ salonKey }: { salonKey: string }
   const STAFF_SALON: Record<string, string> = { riv: "Riv.by fleurami", fleurami: "fleurami", raffine: "Raffine" };
   const salonStaff = (content.staff ?? []).filter((m) => m.salon === STAFF_SALON[salonKey]).slice(0, 6);
 
-  // 悩み別導線（AIO：悩み→対応メニュー）
-  const CONCERNS: Record<string, { q: string; a: string }[]> = {
+  // 悩み別導線（AIO：悩み→対応メニュー）。service があればサービスページへ内部リンク。
+  const CONCERNS: Record<string, { q: string; a: string; service?: string }[]> = {
     fleurami: [
-      { q: "くせ毛・うねりで広がる", a: "縮毛矯正・髪質改善で扱いやすいまとまり髪へ" },
-      { q: "カラーのダメージ・パサつきが気になる", a: "髪質改善トリートメント＋艶カラーでツヤを補修" },
-      { q: "朝のスタイリングに時間がかかる", a: "似合わせカット＋クセを活かす施術で時短に" },
+      { q: "くせ毛・うねりで広がる", a: "縮毛矯正・髪質改善で扱いやすいまとまり髪へ", service: "shukumou-kyousei" },
+      { q: "カラーのダメージ・パサつきが気になる", a: "髪質改善トリートメント＋艶カラーでツヤを補修", service: "kamishitsu-kaizen" },
+      { q: "上品な透明感カラーにしたい", a: "艶カラーで似合う色とツヤを両立", service: "tsuya-color" },
       { q: "メンズで動きやボリュームが欲しい", a: "メンズパーマ・刈り上げ・フェードに対応" },
     ],
     riv: [
-      { q: "白髪が気になるが暗くしたくない", a: "白髪ぼかし・グレイカラーで自然に明るく" },
-      { q: "髪のうねり・パサつき・ダメージ", a: "髪質改善トリートメントでサラサラのツヤ髪へ" },
-      { q: "大人世代に似合うスタイルにしたい", a: "大人女性の似合わせカット・艶カラーをご提案" },
+      { q: "白髪が気になるが暗くしたくない", a: "白髪ぼかし・グレイカラーで自然に明るく", service: "shiraga-bokashi" },
+      { q: "髪のうねり・パサつき・ダメージ", a: "髪質改善トリートメントでサラサラのツヤ髪へ", service: "kamishitsu-kaizen" },
+      { q: "大人世代に似合うツヤカラーにしたい", a: "艶カラー・似合わせカットをご提案", service: "tsuya-color" },
     ],
     raffine: [
-      { q: "まつげが少ない・下向きで目元が寂しい", a: "まつげパーマ・ラッシュリフトで自まつげを立ち上げ" },
-      { q: "すっぴんでも盛りたい・ボリュームが欲しい", a: "マツエク・韓国束感・LEDエクステで華やかに" },
-      { q: "眉の形・左右差が気になる", a: "眉毛WAXで黄金比に。メンズ眉WAXも対応" },
+      { q: "まつげが少ない・下向きで目元が寂しい", a: "まつげパーマ・ラッシュリフトで自まつげを立ち上げ", service: "matsuge-perm" },
+      { q: "すっぴんでも盛りたい・ボリュームが欲しい", a: "マツエク・韓国束感・LEDエクステで華やかに", service: "matsuek" },
+      { q: "眉の形・左右差が気になる", a: "眉毛WAXで黄金比に。メンズ眉WAXも対応", service: "mayuge-wax" },
     ],
   };
   const concerns = CONCERNS[salonKey] ?? [];
@@ -199,15 +199,25 @@ export default async function SalonDetailPage({ salonKey }: { salonKey: string }
             </h2>
             <p className="text-xs text-site-muted text-center mb-8">{salon.area}の{salon.salonType}・{salon.name}が、お悩みに合わせてご提案します</p>
             <div className="space-y-3">
-              {concerns.map((c) => (
-                <div key={c.q} className="flex items-start gap-3 border border-site-greige bg-white p-4 sm:p-5">
-                  <span className="text-site-accent text-sm flex-shrink-0 mt-0.5">Q.</span>
-                  <div>
-                    <p className="text-sm font-medium text-site-text mb-1">{c.q}</p>
-                    <p className="text-xs text-site-muted leading-relaxed"><span className="text-site-accent mr-1">→</span>{c.a}</p>
-                  </div>
-                </div>
-              ))}
+              {concerns.map((c) => {
+                const inner = (
+                  <>
+                    <span className="text-site-accent text-sm flex-shrink-0 mt-0.5">Q.</span>
+                    <div className="flex-1">
+                      <p className="text-sm font-medium text-site-text mb-1">{c.q}</p>
+                      <p className="text-xs text-site-muted leading-relaxed"><span className="text-site-accent mr-1">→</span>{c.a}</p>
+                    </div>
+                    {c.service && <span className="text-[11px] text-site-accent flex-shrink-0 self-center whitespace-nowrap">詳しく →</span>}
+                  </>
+                );
+                return c.service ? (
+                  <Link key={c.q} href={`/service/${c.service}`} className="flex items-start gap-3 border border-site-greige bg-white p-4 sm:p-5 hover:border-site-accent transition-colors">
+                    {inner}
+                  </Link>
+                ) : (
+                  <div key={c.q} className="flex items-start gap-3 border border-site-greige bg-white p-4 sm:p-5">{inner}</div>
+                );
+              })}
             </div>
             <div className="text-center mt-7">
               <Link href="/menu" className="inline-flex items-center gap-3 text-xs tracking-[0.2em] text-site-text hover:text-site-accent transition-colors group">
