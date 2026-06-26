@@ -952,8 +952,8 @@
       "id": "blog",
       "title": "",
       "description": "",
-      "href": "https://fleurami-group-blog.com",
-      "external": true,
+      "href": "/blog",
+      "external": false,
       "imageSrc": "/images/admin/quicklinks-1782213773362.jpg"
     },
     {
