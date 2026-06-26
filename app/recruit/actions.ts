@@ -35,6 +35,7 @@ export async function sendApplication(formData: FormData) {
   };
 
   try {
+    // 採用担当あて通知
     await resend.emails.send({
       from: "fleur GROUP 採用応募 <noreply@fleur-group.jp>",
       to: toEmail,
@@ -55,6 +56,32 @@ export async function sendApplication(formData: FormData) {
         "【自己PR・メッセージ】",
         message || "（記入なし）",
       ].filter(Boolean).join("\n"),
+    });
+
+    // 応募者あて自動返信（受付確認）
+    await resend.emails.send({
+      from: "fleur GROUP 採用 <noreply@fleur-group.jp>",
+      to: email,
+      replyTo: toEmail,
+      subject: "【fleur GROUP】ご応募ありがとうございます",
+      text: [
+        `${name} 様`,
+        "",
+        "この度はfleur GROUPの採用にご応募いただき、誠にありがとうございます。",
+        "下記の内容でご応募を受け付けました。担当者より追ってご連絡いたしますので、今しばらくお待ちください。",
+        "",
+        "──────────────",
+        `応募種別: ${applyTypeLabel[applyType] ?? "応募"}`,
+        `希望職種: ${position}`,
+        `希望サロン: ${salon || "不問"}`,
+        `経験年数: ${experience || "未記入"}`,
+        "──────────────",
+        "",
+        "※本メールは送信専用アドレスから自動送信しています。ご返信いただいてもお答えできかねますので、ご了承ください。",
+        "※心当たりのない場合は、お手数ですがこのメールを破棄してください。",
+        "",
+        "fleur GROUP 採用担当",
+      ].join("\n"),
     });
 
     return { success: true };

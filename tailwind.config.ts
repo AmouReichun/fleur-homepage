@@ -18,10 +18,51 @@ const config: Config = {
         "site-light": "#F5F0EA",
         "site-pink": "#F0E8E8",
         "site-greige": "#E8E4E0",
+        // ── ブログ統合分 ──
+        hair: {
+          bg: "#F7F5F2",
+          surface: "#FFFFFF",
+          border: "#E0DBD5",
+          text: "#1E1B18",
+          muted: "#6B6460",
+          accent: "#7F9882",
+          "accent-warm": "#BBA98A",
+        },
+        eye: {
+          bg: "#FBF8F8",
+          surface: "#FFFFFF",
+          border: "#EDD9DC",
+          text: "#262022",
+          muted: "#8A7275",
+          accent: "#C8788A",
+          "accent-soft": "#F2DDE1",
+        },
+        group: {
+          text: "#1A1818",
+          muted: "#6B6460",
+          border: "#E0DBD5",
+          bg: "#F9F7F5",
+        },
       },
       fontFamily: {
         serif: ["var(--font-noto-serif-jp)", "serif"],
         sans: ["var(--font-noto-sans-jp)", "sans-serif"],
+        // ── ブログ統合分 ──
+        mincho: ["var(--font-shippori)", "Hiragino Mincho ProN", "serif"],
+        cormorant: ["var(--font-cormorant)", "Georgia", "serif"],
+        kaku: ["var(--font-kaku)", "Hiragino Kaku Gothic ProN", "sans-serif"],
+        jakarta: ["var(--font-jakarta)", "system-ui", "sans-serif"],
+        dm: ["var(--font-jakarta)", "system-ui", "sans-serif"],
+        dancing: ["var(--font-cormorant)", "Georgia", "serif"],
+        pacifico: ["var(--font-jakarta)", "system-ui", "sans-serif"],
+      },
+      lineHeight: {
+        relaxed: "1.85",
+        snug: "1.55",
+      },
+      maxWidth: {
+        article: "720px",
+        wide: "1080px",
       },
       keyframes: {
         kenburns: {

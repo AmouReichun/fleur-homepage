@@ -1,0 +1,79 @@
+{
+  "staff_001": {
+    "name": "西内 みゆき",
+    "role": "トップスタイリスト",
+    "history": "美容師歴20年以上",
+    "salon": "fleur ami",
+    "instagram": ""
+  },
+  "staff_002": {
+    "name": "山岡 悠弥",
+    "role": "店長 / トップスタイリスト",
+    "history": "美容師歴14年",
+    "salon": "fleur ami",
+    "instagram": ""
+  },
+  "staff_003": {
+    "name": "川上 凛",
+    "role": "スタイリスト",
+    "history": "美容師歴4年",
+    "salon": "fleur ami",
+    "instagram": ""
+  },
+  "staff_004": {
+    "name": "西森 心大",
+    "role": "マネージャー",
+    "history": "美容師歴15年",
+    "salon": "Riv. by fleur ami",
+    "instagram": ""
+  },
+  "staff_005": {
+    "name": "細川 彩香",
+    "role": "スタイリスト",
+    "history": "美容師歴8年",
+    "salon": "Riv. by fleur ami",
+    "instagram": ""
+  },
+  "staff_006": {
+    "name": "沢村 瑞希",
+    "role": "スタイリスト",
+    "history": "美容師歴4年",
+    "salon": "Riv. by fleur ami",
+    "instagram": ""
+  },
+  "staff_007": {
+    "name": "西田 ななみ",
+    "role": "スタイリスト",
+    "history": "美容師歴3年",
+    "salon": "Riv. by fleur ami",
+    "instagram": ""
+  },
+  "staff_008": {
+    "name": "やすい",
+    "role": "アイリスト",
+    "history": "",
+    "salon": "Raffine",
+    "instagram": ""
+  },
+  "staff_009": {
+    "name": "おざき",
+    "role": "アイリスト",
+    "history": "",
+    "salon": "Raffine",
+    "instagram": ""
+  },
+  "staff_010": {
+    "name": "おおの",
+    "role": "アイリスト",
+    "history": "",
+    "salon": "Raffine",
+    "instagram": ""
+  },
+  "staff_011": {
+    "name": "くろせ",
+    "role": "アイリスト",
+    "history": "",
+    "salon": "Raffine",
+    "instagram": ""
+  }
+}

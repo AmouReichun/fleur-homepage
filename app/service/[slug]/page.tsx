@@ -7,7 +7,6 @@ import { breadcrumbSchema } from "@/lib/structured-data";
 import ReservationChannels from "@/app/components/ReservationChannels";
 
 const BASE = "https://fleur-group.jp";
-const BLOG_URL = process.env.BLOG_URL ?? "https://fleurami-group-blog.com";
 
 type Props = { params: { slug: string } };
 
@@ -156,7 +155,7 @@ export default async function ServicePage({ params }: Props) {
       {/* 関連ブログ */}
       <section className="py-10 bg-white">
         <div className="max-w-2xl mx-auto px-4 sm:px-6 text-center">
-          <a href={`${BLOG_URL}${svc.blogUrl}`} target="_blank" rel="noopener noreferrer"
+          <a href={`/blog${svc.blogUrl}`}
             className="inline-flex items-center gap-3 text-sm text-site-text hover:text-site-accent transition-colors group">
             <span>{svc.name}の症例・施術例を症例ブログで見る</span>
             <span className="w-6 h-px bg-current group-hover:w-9 transition-all duration-300" />

@@ -7,6 +7,15 @@ export function middleware(request: NextRequest) {
   const requestHeaders = new Headers(request.headers);
   requestHeaders.set("x-pathname", pathname);
 
+  // 管理APIの保護（ブログ統合分。未認証は401 JSON）
+  if (pathname.startsWith("/api/admin") || pathname === "/api/staff/upload") {
+    const session = request.cookies.get("admin_session");
+    if (!session) {
+      return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+    }
+    return NextResponse.next({ request: { headers: requestHeaders } });
+  }
+
   if (pathname.startsWith("/admin")) {
     if (pathname === "/admin/login") {
       return NextResponse.next({ request: { headers: requestHeaders } });

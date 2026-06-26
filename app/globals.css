@@ -23,3 +23,200 @@ h1, h2, h3, h4, h5, h6 {
     text-wrap: balance;
   }
 }
+
+/* ===== ブログ統合: app/(site) 由来スタイル ===== */
+.admin-input:focus {
+  border-color: rgba(200, 168, 96, 0.5) !important;
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Article prose — hair 木目・大人ヘア */
+.prose-hair {
+  color: #1E1B18;
+  line-height: 1.9;
+  font-size: 0.9375rem;
+  letter-spacing: 0.015em;
+}
+.prose-hair > h2:first-child {
+  display: none;
+}
+.prose-hair h2 {
+  font-family: var(--font-shippori), "Hiragino Mincho ProN", serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-top: 2.75rem;
+  margin-bottom: 1rem;
+  padding: 0.55rem 0.875rem;
+  background: linear-gradient(90deg, #F2EAE0, #F7F3EE);
+  border-left: 2px solid #BBA98A;
+  color: #1E1B18;
+  letter-spacing: 0.04em;
+}
+.prose-hair h3 {
+  font-family: var(--font-shippori), "Hiragino Mincho ProN", serif;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-top: 1.75rem;
+  margin-bottom: 0.75rem;
+  color: #8A7460;
+  letter-spacing: 0.04em;
+}
+.prose-hair p {
+  margin-bottom: 1.25rem;
+}
+.prose-hair strong {
+  font-weight: 600;
+  color: #1E1B18;
+}
+.prose-hair ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1.25rem;
+}
+.prose-hair ul li {
+  padding-left: 1.25rem;
+  position: relative;
+  margin-bottom: 0.5rem;
+}
+.prose-hair ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.62em;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #BBA98A;
+}
+.prose-hair table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 0.875rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #E0DBD5;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.prose-hair th {
+  background: linear-gradient(90deg, #F2EAE0, #F7F3EE);
+  padding: 0.55rem 0.875rem;
+  border-bottom: 1px solid #E0DBD5;
+  font-family: var(--font-shippori), "Hiragino Mincho ProN", serif;
+  font-weight: 500;
+  text-align: left;
+  color: #6B5A46;
+  letter-spacing: 0.04em;
+}
+.prose-hair td {
+  padding: 0.55rem 0.875rem;
+  border-bottom: 1px solid #EDE8E2;
+}
+.prose-hair tr:last-child td {
+  border-bottom: none;
+}
+.prose-hair hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #D4C4AF, transparent);
+  margin: 2.25rem 0;
+}
+
+/* Eyelash prose — Raffine 韓国っぽ */
+.prose-eye {
+  color: #262022;
+  line-height: 1.8;
+  font-size: 0.9375rem;
+  letter-spacing: 0.01em;
+}
+.prose-eye > h2:first-child {
+  display: none;
+}
+.prose-eye h2 {
+  font-family: var(--font-kaku), "Hiragino Kaku Gothic ProN", sans-serif;
+  font-size: 1.05rem;
+  font-weight: 500;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  padding: 0.6rem 1rem;
+  background: #F9EEF1;
+  border-left: 3px solid #C8788A;
+  border-radius: 0 8px 8px 0;
+  color: #262022;
+  letter-spacing: 0.03em;
+}
+.prose-eye h3 {
+  font-family: var(--font-kaku), "Hiragino Kaku Gothic ProN", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin-top: 1.75rem;
+  margin-bottom: 0.75rem;
+  color: #C8788A;
+  letter-spacing: 0.03em;
+}
+.prose-eye p {
+  margin-bottom: 1.25rem;
+}
+.prose-eye strong {
+  font-weight: 600;
+  color: #B85E78;
+}
+.prose-eye ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1.25rem;
+}
+.prose-eye ul li {
+  padding-left: 1.4rem;
+  position: relative;
+  margin-bottom: 0.5rem;
+}
+.prose-eye ul li::before {
+  content: "♡";
+  position: absolute;
+  left: 0;
+  top: 0.05em;
+  font-size: 0.65rem;
+  color: #C8788A;
+  line-height: 1.8;
+}
+.prose-eye table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 0.875rem;
+  margin-bottom: 1.5rem;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #EDD9DC;
+}
+.prose-eye th {
+  background: linear-gradient(135deg, #F9EEF1, #FCEEF3);
+  padding: 0.6rem 0.875rem;
+  border-bottom: 1px solid #EDD9DC;
+  font-weight: 500;
+  text-align: left;
+  color: #8A4A5E;
+  letter-spacing: 0.03em;
+}
+.prose-eye td {
+  padding: 0.6rem 0.875rem;
+  border-bottom: 1px solid #F5E6E9;
+}
+.prose-eye tr:last-child td {
+  border-bottom: none;
+}
+.prose-eye hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #EDD9DC, transparent);
+  margin: 2rem 0;
+}

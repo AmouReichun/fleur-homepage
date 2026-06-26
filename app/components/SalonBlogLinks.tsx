@@ -1,4 +1,4 @@
-const BLOG_URL = process.env.BLOG_URL ?? "https://fleurami-group-blog.com";
+import { getAllPostsMeta } from "@/lib/blog/posts";
 
 type BlogPost = {
   title: string;
@@ -31,15 +31,10 @@ export default async function SalonBlogLinks({
 }) {
   const world: "hair" | "eyelash" = salonKey === "raffine" ? "eyelash" : "hair";
 
-  let posts: BlogPost[] = [];
-  try {
-    const res = await fetch(`${BLOG_URL}/api/posts/recent?count=20&category=${world}`, {
-      next: { revalidate: 3600 },
-    });
-    if (res.ok) posts = (await res.json()) as BlogPost[];
-  } catch {
-    posts = [];
-  }
+  // ブログ統合: ローカルの記事メタから直接取得
+  const posts = getAllPostsMeta()
+    .filter((p) => p.category === world)
+    .slice(0, 20) as unknown as BlogPost[];
 
   const isRiv = (p: BlogPost) => p.salon?.startsWith("Riv");
   const filtered =
@@ -58,7 +53,7 @@ export default async function SalonBlogLinks({
       <section className="py-12 sm:py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
           <h2 className="font-serif text-2xl sm:text-3xl font-semibold text-site-text mb-6">{salonName}のブログ</h2>
-          <a href={`${BLOG_URL}${hub.hub}`} target="_blank" rel="noopener noreferrer"
+          <a href={`/blog${hub.hub}`}
             className="inline-block border border-site-accent text-site-accent px-8 py-3 text-sm font-medium tracking-wider hover:bg-site-light transition-all">
             {area}・{salonName}の症例ブログを見る →
           </a>
@@ -79,13 +74,11 @@ export default async function SalonBlogLinks({
           {list.map((p) => (
             <a
               key={p.slug}
-              href={`${BLOG_URL}/${p.category}/${p.slug}`}
-              target="_blank"
-              rel="noopener noreferrer"
+              href={`/blog/${p.category}/${p.slug}`}
               className="group flex gap-4 border border-site-greige bg-white hover:border-site-accent transition-colors p-3"
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={p.thumbnail.startsWith("http") ? p.thumbnail : `${BLOG_URL}${p.thumbnail}`} alt={p.title} className="w-20 h-20 object-cover flex-shrink-0" loading="lazy" />
+              <img src={p.thumbnail.startsWith("http") ? p.thumbnail : `${p.thumbnail}`} alt={p.title} className="w-20 h-20 object-cover flex-shrink-0" loading="lazy" />
               <div className="min-w-0">
                 <p className="text-sm font-medium text-site-text leading-snug line-clamp-3 group-hover:text-site-accent transition-colors">{p.title}</p>
                 <p className="text-[10px] text-site-muted mt-1">{p.date}</p>
@@ -96,7 +89,7 @@ export default async function SalonBlogLinks({
 
         {hub && (
           <div className="text-center mt-8">
-            <a href={`${BLOG_URL}${hub.hub}`} target="_blank" rel="noopener noreferrer"
+            <a href={`/blog${hub.hub}`}
               className="inline-flex items-center gap-2 text-sm text-site-accent hover:gap-3 transition-all font-medium">
               {area}・{salonName}の症例ブログをもっと見る →
             </a>

@@ -16,11 +16,9 @@ const INTERVAL = 5000;
 
 export default function BlogSlider({
   posts,
-  blogUrl,
   en,
 }: {
   posts: BlogPost[];
-  blogUrl: string;
   en: string;
 }) {
   const [current, setCurrent] = useState(0);
@@ -57,8 +55,8 @@ export default function BlogSlider({
       {/* スライドエリア */}
       <div className="relative">
         {posts.map((post, i) => {
-          const postUrl = `${blogUrl}/${post.category}/${post.slug}`;
-          const thumbUrl = `${blogUrl}${post.thumbnail}`;
+          const postUrl = `/blog/${post.category}/${post.slug}`;
+          const thumbUrl = post.thumbnail?.startsWith("http") ? post.thumbnail : post.thumbnail;
           const dateLabel = post.date
             ? `${post.date.slice(0, 4)}年${parseInt(post.date.slice(5, 7))}月`
             : "";
@@ -73,8 +71,6 @@ export default function BlogSlider({
             >
               <a
                 href={postUrl}
-                target="_blank"
-                rel="noopener noreferrer"
                 className="group block"
               >
                 <div className="overflow-hidden bg-site-light mb-5 aspect-[4/3]">

@@ -30,6 +30,7 @@ export async function sendContact(formData: FormData) {
   };
 
   try {
+    // 担当あて通知
     await resend.emails.send({
       from: "fleur GROUP お問い合わせ <noreply@fleur-group.jp>",
       to: toEmail,
@@ -44,6 +45,31 @@ export async function sendContact(formData: FormData) {
         "【メッセージ】",
         message,
       ].filter(Boolean).join("\n"),
+    });
+
+    // お問い合わせ者あて自動返信（受付確認）
+    await resend.emails.send({
+      from: "fleur GROUP <noreply@fleur-group.jp>",
+      to: email,
+      replyTo: toEmail,
+      subject: "【fleur GROUP】お問い合わせを受け付けました",
+      text: [
+        `${name} 様`,
+        "",
+        "この度はfleur GROUPへお問い合わせいただき、誠にありがとうございます。",
+        "下記の内容でお問い合わせを受け付けました。担当者より追ってご連絡いたしますので、今しばらくお待ちください。",
+        "",
+        "──────────────",
+        `種別: ${typeLabel[type] ?? type}`,
+        "【お問い合わせ内容】",
+        message,
+        "──────────────",
+        "",
+        "※本メールは送信専用アドレスから自動送信しています。ご返信いただいてもお答えできかねますので、ご了承ください。",
+        "※心当たりのない場合は、お手数ですがこのメールを破棄してください。",
+        "",
+        "fleur GROUP",
+      ].join("\n"),
     });
 
     return { success: true };

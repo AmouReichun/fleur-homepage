@@ -11,6 +11,7 @@ const otherSections = [
   { key: "staff", label: "スタッフ紹介", desc: "スタッフの情報・写真・紹介文", href: "/admin/staff" },
   { key: "recruit", label: "採用情報", desc: "求人情報・待遇・応募方法", href: "/admin/recruit" },
   { key: "company", label: "会社概要", desc: "グループの基本情報", href: "/admin/company" },
+  { key: "blog", label: "ブログ管理", desc: "症例ブログの記事生成・下書き・公開", href: "/admin/blog" },
 ];
 
 export default async function AdminPage() {

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Noto_Serif_JP, Noto_Sans_JP } from "next/font/google";
+import { Noto_Serif_JP, Noto_Sans_JP, Shippori_Mincho, Cormorant_Garamond, Zen_Kaku_Gothic_New, Plus_Jakarta_Sans } from "next/font/google";
 import { headers } from "next/headers";
 import Script from "next/script";
 import "./globals.css";
@@ -19,6 +19,14 @@ const notoSansJP = Noto_Sans_JP({
   variable: "--font-noto-sans-jp",
   display: "swap",
 });
+
+// ── ブログ統合用フォント（/blog 配下で使用） ──
+const shipporiMincho = Shippori_Mincho({ subsets: ["latin"], weight: ["400", "500", "600"], variable: "--font-shippori", display: "swap" });
+const cormorant = Cormorant_Garamond({ subsets: ["latin"], weight: ["400", "500", "600"], variable: "--font-cormorant", display: "swap" });
+const zenKakuGothic = Zen_Kaku_Gothic_New({ subsets: ["latin"], weight: ["400", "500"], variable: "--font-kaku", display: "swap" });
+const plusJakarta = Plus_Jakarta_Sans({ subsets: ["latin"], weight: ["400", "500"], variable: "--font-jakarta", display: "swap" });
+// ブログcomponentsは --font-noto も参照
+const notoForBlog = Noto_Sans_JP({ subsets: ["latin"], weight: ["400", "500"], variable: "--font-noto", display: "swap" });
 
 const BASE_URL = "https://fleur-group.jp";
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
@@ -82,12 +90,13 @@ export default function RootLayout({
 }>) {
   const headersList = headers();
   const pathname = headersList.get("x-pathname") ?? "";
-  const isAdmin = pathname.startsWith("/admin");
+  // /admin と /blog は独自レイアウト（HPのHeader/Footerを出さない）
+  const isBare = pathname.startsWith("/admin") || pathname.startsWith("/blog");
 
   return (
-    <html lang="ja" className={`${notoSerifJP.variable} ${notoSansJP.variable}`}>
+    <html lang="ja" className={`${notoSerifJP.variable} ${notoSansJP.variable} ${shipporiMincho.variable} ${cormorant.variable} ${zenKakuGothic.variable} ${plusJakarta.variable} ${notoForBlog.variable}`}>
       <body className="bg-site-bg text-site-text antialiased">
-        {isAdmin ? (
+        {isBare ? (
           <>{children}</>
         ) : (
           <>

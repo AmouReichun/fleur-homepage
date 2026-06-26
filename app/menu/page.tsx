@@ -6,7 +6,6 @@ import MenuTabs from "@/app/components/MenuTabs";
 import ReservationChannels from "@/app/components/ReservationChannels";
 import { SERVICES } from "@/lib/services";
 
-const BLOG_URL = process.env.BLOG_URL ?? "https://fleurami-group-blog.com";
 
 export const metadata: Metadata = {
   title: "メニュー一覧",
@@ -99,9 +98,7 @@ export default async function MenuPage() {
             ].map((l) => (
               <a
                 key={l.href}
-                href={`${BLOG_URL}${l.href}`}
-                target="_blank"
-                rel="noopener noreferrer"
+                href={`/blog${l.href}`}
                 className="group flex items-center justify-between gap-3 border border-site-greige px-5 py-4 hover:border-site-accent transition-colors"
               >
                 <span>

@@ -8,20 +8,7 @@ import PopularMenuSlider from "@/app/components/PopularMenuSlider";
 import FaqSalonGroup from "@/app/components/FaqSalonGroup";
 import BlogSlider from "@/app/components/BlogSlider";
 import Reveal from "@/app/components/Reveal";
-
-
-
-const BLOG_URL = process.env.BLOG_URL ?? "https://fleur-blog.vercel.app";
-
-type BlogPost = {
-  title: string;
-  slug: string;
-  category: string;
-  salon: string;
-  date: string;
-  excerpt: string;
-  thumbnail: string;
-};
+import { getAllPostsMeta } from "@/lib/blog/posts";
 
 function SectionLabel({ index, en, ja }: { index: string; en: string; ja: string }) {
   return (
@@ -57,20 +44,12 @@ export default async function HomePage() {
     .filter((g) => g.items.length > 0);
   const commonFaqs = topFaq.filter((f) => !f.salon);
 
-  const fetchPosts = async (category: string) => {
-    try {
-      const res = await fetch(
-        `${BLOG_URL}/api/posts/recent?count=5&category=${category}`,
-        { next: { revalidate: 3600 } }
-      );
-      if (res.ok) return (await res.json()) as BlogPost[];
-    } catch {}
-    return [];
-  };
-  const [hairPosts, eyelashPosts] = await Promise.all([
-    fetchPosts("hair"),
-    fetchPosts("eyelash"),
-  ]);
+  // ブログ統合: ローカルの記事メタから直接取得
+  const allPosts = getAllPostsMeta();
+  const pickPosts = (category: string) =>
+    allPosts.filter((p) => p.category === category).slice(0, 5);
+  const hairPosts = pickPosts("hair");
+  const eyelashPosts = pickPosts("eyelash");
 
   return (
     <>
@@ -151,18 +130,16 @@ export default async function HomePage() {
 
           <Reveal delay={150} className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-20">
             {hairPosts.length > 0 && (
-              <BlogSlider posts={hairPosts} blogUrl={BLOG_URL} en="Hair Salon" />
+              <BlogSlider posts={hairPosts} en="Hair Salon" />
             )}
             {eyelashPosts.length > 0 && (
-              <BlogSlider posts={eyelashPosts} blogUrl={BLOG_URL} en="Eyelash Salon" />
+              <BlogSlider posts={eyelashPosts} en="Eyelash Salon" />
             )}
           </Reveal>
 
           <div className="mt-14">
             <Link
-              href={BLOG_URL}
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/blog"
               className="inline-flex items-center gap-4 text-xs tracking-[0.25em] text-site-text hover:text-site-accent transition-colors duration-200 group"
             >
               <span>ブログをもっと見る</span>

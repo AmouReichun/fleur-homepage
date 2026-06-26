@@ -6,13 +6,32 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "generate:llms": "node scripts/generate-llms-txt.mjs",
+    "pipeline": "npx tsx scripts/run-pipeline.ts",
+    "pipeline:fetch": "npx tsx scripts/fetch-instagram.ts",
+    "pipeline:article": "npx tsx scripts/generate-article.ts",
+    "pipeline:thumb": "npx tsx scripts/generate-thumbnail.ts",
+    "pipeline:regenerate": "npx tsx scripts/regenerate-articles.ts"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.105.0",
+    "@next/third-parties": "^16.2.9",
+    "@tensorflow-models/blazeface": "^0.1.0",
+    "@tensorflow/tfjs-node": "^4.22.0",
+    "@types/sharp": "^0.31.1",
+    "dotenv": "^17.4.2",
+    "gray-matter": "^4.0.3",
     "next": "14.2.35",
     "react": "^18",
     "react-dom": "^18",
-    "resend": "^6.14.0"
+    "remark": "^15.0.1",
+    "remark-gfm": "^4.0.1",
+    "remark-html": "^16.0.1",
+    "resend": "^6.14.0",
+    "sharp": "^0.35.2",
+    "tsx": "^4.22.4",
+    "vercel": "^54.14.5"
   },
   "devDependencies": {
     "@types/node": "^20",

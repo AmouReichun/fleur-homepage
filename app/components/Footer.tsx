@@ -93,9 +93,7 @@ export default function Footer() {
               ))}
               <li>
                 <a
-                  href="https://fleurami-group-blog.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="/blog"
                   className="text-xs text-white/50 hover:text-white/90 transition-colors duration-200 tracking-wider"
                 >
                   症例ブログ
