@@ -2,7 +2,7 @@ export const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: "fleur GROUP",
-  url: "https://fleurami-group.jp",
+  url: "https://fleur-group.jp",
   description:
     "高知市・香南市で美容室2店舗（Riv.by fleurami・fleurami）、アイラッシュサロン1店舗（Raffine）を展開するグループ。",
   founder: {
@@ -35,7 +35,7 @@ export const rivSalonSchema = {
   alternateName: "リヴ バイ フルールアミー",
   description:
     "高知市の美容室。髪質改善・白髪ぼかし・艶カラー・大人女性向けの似合わせカットが得意。",
-  url: "https://fleurami-group.jp/salon/riv",
+  url: "https://fleur-group.jp/salon/riv",
   telephone: "088-884-5566",
   address: {
     "@type": "PostalAddress",
@@ -77,7 +77,7 @@ export const fleuramiSalonSchema = {
   alternateName: "フルールアミー",
   description:
     "香南市の美容室。縮毛矯正・髪質改善・艶カラー・カットが得意。",
-  url: "https://fleurami-group.jp/salon/fleurami",
+  url: "https://fleur-group.jp/salon/fleurami",
   telephone: "0887-56-5566",
   address: {
     "@type": "PostalAddress",
@@ -119,7 +119,7 @@ export const raffineSalonSchema = {
   alternateName: "ラフィーネ",
   description:
     "高知市はりまや橋周辺のアイラッシュサロン。ラッシュリフト・まつげパーマ・韓国束感まつげ・眉毛WAX・メンズ眉WAXに対応。",
-  url: "https://fleurami-group.jp/salon/raffine",
+  url: "https://fleur-group.jp/salon/raffine",
   telephone: "090-7120-5566",
   address: {
     "@type": "PostalAddress",

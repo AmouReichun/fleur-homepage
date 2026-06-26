@@ -6,7 +6,7 @@ import { getService, getAllServiceSlugs } from "@/lib/services";
 import { breadcrumbSchema } from "@/lib/structured-data";
 import ReservationChannels from "@/app/components/ReservationChannels";
 
-const BASE = "https://fleurami-group.jp";
+const BASE = "https://fleur-group.jp";
 const BLOG_URL = process.env.BLOG_URL ?? "https://fleurami-group-blog.com";
 
 type Props = { params: { slug: string } };

@@ -12,12 +12,12 @@ export const metadata: Metadata = {
   title: "メニュー一覧",
   description:
     "fleur GROUPのメニュー一覧。髪質改善・白髪ぼかし・縮毛矯正・艶カラー（Riv.by fleurami / fleurami）、まつげパーマ・ラッシュリフト・眉毛WAX（Raffine）など幅広くご用意しています。",
-  alternates: { canonical: "https://fleurami-group.jp/menu" },
+  alternates: { canonical: "https://fleur-group.jp/menu" },
 };
 
 const crumbs = [
-  { name: "ホーム", url: "https://fleurami-group.jp" },
-  { name: "メニュー", url: "https://fleurami-group.jp/menu" },
+  { name: "ホーム", url: "https://fleur-group.jp" },
+  { name: "メニュー", url: "https://fleur-group.jp/menu" },
 ];
 
 export default async function MenuPage() {

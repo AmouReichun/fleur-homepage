@@ -20,7 +20,7 @@ export async function sendApplication(formData: FormData) {
 
   const apiKey  = process.env.RESEND_API_KEY;
   // 採用専用の宛先。未設定ならお問い合わせ用にフォールバック
-  const toEmail = process.env.RECRUIT_EMAIL ?? process.env.CONTACT_EMAIL ?? "info@fleurami-group.jp";
+  const toEmail = process.env.RECRUIT_EMAIL ?? process.env.CONTACT_EMAIL ?? "info@fleur-group.jp";
 
   if (!apiKey) {
     return { success: false, error: "メール送信が設定されていません。お手数ですが各店舗まで直接ご連絡ください。" };
@@ -36,7 +36,7 @@ export async function sendApplication(formData: FormData) {
 
   try {
     await resend.emails.send({
-      from: "fleur GROUP 採用応募 <noreply@fleurami-group.jp>",
+      from: "fleur GROUP 採用応募 <noreply@fleur-group.jp>",
       to: toEmail,
       replyTo: email,
       subject: `【採用応募】${position} - ${name}様`,

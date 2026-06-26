@@ -18,4 +18,4 @@ Allow: /
 User-agent: Amazonbot
 Allow: /
 
-Sitemap: https://fleurami-group.jp/sitemap.xml
+Sitemap: https://fleur-group.jp/sitemap.xml

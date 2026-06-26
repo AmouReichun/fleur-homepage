@@ -3,7 +3,7 @@ import Link from "next/link";
 import { SERVICES } from "@/lib/services";
 import { breadcrumbSchema } from "@/lib/structured-data";
 
-const BASE = "https://fleurami-group.jp";
+const BASE = "https://fleur-group.jp";
 
 export const metadata: Metadata = {
   title: "メニュー・サービス一覧 | 高知市・香南市の美容室・アイラッシュサロン",

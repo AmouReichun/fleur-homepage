@@ -1,7 +1,7 @@
 import { MetadataRoute } from "next";
 import { getAllServiceSlugs } from "@/lib/services";
 
-const BASE = "https://fleurami-group.jp";
+const BASE = "https://fleur-group.jp";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();

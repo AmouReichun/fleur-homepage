@@ -20,7 +20,7 @@ const notoSansJP = Noto_Sans_JP({
   display: "swap",
 });
 
-const BASE_URL = "https://fleurami-group.jp";
+const BASE_URL = "https://fleur-group.jp";
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
 
 export const metadata: Metadata = {
@@ -70,6 +70,9 @@ export const metadata: Metadata = {
       "高知市・香南市で3サロンを展開。髪質改善・白髪ぼかし・縮毛矯正・まつげパーマ・眉毛WAX。",
     images: ["/images/admin/hero-1782190629178.png"],
   },
+  ...(process.env.GOOGLE_SITE_VERIFICATION
+    ? { verification: { google: process.env.GOOGLE_SITE_VERIFICATION } }
+    : {}),
 };
 
 export default function RootLayout({

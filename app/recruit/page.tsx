@@ -11,20 +11,20 @@ export const metadata: Metadata = {
   title: "採用情報 | 高知市・香南市の美容師・アイリスト求人 - fleur GROUP",
   description:
     "高知市・香南市で美容師・アイリストを募集中。香南市の美容室fleurami、高知市の美容室Riv.by fleurami、高知市のまつげサロンRaffine。髪質改善・白髪ぼかし・まつげパーマなど技術が学べる職場。美容学生・20代美容師・アイリスト・転職希望者歓迎。サロン見学だけでもOK。",
-  alternates: { canonical: "https://fleurami-group.jp/recruit" },
+  alternates: { canonical: "https://fleur-group.jp/recruit" },
   openGraph: {
     title: "「ここで働きたい」と思える職場へ | fleur GROUP 採用情報",
     description:
       "高知市・香南市で美容師・アイリスト募集。香南市 美容室求人 / 高知市 美容師求人 / 高知市 アイリスト求人。まずはサロン見学から。",
-    url: "https://fleurami-group.jp/recruit",
+    url: "https://fleur-group.jp/recruit",
     type: "website",
     images: ["/images/admin/salon-fleurami-1782197558743.jpg"],
   },
 };
 
 const crumbs = [
-  { name: "ホーム", url: "https://fleurami-group.jp" },
-  { name: "採用情報", url: "https://fleurami-group.jp/recruit" },
+  { name: "ホーム", url: "https://fleur-group.jp" },
+  { name: "採用情報", url: "https://fleur-group.jp/recruit" },
 ];
 
 /* ───────── 以下は content.json の recruit が未設定のときのデフォルト ───────── */
@@ -114,7 +114,7 @@ const DEFAULT_FAQ = [
 ];
 
 /* ───────── JobPosting 構造化データ（SEO用・固定） ───────── */
-const HIRING_ORG = { "@type": "Organization", name: "fleur GROUP", sameAs: "https://fleurami-group.jp" };
+const HIRING_ORG = { "@type": "Organization", name: "fleur GROUP", sameAs: "https://fleur-group.jp" };
 const datePosted = "2026-06-01";
 const validThrough = "2027-06-30";
 function jobPosting(title: string, desc: string, locality: string, occupation: string, salaryMin: number, salaryMax: number) {

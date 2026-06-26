@@ -9,15 +9,15 @@ const OG_IMG = "/images/admin/salon-riv-1782197568767.jpg";
 export const metadata: Metadata = {
   title: TITLE,
   description: DESC,
-  alternates: { canonical: "https://fleurami-group.jp/salon/riv" },
-  openGraph: { title: TITLE, description: DESC, url: "https://fleurami-group.jp/salon/riv", images: [OG_IMG] },
+  alternates: { canonical: "https://fleur-group.jp/salon/riv" },
+  openGraph: { title: TITLE, description: DESC, url: "https://fleur-group.jp/salon/riv", images: [OG_IMG] },
   twitter: { card: "summary_large_image", title: TITLE, description: DESC, images: [OG_IMG] },
 };
 
 const crumbs = [
-  { name: "ホーム", url: "https://fleurami-group.jp" },
-  { name: "店舗案内", url: "https://fleurami-group.jp/salon" },
-  { name: "Riv.by fleurami", url: "https://fleurami-group.jp/salon/riv" },
+  { name: "ホーム", url: "https://fleur-group.jp" },
+  { name: "店舗案内", url: "https://fleur-group.jp/salon" },
+  { name: "Riv.by fleurami", url: "https://fleur-group.jp/salon/riv" },
 ];
 
 export default function RivPage() {

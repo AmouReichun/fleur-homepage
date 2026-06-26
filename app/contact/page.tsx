@@ -9,12 +9,12 @@ export const metadata: Metadata = {
   title: "お問い合わせ",
   description:
     "fleur GROUPへのお問い合わせはこちら。店舗に関するご質問、採用に関するご相談など、お気軽にお問い合わせください。",
-  alternates: { canonical: "https://fleurami-group.jp/contact" },
+  alternates: { canonical: "https://fleur-group.jp/contact" },
 };
 
 const crumbs = [
-  { name: "ホーム", url: "https://fleurami-group.jp" },
-  { name: "お問い合わせ", url: "https://fleurami-group.jp/contact" },
+  { name: "ホーム", url: "https://fleur-group.jp" },
+  { name: "お問い合わせ", url: "https://fleur-group.jp/contact" },
 ];
 
 export default async function ContactPage() {

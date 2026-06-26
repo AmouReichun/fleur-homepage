@@ -9,15 +9,15 @@ const OG_IMG = "/images/admin/salon-raffine-1782206000346.JPG";
 export const metadata: Metadata = {
   title: TITLE,
   description: DESC,
-  alternates: { canonical: "https://fleurami-group.jp/salon/raffine" },
-  openGraph: { title: TITLE, description: DESC, url: "https://fleurami-group.jp/salon/raffine", images: [OG_IMG] },
+  alternates: { canonical: "https://fleur-group.jp/salon/raffine" },
+  openGraph: { title: TITLE, description: DESC, url: "https://fleur-group.jp/salon/raffine", images: [OG_IMG] },
   twitter: { card: "summary_large_image", title: TITLE, description: DESC, images: [OG_IMG] },
 };
 
 const crumbs = [
-  { name: "ホーム", url: "https://fleurami-group.jp" },
-  { name: "店舗案内", url: "https://fleurami-group.jp/salon" },
-  { name: "Raffine", url: "https://fleurami-group.jp/salon/raffine" },
+  { name: "ホーム", url: "https://fleur-group.jp" },
+  { name: "店舗案内", url: "https://fleur-group.jp/salon" },
+  { name: "Raffine", url: "https://fleur-group.jp/salon/raffine" },
 ];
 
 export default function RaffinePage() {

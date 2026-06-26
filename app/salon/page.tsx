@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "店舗案内",
   description:
     "fleur GROUPは高知市・香南市で美容室2店舗（Riv.by fleurami・fleurami）とアイラッシュサロン1店舗（Raffine）を展開しています。",
-  alternates: { canonical: "https://fleurami-group.jp/salon" },
+  alternates: { canonical: "https://fleur-group.jp/salon" },
 };
 
 const SALON_HREFS: Record<string, string> = {
@@ -18,8 +18,8 @@ const SALON_HREFS: Record<string, string> = {
 };
 
 const crumbs = [
-  { name: "ホーム", url: "https://fleurami-group.jp" },
-  { name: "店舗案内", url: "https://fleurami-group.jp/salon" },
+  { name: "ホーム", url: "https://fleur-group.jp" },
+  { name: "店舗案内", url: "https://fleur-group.jp/salon" },
 ];
 
 const TYPE_LABEL: Record<string, string> = {

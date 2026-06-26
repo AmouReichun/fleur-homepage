@@ -9,12 +9,12 @@ export const metadata: Metadata = {
   title: "スタッフ紹介",
   description:
     "fleur GROUPのスタッフ紹介。fleurami・Riv.by fleurami・Raffineで活躍するスタイリスト・アイリストをご紹介します。",
-  alternates: { canonical: "https://fleurami-group.jp/staff" },
+  alternates: { canonical: "https://fleur-group.jp/staff" },
 };
 
 const crumbs = [
-  { name: "ホーム", url: "https://fleurami-group.jp" },
-  { name: "スタッフ紹介", url: "https://fleurami-group.jp/staff" },
+  { name: "ホーム", url: "https://fleur-group.jp" },
+  { name: "スタッフ紹介", url: "https://fleur-group.jp/staff" },
 ];
 
 export default async function StaffPage() {

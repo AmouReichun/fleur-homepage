@@ -6,12 +6,12 @@ import { breadcrumbSchema } from "@/lib/structured-data";
 export const metadata: Metadata = {
   title: "最新情報",
   description: "fleur GROUPのキャンペーン・お知らせ・最新情報をお届けします。",
-  alternates: { canonical: "https://fleurami-group.jp/news" },
+  alternates: { canonical: "https://fleur-group.jp/news" },
 };
 
 const crumbs = [
-  { name: "ホーム", url: "https://fleurami-group.jp" },
-  { name: "最新情報", url: "https://fleurami-group.jp/news" },
+  { name: "ホーム", url: "https://fleur-group.jp" },
+  { name: "最新情報", url: "https://fleur-group.jp/news" },
 ];
 
 const SALON_LABELS: Record<string, string> = {

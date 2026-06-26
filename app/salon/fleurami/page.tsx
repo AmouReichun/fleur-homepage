@@ -9,15 +9,15 @@ const OG_IMG = "/images/admin/salon-fleurami-1782197558743.jpg";
 export const metadata: Metadata = {
   title: TITLE,
   description: DESC,
-  alternates: { canonical: "https://fleurami-group.jp/salon/fleurami" },
-  openGraph: { title: TITLE, description: DESC, url: "https://fleurami-group.jp/salon/fleurami", images: [OG_IMG] },
+  alternates: { canonical: "https://fleur-group.jp/salon/fleurami" },
+  openGraph: { title: TITLE, description: DESC, url: "https://fleur-group.jp/salon/fleurami", images: [OG_IMG] },
   twitter: { card: "summary_large_image", title: TITLE, description: DESC, images: [OG_IMG] },
 };
 
 const crumbs = [
-  { name: "ホーム", url: "https://fleurami-group.jp" },
-  { name: "店舗案内", url: "https://fleurami-group.jp/salon" },
-  { name: "fleurami", url: "https://fleurami-group.jp/salon/fleurami" },
+  { name: "ホーム", url: "https://fleur-group.jp" },
+  { name: "店舗案内", url: "https://fleur-group.jp/salon" },
+  { name: "fleurami", url: "https://fleur-group.jp/salon/fleurami" },
 ];
 
 export default function FleuramiPage() {

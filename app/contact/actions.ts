@@ -14,7 +14,7 @@ export async function sendContact(formData: FormData) {
   }
 
   const apiKey     = process.env.RESEND_API_KEY;
-  const toEmail    = process.env.CONTACT_EMAIL ?? "info@fleurami-group.jp";
+  const toEmail    = process.env.CONTACT_EMAIL ?? "info@fleur-group.jp";
 
   if (!apiKey) {
     return { success: false, error: "メール送信が設定されていません。直接ご連絡ください。" };
@@ -31,7 +31,7 @@ export async function sendContact(formData: FormData) {
 
   try {
     await resend.emails.send({
-      from: "fleur GROUP お問い合わせ <noreply@fleurami-group.jp>",
+      from: "fleur GROUP お問い合わせ <noreply@fleur-group.jp>",
       to: toEmail,
       replyTo: email,
       subject: `【お問い合わせ】${typeLabel[type] ?? type} - ${name}様`,
