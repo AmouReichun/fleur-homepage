@@ -53,7 +53,7 @@ export default function MonthArchiveNav({ months, category, activeYear, activeMo
                 return (
                   <Link
                     key={`${m.year}-${m.month}`}
-                    href={`/${category}/archive/${m.year}/${m.month}`}
+                    href={`/blog/${category}/archive/${m.year}/${m.month}`}
                     className={`inline-flex items-center gap-1.5 px-3.5 py-1.5 text-xs transition-all ${isHair ? "font-cormorant" : "font-jakarta"}`}
                     style={{
                       background: isActive ? accent : accentSoft,

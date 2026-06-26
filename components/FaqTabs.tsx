@@ -203,7 +203,7 @@ export default function FaqTabs({ hairFaqs, eyelashFaqs }: Props) {
                   {f.a}
                 </p>
                 <Link
-                  href={`/${f.category}/${f.sourceSlug}`}
+                  href={`/blog/${f.category}/${f.sourceSlug}`}
                   className={`text-[11px] tracking-wide transition-opacity hover:opacity-70 ${labelFont}`}
                   style={{ color: accent }}
                 >

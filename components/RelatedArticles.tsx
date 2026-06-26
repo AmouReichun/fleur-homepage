@@ -41,7 +41,7 @@ export default function RelatedArticles({ current, all, world }: Props) {
         {related.map((post) => (
           <Link
             key={post.slug}
-            href={`/${world}/${post.slug}`}
+            href={`/blog/${world}/${post.slug}`}
             className="group block"
           >
             <div

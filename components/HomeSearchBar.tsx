@@ -98,7 +98,7 @@ export default function HomeSearchBar({ posts }: Props) {
               {results.map((p) => (
                 <Link
                   key={p.slug}
-                  href={`/${p.category}/${p.slug}`}
+                  href={`/blog/${p.category}/${p.slug}`}
                   onClick={() => { setQuery(""); setOpen(false); }}
                   className="flex items-start gap-3 px-4 py-3 hover:bg-group-bg transition-colors border-b border-group-border/50 last:border-0"
                 >

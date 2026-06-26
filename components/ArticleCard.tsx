@@ -3,7 +3,7 @@ import Image from "next/image";
 import type { PostMeta } from "@/lib/blog/posts";
 
 function tagHref(world: "hair" | "eyelash", tag: string) {
-  return `/${world}?tag=${encodeURIComponent(tag)}`;
+  return `/blog/${world}?tag=${encodeURIComponent(tag)}`;
 }
 
 type Props = {
@@ -14,7 +14,7 @@ type Props = {
 
 export default function ArticleCard({ post, world, priority = false }: Props) {
   const isEyelash = world === "eyelash";
-  const href = `/${world}/${post.slug}`;
+  const href = `/blog/${world}/${post.slug}`;
 
   if (isEyelash) {
     return (

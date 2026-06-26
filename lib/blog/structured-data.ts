@@ -262,18 +262,18 @@ export function breadcrumbSchema(items: { name: string; url: string }[]) {
       "@type": "ListItem",
       position: i + 1,
       name: item.name,
-      item: `${SITE_URL}/blog${item.url}`,
+      item: `${SITE_URL}${item.url}`,
     })),
   };
 }
 
 export function tagPageSchema(tag: string, category: "hair" | "eyelash", posts: PostMeta[]) {
-  const path = `/${category}/tag/${encodeURIComponent(tag)}`;
+  const path = `/blog/${category}/tag/${encodeURIComponent(tag)}`;
   return {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
     name: `${tag}の記事一覧`,
-    url: `${SITE_URL}/blog${path}`,
+    url: `${SITE_URL}${path}`,
     mainEntity: {
       "@type": "ItemList",
       itemListElement: posts.map((p, i) => ({
@@ -298,7 +298,7 @@ export function howToSchema(
     "@type": "HowTo",
     name,
     description,
-    url: `${SITE_URL}/blog${url}`,
+    url: `${SITE_URL}${url}`,
     step: steps.map((s, i) => ({
       "@type": "HowToStep",
       position: i + 1,
@@ -336,7 +336,7 @@ export function collectionPageSchema(
     "@context": "https://schema.org",
     "@type": "CollectionPage",
     name,
-    url: `${SITE_URL}/blog${path}`,
+    url: `${SITE_URL}${path}`,
     description,
     mainEntity: {
       "@type": "ItemList",
@@ -364,7 +364,7 @@ export function personSchema(
     "@type": "Person",
     name,
     jobTitle,
-    url: `${SITE_URL}/blog${authorUrl}`,
+    url: `${SITE_URL}${authorUrl}`,
     worksFor: {
       "@type": salonType,
       name: salonName,

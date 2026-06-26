@@ -55,7 +55,7 @@ export default function SearchClient({ posts, initialQuery = "" }: Props) {
             {results.map((p) => (
               <li key={p.slug}>
                 <Link
-                  href={`/${p.category}/${p.slug}`}
+                  href={`/blog/${p.category}/${p.slug}`}
                   className="block p-4 border border-group-border rounded-sm hover:border-hair-accent transition-colors bg-white group"
                 >
                   <div className="flex items-center gap-2 mb-1.5">

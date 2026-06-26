@@ -92,7 +92,7 @@ function postMatchesService(post: PostMeta, svc: ServiceDef, haystack: string): 
 /* サービスの内部リンク先を解決（実在タグ or ハブのみ。無ければnull） */
 function resolveServiceHref(world: "hair" | "eyelash", svc: ServiceDef, validTags: Set<string>): string | null {
   if (svc.hub) return svc.hub;
-  if (svc.tag && validTags.has(svc.tag)) return `/${world}/tag/${encodeURIComponent(svc.tag)}`;
+  if (svc.tag && validTags.has(svc.tag)) return `/blog/${world}/tag/${encodeURIComponent(svc.tag)}`;
   return null;
 }
 
@@ -115,7 +115,7 @@ export function relatedMenusFor(post: PostMeta, validTags: Set<string>, bodyText
   if (out.length === 0) {
     for (const t of post.tags) {
       if (validTags.has(t)) {
-        out.push({ label: t, href: `/${world}/tag/${encodeURIComponent(t)}`, anchor: `「${t}」の記事一覧を見る` });
+        out.push({ label: t, href: `/blog/${world}/tag/${encodeURIComponent(t)}`, anchor: `「${t}」の記事一覧を見る` });
       }
       if (out.length >= 3) break;
     }
