@@ -19,8 +19,8 @@ export async function sendApplication(formData: FormData) {
   }
 
   const apiKey  = process.env.RESEND_API_KEY;
-  // 採用専用の宛先。未設定ならお問い合わせ用にフォールバック
-  const toEmail = process.env.RECRUIT_EMAIL ?? process.env.CONTACT_EMAIL ?? "info@fleur-group.jp";
+  // 採用応募の宛先（recruit@）。環境変数 RECRUIT_EMAIL で上書き可。
+  const toEmail = process.env.RECRUIT_EMAIL ?? "recruit@fleur-group.jp";
 
   if (!apiKey) {
     return { success: false, error: "メール送信が設定されていません。お手数ですが各店舗まで直接ご連絡ください。" };
