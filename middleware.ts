@@ -8,7 +8,8 @@ export function middleware(request: NextRequest) {
   requestHeaders.set("x-pathname", pathname);
 
   // 管理APIの保護（ブログ統合分。未認証は401 JSON）
-  if (pathname.startsWith("/api/admin") || pathname === "/api/staff/upload") {
+  // ※ /api/staff/upload はスタッフがログイン不要で投稿するため保護対象外
+  if (pathname.startsWith("/api/admin")) {
     const session = request.cookies.get("admin_session");
     if (!session) {
       return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
