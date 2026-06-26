@@ -25,7 +25,7 @@ export const SERVICES: ServiceDef[] = [
     name: "髪質改善",
     reading: "かみしつかいぜん",
     world: "hair",
-    salonKeys: ["riv", "fleurami"],
+    salonKeys: ["fleurami", "riv"],
     title: "髪質改善トリートメント｜高知市・香南市の美容室",
     description:
       "高知市のRiv.by fleurami・香南市のfleuramiの髪質改善トリートメント。うねり・パサつき・ダメージを補修し、サラサラのツヤ髪へ。縮毛矯正との違いや効果・持ちも解説します。",
@@ -54,7 +54,7 @@ export const SERVICES: ServiceDef[] = [
     name: "白髪ぼかし",
     reading: "しらがぼかし",
     world: "hair",
-    salonKeys: ["riv", "fleurami"],
+    salonKeys: ["fleurami", "riv"],
     title: "白髪ぼかし・グレイカラー｜高知市の美容室 Riv.by fleurami",
     description:
       "高知市のRiv.by fleuramiの白髪ぼかし。暗くせずに白髪をなじませ、伸びても目立ちにくい大人世代のカラー。ハイライトを使った自然なぼかしで、立体感と明るさを両立します。",
@@ -111,7 +111,7 @@ export const SERVICES: ServiceDef[] = [
     name: "艶カラー",
     reading: "つやからー",
     world: "hair",
-    salonKeys: ["riv", "fleurami"],
+    salonKeys: ["fleurami", "riv"],
     title: "艶カラー・透明感カラー｜高知市・香南市の美容室",
     description:
       "高知市のRiv.by fleurami・香南市のfleuramiの艶カラー。透明感とツヤのあるダメージレスカラー。大人世代に似合う色設計で、上品な抜け感を演出します。",
@@ -139,7 +139,7 @@ export const SERVICES: ServiceDef[] = [
     name: "ヘッドスパ",
     reading: "へっどすぱ",
     world: "hair",
-    salonKeys: ["riv", "fleurami"],
+    salonKeys: ["fleurami", "riv"],
     title: "ヘッドスパ・頭皮ケア｜高知市・香南市の美容室",
     description:
       "高知市のRiv.by fleurami・香南市のfleuramiのヘッドスパ。頭皮の血行・コリ・乾燥・ベタつき・エイジングが気になる方へ。リラックスしながら健やかな髪が育つ土台を整えます。",
