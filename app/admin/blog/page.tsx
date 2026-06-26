@@ -79,11 +79,18 @@ export default async function AdminPage({
 
         <div className="flex items-center gap-5">
           <Link
-            href="/"
+            href="/admin"
+            className="text-xs tracking-wide transition-colors hover:text-neutral-300"
+            style={{ color: "#C8A860" }}
+          >
+            ← 管理トップ
+          </Link>
+          <Link
+            href="/blog"
             className="text-xs tracking-wide transition-colors hover:text-neutral-400"
             style={{ color: "#555" }}
           >
-            ← ブログへ
+            ブログを見る ↗
           </Link>
           <form action={logout}>
             <button type="submit" className="text-xs" style={{ color: "#555" }}>
