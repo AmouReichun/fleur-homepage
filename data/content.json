@@ -1130,6 +1130,14 @@
       "salon": "Raffine",
       "bio": "メンズのお客様も大歓迎。眉毛WAXで印象をスッキリ整えます。",
       "imageSrc": "/images/admin/staff-10-1782195096084.jpg"
+    },
+    {
+      "name": "高田　和花",
+      "role": "アシスタント",
+      "salon": "fleurami",
+      "bio": "カラーとスパにはお任せください",
+      "imageSrc": "/images/admin/staff-11-1782443986942.jpg",
+      "history": "3年"
     }
   ],
   "recruit": {
