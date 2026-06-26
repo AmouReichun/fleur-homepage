@@ -8,6 +8,7 @@ const salons = [
     hours: "9:00〜18:00",
     closed: "月曜・第1/3火曜",
     tel: "0887-56-5566",
+    web: "https://beauty.postas.asia/reserve/top?CODE=3df04abf87b551597a2b2595613d7d63b3843d96225b54738262420b60f751ff",
     line: "https://liff.line.me/2000133690-w9PO3qD9/l/2fI1c0c94p/hair",
     hpb: "https://beauty.hotpepper.jp/slnH000528388/",
     instagram: "https://www.instagram.com/fleurami_info/",
@@ -19,6 +20,7 @@ const salons = [
     hours: "9:30〜18:30",
     closed: "月曜・第1/3火曜",
     tel: "088-884-5566",
+    web: "https://beauty.postas.asia/reserve/top?CODE=440902d92d79129b32212b06e9514dc4f94094ed05e7ea4a5e1c175af56570a1",
     line: "https://liff.line.me/2006084473-gbABZ6Lz/l/2a078394G2/hair",
     hpb: "https://beauty.hotpepper.jp/slnH000634137/",
     instagram: "https://www.instagram.com/riv.kochi/",
@@ -30,6 +32,7 @@ const salons = [
     hours: "9:30〜18:30",
     closed: "不定休",
     tel: "090-7120-5566",
+    web: "https://beauty.postas.asia/reserve/top?CODE=41e62da8591af0f29eb176ca79e4dff362421b2d78c581fe9500753350728f12",
     line: "https://liff.line.me/2007963689-Ddk29bRo/l/2N8fd97deza/kirei",
     hpb: "https://beauty.hotpepper.jp/kr/slnH000767549/",
     instagram: "https://www.instagram.com/raffine0815/",
@@ -63,6 +66,14 @@ export default function Footer() {
                   電話
                 </a>
                 <a
+                  href={salon.web}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs text-group-muted underline underline-offset-2 hover:text-group-text transition-colors"
+                >
+                  Web予約
+                </a>
+                <a
                   href={salon.line}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -71,20 +82,20 @@ export default function Footer() {
                   LINE
                 </a>
                 <a
-                  href={salon.hpb}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-xs text-group-muted underline underline-offset-2 hover:text-group-text transition-colors"
-                >
-                  ホットペッパー
-                </a>
-                <a
                   href={salon.instagram}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-xs text-group-muted underline underline-offset-2 hover:text-group-text transition-colors"
                 >
                   Instagram
+                </a>
+                <a
+                  href={salon.hpb}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs text-group-muted underline underline-offset-2 hover:text-group-text transition-colors"
+                >
+                  ホットペッパー
                 </a>
               </div>
             </div>
