@@ -10,7 +10,7 @@
     "cta1": "店舗を選ぶ",
     "cta2": "ブログを読む",
     "images": [
-      "/images/admin/hero-1782190629178.png",
+      "/images/admin/hero-1782190629178.jpg",
       "/images/admin/hero-1782193794096.jpg",
       "/images/admin/hero-1782207742891.jpg"
     ]
@@ -938,7 +938,7 @@
       "description": "",
       "href": "/salon",
       "external": false,
-      "imageSrc": "/images/admin/quicklinks-1782213749493.png"
+      "imageSrc": "/images/admin/quicklinks-1782213749493.jpg"
     },
     {
       "id": "staff",
@@ -946,7 +946,7 @@
       "description": "",
       "href": "/staff",
       "external": false,
-      "imageSrc": "/images/admin/quicklinks-1782213763518.png"
+      "imageSrc": "/images/admin/quicklinks-1782213763518.jpg"
     },
     {
       "id": "blog",
@@ -954,7 +954,7 @@
       "description": "",
       "href": "https://fleurami-group-blog.com",
       "external": true,
-      "imageSrc": "/images/admin/quicklinks-1782213773362.png"
+      "imageSrc": "/images/admin/quicklinks-1782213773362.jpg"
     },
     {
       "id": "campaign",
@@ -962,7 +962,7 @@
       "description": "",
       "href": "/news",
       "external": false,
-      "imageSrc": "/images/admin/quicklinks-1782212409286.png"
+      "imageSrc": "/images/admin/quicklinks-1782212409286.jpg"
     }
   ],
   "topFaq": [

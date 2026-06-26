@@ -56,7 +56,7 @@ export const metadata: Metadata = {
       "高知市・香南市で3サロンを展開。髪質改善・白髪ぼかし・縮毛矯正・まつげパーマ・眉毛WAX。",
     images: [
       {
-        url: "/images/admin/hero-1782190629178.png",
+        url: "/images/admin/hero-1782190629178.jpg",
         width: 1200,
         height: 630,
         alt: "fleur GROUP | 高知の美容室・アイラッシュサロン",
@@ -68,7 +68,7 @@ export const metadata: Metadata = {
     title: "fleur GROUP | 高知の美容室・アイラッシュサロン",
     description:
       "高知市・香南市で3サロンを展開。髪質改善・白髪ぼかし・縮毛矯正・まつげパーマ・眉毛WAX。",
-    images: ["/images/admin/hero-1782190629178.png"],
+    images: ["/images/admin/hero-1782190629178.jpg"],
   },
   ...(process.env.GOOGLE_SITE_VERIFICATION
     ? { verification: { google: process.env.GOOGLE_SITE_VERIFICATION } }

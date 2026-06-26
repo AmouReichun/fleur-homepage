@@ -236,7 +236,8 @@ export async function getContentCached(): Promise<SiteContent> {
         `https://api.github.com/repos/${process.env.GITHUB_OWNER}/${process.env.GITHUB_REPO}/contents/data/content.json`,
         {
           headers: { Authorization: `Bearer ${process.env.GITHUB_TOKEN}` },
-          cache: "no-store",
+          // 60秒キャッシュ＋タグ。管理画面の保存で revalidateTag("site-content") が呼ばれ即時反映。
+          next: { revalidate: 60, tags: ["site-content"] },
         }
       );
       if (res.ok) {
