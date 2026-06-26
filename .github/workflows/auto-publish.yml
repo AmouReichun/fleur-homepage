@@ -2,9 +2,9 @@ name: Auto Publish Articles
 
 on:
   schedule:
-    # 15:30 JST (= 06:30 UTC) に1日1回起動。GitHub Actions の遅延に強い構成。
+    # 18:00 JST (= 09:00 UTC) に1日1回起動。config の publishHourJST(18) と一致。
     # config/auto-publish.json の publishHourJST を変更する場合はこの cron も合わせて更新すること。
-    - cron: '30 6 * * *'
+    - cron: '0 9 * * *'
   workflow_dispatch:
 
 jobs:
