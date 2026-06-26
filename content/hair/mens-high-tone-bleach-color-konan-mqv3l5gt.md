@@ -1,4 +1,5 @@
 ---
+draft: true
 title: "メンズのハイトーンカラーって色落ちしやすいの？香南市の美容室が解説します"
 slug: "mens-high-tone-bleach-color-konan-mqv3l5gt"
 category: "hair"
