@@ -1,0 +1,93 @@
+name: Refresh Instagram Token
+
+on:
+  schedule:
+    # 毎月1日 12:00 UTC（21:00 JST）に実行
+    - cron: '0 12 1 * *'
+  workflow_dispatch:
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Install PyNaCl
+        run: pip install PyNaCl -q
+
+      - name: Refresh token and update GitHub Secret
+        env:
+          META_APP_ID: ${{ secrets.META_APP_ID }}
+          META_APP_SECRET: ${{ secrets.META_APP_SECRET }}
+          META_LONG_LIVED_TOKEN: ${{ secrets.META_LONG_LIVED_TOKEN }}
+          GH_PAT: ${{ secrets.GH_PAT }}
+        run: |
+          python3 << 'PYEOF'
+          import json, urllib.request, urllib.parse, os, sys, base64
+          from nacl import encoding, public as nacl_public
+
+          app_id      = os.environ["META_APP_ID"]
+          app_secret  = os.environ["META_APP_SECRET"]
+          cur_token   = os.environ["META_LONG_LIVED_TOKEN"]
+          gh_pat      = os.environ["GH_PAT"]
+          owner, repo = "AmouReichun", "fleur-homepage"
+
+          # ── 1. Meta Graph API でトークン更新 ──
+          params = urllib.parse.urlencode({
+              "grant_type":      "fb_exchange_token",
+              "client_id":       app_id,
+              "client_secret":   app_secret,
+              "fb_exchange_token": cur_token,
+          })
+          url = f"https://graph.facebook.com/v19.0/oauth/access_token?{params}"
+          try:
+              with urllib.request.urlopen(url, timeout=30) as res:
+                  data = json.loads(res.read())
+          except Exception as e:
+              print(f"✗ Meta API エラー: {e}")
+              sys.exit(1)
+
+          new_token = data.get("access_token")
+          if not new_token:
+              print(f"✗ トークン取得失敗: {data}")
+              sys.exit(1)
+
+          expires_in = data.get("expires_in", 0)
+          print(f"✓ トークン更新成功 (有効期間: 約{expires_in // 86400}日)")
+
+          # ── 2. GitHub リポジトリの公開鍵を取得 ──
+          req = urllib.request.Request(
+              f"https://api.github.com/repos/{owner}/{repo}/actions/secrets/public-key",
+              headers={
+                  "Authorization": f"token {gh_pat}",
+                  "Accept": "application/vnd.github+json",
+              }
+          )
+          with urllib.request.urlopen(req, timeout=15) as res:
+              key_info = json.loads(res.read())
+
+          # ── 3. 新トークンを暗号化 ──
+          pub_key = nacl_public.PublicKey(key_info["key"].encode(), encoding.Base64Encoder())
+          sealed  = nacl_public.SealedBox(pub_key).encrypt(new_token.encode())
+          encrypted = base64.b64encode(sealed).decode()
+
+          # ── 4. GitHub Secret を更新 ──
+          body = json.dumps({"encrypted_value": encrypted, "key_id": key_info["key_id"]}).encode()
+          req = urllib.request.Request(
+              f"https://api.github.com/repos/{owner}/{repo}/actions/secrets/META_LONG_LIVED_TOKEN",
+              data=body, method="PUT",
+              headers={
+                  "Authorization":  f"token {gh_pat}",
+                  "Accept":         "application/vnd.github+json",
+                  "Content-Type":   "application/json",
+              }
+          )
+          with urllib.request.urlopen(req, timeout=15) as res:
+              status = res.getcode()
+
+          if status in (201, 204):
+              print(f"✓ GitHub Secret 更新完了 (HTTP {status})")
+          else:
+              print(f"✗ Secret 更新失敗 (HTTP {status})")
+              sys.exit(1)
+          PYEOF

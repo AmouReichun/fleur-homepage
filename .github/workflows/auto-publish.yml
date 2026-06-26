@@ -1,0 +1,98 @@
+name: Auto Publish Articles
+
+on:
+  schedule:
+    # 15:30 JST (= 06:30 UTC) に1日1回起動。GitHub Actions の遅延に強い構成。
+    # config/auto-publish.json の publishHourJST を変更する場合はこの cron も合わせて更新すること。
+    - cron: '30 6 * * *'
+  workflow_dispatch:
+
+jobs:
+  auto-publish:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      # Node.js インストール前に設定チェックして早期終了（コスト削減）
+      - name: Check schedule config
+        id: check
+        run: |
+          python3 - << 'PYEOF'
+          import json, os
+          from datetime import datetime, timezone, timedelta
+
+          config_path = "config/auto-publish.json"
+          defaults = {"enabled": True, "publishHourJST": 12, "articlesPerSalon": 1}
+
+          try:
+              with open(config_path) as f:
+                  cfg = {**defaults, **json.load(f)}
+          except Exception:
+              cfg = defaults
+
+          enabled = cfg.get("enabled", True)
+          target_hour = int(cfg.get("publishHourJST", 12))
+
+          jst = timezone(timedelta(hours=9))
+          current_hour = datetime.now(jst).hour
+
+          # workflow_dispatch は常に実行。schedule は遅延を考慮し「目標時刻以降」なら実行
+          event = os.environ.get("GITHUB_EVENT_NAME", "")
+          skip = not enabled or (current_hour < target_hour and event != "workflow_dispatch")
+
+          with open(os.environ["GITHUB_OUTPUT"], "a") as out:
+              out.write(f"skip={'true' if skip else 'false'}\n")
+
+          if skip:
+              reason = "無効" if not enabled else f"目標時刻前 ({current_hour}時 < {target_hour}時 JST)"
+              print(f"スキップ: {reason}")
+          else:
+              print(f"実行: {current_hour}時 JST (設定: {target_hour}時 JST, {cfg['articlesPerSalon']}件/サロン)")
+          PYEOF
+
+      - name: Setup Node.js
+        if: steps.check.outputs.skip == 'false'
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        if: steps.check.outputs.skip == 'false'
+        run: npm ci
+
+      - name: Auto publish articles
+        if: steps.check.outputs.skip == 'false'
+        run: npx tsx scripts/auto-publish.ts
+
+      - name: Commit and push published articles
+        id: commit
+        if: steps.check.outputs.skip == 'false'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add content/
+          if git diff --staged --quiet; then
+            echo "変更なし、スキップ"
+            echo "committed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          git commit -m "auto-publish: $(date +'%Y-%m-%d') 各サロン公開"
+          git pull --rebase --autostash origin main
+          git push
+          echo "committed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Deploy to Vercel (Production)
+        if: steps.commit.outputs.committed == 'true'
+        run: npx vercel --prod --yes --token ${{ secrets.VERCEL_TOKEN }}
+        env:
+          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
