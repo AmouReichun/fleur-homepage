@@ -14,7 +14,6 @@ question: "高知市でパリジェンヌラッシュリフトを受けるとま
 answer_summary: "パリジェンヌラッシュリフトは、まつ毛の根元からしっかり立ち上げてカールをかける施術です。マスカラなしでも目元がぱっちりと印象的に見え、自まつ毛を活かしたナチュラルな仕上がりが特徴です。高知市はりまや町のRaffineでは、お一人おひとりのまつ毛の状態に合わせてデザインをご提案しています。"
 instagram_id: "17937539784084971"
 instagram_permalink: "https://www.instagram.com/p/DaCLXNslrxM/"
-draft: true
 yakkihou_flag: true
 yakkihou_words: ["必ず"]
 faq:
