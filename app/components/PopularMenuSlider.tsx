@@ -8,9 +8,12 @@ const INTERVAL = 4000;
 export default function PopularMenuSlider({
   items,
   en,
+  salonNames = {},
 }: {
   items: PopularMenu[];
   en: string;
+  /** 店舗キー → 表示名。salons 配列のラベル化に使用 */
+  salonNames?: Record<string, string>;
 }) {
   const [current, setCurrent] = useState(0);
   const paused = useRef(false);
@@ -61,7 +64,11 @@ export default function PopularMenuSlider({
               <div>
                 <h3 className="font-serif text-xl mb-2">{item.name}</h3>
                 <p className="text-sm text-site-muted leading-relaxed mb-2">{item.desc}</p>
-                <p className="text-[10px] text-site-accent tracking-wider">{item.salon}</p>
+                <p className="text-[10px] text-site-accent tracking-wider">
+                  {item.salons && item.salons.length > 0
+                    ? item.salons.map((k) => salonNames[k] ?? k).join(" / ")
+                    : item.salon}
+                </p>
               </div>
             </div>
           </div>

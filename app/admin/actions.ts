@@ -2,12 +2,30 @@
 
 import fs from "fs";
 import path from "path";
-import { cookies } from "next/headers";
+import { cookies, headers } from "next/headers";
 import { redirect } from "next/navigation";
 import { revalidateTag } from "next/cache";
 import { getContentLatest } from "@/lib/content";
+import { createSessionToken } from "@/lib/admin-auth";
 
 const CONTENT_PATH = path.join(process.cwd(), "data/content.json");
+
+// ── ログイン総当たり対策（ベストエフォートのインメモリ制限） ──────────────
+// サーバーレスはインスタンスごとにメモリが分かれ、コールドスタートでリセットされるため
+// 完全ではないが、単純なブルートフォースの敷居を上げる。より強固にするなら Vercel WAF の
+// レート制限や KV ストアの利用を検討する。
+const LOGIN_WINDOW_MS = 10 * 60 * 1000; // 10分
+const LOGIN_MAX_ATTEMPTS = 8;
+const loginAttempts = new Map<string, { count: number; first: number }>();
+
+function clientIp(): string {
+  const h = headers();
+  return (
+    h.get("x-forwarded-for")?.split(",")[0]?.trim() ||
+    h.get("x-real-ip") ||
+    "unknown"
+  );
+}
 
 export async function loginAction(formData: FormData) {
   const password = formData.get("password") as string;
@@ -17,12 +35,30 @@ export async function loginAction(formData: FormData) {
     throw new Error("ADMIN_PASSWORD is not set");
   }
 
+  // レート制限チェック
+  const ip = clientIp();
+  const now = Date.now();
+  const rec = loginAttempts.get(ip);
+  if (rec && now - rec.first < LOGIN_WINDOW_MS && rec.count >= LOGIN_MAX_ATTEMPTS) {
+    return { error: "ログイン試行回数が多すぎます。しばらくしてから再度お試しください。" };
+  }
+
   if (password !== adminPassword) {
+    // 失敗回数を記録
+    if (!rec || now - rec.first >= LOGIN_WINDOW_MS) {
+      loginAttempts.set(ip, { count: 1, first: now });
+    } else {
+      rec.count += 1;
+    }
     return { error: "パスワードが正しくありません" };
   }
 
+  // 成功したらカウンタをリセット
+  loginAttempts.delete(ip);
+
+  const token = await createSessionToken();
   const cookieStore = cookies();
-  cookieStore.set("admin_session", "authenticated", {
+  cookieStore.set("admin_session", token, {
     httpOnly: true,
     secure: process.env.NODE_ENV === "production",
     sameSite: "lax",

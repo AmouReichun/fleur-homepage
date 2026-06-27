@@ -3,16 +3,45 @@
 import { useState, useTransition } from "react";
 import { saveContent } from "../actions";
 import SectionLayout from "../components/SectionLayout";
-import type { PopularMenu } from "@/lib/content";
+import type { PopularMenu, SalonContent } from "@/lib/content";
+import { popularMenuSalonKeys, popularMenuSalonLabel } from "@/lib/popular-menu";
 
-export default function PopularMenuEditor({ initial }: { initial: PopularMenu[] }) {
-  const [items, setItems] = useState<PopularMenu[]>(initial);
+export default function PopularMenuEditor({
+  initial,
+  salons,
+  salonOrder,
+}: {
+  initial: PopularMenu[];
+  salons: Record<string, SalonContent>;
+  salonOrder: string[];
+}) {
+  const SALON_OPTIONS = salonOrder.map((k) => ({ key: k, label: salons[k]?.name ?? k }));
+
+  // 旧形式（自由入力 salon）を読み込み時に店舗キー配列へ正規化
+  const [items, setItems] = useState<PopularMenu[]>(() =>
+    initial.map((m) => ({
+      name: m.name,
+      desc: m.desc,
+      category: m.category,
+      salons: popularMenuSalonKeys(m, salons, salonOrder),
+    }))
+  );
   const [isPending, startTransition] = useTransition();
   const [saveStatus, setSaveStatus] = useState<"idle" | "success" | "error">("idle");
   const [saveError, setSaveError] = useState<string>("");
 
-  function update(i: number, field: keyof PopularMenu, value: string) {
+  function update(i: number, field: "name" | "desc" | "category", value: string) {
     setItems((prev) => prev.map((item, idx) => idx === i ? { ...item, [field]: value } : item));
+  }
+
+  function toggleSalon(i: number, key: string) {
+    setItems((prev) => prev.map((item, idx) => {
+      if (idx !== i) return item;
+      const cur = item.salons ?? [];
+      const next = cur.includes(key) ? cur.filter((k) => k !== key) : [...cur, key];
+      // salonOrder の並び順を維持
+      return { ...item, salons: salonOrder.filter((k) => next.includes(k)) };
+    }));
   }
 
   function move(i: number, dir: -1 | 1) {
@@ -30,7 +59,7 @@ export default function PopularMenuEditor({ initial }: { initial: PopularMenu[] 
   }
 
   function add() {
-    setItems((prev) => [...prev, { name: "", desc: "", salon: "", category: "hair" }]);
+    setItems((prev) => [...prev, { name: "", desc: "", salons: [], category: "hair" }]);
   }
 
   function handleSave() {
@@ -55,6 +84,19 @@ export default function PopularMenuEditor({ initial }: { initial: PopularMenu[] 
   const hairItems = items.filter((m) => m.category === "hair");
   const eyelashItems = items.filter((m) => m.category === "eyelash");
 
+  const renderPreviewItem = (item: PopularMenu, i: number) => (
+    <div key={i} className="flex items-start gap-4 py-3 border-b border-[#E8E4E0]">
+      <span className="text-[10px] text-[#B8956A] font-mono pt-0.5 flex-shrink-0 w-5">
+        {String(i + 1).padStart(2, "0")}
+      </span>
+      <div>
+        <p className="text-sm font-medium text-[#2A2A2A]">{item.name || "（名前未入力）"}</p>
+        <p className="text-[11px] text-[#888] mt-0.5">{item.desc}</p>
+        <p className="text-[10px] text-[#B8956A] mt-1">{popularMenuSalonLabel(item, salons, salonOrder)}</p>
+      </div>
+    </div>
+  );
+
   const preview = (
     <div className="bg-[#FAFAF8] py-8 px-4">
       <p className="text-[9px] tracking-[0.4em] text-[#B8956A] uppercase mb-1 text-center">02. Menu</p>
@@ -66,18 +108,7 @@ export default function PopularMenuEditor({ initial }: { initial: PopularMenu[] 
             <span className="text-[9px] tracking-[0.3em] text-[#999] uppercase">Hair Salon</span>
             <div className="flex-1 h-px bg-[#E8E4E0]" />
           </div>
-          {hairItems.map((item, i) => (
-            <div key={i} className="flex items-start gap-4 py-3 border-b border-[#E8E4E0]">
-              <span className="text-[10px] text-[#B8956A] font-mono pt-0.5 flex-shrink-0 w-5">
-                {String(i + 1).padStart(2, "0")}
-              </span>
-              <div>
-                <p className="text-sm font-medium text-[#2A2A2A]">{item.name || "（名前未入力）"}</p>
-                <p className="text-[11px] text-[#888] mt-0.5">{item.desc}</p>
-                <p className="text-[10px] text-[#B8956A] mt-1">{item.salon}</p>
-              </div>
-            </div>
-          ))}
+          {hairItems.map(renderPreviewItem)}
         </div>
       )}
 
@@ -87,18 +118,7 @@ export default function PopularMenuEditor({ initial }: { initial: PopularMenu[] 
             <span className="text-[9px] tracking-[0.3em] text-[#999] uppercase">Eyelash Salon</span>
             <div className="flex-1 h-px bg-[#E8E4E0]" />
           </div>
-          {eyelashItems.map((item, i) => (
-            <div key={i} className="flex items-start gap-4 py-3 border-b border-[#E8E4E0]">
-              <span className="text-[10px] text-[#B8956A] font-mono pt-0.5 flex-shrink-0 w-5">
-                {String(i + 1).padStart(2, "0")}
-              </span>
-              <div>
-                <p className="text-sm font-medium text-[#2A2A2A]">{item.name || "（名前未入力）"}</p>
-                <p className="text-[11px] text-[#888] mt-0.5">{item.desc}</p>
-                <p className="text-[10px] text-[#B8956A] mt-1">{item.salon}</p>
-              </div>
-            </div>
-          ))}
+          {eyelashItems.map(renderPreviewItem)}
         </div>
       )}
 
@@ -119,6 +139,7 @@ export default function PopularMenuEditor({ initial }: { initial: PopularMenu[] 
     >
       <p className="text-xs text-[#888] mb-4 leading-relaxed">
         トップページの「02. Menu 人気メニュー」に表示される項目です。順番・内容を自由に編集できます。
+        「対応店舗」は登録店舗から複数選択できます。
       </p>
 
       <div className="space-y-2.5">
@@ -180,7 +201,32 @@ export default function PopularMenuEditor({ initial }: { initial: PopularMenu[] 
                   </button>
                 </div>
               </div>
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+
+              {/* 対応店舗（複数選択） */}
+              <div>
+                <label className="block text-[11px] font-medium text-[#555] mb-1.5">対応店舗（複数選択可）</label>
+                <div className="flex flex-wrap gap-1.5">
+                  {SALON_OPTIONS.map((s) => {
+                    const active = (item.salons ?? []).includes(s.key);
+                    return (
+                      <button
+                        key={s.key}
+                        type="button"
+                        onClick={() => toggleSalon(i, s.key)}
+                        className={`px-3 py-1 text-[11px] rounded-full border transition-colors ${
+                          active
+                            ? "bg-[#B8956A] border-[#B8956A] text-white"
+                            : "border-[#D0CCC8] text-[#555] hover:border-[#B8956A] hover:text-[#B8956A]"
+                        }`}
+                      >
+                        {s.label}
+                      </button>
+                    );
+                  })}
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <div>
                   <label className="block text-[11px] font-medium text-[#555] mb-1">メニュー名</label>
                   <input
@@ -198,16 +244,6 @@ export default function PopularMenuEditor({ initial }: { initial: PopularMenu[] 
                     value={item.desc}
                     onChange={(e) => update(i, "desc", e.target.value)}
                     placeholder="例: ダメージを補修し扱いやすい髪へ"
-                    className="w-full border border-[#D0CCC8] bg-[#FAFAF8] text-[#1A1A1A] text-sm px-3 py-2 rounded-lg focus:outline-none focus:border-[#B8956A] transition-all"
-                  />
-                </div>
-                <div>
-                  <label className="block text-[11px] font-medium text-[#555] mb-1">対応サロン</label>
-                  <input
-                    type="text"
-                    value={item.salon}
-                    onChange={(e) => update(i, "salon", e.target.value)}
-                    placeholder="例: Riv / fleurami"
                     className="w-full border border-[#D0CCC8] bg-[#FAFAF8] text-[#1A1A1A] text-sm px-3 py-2 rounded-lg focus:outline-none focus:border-[#B8956A] transition-all"
                   />
                 </div>

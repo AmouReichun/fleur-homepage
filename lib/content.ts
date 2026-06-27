@@ -45,7 +45,10 @@ export interface SalonContent {
 export interface PopularMenu {
   name: string;
   desc: string;
-  salon: string;
+  /** 旧形式: 自由入力テキスト（後方互換。新規保存では salons を使用） */
+  salon?: string;
+  /** 新形式: 店舗キーの配列（salonOrder のキー） */
+  salons?: string[];
   category: "hair" | "eyelash";
 }
 

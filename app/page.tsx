@@ -34,6 +34,9 @@ export default async function HomePage() {
   const heroImages = content.hero?.images?.filter(Boolean) ?? [];
   const hasImage = heroImages.length > 0;
   const popularMenus = content.popularMenus ?? [];
+  const salonNames = Object.fromEntries(
+    content.salonOrder.map((key) => [key, content.salons[key as keyof typeof content.salons]?.name ?? key])
+  );
   const topFaq = content.topFaq ?? [];
   const faqGroups = content.salonOrder
     .map((key) => ({
@@ -101,12 +104,14 @@ export default async function HomePage() {
               <PopularMenuSlider
                 items={popularMenus.filter((m) => m.category === "hair")}
                 en="Hair Salon"
+                salonNames={salonNames}
               />
             )}
             {popularMenus.some((m) => m.category === "eyelash") && (
               <PopularMenuSlider
                 items={popularMenus.filter((m) => m.category === "eyelash")}
                 en="Eyelash Salon"
+                salonNames={salonNames}
               />
             )}
           </Reveal>

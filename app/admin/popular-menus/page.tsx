@@ -8,7 +8,7 @@ export default async function AdminPopularMenusPage() {
     <div className="flex h-screen">
       <AdminSidebar content={content} />
       <div className="flex-1 overflow-hidden flex flex-col">
-        <PopularMenuEditor initial={content.popularMenus ?? []} />
+        <PopularMenuEditor initial={content.popularMenus ?? []} salons={content.salons} salonOrder={content.salonOrder} />
       </div>
     </div>
   );

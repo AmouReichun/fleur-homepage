@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
+import { verifySessionToken } from "@/lib/admin-auth";
 
-export function middleware(request: NextRequest) {
+export async function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
   // Add pathname header for layout detection
@@ -10,8 +11,8 @@ export function middleware(request: NextRequest) {
   // 管理APIの保護（ブログ統合分。未認証は401 JSON）
   // ※ /api/staff/upload はスタッフがログイン不要で投稿するため保護対象外
   if (pathname.startsWith("/api/admin")) {
-    const session = request.cookies.get("admin_session");
-    if (!session) {
+    const token = request.cookies.get("admin_session")?.value;
+    if (!(await verifySessionToken(token))) {
       return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
     }
     return NextResponse.next({ request: { headers: requestHeaders } });
@@ -21,8 +22,8 @@ export function middleware(request: NextRequest) {
     if (pathname === "/admin/login") {
       return NextResponse.next({ request: { headers: requestHeaders } });
     }
-    const session = request.cookies.get("admin_session");
-    if (!session) {
+    const token = request.cookies.get("admin_session")?.value;
+    if (!(await verifySessionToken(token))) {
       return NextResponse.redirect(new URL("/admin/login", request.url));
     }
   }
