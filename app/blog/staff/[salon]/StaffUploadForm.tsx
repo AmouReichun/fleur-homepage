@@ -1,6 +1,8 @@
 "use client";
 
-import { useState, useRef, useCallback } from "react";
+import { useState, useRef, useCallback, useEffect } from "react";
+
+const TOKEN_STORAGE_KEY = "staff_upload_token";
 
 type Props = {
   salonKey: string;
@@ -98,7 +100,16 @@ export default function StaffUploadForm({ salonKey, salonLabel, salonSub }: Prop
   const [submitting, setSubmitting] = useState(false);
   const [done, setDone]       = useState(false);
   const [error, setError]     = useState("");
+  const [token, setToken]     = useState("");
   const fileRef = useRef<HTMLInputElement>(null);
+
+  // 合言葉は端末に記憶し、2回目以降は入力不要にする
+  useEffect(() => {
+    try {
+      const saved = localStorage.getItem(TOKEN_STORAGE_KEY);
+      if (saved) setToken(saved);
+    } catch { /* localStorage 不可の環境は無視 */ }
+  }, []);
 
   const handleFile = useCallback((picked: FileList | null) => {
     const f = picked?.[0];
@@ -135,10 +146,14 @@ export default function StaffUploadForm({ salonKey, salonLabel, salonSub }: Prop
     }
 
     try {
+      // 合言葉を端末に保存（次回以降は自動入力）
+      try { localStorage.setItem(TOKEN_STORAGE_KEY, token.trim()); } catch { /* 無視 */ }
+
       const baseName = file.name.replace(/\.[^.]+$/, "") || "photo";
       const formData = new FormData();
       formData.append("salon", salonKey);
       formData.append("memo", memo);
+      formData.append("token", token.trim());
       formData.append("images", compressed, `${baseName}.jpg`);
 
       const res = await fetch("/api/staff/upload", { method: "POST", body: formData });
@@ -258,6 +273,23 @@ export default function StaffUploadForm({ salonKey, salonLabel, salonSub }: Prop
             onBlur={(e)  => (e.target.style.borderColor = "#2A2A2A")}
           />
           <p className="text-xs" style={{ color: "#333" }}>施術内容・ターゲット・仕上がりのポイントなど</p>
+        </div>
+
+        {/* 合言葉（初回のみ入力・端末に記憶） */}
+        <div className="space-y-2">
+          <p className="text-xs" style={{ color: "#555" }}>合言葉</p>
+          <input
+            type="password"
+            value={token}
+            onChange={(e) => setToken(e.target.value)}
+            placeholder="担当者から共有された合言葉"
+            autoComplete="off"
+            className="w-full rounded-xl px-4 py-3 text-sm focus:outline-none"
+            style={{ background: "#111", border: "1px solid #2A2A2A", color: "#E8E8E8" }}
+            onFocus={(e) => (e.target.style.borderColor = "#444")}
+            onBlur={(e)  => (e.target.style.borderColor = "#2A2A2A")}
+          />
+          <p className="text-xs" style={{ color: "#333" }}>この端末に記憶されるので、次回からは入力不要です</p>
         </div>
 
         <button
