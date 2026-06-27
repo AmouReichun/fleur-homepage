@@ -3,6 +3,7 @@ import Link from "next/link";
 import { getContentCached } from "@/lib/content";
 import { breadcrumbSchema } from "@/lib/structured-data";
 import RecruitForm from "@/app/components/RecruitForm";
+import { ROLES } from "@/lib/recruit-roles";
 import Reveal from "@/app/components/recruit/Reveal";
 import StickyRecruitCTA from "@/app/components/recruit/StickyRecruitCTA";
 import StatNumber from "@/app/components/recruit/StatNumber";
@@ -390,6 +391,23 @@ export default async function RecruitPage() {
               ))}
             </div>
             <p className="text-center text-[11px] text-site-muted/70 mt-5">※勤務時間・歩合・手当などの詳細は、見学・面談時に丁寧にご案内します。</p>
+
+            {/* 職種別の詳しい求人情報 */}
+            <Reveal className="mt-12">
+              <p className="text-center text-sm text-site-text mb-5">職種別の詳しい求人情報（給与・キャリア・仕事内容）</p>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                {ROLES.map((r) => (
+                  <Link
+                    key={r.slug}
+                    href={`/recruit/${r.slug}`}
+                    className="bg-white border border-site-greige rounded-xl p-5 hover:border-site-accent transition-colors group text-center"
+                  >
+                    <span className="block text-sm font-medium text-site-text group-hover:text-site-accent transition-colors">{r.title}</span>
+                    <span className="block text-[11px] text-site-muted mt-1">{r.areas.join("・")}</span>
+                  </Link>
+                ))}
+              </div>
+            </Reveal>
           </div>
         </section>
 

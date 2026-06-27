@@ -1,6 +1,7 @@
 import { MetadataRoute } from "next";
 import { getAllServiceSlugs } from "@/lib/services";
 import { AREAS, getAllAreaServiceParams } from "@/lib/areas";
+import { getAllRoleSlugs } from "@/lib/recruit-roles";
 import { getAllPosts, getAllTags, getAllAuthors, getAvailableMonths } from "@/lib/blog/posts";
 
 const BASE = "https://fleur-group.jp";
@@ -68,6 +69,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/staff`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE}/news`, lastModified: now, changeFrequency: "weekly", priority: 0.6 },
     { url: `${BASE}/recruit`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
+    ...getAllRoleSlugs().map((role) => ({
+      url: `${BASE}/recruit/${role}`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.75,
+    })),
     { url: `${BASE}/company`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },
     { url: `${BASE}/contact`, lastModified: now, changeFrequency: "yearly", priority: 0.5 },
     ...blogStatic,
