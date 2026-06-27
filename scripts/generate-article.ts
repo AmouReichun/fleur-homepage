@@ -4,6 +4,7 @@ import * as path from "path";
 import Anthropic from "@anthropic-ai/sdk";
 import { IgMedia } from "./fetch-instagram";
 import { checkNgWords } from "../lib/blog/ng-words";
+import { buildBasePrompt, JSON_INSTRUCTION, AREA_BY_NAME } from "../lib/blog/article-prompt";
 
 dotenv.config({ path: ".env.local" });
 
@@ -31,107 +32,6 @@ type GeneratedArticle = {
   body: string;
 };
 
-// 店名 → 地域名（SEO/MEO用）
-const AREA_BY_NAME: Record<string, string> = {
-  "fleur ami": "香南市",
-  "Riv. by fleur ami": "高知市",
-  "Raffine": "高知市",
-};
-
-// SEO・AIO・MEO 共通ルール（ヘア／アイ両方で使用）
-const COMMON_RULES = `
-【記事の目的】
-- 高知県内（{AREA}）でのSEO上位表示
-- AI検索（AIO）で引用されやすい、悩み→施術→解決まで網羅した情報記事
-- Googleマップ（MEO）評価向上
-- 来店予約につなげる
-
-【入力情報について】
-- ビフォー写真はありません。アフター写真1枚＋メモ（担当・メニュー・店舗・簡単なコメント）が入力です。
-- アフター写真の仕上がりから、お客様が抱えていた「悩み」を自然に推測し、施術で解決した流れとして記述すること。
-- **写真に実際に写っている施術・仕上がりに忠実に書くこと。写っていない施術・効果は書かないこと。**
-
-【タイトルルール】（最重要）
-- 「地域名（{AREA}）＋メニュー＋悩み」を必ず含めること
-- 例：「{AREA}で髪質改善カラー｜艶のあるまとまり髪へ」
-      「{AREA}の白髪ぼかしカラーで自然な仕上がりに」
-      「{AREA}まつげパーマでナチュラルな目元へ」
-      「{AREA}で縮毛矯正なら{SALON}へ」
-
-【本文の見出し構成】（このH2を順番どおりすべて使うこと）
-## 今回のお客様のご紹介
-## このようなお悩みはありませんか？   ← メニューに応じた悩みを箇条書き（例：広がる／パサつく／白髪が気になる／まつ毛が下がる など）
-## 今回の施術内容
-## このメニューがおすすめな方
-## 施術後のホームケア方法
-## よくある質問   ← Q&Aを4つ。出力JSONの faq と同じ内容にすること
-## まとめ   ← 最後に必ず予約を促すCTA文（予約導線）を置くこと
-- 各H2の下で必要に応じてH3（###）を使い、内容を整理すること
-
-【SEOルール】
-- 地域名（{AREA}）を本文中に自然に3〜5回入れること
-- 店舗名（{SALON}）を必ず記載すること
-- 全体で1500〜2500文字
-- 関連する施術メニューに自然に触れ、回遊を促すこと（内部リンク的役割）
-- 「まとめ」の最後に予約導線（CTA）を必ず配置すること
-
-【数値・一次情報の扱い】
-- 施術時間・色持ち（持ち）・施術頻度の目安など、具体的な数値を1〜2か所入れること
-- 数値は「〜分程度」「〜ヶ月が目安」のように幅を持たせ、断定しないこと
-
-【FAQ の地名・店名・口語ルール】
-- 4つのFAQのうち、少なくとも1つは店名（{SALON}）または地名（{AREA}）が入る質問にすること
-- 4つのFAQのうち、少なくとも1つは「{AREA}で〇〇するならどこがいい？」のような口語・音声検索を意識した質問にすること
-
-【AIO対策】
-- 本文中に店名（{SALON}）と地名（{AREA}）を合計3回以上明記すること
-- 「{AREA}で〇〇をお考えの方は{SALON}へ」のようなCTA的フレーズを1〜2か所入れること
-
-【禁止事項】
-- 「ありがとうございました」だけで終わる記事
-- 日記形式
-- 短文のみ・情報量の薄い記事
-- 同じ文章の繰り返し`;
-
-const HAIR_PROMPT = `あなたはヘアサロン「{SALON}」（高知県{AREA}）のスタイリストです。
-添付したアフター写真と以下の入力情報をもとに、
-ヘアケアに関心のある大人女性（主に40代前後）向けのSEO・AIO・MEO対策ブログ記事を書いてください。
-
-トーン：落ち着いた丁寧な大人向けの語り。専門知識をわかりやすく、信頼感のある文体。
-${COMMON_RULES}`;
-
-const EYELASH_PROMPT = `あなたはまつ毛・まゆげサロン「{SALON}」（高知県{AREA}）のアイリストです。
-添付したアフター写真と以下の入力情報をもとに、
-20〜30代女性向けのSEO・AIO・MEO対策ブログ記事を書いてください。
-
-トーン：軽やかでトレンド感のある語り。韓国っぽい感度を意識しつつ、専門家としての信頼感も保つ。
-${COMMON_RULES}`;
-
-const JSON_INSTRUCTION = `
-以下のJSON形式で出力してください。JSON以外は一切出力しないこと。
-
-{
-  "title": "質問形のタイトル（例：白髪ぼかしって何歳から始めるべき？）",
-  "slug": "英数字とハイフンのみ（例：shiraga-bokashi-nansai）",
-  "excerpt": "120文字以内の要約",
-  "tags": ["タグ1", "タグ2", "タグ3", "タグ4"],
-  "question": "記事が答えるメインの質問（1文）",
-  "answer_summary": "質問への結論（2〜3文）",
-  "faq": [
-    {"q": "質問1", "a": "回答1"},
-    {"q": "質問2", "a": "回答2"},
-    {"q": "質問3", "a": "回答3"},
-    {"q": "質問4", "a": "回答4"}
-  ],
-  "body": "マークダウン形式の本文（1500〜2500字）。指定のH2構成（今回のお客様のご紹介／このようなお悩みはありませんか？／今回の施術内容／このメニューがおすすめな方／施術後のホームケア方法／よくある質問／まとめ）を順番どおりすべて使うこと。本文「よくある質問」セクションは上記 faq と一致させること。"
-}
-
-重要：
-- 薬機法・景表法に触れる表現（治る/改善する/絶対/No.1/若返り/育毛/100%確実 等）は使わないこと
-- 効果の断定はしない。「〜しやすい」「〜の方もいる」「〜傾向がある」などの表現にすること
-- 実在する施術内容のみ書くこと。架空の症例は作らないこと
-`;
-
 export const UPLOAD_SALONS = {
   fleurami: { name: "fleur ami",         category: "hair"     as const },
   riv:      { name: "Riv. by fleur ami", category: "hair"     as const },
@@ -149,11 +49,8 @@ function loadImageAsBase64(localImagePath: string): string | null {
 }
 
 function buildTextPrompt(media: IgMedia): string {
-  const basePrompt = media.category === "hair" ? HAIR_PROMPT : EYELASH_PROMPT;
   const area = AREA_BY_NAME[media.salonName] ?? "高知県";
-  const prompt = basePrompt
-    .replace(/\{SALON\}/g, media.salonName)
-    .replace(/\{AREA\}/g, area);
+  const prompt = buildBasePrompt({ category: media.category, salonName: media.salonName, area });
   return `${prompt}
 
 【Instagramキャプション】
@@ -273,7 +170,7 @@ export async function generateArticle(media: IgMedia): Promise<GeneratedArticle 
     try {
       const message = await client.messages.create({
         model: "claude-sonnet-4-6",
-        max_tokens: 6000,
+        max_tokens: 8000,
         messages: [{ role: "user", content }],
       });
       raw = (message.content[0] as { text: string }).text.trim();
@@ -373,9 +270,8 @@ export async function generateArticleFromUpload(params: {
   const { imagesBase64, memo, salonKey, date } = params;
   const salon = UPLOAD_SALONS[salonKey];
 
-  const basePrompt = salon.category === "hair" ? HAIR_PROMPT : EYELASH_PROMPT;
   const area = AREA_BY_NAME[salon.name] ?? "高知県";
-  const textPrompt = `${basePrompt.replace(/{SALON}/g, salon.name).replace(/\{AREA\}/g, area)}
+  const textPrompt = `${buildBasePrompt({ category: salon.category, salonName: salon.name, area })}
 
 【スタッフメモ】
 ${memo}
@@ -410,7 +306,7 @@ ${JSON_INSTRUCTION}`;
     try {
       const message = await client.messages.create({
         model: "claude-sonnet-4-6",
-        max_tokens: 6000,
+        max_tokens: 8000,
         messages: [{ role: "user", content }],
       });
       raw = (message.content[0] as { text: string }).text.trim();
