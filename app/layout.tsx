@@ -1,10 +1,7 @@
 import type { Metadata } from "next";
 import { Noto_Serif_JP, Noto_Sans_JP, Shippori_Mincho, Cormorant_Garamond, Zen_Kaku_Gothic_New, Plus_Jakarta_Sans } from "next/font/google";
-import { headers } from "next/headers";
 import Script from "next/script";
 import "./globals.css";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
 
 // 日本語フォントは文字数が膨大でサブセットが多数に分割されるため、preload:true だと
 // 数百件の <link rel=preload as=font> が生成され表示速度を著しく落とす。
@@ -93,23 +90,12 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const headersList = headers();
-  const pathname = headersList.get("x-pathname") ?? "";
-  // /admin と /blog は独自レイアウト（HPのHeader/Footerを出さない）
-  const isBare = pathname.startsWith("/admin") || pathname.startsWith("/blog");
-
+  // Header/Footer は app/(main)/layout.tsx に分離。ルートはhtml/body・フォント・GAのみで
+  // headers() を使わないため、各ページが静的/ISR＝エッジキャッシュ可能になる。
   return (
     <html lang="ja" className={`${notoSerifJP.variable} ${notoSansJP.variable} ${shipporiMincho.variable} ${cormorant.variable} ${zenKakuGothic.variable} ${plusJakarta.variable} ${notoForBlog.variable}`}>
       <body className="bg-site-bg text-site-text antialiased">
-        {isBare ? (
-          <>{children}</>
-        ) : (
-          <>
-            <Header />
-            <main>{children}</main>
-            <Footer />
-          </>
-        )}
+        {children}
 
         {GA_ID && (
           <>

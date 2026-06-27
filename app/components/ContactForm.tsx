@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useTransition } from "react";
-import { sendContact } from "@/app/contact/actions";
+import { sendContact } from "@/app/(main)/contact/actions";
 
 export default function ContactForm() {
   const [isPending, startTransition] = useTransition();

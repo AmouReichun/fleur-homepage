@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useTransition } from "react";
-import { sendApplication } from "@/app/recruit/actions";
+import { sendApplication } from "@/app/(main)/recruit/actions";
 
 const POSITIONS = [
   "美容師",
