@@ -6,11 +6,15 @@ import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
+// 日本語フォントは文字数が膨大でサブセットが多数に分割されるため、preload:true だと
+// 数百件の <link rel=preload as=font> が生成され表示速度を著しく落とす。
+// CJKフォントは preload:false が定石（必要なサブセットだけ display:swap で遅延読込される）。
 const notoSerifJP = Noto_Serif_JP({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
   variable: "--font-noto-serif-jp",
   display: "swap",
+  preload: false,
 });
 
 const notoSansJP = Noto_Sans_JP({
@@ -18,15 +22,16 @@ const notoSansJP = Noto_Sans_JP({
   weight: ["400", "500", "700"],
   variable: "--font-noto-sans-jp",
   display: "swap",
+  preload: false,
 });
 
 // ── ブログ統合用フォント（/blog 配下で使用） ──
-const shipporiMincho = Shippori_Mincho({ subsets: ["latin"], weight: ["400", "500", "600"], variable: "--font-shippori", display: "swap" });
+const shipporiMincho = Shippori_Mincho({ subsets: ["latin"], weight: ["400", "500", "600"], variable: "--font-shippori", display: "swap", preload: false });
 const cormorant = Cormorant_Garamond({ subsets: ["latin"], weight: ["400", "500", "600"], variable: "--font-cormorant", display: "swap" });
-const zenKakuGothic = Zen_Kaku_Gothic_New({ subsets: ["latin"], weight: ["400", "500"], variable: "--font-kaku", display: "swap" });
+const zenKakuGothic = Zen_Kaku_Gothic_New({ subsets: ["latin"], weight: ["400", "500"], variable: "--font-kaku", display: "swap", preload: false });
 const plusJakarta = Plus_Jakarta_Sans({ subsets: ["latin"], weight: ["400", "500"], variable: "--font-jakarta", display: "swap" });
 // ブログcomponentsは --font-noto も参照
-const notoForBlog = Noto_Sans_JP({ subsets: ["latin"], weight: ["400", "500"], variable: "--font-noto", display: "swap" });
+const notoForBlog = Noto_Sans_JP({ subsets: ["latin"], weight: ["400", "500"], variable: "--font-noto", display: "swap", preload: false });
 
 const BASE_URL = "https://fleur-group.jp";
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
