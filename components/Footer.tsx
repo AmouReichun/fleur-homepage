@@ -104,6 +104,12 @@ export default function Footer() {
 
         <div className="border-t border-group-border pt-6 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
           <nav className="flex flex-wrap gap-4">
+            <Link href="/area/kochi" className="text-xs text-group-muted hover:text-group-text transition-colors">
+              高知市のメニュー
+            </Link>
+            <Link href="/area/konan" className="text-xs text-group-muted hover:text-group-text transition-colors">
+              香南市のメニュー
+            </Link>
             <Link href="/blog/hair" className="text-xs text-group-muted hover:text-group-text transition-colors">
               ヘア症例
             </Link>

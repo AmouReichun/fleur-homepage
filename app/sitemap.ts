@@ -1,5 +1,6 @@
 import { MetadataRoute } from "next";
 import { getAllServiceSlugs } from "@/lib/services";
+import { AREAS, getAllAreaServiceParams } from "@/lib/areas";
 import { getAllPosts, getAllTags, getAllAuthors, getAvailableMonths } from "@/lib/blog/posts";
 
 const BASE = "https://fleur-group.jp";
@@ -10,6 +11,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: `${BASE}/service/${slug}`,
     lastModified: now,
     changeFrequency: "monthly",
+    priority: 0.85,
+  }));
+
+  // ── エリア×メニューのランディング（ローカルSEO/MEO） ──
+  const areaHubs: MetadataRoute.Sitemap = AREAS.map((a) => ({
+    url: `${BASE}/area/${a.slug}`,
+    lastModified: now,
+    changeFrequency: "monthly" as const,
+    priority: 0.8,
+  }));
+  const areaServices: MetadataRoute.Sitemap = getAllAreaServiceParams().map(({ area, service }) => ({
+    url: `${BASE}/area/${area}/${service}`,
+    lastModified: now,
+    changeFrequency: "monthly" as const,
     priority: 0.85,
   }));
 
@@ -47,6 +62,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/salon/raffine`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
     { url: `${BASE}/service`, lastModified: now, changeFrequency: "monthly", priority: 0.85 },
     ...services,
+    ...areaHubs,
+    ...areaServices,
     { url: `${BASE}/menu`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE}/staff`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE}/news`, lastModified: now, changeFrequency: "weekly", priority: 0.6 },

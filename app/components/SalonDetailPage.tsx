@@ -2,6 +2,7 @@ import Link from "next/link";
 import { getContentCached } from "@/lib/content";
 import SalonBlogLinks from "@/app/components/SalonBlogLinks";
 import ReservationChannels from "@/app/components/ReservationChannels";
+import GoogleReviewCTA from "@/app/components/GoogleReviewCTA";
 
 const SALON_LABELS: Record<string, string> = {
   riv: "Riv.by fleurami（高知市）",
@@ -334,6 +335,9 @@ export default async function SalonDetailPage({ salonKey }: { salonKey: string }
           </div>
         </section>
       )}
+
+      {/* クチコミ導線（MEO） */}
+      <GoogleReviewCTA salonKeys={[salonKey]} />
     </>
   );
 }

@@ -39,6 +39,8 @@ const salons = [
 
 const links = [
   { href: "/menu", label: "メニュー" },
+  { href: "/area/kochi", label: "高知市のメニュー" },
+  { href: "/area/konan", label: "香南市のメニュー" },
   { href: "/staff", label: "スタッフ" },
   { href: "/recruit", label: "採用情報" },
   { href: "/company", label: "会社概要" },
