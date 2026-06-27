@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 
 interface HeroSlideshowProps {
   images: string[];
@@ -25,13 +26,16 @@ export default function HeroSlideshow({ images, children, hasImage }: HeroSlides
         <>
           <div className="absolute inset-0">
             {images.map((src, i) => (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img
+              <Image
                 key={src}
                 src={src}
                 alt=""
                 aria-hidden="true"
-                className="absolute inset-0 w-full h-full object-cover animate-kenburns"
+                fill
+                sizes="100vw"
+                quality={70}
+                priority={i === 0}
+                className="object-cover animate-kenburns"
                 style={{
                   opacity: i === current ? 1 : 0,
                   transition: "opacity 1.5s ease-in-out",
