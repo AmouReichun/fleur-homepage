@@ -14,7 +14,6 @@ question: "高知市でピンク・ラベンダー系のカラーを検討して
 answer_summary: "ピンク・ラベンダー系カラーは発色と色落ちの経過がはっきりしているため、仕上がりのトーン設定とアフターケアの方針をサロンと事前に確認することが重要です。Riv. by fleur ami（高知市）では、担当スタイリストがカウンセリングでお客様の髪の状態と生活環境をヒアリングしたうえでカラー設計を行っています。色の入り方や退色の見え方を含めて相談しながら決めたい方に向いているサロンです。"
 instagram_id: "18067990382436655"
 instagram_permalink: "https://www.instagram.com/reel/DZ6Kv-OyaAQ/"
-draft: true
 yakkihou_flag: true
 yakkihou_words: ["完全に"]
 faq:
