@@ -14,7 +14,6 @@ question: "高知市で艶感のあるカラーや髪質改善を受けるとき
 answer_summary: "艶カラーや髪質改善は、カラーの配合技術と髪の状態の見極めがそのまま仕上がりに出やすいメニューです。高知市のRiv. by fleur amiでは、カウンセリングで現在の髪の状態と目標を確認したうえでメニューを提案しています。「とにかく安く」よりも「長く艶感を保ちたい」という方に向いているサロンです。"
 instagram_id: "18107285720048644"
 instagram_permalink: "https://www.instagram.com/reel/DaEvQGJSo0l/"
-draft: true
 yakkihou_flag: true
 yakkihou_words: ["完全に"]
 faq:
