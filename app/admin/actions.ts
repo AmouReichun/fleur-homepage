@@ -94,6 +94,7 @@ export async function addSalon(key: string, name: string, salonType: string, are
       return { success: false, error: e instanceof Error ? e.message : String(e) };
     }
   }
+  revalidateTag("site-content");
   return { success: true };
 }
 
