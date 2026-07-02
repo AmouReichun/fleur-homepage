@@ -6,6 +6,18 @@ import { useRouter } from 'next/navigation'
 import { bulkApprove, deleteArticle, bulkDeleteArticles } from './actions'
 import type { AdminArticle } from '@/lib/blog/github-admin'
 
+// 店舗別グループ（content.json の salonOrder と同順）
+const SALON_GROUPS: {
+  key: string
+  label: string
+  type: 'hair' | 'eyelash'
+  match: (salon: string) => boolean
+}[] = [
+  { key: 'fleurami', label: 'fleur ami',         type: 'hair',    match: s => s === 'fleur ami' },
+  { key: 'riv',      label: 'Riv. by fleur ami', type: 'hair',    match: s => s.startsWith('Riv') },
+  { key: 'raffine',  label: 'Raffine',           type: 'eyelash', match: s => s === 'Raffine' },
+]
+
 export default function DraftList({ articles }: { articles: AdminArticle[] }) {
   const router = useRouter()
   const [selected, setSelected] = useState<Set<string>>(new Set())
@@ -15,6 +27,19 @@ export default function DraftList({ articles }: { articles: AdminArticle[] }) {
 
   const allKeys = articles.map(a => `${a.category}/${a.slug}`)
   const allSelected = allKeys.length > 0 && allKeys.every(k => selected.has(k))
+
+  // 店舗別グループ化
+  const matched = new Set<string>()
+  const groups = SALON_GROUPS.map(g => {
+    const items = articles.filter(a => g.match(a.salon))
+    items.forEach(a => matched.add(`${a.category}/${a.slug}`))
+    return { ...g, items }
+  })
+  const others = articles.filter(a => !matched.has(`${a.category}/${a.slug}`))
+  if (others.length > 0) {
+    groups.push({ key: 'others', label: 'その他', type: 'hair', match: () => false, items: others })
+  }
+  const visibleGroups = groups.filter(g => g.items.length > 0)
 
   function toggle(key: string) {
     setSelected(prev => {
@@ -163,9 +188,53 @@ export default function DraftList({ articles }: { articles: AdminArticle[] }) {
         </button>
       </div>
 
-      {/* 記事リスト */}
-      <div className="space-y-2">
-        {articles.map(article => {
+      {/* 店舗タブ：各店舗セクションへスクロールジャンプ（ヘッダー直下に追従） */}
+      {visibleGroups.length > 1 && (
+        <nav
+          className="sticky top-[57px] z-10 flex items-center gap-2 overflow-x-auto py-3 mb-3 rounded-sm"
+          style={{ background: "#0F0F0F" }}
+        >
+          {visibleGroups.map(group => (
+            <a
+              key={group.key}
+              href={`#draft-${group.key}`}
+              className="text-xs px-4 py-2 rounded-full whitespace-nowrap transition-colors hover:opacity-80"
+              style={{
+                background: "#161616",
+                color: group.type === 'hair' ? "#BBA98A" : "#C8788A",
+                border: `1px solid ${group.type === 'hair' ? "#3A3020" : "#3A2030"}`,
+              }}
+            >
+              {group.label}
+              <span style={{ color: "#555" }}> {group.items.length}</span>
+            </a>
+          ))}
+        </nav>
+      )}
+
+      {/* 記事リスト（店舗別） */}
+      <div className="space-y-10">
+        {visibleGroups.map(group => (
+          <section key={group.key} id={`draft-${group.key}`} className="scroll-mt-[120px]">
+            {/* 店舗見出し */}
+            <div className="flex items-center gap-3 mb-4">
+              <span
+                className="text-[10px] tracking-[0.2em] uppercase px-2.5 py-1 rounded-sm"
+                style={{
+                  background: group.type === 'hair' ? "#1E1A14" : "#1E1218",
+                  color: group.type === 'hair' ? "#BBA98A" : "#C8788A",
+                  border: `1px solid ${group.type === 'hair' ? "#3A3020" : "#3A2030"}`,
+                }}
+              >
+                {group.type === 'hair' ? "Hair" : "Eyelash"}
+              </span>
+              <p className="text-sm font-medium" style={{ color: "#C8A860" }}>{group.label}</p>
+              <span className="text-[11px]" style={{ color: "#555" }}>{group.items.length}件</span>
+              <div className="h-px flex-1" style={{ background: "#222" }} />
+            </div>
+
+            <div className="space-y-2">
+              {group.items.map(article => {
           const key = `${article.category}/${article.slug}`
           const isChecked = selected.has(key)
           const isHair = article.category === 'hair'
@@ -272,7 +341,10 @@ export default function DraftList({ articles }: { articles: AdminArticle[] }) {
               </div>
             </div>
           )
-        })}
+              })}
+            </div>
+          </section>
+        ))}
       </div>
     </div>
   )

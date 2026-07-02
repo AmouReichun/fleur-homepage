@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { getContentCached } from "@/lib/content";
 import { breadcrumbSchema } from "@/lib/structured-data";
+import NewsTabs, { type NewsSalonMeta } from "@/app/components/NewsTabs";
 
 export const metadata: Metadata = {
   title: "最新情報",
@@ -14,17 +15,17 @@ const crumbs = [
   { name: "最新情報", url: "https://fleur-group.jp/news" },
 ];
 
-const SALON_LABELS: Record<string, string> = {
-  fleurami: "fleurami",
-  riv: "Riv.by fleurami",
-  raffine: "Raffine",
-};
-
 export default async function NewsPage() {
-  const { news } = await getContentCached();
-  const sorted = [...(news ?? [])].sort(
-    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
-  );
+  const content = await getContentCached();
+  const news = content.news ?? [];
+  const salonMeta: NewsSalonMeta[] = content.salonOrder.map((key) => {
+    const s = content.salons[key as keyof typeof content.salons];
+    return {
+      key,
+      name: s?.name ?? key,
+      category: s?.salonType?.includes("アイラッシュ") ? "eyelash" : "hair",
+    };
+  });
 
   return (
     <>
@@ -46,46 +47,10 @@ export default async function NewsPage() {
         </div>
       </div>
 
-      {/* 一覧 */}
+      {/* 一覧（業態タブ＋店舗別） */}
       <section className="py-12 sm:py-20 bg-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6">
-          {sorted.length === 0 ? (
-            <p className="text-center text-site-muted text-sm py-16">現在お知らせはありません</p>
-          ) : (
-            <div className="divide-y divide-site-greige">
-              {sorted.map((item) => (
-                <article key={item.id} className="py-8 first:pt-0">
-                  <div className="flex flex-wrap items-center gap-3 mb-3">
-                    <time
-                      dateTime={item.date}
-                      className="text-xs text-site-muted tabular-nums"
-                    >
-                      {item.date.replace(/-/g, ".")}
-                    </time>
-                    {item.salon && (
-                      <span className="text-[10px] tracking-wider text-site-accent border border-site-accent/40 px-2 py-0.5">
-                        {SALON_LABELS[item.salon] ?? item.salon}
-                      </span>
-                    )}
-                  </div>
-                  <h2 className="font-serif text-lg font-semibold text-site-text mb-3">
-                    {item.title}
-                  </h2>
-                  {item.imageSrc && (
-                    // eslint-disable-next-line @next/next/no-img-element
-                    <img
-                      src={item.imageSrc}
-                      alt={item.title}
-                      className="w-full max-h-80 object-cover mb-4"
-                    />
-                  )}
-                  <p className="text-sm text-site-muted leading-relaxed whitespace-pre-line">
-                    {item.body}
-                  </p>
-                </article>
-              ))}
-            </div>
-          )}
+          <NewsTabs news={news} salons={salonMeta} />
         </div>
       </section>
     </>

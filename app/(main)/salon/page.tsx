@@ -27,6 +27,19 @@ const TYPE_LABEL: Record<string, string> = {
   "アイラッシュサロン": "アイラッシュサロン",
 };
 
+// 上部タブ用：業態 → アンカーID / 表示ラベル
+const TYPE_SLUG: Record<string, string> = {
+  "美容室": "hair",
+  "アイラッシュサロン": "eyelash",
+};
+
+const TAB_LABEL: Record<string, string> = {
+  "美容室": "美容室",
+  "アイラッシュサロン": "アイラッシュ",
+};
+
+const typeAnchor = (type: string) => `salon-${TYPE_SLUG[type] ?? encodeURIComponent(type)}`;
+
 export default async function SalonListPage() {
   const content = await getContentCached();
   const orderedSalons = content.salonOrder
@@ -59,10 +72,33 @@ export default async function SalonListPage() {
         </div>
       </div>
 
+      {/* 上部タブ：業態セクションへスクロールジャンプ（固定ヘッダー直下に追従） */}
+      {types.length > 1 && (
+        <div className="sticky top-14 sm:top-16 z-40 bg-white/95 backdrop-blur border-b border-site-greige">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6">
+            <nav className="flex items-center justify-center gap-2.5 sm:gap-3 py-3">
+              {types.map((type) => (
+                <a
+                  key={type}
+                  href={`#${typeAnchor(type)}`}
+                  className="px-5 sm:px-7 py-2 text-xs sm:text-sm font-medium tracking-wider rounded-full border border-site-greige text-site-text hover:border-site-accent hover:text-site-accent transition-colors duration-200"
+                >
+                  {TAB_LABEL[type] ?? type}
+                </a>
+              ))}
+            </nav>
+          </div>
+        </div>
+      )}
+
       {types.map((type) => {
         const salonsOfType = orderedSalons.filter((s) => s.salonType === type);
         return (
-          <section key={type} className="py-12 sm:py-16 bg-white border-b border-site-greige last:border-0">
+          <section
+            key={type}
+            id={typeAnchor(type)}
+            className="scroll-mt-[120px] sm:scroll-mt-[128px] py-12 sm:py-16 bg-white border-b border-site-greige last:border-0"
+          >
             <div className="max-w-6xl mx-auto px-4 sm:px-6">
               <div className="flex items-center gap-3 mb-8">
                 <span className={`text-xs px-3 py-1 rounded-full font-medium ${

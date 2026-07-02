@@ -1,9 +1,22 @@
 import Link from 'next/link'
 import { logout, revertToDraft } from '../actions'
 import RevertButton from '../RevertButton'
+import DeleteButton from '../DeleteButton'
 import { getAdminArticles } from '@/lib/blog/github-admin'
 
 export const dynamic = 'force-dynamic'
+
+// 店舗別グループ（content.json の salonOrder と同順）
+const SALON_GROUPS: {
+  key: string
+  label: string
+  type: 'hair' | 'eyelash'
+  match: (salon: string) => boolean
+}[] = [
+  { key: 'fleurami', label: 'fleur ami',         type: 'hair',    match: s => s === 'fleur ami' },
+  { key: 'riv',      label: 'Riv. by fleur ami', type: 'hair',    match: s => s.startsWith('Riv') },
+  { key: 'raffine',  label: 'Raffine',           type: 'eyelash', match: s => s === 'Raffine' },
+]
 
 export default async function PublishedPage({
   searchParams,
@@ -18,6 +31,21 @@ export default async function PublishedPage({
   const hair    = hairAll.filter(a => !a.draft)
   const eyelash = eyelashAll.filter(a => !a.draft)
   const all = [...hair, ...eyelash].sort((a, b) => (a.date < b.date ? 1 : -1))
+
+  // 店舗別にグループ化（日付の新しい順）
+  const matched = new Set<string>()
+  const groups = SALON_GROUPS.map(g => {
+    const items = all
+      .filter(a => g.match(a.salon))
+      .sort((a, b) => (a.date < b.date ? 1 : -1))
+    items.forEach(a => matched.add(`${a.category}/${a.slug}`))
+    return { ...g, items }
+  })
+  const others = all.filter(a => !matched.has(`${a.category}/${a.slug}`))
+  if (others.length > 0) {
+    groups.push({ key: 'others', label: 'その他', type: 'hair', match: () => false, items: others })
+  }
+  const visibleGroups = groups.filter(g => g.items.length > 0)
 
   return (
     <>
@@ -39,6 +67,13 @@ export default async function PublishedPage({
           </span>
           <span style={{ color: "#2A2A2A" }}>|</span>
           <div className="flex items-center gap-1">
+            <Link
+              href="/admin/blog/generate"
+              className="text-xs px-3 py-1.5 rounded-sm transition-colors hover:opacity-80"
+              style={{ color: "#666" }}
+            >
+              記事作成
+            </Link>
             <Link
               href="/admin/blog"
               className="text-xs px-3 py-1.5 rounded-sm transition-colors hover:opacity-80"
@@ -78,6 +113,32 @@ export default async function PublishedPage({
           </form>
         </div>
       </header>
+
+      {/* 店舗タブ：各店舗セクションへスクロールジャンプ（ヘッダー直下に追従） */}
+      {visibleGroups.length > 1 && (
+        <div
+          className="sticky top-[57px] z-10 px-6 py-3"
+          style={{ background: "#0F0F0F", borderBottom: "1px solid #222" }}
+        >
+          <nav className="max-w-4xl mx-auto flex items-center gap-2 overflow-x-auto">
+            {visibleGroups.map(group => (
+              <a
+                key={group.key}
+                href={`#pub-${group.key}`}
+                className="text-xs px-4 py-2 rounded-full whitespace-nowrap transition-colors hover:opacity-80"
+                style={{
+                  background: "#161616",
+                  color: group.type === 'hair' ? "#BBA98A" : "#C8788A",
+                  border: `1px solid ${group.type === 'hair' ? "#3A3020" : "#3A2030"}`,
+                }}
+              >
+                {group.label}
+                <span style={{ color: "#555" }}> {group.items.length}</span>
+              </a>
+            ))}
+          </nav>
+        </div>
+      )}
 
       <main className="max-w-4xl mx-auto px-6 py-10">
 
@@ -119,15 +180,7 @@ export default async function PublishedPage({
           ))}
         </div>
 
-        {/* セクション見出し */}
-        <div className="flex items-center gap-4 mb-6">
-          <p className="text-[10px] tracking-[0.3em] uppercase" style={{ color: "#C8A860" }}>
-            Published Articles
-          </p>
-          <div className="h-px flex-1" style={{ background: "#222" }} />
-        </div>
-
-        {/* 記事リスト */}
+        {/* 記事リスト（店舗別） */}
         {all.length === 0 ? (
           <div
             className="text-center py-20 rounded-sm"
@@ -136,8 +189,31 @@ export default async function PublishedPage({
             <p className="text-lg" style={{ color: "#444" }}>公開済み記事はありません</p>
           </div>
         ) : (
-          <div className="space-y-2">
-            {all.map(article => {
+          <div className="space-y-10">
+            {visibleGroups.map(group => (
+              <section key={group.key} id={`pub-${group.key}`} className="scroll-mt-[120px]">
+                {/* 店舗見出し（追従） */}
+                <div
+                  className="flex items-center gap-3 mb-4 py-2 sticky top-[105px] z-[5]"
+                  style={{ background: "#0F0F0F" }}
+                >
+                  <span
+                    className="text-[10px] tracking-[0.2em] uppercase px-2.5 py-1 rounded-sm"
+                    style={{
+                      background: group.type === 'hair' ? "#1E1A14" : "#1E1218",
+                      color: group.type === 'hair' ? "#BBA98A" : "#C8788A",
+                      border: `1px solid ${group.type === 'hair' ? "#3A3020" : "#3A2030"}`,
+                    }}
+                  >
+                    {group.type === 'hair' ? "Hair" : "Eyelash"}
+                  </span>
+                  <p className="text-sm font-medium" style={{ color: "#C8A860" }}>{group.label}</p>
+                  <span className="text-[11px]" style={{ color: "#555" }}>{group.items.length}件</span>
+                  <div className="h-px flex-1" style={{ background: "#222" }} />
+                </div>
+
+                <div className="space-y-2">
+                  {group.items.map(article => {
               const revertWithParams = revertToDraft.bind(null, article.category, article.slug)
               const isHair = article.category === 'hair'
 
@@ -196,7 +272,7 @@ export default async function PublishedPage({
 
                   <div className="flex items-center gap-2 shrink-0">
                     <Link
-                      href={`/${article.category}/${article.slug}`}
+                      href={`/blog/${article.category}/${article.slug}`}
                       target="_blank"
                       className="text-xs px-4 py-2 rounded-sm transition-colors"
                       style={{ background: "#1E1E1E", color: "#888", border: "1px solid #2A2A2A" }}
@@ -213,10 +289,18 @@ export default async function PublishedPage({
                     <form action={revertWithParams}>
                       <RevertButton title={article.title} />
                     </form>
+                    <DeleteButton
+                      category={article.category}
+                      slug={article.slug}
+                      title={article.title}
+                    />
                   </div>
                 </div>
               )
-            })}
+                  })}
+                </div>
+              </section>
+            ))}
           </div>
         )}
       </main>

@@ -68,6 +68,9 @@ export interface NewsItem {
   date: string;
   salon?: string;
   imageSrc?: string;
+  // GBP（Googleビジネスプロフィール）自動投稿の状態。投稿済みなら再投稿しない。
+  gbpPostedAt?: string; // 投稿日時（ISO）
+  gbpPostName?: string; // GBP投稿リソース名（複数店舗はカンマ区切り）
 }
 
 export interface StaffMember {

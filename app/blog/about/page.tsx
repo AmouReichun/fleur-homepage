@@ -475,7 +475,7 @@ export default function AboutPage() {
           {/* ── 公式サイト CTA ── */}
           <div className="mt-10 text-center">
             <a
-              href="https://www.fleurami-group.com"
+              href="https://fleur-group.jp/"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 px-8 py-3.5 text-sm tracking-[0.2em] font-cormorant transition-opacity hover:opacity-70"

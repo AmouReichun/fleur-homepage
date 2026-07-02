@@ -14,7 +14,7 @@ function ghHeaders() {
 function owner() { return process.env.GITHUB_OWNER ?? "AmouReichun"; }
 function repo()  { return process.env.GITHUB_REPO  ?? "fleur-blog"; }
 
-type GhFile = { name: string; download_url: string };
+type GhFile = { name: string; download_url: string; path: string };
 
 export type AdminArticle = {
   slug: string;
@@ -39,7 +39,12 @@ async function listMdFiles(category: string): Promise<GhFile[]> {
 }
 
 async function fetchMeta(file: GhFile, category: string): Promise<AdminArticle | null> {
-  const res = await fetch(file.download_url, { cache: "no-store" });
+  // Contents API から直接読む（raw.githubusercontent.com の CDN キャッシュ最大5分を回避し、
+  // 公開＝draft フラグ除去の commit を一覧へ即時反映させる）
+  const res = await fetch(
+    `${GRAPH}/repos/${owner()}/${repo()}/contents/${file.path}`,
+    { headers: { ...ghHeaders(), Accept: "application/vnd.github.raw" }, cache: "no-store" },
+  );
   if (!res.ok) return null;
   const raw = await res.text();
   const { data } = matter(raw);

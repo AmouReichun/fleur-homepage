@@ -5,8 +5,9 @@ import path from "path";
 import { cookies, headers } from "next/headers";
 import { redirect } from "next/navigation";
 import { revalidateTag } from "next/cache";
-import { getContentLatest } from "@/lib/content";
+import { getContentLatest, type NewsItem } from "@/lib/content";
 import { createSessionToken } from "@/lib/admin-auth";
+import { isGbpConfigured, postNewsToGbp } from "@/lib/gbp";
 
 const CONTENT_PATH = path.join(process.cwd(), "data/content.json");
 
@@ -120,6 +121,29 @@ export async function saveContent(sectionKey: string, dataJson: string) {
   const data: any = JSON.parse(dataJson);
   const current = await getContentLatest();
 
+  // 最新情報の保存時は、未投稿の新規お知らせを各店舗のGBPへ自動投稿する。
+  // 投稿できたものは gbpPostedAt を付けて再投稿を防ぐ。GBP側の失敗は保存を止めない。
+  let gbpWarning: string | undefined;
+  if (sectionKey === "news" && isGbpConfigured() && Array.isArray(data)) {
+    const items = data as NewsItem[];
+    for (const item of items) {
+      // 既に投稿済み、または内容が空のものはスキップ
+      if (item.gbpPostedAt) continue;
+      if (!item.title?.trim() && !item.body?.trim()) continue;
+      try {
+        const name = await postNewsToGbp(item);
+        if (name) {
+          item.gbpPostedAt = new Date().toISOString();
+          item.gbpPostName = name;
+        }
+      } catch (e) {
+        // 投稿失敗時はスタンプを付けない（次回保存で再試行される）
+        const msg = e instanceof Error ? e.message : String(e);
+        gbpWarning = `GBPへの投稿に一部失敗しました：${msg.slice(0, 120)}`;
+      }
+    }
+  }
+
   // Support nested keys like "salons.riv"
   const keys = sectionKey.split(".");
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -155,7 +179,7 @@ export async function saveContent(sectionKey: string, dataJson: string) {
   // 公開ページのキャッシュを即時無効化
   revalidateTag("site-content");
 
-  return { success: true };
+  return { success: true, warning: gbpWarning };
 }
 
 async function commitToGitHub(content: string) {

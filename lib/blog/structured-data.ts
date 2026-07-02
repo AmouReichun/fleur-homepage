@@ -90,7 +90,7 @@ export const SALONS = {
       streetAddress: "南川添9-21 フルールアミー3 2F",
       addressLocality: "高知市",
       addressRegion: "高知県",
-      postalCode: "780-0926",
+      postalCode: "781-0082",
       addressCountry: "JP",
     },
     openingHoursSpecification: [
@@ -201,7 +201,6 @@ export function organizationSchema() {
     name: "フルールグループ",
     url: SITE_URL,
     sameAs: [
-      "https://www.fleurami-group.com",
       "https://beauty.hotpepper.jp/slnH000528388/",
       "https://www.instagram.com/fleurami_info/",
       "https://beauty.hotpepper.jp/slnH000634137/",

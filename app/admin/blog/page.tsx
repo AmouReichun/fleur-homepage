@@ -61,6 +61,13 @@ export default async function AdminPage({
           <span style={{ color: "#2A2A2A" }}>|</span>
           <div className="flex items-center gap-1">
             <Link
+              href="/admin/blog/generate"
+              className="text-xs px-3 py-1.5 rounded-sm transition-colors hover:opacity-80"
+              style={{ color: "#666" }}
+            >
+              記事作成
+            </Link>
+            <Link
               href="/admin/blog"
               className="text-xs px-3 py-1.5 rounded-sm transition-colors"
               style={{ background: "#222", color: "#E8E8E8" }}
@@ -196,16 +203,6 @@ export default async function AdminPage({
             Draft Articles
           </p>
           <div className="h-px flex-1" style={{ background: "#222" }} />
-          <Link
-            href="/admin/blog/generate"
-            className="flex items-center gap-2 text-xs px-4 py-2 rounded-sm transition-opacity hover:opacity-80"
-            style={{
-              background: "linear-gradient(135deg, #C8A860, #A88840)",
-              color: "#0F0F0F",
-            }}
-          >
-            + 記事生成
-          </Link>
         </div>
 
         <DraftList articles={allDrafts} />

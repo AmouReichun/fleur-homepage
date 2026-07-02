@@ -42,7 +42,7 @@ export interface RoleDef {
 }
 
 const LOC_FLEURAMI: RoleLocation = { locality: "香南市", salonName: "fleurami", streetAddress: "野市町西野230", postalCode: "781-5233" };
-const LOC_RIV: RoleLocation = { locality: "高知市", salonName: "Riv.by fleurami", streetAddress: "南川添9-21 フルールアミー3 2F", postalCode: "780-0926" };
+const LOC_RIV: RoleLocation = { locality: "高知市", salonName: "Riv.by fleurami", streetAddress: "南川添9-21 フルールアミー3 2F", postalCode: "781-0082" };
 const LOC_RAFFINE: RoleLocation = { locality: "高知市", salonName: "Raffine", streetAddress: "はりまや町1-4-8 TNはりまやビル3F", postalCode: "780-0822" };
 
 const COMMON_CONDITIONS = [

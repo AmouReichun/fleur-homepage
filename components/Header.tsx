@@ -59,7 +59,7 @@ export default function Header() {
             );
           })}
           <a
-            href="https://www.fleurami-group.com"
+            href="https://fleur-group.jp/"
             target="_blank"
             rel="noopener noreferrer"
             className="px-1.5 sm:px-3 py-1.5 text-xs sm:text-sm rounded transition-colors text-group-muted hover:text-group-text whitespace-nowrap"

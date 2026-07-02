@@ -2,8 +2,15 @@
 
 import { cookies } from 'next/headers'
 import { redirect } from 'next/navigation'
+import { revalidatePath } from 'next/cache'
 import matter from 'gray-matter'
 import { commitFile, getFileContent, deleteFile } from '@/lib/blog/github'
+
+// 下書き／公開済み一覧のクライアント側 Router Cache を破棄して即時反映させる
+function revalidateAdminLists() {
+  revalidatePath('/admin/blog')
+  revalidatePath('/admin/blog/published')
+}
 
 // 認証はHP統合の admin_session に一本化（ログインは /admin/login を共用）
 export async function logout() {
@@ -57,6 +64,7 @@ export async function saveArticle(formData: FormData) {
     `edit: ${data.title ?? slug}`,
   )
 
+  revalidateAdminLists()
   const base = from === 'published' ? '/admin/blog/published' : '/admin/blog'
   redirect(`${base}?saved=${encodeURIComponent(data.title ?? slug)}`)
 }
@@ -72,6 +80,7 @@ export async function revertToDraft(category: string, slug: string) {
   const updated = file.content.replace(/^(---\n)/, '$1draft: true\n')
 
   await commitFile(ghPath, updated, `revert to draft: ${slug}`, file.sha)
+  revalidateAdminLists()
   redirect('/admin/blog/published?reverted=1')
 }
 
@@ -82,6 +91,7 @@ export async function approveArticle(category: string, slug: string) {
 
   const updated = file.content.replace(/^draft: true\r?\n/m, '')
   await commitFile(ghPath, updated, `publish: ${slug}`, file.sha)
+  revalidateAdminLists()
   redirect(`/admin/blog?approved=${encodeURIComponent(slug)}`)
 }
 
@@ -102,6 +112,7 @@ export async function bulkApprove(
     }
   }
 
+  revalidateAdminLists()
   redirect(`/admin/blog?approved=${encodeURIComponent(`${items.length}件`)}`)
 }
 
@@ -116,6 +127,7 @@ export async function deleteArticle(
       `content/${category}/${slug}.md`,
       `delete draft: ${slug}`,
     )
+    revalidateAdminLists()
     return {}
   } catch (err) {
     return { error: String(err) }
@@ -136,6 +148,7 @@ export async function bulkDeleteArticles(
       return { error: `「${slug}」の削除に失敗しました: ${String(err)}` }
     }
   }
+  revalidateAdminLists()
   return {}
 }
 

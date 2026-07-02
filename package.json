@@ -8,6 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "generate:llms": "node scripts/generate-llms-txt.mjs",
+    "sync:images": "node scripts/sync-blog-images.mjs",
+    "sync:images:deploy": "node scripts/sync-blog-images.mjs --deploy",
     "pipeline": "npx tsx scripts/run-pipeline.ts",
     "pipeline:fetch": "npx tsx scripts/fetch-instagram.ts",
     "pipeline:article": "npx tsx scripts/generate-article.ts",

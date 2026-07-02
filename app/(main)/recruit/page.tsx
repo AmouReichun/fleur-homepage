@@ -118,22 +118,22 @@ const DEFAULT_FAQ = [
 const HIRING_ORG = { "@type": "Organization", name: "fleur GROUP", sameAs: "https://fleur-group.jp" };
 const datePosted = "2026-06-01";
 const validThrough = "2027-06-30";
-function jobPosting(title: string, desc: string, locality: string, occupation: string, salaryMin: number, salaryMax: number) {
+function jobPosting(title: string, desc: string, locality: string, streetAddress: string, postalCode: string, occupation: string, salaryMin: number, salaryMax: number) {
   return {
     "@context": "https://schema.org",
     "@type": "JobPosting",
     title, description: desc, datePosted, validThrough,
     employmentType: "FULL_TIME", hiringOrganization: HIRING_ORG,
     industry: "美容業", occupationalCategory: occupation,
-    jobLocation: { "@type": "Place", address: { "@type": "PostalAddress", addressRegion: "高知県", addressLocality: locality, addressCountry: "JP" } },
+    jobLocation: { "@type": "Place", address: { "@type": "PostalAddress", addressRegion: "高知県", addressLocality: locality, streetAddress, postalCode, addressCountry: "JP" } },
     baseSalary: { "@type": "MonetaryAmount", currency: "JPY", value: { "@type": "QuantitativeValue", minValue: salaryMin, maxValue: salaryMax, unitText: "MONTH" } },
     directApply: true,
   };
 }
 const jobPostings = [
-  jobPosting("美容師（スタイリスト・アシスタント）", "香南市の美容室fleuramiで美容師を募集。髪質改善・カット・艶カラーが学べる地域密着型サロン。香南市 美容室求人。完全週休2日制・社会保険完備・アシスタントから育成。未経験・ブランクOK。スタイリスト月給23万円＋歩合、アシスタント月給22万円。", "香南市", "美容師", 220000, 230000),
-  jobPosting("美容師（大人女性向けサロン）", "高知市の美容室Riv.by fleuramiで美容師を募集。白髪ぼかし・髪質改善・艶カラーが強みの大人女性向けサロン。高知市 美容師求人。完全週休2日制・社会保険完備。スタイリスト月給23万円＋歩合、アシスタント月給22万円。", "高知市", "美容師", 220000, 230000),
-  jobPosting("アイリスト", "高知市のまつげサロンRaffineでアイリストを募集。まつ毛パーマ・LEDエクステ・眉WAX。全席半個室、20代女性スタッフ中心。高知市 アイリスト求人。未経験歓迎。経験者は月給22万円＋歩合、未経験は月給20万円。", "高知市", "アイリスト", 200000, 220000),
+  jobPosting("美容師（スタイリスト・アシスタント）", "香南市の美容室fleuramiで美容師を募集。髪質改善・カット・艶カラーが学べる地域密着型サロン。香南市 美容室求人。完全週休2日制・社会保険完備・アシスタントから育成。未経験・ブランクOK。スタイリスト月給23万円＋歩合、アシスタント月給22万円。", "香南市", "野市町西野230", "781-5233", "美容師", 220000, 230000),
+  jobPosting("美容師（大人女性向けサロン）", "高知市の美容室Riv.by fleuramiで美容師を募集。白髪ぼかし・髪質改善・艶カラーが強みの大人女性向けサロン。高知市 美容師求人。完全週休2日制・社会保険完備。スタイリスト月給23万円＋歩合、アシスタント月給22万円。", "高知市", "南川添9-21 フルールアミー3 2F", "781-0082", "美容師", 220000, 230000),
+  jobPosting("アイリスト", "高知市のまつげサロンRaffineでアイリストを募集。まつ毛パーマ・LEDエクステ・眉WAX。全席半個室、20代女性スタッフ中心。高知市 アイリスト求人。未経験歓迎。経験者は月給22万円＋歩合、未経験は月給20万円。", "高知市", "はりまや町1-4-8 TNはりまやビル3F", "780-0822", "アイリスト", 200000, 220000),
 ];
 
 export default async function RecruitPage() {
