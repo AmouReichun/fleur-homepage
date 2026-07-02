@@ -14,7 +14,6 @@ question: "高知市でデザインカラー（インナーカラー）を選ぶ
 answer_summary: "デザインカラーはベースカラーとアクセントカラーのバランス・ブリーチの扱い方・色の持ちを左右するアフターケア提案の3点がサロン選びの軸になります。Riv. by fleur ami（高知市）では、カウンセリングで仕上がりのイメージをすり合わせたうえで配色・明度を決めるため、初めてデザインカラーに挑戦する方にも判断しやすい環境が整っています。"
 instagram_id: ""
 instagram_permalink: ""
-draft: true
 yakkihou_flag: true
 yakkihou_words: ["確実に", "完全に", "効果がある"]
 faq:
