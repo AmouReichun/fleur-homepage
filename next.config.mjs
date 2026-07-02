@@ -15,6 +15,11 @@ const nextConfig = {
         protocol: "https",
         hostname: "*.fbcdn.net",
       },
+      {
+        // Vercel Blob 公開ストア（管理画面アップロード画像）
+        protocol: "https",
+        hostname: "*.public.blob.vercel-storage.com",
+      },
     ],
     unoptimized: false,
   },

@@ -8,6 +8,7 @@ import { revalidateTag } from "next/cache";
 import { getContentLatest, type NewsItem } from "@/lib/content";
 import { createSessionToken } from "@/lib/admin-auth";
 import { isGbpConfigured, postNewsToGbp } from "@/lib/gbp";
+import { put } from "@vercel/blob";
 
 const CONTENT_PATH = path.join(process.cwd(), "data/content.json");
 
@@ -237,51 +238,21 @@ export async function uploadImage(formData: FormData): Promise<string> {
 
   const ext = file.name.split(".").pop();
   const filename = `${section}-${Date.now()}.${ext}`;
-  const savePath = path.join(
-    process.cwd(),
-    "public/images/admin",
-    filename
-  );
 
-  try {
-    fs.mkdirSync(path.dirname(savePath), { recursive: true });
-    fs.writeFileSync(savePath, buffer);
-  } catch { /* read-only on Vercel — image stored via GitHub only */ }
-
-  // Sync to GitHub if configured
-  if (
-    process.env.GITHUB_TOKEN &&
-    process.env.GITHUB_OWNER &&
-    process.env.GITHUB_REPO
-  ) {
-    try {
-      await commitImageToGitHub(buffer, `public/images/admin/${filename}`);
-    } catch (e) {
-      const msg = e instanceof Error ? e.message : String(e);
-      throw new Error(`画像のGitHub保存に失敗しました: ${msg}`);
-    }
+  // Vercel Blob に保存。公開URLは即時に配信可能（再デプロイ不要）＝アップロード後すぐ反映。
+  if (!process.env.BLOB_READ_WRITE_TOKEN) {
+    throw new Error(
+      "BLOB_READ_WRITE_TOKEN が未設定です。Vercel Blob ストアを接続してください。"
+    );
   }
-
-  return `/images/admin/${filename}`;
-}
-
-async function commitImageToGitHub(buffer: Buffer, filePath: string) {
-  const token = process.env.GITHUB_TOKEN!;
-  const owner = process.env.GITHUB_OWNER!;
-  const repo = process.env.GITHUB_REPO!;
-
-  await fetch(
-    `https://api.github.com/repos/${owner}/${repo}/contents/${filePath}`,
-    {
-      method: "PUT",
-      headers: {
-        Authorization: `Bearer ${token}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        message: `admin: 画像アップロード ${filePath}`,
-        content: buffer.toString("base64"),
-      }),
-    }
-  );
+  try {
+    const { url } = await put(`admin/${filename}`, buffer, {
+      access: "public",
+      contentType: file.type || undefined,
+    });
+    return url;
+  } catch (e) {
+    const msg = e instanceof Error ? e.message : String(e);
+    throw new Error(`画像のアップロードに失敗しました: ${msg}`);
+  }
 }
