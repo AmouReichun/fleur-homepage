@@ -8,6 +8,12 @@ on:
   workflow_dispatch:
     # 手動実行も可能（テスト用）
 
+# main へ commit/push するワークフロー（staff-upload-generate / auto-publish と共有）を
+# 直列化し、並行 push によるref衝突を防ぐ。
+concurrency:
+  group: content-push
+  cancel-in-progress: false
+
 jobs:
   generate:
     runs-on: ubuntu-latest
@@ -106,8 +112,17 @@ jobs:
             exit 0
           fi
           git commit -m "auto: daily article generation $(date +'%Y-%m-%d')"
-          git pull --rebase --autostash origin main
-          git push
+          pushed=false
+          for i in 1 2 3 4 5; do
+            git pull --rebase --autostash origin main
+            if git push; then pushed=true; break; fi
+            echo "push衝突を検知、リトライ $i/5"
+            sleep $((RANDOM % 5 + 3))
+          done
+          if [ "$pushed" != true ]; then
+            echo "5回リトライしてもpushに失敗しました" >&2
+            exit 1
+          fi
           echo "committed=true" >> "$GITHUB_OUTPUT"
 
       - name: Deploy to Vercel (Production)
