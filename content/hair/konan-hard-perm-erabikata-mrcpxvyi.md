@@ -14,7 +14,6 @@ question: "香南市でハードパーマをかけるとき、どんな点を見
 answer_summary: "ハードパーマは、カール感の強さや持ちやすさを重視するなら、髪の状態を丁寧に見極めてロッドや薬剤を調整できるサロンを選ぶことが大切です。香南市のfleur amiでは、カウンセリングで希望のスタイルと髪の状態を確認したうえでパーマの設計を行っています。仕上がりのイメージと実際の施術内容を事前にすり合わせてから進める流れを取っています。"
 instagram_id: ""
 instagram_permalink: ""
-draft: true
 yakkihou_flag: true
 yakkihou_words: ["完全に"]
 faq:
