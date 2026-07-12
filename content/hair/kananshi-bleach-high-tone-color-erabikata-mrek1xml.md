@@ -14,7 +14,6 @@ question: "香南市でブリーチ・ハイトーンカラーを選ぶとき、
 answer_summary: "ブリーチを使ったハイトーンカラーは、毛の状態の見極めと施術後のケア提案がセットでなければ、仕上がりに満足しにくいメニューです。香南市のfleur amiでは、カウンセリングで現在の毛の状態・希望の色・ライフスタイルを確認したうえで施術プランを提案しています。まずは相談だけでも受け付けています。"
 instagram_id: ""
 instagram_permalink: ""
-draft: true
 yakkihou_flag: true
 yakkihou_words: ["完全に"]
 faq:
