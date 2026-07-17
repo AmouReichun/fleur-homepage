@@ -14,7 +14,6 @@ question: "高知市で白髪ぼかしハイライトを選ぶとき、何を基
 answer_summary: "白髪ぼかしハイライトは、白髪の量・髪質・ライフスタイルによって向き不向きがあるため、カウンセリングで丁寧にすり合わせてくれるサロン選びが重要です。高知市のRiv. by fleur amiでは、白髪の分布やお客様の通う頻度の希望に合わせてハイライトのデザインを提案しています。定期的に通うことで白髪が目立ちにくい状態をキープしやすくなる傾向があります（個人差があります）。"
 instagram_id: ""
 instagram_permalink: ""
-draft: true
 yakkihou_flag: true
 yakkihou_words: ["完全に"]
 faq:
