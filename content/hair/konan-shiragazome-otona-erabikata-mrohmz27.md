@@ -14,7 +14,6 @@ question: "香南市で白髪染めをするとき、自然な仕上がりと艶
 answer_summary: "白髪染めで自然な艶感を出すには、染料の選定とトーン設定のバランスが仕上がりを左右します。香南市のfleur amiでは、30〜40代の大人女性が日常で扱いやすい落ち着いたカラーを軸に、カウンセリングで個々の髪色・肌色・ライフスタイルに合わせた提案を行っています。"
 instagram_id: ""
 instagram_permalink: ""
-draft: true
 yakkihou_flag: true
 yakkihou_words: ["完全に"]
 faq:
