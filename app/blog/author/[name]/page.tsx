@@ -8,7 +8,8 @@ import ArticleCard from "@/components/ArticleCard";
 type Props = { params: { name: string } };
 
 export async function generateStaticParams() {
-  return getAllAuthors().map((a) => ({ name: encodeURIComponent(a.name) }));
+  // App Routerでは生（デコード済み）の値を返す。encodeすると二重エンコードで全404になる。
+  return getAllAuthors().map((a) => ({ name: a.name }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -19,7 +20,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${name} | ${author.role} — ${author.salon}`,
     description: `${author.salon}の${author.role}${name}による施術例・コラム一覧。高知県の${author.category === "hair" ? "ヘアサロン" : "まつげ・まゆげサロン"}。`,
-    alternates: { canonical: `/blog/author/${encodeURIComponent(name)}` },
+    alternates: { canonical: `/blog/author/${name}` },
   };
 }
 

@@ -7,6 +7,8 @@ export default function ContactForm() {
   const [isPending, startTransition] = useTransition();
   const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
   const [errorMsg, setErrorMsg] = useState("");
+  // フォーム表示時刻（ボットの即時送信を検知するため）
+  const [renderedAt] = useState(() => Date.now());
 
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -39,6 +41,13 @@ export default function ContactForm() {
     <div className="border border-site-greige p-6 sm:p-8">
       <h2 className="font-serif text-lg font-semibold text-site-text mb-6">お問い合わせフォーム</h2>
       <form className="space-y-5" onSubmit={handleSubmit}>
+        {/* スパム対策: 人間には見えないハニーポット項目。ボットが埋めると送信を拒否する */}
+        <div aria-hidden="true" className="absolute left-[-9999px] h-0 w-0 overflow-hidden" style={{ position: "absolute" }}>
+          <label htmlFor="contact-company">会社名（入力しないでください）</label>
+          <input id="contact-company" type="text" name="company" tabIndex={-1} autoComplete="off" />
+        </div>
+        <input type="hidden" name="_ts" value={renderedAt} />
+
         <div>
           <label className="block text-xs font-medium text-site-text mb-1.5">
             お問い合わせ種別 <span className="text-red-400">*</span>

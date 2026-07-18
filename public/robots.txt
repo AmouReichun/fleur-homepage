@@ -1,6 +1,7 @@
 User-agent: *
 Allow: /
 Disallow: /admin/
+Disallow: /_next/static/
 
 # AI crawlers — explicitly allowed for AIO
 User-agent: GPTBot

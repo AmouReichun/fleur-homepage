@@ -1,16 +1,24 @@
 "use server";
 
 import { Resend } from "resend";
+import { guardFormSubmission, isValidEmail, sanitizeField } from "@/lib/form-guard";
 
 export async function sendContact(formData: FormData) {
-  const type    = formData.get("type") as string;
-  const name    = formData.get("name") as string;
-  const email   = formData.get("email") as string;
-  const phone   = formData.get("phone") as string;
-  const message = formData.get("message") as string;
+  // ボット/スパム/連投対策（ハニーポット・送信タイミング・IPレート制限）
+  const guard = guardFormSubmission(formData);
+  if (!guard.ok) return { success: false, error: guard.error };
+
+  const type    = sanitizeField(formData.get("type"), 40);
+  const name    = sanitizeField(formData.get("name"), 100);
+  const email   = sanitizeField(formData.get("email"), 254);
+  const phone   = sanitizeField(formData.get("phone"), 40);
+  const message = sanitizeField(formData.get("message"), 3000);
 
   if (!name || !email || !message) {
     return { success: false, error: "必須項目を入力してください" };
+  }
+  if (!isValidEmail(email)) {
+    return { success: false, error: "メールアドレスの形式が正しくありません" };
   }
 
   const apiKey     = process.env.RESEND_API_KEY;

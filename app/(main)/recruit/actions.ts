@@ -1,21 +1,29 @@
 "use server";
 
 import { Resend } from "resend";
+import { guardFormSubmission, isValidEmail, sanitizeField } from "@/lib/form-guard";
 
 export async function sendApplication(formData: FormData) {
-  const name       = formData.get("name") as string;
-  const kana       = formData.get("kana") as string;
-  const email      = formData.get("email") as string;
-  const phone      = formData.get("phone") as string;
-  const position   = formData.get("position") as string;
-  const salon      = formData.get("salon") as string;
-  const experience = formData.get("experience") as string;
-  const applyType  = formData.get("applyType") as string;
-  const portfolio  = formData.get("portfolio") as string;
-  const message    = formData.get("message") as string;
+  // ボット/スパム/連投対策（ハニーポット・送信タイミング・IPレート制限）
+  const guard = guardFormSubmission(formData);
+  if (!guard.ok) return { success: false, error: guard.error };
+
+  const name       = sanitizeField(formData.get("name"), 100);
+  const kana       = sanitizeField(formData.get("kana"), 100);
+  const email      = sanitizeField(formData.get("email"), 254);
+  const phone      = sanitizeField(formData.get("phone"), 40);
+  const position   = sanitizeField(formData.get("position"), 60);
+  const salon      = sanitizeField(formData.get("salon"), 60);
+  const experience = sanitizeField(formData.get("experience"), 60);
+  const applyType  = sanitizeField(formData.get("applyType"), 20);
+  const portfolio  = sanitizeField(formData.get("portfolio"), 300);
+  const message    = sanitizeField(formData.get("message"), 3000);
 
   if (!name || !email || !phone || !position) {
     return { success: false, error: "必須項目（お名前・メール・電話・希望職種）を入力してください" };
+  }
+  if (!isValidEmail(email)) {
+    return { success: false, error: "メールアドレスの形式が正しくありません" };
   }
 
   const apiKey  = process.env.RESEND_API_KEY;

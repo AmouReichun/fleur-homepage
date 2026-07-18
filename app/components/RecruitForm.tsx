@@ -20,6 +20,8 @@ export default function RecruitForm({
   const [isPending, startTransition] = useTransition();
   const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
   const [errorMsg, setErrorMsg] = useState("");
+  // フォーム表示時刻（ボットの即時送信を検知するため）
+  const [renderedAt] = useState(() => Date.now());
 
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -59,6 +61,13 @@ export default function RecruitForm({
       <p className="text-xs text-site-muted mb-6">求人へのご応募・サロン見学のお申し込み専用フォームです。</p>
 
       <form className="space-y-5" onSubmit={handleSubmit}>
+        {/* スパム対策: 人間には見えないハニーポット項目。ボットが埋めると送信を拒否する */}
+        <div aria-hidden="true" className="absolute left-[-9999px] h-0 w-0 overflow-hidden" style={{ position: "absolute" }}>
+          <label htmlFor="recruit-company">会社名（入力しないでください）</label>
+          <input id="recruit-company" type="text" name="company" tabIndex={-1} autoComplete="off" />
+        </div>
+        <input type="hidden" name="_ts" value={renderedAt} />
+
         {/* 応募種別 */}
         <div>
           <label className={labelCls}>

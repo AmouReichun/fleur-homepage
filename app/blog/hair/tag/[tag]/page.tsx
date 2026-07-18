@@ -1,13 +1,18 @@
 import { Metadata } from "next";
 import Link from "next/link";
+import { notFound } from "next/navigation";
 import { getAllPosts, getAllTags } from "@/lib/blog/posts";
 import { breadcrumbSchema, tagPageSchema } from "@/lib/blog/structured-data";
 import ArticleCard from "@/components/ArticleCard";
 
 type Props = { params: { tag: string } };
 
+// 存在しないタグは実404を返す（ソフト404回避）。タグは記事から生成されるため全網羅。
+export const dynamicParams = false;
+
 export async function generateStaticParams() {
-  return getAllTags("hair").map((tag) => ({ tag: encodeURIComponent(tag) }));
+  // App Routerでは生（デコード済み）の値を返す。encodeすると二重エンコードで全404になる。
+  return getAllTags("hair").map((tag) => ({ tag }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -15,13 +20,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${tag} | ヘアコラム`,
     description: `高知のヘアサロン fleur ami・Riv. による「${tag}」に関する施術例・コラム一覧。`,
-    alternates: { canonical: `/blog/hair/tag/${encodeURIComponent(tag)}` },
+    alternates: { canonical: `/blog/hair/tag/${tag}` },
   };
 }
 
 export default function HairTagPage({ params }: Props) {
   const tag = decodeURIComponent(params.tag);
   const posts = getAllPosts("hair").filter((p) => p.tags.includes(tag));
+  if (posts.length === 0) notFound();
   const crumb = breadcrumbSchema([
     { name: "トップ", url: "/" },
     { name: "ヘア", url: "/blog/hair" },

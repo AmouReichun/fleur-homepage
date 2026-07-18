@@ -3,7 +3,7 @@ import Image from "next/image";
 import type { PostMeta } from "@/lib/blog/posts";
 
 function tagHref(world: "hair" | "eyelash", tag: string) {
-  return `/blog/${world}?tag=${encodeURIComponent(tag)}`;
+  return `/blog/${world}/tag/${tag}`;
 }
 
 type Props = {
