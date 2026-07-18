@@ -6,6 +6,7 @@
 import * as fs from "fs";
 import * as path from "path";
 import matter from "gray-matter";
+import { isGbpConfigured, postBlogArticleToGbp } from "@/lib/gbp";
 
 const CONTENT_DIR = path.join(process.cwd(), "content");
 const CONFIG_PATH = path.join(process.cwd(), "config", "auto-publish.json");
@@ -20,6 +21,11 @@ type Draft = {
   filePath: string;
   salon: string;
   date: string;
+  title: string;
+  excerpt: string;
+  thumbnail: string;
+  slug: string;
+  category: "hair" | "eyelash";
 };
 
 function loadConfig(): Config {
@@ -38,7 +44,7 @@ function loadConfig(): Config {
 function collectEligibleDrafts(): Draft[] {
   const result: Draft[] = [];
 
-  for (const category of ["hair", "eyelash"]) {
+  for (const category of ["hair", "eyelash"] as const) {
     const dir = path.join(CONTENT_DIR, category);
     if (!fs.existsSync(dir)) continue;
 
@@ -55,6 +61,11 @@ function collectEligibleDrafts(): Draft[] {
         filePath,
         salon: String(data.salon ?? ""),
         date: String(data.date ?? ""),
+        title: String(data.title ?? ""),
+        excerpt: String(data.excerpt ?? ""),
+        thumbnail: String(data.thumbnail ?? ""),
+        slug: String(data.slug ?? path.basename(name, ".md")),
+        category,
       });
     }
   }
@@ -68,7 +79,7 @@ function publishFile(filePath: string): void {
   fs.writeFileSync(filePath, updated, "utf-8");
 }
 
-function main() {
+async function main() {
   const cfg = loadConfig();
 
   if (!cfg.enabled) {
@@ -90,6 +101,11 @@ function main() {
     bySalon[d.salon].push(d);
   }
 
+  const gbpEnabled = isGbpConfigured();
+  if (!gbpEnabled) {
+    console.log("ℹ️  GBP 環境変数が未設定のため、GBP への自動投稿はスキップします");
+  }
+
   let publishedCount = 0;
 
   for (const [salon, articles] of Object.entries(bySalon)) {
@@ -104,6 +120,28 @@ function main() {
       const slug = path.basename(target.filePath, ".md");
       console.log(`✓ 公開: [${salon}] ${slug} (${target.date})`);
       publishedCount++;
+
+      // GBP への自動投稿
+      if (gbpEnabled && target.title && target.excerpt) {
+        try {
+          const postName = await postBlogArticleToGbp({
+            title: target.title,
+            excerpt: target.excerpt,
+            thumbnail: target.thumbnail || undefined,
+            slug: target.slug,
+            category: target.category,
+            salonName: target.salon,
+          });
+          if (postName) {
+            console.log(`  📍 GBP 投稿済み: ${postName}`);
+          } else {
+            console.log(`  ℹ️  GBP: 対象ロケーション未設定のためスキップ (salon="${target.salon}")`);
+          }
+        } catch (e) {
+          // GBP 失敗は公開を止めない
+          console.error(`  ⚠️  GBP 投稿失敗 (${salon}): ${e instanceof Error ? e.message : String(e)}`);
+        }
+      }
     }
   }
 
@@ -111,4 +149,7 @@ function main() {
   console.log(`残り下書き（薬機法除く）: ${drafts.length - publishedCount} 件`);
 }
 
-main();
+main().catch((e) => {
+  console.error("エラー:", e);
+  process.exit(1);
+});

@@ -14,7 +14,8 @@
     "pipeline:fetch": "npx tsx scripts/fetch-instagram.ts",
     "pipeline:article": "npx tsx scripts/generate-article.ts",
     "pipeline:thumb": "npx tsx scripts/generate-thumbnail.ts",
-    "pipeline:regenerate": "npx tsx scripts/regenerate-articles.ts"
+    "pipeline:regenerate": "npx tsx scripts/regenerate-articles.ts",
+    "gbp:setup": "node scripts/gbp-setup.mjs"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.105.0",

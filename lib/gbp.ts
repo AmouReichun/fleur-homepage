@@ -14,6 +14,14 @@ const API_BASE = "https://mybusiness.googleapis.com/v4";
 const SUMMARY_MAX = 1500;
 const SITE_ORIGIN = "https://fleur-group.jp";
 
+// content.json の salonOrder キー → GBP_LOCATIONS キーのマッピング
+// （ブログ記事 frontmatter の salon 名からキーへの逆引きにも使用）
+const SALON_NAME_TO_KEY: Record<string, string> = {
+  "fleur ami": "fleurami",
+  "Riv. by fleur ami": "riv",
+  "Raffine": "raffine",
+};
+
 export function isGbpConfigured(): boolean {
   return !!(
     process.env.GBP_CLIENT_ID &&
@@ -38,8 +46,12 @@ export function resolveLocations(salonKey: string | undefined): string[] {
     const loc = map[salonKey];
     return loc ? [loc] : [];
   }
-  // 全店舗共通 → マッピングされている全ロケーション
   return Object.values(map);
+}
+
+/** ブログ記事 frontmatter の salon 名（例: "Riv. by fleur ami"）を GBP_LOCATIONS のキーに変換 */
+export function salonNameToKey(salonName: string): string | undefined {
+  return SALON_NAME_TO_KEY[salonName];
 }
 
 async function getAccessToken(): Promise<string> {
@@ -71,6 +83,8 @@ interface GbpPostInput {
   title: string;
   body: string;
   imageSrc?: string;
+  /** CTA のリンク先。省略時は /news */
+  url?: string;
 }
 
 async function createLocalPost(
@@ -80,6 +94,7 @@ async function createLocalPost(
 ): Promise<string> {
   const summary = `${input.title}\n\n${input.body}`.trim().slice(0, SUMMARY_MAX);
   const imageUrl = toAbsoluteUrl(input.imageSrc);
+  const ctaUrl = input.url ?? `${SITE_ORIGIN}/news`;
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const basePost: any = {
@@ -88,7 +103,7 @@ async function createLocalPost(
     topicType: "STANDARD",
     callToAction: {
       actionType: "LEARN_MORE",
-      url: `${SITE_ORIGIN}/news`,
+      url: ctaUrl,
     },
   };
 
@@ -119,13 +134,13 @@ async function createLocalPost(
     );
   }
   const json = await res.json();
-  return json.name as string; // 作成された投稿のリソース名
+  return json.name as string;
 }
 
 /**
- * 1件のお知らせを、対象店舗のGBPに投稿する。
- * 対象ロケーションが無い（マッピング未設定 or 全店舗共通で0件）場合は null を返す。
- * 投稿に成功した投稿リソース名（複数店舗の場合はカンマ区切り）を返す。
+ * お知らせ（NewsItem）を対象店舗のGBPに投稿する。
+ * CTAは /news へのリンク。
+ * 投稿成功時はリソース名（複数店舗はカンマ区切り）を返す。未設定・対象なしは null。
  */
 export async function postNewsToGbp(item: GbpPostInput & { salon?: string }): Promise<string | null> {
   if (!isGbpConfigured()) return null;
@@ -136,6 +151,39 @@ export async function postNewsToGbp(item: GbpPostInput & { salon?: string }): Pr
   const names: string[] = [];
   for (const loc of locations) {
     const name = await createLocalPost(accessToken, loc, item);
+    names.push(name);
+  }
+  return names.join(",");
+}
+
+/**
+ * ブログ記事を対象店舗のGBPに投稿する。
+ * CTAは記事URLへのリンク。salonName は frontmatter の salon フィールド値（例: "Riv. by fleur ami"）。
+ * 投稿成功時はリソース名（複数店舗はカンマ区切り）を返す。未設定・対象なしは null。
+ */
+export async function postBlogArticleToGbp(article: {
+  title: string;
+  excerpt: string;
+  thumbnail?: string;
+  slug: string;
+  category: "hair" | "eyelash";
+  salonName: string;
+}): Promise<string | null> {
+  if (!isGbpConfigured()) return null;
+  const salonKey = salonNameToKey(article.salonName);
+  const locations = resolveLocations(salonKey);
+  if (locations.length === 0) return null;
+
+  const articleUrl = `${SITE_ORIGIN}/blog/${article.category}/${article.slug}`;
+  const accessToken = await getAccessToken();
+  const names: string[] = [];
+  for (const loc of locations) {
+    const name = await createLocalPost(accessToken, loc, {
+      title: article.title,
+      body: article.excerpt,
+      imageSrc: article.thumbnail,
+      url: articleUrl,
+    });
     names.push(name);
   }
   return names.join(",");
