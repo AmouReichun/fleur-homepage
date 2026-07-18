@@ -79,10 +79,7 @@ jobs:
         if: steps.check.outputs.skip == 'false'
         run: npx tsx scripts/auto-publish.ts
         env:
-          GBP_CLIENT_ID: ${{ secrets.GBP_CLIENT_ID }}
-          GBP_CLIENT_SECRET: ${{ secrets.GBP_CLIENT_SECRET }}
-          GBP_REFRESH_TOKEN: ${{ secrets.GBP_REFRESH_TOKEN }}
-          GBP_LOCATIONS: ${{ secrets.GBP_LOCATIONS }}
+          GBP_WEBHOOK_URL: ${{ secrets.GBP_WEBHOOK_URL }}
 
       - name: Commit and push published articles
         id: commit
