@@ -1110,7 +1110,8 @@
       "history": "美容師歴15年",
       "salon": "Riv.by fleurami",
       "bio": "くせ毛・うねりのお悩みを縮毛矯正で解決します。扱いやすい髪へと導きます。",
-      "imageSrc": "/images/admin/staff-3-1782195051015.jpg"
+      "imageSrc": "/images/admin/staff-3-1782195051015.jpg",
+      "specialties": []
     },
     {
       "name": "やすい",
@@ -1151,6 +1152,14 @@
       "bio": "カラーとスパにはお任せください",
       "imageSrc": "/images/admin/staff-11-1782443986942.jpg",
       "history": "3年"
+    },
+    {
+      "name": "高木　太久馬",
+      "role": "アシスタント",
+      "salon": "Riv.by fleurami",
+      "bio": "笑顔で丁寧に頑張ります♪",
+      "imageSrc": "https://0oxripuo8b9stzsz.public.blob.vercel-storage.com/admin/staff-12-1784358659890.jpg",
+      "history": "美容師歴1年"
     }
   ],
   "recruit": {
