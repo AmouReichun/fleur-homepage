@@ -27,6 +27,17 @@ function loadConfig(): GenerateConfig {
   }
 }
 
+/** 管理画面で「非表示」または「削除」した instagram_id を収集 */
+function getIgnoredIds(): Set<string> {
+  try {
+    const raw = fs.readFileSync(path.join(process.cwd(), "data", "ig-ignored.json"), "utf-8");
+    const parsed = JSON.parse(raw);
+    return new Set(Array.isArray(parsed) ? parsed.map(String) : []);
+  } catch {
+    return new Set();
+  }
+}
+
 /** 既に処理済みの instagram_id をコンテンツファイルから収集 */
 function getProcessedIds(): Set<string> {
   const processed = new Set<string>();
@@ -82,7 +93,9 @@ async function main() {
   console.log(`  有効サロン: ${activeSalons.join(", ")}`);
 
   const processedIds = getProcessedIds();
-  console.log(`\n[daily-generate] 処理済みID: ${processedIds.size} 件`);
+  const ignoredIds = getIgnoredIds();
+  const skipIds = new Set(Array.from(processedIds).concat(Array.from(ignoredIds)));
+  console.log(`\n[daily-generate] スキップID: 処理済み ${processedIds.size} 件 + 非表示/削除済み ${ignoredIds.size} 件`);
 
   let generated = 0;
   let apiErrors = 0;
@@ -99,7 +112,7 @@ async function main() {
     }
 
     // まだ記事化されていない投稿を設定件数選ぶ
-    const newPosts = posts.filter((p) => !processedIds.has(p.id)).slice(0, config.perSalon);
+    const newPosts = posts.filter((p) => !skipIds.has(p.id)).slice(0, config.perSalon);
     if (newPosts.length === 0) {
       console.log("  新規投稿なし（全て処理済み）");
       continue;

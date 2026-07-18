@@ -6,6 +6,27 @@ import { revalidatePath } from 'next/cache'
 import matter from 'gray-matter'
 import { commitFile, getFileContent, deleteFile } from '@/lib/blog/github'
 
+const IGNORE_PATH = 'data/ig-ignored.json'
+
+async function addToIgnoredIds(igId: string): Promise<void> {
+  try {
+    const cur = await getFileContent(IGNORE_PATH)
+    let ids: string[] = []
+    if (cur) {
+      try {
+        const parsed = JSON.parse(cur.content)
+        if (Array.isArray(parsed)) ids = parsed.map(String)
+      } catch { ids = [] }
+    }
+    if (!ids.includes(igId)) {
+      ids.push(igId)
+      await commitFile(IGNORE_PATH, JSON.stringify(ids, null, 2), `ignore ig post (deleted article): ${igId}`, cur?.sha)
+    }
+  } catch {
+    // ig-ignored への追加失敗は致命的でないので無視
+  }
+}
+
 // 下書き／公開済み一覧のクライアント側 Router Cache を破棄して即時反映させる
 function revalidateAdminLists() {
   revalidatePath('/admin/blog')
@@ -123,10 +144,14 @@ export async function deleteArticle(
   slug: string,
 ): Promise<{ error?: string }> {
   try {
-    await deleteFile(
-      `content/${category}/${slug}.md`,
-      `delete draft: ${slug}`,
-    )
+    const ghPath = `content/${category}/${slug}.md`
+    const file = await getFileContent(ghPath)
+    if (file) {
+      const { data } = matter(file.content)
+      const igId = data.instagram_id as string | undefined
+      if (igId && igId.trim()) await addToIgnoredIds(igId.trim())
+    }
+    await deleteFile(ghPath, `delete draft: ${slug}`)
     revalidateAdminLists()
     return {}
   } catch (err) {
@@ -140,10 +165,14 @@ export async function bulkDeleteArticles(
   if (items.length === 0) return {}
   for (const { category, slug } of items) {
     try {
-      await deleteFile(
-        `content/${category}/${slug}.md`,
-        `delete draft: ${slug}`,
-      )
+      const ghPath = `content/${category}/${slug}.md`
+      const file = await getFileContent(ghPath)
+      if (file) {
+        const { data } = matter(file.content)
+        const igId = data.instagram_id as string | undefined
+        if (igId && igId.trim()) await addToIgnoredIds(igId.trim())
+      }
+      await deleteFile(ghPath, `delete draft: ${slug}`)
     } catch (err) {
       return { error: `「${slug}」の削除に失敗しました: ${String(err)}` }
     }
