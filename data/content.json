@@ -1520,13 +1520,23 @@
   },
   "news": [
     {
+      "id": "news-1784368948951",
+      "title": "【8月の営業日のお知らせ】🌿",
+      "body": "いつも fleurami をご利用いただき、誠にありがとうございます。\n\n8月の定休日は下記の通りです。\n\n✿ 毎週月曜日\n✿ 第1・第3火曜日\n\nご来店をご予定のお客様は、カレンダーをご確認のうえご予約ください。\n\n8月も皆さまのご来店をスタッフ一同、心よりお待ちしております✨",
+      "date": "2026-07-31",
+      "salon": "fleurami",
+      "imageSrc": "https://0oxripuo8b9stzsz.public.blob.vercel-storage.com/admin/news-news-1784368948951-1784368976819.png",
+      "gbpPostedAt": "2026-07-18T10:02:59.416Z",
+      "gbpPostName": "webhook:fleurami"
+    },
+    {
       "id": "news-1784368808639",
       "title": "【8月の営業日のお知らせ】🌿",
       "body": "いつもRiv. by  fleurami をご利用いただき、誠にありがとうございます。\n\n8月の定休日は下記の通りです。\n\n✿ 毎週月曜日\n✿ 第1・第3火曜日\n\nご来店をご予定のお客様は、カレンダーをご確認のうえご予約ください。\n\n8月も皆さまのご来店をスタッフ一同、心よりお待ちしております✨",
       "date": "2026-07-31",
       "salon": "riv",
       "imageSrc": "https://0oxripuo8b9stzsz.public.blob.vercel-storage.com/admin/news-news-1784368808639-1784368822468.png",
-      "gbpPostedAt": "2026-07-18T10:02:23.795Z",
+      "gbpPostedAt": "2026-07-18T10:02:59.449Z",
       "gbpPostName": "webhook:riv"
     },
     {
