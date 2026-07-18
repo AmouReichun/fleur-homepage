@@ -156,6 +156,30 @@ export async function postNewsToGbp(item: GbpPostInput & { salon?: string }): Pr
   return names.join(",");
 }
 
+async function addPhotoToGbpGallery(
+  accessToken: string,
+  locationResource: string,
+  imageUrl: string
+): Promise<void> {
+  const res = await fetch(`${API_BASE}/${locationResource}/media`, {
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${accessToken}`,
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      mediaFormat: "PHOTO",
+      sourceUrl: imageUrl,
+      locationAssociation: { category: "AT_WORK" },
+    }),
+  });
+  if (!res.ok) {
+    throw new Error(
+      `GBP media.create failed (${locationResource}): ${res.status} ${await res.text()}`
+    );
+  }
+}
+
 /**
  * ブログ記事を対象店舗のGBPに投稿する。
  * CTAは記事URLへのリンク。salonName は frontmatter の salon フィールド値（例: "Riv. by fleur ami"）。
@@ -175,6 +199,7 @@ export async function postBlogArticleToGbp(article: {
   if (locations.length === 0) return null;
 
   const articleUrl = `${SITE_ORIGIN}/blog/${article.category}/${article.slug}`;
+  const imageUrl = toAbsoluteUrl(article.thumbnail);
   const accessToken = await getAccessToken();
   const names: string[] = [];
   for (const loc of locations) {
@@ -185,6 +210,15 @@ export async function postBlogArticleToGbp(article: {
       url: articleUrl,
     });
     names.push(name);
+
+    // サムネイルをGBP写真ギャラリーにも追加（失敗しても投稿は止めない）
+    if (imageUrl) {
+      try {
+        await addPhotoToGbpGallery(accessToken, loc, imageUrl);
+      } catch (e) {
+        console.error(`  ⚠️  GBP 写真ギャラリー追加失敗 (${loc}): ${e instanceof Error ? e.message : String(e)}`);
+      }
+    }
   }
   return names.join(",");
 }
