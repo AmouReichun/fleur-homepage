@@ -17,11 +17,6 @@ const crumbs = [
   { name: "エリアから探す", url: `${BASE}/area` },
 ];
 
-const areaAccents: Record<string, string> = {
-  kochi: "#9C7B4A",
-  konan: "#7B9C4A",
-};
-
 export default function AreaHubPage() {
   return (
     <>
@@ -52,7 +47,6 @@ export default function AreaHubPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {AREAS.map((area) => {
               const services = servicesInArea(area);
-              const accent = areaAccents[area.slug] ?? "#9C7B4A";
               return (
                 <div key={area.slug} className="border border-site-greige rounded-lg overflow-hidden">
                   {/* エリアヘッダー */}
