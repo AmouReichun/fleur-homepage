@@ -12,6 +12,8 @@ const BASE = "https://fleur-group.jp";
 
 type Props = { params: { slug: string } };
 
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return getAllServiceSlugs().map((slug) => ({ slug }));
 }

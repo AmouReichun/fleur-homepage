@@ -8,6 +8,8 @@ import { breadcrumbSchema } from "@/lib/blog/structured-data";
 
 type Props = { params: { year: string; month: string } };
 
+export const dynamicParams = false;
+
 export async function generateStaticParams() {
   return getAvailableMonths("eyelash").map(({ year, month }) => ({ year, month }));
 }

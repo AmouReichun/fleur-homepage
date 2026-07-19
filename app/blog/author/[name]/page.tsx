@@ -7,6 +7,8 @@ import ArticleCard from "@/components/ArticleCard";
 
 type Props = { params: { name: string } };
 
+export const dynamicParams = false;
+
 export async function generateStaticParams() {
   // App Routerでは生（デコード済み）の値を返す。encodeすると二重エンコードで全404になる。
   return getAllAuthors().map((a) => ({ name: a.name }));

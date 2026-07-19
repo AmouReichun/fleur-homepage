@@ -17,6 +17,8 @@ const SALON_SCHEMA: Record<string, object> = {
 
 type Props = { params: { area: string; service: string } };
 
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return getAllAreaServiceParams();
 }

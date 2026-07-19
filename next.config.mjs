@@ -30,6 +30,12 @@ const nextConfig = {
         destination: "/blog/faq",
         permanent: true,
       },
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "www.fleur-group.jp" }],
+        destination: "https://fleur-group.jp/:path*",
+        permanent: true,
+      },
     ];
   },
   // 全ページ共通のセキュリティヘッダー。

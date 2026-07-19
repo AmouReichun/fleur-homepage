@@ -11,6 +11,8 @@ const BASE = "https://fleur-group.jp";
 
 type Props = { params: { area: string } };
 
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return AREAS.map((a) => ({ area: a.slug }));
 }

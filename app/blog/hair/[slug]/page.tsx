@@ -30,6 +30,8 @@ const woodBg = {
   `,
 };
 
+export const dynamicParams = false;
+
 export async function generateStaticParams() {
   return getSlugs("hair").map((slug) => ({ slug }));
 }

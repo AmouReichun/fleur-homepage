@@ -11,6 +11,8 @@ import { SALONS, salonKeyOf, relatedMenusFor, primaryServiceCrumb, autoLinkBody 
 
 type Props = { params: { slug: string } };
 
+export const dynamicParams = false;
+
 export async function generateStaticParams() {
   return getSlugs("eyelash").map((slug) => ({ slug }));
 }

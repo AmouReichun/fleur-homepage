@@ -11,6 +11,8 @@ const VALID_THROUGH = "2027-06-30";
 
 type Props = { params: { role: string } };
 
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return getAllRoleSlugs().map((role) => ({ role }));
 }
