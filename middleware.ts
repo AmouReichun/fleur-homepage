@@ -2,14 +2,6 @@ import { NextRequest, NextResponse } from "next/server";
 import { verifySessionToken } from "@/lib/admin-auth";
 
 export async function middleware(request: NextRequest) {
-  // www → non-www 301リダイレクト
-  const hostname = request.nextUrl.hostname;
-  if (hostname.startsWith("www.")) {
-    const url = request.nextUrl.clone();
-    url.hostname = hostname.slice(4);
-    return NextResponse.redirect(url, { status: 301 });
-  }
-
   const { pathname } = request.nextUrl;
 
   // Add pathname header for layout detection
