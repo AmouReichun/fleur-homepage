@@ -64,7 +64,7 @@ export async function postNewsToGbp(item: {
 }
 
 /**
- * ブログ記事を対象店舗のGBPに投稿する。
+ * ブログ記事を対象店舗のGBPに「最新情報（投稿）」として送る。
  * salonName は frontmatter の salon フィールド値（例: "Riv. by fleur ami"）。
  * 投稿成功時は "webhook:{salonKey}" を返す。未設定・対象なしは null。
  */
@@ -81,11 +81,40 @@ export async function postBlogArticleToGbp(article: {
   if (!salonKey) return null;
 
   await postToWebhook({
+    type: "post",
     salonKey,
     salonName: article.salonName,
     title: article.title,
     excerpt: article.excerpt,
     thumbnailUrl: toAbsoluteUrl(article.thumbnail),
+    articleUrl: `${SITE_ORIGIN}/blog/${article.category}/${article.slug}`,
+  });
+  return `webhook:${salonKey}`;
+}
+
+/**
+ * ブログ記事のサムネイル画像をGBP「写真」ギャラリーに投稿する。
+ * Make.com 側で type === "photo" のルートを設定してください。
+ */
+export async function postBlogPhotoToGbp(article: {
+  title: string;
+  thumbnail: string;
+  slug: string;
+  category: "hair" | "eyelash";
+  salonName: string;
+}): Promise<string | null> {
+  if (!isGbpConfigured()) return null;
+  const salonKey = salonNameToKey(article.salonName);
+  if (!salonKey) return null;
+  const sourceUrl = toAbsoluteUrl(article.thumbnail);
+  if (!sourceUrl) return null;
+
+  await postToWebhook({
+    type: "photo",
+    salonKey,
+    salonName: article.salonName,
+    sourceUrl,
+    description: article.title,
     articleUrl: `${SITE_ORIGIN}/blog/${article.category}/${article.slug}`,
   });
   return `webhook:${salonKey}`;

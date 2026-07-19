@@ -1,7 +1,8 @@
 /**
  * 毎日1回、各サロンの未送信ブログ記事を1件ずつ GBP に投稿するスクリプト。
+ *   - 「最新情報（テキスト投稿）」: 未送信記事を1件/サロン → data/gbp-posted.json で管理
+ *   - 「写真投稿」              : サムネイルのある未送信記事を1件/サロン → data/gbp-photos-posted.json で管理
  * GitHub Actions から実行される（gbp-daily-post.yml）。
- * 送信済みslugは data/gbp-posted.json に記録し、コミットして重複投稿を防ぐ。
  */
 import * as fs from "fs";
 import * as path from "path";
@@ -9,6 +10,7 @@ import matter from "gray-matter";
 
 const CONTENT_DIR = path.join(process.cwd(), "content");
 const POSTED_PATH = path.join(process.cwd(), "data", "gbp-posted.json");
+const PHOTOS_POSTED_PATH = path.join(process.cwd(), "data", "gbp-photos-posted.json");
 const SITE_ORIGIN = "https://fleur-group.jp";
 const WEBHOOK_URL = process.env.GBP_WEBHOOK_URL;
 
@@ -29,9 +31,9 @@ type Article = {
   date: string;
 };
 
-function getPostedSlugs(): Set<string> {
+function readSlugsSet(filePath: string): Set<string> {
   try {
-    const raw = fs.readFileSync(POSTED_PATH, "utf-8");
+    const raw = fs.readFileSync(filePath, "utf-8");
     const data = JSON.parse(raw);
     return new Set(Array.isArray(data) ? data.map(String) : []);
   } catch {
@@ -39,10 +41,10 @@ function getPostedSlugs(): Set<string> {
   }
 }
 
-function savePostedSlugs(slugs: Set<string>): void {
-  fs.mkdirSync(path.dirname(POSTED_PATH), { recursive: true });
+function writeSlugsSet(filePath: string, slugs: Set<string>): void {
+  fs.mkdirSync(path.dirname(filePath), { recursive: true });
   fs.writeFileSync(
-    POSTED_PATH,
+    filePath,
     JSON.stringify(Array.from(slugs).sort(), null, 2) + "\n",
   );
 }
@@ -86,11 +88,12 @@ function toAbsoluteUrl(src?: string): string | undefined {
   return `${SITE_ORIGIN}${src.startsWith("/") ? "" : "/"}${src}`;
 }
 
-async function postToGbp(article: Article): Promise<void> {
+async function postTextToGbp(article: Article): Promise<void> {
   const res = await fetch(WEBHOOK_URL!, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
+      type: "post",
       salonKey: article.salonKey,
       salonName: article.salonName,
       title: article.title,
@@ -104,58 +107,115 @@ async function postToGbp(article: Article): Promise<void> {
   }
 }
 
+async function postPhotoToGbp(article: Article): Promise<void> {
+  const sourceUrl = toAbsoluteUrl(article.thumbnail);
+  if (!sourceUrl) throw new Error("thumbnail なし");
+
+  const res = await fetch(WEBHOOK_URL!, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      type: "photo",
+      salonKey: article.salonKey,
+      salonName: article.salonName,
+      sourceUrl,
+      description: article.title,
+      articleUrl: `${SITE_ORIGIN}/blog/${article.category}/${article.slug}`,
+    }),
+  });
+  if (!res.ok) {
+    throw new Error(`Webhook エラー: ${res.status} ${await res.text()}`);
+  }
+}
+
+function groupBySalon(articles: Article[]): Record<string, Article[]> {
+  const map: Record<string, Article[]> = {};
+  for (const a of articles) {
+    if (!map[a.salonKey]) map[a.salonKey] = [];
+    map[a.salonKey].push(a);
+  }
+  return map;
+}
+
 async function main() {
   if (!WEBHOOK_URL) {
     console.log("[gbp-daily-post] GBP_WEBHOOK_URL が未設定のためスキップ");
     return;
   }
 
-  const postedSlugs = getPostedSlugs();
   const articles = collectPublishedArticles();
+  console.log(`[gbp-daily-post] 公開記事 ${articles.length} 件`);
 
-  console.log(
-    `[gbp-daily-post] 公開記事 ${articles.length} 件 / 投稿済み ${postedSlugs.size} 件`,
-  );
+  // ── テキスト投稿 ──────────────────────────────
+  const postedSlugs = readSlugsSet(POSTED_PATH);
+  console.log(`[text] 投稿済み ${postedSlugs.size} 件`);
+  let textPosted = 0;
 
-  // サロン別にグループ化
-  const bySalon: Record<string, Article[]> = {};
-  for (const a of articles) {
-    if (!bySalon[a.salonKey]) bySalon[a.salonKey] = [];
-    bySalon[a.salonKey].push(a);
-  }
-
-  let postedCount = 0;
-
-  for (const [salonKey, salonArticles] of Object.entries(bySalon)) {
-    // 未投稿を日付の古い順で並べ、最も古い1件を選ぶ
+  for (const [salonKey, salonArticles] of Object.entries(groupBySalon(articles))) {
     const unposted = salonArticles
       .filter((a) => !postedSlugs.has(a.slug))
       .sort((a, b) => (a.date < b.date ? -1 : 1));
 
     if (unposted.length === 0) {
-      console.log(`  [${salonKey}] 未投稿なし`);
+      console.log(`  [text][${salonKey}] 未投稿なし`);
       continue;
     }
 
     const target = unposted[0];
     try {
-      await postToGbp(target);
+      await postTextToGbp(target);
       postedSlugs.add(target.slug);
-      console.log(`  ✓ [${salonKey}] ${target.slug}`);
-      postedCount++;
+      console.log(`  ✓ [text][${salonKey}] ${target.slug}`);
+      textPosted++;
     } catch (e) {
       console.error(
-        `  ✗ [${salonKey}] ${target.slug} — ${e instanceof Error ? e.message : String(e)}`,
+        `  ✗ [text][${salonKey}] ${target.slug} — ${e instanceof Error ? e.message : String(e)}`,
       );
     }
   }
 
-  if (postedCount > 0) {
-    savePostedSlugs(postedSlugs);
-    console.log(`\n[gbp-daily-post] 完了: ${postedCount} 件を GBP に投稿`);
-  } else {
-    console.log("\n[gbp-daily-post] 新規投稿なし");
+  if (textPosted > 0) {
+    writeSlugsSet(POSTED_PATH, postedSlugs);
+    console.log(`[text] 完了: ${textPosted} 件投稿`);
   }
+
+  // ── 写真投稿 ──────────────────────────────────
+  const photoPostedSlugs = readSlugsSet(PHOTOS_POSTED_PATH);
+  console.log(`[photo] 投稿済み ${photoPostedSlugs.size} 件`);
+  let photoPosted = 0;
+
+  // サムネイルがある記事のみ対象
+  const articlesWithThumbnail = articles.filter((a) => !!a.thumbnail);
+
+  for (const [salonKey, salonArticles] of Object.entries(groupBySalon(articlesWithThumbnail))) {
+    const unposted = salonArticles
+      .filter((a) => !photoPostedSlugs.has(a.slug))
+      .sort((a, b) => (a.date < b.date ? -1 : 1));
+
+    if (unposted.length === 0) {
+      console.log(`  [photo][${salonKey}] 未投稿なし`);
+      continue;
+    }
+
+    const target = unposted[0];
+    try {
+      await postPhotoToGbp(target);
+      photoPostedSlugs.add(target.slug);
+      console.log(`  ✓ [photo][${salonKey}] ${target.slug}`);
+      photoPosted++;
+    } catch (e) {
+      console.error(
+        `  ✗ [photo][${salonKey}] ${target.slug} — ${e instanceof Error ? e.message : String(e)}`,
+      );
+    }
+  }
+
+  if (photoPosted > 0) {
+    writeSlugsSet(PHOTOS_POSTED_PATH, photoPostedSlugs);
+    console.log(`[photo] 完了: ${photoPosted} 件投稿`);
+  }
+
+  console.log(`\n[gbp-daily-post] 完了 — テキスト: ${textPosted}件 / 写真: ${photoPosted}件`);
 }
 
 main().catch((e) => {
