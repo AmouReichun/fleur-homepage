@@ -2,11 +2,11 @@ import { NextRequest, NextResponse } from "next/server";
 import { verifySessionToken } from "@/lib/admin-auth";
 
 export async function middleware(request: NextRequest) {
-  // www → non-www 301リダイレクト（Vercel CDNレイヤーを通過するためmiddlewareで処理）
-  const host = request.headers.get("host") ?? "";
-  if (host.startsWith("www.")) {
+  // www → non-www 301リダイレクト
+  const hostname = request.nextUrl.hostname;
+  if (hostname.startsWith("www.")) {
     const url = request.nextUrl.clone();
-    url.host = host.slice(4);
+    url.hostname = hostname.slice(4);
     return NextResponse.redirect(url, { status: 301 });
   }
 
