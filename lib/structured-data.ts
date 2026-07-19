@@ -261,6 +261,22 @@ export const faqPageSchema = {
   ],
 };
 
+export const webSiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "fleur GROUP",
+  url: "https://fleur-group.jp",
+  description: "高知市・香南市で美容室・アイラッシュサロンを3店舗展開するfleur GROUP。髪質改善・白髪ぼかし・縮毛矯正・まつげパーマ・眉毛WAX。",
+  potentialAction: {
+    "@type": "SearchAction",
+    target: {
+      "@type": "EntryPoint",
+      urlTemplate: "https://fleur-group.jp/blog/search?q={search_term_string}",
+    },
+    "query-input": "required name=search_term_string",
+  },
+};
+
 export function breadcrumbSchema(items: { name: string; url: string }[]) {
   return {
     "@context": "https://schema.org",

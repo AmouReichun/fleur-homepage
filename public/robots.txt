@@ -3,8 +3,14 @@ Allow: /
 Disallow: /admin/
 Disallow: /_next/static/
 
-# AI crawlers — explicitly allowed for AIO
+# AI crawlers — explicitly allowed for AIO (AI Overviews, AI Assistants)
 User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
 Allow: /
 
 User-agent: ClaudeBot
@@ -16,7 +22,28 @@ Allow: /
 User-agent: Google-Extended
 Allow: /
 
+User-agent: Googlebot
+Allow: /
+
 User-agent: Amazonbot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: Diffbot
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+User-agent: cohere-ai
 Allow: /
 
 Sitemap: https://fleur-group.jp/sitemap.xml

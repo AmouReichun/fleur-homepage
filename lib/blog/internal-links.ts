@@ -65,16 +65,16 @@ type ServiceDef = { kw: string[]; label: string; hub?: string; tag?: string };
 
 const HAIR_SERVICES: ServiceDef[] = [
   { kw: ["髪質改善"], label: "髪質改善", hub: "/blog/hair/kamiushitsu-kaizen", tag: "髪質改善" },
-  { kw: ["縮毛矯正"], label: "縮毛矯正", tag: "縮毛矯正" },
-  { kw: ["白髪ぼかし", "白髪"], label: "白髪ぼかし", tag: "白髪ぼかし" },
-  { kw: ["艶カラー", "ツヤカラー", "イヤリングカラー", "ハイライト", "グレイカラー"], label: "艶カラー", tag: "艶カラー" },
+  { kw: ["縮毛矯正"], label: "縮毛矯正", hub: "/blog/hair/shukumou-kyousei", tag: "縮毛矯正" },
+  { kw: ["白髪ぼかし", "白髪", "グレイカラー", "グレイヘア"], label: "白髪ぼかし", hub: "/blog/hair/shiraga-bokashi", tag: "白髪ぼかし" },
+  { kw: ["艶カラー", "ツヤカラー", "イヤリングカラー", "ハイライト"], label: "艶カラー", tag: "艶カラー" },
   { kw: ["切りっぱなしボブ", "ショートボブ", "ボブ"], label: "ボブスタイル", tag: "ボブ" },
   { kw: ["メンズ", "刈り上げ", "フェード"], label: "メンズスタイル", tag: "メンズ" },
   { kw: ["パーマ"], label: "パーマ", tag: "パーマ" },
 ];
 
 const EYE_SERVICES: ServiceDef[] = [
-  { kw: ["まつげパーマ", "まつ毛パーマ", "ラッシュリフト", "パリジェンヌ"], label: "まつげパーマ", tag: "まつげパーマ" },
+  { kw: ["まつげパーマ", "まつ毛パーマ", "ラッシュリフト", "パリジェンヌ"], label: "まつげパーマ", hub: "/blog/eyelash/matsuge-perm", tag: "まつげパーマ" },
   { kw: ["マツエク", "まつげエクステ", "まつエク", "エクステ", "束感", "エクパーマ", "LEDエクステ"], label: "まつげエクステ", tag: "まつげエクステ" },
   { kw: ["眉毛WAX", "眉WAX", "眉ワックス", "眉毛", "眉"], label: "眉毛WAX", tag: "眉毛WAX" },
 ];

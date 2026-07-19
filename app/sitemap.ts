@@ -39,7 +39,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/blog/hair/fleur-ami`, lastModified: now, changeFrequency: "weekly", priority: 0.8 },
     { url: `${BASE}/blog/hair/riv`, lastModified: now, changeFrequency: "weekly", priority: 0.8 },
     { url: `${BASE}/blog/hair/kamiushitsu-kaizen`, lastModified: now, changeFrequency: "monthly", priority: 0.85 },
+    { url: `${BASE}/blog/hair/shiraga-bokashi`, lastModified: now, changeFrequency: "monthly", priority: 0.85 },
+    { url: `${BASE}/blog/hair/shukumou-kyousei`, lastModified: now, changeFrequency: "monthly", priority: 0.85 },
     { url: `${BASE}/blog/eyelash/raffine`, lastModified: now, changeFrequency: "weekly", priority: 0.8 },
+    { url: `${BASE}/blog/eyelash/matsuge-perm`, lastModified: now, changeFrequency: "monthly", priority: 0.85 },
+    { url: `${BASE}/area`, lastModified: now, changeFrequency: "monthly", priority: 0.75 },
   ];
   const hairPosts = getAllPosts("hair");
   const eyelashPosts = getAllPosts("eyelash");

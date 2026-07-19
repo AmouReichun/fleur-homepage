@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { getContentCached } from "@/lib/content";
-import { organizationSchema, faqPageSchema } from "@/lib/structured-data";
+import { organizationSchema, faqPageSchema, webSiteSchema } from "@/lib/structured-data";
 import HeroSlideshow from "@/app/components/HeroSlideshow";
 import QuickLinkGrid from "@/app/components/QuickLinkGrid";
 import SalonSlider from "@/app/components/SalonSlider";
@@ -56,6 +56,7 @@ export default async function HomePage() {
 
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webSiteSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageSchema) }} />
 
