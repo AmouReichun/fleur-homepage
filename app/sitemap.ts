@@ -44,8 +44,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const hairPosts = getAllPosts("hair");
   const eyelashPosts = getAllPosts("eyelash");
   const blogPosts: MetadataRoute.Sitemap = [
-    ...hairPosts.map((p) => ({ url: `${BASE}/blog/hair/${p.slug}`, lastModified: new Date(p.date), changeFrequency: "monthly" as const, priority: 0.7 })),
-    ...eyelashPosts.map((p) => ({ url: `${BASE}/blog/eyelash/${p.slug}`, lastModified: new Date(p.date), changeFrequency: "monthly" as const, priority: 0.7 })),
+    ...hairPosts.map((p) => ({ url: `${BASE}/blog/hair/${p.slug}`, lastModified: new Date(p.updated || p.date), changeFrequency: "monthly" as const, priority: 0.7 })),
+    ...eyelashPosts.map((p) => ({ url: `${BASE}/blog/eyelash/${p.slug}`, lastModified: new Date(p.updated || p.date), changeFrequency: "monthly" as const, priority: 0.7 })),
   ];
   const blogTaxonomy: MetadataRoute.Sitemap = [
     ...getAllTags("hair").map((t) => ({ url: `${BASE}/blog/hair/tag/${encodeURIComponent(t)}`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.6 })),

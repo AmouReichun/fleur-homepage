@@ -1,19 +1,59 @@
+const BASE = "https://fleur-group.jp";
+
 export const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: "fleur GROUP",
-  url: "https://fleur-group.jp",
+  url: BASE,
+  logo: {
+    "@type": "ImageObject",
+    url: `${BASE}/icon.png`,
+    width: 512,
+    height: 512,
+  },
   description:
     "高知市・香南市で美容室2店舗（Riv.by fleurami・fleurami）、アイラッシュサロン1店舗（Raffine）を展開するグループ。",
   founder: {
     "@type": "Person",
     name: "今井 信人",
   },
-  areaServed: ["高知市", "香南市"],
+  areaServed: {
+    "@type": "State",
+    name: "高知県",
+  },
+  contactPoint: [
+    {
+      "@type": "ContactPoint",
+      telephone: "088-884-5566",
+      contactType: "customer service",
+      areaServed: "JP",
+      availableLanguage: "Japanese",
+      name: "Riv.by fleurami",
+    },
+    {
+      "@type": "ContactPoint",
+      telephone: "0887-56-5566",
+      contactType: "customer service",
+      areaServed: "JP",
+      availableLanguage: "Japanese",
+      name: "fleurami",
+    },
+    {
+      "@type": "ContactPoint",
+      telephone: "090-7120-5566",
+      contactType: "customer service",
+      areaServed: "JP",
+      availableLanguage: "Japanese",
+      name: "Raffine",
+    },
+  ],
   sameAs: [
     "https://beauty.hotpepper.jp/slnH000528388/",
     "https://beauty.hotpepper.jp/slnH000634137/",
     "https://beauty.hotpepper.jp/kr/slnH000767549/",
+    "https://www.instagram.com/fleurami_info",
+    "https://www.instagram.com/riv.kochi",
+    "https://www.instagram.com/raffine0815",
   ],
   hasOfferCatalog: {
     "@type": "OfferCatalog",
@@ -35,7 +75,8 @@ export const rivSalonSchema = {
   alternateName: "リヴ バイ フルールアミー",
   description:
     "高知市の美容室。髪質改善・白髪ぼかし・艶カラー・大人女性向けの似合わせカットが得意。",
-  url: "https://fleur-group.jp/salon/riv",
+  image: `${BASE}/images/admin/salon-riv-1782197568767.jpg`,
+  url: `${BASE}/salon/riv`,
   telephone: "088-884-5566",
   address: {
     "@type": "PostalAddress",
@@ -55,7 +96,7 @@ export const rivSalonSchema = {
   openingHoursSpecification: [
     {
       "@type": "OpeningHoursSpecification",
-      dayOfWeek: ["Wednesday", "Thursday", "Friday"],
+      dayOfWeek: ["Tuesday", "Wednesday", "Thursday", "Friday"],
       opens: "09:30",
       closes: "18:30",
     },
@@ -66,7 +107,10 @@ export const rivSalonSchema = {
       closes: "18:30",
     },
   ],
-  sameAs: ["https://beauty.hotpepper.jp/slnH000634137/"],
+  sameAs: [
+    "https://beauty.hotpepper.jp/slnH000634137/",
+    "https://www.instagram.com/riv.kochi",
+  ],
   parentOrganization: { "@type": "Organization", name: "fleur GROUP" },
 };
 
@@ -77,7 +121,8 @@ export const fleuramiSalonSchema = {
   alternateName: "フルールアミー",
   description:
     "香南市の美容室。縮毛矯正・髪質改善・艶カラー・カットが得意。",
-  url: "https://fleur-group.jp/salon/fleurami",
+  image: `${BASE}/images/admin/salon-fleurami-1782197558743.jpg`,
+  url: `${BASE}/salon/fleurami`,
   telephone: "0887-56-5566",
   address: {
     "@type": "PostalAddress",
@@ -97,7 +142,7 @@ export const fleuramiSalonSchema = {
   openingHoursSpecification: [
     {
       "@type": "OpeningHoursSpecification",
-      dayOfWeek: ["Wednesday", "Thursday", "Friday"],
+      dayOfWeek: ["Tuesday", "Wednesday", "Thursday", "Friday"],
       opens: "09:00",
       closes: "18:00",
     },
@@ -108,7 +153,10 @@ export const fleuramiSalonSchema = {
       closes: "18:00",
     },
   ],
-  sameAs: ["https://beauty.hotpepper.jp/slnH000528388/"],
+  sameAs: [
+    "https://beauty.hotpepper.jp/slnH000528388/",
+    "https://www.instagram.com/fleurami_info",
+  ],
   parentOrganization: { "@type": "Organization", name: "fleur GROUP" },
 };
 
@@ -119,13 +167,15 @@ export const raffineSalonSchema = {
   alternateName: "ラフィーネ",
   description:
     "高知市はりまや橋周辺のアイラッシュサロン。ラッシュリフト・まつげパーマ・韓国束感まつげ・眉毛WAX・メンズ眉WAXに対応。",
-  url: "https://fleur-group.jp/salon/raffine",
+  image: `${BASE}/images/admin/salon-raffine-1782206000346.JPG`,
+  url: `${BASE}/salon/raffine`,
   telephone: "090-7120-5566",
   address: {
     "@type": "PostalAddress",
     streetAddress: "はりまや町1-4-8 TNはりまやビル3F",
     addressLocality: "高知市",
     addressRegion: "高知県",
+    postalCode: "780-0822",
     addressCountry: "JP",
   },
   geo: {
@@ -149,7 +199,10 @@ export const raffineSalonSchema = {
       closes: "18:30",
     },
   ],
-  sameAs: ["https://beauty.hotpepper.jp/kr/slnH000767549/"],
+  sameAs: [
+    "https://beauty.hotpepper.jp/kr/slnH000767549/",
+    "https://www.instagram.com/raffine0815",
+  ],
   parentOrganization: { "@type": "Organization", name: "fleur GROUP" },
 };
 
