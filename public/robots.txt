@@ -1,10 +1,9 @@
 User-agent: *
 Allow: /
 Disallow: /admin/
-Disallow: /_next/static/
 Disallow: /blog/search
 
-# AI crawlers — explicitly allowed for AIO (AI Overviews, AI Assistants)
+# AI crawlers — explicitly allowed for AIO / AI Overviews
 User-agent: GPTBot
 Allow: /
 
@@ -25,7 +24,6 @@ Allow: /
 
 User-agent: Googlebot
 Allow: /
-Disallow: /_next/static/
 Disallow: /admin/
 
 User-agent: Amazonbot

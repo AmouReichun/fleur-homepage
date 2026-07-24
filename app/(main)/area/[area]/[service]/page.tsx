@@ -3,16 +3,16 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getContentCached, type SalonContent } from "@/lib/content";
 import { getAreaService, getAllAreaServiceParams } from "@/lib/areas";
-import { breadcrumbSchema, rivSalonSchema, fleuramiSalonSchema, raffineSalonSchema } from "@/lib/structured-data";
+import { breadcrumbSchema } from "@/lib/structured-data";
 import ReservationChannels from "@/app/components/ReservationChannels";
 import GoogleReviewCTA from "@/app/components/GoogleReviewCTA";
 
 const BASE = "https://fleur-group.jp";
 
-const SALON_SCHEMA: Record<string, object> = {
-  riv: rivSalonSchema,
-  fleurami: fleuramiSalonSchema,
-  raffine: raffineSalonSchema,
+const SALON_ADDRESSES: Record<string, { streetAddress: string; addressLocality: string; postalCode: string }> = {
+  riv: { streetAddress: "南川添9-21 フルールアミー3 2F", addressLocality: "高知市", postalCode: "781-0082" },
+  fleurami: { streetAddress: "野市町西野230", addressLocality: "香南市", postalCode: "781-5232" },
+  raffine: { streetAddress: "はりまや町1-4-8 TNはりまやビル3F", addressLocality: "高知市", postalCode: "780-0822" },
 };
 
 type Props = { params: { area: string; service: string } };
@@ -84,9 +84,16 @@ export default async function AreaServicePage({ params }: Props) {
     areaServed: { "@type": "City", name: area.name },
     provider: offerSalons.map((k) => ({
       "@type": svc.world === "eyelash" ? "BeautySalon" : "HairSalon",
+      "@id": `${BASE}/salon/${k}`,
       name: salons[k].name,
-      address: salons[k].address,
       telephone: salons[k].phone,
+      address: {
+        "@type": "PostalAddress",
+        ...(SALON_ADDRESSES[k] ?? {}),
+        addressRegion: "高知県",
+        addressCountry: "JP",
+      },
+      url: `${BASE}/salon/${k}`,
     })),
   };
 
@@ -95,9 +102,6 @@ export default async function AreaServicePage({ params }: Props) {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema(crumbs)) }} />
-      {offerSalons.filter((k) => SALON_SCHEMA[k]).map((k) => (
-        <script key={k} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SALON_SCHEMA[k]) }} />
-      ))}
 
       {/* ヘッダー */}
       <div className="bg-site-light py-10 sm:py-14">

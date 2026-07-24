@@ -32,12 +32,17 @@ export default function FaqPage() {
     }
   }
 
-  const allFaqs = [...hairFaqs, ...eyelashFaqs];
+  // HTML肥大化防止: クライアントに渡すデータを各カテゴリ最新100件に制限
+  const DISPLAY_LIMIT = 100;
+  const hairFaqsDisplay = hairFaqs.slice(0, DISPLAY_LIMIT);
+  const eyelashFaqsDisplay = eyelashFaqs.slice(0, DISPLAY_LIMIT);
+  const allFaqs = [...hairFaqsDisplay, ...eyelashFaqsDisplay];
 
+  const faqSchemaItems = allFaqs.slice(0, 100);
   const faqPageSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: allFaqs.map((f) => ({
+    mainEntity: faqSchemaItems.map((f) => ({
       "@type": "Question",
       name: f.q,
       acceptedAnswer: { "@type": "Answer", text: f.a },
@@ -91,13 +96,13 @@ export default function FaqPage() {
               スタイリスト・アイリストが詳しく回答しています。
             </p>
             <p className="text-xs text-hair-muted mt-3">
-              全 {allFaqs.length} 件（ヘア {hairFaqs.length}件 / アイラッシュ {eyelashFaqs.length}件）
+              全 {hairFaqs.length + eyelashFaqs.length} 件中 {allFaqs.length} 件を表示中（ヘア {hairFaqsDisplay.length}件 / アイラッシュ {eyelashFaqsDisplay.length}件）
             </p>
           </div>
         </div>
 
         {/* タブ + FAQリスト */}
-        <FaqTabs hairFaqs={hairFaqs} eyelashFaqs={eyelashFaqs} />
+        <FaqTabs hairFaqs={hairFaqsDisplay} eyelashFaqs={eyelashFaqsDisplay} />
       </div>
     </>
   );

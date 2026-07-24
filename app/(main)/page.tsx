@@ -210,8 +210,7 @@ export default async function HomePage() {
               高知で咲かせませんか。
             </h2>
             <p className="text-sm text-white/50 leading-loose mb-12 max-w-md">
-              美容師・アイリストとして、お客様の「なりたい」に<br />
-              真剣に向き合える環境を整えています。
+              美容師・アイリストとして、お客様の「なりたい」に真剣に向き合える環境を整えています。
             </p>
             <Link
               href="/recruit"
