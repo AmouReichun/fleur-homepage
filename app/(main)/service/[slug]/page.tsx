@@ -104,6 +104,13 @@ export default async function ServicePage({ params }: Props) {
             </div>
           )}
           <p className="text-sm sm:text-base text-site-text leading-loose">{svc.lead}</p>
+          {svc.body && svc.body.length > 0 && (
+            <div className="mt-6 space-y-4">
+              {svc.body.map((para, i) => (
+                <p key={i} className="text-sm text-site-text leading-loose">{para}</p>
+              ))}
+            </div>
+          )}
         </div>
       </section>
 

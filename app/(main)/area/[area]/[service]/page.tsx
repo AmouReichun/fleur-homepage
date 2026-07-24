@@ -135,6 +135,13 @@ export default async function AreaServicePage({ params }: Props) {
           <p className="text-sm sm:text-base text-site-text leading-loose">
             {area.name}で{svc.name}をお探しの方へ。{salonNames}では、{svc.name}を得意メニューとしてご提供しています。{svc.lead}
           </p>
+          {svc.body && svc.body.length > 0 && (
+            <div className="mt-6 space-y-4">
+              {svc.body.map((para, i) => (
+                <p key={i} className="text-sm text-site-text leading-loose">{para}</p>
+              ))}
+            </div>
+          )}
           <p className="text-center text-xs text-site-muted mt-6">
             メニュー全体の説明は
             <Link href={`/service/${svc.slug}`} className="text-site-accent underline underline-offset-2 mx-1">{svc.name}のページ</Link>
