@@ -140,6 +140,7 @@ export default function NewsTabs({
                 <img
                   src={item.imageSrc}
                   alt={item.title}
+                  loading="lazy"
                   className="w-full max-h-80 object-cover mb-4"
                 />
               )}

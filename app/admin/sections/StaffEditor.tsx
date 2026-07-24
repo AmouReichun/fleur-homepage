@@ -181,13 +181,15 @@ export default function StaffEditor({
 
             <TextField label="名前" value={member.name} onChange={(v) => update(index, "name", v)} />
             <TextField label="役職" value={member.role} onChange={(v) => update(index, "role", v)} placeholder="スタイリスト / アイリスト" />
-            <TextField label="サロン" value={member.salon} onChange={(v) => update(index, "salon", v)} placeholder="Riv.by fleurami" />
+            <TextField label="サロン" value={member.salon} onChange={(v) => update(index, "salon", v)} placeholder="Riv. by fleurami" />
             <TextField label="経歴" value={member.history ?? ""} onChange={(v) => update(index, "history", v)} placeholder="例: 経験15年" />
             <TextField label="紹介文" value={member.bio} onChange={(v) => update(index, "bio", v)} multiline rows={3} />
             <TextField label="Instagram URL" value={member.instagramUrl ?? ""} onChange={(v) => update(index, "instagramUrl", v)} placeholder="https://www.instagram.com/..." />
             <StringListField label="得意技術" values={member.specialties ?? []} onChange={(v) => updateArr(index, "specialties", v)} placeholder="例: 髪質改善" />
             <StringListField label="得意年代" values={member.ageGroups ?? []} onChange={(v) => updateArr(index, "ageGroups", v)} placeholder="例: 30代" />
             <StringListField label="得意スタイル" values={member.styles ?? []} onChange={(v) => updateArr(index, "styles", v)} placeholder="例: ショートボブ" />
+            <StringListField label="資格・認定" values={member.qualifications ?? []} onChange={(v) => updateArr(index, "qualifications", v)} placeholder="例: 美容師免許 / ヘアカラーリスト認定" />
+            <StringListField label="受賞歴" values={member.awards ?? []} onChange={(v) => updateArr(index, "awards", v)} placeholder="例: ブリーチ部門 高知地区1位" />
             <ImageUpload
               label="写真"
               value={member.imageSrc}

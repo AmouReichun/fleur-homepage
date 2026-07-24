@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     template: "%s | fleur GROUP",
   },
   description:
-    "高知市・香南市で美容室2店舗（Riv.by fleurami・fleurami）、アイラッシュサロン1店舗（Raffine）を展開するfleur GROUP。髪質改善・白髪ぼかし・縮毛矯正・まつげパーマ・眉毛WAXなど幅広いメニューをご用意しています。",
+    "高知市・香南市で美容室2店舗（Riv. by fleurami・fleurami）、アイラッシュサロン1店舗（Raffine）を展開するfleur GROUP。髪質改善・白髪ぼかし・縮毛矯正・まつげパーマ・眉毛WAXなど幅広いメニューをご用意しています。",
   keywords: [
     "高知 美容室",
     "高知県 美容室",
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
     "縮毛矯正 香南市",
     "fleurami",
     "Raffine",
-    "Riv.by fleurami",
+    "Riv. by fleurami",
   ],
   alternates: {
     canonical: BASE_URL,

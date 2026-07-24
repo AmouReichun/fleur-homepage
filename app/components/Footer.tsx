@@ -15,7 +15,7 @@ const salons = [
   },
   {
     key: "riv",
-    name: "Riv.by fleurami",
+    name: "Riv. by fleurami",
     area: "高知県高知市",
     href: "/salon/riv",
     hotpepperUrl: "https://beauty.hotpepper.jp/slnH000634137/",

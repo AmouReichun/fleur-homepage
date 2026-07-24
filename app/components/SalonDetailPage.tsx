@@ -1,14 +1,66 @@
 import Link from "next/link";
 import { getContentCached } from "@/lib/content";
+import { salonFaqPageSchema } from "@/lib/structured-data";
 import SalonBlogLinks from "@/app/components/SalonBlogLinks";
 import ReservationChannels from "@/app/components/ReservationChannels";
 import GoogleReviewCTA from "@/app/components/GoogleReviewCTA";
 
 const SALON_LABELS: Record<string, string> = {
-  riv: "Riv.by fleurami（高知市）",
+  riv: "Riv. by fleurami（高知市）",
   fleurami: "fleurami（香南市）",
   raffine: "Raffine（高知市 はりまや橋）",
 };
+
+const RATINGS: Record<string, { rating: number; count: number }> = {
+  riv:      { rating: 4.65, count: 674 },
+  fleurami: { rating: 4.67, count: 388 },
+  raffine:  { rating: 4.82, count: 200 },
+};
+
+function StarDisplay({ salonKey }: { salonKey: string }) {
+  const r = RATINGS[salonKey];
+  if (!r) return null;
+  const full = Math.floor(r.rating);
+  const half = r.rating - full >= 0.3;
+  const gold = "#B8956A";
+  const light = "#E0D8CE";
+  return (
+    <div
+      className="flex items-center gap-2 mt-2"
+      itemScope
+      itemType="https://schema.org/AggregateRating"
+    >
+      <meta itemProp="ratingValue" content={String(r.rating)} />
+      <meta itemProp="reviewCount" content={String(r.count)} />
+      <meta itemProp="bestRating" content="5" />
+      <meta itemProp="worstRating" content="1" />
+      <div className="flex items-center gap-0.5" aria-label={`${r.rating}点満点5点`}>
+        {Array.from({ length: 5 }).map((_, i) => {
+          const isFull = i < full;
+          const isHalf = !isFull && i === full && half;
+          return (
+            <svg key={i} width="14" height="14" viewBox="0 0 24 24" aria-hidden="true">
+              {isHalf && (
+                <defs>
+                  <linearGradient id={`hg-${salonKey}-${i}`} x1="0" x2="1" y1="0" y2="0">
+                    <stop offset="55%" stopColor={gold} />
+                    <stop offset="55%" stopColor={light} />
+                  </linearGradient>
+                </defs>
+              )}
+              <path
+                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                fill={isFull ? gold : isHalf ? `url(#hg-${salonKey}-${i})` : light}
+              />
+            </svg>
+          );
+        })}
+      </div>
+      <span className="text-sm font-medium" style={{ color: gold }}>{r.rating}</span>
+      <span className="text-xs text-site-muted">（{r.count.toLocaleString()}件 Google口コミ）</span>
+    </div>
+  );
+}
 
 export default async function SalonDetailPage({ salonKey }: { salonKey: string }) {
   const content = await getContentCached();
@@ -17,7 +69,7 @@ export default async function SalonDetailPage({ salonKey }: { salonKey: string }
   const otherSalons = content.salonOrder.filter((k) => k !== salonKey);
 
   // この店舗のスタッフ（既存データから抽出）
-  const STAFF_SALON: Record<string, string> = { riv: "Riv.by fleurami", fleurami: "fleurami", raffine: "Raffine" };
+  const STAFF_SALON: Record<string, string> = { riv: "Riv. by fleurami", fleurami: "fleurami", raffine: "Raffine" };
   const salonStaff = (content.staff ?? []).filter((m) => m.salon === STAFF_SALON[salonKey]).slice(0, 6);
 
   // 悩み別導線（AIO：悩み→対応メニュー）。service があればサービスページへ内部リンク。
@@ -58,16 +110,19 @@ export default async function SalonDetailPage({ salonKey }: { salonKey: string }
           <p className="text-xs tracking-[0.3em] text-site-accent mb-2 uppercase">{salon.area} / {salon.salonType}</p>
           <h1 className="font-serif text-3xl sm:text-4xl font-semibold text-site-text mb-1">{salon.name}</h1>
           {salon.nameReading && (
-            <p className="text-xs text-site-muted tracking-widest">{salon.nameReading}</p>
+            <p className="text-xs text-site-muted tracking-widest mb-1">{salon.nameReading}</p>
           )}
+          <StarDisplay salonKey={salonKey} />
         </div>
       </div>
 
-      {/* 写真 */}
+      {/* 写真 — 固定高さdivでCLSをゼロに */}
       {salon.imageSrc && (
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={salon.imageSrc} alt={salon.name} className="w-full h-64 sm:h-96 object-cover" />
+          <div className="w-full h-64 sm:h-96 overflow-hidden">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={salon.imageSrc} alt={`${salon.name}（${salon.area}の${salon.salonType}）外観・内装`} loading="eager" className="w-full h-full object-cover" />
+          </div>
         </div>
       )}
 
@@ -161,6 +216,14 @@ export default async function SalonDetailPage({ salonKey }: { salonKey: string }
             )}
           </div>
         </section>
+      )}
+
+      {/* FAQPage 構造化データ */}
+      {salon.faq.length > 0 && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(salonFaqPageSchema(salon.faq)) }}
+        />
       )}
 
       {/* FAQ */}

@@ -3,7 +3,7 @@ import * as fs from "fs";
 import * as path from "path";
 import Anthropic from "@anthropic-ai/sdk";
 import { IgMedia } from "./fetch-instagram";
-import { checkNgWords } from "../lib/blog/ng-words";
+import { checkNgWords, autoFixNgWords } from "../lib/blog/ng-words";
 import { buildBasePrompt, JSON_INSTRUCTION, AREA_BY_NAME } from "../lib/blog/article-prompt";
 
 dotenv.config({ path: ".env.local" });
@@ -200,6 +200,14 @@ export async function generateArticle(media: IgMedia): Promise<GeneratedArticle 
 
   if (!parsed) return null;
 
+  // NG語を安全な表現に自動置換してからチェック
+  parsed.title          = autoFixNgWords(parsed.title);
+  parsed.excerpt        = autoFixNgWords(parsed.excerpt);
+  parsed.question       = autoFixNgWords(parsed.question);
+  parsed.answer_summary = autoFixNgWords(parsed.answer_summary);
+  parsed.body           = autoFixNgWords(parsed.body);
+  parsed.faq = parsed.faq.map((f) => ({ q: autoFixNgWords(f.q), a: autoFixNgWords(f.a) }));
+
   const fullText = [parsed.title, parsed.excerpt, parsed.answer_summary, parsed.body, ...parsed.faq.map((f) => f.q + f.a)].join(" ");
   const ngWords = checkNgWords(fullText);
 
@@ -322,6 +330,14 @@ ${JSON_INSTRUCTION}`;
     catch { if (attempt === 3) return null; }
   }
   if (!parsed) return null;
+
+  // NG語を安全な表現に自動置換してからチェック
+  parsed.title          = autoFixNgWords(parsed.title);
+  parsed.excerpt        = autoFixNgWords(parsed.excerpt);
+  parsed.question       = autoFixNgWords(parsed.question);
+  parsed.answer_summary = autoFixNgWords(parsed.answer_summary);
+  parsed.body           = autoFixNgWords(parsed.body);
+  parsed.faq = parsed.faq.map((f) => ({ q: autoFixNgWords(f.q), a: autoFixNgWords(f.a) }));
 
   const fullText = [parsed.title, parsed.excerpt, parsed.answer_summary, parsed.body, ...parsed.faq.map((f) => f.q + f.a)].join(" ");
   const ngWords = checkNgWords(fullText);

@@ -6,7 +6,7 @@ import { organizationSchema, breadcrumbSchema } from "@/lib/structured-data";
 export const metadata: Metadata = {
   title: "会社概要",
   description:
-    "fleur GROUPの会社概要。高知市・香南市で美容室・アイラッシュサロンを展開するグループの企業情報をご覧いただけます。",
+    "fleur GROUPの会社概要。2006年設立の株式会社フルール・アミーと株式会社フルール・ロータスが運営する高知県の美容室・アイラッシュサロングループ。代表：今井信人。高知市・香南市で3店舗を展開中。",
   alternates: { canonical: "https://fleur-group.jp/company" },
 };
 
@@ -69,7 +69,7 @@ export default async function CompanyPage() {
           <h2 className="font-serif text-2xl font-semibold text-site-text mb-6">グループについて</h2>
           <div className="prose max-w-none text-sm text-site-muted leading-loose space-y-4">
             <p>
-              fleur GROUPは、高知市・香南市で美容室2店舗（Riv.by fleurami・fleurami）とアイラッシュサロン1店舗（Raffine）を運営するグループです。
+              fleur GROUPは、高知市・香南市で美容室2店舗（Riv. by fleurami・fleurami）とアイラッシュサロン1店舗（Raffine）を運営するグループです。
             </p>
             <p>
               「髪と目元の悩みに寄り添い、毎日が扱いやすく、自分らしく綺麗でいられる」ことをコンセプトに、お客様一人ひとりに合わせたデザインをご提案しています。

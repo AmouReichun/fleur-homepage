@@ -8,7 +8,7 @@ const BASE = "https://fleur-group.jp";
 export const metadata: Metadata = {
   title: "エリアから探す｜高知市・香南市の美容室・アイラッシュサロン fleur GROUP",
   description:
-    "高知市・香南市でfleur GROUPのサロンを探す。高知市（Riv.by fleurami・Raffine）・香南市（fleurami）のエリア別メニュー一覧と予約案内。",
+    "高知市・香南市でfleur GROUPのサロンを探す。高知市（Riv. by fleurami・Raffine）・香南市（fleurami）のエリア別メニュー一覧と予約案内。",
   alternates: { canonical: `${BASE}/area` },
 };
 
@@ -97,7 +97,7 @@ export default function AreaHubPage() {
             <div className="flex flex-wrap gap-4 justify-center">
               {[
                 { href: "/salon/fleurami", name: "fleurami（香南市）" },
-                { href: "/salon/riv", name: "Riv.by fleurami（高知市）" },
+                { href: "/salon/riv", name: "Riv. by fleurami（高知市）" },
                 { href: "/salon/raffine", name: "Raffine（高知市）" },
               ].map((s) => (
                 <Link

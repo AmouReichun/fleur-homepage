@@ -7,7 +7,7 @@ import SalonReserveIcons from "@/app/components/SalonReserveIcons";
 export const metadata: Metadata = {
   title: "店舗案内",
   description:
-    "fleur GROUPは高知市・香南市で美容室2店舗（Riv.by fleurami・fleurami）とアイラッシュサロン1店舗（Raffine）を展開しています。",
+    "高知市・香南市のfleur GROUP 3店舗をご案内。美容室「fleurami」（香南市）「Riv. by fleurami」（高知市）、アイラッシュサロン「Raffine」（高知市はりまや橋）。メニュー・アクセス・予約はこちら。",
   alternates: { canonical: "https://fleur-group.jp/salon" },
 };
 
@@ -121,7 +121,7 @@ export default async function SalonListPage() {
                       <div className="lg:w-5/12 bg-site-light flex items-center justify-center min-h-[240px]">
                         {salon.imageSrc ? (
                           // eslint-disable-next-line @next/next/no-img-element
-                          <img src={salon.imageSrc} alt={salon.name} className="w-full h-full object-cover" />
+                          <img src={salon.imageSrc} alt={`${salon.name}（${salon.area}の${salon.salonType}）`} className="w-full h-full object-cover" />
                         ) : (
                           <span className="text-site-muted text-sm">[店舗写真]</span>
                         )}

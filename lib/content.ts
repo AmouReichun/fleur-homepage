@@ -85,6 +85,8 @@ export interface StaffMember {
   ageGroups?: string[]; // 得意年代
   styles?: string[]; // 得意スタイル
   instagramUrl?: string; // InstagramプロフィールURL
+  qualifications?: string[]; // 資格・認定（例: "美容師免許", "ヘアカラーリスト認定"）
+  awards?: string[]; // 受賞歴（例: "ブリーチ部門 高知地区1位"）
 }
 
 export interface RecruitPosition {

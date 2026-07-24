@@ -36,7 +36,7 @@ jobs:
           from datetime import datetime, timezone, timedelta
 
           config_path = "config/auto-publish.json"
-          defaults = {"enabled": True, "publishHourJST": 12, "articlesPerSalon": 1}
+          defaults = {"enabled": True, "publishHourJST": 12, "articlesPerSalon": 1, "publishDaysOfWeek": [2, 5]}
 
           try:
               with open(config_path) as f:
@@ -48,20 +48,38 @@ jobs:
           target_hour = int(cfg.get("publishHourJST", 12))
 
           jst = timezone(timedelta(hours=9))
-          current_hour = datetime.now(jst).hour
+          now_jst = datetime.now(jst)
+          current_hour = now_jst.hour
+
+          # Python weekday(): 0=月〜6=日 → config day: 0=日,1=月,...,6=土
+          # 変換式: (weekday + 1) % 7
+          today_config_day = (now_jst.weekday() + 1) % 7
+          days_filter = cfg.get("publishDaysOfWeek")
 
           # workflow_dispatch は常に実行。schedule は遅延を考慮し「目標時刻以降」なら実行
           event = os.environ.get("GITHUB_EVENT_NAME", "")
-          skip = not enabled or (current_hour < target_hour and event != "workflow_dispatch")
+          is_dispatch = event == "workflow_dispatch"
+
+          skip_reason = None
+          if not enabled:
+              skip_reason = "無効"
+          elif current_hour < target_hour and not is_dispatch:
+              skip_reason = f"目標時刻前 ({current_hour}時 < {target_hour}時 JST)"
+          elif days_filter and today_config_day not in days_filter and not is_dispatch:
+              day_names = ["日", "月", "火", "水", "木", "金", "土"]
+              allowed = "・".join(day_names[d] for d in days_filter)
+              skip_reason = f"本日({day_names[today_config_day]}曜)は公開日外 (設定: {allowed}曜)"
+
+          skip = skip_reason is not None
 
           with open(os.environ["GITHUB_OUTPUT"], "a") as out:
               out.write(f"skip={'true' if skip else 'false'}\n")
 
           if skip:
-              reason = "無効" if not enabled else f"目標時刻前 ({current_hour}時 < {target_hour}時 JST)"
-              print(f"スキップ: {reason}")
+              print(f"スキップ: {skip_reason}")
           else:
-              print(f"実行: {current_hour}時 JST (設定: {target_hour}時 JST, {cfg['articlesPerSalon']}件/サロン)")
+              day_names = ["日", "月", "火", "水", "木", "金", "土"]
+              print(f"実行: {current_hour}時 JST ({day_names[today_config_day]}曜, {cfg['articlesPerSalon']}件/サロン)")
           PYEOF
 
       - name: Setup Node.js

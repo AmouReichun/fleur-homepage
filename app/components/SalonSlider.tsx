@@ -68,7 +68,7 @@ export default function SalonSlider({ salons }: { salons: SalonSlide[] }) {
           className="flex transition-transform duration-600 ease-in-out"
           style={{ transform: `translateX(-${current * 100}%)` }}
         >
-          {salons.map((s) => (
+          {salons.map((s, i) => (
             <div key={s.key} className="min-w-full flex flex-col md:flex-row">
               {/* 画像 */}
               <div className="md:w-[58%] overflow-hidden bg-site-light">
@@ -77,8 +77,9 @@ export default function SalonSlider({ salons }: { salons: SalonSlide[] }) {
                     // eslint-disable-next-line @next/next/no-img-element
                     <img
                       src={s.imageSrc}
-                      alt={s.name}
+                      alt={`${s.name}（${s.area}の${s.salonType}）`}
                       className="w-full h-full object-cover"
+                      loading={i === 0 ? "eager" : "lazy"}
                     />
                   ) : (
                     <div className="w-full h-full flex items-center justify-center">

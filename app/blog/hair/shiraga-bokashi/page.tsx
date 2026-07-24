@@ -4,9 +4,9 @@ import { getAllPosts } from "@/lib/blog/posts";
 import ArticleCard from "@/components/ArticleCard";
 
 export const metadata: Metadata = {
-  title: "白髪ぼかし・グレイカラー 高知｜fleurami・Riv.by fleurami",
+  title: "白髪ぼかし・グレイカラー 高知｜fleurami・Riv. by fleurami",
   description:
-    "高知市・香南市で白髪ぼかし（グレイカラー）が受けられる美容室。染めずに活かすグレイヘアへのシフト、白髪を馴染ませるイルミナカラー・ハイライトで自然な仕上がりに。香南市のfleurami・高知市のRiv.by fleuramiが対応。",
+    "高知市・香南市で白髪ぼかし（グレイカラー）が受けられる美容室。染めずに活かすグレイヘアへのシフト、白髪を馴染ませるイルミナカラー・ハイライトで自然な仕上がりに。香南市のfleurami・高知市のRiv. by fleuramiが対応。",
   alternates: { canonical: "/blog/hair/shiraga-bokashi" },
   keywords: [
     "白髪ぼかし 高知",
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
 const faq = [
   {
     q: "高知市で白髪ぼかしができる美容室は？",
-    a: "高知市南川添のRiv.by fleurami（TEL 088-884-5566）が白髪ぼかしに対応しています。白髪を染めず、ハイライトやグレイカラーで自然に馴染ませるメニューをご用意しています。",
+    a: "高知市南川添のRiv. by fleurami（TEL 088-884-5566）が白髪ぼかしに対応しています。白髪を染めず、ハイライトやグレイカラーで自然に馴染ませるメニューをご用意しています。",
   },
   {
     q: "香南市で白髪ぼかしを得意とする美容院は？",
@@ -47,7 +47,7 @@ const faq = [
 const pageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "白髪ぼかし・グレイカラー 高知｜fleurami・Riv.by fleurami",
+  name: "白髪ぼかし・グレイカラー 高知｜fleurami・Riv. by fleurami",
   description: "高知市・香南市で白髪ぼかし（グレイカラー）が受けられる美容室。",
   url: "https://fleur-group.jp/blog/hair/shiraga-bokashi",
   breadcrumb: {
@@ -93,7 +93,7 @@ export default function ShiragaBokashiPage() {
           <div className="flex items-center gap-2 mb-5">
             <span className="w-1 h-1 rounded-full" style={{ background: accent }} />
             <span className="text-xs tracking-[0.2em] font-cormorant" style={{ color: accent }}>
-              fleurami &amp; Riv.by fleurami — White Hair Solution
+              fleurami &amp; Riv. by fleurami — White Hair Solution
             </span>
             <span className="w-1 h-1 rounded-full" style={{ background: accent }} />
           </div>
@@ -195,7 +195,7 @@ export default function ShiragaBokashiPage() {
 
             <div className="bg-white/70 border border-hair-border p-6" style={{ borderRadius: "4px" }}>
               <p className="text-xs tracking-[0.2em] font-cormorant mb-1 uppercase" style={{ color: accent }}>高知市</p>
-              <h3 className="font-mincho text-lg text-hair-text mb-3">Riv.by fleurami</h3>
+              <h3 className="font-mincho text-lg text-hair-text mb-3">Riv. by fleurami</h3>
               <ul className="space-y-1.5 text-xs text-hair-muted mb-5">
                 <li>📍 高知県高知市南川添9-21 2F</li>
                 <li>📞 088-884-5566</li>

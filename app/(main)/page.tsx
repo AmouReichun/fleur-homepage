@@ -1,6 +1,12 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  description:
+    "高知市・香南市の美容室（Riv. by fleurami・fleurami）とアイラッシュサロン（Raffine）。髪質改善・縮毛矯正・白髪ぼかし・まつ毛パーマ・眉毛WAXが得意。地元で選ばれ続けるサロングループ。Web・LINE予約受付中。",
+};
 import { getContentCached } from "@/lib/content";
-import { organizationSchema, faqPageSchema, webSiteSchema } from "@/lib/structured-data";
+import { organizationSchema, faqPageSchema, webSiteSchema, rivSalonSchema, fleuramiSalonSchema, raffineSalonSchema } from "@/lib/structured-data";
 import HeroSlideshow from "@/app/components/HeroSlideshow";
 import QuickLinkGrid from "@/app/components/QuickLinkGrid";
 import SalonSlider from "@/app/components/SalonSlider";
@@ -59,6 +65,9 @@ export default async function HomePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webSiteSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(rivSalonSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(fleuramiSalonSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(raffineSalonSchema) }} />
 
       {/* ─── Hero ─── */}
       <HeroSlideshow images={heroImages} hasImage={hasImage}>
@@ -89,6 +98,11 @@ export default async function HomePage() {
       <section className="py-24 sm:py-36 bg-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
           <SectionLabel index="01" en="Salon" ja="店舗案内" />
+          <Reveal delay={80} className="-mt-8 mb-12 sm:mb-16">
+            <p className="text-sm text-site-muted max-w-xl leading-relaxed">
+              高知市（Riv. by fleurami・Raffine）と香南市（fleurami）で3店舗を展開。髪質改善・縮毛矯正・白髪ぼかし・まつ毛パーマ・眉毛WAXをご提供しています。
+            </p>
+          </Reveal>
         </div>
         <Reveal delay={150}>
           <SalonSlider salons={salons} />

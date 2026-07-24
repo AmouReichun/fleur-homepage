@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { rivSalonSchema, breadcrumbSchema } from "@/lib/structured-data";
 import SalonDetailPage from "@/app/components/SalonDetailPage";
 
-const TITLE = "Riv.by fleurami | 高知市の美容室 - 髪質改善・白髪ぼかし";
-const DESC = "高知市の美容室「Riv.by fleurami」。髪質改善・白髪ぼかし・艶カラー・大人女性向けの似合わせカットが得意。";
+const TITLE = "Riv. by fleurami | 高知市の美容室 - 髪質改善・白髪ぼかし";
+const DESC = "高知市南川添の美容室「Riv. by fleurami」。髪質改善・白髪ぼかしハイライト・縮毛矯正が得意な大人女性向けサロン。丁寧なカウンセリングで毎日扱いやすいスタイルをご提案。駐車場5台完備。Web・LINE予約受付中。";
 const OG_IMG = "/images/admin/salon-riv-1782197568767.jpg";
 
 export const metadata: Metadata = {
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 const crumbs = [
   { name: "ホーム", url: "https://fleur-group.jp" },
   { name: "店舗案内", url: "https://fleur-group.jp/salon" },
-  { name: "Riv.by fleurami", url: "https://fleur-group.jp/salon/riv" },
+  { name: "Riv. by fleurami", url: "https://fleur-group.jp/salon/riv" },
 ];
 
 export default function RivPage() {

@@ -3,7 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getContentCached, type SalonContent } from "@/lib/content";
 import { AREAS, getArea, servicesInArea } from "@/lib/areas";
-import { breadcrumbSchema } from "@/lib/structured-data";
+import { breadcrumbSchema, salonFaqPageSchema } from "@/lib/structured-data";
 import ReservationChannels from "@/app/components/ReservationChannels";
 import GoogleReviewCTA from "@/app/components/GoogleReviewCTA";
 
@@ -48,6 +48,9 @@ export default async function AreaPage({ params }: Props) {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema(crumbs)) }} />
+      {area.faq && area.faq.length > 0 && (
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(salonFaqPageSchema(area.faq)) }} />
+      )}
 
       <div className="bg-site-light py-10 sm:py-14">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
@@ -110,6 +113,25 @@ export default async function AreaPage({ params }: Props) {
           />
         </div>
       </section>
+
+      {/* よくある質問 */}
+      {area.faq && area.faq.length > 0 && (
+        <section className="py-12 sm:py-16 bg-white border-t border-site-greige">
+          <div className="max-w-3xl mx-auto px-4 sm:px-6">
+            <h2 className="font-serif text-2xl sm:text-3xl font-semibold text-site-text mb-8 text-center">
+              {area.name}のよくある質問
+            </h2>
+            <dl className="space-y-4">
+              {area.faq.map((item, i) => (
+                <div key={i} className="border border-site-greige p-5">
+                  <dt className="text-sm font-medium text-site-text mb-2">Q. {item.q}</dt>
+                  <dd className="text-sm text-site-muted leading-relaxed">A. {item.a}</dd>
+                </div>
+              ))}
+            </dl>
+          </div>
+        </section>
+      )}
 
       <GoogleReviewCTA salonKeys={areaSalonKeys} />
     </>

@@ -11,7 +11,7 @@ import StatNumber from "@/app/components/recruit/StatNumber";
 export const metadata: Metadata = {
   title: "採用情報 | 高知市・香南市の美容師・アイリスト求人 - fleur GROUP",
   description:
-    "高知市・香南市で美容師・アイリストを募集中。香南市の美容室fleurami、高知市の美容室Riv.by fleurami、高知市のまつげサロンRaffine。髪質改善・白髪ぼかし・まつげパーマなど技術が学べる職場。美容学生・20代美容師・アイリスト・転職希望者歓迎。サロン見学だけでもOK。",
+    "高知市・香南市で美容師・アイリストを募集中。香南市の美容室fleurami、高知市の美容室Riv. by fleurami、高知市のまつげサロンRaffine。髪質改善・白髪ぼかし・まつげパーマなど技術が学べる職場。美容学生・20代美容師・アイリスト・転職希望者歓迎。サロン見学だけでもOK。",
   alternates: { canonical: "https://fleur-group.jp/recruit" },
   openGraph: {
     title: "「ここで働きたい」と思える職場へ | fleur GROUP 採用情報",
@@ -37,7 +37,7 @@ const DEFAULT_ABOUT_LEAD =
 
 const DEFAULT_BRANDS = [
   { key: "fleurami", name: "fleurami", area: "香南市", type: "美容室", copy: "美容師として、もっと\n好きな仕事を楽しめる場所。", strengths: ["髪質改善", "カット", "艶カラー", "地域密着"], image: "/images/admin/salon-fleurami-1782197558743.jpg", instagram: "https://www.instagram.com/fleurami_info" },
-  { key: "riv", name: "Riv.by fleurami", area: "高知市", type: "美容室", copy: "大人女性に支持される技術を、\nあなたの強みに。", strengths: ["白髪ぼかし", "髪質改善", "艶カラー", "大人女性向け"], image: "/images/admin/salon-riv-1782197568767.jpg", instagram: "https://www.instagram.com/riv.kochi" },
+  { key: "riv", name: "Riv. by fleurami", area: "高知市", type: "美容室", copy: "大人女性に支持される技術を、\nあなたの強みに。", strengths: ["白髪ぼかし", "髪質改善", "艶カラー", "大人女性向け"], image: "/images/admin/salon-riv-1782197568767.jpg", instagram: "https://www.instagram.com/riv.kochi" },
   { key: "raffine", name: "Raffine", area: "高知市", type: "アイラッシュサロン", copy: "好きな美容を、好きな仲間と、\n好きな働き方で。", strengths: ["まつ毛パーマ", "LEDエクステ", "眉WAX", "全席半個室"], image: "/images/admin/salon-raffine-1782206000346.JPG", instagram: "https://www.instagram.com/raffine0815" },
 ];
 
@@ -51,8 +51,8 @@ const DEFAULT_VALUES = [
 const DEFAULT_STAFF_VOICES = [
   { name: "川上 凛", role: "スタイリスト", brand: "fleurami", years: "美容師歴4年", image: "/images/admin/staff-2-1782195045005.jpg", reason: "「艶カラーの仕上がりに憧れて」見学に来たのが入社のきっかけ。", joy: "お客様の『可愛い！』の一言が何よりのやりがいです。", holiday: "休日はカフェ巡りと、新しいカラーの研究をしています。", goal: "髪質改善で指名される、頼られるスタイリストになること。" },
   { name: "山岡 悠弥", role: "店長 / トップスタイリスト", brand: "fleurami", years: "美容師歴14年", image: "/images/admin/staff-1-1782195037653.jpg", reason: "技術と人を育てられる環境に惹かれて。", joy: "スタッフの成長を間近で見られること。", holiday: "家族と過ごす時間と、外部講習でのインプット。", goal: "香南市で一番『働きたい』と言われるサロンに。" },
-  { name: "西田 ななみ", role: "スタイリスト", brand: "Riv.by fleurami", years: "美容師歴3年", image: "/images/admin/staff-6-1782195072738.jpg", reason: "大人女性向けの上質な接客を学びたくて入社しました。", joy: "白髪ぼかしでお客様が明るい表情になる瞬間。", holiday: "美術館やインテリアショップで感性をリフレッシュ。", goal: "デザインカラーでも指名いただけるようになりたい。" },
-  { name: "細川 彩香", role: "スタイリスト", brand: "Riv.by fleurami", years: "美容師歴8年", image: "/images/admin/staff-4-1782195059188.jpg", reason: "長く続けられる働き方ができると感じたから。", joy: "『ここに来ると元気になる』と言ってもらえること。", holiday: "ゆっくり読書とおいしいごはん。", goal: "後輩が安心して相談できる先輩でいること。" },
+  { name: "西田 ななみ", role: "スタイリスト", brand: "Riv. by fleurami", years: "美容師歴3年", image: "/images/admin/staff-6-1782195072738.jpg", reason: "大人女性向けの上質な接客を学びたくて入社しました。", joy: "白髪ぼかしでお客様が明るい表情になる瞬間。", holiday: "美術館やインテリアショップで感性をリフレッシュ。", goal: "デザインカラーでも指名いただけるようになりたい。" },
+  { name: "細川 彩香", role: "スタイリスト", brand: "Riv. by fleurami", years: "美容師歴8年", image: "/images/admin/staff-4-1782195059188.jpg", reason: "長く続けられる働き方ができると感じたから。", joy: "『ここに来ると元気になる』と言ってもらえること。", holiday: "ゆっくり読書とおいしいごはん。", goal: "後輩が安心して相談できる先輩でいること。" },
   { name: "やすい", role: "アイリスト", brand: "Raffine", years: "", image: "/images/admin/staff-7-1782195080215.jpg", reason: "半個室で自分のペースで施術に集中できる環境が魅力でした。", joy: "目元が変わるだけで自信を持ってもらえること。", holiday: "韓国コスメとカフェ巡りでトレンド収集。", goal: "まつ毛パーマのデザインで指名される存在に。" },
   { name: "おざき", role: "アイリスト", brand: "Raffine", years: "", image: "/images/admin/staff-8-1782195085415.jpg", reason: "同世代の仲間と楽しく働けそうだと思って。", joy: "『また来ます』と笑顔で帰ってもらえる時間。", holiday: "友達とランチ、たまに眉毛の勉強会。", goal: "眉WAXまでトータルで提案できるアイリストへ。" },
 ];
@@ -103,7 +103,7 @@ const DEFAULT_REQUIREMENTS = [
   { label: "有給・休暇", value: "有給休暇／産休・育休制度あり" },
   { label: "社会保険", value: "社会保険完備" },
   { label: "手当・福利厚生", value: "技術研修あり／外部講習支援／アシスタントからの育成制度" },
-  { label: "勤務地", value: "香南市（fleurami）／高知市（Riv.by fleurami・Raffine）" },
+  { label: "勤務地", value: "香南市（fleurami）／高知市（Riv. by fleurami・Raffine）" },
 ];
 
 const DEFAULT_FAQ = [
@@ -132,7 +132,7 @@ function jobPosting(title: string, desc: string, locality: string, streetAddress
 }
 const jobPostings = [
   jobPosting("美容師（スタイリスト・アシスタント）", "香南市の美容室fleuramiで美容師を募集。髪質改善・カット・艶カラーが学べる地域密着型サロン。香南市 美容室求人。完全週休2日制・社会保険完備・アシスタントから育成。未経験・ブランクOK。スタイリスト月給23万円＋歩合、アシスタント月給22万円。", "香南市", "野市町西野230", "781-5233", "美容師", 220000, 230000),
-  jobPosting("美容師（大人女性向けサロン）", "高知市の美容室Riv.by fleuramiで美容師を募集。白髪ぼかし・髪質改善・艶カラーが強みの大人女性向けサロン。高知市 美容師求人。完全週休2日制・社会保険完備。スタイリスト月給23万円＋歩合、アシスタント月給22万円。", "高知市", "南川添9-21 フルールアミー3 2F", "781-0082", "美容師", 220000, 230000),
+  jobPosting("美容師（大人女性向けサロン）", "高知市の美容室Riv. by fleuramiで美容師を募集。白髪ぼかし・髪質改善・艶カラーが強みの大人女性向けサロン。高知市 美容師求人。完全週休2日制・社会保険完備。スタイリスト月給23万円＋歩合、アシスタント月給22万円。", "高知市", "南川添9-21 フルールアミー3 2F", "781-0082", "美容師", 220000, 230000),
   jobPosting("アイリスト", "高知市のまつげサロンRaffineでアイリストを募集。まつ毛パーマ・LEDエクステ・眉WAX。全席半個室、20代女性スタッフ中心。高知市 アイリスト求人。未経験歓迎。経験者は月給22万円＋歩合、未経験は月給20万円。", "高知市", "はりまや町1-4-8 TNはりまやビル3F", "780-0822", "アイリスト", 200000, 220000),
 ];
 

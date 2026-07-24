@@ -21,6 +21,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: `${tag} | ヘアコラム`,
     description: `高知のヘアサロン fleur ami・Riv. による「${tag}」に関する施術例・コラム一覧。`,
     alternates: { canonical: `/blog/hair/tag/${tag}` },
+    robots: { index: false, follow: true },
   };
 }
 

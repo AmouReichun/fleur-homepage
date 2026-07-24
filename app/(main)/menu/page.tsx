@@ -10,7 +10,7 @@ import { SERVICES } from "@/lib/services";
 export const metadata: Metadata = {
   title: "メニュー一覧",
   description:
-    "fleur GROUPのメニュー一覧。髪質改善・白髪ぼかし・縮毛矯正・艶カラー（Riv.by fleurami / fleurami）、まつげパーマ・ラッシュリフト・眉毛WAX（Raffine）など幅広くご用意しています。",
+    "fleur GROUPのメニュー・料金一覧。高知市・香南市の美容室（カット・カラー・縮毛矯正・髪質改善・パーマ）、アイラッシュサロン（まつ毛パーマ・まつエク・眉毛WAX）の全メニューをご確認いただけます。",
   alternates: { canonical: "https://fleur-group.jp/menu" },
 };
 

@@ -8,7 +8,7 @@ import ReservationChannels from "@/app/components/ReservationChannels";
 export const metadata: Metadata = {
   title: "スタッフ紹介",
   description:
-    "fleur GROUPのスタッフ紹介。fleurami・Riv.by fleurami・Raffineで活躍するスタイリスト・アイリストをご紹介します。",
+    "fleur GROUPのスタッフ紹介。香南市「fleurami」に美容師歴20年超のトップスタイリストが在籍。高知市「Riv. by fleurami」「Raffine」のスタイリスト・アイリストも。指名予約はWeb・LINEから承ります。",
   alternates: { canonical: "https://fleur-group.jp/staff" },
 };
 

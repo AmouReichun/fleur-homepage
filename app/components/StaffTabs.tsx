@@ -4,9 +4,9 @@ import { useState } from "react";
 import type { StaffMember } from "@/lib/content";
 
 type Category = "hair" | "eyelash";
-type HairSalon = "fleurami" | "Riv.by fleurami";
+type HairSalon = "fleurami" | "Riv. by fleurami";
 
-const HAIR_SALONS: HairSalon[] = ["fleurami", "Riv.by fleurami"];
+const HAIR_SALONS: HairSalon[] = ["fleurami", "Riv. by fleurami"];
 const EYELASH_SALONS = ["Raffine"];
 
 function StaffCard({ member }: { member: StaffMember }) {
@@ -17,7 +17,7 @@ function StaffCard({ member }: { member: StaffMember }) {
           // eslint-disable-next-line @next/next/no-img-element
           <img
             src={member.imageSrc}
-            alt={member.name}
+            alt={`${member.name}（${member.salon}・${member.role}）`}
             className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500"
           />
         ) : (
@@ -63,7 +63,27 @@ function StaffCard({ member }: { member: StaffMember }) {
           <p className="text-[10px] text-site-muted mb-0.5"><span className="text-site-accent">得意スタイル：</span>{member.styles.join("・")}</p>
         )}
         {member.ageGroups && member.ageGroups.length > 0 && (
-          <p className="text-[10px] text-site-muted"><span className="text-site-accent">得意年代：</span>{member.ageGroups.join("・")}</p>
+          <p className="text-[10px] text-site-muted mb-2"><span className="text-site-accent">得意年代：</span>{member.ageGroups.join("・")}</p>
+        )}
+        {member.qualifications && member.qualifications.length > 0 && (
+          <div className="mb-1.5">
+            <p className="text-[9px] tracking-wider text-site-accent mb-1">資格・認定</p>
+            <div className="flex flex-wrap gap-1">
+              {member.qualifications.map((q) => (
+                <span key={q} className="text-[10px] text-site-text border border-site-greige px-1.5 py-0.5">{q}</span>
+              ))}
+            </div>
+          </div>
+        )}
+        {member.awards && member.awards.length > 0 && (
+          <div>
+            <p className="text-[9px] tracking-wider text-site-accent mb-1">受賞歴</p>
+            <div className="flex flex-wrap gap-1">
+              {member.awards.map((a) => (
+                <span key={a} className="text-[10px] text-site-text border border-site-greige px-1.5 py-0.5">{a}</span>
+              ))}
+            </div>
+          </div>
         )}
       </div>
     </div>

@@ -6,6 +6,15 @@ import type { AutoPublishConfig } from './actions'
 
 const HOURS = Array.from({ length: 24 }, (_, i) => i)
 const COUNTS = [1, 2, 3, 4, 5]
+const DAYS = [
+  { value: 0, label: "日" },
+  { value: 1, label: "月" },
+  { value: 2, label: "火" },
+  { value: 3, label: "水" },
+  { value: 4, label: "木" },
+  { value: 5, label: "金" },
+  { value: 6, label: "土" },
+]
 
 export default function AutoPublishSettings({
   initialConfig,
@@ -84,56 +93,101 @@ export default function AutoPublishSettings({
       </div>
 
       {/* 設定フォーム */}
-      <div className="px-5 py-4 grid grid-cols-2 gap-4" style={{ background: '#141414' }}>
-        {/* 公開時刻 */}
-        <div>
-          <label className="block text-[10px] tracking-[0.15em] uppercase mb-2" style={{ color: '#666' }}>
-            公開時刻 (JST)
-          </label>
-          <select
-            value={cfg.publishHourJST}
-            onChange={e => setCfg(c => ({ ...c, publishHourJST: Number(e.target.value) }))}
-            className="w-full text-sm px-3 py-2 rounded-sm appearance-none"
-            style={{
-              background: '#1E1E1E',
-              border: '1px solid #2A2A2A',
-              color: '#D4C8B0',
-            }}
-          >
-            {HOURS.map(h => (
-              <option key={h} value={h} style={{ background: '#1E1E1E' }}>
-                {pad(h)}:00
-              </option>
-            ))}
-          </select>
-          <p className="text-[9px] mt-1" style={{ color: '#444' }}>
-            UTC {pad((cfg.publishHourJST - 9 + 24) % 24)}:00
-          </p>
+      <div className="px-5 py-4 space-y-4" style={{ background: '#141414' }}>
+        <div className="grid grid-cols-2 gap-4">
+          {/* 公開時刻 */}
+          <div>
+            <label className="block text-[10px] tracking-[0.15em] uppercase mb-2" style={{ color: '#666' }}>
+              公開時刻 (JST)
+            </label>
+            <select
+              value={cfg.publishHourJST}
+              onChange={e => setCfg(c => ({ ...c, publishHourJST: Number(e.target.value) }))}
+              className="w-full text-sm px-3 py-2 rounded-sm appearance-none"
+              style={{
+                background: '#1E1E1E',
+                border: '1px solid #2A2A2A',
+                color: '#D4C8B0',
+              }}
+            >
+              {HOURS.map(h => (
+                <option key={h} value={h} style={{ background: '#1E1E1E' }}>
+                  {pad(h)}:00
+                </option>
+              ))}
+            </select>
+            <p className="text-[9px] mt-1" style={{ color: '#444' }}>
+              UTC {pad((cfg.publishHourJST - 9 + 24) % 24)}:00
+            </p>
+          </div>
+
+          {/* 1日の公開件数 */}
+          <div>
+            <label className="block text-[10px] tracking-[0.15em] uppercase mb-2" style={{ color: '#666' }}>
+              サロンあたり件数 / 公開日
+            </label>
+            <select
+              value={cfg.articlesPerSalon}
+              onChange={e => setCfg(c => ({ ...c, articlesPerSalon: Number(e.target.value) }))}
+              className="w-full text-sm px-3 py-2 rounded-sm appearance-none"
+              style={{
+                background: '#1E1E1E',
+                border: '1px solid #2A2A2A',
+                color: '#D4C8B0',
+              }}
+            >
+              {COUNTS.map(n => (
+                <option key={n} value={n} style={{ background: '#1E1E1E' }}>
+                  {n} 件
+                </option>
+              ))}
+            </select>
+            <p className="text-[9px] mt-1" style={{ color: '#444' }}>
+              3サロン × {cfg.articlesPerSalon}件 = 最大 {cfg.articlesPerSalon * 3} 件/公開日
+            </p>
+          </div>
         </div>
 
-        {/* 1日の公開件数 */}
+        {/* 公開曜日 */}
         <div>
-          <label className="block text-[10px] tracking-[0.15em] uppercase mb-2" style={{ color: '#666' }}>
-            サロンあたり件数 / 日
-          </label>
-          <select
-            value={cfg.articlesPerSalon}
-            onChange={e => setCfg(c => ({ ...c, articlesPerSalon: Number(e.target.value) }))}
-            className="w-full text-sm px-3 py-2 rounded-sm appearance-none"
-            style={{
-              background: '#1E1E1E',
-              border: '1px solid #2A2A2A',
-              color: '#D4C8B0',
-            }}
-          >
-            {COUNTS.map(n => (
-              <option key={n} value={n} style={{ background: '#1E1E1E' }}>
-                {n} 件
-              </option>
-            ))}
-          </select>
-          <p className="text-[9px] mt-1" style={{ color: '#444' }}>
-            3サロン × {cfg.articlesPerSalon}件 = 最大 {cfg.articlesPerSalon * 3} 件/日
+          <div className="flex items-center justify-between mb-2">
+            <label className="text-[10px] tracking-[0.15em] uppercase" style={{ color: '#666' }}>
+              公開曜日
+            </label>
+            <span className="text-[9px]" style={{ color: '#555' }}>
+              {(() => {
+                const days = cfg.publishDaysOfWeek
+                if (!days || days.length === 0) return '毎日'
+                return DAYS.filter(d => days.includes(d.value)).map(d => d.label + '曜').join('・') + ` (週${days.length}回)`
+              })()}
+            </span>
+          </div>
+          <div className="flex gap-1.5">
+            {DAYS.map(d => {
+              const active = (cfg.publishDaysOfWeek ?? []).includes(d.value)
+              return (
+                <button
+                  key={d.value}
+                  type="button"
+                  onClick={() => {
+                    const cur = cfg.publishDaysOfWeek ?? []
+                    const next = active ? cur.filter(v => v !== d.value) : [...cur, d.value].sort((a, b) => a - b)
+                    setCfg(c => ({ ...c, publishDaysOfWeek: next }))
+                  }}
+                  className="flex-1 py-1.5 text-xs rounded-sm transition-colors"
+                  style={{
+                    background: active ? '#2A4A2A' : '#1E1E1E',
+                    border: `1px solid ${active ? '#3A6A3A' : '#2A2A2A'}`,
+                    color: active ? '#6DBF88' : '#555',
+                  }}
+                >
+                  {d.label}
+                </button>
+              )
+            })}
+          </div>
+          <p className="text-[9px] mt-1.5" style={{ color: '#444' }}>
+            未選択=毎日。推奨: 火・金（週2回）でスパム判定リスクを低減。
           </p>
         </div>
       </div>

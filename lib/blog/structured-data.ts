@@ -13,7 +13,7 @@ export const SALONS = {
       streetAddress: "野市町西野230",
       addressLocality: "香南市",
       addressRegion: "高知県",
-      postalCode: "781-5233",
+      postalCode: "781-5232",
       addressCountry: "JP",
     },
     openingHoursSpecification: [
@@ -25,7 +25,7 @@ export const SALONS = {
       },
     ],
     description:
-      "香南市の大人女性向けヘアサロン。艶カラー・髪質改善・白髪ぼかし・縮毛矯正を得意とする。のいち駅から車4分。駐車場7台無料。",
+      "香南市の大人女性向けヘアサロン。艶カラー・髪質改善・白髪ぼかし・縮毛矯正を得意とする。のいち駅から車4分。駐車場7台無料。定休日：月曜・第1第3火曜。",
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: "得意メニュー",
@@ -357,8 +357,10 @@ export function personSchema(
   salonType: "HairSalon" | "BeautySalon",
   salonAddress: string,
   authorUrl: string,
+  qualifications?: string[],
+  awards?: string[],
 ) {
-  return {
+  const schema: Record<string, unknown> = {
     "@context": "https://schema.org",
     "@type": "Person",
     name,
@@ -375,6 +377,19 @@ export function personSchema(
       },
     },
   };
+
+  if (qualifications && qualifications.length > 0) {
+    schema.hasCredential = qualifications.map((q) => ({
+      "@type": "EducationalOccupationalCredential",
+      name: q,
+    }));
+  }
+
+  if (awards && awards.length > 0) {
+    schema.award = awards;
+  }
+
+  return schema;
 }
 
 export function faqSchema(faq: { q: string; a: string }[]) {

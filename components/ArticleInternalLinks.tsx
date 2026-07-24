@@ -68,19 +68,27 @@ export default function ArticleInternalLinks({ world, salonKey, menus }: Props) 
             const s = SALONS[key];
             const isOwn = key === salonKey;
             return (
-              <Link
+              <div
                 key={key}
-                href={s.hub}
-                className="flex items-center justify-between gap-3 px-4 py-3 bg-white/70 hover:bg-white transition-colors"
+                className="px-4 py-3 bg-white/70"
                 style={{ border: `1px solid ${border}`, borderRadius: isHair ? "2px" : "10px", borderLeft: isOwn ? `3px solid ${accent}` : `1px solid ${border}` }}
               >
-                <span>
-                  <span className={`text-sm font-medium ${textCls}`}>{s.name}</span>
-                  <span className={`text-[11px] ml-2 ${mutedCls}`}>{s.area}</span>
-                  {isOwn && <span className="text-[10px] ml-2" style={{ color: accent }}>← この記事の店舗</span>}
-                </span>
-                <span className="text-[11px]" style={{ color: accent }}>記事・メニューを見る →</span>
-              </Link>
+                <div className="flex items-center justify-between gap-3">
+                  <span>
+                    <span className={`text-sm font-medium ${textCls}`}>{s.name}</span>
+                    <span className={`text-[11px] ml-2 ${mutedCls}`}>{s.area}</span>
+                    {isOwn && <span className="text-[10px] ml-2" style={{ color: accent }}>← この記事の店舗</span>}
+                  </span>
+                  <div className="flex items-center gap-3 flex-shrink-0">
+                    <Link href={s.hub} className={`text-[11px] hover:opacity-70 transition-opacity`} style={{ color: accent }}>
+                      記事を見る →
+                    </Link>
+                    <Link href={`/salon/${key}`} className={`text-[11px] hover:opacity-70 transition-opacity`} style={{ color: accent }}>
+                      店舗詳細 →
+                    </Link>
+                  </div>
+                </div>
+              </div>
             );
           })}
         </div>

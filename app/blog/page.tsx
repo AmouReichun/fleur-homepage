@@ -1,7 +1,15 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { getAllPosts, getPostsForSearch } from "@/lib/blog/posts";
 import ArticleCard from "@/components/ArticleCard";
 import HomeSearchBar from "@/components/HomeSearchBar";
+
+export const metadata: Metadata = {
+  title: "美容コラム・施術例",
+  description:
+    "fleur GROUP公式ブログ。高知市・香南市の美容師・アイリストによるヘアカラー・髪質改善・縮毛矯正・まつ毛パーマの施術例とコラムを発信中。あなたの「なりたい」を見つけてください。",
+  alternates: { canonical: "https://fleur-group.jp/blog" },
+};
 
 export default function HomePage() {
   const hairPosts = getAllPosts("hair").slice(0, 3);

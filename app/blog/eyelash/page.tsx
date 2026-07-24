@@ -4,12 +4,20 @@ import { collectionPageSchema, breadcrumbSchema } from "@/lib/blog/structured-da
 import EyelashTagFilter from "@/components/EyelashTagFilter";
 import MonthArchiveNav from "@/components/MonthArchiveNav";
 
-export const metadata: Metadata = {
-  title: "まつげ・まゆげ症例・コラム",
-  description:
-    "Raffine（高知市はりまや）のアイリストによるまつ毛パーマ・マツエク・まゆげの症例とコラム。韓国束感・フラットラッシュ・パリジェンヌ・眉毛WAXについて解説。",
-  alternates: { canonical: "/blog/eyelash" },
-};
+export function generateMetadata({
+  searchParams,
+}: {
+  searchParams: { tag?: string };
+}): Metadata {
+  const base: Metadata = {
+    title: "まつげ・まゆげ症例・コラム",
+    description:
+      "高知市「Raffine」のアイリストによるまつ毛パーマ・マツエク・眉毛WAXの施術例とコラム。韓国束感・フラットラッシュ・パリジャンリフト・眉毛WAXについて写真付きで詳しく解説。",
+    alternates: { canonical: "/blog/eyelash" },
+  };
+  if (searchParams.tag) base.robots = { index: false, follow: true };
+  return base;
+}
 
 export default function EyelashPage({
   searchParams,

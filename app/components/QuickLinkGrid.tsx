@@ -49,6 +49,7 @@ function CardItem({ card, index }: { card: QuickLinkCard; index: number }) {
             <img
               src={card.imageSrc}
               alt={card.title}
+              loading="lazy"
               className="w-full h-full object-cover"
             />
           ) : (

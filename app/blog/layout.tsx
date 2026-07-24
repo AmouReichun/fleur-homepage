@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     template: "%s | fleur GROUP",
   },
   description:
-    "高知の美容室 fleur ami・Riv.by fleurami、アイラッシュサロン Raffine の症例・スタイル・コラム。白髪ぼかし・髪質改善・縮毛矯正・まつげパーマ・眉毛WAXの実例を発信。",
+    "高知の美容室 fleur ami・Riv. by fleurami、アイラッシュサロン Raffine の症例・スタイル・コラム。白髪ぼかし・髪質改善・縮毛矯正・まつげパーマ・眉毛WAXの実例を発信。",
   alternates: { canonical: "/blog" },
 };
 

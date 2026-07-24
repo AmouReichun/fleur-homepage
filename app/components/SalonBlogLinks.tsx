@@ -12,7 +12,7 @@ type BlogPost = {
 
 const HUBS: Record<string, { hub: string; label: string }> = {
   fleurami: { hub: "/hair/fleur-ami", label: "fleuramiのブログ一覧" },
-  riv: { hub: "/hair/riv", label: "Riv.by fleuramiのブログ一覧" },
+  riv: { hub: "/hair/riv", label: "Riv. by fleuramiのブログ一覧" },
   raffine: { hub: "/eyelash/raffine", label: "Raffineのブログ一覧" },
 };
 

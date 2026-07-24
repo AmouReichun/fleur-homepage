@@ -233,12 +233,14 @@ export type AutoPublishConfig = {
   enabled: boolean
   publishHourJST: number   // 0〜23
   articlesPerSalon: number // 1〜5
+  publishDaysOfWeek?: number[] // 0=日,1=月,2=火,3=水,4=木,5=金,6=土。未設定=毎日
 }
 
 const CONFIG_DEFAULTS: AutoPublishConfig = {
   enabled: true,
   publishHourJST: 12,
   articlesPerSalon: 1,
+  publishDaysOfWeek: [2, 5], // 火・金（週2回）
 }
 
 export async function getAutoPublishConfig(): Promise<AutoPublishConfig> {

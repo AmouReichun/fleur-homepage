@@ -8,7 +8,7 @@ import ReservationChannels from "@/app/components/ReservationChannels";
 export const metadata: Metadata = {
   title: "お問い合わせ",
   description:
-    "fleur GROUPへのお問い合わせはこちら。店舗に関するご質問、採用に関するご相談など、お気軽にお問い合わせください。",
+    "fleur GROUPへのお問い合わせはこちら。高知市・香南市の美容室・アイラッシュサロンへのご質問や採用に関するご相談はお気軽に。通常2〜3営業日以内にご返信します。フォームからどうぞ。",
   alternates: { canonical: "https://fleur-group.jp/contact" },
 };
 

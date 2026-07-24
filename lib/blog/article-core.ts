@@ -1,5 +1,5 @@
 import Anthropic from "@anthropic-ai/sdk";
-import { checkNgWords } from "./ng-words";
+import { checkNgWords, autoFixNgWords } from "./ng-words";
 import { buildBasePrompt, JSON_INSTRUCTION } from "./article-prompt";
 import type { IgPost } from "./instagram-api";
 
@@ -116,6 +116,17 @@ ${JSON_INSTRUCTION}`;
     }
   }
   if (!parsed) return null;
+
+  // NG語を安全な表現に自動置換してからチェック
+  parsed.title          = autoFixNgWords(parsed.title);
+  parsed.excerpt        = autoFixNgWords(parsed.excerpt);
+  parsed.question       = autoFixNgWords(parsed.question);
+  parsed.answer_summary = autoFixNgWords(parsed.answer_summary);
+  parsed.body           = autoFixNgWords(parsed.body);
+  parsed.faq = parsed.faq.map((f) => ({ q: autoFixNgWords(f.q), a: autoFixNgWords(f.a) }));
+  if (parsed.steps) {
+    parsed.steps = parsed.steps.map((s) => ({ name: s.name, text: autoFixNgWords(s.text) }));
+  }
 
   const slug = sanitizeSlug(parsed.slug) || post.id;
   const ngWords = checkNgWords(

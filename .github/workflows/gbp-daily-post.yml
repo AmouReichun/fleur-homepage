@@ -2,8 +2,10 @@ name: GBP Daily Post
 
 on:
   schedule:
-    # 20:00 JST (= 11:00 UTC) に1日1回起動。auto-publish（18:00 JST）の2時間後。
-    - cron: '0 11 * * *'
+    # 20:00 JST (= 11:00 UTC) に週3回起動（月・水・金）。
+    # 毎日投稿はスパム判定リスクがあるため週3回に制限。
+    # auto-publish（火・金 18:00 JST）の翌日・当日夜にGBP投稿が流れる設計。
+    - cron: '0 11 * * 1,3,5'
   workflow_dispatch:
 
 # content-push グループで auto-publish と直列化し、ref衝突を防ぐ。

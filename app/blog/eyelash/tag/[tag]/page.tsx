@@ -21,6 +21,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: `${tag} | アイラッシュコラム`,
     description: `高知のまつ毛・まゆげサロン Raffine による「${tag}」に関する施術例・コラム一覧。`,
     alternates: { canonical: `/blog/eyelash/tag/${tag}` },
+    robots: { index: false, follow: true },
   };
 }
 

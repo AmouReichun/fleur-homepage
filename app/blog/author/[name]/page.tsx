@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { getAllAuthors, getPostsByAuthor } from "@/lib/blog/posts";
 import { personSchema, breadcrumbSchema } from "@/lib/blog/structured-data";
+import { getContent } from "@/lib/content";
 import ArticleCard from "@/components/ArticleCard";
 
 type Props = { params: { name: string } };
@@ -42,6 +43,7 @@ export default function AuthorPage({ params }: Props) {
   const salonInfo = SALON_ADDRESS[author.salon] ?? { address: "", type: "HairSalon" as const };
   const isEyelash = author.category === "eyelash";
 
+  const staffMember = getContent().staff.find((s) => s.name === name);
   const person = personSchema(
     name,
     author.role,
@@ -49,6 +51,8 @@ export default function AuthorPage({ params }: Props) {
     salonInfo.type,
     salonInfo.address,
     `/blog/author/${encodeURIComponent(name)}`,
+    staffMember?.qualifications,
+    staffMember?.awards,
   );
   const crumb = breadcrumbSchema([
     { name: "トップ", url: "/" },

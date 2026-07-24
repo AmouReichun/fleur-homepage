@@ -4,12 +4,20 @@ import { collectionPageSchema, breadcrumbSchema } from "@/lib/blog/structured-da
 import HairSalonFilter from "@/components/HairSalonFilter";
 import MonthArchiveNav from "@/components/MonthArchiveNav";
 
-export const metadata: Metadata = {
-  title: "ヘア症例・コラム",
-  description:
-    "fleur ami（香南市）・Riv.（高知市）のスタイリストによるヘアカラー・髪質改善・白髪ぼかし・縮毛矯正の症例とコラム。",
-  alternates: { canonical: "/blog/hair" },
-};
+export function generateMetadata({
+  searchParams,
+}: {
+  searchParams: { tag?: string };
+}): Metadata {
+  const base: Metadata = {
+    title: "ヘア症例・コラム",
+    description:
+      "香南市「fleurami」・高知市「Riv. by fleurami」のスタイリストによるヘアカラー・髪質改善・白髪ぼかし・縮毛矯正の施術例とコラム。あなたのお悩み・スタイル選びの参考にどうぞ。",
+    alternates: { canonical: "/blog/hair" },
+  };
+  if (searchParams.tag) base.robots = { index: false, follow: true };
+  return base;
+}
 
 // 薄い木目グラデーション（再利用）
 const woodBg = {
