@@ -6,7 +6,7 @@ export const metadata: Metadata = {
     "高知市・香南市の美容室（Riv. by fleurami・fleurami）とアイラッシュサロン（Raffine）。髪質改善・縮毛矯正・白髪ぼかし・まつ毛パーマ・眉毛WAXが得意。地元で選ばれ続けるサロングループ。Web・LINE予約受付中。",
 };
 import { getContentCached } from "@/lib/content";
-import { organizationSchema, faqPageSchema, webSiteSchema, rivSalonSchema, fleuramiSalonSchema, raffineSalonSchema } from "@/lib/structured-data";
+import { organizationSchema, faqPageSchema, webSiteSchema, rivSalonSchema, fleuramiSalonSchema, raffineSalonSchema, founderPersonSchema } from "@/lib/structured-data";
 import HeroSlideshow from "@/app/components/HeroSlideshow";
 import QuickLinkGrid from "@/app/components/QuickLinkGrid";
 import SalonSlider from "@/app/components/SalonSlider";
@@ -64,6 +64,7 @@ export default async function HomePage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webSiteSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(founderPersonSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(rivSalonSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(fleuramiSalonSchema) }} />

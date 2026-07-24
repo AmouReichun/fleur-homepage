@@ -20,8 +20,20 @@ export function generateStaticParams() {
 export function generateMetadata({ params }: Props): Metadata {
   const area = getArea(params.area);
   if (!area) return {};
-  const title = `${area.name}の美容室・アイラッシュサロン｜fleur GROUP`;
-  const description = `${area.name}でメニューから探す。髪質改善・白髪ぼかし・縮毛矯正・艶カラー・まつげパーマ・眉毛WAXなど、${area.name}のfleur GROUPで受けられるメニュー一覧と各店舗のご予約案内。`;
+  const hasHair = area.salonKeys.some((k) => ["riv", "fleurami"].includes(k));
+  const hasEyelash = area.salonKeys.some((k) => k === "raffine");
+  const salonLabel = hasHair && hasEyelash
+    ? "美容室・アイラッシュサロン"
+    : hasEyelash
+    ? "アイラッシュサロン"
+    : "美容室";
+  const serviceHint = hasHair && hasEyelash
+    ? "髪質改善・白髪ぼかし・縮毛矯正・艶カラー・まつげパーマ・眉毛WAX"
+    : hasEyelash
+    ? "まつげパーマ・ラッシュリフト・まつげエクステ・眉毛WAX"
+    : "髪質改善・白髪ぼかし・縮毛矯正・艶カラー・デザインカット";
+  const title = `${area.name}の${salonLabel}｜fleur GROUP`;
+  const description = `${area.name}の${salonLabel}「fleur GROUP」。${serviceHint}など、${area.name}で受けられるメニュー一覧と各店舗のご予約案内。`;
   const url = `${BASE}/area/${area.slug}`;
   return {
     title,
@@ -39,6 +51,14 @@ export default async function AreaPage({ params }: Props) {
   const content = await getContentCached();
   const salons = content.salons as unknown as Record<string, SalonContent>;
   const areaSalonKeys = area.salonKeys.filter((k) => salons[k]);
+
+  const hasHair = area.salonKeys.some((k) => ["riv", "fleurami"].includes(k));
+  const hasEyelash = area.salonKeys.some((k) => k === "raffine");
+  const salonLabel = hasHair && hasEyelash
+    ? "美容室・アイラッシュサロン"
+    : hasEyelash
+    ? "アイラッシュサロン"
+    : "美容室";
 
   const crumbs = [
     { name: "ホーム", url: BASE },
@@ -61,7 +81,7 @@ export default async function AreaPage({ params }: Props) {
           </nav>
           <p className="text-xs tracking-[0.3em] text-site-accent mb-2 uppercase">Area — {area.name}</p>
           <h1 className="font-serif text-3xl sm:text-4xl font-semibold text-site-text">
-            {area.name}の美容室・アイラッシュサロン
+            {area.name}の{salonLabel}
           </h1>
           <p className="text-sm text-site-muted mt-3">
             {area.name}のfleur GROUPで受けられるメニューから探せます。
