@@ -249,6 +249,27 @@ export default async function StaffProfilePage({ params }: Props) {
                   Instagram
                 </a>
               )}
+
+              {/* 担当スタイリストについて */}
+              <div className="mt-6 pt-6 border-t border-site-greige space-y-3">
+                {member.specialties && member.specialties.length > 0 && (
+                  <p className="text-sm text-site-text leading-loose">
+                    {member.name}は{member.specialties.join("・")}を得意としています。
+                    {member.ageGroups && member.ageGroups.length > 0 && (
+                      <>特に{member.ageGroups.join("・")}のお客様から多くご支持いただいており、</>
+                    )}
+                    カウンセリングでご要望や日常のお手入れ状況をお聞きし、骨格・髪質に合わせた施術プランをご提案します。
+                  </p>
+                )}
+                {member.styles && member.styles.length > 0 && (
+                  <p className="text-sm text-site-text leading-loose">
+                    得意なスタイルは{member.styles.join("・")}など。乾かすだけで決まる再現性の高い仕上がりを大切にしています。スタイリング方法についてもお気軽にお聞きください。
+                  </p>
+                )}
+                <p className="text-sm text-site-text leading-loose">
+                  {member.name}へのご指名はご予約時にお申し付けください。初めてのご来店でも、カウンセリングでご希望を丁寧にお聞きしてから施術を進めますので、お気軽にお越しください。ご予約はホットペッパービューティーまたはLINEから承っています。
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -285,7 +306,7 @@ export default async function StaffProfilePage({ params }: Props) {
           <p className="text-[10px] tracking-[0.35em] text-site-accent mb-6 uppercase">Works</p>
           <h2 className="font-serif text-2xl font-light text-site-text mb-3">施術ブログ</h2>
           <p className="text-sm text-site-muted mb-6">
-            {member.name}が担当した施術の症例・ビフォーアフターをブログで公開しています。
+            {member.name}が担当した施術の症例・ビフォーアフター写真をブログで公開しています。カット・カラー・トリートメントなど、さまざまな仕上がりをご確認いただけますので、施術のご参考にぜひご覧ください。
           </p>
           <Link
             href={isEyelash ? "/blog/eyelash" : "/blog/hair"}

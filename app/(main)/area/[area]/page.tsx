@@ -9,6 +9,13 @@ import GoogleReviewCTA from "@/app/components/GoogleReviewCTA";
 
 const BASE = "https://fleur-group.jp";
 
+const AREA_INTRO: Record<string, string> = {
+  kochi: "高知市には「Riv. by fleurami（南川添）」と「Raffine（はりまや橋）」の2店舗があります。美容室では髪質改善・白髪ぼかし・縮毛矯正・カット・カラーを、アイラッシュサロンではまつげパーマ・まつげエクステ・眉毛WAXをご提供しています。骨格や髪質・目元のお悩みに合わせた丁寧なカウンセリングのうえで施術を行い、毎日扱いやすく、自分らしく綺麗でいられるスタイルをご提案します。ご予約はホットペッパービューティーまたはLINEからお気軽にどうぞ。",
+  konan: "香南市には「fleurami（野市町西野）」があります。縮毛矯正・髪質改善・白髪ぼかし・艶カラー・カットを得意とし、大人女性を中心に地域の皆様に選ばれているヘアサロンです。のいち駅から車で約4分、無料駐車場7台完備でアクセスも便利です。カウンセリングを大切にし、扱いやすく再現しやすいスタイルをご提案しています。ご予約はホットペッパービューティーまたはLINEから承っています。",
+  noichi: "野市（香南市野市町）には「fleurami（野市町西野230）」があります。縮毛矯正・髪質改善・白髪ぼかし・カラー・カットが得意なヘアサロンで、くせ毛・うねりにお悩みの方や扱いやすい髪にしたいとお考えの方に数多くご来店いただいています。のいち駅から車で約4分、無料駐車場7台完備です。初めての方もカウンセリングでお気軽にご相談ください。ご予約はホットペッパービューティーまたはLINEから受け付けています。",
+  harimayabashi: "はりまや橋（高知市はりまや町）には、まつげ・眉毛の専門サロン「Raffine（ラフィーネ）」があります。まつげパーマ（パリジャンリフト・ラッシュリフト）・まつげエクステ・LEDエクステ・眉毛WAX（メンズ対応）をご提供しています。全席半個室のプライベートな空間で、落ち着いた雰囲気のなかで施術を受けていただけます。Googleクチコミ4.82（200件以上）の高評価サロンです。ご予約はホットペッパービューティーまたはInstagram DMから受け付けています。",
+};
+
 type Props = { params: { area: string } };
 
 export const dynamicParams = false;
@@ -83,6 +90,11 @@ export default async function AreaPage({ params }: Props) {
           <h1 className="font-serif text-3xl sm:text-4xl font-semibold text-site-text">
             {area.name}の{salonLabel}
           </h1>
+          {AREA_INTRO[area.slug] && (
+            <p className="text-sm text-site-text leading-loose mt-4 max-w-2xl">
+              {AREA_INTRO[area.slug]}
+            </p>
+          )}
           <p className="text-sm text-site-muted mt-3">
             {area.name}のfleur GROUPで受けられるメニューから探せます。
           </p>
