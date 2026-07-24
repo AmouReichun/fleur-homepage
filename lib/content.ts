@@ -75,6 +75,7 @@ export interface NewsItem {
 
 export interface StaffMember {
   name: string;
+  slug?: string; // 個別プロフィールページのURL（/staff/[slug]）
   role: string;
   history?: string;
   salon: string;

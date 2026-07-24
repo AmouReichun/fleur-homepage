@@ -12,13 +12,49 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://fleur-group.jp/staff" },
 };
 
+const BASE = "https://fleur-group.jp";
+
+const SALON_URLS: Record<string, string> = {
+  fleurami: `${BASE}/salon/fleurami`,
+  "Riv. by fleurami": `${BASE}/salon/riv`,
+  Raffine: `${BASE}/salon/raffine`,
+};
+
+const SALON_TYPE: Record<string, string> = {
+  fleurami: "HairSalon",
+  "Riv. by fleurami": "HairSalon",
+  Raffine: "BeautySalon",
+};
+
 const crumbs = [
-  { name: "ホーム", url: "https://fleur-group.jp" },
-  { name: "スタッフ紹介", url: "https://fleur-group.jp/staff" },
+  { name: "ホーム", url: BASE },
+  { name: "スタッフ紹介", url: `${BASE}/staff` },
 ];
 
 export default async function StaffPage() {
   const content = await getContentCached();
+
+  const personSchemas = content.staff
+    .filter((m) => m.slug)
+    .map((m) => ({
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "@id": `${BASE}/staff/${m.slug}`,
+      name: m.name,
+      jobTitle: m.role,
+      description: m.bio,
+      ...(m.imageSrc ? { image: m.imageSrc.startsWith("http") ? m.imageSrc : `${BASE}${m.imageSrc}` } : {}),
+      url: `${BASE}/staff/${m.slug}`,
+      worksFor: {
+        "@type": SALON_TYPE[m.salon] ?? "HairSalon",
+        "@id": SALON_URLS[m.salon] ?? `${BASE}/salon`,
+        name: m.salon,
+        url: SALON_URLS[m.salon] ?? `${BASE}/salon`,
+        parentOrganization: { "@type": "Organization", name: "fleur GROUP", url: BASE },
+      },
+      ...(m.specialties && m.specialties.length > 0 ? { knowsAbout: m.specialties } : {}),
+      ...(m.instagramUrl ? { sameAs: [m.instagramUrl] } : {}),
+    }));
 
   return (
     <>
@@ -26,6 +62,13 @@ export default async function StaffPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema(crumbs)) }}
       />
+      {personSchemas.map((schema) => (
+        <script
+          key={schema["@id"]}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
+      ))}
 
       {/* ページヘッダー */}
       <div className="pt-14 sm:pt-16 bg-white border-b border-site-greige">

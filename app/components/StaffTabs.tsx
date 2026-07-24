@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import type { StaffMember } from "@/lib/content";
 
 type Category = "hair" | "eyelash";
@@ -10,8 +11,8 @@ const HAIR_SALONS: HairSalon[] = ["fleurami", "Riv. by fleurami"];
 const EYELASH_SALONS = ["Raffine"];
 
 function StaffCard({ member }: { member: StaffMember }) {
-  return (
-    <div className="group">
+  const inner = (
+    <>
       <div className="overflow-hidden bg-site-light mb-4 aspect-[3/4]">
         {member.imageSrc ? (
           // eslint-disable-next-line @next/next/no-img-element
@@ -85,9 +86,23 @@ function StaffCard({ member }: { member: StaffMember }) {
             </div>
           </div>
         )}
+        {member.slug && (
+          <p className="mt-3 text-[10px] tracking-[0.2em] text-site-accent">
+            プロフィールを見る →
+          </p>
+        )}
       </div>
-    </div>
+    </>
   );
+
+  if (member.slug) {
+    return (
+      <Link href={`/staff/${member.slug}`} className="group block">
+        {inner}
+      </Link>
+    );
+  }
+  return <div className="group">{inner}</div>;
 }
 
 export default function StaffTabs({ staff }: { staff: StaffMember[] }) {

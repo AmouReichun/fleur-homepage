@@ -1066,7 +1066,8 @@
       "qualifications": [
         "美容師免許（国家資格）"
       ],
-      "awards": []
+      "awards": [],
+      "slug": "kawakami-rin"
     },
     {
       "name": "西内 みゆき",
@@ -1079,7 +1080,8 @@
         "美容師免許（国家資格）",
         "ヘアカラーリスト認定"
       ],
-      "awards": []
+      "awards": [],
+      "slug": "nishiuti-miyuki"
     },
     {
       "name": "山岡 悠弥",
@@ -1093,7 +1095,8 @@
         "縮毛矯正技術認定",
         "ヘアカラーリスト認定"
       ],
-      "awards": []
+      "awards": [],
+      "slug": "yamaoka-yuya"
     },
     {
       "name": "沢村 瑞希",
@@ -1105,7 +1108,8 @@
       "qualifications": [
         "美容師免許（国家資格）"
       ],
-      "awards": []
+      "awards": [],
+      "slug": "sawamura-mizuki"
     },
     {
       "name": "西田 ななみ",
@@ -1117,7 +1121,8 @@
       "qualifications": [
         "美容師免許（国家資格）"
       ],
-      "awards": []
+      "awards": [],
+      "slug": "nishida-nanami"
     },
     {
       "name": "細川 彩香",
@@ -1130,7 +1135,8 @@
         "美容師免許（国家資格）",
         "ヘアカラーリスト認定"
       ],
-      "awards": []
+      "awards": [],
+      "slug": "hosokawa-ayaka"
     },
     {
       "name": "西森 心大",
@@ -1145,7 +1151,8 @@
         "縮毛矯正技術認定",
         "ヘアカラーリスト認定"
       ],
-      "awards": []
+      "awards": [],
+      "slug": "nishimori-munehiro"
     },
     {
       "name": "やすい",
@@ -1157,7 +1164,8 @@
       "qualifications": [
         "美容師免許（国家資格）"
       ],
-      "awards": []
+      "awards": [],
+      "slug": "yasui"
     },
     {
       "name": "おざき",
@@ -1169,7 +1177,8 @@
       "qualifications": [
         "美容師免許（国家資格）"
       ],
-      "awards": []
+      "awards": [],
+      "slug": "ozaki"
     },
     {
       "name": "おおの",
@@ -1181,7 +1190,8 @@
       "qualifications": [
         "美容師免許（国家資格）"
       ],
-      "awards": []
+      "awards": [],
+      "slug": "ono"
     },
     {
       "name": "くろせ",
@@ -1193,7 +1203,8 @@
       "qualifications": [
         "美容師免許（国家資格）"
       ],
-      "awards": []
+      "awards": [],
+      "slug": "kurose"
     },
     {
       "name": "高田　和花",
@@ -1205,7 +1216,8 @@
       "qualifications": [
         "美容師免許（国家資格）"
       ],
-      "awards": []
+      "awards": [],
+      "slug": "takata-nodoka"
     },
     {
       "name": "高木　太久馬",
@@ -1217,7 +1229,8 @@
       "qualifications": [
         "美容師免許（国家資格）"
       ],
-      "awards": []
+      "awards": [],
+      "slug": "takagi-takuma"
     }
   ],
   "recruit": {
