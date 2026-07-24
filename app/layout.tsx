@@ -8,7 +8,7 @@ import "./globals.css";
 // app/blog/layout.tsx に移動し、メインサイトの LCP に影響しないようにした
 const notoSerifJP = Noto_Serif_JP({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
+  weight: ["300", "400", "500", "600"],
   variable: "--font-noto-serif-jp",
   display: "swap",
   preload: false,
@@ -16,7 +16,7 @@ const notoSerifJP = Noto_Serif_JP({
 
 const notoSansJP = Noto_Sans_JP({
   subsets: ["latin"],
-  weight: ["400", "500", "700"],
+  weight: ["400", "500"],
   variable: "--font-noto-sans-jp",
   display: "swap",
   preload: false,
