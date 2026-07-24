@@ -181,7 +181,6 @@ export const rivSalonSchema = {
       closes: "18:30",
     },
   ],
-  specialOpeningHoursSpecification: [],
   aggregateRating: {
     "@type": "AggregateRating",
     ratingValue: "4.65",
@@ -297,7 +296,7 @@ export const fleuramiSalonSchema = {
 
 export const raffineSalonSchema = {
   "@context": "https://schema.org",
-  "@type": ["BeautySalon", "HealthAndBeautyBusiness"],
+  "@type": "BeautySalon",
   "@id": `${BASE}/salon/raffine`,
   name: "まつげとまゆげの専門店 Raffine【ラフィーネ】",
   alternateName: ["Raffine", "ラフィーネ", "Raffine高知", "ラフィーネ高知", "まつげサロン Raffine"],
