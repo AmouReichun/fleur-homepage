@@ -144,9 +144,14 @@ export const rivSalonSchema = {
   alternateName: ["Riv.by fleurami", "リヴ バイ フルールアミー", "Riv. by fleur ami", "リヴ"],
   description:
     "高知市のヘアカラー・髪質改善専門の美容室。白髪ぼかし・艶カラー・縮毛矯正・大人女性向けの似合わせカットが得意。高知市南川添にあるヘアサロン。定休日：月曜・第1第3火曜。Googleクチコミ4.65（674件）。",
-  image: `${BASE}/images/admin/salon-riv-1782197568767.jpg`,
+  image: {
+    "@type": "ImageObject",
+    url: `${BASE}/images/admin/salon-riv-1782197568767.jpg`,
+    width: 1280,
+    height: 960,
+  },
   url: `${BASE}/salon/riv`,
-  hasMap: "https://maps.google.com/?q=高知市南川添9-21",
+  hasMap: "https://maps.google.com/?q=%E9%AB%98%E7%9F%A5%E5%B8%82%E5%8D%97%E5%B7%9D%E6%B7%BB9-21",
   telephone: "088-884-5566",
   address: {
     "@type": "PostalAddress",
@@ -171,7 +176,7 @@ export const rivSalonSchema = {
       latitude: 33.57251447334136,
       longitude: 133.5586512753919,
     },
-    geoRadius: "10000",
+    geoRadius: 10000,
   },
   priceRange: "¥¥",
   currenciesAccepted: "JPY",
@@ -222,9 +227,14 @@ export const fleuramiSalonSchema = {
   alternateName: ["フルールアミー", "fleur ami", "フルールアミー野市"],
   description:
     "高知県香南市野市町の美容室。縮毛矯正・髪質改善・艶カラー・カットが得意。無料駐車場7台完備。のいち駅から車で約4分。くせ毛・うねりにお悩みの方に対応するヘアサロン。定休日：月曜・第1第3火曜。Googleクチコミ4.67（388件）。",
-  image: `${BASE}/images/admin/salon-fleurami-1782197558743.jpg`,
+  image: {
+    "@type": "ImageObject",
+    url: `${BASE}/images/admin/salon-fleurami-1782197558743.jpg`,
+    width: 1280,
+    height: 960,
+  },
   url: `${BASE}/salon/fleurami`,
-  hasMap: "https://maps.google.com/?q=香南市野市町西野230",
+  hasMap: "https://maps.google.com/?q=%E9%A6%99%E5%8D%97%E5%B8%82%E9%87%8E%E5%B8%82%E7%94%BA%E8%A5%BF%E9%87%8E230",
   telephone: "0887-56-5566",
   address: {
     "@type": "PostalAddress",
@@ -250,7 +260,7 @@ export const fleuramiSalonSchema = {
       latitude: 33.57442497334058,
       longitude: 133.69426107539203,
     },
-    geoRadius: "15000",
+    geoRadius: 15000,
   },
   amenityFeature: [
     { "@type": "LocationFeatureSpecification", name: "無料駐車場", value: true },
@@ -305,9 +315,14 @@ export const raffineSalonSchema = {
   alternateName: ["Raffine", "ラフィーネ", "Raffine高知", "ラフィーネ高知", "まつげサロン Raffine"],
   description:
     "高知市はりまや橋のまつげ・眉毛専門サロン。まつげパーマ（パリジャンリフト）・ラッシュリフト・韓国束感まつエク・LEDエクステ・眉毛WAX・メンズ眉WAXに対応。全席半個室。Googleクチコミ4.82（200件以上）。高知市で口コミ評価が高いアイラッシュサロン。",
-  image: `${BASE}/images/admin/salon-raffine-1782206000346.JPG`,
+  image: {
+    "@type": "ImageObject",
+    url: `${BASE}/images/admin/salon-raffine-1782206000346.JPG`,
+    width: 1600,
+    height: 1200,
+  },
   url: `${BASE}/salon/raffine`,
-  hasMap: "https://maps.google.com/?q=高知市はりまや町1-4-8",
+  hasMap: "https://maps.google.com/?q=%E9%AB%98%E7%9F%A5%E5%B8%82%E3%81%AF%E3%82%8A%E3%81%BE%E3%82%84%E7%94%BA1-4-8",
   telephone: "090-7120-5566",
   address: {
     "@type": "PostalAddress",
@@ -332,7 +347,7 @@ export const raffineSalonSchema = {
       latitude: 33.56076797334597,
       longitude: 133.54073617539132,
     },
-    geoRadius: "10000",
+    geoRadius: 10000,
   },
   amenityFeature: [
     { "@type": "LocationFeatureSpecification", name: "半個室", value: true },
