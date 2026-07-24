@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { getContentCached } from "@/lib/content";
 import { salonFaqPageSchema } from "@/lib/structured-data";
 import SalonBlogLinks from "@/app/components/SalonBlogLinks";
@@ -116,12 +117,11 @@ export default async function SalonDetailPage({ salonKey }: { salonKey: string }
         </div>
       </div>
 
-      {/* 写真 — 固定高さdivでCLSをゼロに */}
+      {/* 写真 */}
       {salon.imageSrc && (
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8">
-          <div className="w-full h-64 sm:h-96 overflow-hidden">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={salon.imageSrc} alt={`${salon.name}（${salon.area}の${salon.salonType}）外観・内装`} loading="eager" className="w-full h-full object-cover" />
+          <div className="relative w-full h-64 sm:h-96 overflow-hidden">
+            <Image src={salon.imageSrc} alt={`${salon.name}（${salon.area}の${salon.salonType}）外観・内装`} fill priority className="object-cover" sizes="(max-width: 768px) 100vw, 1152px" />
           </div>
         </div>
       )}
@@ -302,11 +302,10 @@ export default async function SalonDetailPage({ salonKey }: { salonKey: string }
             </h2>
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
               {salonStaff.map((m, i) => (
-                <Link key={`${m.name}-${i}`} href="/staff" className="group block text-center">
-                  <div className="aspect-[4/5] overflow-hidden bg-white mb-2">
+                <Link key={`${m.name}-${i}`} href={m.slug ? `/staff/${m.slug}` : "/staff"} className="group block text-center">
+                  <div className="relative aspect-[4/5] overflow-hidden bg-white mb-2">
                     {m.imageSrc ? (
-                      // eslint-disable-next-line @next/next/no-img-element
-                      <img src={m.imageSrc} alt={`${m.name}（${salon.name}・${m.role}）`} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+                      <Image src={m.imageSrc} alt={`${m.name}（${salon.name}・${m.role}）`} fill className="object-cover transition-transform duration-500 group-hover:scale-105" sizes="(max-width: 640px) 50vw, 200px" />
                     ) : null}
                   </div>
                   <p className="text-sm font-medium text-site-text group-hover:text-site-accent transition-colors">{m.name}</p>

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { getContentCached } from "@/lib/content";
 import { breadcrumbSchema } from "@/lib/structured-data";
 import SalonReserveIcons from "@/app/components/SalonReserveIcons";
@@ -118,12 +119,13 @@ export default async function SalonListPage() {
                     className="border border-site-greige overflow-hidden"
                   >
                     <div className={`flex flex-col lg:flex-row ${i % 2 === 1 ? "lg:flex-row-reverse" : ""}`}>
-                      <div className="lg:w-5/12 bg-site-light flex items-center justify-center min-h-[240px]">
+                      <div className="lg:w-5/12 relative aspect-[4/3] lg:aspect-auto lg:min-h-[320px] overflow-hidden bg-site-light">
                         {salon.imageSrc ? (
-                          // eslint-disable-next-line @next/next/no-img-element
-                          <img src={salon.imageSrc} alt={`${salon.name}（${salon.area}の${salon.salonType}）`} className="w-full h-full object-cover" />
+                          <Image src={salon.imageSrc} alt={`${salon.name}（${salon.area}の${salon.salonType}）`} fill className="object-cover" sizes="(max-width: 1024px) 100vw, 480px" />
                         ) : (
-                          <span className="text-site-muted text-sm">[店舗写真]</span>
+                          <div className="absolute inset-0 flex items-center justify-center">
+                            <span className="text-site-muted text-sm">[店舗写真]</span>
+                          </div>
                         )}
                       </div>
                       <div className="lg:w-7/12 p-7 sm:p-10">

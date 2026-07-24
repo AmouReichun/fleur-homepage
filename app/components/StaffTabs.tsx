@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import type { StaffMember } from "@/lib/content";
 
 type Category = "hair" | "eyelash";
@@ -13,16 +14,17 @@ const EYELASH_SALONS = ["Raffine"];
 function StaffCard({ member }: { member: StaffMember }) {
   const inner = (
     <>
-      <div className="overflow-hidden bg-site-light mb-4 aspect-[3/4]">
+      <div className="relative overflow-hidden bg-site-light mb-4 aspect-[3/4]">
         {member.imageSrc ? (
-          // eslint-disable-next-line @next/next/no-img-element
-          <img
+          <Image
             src={member.imageSrc}
             alt={`${member.name}（${member.salon}・${member.role}）`}
-            className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500"
+            fill
+            className="object-cover group-hover:scale-[1.03] transition-transform duration-500"
+            sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
           />
         ) : (
-          <div className="w-full h-full flex items-center justify-center">
+          <div className="absolute inset-0 flex items-center justify-center">
             <span className="text-site-muted text-xs tracking-wider">[スタッフ写真]</span>
           </div>
         )}

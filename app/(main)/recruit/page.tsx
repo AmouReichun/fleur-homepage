@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { getContentCached } from "@/lib/content";
 import { breadcrumbSchema } from "@/lib/structured-data";
 import RecruitForm from "@/app/components/RecruitForm";
@@ -186,8 +187,7 @@ export default async function RecruitPage() {
             {brands.map((b, i) => (
               <Reveal key={b.key || i} delay={i * 80}>
                 <div className="relative h-[64vw] max-h-[440px] sm:h-[360px] rounded-2xl overflow-hidden group">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={b.image} alt={`${b.name}（${b.area}の${b.type}）`} className="absolute inset-0 w-full h-full object-cover transition-transform duration-[1.2s] group-hover:scale-105" loading={i === 0 ? "eager" : "lazy"} />
+                  <Image src={b.image} alt={`${b.name}（${b.area}の${b.type}）`} fill className="object-cover transition-transform duration-[1.2s] group-hover:scale-105" sizes="(max-width: 768px) 100vw, 960px" priority={i === 0} />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/10" />
                   <div className="absolute inset-0 flex flex-col justify-end p-6 sm:p-9">
                     <div className="flex items-center gap-2 mb-3">
@@ -243,8 +243,7 @@ export default async function RecruitPage() {
                 <Reveal key={s.name || i} delay={(i % 3) * 80}>
                   <article className="h-full bg-white rounded-2xl overflow-hidden border border-site-greige">
                     <div className="relative aspect-[4/5] overflow-hidden">
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img src={s.image} alt={`${s.name}（${s.brand}・${s.role}）`} className="w-full h-full object-cover" loading="lazy" />
+                      <Image src={s.image} alt={`${s.name}（${s.brand}・${s.role}）`} fill className="object-cover" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" />
                       <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/65 to-transparent p-4">
                         <p className="text-white font-serif text-base">{s.name}</p>
                         <p className="text-white/80 text-[11px] mt-0.5">{s.role}・{s.brand}{s.years ? `／${s.years}` : ""}</p>

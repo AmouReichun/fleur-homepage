@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { getContentCached, type SalonContent } from "@/lib/content";
 import { getAreaService, getAllAreaServiceParams } from "@/lib/areas";
@@ -127,8 +128,9 @@ export default async function AreaServicePage({ params }: Props) {
       <section className="py-10 sm:py-14 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           {svc.image && (
-            // eslint-disable-next-line @next/next/no-img-element
-            <img src={svc.image} alt={`${area.name}の${svc.name}｜${worldLabel}`} className="w-full h-56 sm:h-80 object-cover mb-8" loading="eager" />
+            <div className="relative w-full h-56 sm:h-80 mb-8">
+              <Image src={svc.image} alt={`${area.name}の${svc.name}｜${worldLabel}`} fill priority className="object-cover" sizes="(max-width: 768px) 100vw, 896px" />
+            </div>
           )}
           <p className="text-sm sm:text-base text-site-text leading-loose">
             {area.name}で{svc.name}をお探しの方へ。{salonNames}では、{svc.name}を得意メニューとしてご提供しています。{svc.lead}

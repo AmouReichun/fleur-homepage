@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { getContentCached } from "@/lib/content";
 import { breadcrumbSchema } from "@/lib/structured-data";
@@ -129,18 +130,22 @@ export default async function StaffProfilePage({ params }: Props) {
           <div className="flex flex-col sm:flex-row gap-8 sm:gap-12 items-start">
             {/* 写真 */}
             <div className="w-full sm:w-64 flex-shrink-0">
-              {member.imageSrc ? (
-                // eslint-disable-next-line @next/next/no-img-element
-                <img
-                  src={member.imageSrc}
-                  alt={`${member.name}（${member.salon}・${member.role}）`}
-                  className="w-full aspect-[3/4] object-cover"
-                />
-              ) : (
-                <div className="w-full aspect-[3/4] bg-site-light flex items-center justify-center">
-                  <span className="text-site-muted text-xs">[写真]</span>
-                </div>
-              )}
+              <div className="relative w-full aspect-[3/4] overflow-hidden">
+                {member.imageSrc ? (
+                  <Image
+                    src={member.imageSrc}
+                    alt={`${member.name}（${member.salon}・${member.role}）`}
+                    fill
+                    priority
+                    className="object-cover"
+                    sizes="(max-width: 640px) 100vw, 256px"
+                  />
+                ) : (
+                  <div className="absolute inset-0 bg-site-light flex items-center justify-center">
+                    <span className="text-site-muted text-xs">[写真]</span>
+                  </div>
+                )}
+              </div>
             </div>
 
             {/* プロフィール */}
