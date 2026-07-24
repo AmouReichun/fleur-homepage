@@ -59,6 +59,19 @@ export default async function ContactPage() {
           <ContactForm />
         </div>
       </section>
+
+      {/* 関連ページ */}
+      <nav className="py-10 bg-site-light border-t border-site-greige" aria-label="関連ページ">
+        <div className="max-w-2xl mx-auto px-4 sm:px-6">
+          <p className="text-xs tracking-[0.3em] text-site-accent mb-4 uppercase">Related</p>
+          <div className="flex flex-wrap gap-3">
+            <Link href="/salon" className="text-sm text-site-text hover:text-site-accent border border-site-greige px-4 py-2 transition-colors">店舗案内・アクセス</Link>
+            <Link href="/menu" className="text-sm text-site-text hover:text-site-accent border border-site-greige px-4 py-2 transition-colors">メニュー・料金</Link>
+            <Link href="/recruit" className="text-sm text-site-text hover:text-site-accent border border-site-greige px-4 py-2 transition-colors">採用情報</Link>
+            <Link href="/company" className="text-sm text-site-text hover:text-site-accent border border-site-greige px-4 py-2 transition-colors">会社概要</Link>
+          </div>
+        </div>
+      </nav>
     </>
   );
 }
