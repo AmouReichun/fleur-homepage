@@ -14,7 +14,6 @@ question: "高知市でメンズパーマをかけるとき、サロン選びで
 answer_summary: "メンズパーマは髪質・長さ・生活スタイルに合わせたロッド選びとダメージ管理が仕上がりを左右します。Riv. by fleur ami（高知市）では、カウンセリングで希望のスタイルと髪の状態を確認したうえでパーマの種類・強さを提案しています。スタイリングのしやすさと持ちのバランスを重視したい方に向いているサロンです。"
 instagram_id: ""
 instagram_permalink: ""
-draft: true
 yakkihou_flag: true
 yakkihou_words: ["完全に"]
 faq:
