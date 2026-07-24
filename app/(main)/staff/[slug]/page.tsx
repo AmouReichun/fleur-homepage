@@ -27,6 +27,18 @@ const SALON_TYPE: Record<string, string> = {
   Raffine: "BeautySalon",
 };
 
+const SALON_PHONES: Record<string, string> = {
+  fleurami: "0887-56-5566",
+  "Riv. by fleurami": "088-884-5566",
+  Raffine: "090-7120-5566",
+};
+
+const SALON_ADDRESSES_MAP: Record<string, object> = {
+  fleurami: { "@type": "PostalAddress", streetAddress: "野市町西野230", addressLocality: "香南市", addressRegion: "高知県", postalCode: "781-5232", addressCountry: "JP" },
+  "Riv. by fleurami": { "@type": "PostalAddress", streetAddress: "南川添9-21 フルールアミー3 2F", addressLocality: "高知市", addressRegion: "高知県", postalCode: "781-0082", addressCountry: "JP" },
+  Raffine: { "@type": "PostalAddress", streetAddress: "はりまや町1-4-8 TNはりまやビル3F", addressLocality: "高知市", addressRegion: "高知県", postalCode: "780-0822", addressCountry: "JP" },
+};
+
 type Props = { params: { slug: string } };
 
 export const dynamicParams = false;
@@ -87,6 +99,8 @@ export default async function StaffProfilePage({ params }: Props) {
       "@id": salonUrl,
       name: member.salon,
       url: salonUrl,
+      telephone: SALON_PHONES[member.salon],
+      address: SALON_ADDRESSES_MAP[member.salon],
       parentOrganization: {
         "@type": "Organization",
         name: "fleur GROUP",

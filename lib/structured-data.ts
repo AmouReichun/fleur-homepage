@@ -84,9 +84,27 @@ export const organizationSchema = {
     },
   ],
   subOrganization: [
-    { "@type": "HairSalon", "@id": `${BASE}/salon/fleurami`, name: "fleurami" },
-    { "@type": "HairSalon", "@id": `${BASE}/salon/riv`, name: "Riv. by fleurami" },
-    { "@type": ["BeautySalon", "HealthAndBeautyBusiness"], "@id": `${BASE}/salon/raffine`, name: "Raffine" },
+    {
+      "@type": "HairSalon",
+      "@id": `${BASE}/salon/fleurami`,
+      name: "fleurami",
+      telephone: "0887-56-5566",
+      address: { "@type": "PostalAddress", streetAddress: "野市町西野230", addressLocality: "香南市", addressRegion: "高知県", postalCode: "781-5232", addressCountry: "JP" },
+    },
+    {
+      "@type": "HairSalon",
+      "@id": `${BASE}/salon/riv`,
+      name: "Riv. by fleurami",
+      telephone: "088-884-5566",
+      address: { "@type": "PostalAddress", streetAddress: "南川添9-21 フルールアミー3 2F", addressLocality: "高知市", addressRegion: "高知県", postalCode: "781-0082", addressCountry: "JP" },
+    },
+    {
+      "@type": "BeautySalon",
+      "@id": `${BASE}/salon/raffine`,
+      name: "Raffine",
+      telephone: "090-7120-5566",
+      address: { "@type": "PostalAddress", streetAddress: "はりまや町1-4-8 TNはりまやビル3F", addressLocality: "高知市", addressRegion: "高知県", postalCode: "780-0822", addressCountry: "JP" },
+    },
   ],
   sameAs: [
     "https://beauty.hotpepper.jp/slnH000528388/",

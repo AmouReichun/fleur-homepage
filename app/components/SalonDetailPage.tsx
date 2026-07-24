@@ -26,15 +26,7 @@ function StarDisplay({ salonKey }: { salonKey: string }) {
   const gold = "#B8956A";
   const light = "#E0D8CE";
   return (
-    <div
-      className="flex items-center gap-2 mt-2"
-      itemScope
-      itemType="https://schema.org/AggregateRating"
-    >
-      <meta itemProp="ratingValue" content={String(r.rating)} />
-      <meta itemProp="reviewCount" content={String(r.count)} />
-      <meta itemProp="bestRating" content="5" />
-      <meta itemProp="worstRating" content="1" />
+    <div className="flex items-center gap-2 mt-2">
       <div className="flex items-center gap-0.5" aria-label={`${r.rating}点満点5点`}>
         {Array.from({ length: 5 }).map((_, i) => {
           const isFull = i < full;
