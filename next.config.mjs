@@ -47,6 +47,12 @@ const nextConfig = {
         destination: "/blog/hair/tag/%E3%83%A1%E3%83%B3%E3%82%BA%E3%82%AB%E3%83%83%E3%83%88",
         permanent: true,
       },
+      // 削除済み記事の404解消
+      {
+        source: "/blog/hair/kochi-beige-color-40dai-tsuyatomekita-mrylizth",
+        destination: "/blog/hair",
+        permanent: true,
+      },
     ];
   },
   // 全ページ共通のセキュリティヘッダー。
