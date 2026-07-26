@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getAllPosts, getAllTags } from "@/lib/blog/posts";
 import { breadcrumbSchema, tagPageSchema } from "@/lib/blog/structured-data";
+import { getEyelashTagDescription } from "@/lib/blog/tag-descriptions";
 import ArticleCard from "@/components/ArticleCard";
 
 type Props = { params: { tag: string } };
@@ -17,18 +18,32 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const tag = decodeURIComponent(params.tag);
+  const posts = getAllPosts("eyelash").filter((p) => p.tags.includes(tag));
+  const shouldIndex = posts.length >= 5;
   return {
-    title: `${tag} | アイラッシュコラム`,
-    description: `高知のまつ毛・まゆげサロン Raffine による「${tag}」に関する施術例・コラム一覧。`,
-    alternates: { canonical: `/blog/eyelash/tag/${tag}` },
-    robots: { index: false, follow: true },
+    title: `${tag}の施術例・アイラッシュコラム一覧 | 高知はりまや橋 Raffine`,
+    description: `高知市はりまや橋のアイラッシュサロンRaffineによる「${tag}」の施術例とコラム${posts.length}件。${tag}のメニュー選びの参考に。`,
+    alternates: { canonical: `/blog/eyelash/tag/${encodeURIComponent(tag)}` },
+    robots: { index: shouldIndex, follow: true },
   };
 }
 
+const TAG_INDEX_THRESHOLD = 5;
+
 export default function EyelashTagPage({ params }: Props) {
   const tag = decodeURIComponent(params.tag);
-  const posts = getAllPosts("eyelash").filter((p) => p.tags.includes(tag));
+  const allPosts = getAllPosts("eyelash");
+  const posts = allPosts.filter((p) => p.tags.includes(tag));
   if (posts.length === 0) notFound();
+
+  // 関連タグ（インデックス済みかつ自分以外）
+  const allTags = getAllTags("eyelash");
+  const relatedTags = allTags
+    .filter((t) => t !== tag && allPosts.filter((p) => p.tags.includes(t)).length >= TAG_INDEX_THRESHOLD)
+    .slice(0, 8);
+
+  const description = getEyelashTagDescription(tag);
+
   const crumb = breadcrumbSchema([
     { name: "トップ", url: "/" },
     { name: "アイラッシュ", url: "/blog/eyelash" },
@@ -60,9 +75,14 @@ export default function EyelashTagPage({ params }: Props) {
             <h1 className="font-kaku text-2xl sm:text-3xl font-medium text-eye-text mb-3">
               {tag}
             </h1>
-            <p className="text-sm text-eye-muted">
+            <p className="text-sm text-eye-muted mb-4">
               {tag} に関する記事 {posts.length} 件
             </p>
+            {description && (
+              <p className="text-sm text-eye-text leading-loose max-w-2xl">
+                {description}
+              </p>
+            )}
           </div>
         </div>
 
@@ -77,7 +97,26 @@ export default function EyelashTagPage({ params }: Props) {
               ))}
             </div>
           )}
-          <div className="mt-10 pt-8 border-t border-eye-border">
+
+          {/* 関連タグ */}
+          {relatedTags.length > 0 && (
+            <div className="mt-10 pt-8 border-t border-eye-border">
+              <p className="text-xs tracking-[0.2em] uppercase text-eye-accent font-jakarta mb-3">Related Tags</p>
+              <div className="flex flex-wrap gap-2">
+                {relatedTags.map((t) => (
+                  <Link
+                    key={t}
+                    href={`/blog/eyelash/tag/${encodeURIComponent(t)}`}
+                    className="text-xs px-3 py-1.5 rounded-full border border-eye-border text-eye-muted hover:border-eye-accent hover:text-eye-accent transition-colors"
+                  >
+                    {t}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          )}
+
+          <div className="mt-8 pt-6 border-t border-eye-border">
             <Link href="/blog/eyelash" className="text-sm text-eye-accent hover:underline">
               ← アイラッシュ一覧へ戻る
             </Link>
