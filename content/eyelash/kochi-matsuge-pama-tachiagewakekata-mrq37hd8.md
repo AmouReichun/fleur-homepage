@@ -1,5 +1,5 @@
 ---
-title: "高知市でまつ毛パーマを選ぶ前に知っておきたいこと｜立ち上げカールで目元印象を変えたい方へ"
+title: "立ち上げカールのまつ毛パーマで目元印象を変えるには｜高知市Raffineのスタイリスト解説"
 slug: "kochi-matsuge-pama-tachiagewakekata-mrq37hd8"
 category: "eyelash"
 salon: "Raffine"

@@ -1,6 +1,7 @@
 import Anthropic from "@anthropic-ai/sdk";
 import { checkNgWords, autoFixNgWords } from "./ng-words";
 import { buildBasePrompt, JSON_INSTRUCTION } from "./article-prompt";
+import { getAllPosts } from "./posts";
 import type { IgPost } from "./instagram-api";
 
 const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
@@ -67,11 +68,15 @@ export async function generateArticleFromPost(
 ): Promise<ArticleResult | null> {
   const stylist = pickStylest(post.salonKey);
   const area = AREA[post.salonKey] ?? "高知県";
+  const existingTitles = getAllPosts(post.category)
+    .filter((p) => p.salon === post.salonName)
+    .map((p) => p.title);
   const prompt = buildBasePrompt({
     category: post.category,
     salonName: post.salonName,
     area,
     author: stylist.name,
+    existingTitles,
   });
 
   const fullPrompt = `${prompt}

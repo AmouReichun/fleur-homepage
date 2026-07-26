@@ -60,6 +60,9 @@ export default function EyelashArchivePage({ params }: Props) {
               {label}のアイラッシュ記事
             </h1>
             <p className="text-sm text-eye-muted">{posts.length}件</p>
+            <p className="text-sm text-eye-muted mt-3 leading-relaxed max-w-lg">
+              {label}に高知市はりまや橋のアイラッシュサロンRaffineのアイリストが公開した施術例とコラムです。まつ毛パーマ・まつげエクステ・眉毛WAXの施術選びや仕上がりのポイントを、実際の症例をもとにご紹介しています。ご来店前の参考にお役立てください。
+            </p>
 
             <div className="flex items-center gap-4 mt-5">
               <Link

@@ -1,5 +1,5 @@
 ---
-title: "高知市でベージュ系カラーを選ぶ前に知っておきたいこと｜艶と透明感を長く楽しむための基準"
+title: "ベージュ系カラーの透明感を長持ちさせる選び方｜高知市の美容師が解説する基準"
 slug: "kochi-beige-color-erabikata-40dai-mrvmincf"
 category: "hair"
 salon: "Riv. by fleur ami"

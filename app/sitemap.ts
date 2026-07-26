@@ -51,9 +51,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...hairPosts.map((p) => ({ url: `${BASE}/blog/hair/${p.slug}`, lastModified: new Date(p.updated || p.date), changeFrequency: "monthly" as const, priority: 0.7 })),
     ...eyelashPosts.map((p) => ({ url: `${BASE}/blog/eyelash/${p.slug}`, lastModified: new Date(p.updated || p.date), changeFrequency: "monthly" as const, priority: 0.7 })),
   ];
+  // タグページは記事数 5件以上のものだけインデックス＆サイトマップ掲載（薄いコンテンツ回避）
+  const TAG_INDEX_THRESHOLD = 5;
+  const indexableHairTags = getAllTags("hair").filter(
+    (t) => hairPosts.filter((p) => p.tags.includes(t)).length >= TAG_INDEX_THRESHOLD
+  );
+  const indexableEyelashTags = getAllTags("eyelash").filter(
+    (t) => eyelashPosts.filter((p) => p.tags.includes(t)).length >= TAG_INDEX_THRESHOLD
+  );
+
   const blogTaxonomy: MetadataRoute.Sitemap = [
-    ...getAllTags("hair").map((t) => ({ url: `${BASE}/blog/hair/tag/${encodeURIComponent(t)}`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.6 })),
-    ...getAllTags("eyelash").map((t) => ({ url: `${BASE}/blog/eyelash/tag/${encodeURIComponent(t)}`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.6 })),
+    ...indexableHairTags.map((t) => ({ url: `${BASE}/blog/hair/tag/${encodeURIComponent(t)}`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.65 })),
+    ...indexableEyelashTags.map((t) => ({ url: `${BASE}/blog/eyelash/tag/${encodeURIComponent(t)}`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.65 })),
     ...getAllAuthors().map((a) => ({ url: `${BASE}/blog/author/${encodeURIComponent(a.name)}`, lastModified: now, changeFrequency: "weekly" as const, priority: 0.6 })),
     ...getAvailableMonths("hair").map(({ year, month }) => ({ url: `${BASE}/blog/hair/archive/${year}/${month}`, lastModified: now, changeFrequency: "monthly" as const, priority: 0.6 })),
     ...getAvailableMonths("eyelash").map(({ year, month }) => ({ url: `${BASE}/blog/eyelash/archive/${year}/${month}`, lastModified: now, changeFrequency: "monthly" as const, priority: 0.6 })),

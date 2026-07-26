@@ -1,5 +1,5 @@
 ---
-title: "高知市でベージュ系カラーを選ぶ前に知っておきたいこと｜艶と透明感を求める40代女性へ"
+title: "40代女性の艶と透明感を出すベージュカラー｜高知市Riv.での施術と仕上がりとは"
 slug: "kochi-beige-color-40dai-tsuyatomekata-mrylizth"
 category: "hair"
 salon: "Riv. by fleur ami"

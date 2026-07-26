@@ -56,31 +56,85 @@ export function salonKeyOf(post: PostMeta): SalonKey {
   return "fleurami";
 }
 
+/* ───────── エリアページリンク用マッピング ───────── */
+const SALON_AREA_SLUGS: Record<SalonKey, string[]> = {
+  riv:      ["kochi"],
+  fleurami: ["konan", "noichi"],
+  raffine:  ["harimayabashi", "kochi"],
+};
+
+const AREA_NAMES: Record<string, string> = {
+  kochi:         "高知市",
+  konan:         "香南市",
+  noichi:        "野市",
+  harimayabashi: "はりまや橋",
+};
+
 /* ───────── メニュー（サービス）定義 ─────────
-   kw: 本文・タグ・タイトルから検出するキーワード
-   label: 表示名／アンカー用
-   hub: 専用ハブページがある場合のURL（無ければタグページにフォールバック）
-   tag: タグページのタグ名（実在タグのみリンク） */
-type ServiceDef = { kw: string[]; label: string; hub?: string; tag?: string };
+   kw:       本文・タグ・タイトルから検出するキーワード
+   label:    表示名／アンカー用
+   hub:      専用ハブページがある場合のURL（無ければタグページにフォールバック）
+   tag:      タグページのタグ名（実在タグのみリンク）
+   areaSlug: /area/[area]/[areaSlug] 形式のエリアサービスページへのリンク用スラッグ */
+type ServiceDef = { kw: string[]; label: string; hub?: string; tag?: string; areaSlug?: string };
 
 const HAIR_SERVICES: ServiceDef[] = [
-  { kw: ["髪質改善"], label: "髪質改善", hub: "/blog/hair/kamiushitsu-kaizen", tag: "髪質改善" },
-  { kw: ["縮毛矯正"], label: "縮毛矯正", hub: "/blog/hair/shukumou-kyousei", tag: "縮毛矯正" },
-  { kw: ["白髪ぼかし", "白髪", "グレイカラー", "グレイヘア"], label: "白髪ぼかし", hub: "/blog/hair/shiraga-bokashi", tag: "白髪ぼかし" },
-  { kw: ["艶カラー", "ツヤカラー", "イヤリングカラー", "ハイライト"], label: "艶カラー", tag: "艶カラー" },
-  { kw: ["切りっぱなしボブ", "ショートボブ", "ボブ"], label: "ボブスタイル", tag: "ボブ" },
+  { kw: ["髪質改善", "髪質改善トリートメント"], label: "髪質改善", hub: "/blog/hair/kamiushitsu-kaizen", tag: "髪質改善", areaSlug: "kamishitsu-kaizen" },
+  { kw: ["縮毛矯正"], label: "縮毛矯正", hub: "/blog/hair/shukumou-kyousei", tag: "縮毛矯正", areaSlug: "shukumou-kyousei" },
+  { kw: ["白髪ぼかし", "白髪", "グレイカラー", "グレイヘア"], label: "白髪ぼかし", hub: "/blog/hair/shiraga-bokashi", tag: "白髪ぼかし", areaSlug: "shiraga-bokashi" },
+  { kw: ["艶カラー", "ツヤカラー", "イヤリングカラー"], label: "艶カラー", tag: "艶カラー", areaSlug: "tsuya-color" },
+  { kw: ["インナーカラー", "ダブルカラー"], label: "インナーカラー", tag: "インナーカラー", areaSlug: "inner-color" },
+  { kw: ["ブリーチ", "ハイトーン", "ハイライト"], label: "ブリーチ・ハイトーン", areaSlug: "bleach" },
+  { kw: ["韓国", "オルチャン", "韓国風スタイル"], label: "韓国風スタイル", areaSlug: "korean-style" },
+  { kw: ["切りっぱなしボブ", "ショートボブ", "ボブ"], label: "ボブスタイル", tag: "ボブ", areaSlug: "bob" },
+  { kw: ["カット", "似合わせカット", "ヘアカット"], label: "カット", tag: "カット", areaSlug: "cut" },
+  { kw: ["ヘッドスパ", "頭皮ケア", "頭皮マッサージ"], label: "ヘッドスパ", areaSlug: "head-spa" },
+  { kw: ["メンズツイストパーマ", "ツイストパーマ", "メンズパーマ", "スパイラルパーマ"], label: "メンズツイストパーマ", tag: "メンズパーマ", areaSlug: "mens-twist-perm" },
+  { kw: ["メンズカラー", "メンズヘアカラー"], label: "メンズカラー", areaSlug: "mens-color" },
   { kw: ["メンズ", "刈り上げ", "フェード"], label: "メンズスタイル", tag: "メンズ" },
   { kw: ["パーマ"], label: "パーマ", tag: "パーマ" },
 ];
 
 const EYE_SERVICES: ServiceDef[] = [
-  { kw: ["まつげパーマ", "まつ毛パーマ", "ラッシュリフト", "パリジェンヌ"], label: "まつげパーマ", hub: "/blog/eyelash/matsuge-perm", tag: "まつげパーマ" },
-  { kw: ["マツエク", "まつげエクステ", "まつエク", "エクステ", "束感", "エクパーマ", "LEDエクステ"], label: "まつげエクステ", tag: "まつげエクステ" },
-  { kw: ["眉毛WAX", "眉WAX", "眉ワックス", "眉毛", "眉"], label: "眉毛WAX", tag: "眉毛WAX" },
+  { kw: ["まつげパーマ", "まつ毛パーマ", "ラッシュリフト", "パリジェンヌ"], label: "まつげパーマ", hub: "/blog/eyelash/matsuge-perm", tag: "まつげパーマ", areaSlug: "matsuge-perm" },
+  { kw: ["LEDエクステ", "LEDまつエク"], label: "LEDエクステ", tag: "まつげエクステ", areaSlug: "led-extension" },
+  { kw: ["エクパーマ", "まつエクパーマ"], label: "エクパーマ", tag: "まつげエクステ", areaSlug: "ek-perm" },
+  { kw: ["マツエク", "まつげエクステ", "まつエク", "エクステ", "束感", "フラットラッシュ"], label: "まつげエクステ", tag: "まつげエクステ", areaSlug: "matsuek" },
+  { kw: ["眉毛WAX", "眉WAX", "眉ワックス", "眉毛", "眉"], label: "眉毛WAX", tag: "眉毛WAX", areaSlug: "mayuge-wax" },
 ];
 
 export function servicesFor(world: "hair" | "eyelash"): ServiceDef[] {
   return world === "hair" ? HAIR_SERVICES : EYE_SERVICES;
+}
+
+/* ───────── エリアサービスページリンク ─────────
+   記事のサロン + 本文のサービスキーワードから /area/[area]/[service] URLを生成する */
+export type AreaServiceLink = { label: string; href: string };
+
+export function areaServiceLinksFor(
+  salonKey: SalonKey,
+  post: PostMeta,
+  bodyText = ""
+): AreaServiceLink[] {
+  const world = post.category;
+  const areaSlugs = SALON_AREA_SLUGS[salonKey];
+  const haystack = `${post.title} ${post.tags.join(" ")} ${bodyText}`;
+  const out: AreaServiceLink[] = [];
+  const seen = new Set<string>();
+
+  for (const svc of servicesFor(world)) {
+    if (!svc.areaSlug) continue;
+    if (!postMatchesService(post, svc, haystack)) continue;
+    for (const areaSlug of areaSlugs) {
+      const href = `/area/${areaSlug}/${svc.areaSlug}`;
+      if (seen.has(href)) continue;
+      seen.add(href);
+      const areaName = AREA_NAMES[areaSlug] ?? areaSlug;
+      out.push({ label: `${areaName}の${svc.label}`, href });
+    }
+    if (out.length >= 6) break;
+  }
+  return out;
 }
 
 /* 記事テキスト（タイトル＋タグ＋本文）にサービスkwが含まれるか */

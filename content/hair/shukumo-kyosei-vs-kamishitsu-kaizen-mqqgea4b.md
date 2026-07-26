@@ -1,5 +1,5 @@
 ---
-title: "縮毛矯正と髪質改善トリートメントは何が違う？どちらが自分に向いている？"
+title: "縮毛矯正vs髪質改善トリートメント、自分に向いているのはどちら？高知の美容師が解説"
 slug: "shukumo-kyosei-vs-kamishitsu-kaizen-mqqgea4b"
 category: "hair"
 salon: "Riv. by fleur ami"

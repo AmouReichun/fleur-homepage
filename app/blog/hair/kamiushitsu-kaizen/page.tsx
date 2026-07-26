@@ -67,12 +67,12 @@ const serviceSchema = {
   name: "高知の髪質改善サロン｜fleur ami・Riv.",
   description:
     "高知県で髪質改善トリートメントが受けられるヘアサロン案内。香南市のfleur ami・高知市のRiv. by fleur ami。",
-  url: "https://fleur-group.jp/hair/kamiushitsu-kaizen",
+  url: "https://fleur-group.jp/blog/hair/kamiushitsu-kaizen",
   breadcrumb: {
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "ヘア症例", item: "https://fleur-group.jp/hair" },
-      { "@type": "ListItem", position: 2, name: "髪質改善", item: "https://fleur-group.jp/hair/kamiushitsu-kaizen" },
+      { "@type": "ListItem", position: 1, name: "ヘア症例", item: "https://fleur-group.jp/blog/hair" },
+      { "@type": "ListItem", position: 2, name: "髪質改善", item: "https://fleur-group.jp/blog/hair/kamiushitsu-kaizen" },
     ],
   },
   mainEntity: {

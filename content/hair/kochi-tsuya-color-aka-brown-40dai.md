@@ -1,5 +1,5 @@
 ---
-title: "高知市で艶カラーを選ぶ前に知っておきたいこと｜40代女性が透明感のある赤みブラウンで仕上げるまで"
+title: "40代女性の艶カラー、透明感のある赤みブラウンの仕上がりとは｜高知市Riv.の施術事例"
 slug: "kochi-tsuya-color-aka-brown-40dai"
 category: "hair"
 salon: "Riv. by fleur ami"

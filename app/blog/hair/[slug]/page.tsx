@@ -7,7 +7,7 @@ import { articleSchema, faqSchema, localBusinessSchema, breadcrumbSchema, person
 import FAQSection from "@/components/FAQSection";
 import RelatedArticles from "@/components/RelatedArticles";
 import ArticleInternalLinks from "@/components/ArticleInternalLinks";
-import { SALONS, salonKeyOf, relatedMenusFor, primaryServiceCrumb, autoLinkBody } from "@/lib/blog/internal-links";
+import { SALONS, salonKeyOf, relatedMenusFor, areaServiceLinksFor, primaryServiceCrumb, autoLinkBody } from "@/lib/blog/internal-links";
 
 type Props = { params: { slug: string } };
 
@@ -65,6 +65,7 @@ export default async function HairArticlePage({ params }: Props) {
   const salonKey = salonKeyOf(post);
   const area = SALONS[salonKey].area;
   const relatedMenus = relatedMenusFor(post, validTags, post.contentHtml);
+  const areaLinks = areaServiceLinksFor(salonKey, post, post.contentHtml);
   const svcCrumb = primaryServiceCrumb(post, validTags, post.contentHtml);
   const linkedHtml = autoLinkBody(post.contentHtml, "hair", validTags, area);
 
@@ -210,7 +211,7 @@ export default async function HairArticlePage({ params }: Props) {
           <RelatedArticles current={post} all={allHairPosts} world="hair" />
 
           {/* 関連メニュー・店舗・ご予約（内部リンク） */}
-          <ArticleInternalLinks world="hair" salonKey={salonKey} menus={relatedMenus} />
+          <ArticleInternalLinks world="hair" salonKey={salonKey} menus={relatedMenus} areaLinks={areaLinks} />
 
           {/* Back */}
           <div className="mt-8 pt-8 border-t border-hair-border/60">

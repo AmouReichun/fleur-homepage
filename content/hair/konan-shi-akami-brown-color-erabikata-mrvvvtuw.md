@@ -1,5 +1,5 @@
 ---
-title: "香南市で赤みブラウンカラーを選ぶ前に知っておきたいこと｜深みのある艶カラーの選び方"
+title: "深みのある赤みブラウン艶カラーの選び方｜香南市の美容師が教える仕上がりのポイント"
 slug: "konan-shi-akami-brown-color-erabikata-mrvvvtuw"
 category: "hair"
 salon: "fleur ami"

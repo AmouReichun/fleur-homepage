@@ -1,5 +1,5 @@
 ---
-title: "香南市でWカラー×切りっぱなしボブを考えている30代女性へ｜外ハネスタイルの選び方と仕上がり事例"
+title: "切りっぱなしボブの外ハネスタイルとWカラーの施術事例｜香南市fleur amiの仕上がり紹介"
 slug: "koanshi-w-color-kiripanashi-bob-sotohane-mrvvijde"
 category: "hair"
 salon: "fleur ami"

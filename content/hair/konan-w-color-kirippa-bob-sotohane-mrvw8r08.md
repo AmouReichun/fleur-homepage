@@ -1,5 +1,5 @@
 ---
-title: "香南市でWカラー×切りっぱなしボブを考えている30代女性へ｜外ハネで垢抜ける仕上がりの選び方"
+title: "外ハネで垢抜ける切りっぱなしボブとWカラーの選び方｜香南市の30代女性向け施術解説"
 slug: "konan-w-color-kirippa-bob-sotohane-mrvw8r08"
 category: "hair"
 salon: "fleur ami"

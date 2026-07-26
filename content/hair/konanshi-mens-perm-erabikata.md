@@ -1,5 +1,5 @@
 ---
-title: "香南市でメンズパーマを選ぶ前に知っておきたいこと｜仕上がりと持ちの判断基準"
+title: "メンズパーマの仕上がりと持ちの判断基準とは｜香南市の施術事例からわかること"
 slug: "konanshi-mens-perm-erabikata"
 category: "hair"
 salon: "fleur ami"

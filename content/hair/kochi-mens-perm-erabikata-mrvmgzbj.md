@@ -1,5 +1,5 @@
 ---
-title: "高知市でメンズパーマを選ぶ前に知っておきたいこと｜仕上がりの差はどこで生まれる？"
+title: "メンズパーマの仕上がりに差が出る要因とは｜高知市の美容師が解説する施術の違い"
 slug: "kochi-mens-perm-erabikata-mrvmgzbj"
 category: "hair"
 salon: "Riv. by fleur ami"

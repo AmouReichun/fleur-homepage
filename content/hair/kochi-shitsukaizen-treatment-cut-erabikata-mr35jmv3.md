@@ -1,5 +1,5 @@
 ---
-title: "高知市で髪質改善トリートメントを選ぶ前に知っておきたいこと｜カットとの組み合わせで変わる仕上がりの差"
+title: "髪質改善トリートメント×カットの仕上がりの差とは｜高知市Riv.で体験する組み合わせ効果"
 slug: "kochi-shitsukaizen-treatment-cut-erabikata-mr35jmv3"
 category: "hair"
 salon: "Riv. by fleur ami"

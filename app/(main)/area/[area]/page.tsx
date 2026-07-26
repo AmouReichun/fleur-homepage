@@ -117,8 +117,11 @@ export default async function AreaPage({ params }: Props) {
                 <span className="block text-sm font-medium text-site-text group-hover:text-site-accent transition-colors">
                   {area.name}の{svc.name}
                 </span>
-                <span className="block text-[11px] text-site-muted mt-1">
+                <span className="block text-[10px] text-site-muted mt-1">
                   {svc.world === "eyelash" ? "アイラッシュ" : "ヘア"}
+                </span>
+                <span className="block text-[11px] text-site-muted mt-1.5 leading-relaxed">
+                  {svc.forWhom[0]}
                 </span>
               </Link>
             ))}

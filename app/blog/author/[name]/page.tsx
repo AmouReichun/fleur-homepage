@@ -91,6 +91,9 @@ export default function AuthorPage({ params }: Props) {
             <p className="text-sm" style={{ color: "#9A8A7A" }}>
               {author.salon}
             </p>
+            <p className="text-sm mt-3 leading-relaxed max-w-lg" style={{ color: "#5A5050" }}>
+              {author.salon}で{author.role}として活動しています。このページでは{name}が担当した施術の症例やコラムをご覧いただけます。{isEyelash ? "まつ毛パーマ・まつげエクステ・眉毛WAXなどアイラッシュメニューの仕上がりや選び方について" : "ヘアカラー・カット・パーマ・縮毛矯正など各種ヘアメニューの施術例や選び方について"}、カウンセリングのポイントも交えながらご紹介しています。ご来店前の参考にお役立てください。
+            </p>
             <p className="text-sm mt-3" style={{ color: "#7A7070" }}>
               担当記事 {posts.length} 件
             </p>

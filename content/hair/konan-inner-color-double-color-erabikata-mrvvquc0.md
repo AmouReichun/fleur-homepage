@@ -1,5 +1,5 @@
 ---
-title: "香南市でインナーカラーを考えている20代女性へ｜ダブルカラーの仕上がりと選び方"
+title: "ダブルカラーの施術事例と仕上がりを解説｜香南市でインナーカラーを選ぶ20代女性へ"
 slug: "konan-inner-color-double-color-erabikata-mrvvquc0"
 category: "hair"
 salon: "fleur ami"

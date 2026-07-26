@@ -1,5 +1,5 @@
 ---
-title: "高知市で艶カラーを選ぶ前に知っておきたいこと｜ショコラブラウンで大人の印象を整えるには"
+title: "ショコラブラウンで大人の印象を整えるには｜高知市の艶カラー施術と選び方のポイント"
 slug: "kochi-tsuyacolor-chocolat-brown-erabikata-mrvhhkcs"
 category: "hair"
 salon: "Riv. by fleur ami"

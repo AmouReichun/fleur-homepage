@@ -1,5 +1,5 @@
 ---
-title: "高知市でまつ毛パーマを選ぶ前に知っておきたいこと｜自然な丸みカールで印象が変わる理由"
+title: "自然な丸みカールのまつ毛パーマで印象が変わる理由｜高知市Raffineの施術事例"
 slug: "kochi-matsuge-pama-marumi-curl-erabikata-mrvuuoqv"
 category: "eyelash"
 salon: "Raffine"

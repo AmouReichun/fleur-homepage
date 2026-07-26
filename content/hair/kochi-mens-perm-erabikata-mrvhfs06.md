@@ -1,5 +1,5 @@
 ---
-title: "高知市でメンズパーマを選ぶ前に知っておきたいこと｜スタイルの持ちや向き不向きを解説"
+title: "メンズパーマの持ちと向き不向きを解説｜高知市の美容師がスタイル選びで注意すること"
 slug: "kochi-mens-perm-erabikata-mrvhfs06"
 category: "hair"
 salon: "Riv. by fleur ami"

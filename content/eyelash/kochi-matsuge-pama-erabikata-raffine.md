@@ -1,5 +1,5 @@
 ---
-title: "高知市でまつ毛パーマを選ぶ前に知っておきたいこと｜自然な目力を叶えるサロンの選び方"
+title: "ナチュラルなのに目力が出るまつ毛パーマとは｜高知市はりまや橋Raffineの施術解説"
 slug: "kochi-matsuge-pama-erabikata-raffine"
 category: "eyelash"
 salon: "Raffine"

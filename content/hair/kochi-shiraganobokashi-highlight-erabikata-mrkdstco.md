@@ -1,5 +1,5 @@
 ---
-title: "高知市で白髪ぼかしハイライトを考えている40代女性へ｜失敗しない選び方と仕上がりの目安"
+title: "グレイブレンドカラーで白髪を自然にぼかす｜高知市Riv.の40代女性向けハイライト施術"
 slug: "kochi-shiraganobokashi-highlight-erabikata-mrkdstco"
 category: "hair"
 salon: "Riv. by fleur ami"

@@ -1,5 +1,5 @@
 ---
-title: "高知市でレイヤーカット×ショコラブラウンを考えている40代女性へ｜失敗しない色と切り方の選び方"
+title: "レイヤーカットとショコラブラウンで失敗しない色と切り方の選び方｜高知市の40代向け"
 slug: "kochi-layer-cut-chocolat-brown-erabikata-mrvextwu"
 category: "hair"
 salon: "Riv. by fleur ami"

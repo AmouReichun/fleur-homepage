@@ -1,5 +1,5 @@
 ---
-title: "香南市でメンズパーマを選ぶ前に知っておきたいこと｜仕上がりと持ちで選ぶサロンの基準"
+title: "香南市fleur amiのメンズパーマ｜スタイリストが解説する仕上がりとケアのポイント"
 slug: "kananshi-mens-perm-erabikata-fleur-ami"
 category: "hair"
 salon: "fleur ami"

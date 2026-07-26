@@ -1,5 +1,5 @@
 ---
-title: "高知市で白髪ぼかしハイライトを考えている40代女性へ｜失敗しない選び方と仕上がりの目安"
+title: "白髪ぼかしハイライトで失敗しない選び方と目安｜高知市の40代女性に向けた施術解説"
 slug: "kochi-shiraganobokashi-highlight-erabikata-mr07elyj"
 category: "hair"
 salon: "Riv. by fleur ami"

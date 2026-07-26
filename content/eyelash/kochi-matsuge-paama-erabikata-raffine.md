@@ -1,5 +1,5 @@
 ---
-title: "高知市でまつ毛パーマを選ぶ前に知っておきたいこと｜すっぴんでも目元印象が変わる仕上がりとは"
+title: "すっぴんでも目元の印象が変わるまつ毛パーマ｜高知市Raffineで実現する仕上がりとは"
 slug: "kochi-matsuge-paama-erabikata-raffine"
 category: "eyelash"
 salon: "Raffine"

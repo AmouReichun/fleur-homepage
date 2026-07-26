@@ -1,5 +1,5 @@
 ---
-title: "香南市で縮毛矯正を選ぶ前に知っておきたいこと｜20代からの「まとまる髪」への選び方"
+title: "20代からの縮毛矯正でまとまる髪へ｜香南市fleur amiで施術前に確認すること"
 slug: "konan-shukumo-kyosei-erabikata-20dai-mrhtysrn"
 category: "hair"
 salon: "fleur ami"

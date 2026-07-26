@@ -1,5 +1,5 @@
 ---
-title: "高知市で艶カラーを選ぶ前に知っておきたいこと｜大人女性の髪色を長く楽しむためのポイント"
+title: "大人女性の艶カラーを長く楽しむためのポイント｜高知市Riv.スタイリストが解説"
 slug: "kochi-tsuya-color-erabikata-otona-josei"
 category: "hair"
 salon: "Riv. by fleur ami"

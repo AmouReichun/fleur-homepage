@@ -1,5 +1,5 @@
 ---
-title: "高知市でメンズパーマを選ぶ前に知っておきたいこと｜仕上がりと持ちで選ぶサロンの基準"
+title: "高知市のメンズパーマ、仕上がりと持ちでサロンを選ぶには｜Riv.の施術事例"
 slug: "kochi-mens-perm-erabikata-mrkdw959"
 category: "hair"
 salon: "Riv. by fleur ami"

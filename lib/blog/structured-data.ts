@@ -8,6 +8,12 @@ export const SALONS = {
     name: "fleur ami",
     alternateName: "フルールアミー",
     telephone: "0887-56-5566",
+    image: {
+      "@type": "ImageObject",
+      url: `${SITE_URL}/images/admin/salon-fleurami-1782197558743.jpg`,
+      width: 1280,
+      height: 960,
+    },
     address: {
       "@type": "PostalAddress",
       streetAddress: "野市町西野230",
@@ -70,10 +76,10 @@ export const SALONS = {
     },
     aggregateRating: {
       "@type": "AggregateRating",
-      ratingValue: "4.67",
-      reviewCount: "388",
-      bestRating: "5",
-      worstRating: "1",
+      ratingValue: 4.67,
+      reviewCount: 388,
+      bestRating: 5,
+      worstRating: 1,
     },
     sameAs: [
       "https://beauty.hotpepper.jp/slnH000528388/",
@@ -85,6 +91,12 @@ export const SALONS = {
     name: "Riv. by fleur ami",
     alternateName: "リヴ バイ フルールアミー",
     telephone: "088-884-5566",
+    image: {
+      "@type": "ImageObject",
+      url: `${SITE_URL}/images/admin/salon-riv-1782197568767.jpg`,
+      width: 1280,
+      height: 960,
+    },
     address: {
       "@type": "PostalAddress",
       streetAddress: "南川添9-21 フルールアミー3 2F",
@@ -147,10 +159,10 @@ export const SALONS = {
     },
     aggregateRating: {
       "@type": "AggregateRating",
-      ratingValue: "4.65",
-      reviewCount: "674",
-      bestRating: "5",
-      worstRating: "1",
+      ratingValue: 4.65,
+      reviewCount: 674,
+      bestRating: 5,
+      worstRating: 1,
     },
     sameAs: [
       "https://beauty.hotpepper.jp/slnH000634137/",
@@ -162,6 +174,12 @@ export const SALONS = {
     name: "Raffine",
     alternateName: "ラフィーネ",
     telephone: "090-7120-5566",
+    image: {
+      "@type": "ImageObject",
+      url: `${SITE_URL}/images/admin/salon-raffine-1782206000346.JPG`,
+      width: 1600,
+      height: 1200,
+    },
     address: {
       "@type": "PostalAddress",
       streetAddress: "はりまや町1-4-8 TNはりまやビル3F",
@@ -182,10 +200,10 @@ export const SALONS = {
       "高知市はりまや橋徒歩3分のまつげ・まゆげ専門サロン。マツエク・まつげパーマ・韓国束感まつげ・フラットラッシュ・パリジェンヌ・眉毛WAX。半個室・女性専用。",
     aggregateRating: {
       "@type": "AggregateRating",
-      ratingValue: "4.82",
-      reviewCount: "200",
-      bestRating: "5",
-      worstRating: "1",
+      ratingValue: 4.82,
+      reviewCount: 200,
+      bestRating: 5,
+      worstRating: 1,
     },
     sameAs: [
       "https://beauty.hotpepper.jp/kr/slnH000767549/",
@@ -240,11 +258,18 @@ export function articleSchema(post: Post | PostMeta, slug: string) {
       "@type": "Organization",
       name: "フルールグループ",
       url: SITE_URL,
+      logo: {
+        "@type": "ImageObject",
+        url: `${SITE_URL}/icon.png`,
+        width: 512,
+        height: 512,
+      },
     },
     url,
-    image: post.thumbnail.startsWith("http")
-      ? post.thumbnail
-      : `${SITE_URL}${post.thumbnail}`,
+    image: {
+      "@type": "ImageObject",
+      url: post.thumbnail.startsWith("http") ? post.thumbnail : `${SITE_URL}${post.thumbnail}`,
+    },
     mainEntityOfPage: url,
     speakable: {
       "@type": "SpeakableSpecification",

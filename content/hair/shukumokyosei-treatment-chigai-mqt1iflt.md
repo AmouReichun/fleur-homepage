@@ -1,5 +1,5 @@
 ---
-title: "縮毛矯正と髪質改善トリートメントは何が違う？どちらが自分に向いている？"
+title: "縮毛矯正と髪質改善トリートメントの違いを詳しく比較｜くせ毛・うねりに悩む方への選び方"
 slug: "shukumokyosei-treatment-chigai-mqt1iflt"
 category: "hair"
 salon: "Riv. by fleur ami"

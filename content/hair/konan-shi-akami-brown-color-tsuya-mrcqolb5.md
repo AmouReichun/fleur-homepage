@@ -1,5 +1,5 @@
 ---
-title: "香南市で赤みブラウンカラーを選ぶ前に知っておきたいこと｜20代・30代の艶カラー事例"
+title: "香南市20代・30代に人気の赤みブラウン艶カラー｜施術事例と仕上がりの違いを解説"
 slug: "konan-shi-akami-brown-color-tsuya-mrcqolb5"
 category: "hair"
 salon: "fleur ami"

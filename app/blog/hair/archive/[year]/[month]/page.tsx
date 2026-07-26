@@ -71,6 +71,9 @@ export default function HairArchivePage({ params }: Props) {
               {label}のヘア記事
             </h1>
             <p className="text-sm text-hair-muted">{posts.length}件</p>
+            <p className="text-sm text-hair-muted mt-3 leading-relaxed max-w-lg">
+              {label}に高知県のヘアサロンfleur ami・Riv. by fleur amiのスタイリストが公開した施術例とコラムです。ヘアカラー・髪質改善トリートメント・縮毛矯正・カット・パーマなどの施術選びや仕上がりのポイントを、実際の症例をもとにご紹介しています。ご来店前の参考にお役立てください。
+            </p>
 
             <div className="flex items-center gap-4 mt-5">
               <Link

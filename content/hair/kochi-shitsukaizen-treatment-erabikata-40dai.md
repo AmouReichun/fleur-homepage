@@ -1,5 +1,5 @@
 ---
-title: "高知市で髪質改善トリートメントを選ぶ前に知っておきたいこと｜ツヤとまとまりを求める40代へ"
+title: "ツヤとまとまりを求める40代向け髪質改善トリートメント｜高知市Riv.の選び方と効果"
 slug: "kochi-shitsukaizen-treatment-erabikata-40dai"
 category: "hair"
 salon: "Riv. by fleur ami"

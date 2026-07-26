@@ -1,5 +1,5 @@
 ---
-title: "香南市で縮毛矯正を選ぶ前に知っておきたいこと｜失敗しない選び方と仕上がりの目安"
+title: "縮毛矯正で失敗しない選び方と仕上がりの目安｜香南市fleur amiの施術事例"
 slug: "konan-shukumou-kyosei-erabi-kata-mrbavop0"
 category: "hair"
 salon: "fleur ami"

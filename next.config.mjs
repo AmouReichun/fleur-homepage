@@ -30,6 +30,23 @@ const nextConfig = {
         destination: "/blog/faq",
         permanent: true,
       },
+      // 旧タグ名 → 現タグ名へのリダイレクト（SEMrush 404エラー解消）
+      // sourceはURL-encoded形式（日本語をそのまま書くとregexがリテラルになりブラウザのencoded URLと不一致になる）
+      {
+        source: "/blog/eyelash/tag/%E3%83%91%E3%83%AA%E3%82%B8%E3%82%A7%E3%83%B3%E3%83%8C%E3%83%AA%E3%83%95%E3%83%88",
+        destination: "/blog/eyelash/tag/%E3%83%91%E3%83%AA%E3%82%B8%E3%82%A7%E3%83%B3%E3%83%8C%E3%83%A9%E3%83%83%E3%82%B7%E3%83%A5%E3%83%AA%E3%83%95%E3%83%88",
+        permanent: true,
+      },
+      {
+        source: "/blog/eyelash/tag/%E9%9F%93%E5%9B%BD%E6%9D%9F%E6%84%9F%E3%83%9E%E3%83%84%E3%82%A8%E3%82%AF",
+        destination: "/blog/eyelash",
+        permanent: true,
+      },
+      {
+        source: "/blog/hair/tag/%E3%83%A1%E3%83%B3%E3%82%BA",
+        destination: "/blog/hair/tag/%E3%83%A1%E3%83%B3%E3%82%BA%E3%82%AB%E3%83%83%E3%83%88",
+        permanent: true,
+      },
     ];
   },
   // 全ページ共通のセキュリティヘッダー。

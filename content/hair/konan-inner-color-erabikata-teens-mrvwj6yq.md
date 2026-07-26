@@ -1,5 +1,5 @@
 ---
-title: "香南市でインナーカラーを考えている10代・20代へ｜失敗しない選び方と仕上がりの目安"
+title: "インナーカラーの仕上がり目安を知ってから選ぶ｜香南市の10代・20代向け選び方ガイド"
 slug: "konan-inner-color-erabikata-teens-mrvwj6yq"
 category: "hair"
 salon: "fleur ami"

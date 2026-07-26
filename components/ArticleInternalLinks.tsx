@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { SALONS, SALON_ORDER, reservationChannels, type SalonKey, type RelatedMenu, type ReservationChannel } from "@/lib/blog/internal-links";
+import { SALONS, SALON_ORDER, reservationChannels, type SalonKey, type RelatedMenu, type ReservationChannel, type AreaServiceLink } from "@/lib/blog/internal-links";
 
 const CHANNEL_ICON: Record<ReservationChannel["kind"], string> = {
   tel: "☎",
@@ -20,16 +20,18 @@ type Props = {
   world: "hair" | "eyelash";
   salonKey: SalonKey;
   menus: RelatedMenu[];
+  areaLinks?: AreaServiceLink[];
 };
 
 /**
  * 記事下部の内部リンク群（SEO/AIO向け）
  *  - 関連メニュー（キーワードアンカー）
+ *  - エリアで探す（/area/[area]/[service] への双方向リンク）
  *  - このメニューが受けられる店舗（内部ハブへ）
  *  - ご予約はこちら（3店舗・キーワードアンカー）
  * 「こちら」だけの文言は使わず、地域＋メニュー＋店舗名を含める。
  */
-export default function ArticleInternalLinks({ world, salonKey, menus }: Props) {
+export default function ArticleInternalLinks({ world, salonKey, menus, areaLinks = [] }: Props) {
   const isHair = world === "hair";
   const accent = isHair ? "#9C7B4A" : "#C8788A";
   const border = isHair ? "#DDD0BE" : "#EDD9DC";
@@ -53,6 +55,26 @@ export default function ArticleInternalLinks({ world, salonKey, menus }: Props) 
                 >
                   <span style={{ color: accent }}>›</span>
                   <span style={{ textDecoration: "underline", textUnderlineOffset: 2 }}>{m.anchor}</span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      {/* エリアで探す（/area/[area]/[service] への双方向リンク） */}
+      {areaLinks.length > 0 && (
+        <div className="pt-8" style={{ borderTop: `1px solid ${border}` }}>
+          <p className={`text-[10px] tracking-[0.3em] uppercase mb-4 ${labelCls}`}>Area — エリアから探す</p>
+          <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+            {areaLinks.map((link) => (
+              <li key={link.href}>
+                <Link
+                  href={link.href}
+                  className={`inline-flex items-center gap-2 text-sm ${textCls} hover:opacity-70 transition-opacity`}
+                >
+                  <span style={{ color: accent }}>›</span>
+                  <span style={{ textDecoration: "underline", textUnderlineOffset: 2 }}>{link.label}のメニューを見る</span>
                 </Link>
               </li>
             ))}

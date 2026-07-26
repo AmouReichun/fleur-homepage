@@ -58,15 +58,13 @@ export default function Header() {
               </Link>
             );
           })}
-          <a
-            href="https://fleur-group.jp/"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            href="/"
             className="px-1.5 sm:px-3 py-1.5 text-xs sm:text-sm rounded transition-colors text-group-muted hover:text-group-text whitespace-nowrap"
           >
             <span className="sm:hidden">公式</span>
             <span className="hidden sm:inline">公式サイト</span>
-          </a>
+          </Link>
         </nav>
       </div>
     </header>

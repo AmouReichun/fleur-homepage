@@ -213,7 +213,7 @@ export const SERVICES: ServiceDef[] = [
     description:
       "高知市のRiv.by fleurami・香南市のfleuramiのメンズツイストパーマ（ツイストスパイラル）。動き・束感・ボリュームを出し、毎朝のセットが楽に決まる旬のメンズスタイルに。刈り上げ・フェードとの相性も◎。",
     image: "/images/admin/salon-fleurami-1782197558743.jpg",
-    blogUrl: "/hair/tag/%E3%83%A1%E3%83%B3%E3%82%BA",
+    blogUrl: "/hair/tag/%E3%83%A1%E3%83%B3%E3%82%BA%E3%83%91%E3%83%BC%E3%83%9E",
     lead:
       "メンズツイストパーマは、毛束をねじってかけることで動きと束感、立体的なボリュームを生むパーマです。高知市のRiv.by fleurami、香南市のfleuramiでは、刈り上げ・フェードと組み合わせた今っぽいメンズスタイルをご提案。毎朝のセットが楽に決まると好評です。",
     body: [

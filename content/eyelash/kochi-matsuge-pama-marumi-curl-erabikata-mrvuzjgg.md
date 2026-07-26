@@ -1,5 +1,5 @@
 ---
-title: "高知市でまつ毛パーマを選ぶ前に知っておきたいこと｜ナチュラル派・学生さんにも支持される丸みカールの選び方"
+title: "ナチュラル派・学生に支持される丸みカールのまつ毛パーマ｜高知市での選び方ガイド"
 slug: "kochi-matsuge-pama-marumi-curl-erabikata-mrvuzjgg"
 category: "eyelash"
 salon: "Raffine"

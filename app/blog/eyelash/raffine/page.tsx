@@ -73,15 +73,21 @@ export default function RaffinePage() {
               <span>🕐 10:00〜19:00（不定休）</span>
             </div>
 
-            {/* 得意メニュー */}
+            {/* 得意メニュー（noindexタグページへのリンクを避け、ハブ・インデックス済みページのみ） */}
             <div className="flex flex-wrap gap-2">
-              {["韓国束感マツエク", "まつ毛パーマ", "フラットラッシュ", "眉毛WAX", "パリジェンヌリフト"].map((menu) => (
+              {[
+                { label: "まつ毛パーマ", href: "/blog/eyelash/matsuge-perm" },
+                { label: "パリジェンヌラッシュリフト", href: "/blog/eyelash/matsuge-perm" },
+                { label: "まつ毛パーマ症例", href: `/blog/eyelash/tag/${encodeURIComponent("まつ毛パーマ")}` },
+                { label: "韓国束感マツエク", href: "/blog/eyelash" },
+                { label: "眉毛WAX", href: "/blog/eyelash" },
+              ].map(({ label, href }) => (
                 <Link
-                  key={menu}
-                  href={`/blog/eyelash/tag/${encodeURIComponent(menu)}`}
+                  key={label}
+                  href={href}
                   className="text-xs px-3 py-1 rounded-full bg-white/80 text-eye-accent border border-eye-border hover:bg-eye-accent hover:text-white transition-colors"
                 >
-                  {menu}
+                  {label}
                 </Link>
               ))}
             </div>

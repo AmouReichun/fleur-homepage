@@ -5,6 +5,7 @@ import Anthropic from "@anthropic-ai/sdk";
 import { IgMedia } from "./fetch-instagram";
 import { checkNgWords, autoFixNgWords } from "../lib/blog/ng-words";
 import { buildBasePrompt, JSON_INSTRUCTION, AREA_BY_NAME } from "../lib/blog/article-prompt";
+import { getAllPosts } from "../lib/blog/posts";
 
 dotenv.config({ path: ".env.local" });
 
@@ -50,7 +51,10 @@ function loadImageAsBase64(localImagePath: string): string | null {
 
 function buildTextPrompt(media: IgMedia): string {
   const area = AREA_BY_NAME[media.salonName] ?? "高知県";
-  const prompt = buildBasePrompt({ category: media.category, salonName: media.salonName, area });
+  const existingTitles = getAllPosts(media.category)
+    .filter((p) => p.salon === media.salonName)
+    .map((p) => p.title);
+  const prompt = buildBasePrompt({ category: media.category, salonName: media.salonName, area, existingTitles });
   return `${prompt}
 
 【Instagramキャプション】
@@ -279,7 +283,10 @@ export async function generateArticleFromUpload(params: {
   const salon = UPLOAD_SALONS[salonKey];
 
   const area = AREA_BY_NAME[salon.name] ?? "高知県";
-  const textPrompt = `${buildBasePrompt({ category: salon.category, salonName: salon.name, area })}
+  const existingTitles = getAllPosts(salon.category)
+    .filter((p) => p.salon === salon.name)
+    .map((p) => p.title);
+  const textPrompt = `${buildBasePrompt({ category: salon.category, salonName: salon.name, area, existingTitles })}
 
 【スタッフメモ】
 ${memo}
