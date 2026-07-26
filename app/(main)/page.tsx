@@ -14,7 +14,6 @@ import PopularMenuSlider from "@/app/components/PopularMenuSlider";
 import FaqSalonGroup from "@/app/components/FaqSalonGroup";
 import BlogSlider from "@/app/components/BlogSlider";
 import Reveal from "@/app/components/Reveal";
-import ReviewScores from "@/app/components/ReviewScores";
 import StaffPreview from "@/app/components/StaffPreview";
 import GalleryGrid from "@/app/components/GalleryGrid";
 import ReservationChannels from "@/app/components/ReservationChannels";
@@ -98,9 +97,6 @@ export default async function HomePage() {
 
       {/* ─── Quick Links ─── */}
       <QuickLinkGrid cards={content.quickLinks ?? []} />
-
-      {/* ─── Review Scores ─── */}
-      <ReviewScores />
 
       {/* ─── Salons ─── */}
       <section className="py-24 sm:py-36 bg-white overflow-hidden">

@@ -169,15 +169,6 @@ export const rivSalonSchema = {
   areaServed: [
     { "@type": "City", name: "高知市", containedInPlace: { "@type": "State", name: "高知県" } },
   ],
-  serviceArea: {
-    "@type": "GeoCircle",
-    geoMidpoint: {
-      "@type": "GeoCoordinates",
-      latitude: 33.57251447334136,
-      longitude: 133.5586512753919,
-    },
-    geoRadius: 10000,
-  },
   priceRange: "¥¥",
   currenciesAccepted: "JPY",
   paymentAccepted: "現金, クレジットカード, PayPay, LINE Pay",
@@ -207,10 +198,6 @@ export const rivSalonSchema = {
     ],
   },
   knowsAbout: ["髪質改善", "白髪ぼかし", "艶カラー", "ヘアカラー", "縮毛矯正", "似合わせカット", "大人女性ヘアデザイン", "グレイカラー"],
-  speakable: {
-    "@type": "SpeakableSpecification",
-    cssSelector: ["h1", "h2", ".salon-description", ".faq-answer"],
-  },
   sameAs: [
     "https://beauty.hotpepper.jp/slnH000634137/",
     "https://www.instagram.com/riv.kochi",
@@ -253,15 +240,6 @@ export const fleuramiSalonSchema = {
     { "@type": "City", name: "香南市", containedInPlace: { "@type": "State", name: "高知県" } },
     { "@type": "AdministrativeArea", name: "野市町" },
   ],
-  serviceArea: {
-    "@type": "GeoCircle",
-    geoMidpoint: {
-      "@type": "GeoCoordinates",
-      latitude: 33.57442497334058,
-      longitude: 133.69426107539203,
-    },
-    geoRadius: 15000,
-  },
   amenityFeature: [
     { "@type": "LocationFeatureSpecification", name: "無料駐車場", value: true },
     { "@type": "LocationFeatureSpecification", name: "駐車台数", value: "7台" },
@@ -295,10 +273,6 @@ export const fleuramiSalonSchema = {
     ],
   },
   knowsAbout: ["縮毛矯正", "髪質改善", "艶カラー", "ヘアカラー", "くせ毛矯正", "大人女性ヘア", "白髪ぼかし"],
-  speakable: {
-    "@type": "SpeakableSpecification",
-    cssSelector: ["h1", "h2", ".salon-description", ".faq-answer"],
-  },
   sameAs: [
     "https://beauty.hotpepper.jp/slnH000528388/",
     "https://www.instagram.com/fleurami_info",
@@ -340,15 +314,6 @@ export const raffineSalonSchema = {
   areaServed: [
     { "@type": "City", name: "高知市", containedInPlace: { "@type": "State", name: "高知県" } },
   ],
-  serviceArea: {
-    "@type": "GeoCircle",
-    geoMidpoint: {
-      "@type": "GeoCoordinates",
-      latitude: 33.56076797334597,
-      longitude: 133.54073617539132,
-    },
-    geoRadius: 10000,
-  },
   amenityFeature: [
     { "@type": "LocationFeatureSpecification", name: "半個室", value: true },
     { "@type": "LocationFeatureSpecification", name: "メンズ対応", value: true },
@@ -383,10 +348,6 @@ export const raffineSalonSchema = {
     ],
   },
   knowsAbout: ["まつげパーマ", "パリジャンリフト", "ラッシュリフト", "まつエク", "LEDエクステ", "眉毛WAX", "まつ毛パーマ", "アイラッシュ", "まつげ専門サロン", "韓国束感まつげ", "フラットラッシュ"],
-  speakable: {
-    "@type": "SpeakableSpecification",
-    cssSelector: ["h1", "h2", ".salon-description", ".faq-answer"],
-  },
   sameAs: [
     "https://beauty.hotpepper.jp/kr/slnH000767549/",
     "https://www.instagram.com/raffine0815",
