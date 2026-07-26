@@ -14,6 +14,10 @@ import PopularMenuSlider from "@/app/components/PopularMenuSlider";
 import FaqSalonGroup from "@/app/components/FaqSalonGroup";
 import BlogSlider from "@/app/components/BlogSlider";
 import Reveal from "@/app/components/Reveal";
+import ReviewScores from "@/app/components/ReviewScores";
+import StaffPreview from "@/app/components/StaffPreview";
+import GalleryGrid from "@/app/components/GalleryGrid";
+import ReservationChannels from "@/app/components/ReservationChannels";
 import { getAllPostsMeta } from "@/lib/blog/posts";
 
 function SectionLabel({ index, en, ja }: { index: string; en: string; ja: string }) {
@@ -95,6 +99,9 @@ export default async function HomePage() {
       {/* ─── Quick Links ─── */}
       <QuickLinkGrid cards={content.quickLinks ?? []} />
 
+      {/* ─── Review Scores ─── */}
+      <ReviewScores />
+
       {/* ─── Salons ─── */}
       <section className="py-24 sm:py-36 bg-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
@@ -170,6 +177,12 @@ export default async function HomePage() {
         </div>
       </section>
 
+      {/* ─── Gallery ─── */}
+      <GalleryGrid posts={allPosts} />
+
+      {/* ─── Staff Preview ─── */}
+      <StaffPreview staff={content.staff} />
+
       {/* ─── FAQ ─── */}
       <section className="py-24 sm:py-36 bg-site-light">
         <div className="max-w-4xl mx-auto px-6 sm:px-10">
@@ -194,6 +207,19 @@ export default async function HomePage() {
           {topFaq.length === 0 && (
             <p className="text-sm text-site-muted text-center py-12">FAQがまだ登録されていません</p>
           )}
+        </div>
+      </section>
+
+      {/* ─── Reservation CTA ─── */}
+      <section className="py-16 sm:py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
+          <ReservationChannels
+            salonOrder={content.salonOrder}
+            salons={content.salons}
+            heading="ご予約はこちら"
+            note="お電話・Web・LINE・ホットペッパーからご予約いただけます"
+            groupByType
+          />
         </div>
       </section>
 
