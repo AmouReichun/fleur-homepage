@@ -12,48 +12,6 @@ const SALON_LABELS: Record<string, string> = {
   raffine: "Raffine（高知市 はりまや橋）",
 };
 
-const RATINGS: Record<string, { rating: number; count: number }> = {
-  riv:      { rating: 4.65, count: 674 },
-  fleurami: { rating: 4.67, count: 388 },
-  raffine:  { rating: 4.82, count: 200 },
-};
-
-function StarDisplay({ salonKey }: { salonKey: string }) {
-  const r = RATINGS[salonKey];
-  if (!r) return null;
-  const full = Math.floor(r.rating);
-  const half = r.rating - full >= 0.3;
-  const gold = "#B8956A";
-  const light = "#E0D8CE";
-  return (
-    <div className="flex items-center gap-2 mt-2">
-      <div className="flex items-center gap-0.5" aria-label={`${r.rating}点満点5点`}>
-        {Array.from({ length: 5 }).map((_, i) => {
-          const isFull = i < full;
-          const isHalf = !isFull && i === full && half;
-          return (
-            <svg key={i} width="14" height="14" viewBox="0 0 24 24" aria-hidden="true">
-              {isHalf && (
-                <defs>
-                  <linearGradient id={`hg-${salonKey}-${i}`} x1="0" x2="1" y1="0" y2="0">
-                    <stop offset="55%" stopColor={gold} />
-                    <stop offset="55%" stopColor={light} />
-                  </linearGradient>
-                </defs>
-              )}
-              <path
-                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
-                fill={isFull ? gold : isHalf ? `url(#hg-${salonKey}-${i})` : light}
-              />
-            </svg>
-          );
-        })}
-      </div>
-      <span className="text-sm font-medium" style={{ color: gold }}>{r.rating}</span>
-      <span className="text-xs text-site-muted">（{r.count.toLocaleString()}件 Google口コミ）</span>
-    </div>
-  );
-}
 
 export default async function SalonDetailPage({ salonKey }: { salonKey: string }) {
   const content = await getContentCached();
@@ -91,7 +49,7 @@ export default async function SalonDetailPage({ salonKey }: { salonKey: string }
   return (
     <>
       {/* ヘッダー */}
-      <div className="bg-site-light py-10 sm:py-14">
+      <div className="bg-site-light pt-24 sm:pt-[7.5rem] pb-10 sm:pb-14">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <nav className="text-xs text-site-muted mb-4">
             <Link href="/" className="hover:text-site-accent">ホーム</Link>
@@ -105,7 +63,6 @@ export default async function SalonDetailPage({ salonKey }: { salonKey: string }
           {salon.nameReading && (
             <p className="text-xs text-site-muted tracking-widest mb-1">{salon.nameReading}</p>
           )}
-          <StarDisplay salonKey={salonKey} />
         </div>
       </div>
 
