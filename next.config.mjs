@@ -49,7 +49,7 @@ const nextConfig = {
       },
       // 削除済み記事の404解消
       {
-        source: "/blog/hair/kochi-beige-color-40dai-tsuyatomekita-mrylizth",
+        source: "/blog/hair/kochi-beige-color-40dai-tsuyatomekata-mrylizth",
         destination: "/blog/hair",
         permanent: true,
       },
