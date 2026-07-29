@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { getSlugs, getPost, getAllPosts, getAllTags } from "@/lib/blog/posts";
 import { articleSchema, faqSchema, localBusinessSchema, breadcrumbSchema, personSchema, howToSchema } from "@/lib/blog/structured-data";
+import { getContent } from "@/lib/content";
 import FAQSection from "@/components/FAQSection";
 import RelatedArticles from "@/components/RelatedArticles";
 import ArticleInternalLinks from "@/components/ArticleInternalLinks";
@@ -79,8 +80,9 @@ export default async function HairArticlePage({ params }: Props) {
     { name: post.title, url: `/blog/hair/${params.slug}` },
   ]);
   const authorAddress = salonKey === "fleurami" ? "野市町西野230" : "南川添9-21";
+  const authorHistory = post.author ? getContent().staff.find((s) => s.name === post.author)?.history : undefined;
   const authorSc = post.author
-    ? personSchema(post.author, post.author_role || "スタイリスト", post.salon, "HairSalon", authorAddress, `/blog/author/${encodeURIComponent(post.author)}`)
+    ? personSchema(post.author, post.author_role || "スタイリスト", post.salon, "HairSalon", authorAddress, `/blog/author/${encodeURIComponent(post.author)}`, undefined, undefined, authorHistory)
     : null;
   const howTo = post.steps?.length
     ? howToSchema(post.title, post.excerpt, post.steps, `/blog/hair/${params.slug}`)

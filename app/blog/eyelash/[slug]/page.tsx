@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { getSlugs, getPost, getAllPosts, getAllTags } from "@/lib/blog/posts";
 import { articleSchema, faqSchema, localBusinessSchema, breadcrumbSchema, personSchema, howToSchema } from "@/lib/blog/structured-data";
+import { getContent } from "@/lib/content";
 import FAQSection from "@/components/FAQSection";
 import RelatedArticles from "@/components/RelatedArticles";
 import ArticleInternalLinks from "@/components/ArticleInternalLinks";
@@ -59,8 +60,9 @@ export default async function EyelashArticlePage({ params }: Props) {
     ...(svcCrumb ? [svcCrumb] : []),
     { name: post.title, url: `/blog/eyelash/${params.slug}` },
   ]);
+  const authorHistory = post.author ? getContent().staff.find((s) => s.name === post.author)?.history : undefined;
   const authorSc = post.author
-    ? personSchema(post.author, post.author_role || "アイリスト", post.salon, "BeautySalon", "はりまや町1-4-8", `/blog/author/${encodeURIComponent(post.author)}`)
+    ? personSchema(post.author, post.author_role || "アイリスト", post.salon, "BeautySalon", "はりまや町1-4-8", `/blog/author/${encodeURIComponent(post.author)}`, undefined, undefined, authorHistory)
     : null;
   const howTo = post.steps?.length
     ? howToSchema(post.title, post.excerpt, post.steps, `/blog/eyelash/${params.slug}`)
