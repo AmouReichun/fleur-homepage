@@ -91,7 +91,7 @@ export default async function StaffProfilePage({ params }: Props) {
     "@id": `${BASE}/staff/${member.slug}`,
     name: member.name,
     jobTitle: member.role,
-    description: member.bio,
+    description: member.history ? `${member.history}。${member.bio ?? ""}`.trim() : member.bio,
     ...(imageUrl ? { image: imageUrl } : {}),
     url: `${BASE}/staff/${member.slug}`,
     worksFor: {
