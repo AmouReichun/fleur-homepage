@@ -2,6 +2,7 @@ import Anthropic from "@anthropic-ai/sdk";
 import { checkNgWords, autoFixNgWords } from "./ng-words";
 import { buildBasePrompt, JSON_INSTRUCTION } from "./article-prompt";
 import { getAllPosts } from "./posts";
+import { getContent } from "../content";
 import type { IgPost } from "./instagram-api";
 
 const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
@@ -21,10 +22,11 @@ const STYLISTS: Record<string, { names: string[]; role: string }> = {
   },
 };
 
-function pickStylest(salonKey: string): { name: string; role: string } {
+function pickStylest(salonKey: string): { name: string; role: string; history?: string } {
   const s = STYLISTS[salonKey] ?? STYLISTS["fleurami"];
   const name = s.names[Math.floor(Math.random() * s.names.length)];
-  return { name, role: s.role };
+  const staffMember = getContent().staff.find((m) => m.name === name);
+  return { name, role: s.role, history: staffMember?.history };
 }
 
 // タイトル・本文で使う地域名（SEO/MEO用）
@@ -76,6 +78,7 @@ export async function generateArticleFromPost(
     salonName: post.salonName,
     area,
     author: stylist.name,
+    authorHistory: stylist.history,
     existingTitles,
   });
 

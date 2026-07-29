@@ -384,6 +384,7 @@ export function personSchema(
   authorUrl: string,
   qualifications?: string[],
   awards?: string[],
+  history?: string,
 ) {
   const schema: Record<string, unknown> = {
     "@context": "https://schema.org",
@@ -402,6 +403,10 @@ export function personSchema(
       },
     },
   };
+
+  if (history) {
+    schema.description = `${salonName}の${jobTitle}。${history}の経験を持つ高知県の美容の専門家。`;
+  }
 
   if (qualifications && qualifications.length > 0) {
     schema.hasCredential = qualifications.map((q) => ({

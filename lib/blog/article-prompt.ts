@@ -244,10 +244,14 @@ export function buildBasePrompt(opts: {
   salonName: string;
   area: string;
   author?: string;
+  authorHistory?: string;
   existingTitles?: string[];
 }): string {
   const header = opts.category === "hair" ? HAIR_HEADER : EYELASH_HEADER;
   let prompt = `${header}\n${COMMON_RULES}\n\n${salonFactsBlock(opts.salonName)}`;
+  if (opts.author && opts.authorHistory) {
+    prompt += `\n\n【著者プロフィール（E-E-A-Tシグナル）】\n- 著者：${opts.author}（${opts.authorHistory}）\n- 記事内で著者の経験に触れる一文を自然に1回入れること（例：「○○年の経験から…」）。ただし本文の流れを乱さない範囲で。`;
+  }
 
   if (opts.existingTitles && opts.existingTitles.length > 0) {
     const titleList = opts.existingTitles.map((t) => `- ${t}`).join("\n");

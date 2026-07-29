@@ -20,9 +20,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const authors = getAllAuthors();
   const author = authors.find((a) => a.name === name);
   if (!author) return {};
+  const staffMemberForMeta = getContent().staff.find((s) => s.name === name);
+  const historyLabel = staffMemberForMeta?.history ? `${staffMemberForMeta.history}の` : "";
   return {
     title: `${name} | ${author.role} — ${author.salon}`,
-    description: `${author.salon}の${author.role}${name}による施術例・コラム一覧。高知県の${author.category === "hair" ? "ヘアサロン" : "まつげ・まゆげサロン"}。`,
+    description: `${author.salon}の${historyLabel}${author.role}${name}による施術例・コラム一覧。高知県の${author.category === "hair" ? "ヘアサロン" : "まつげ・まゆげサロン"}。`,
     alternates: { canonical: `/blog/author/${name}` },
   };
 }
@@ -53,6 +55,7 @@ export default function AuthorPage({ params }: Props) {
     `/blog/author/${encodeURIComponent(name)}`,
     staffMember?.qualifications,
     staffMember?.awards,
+    staffMember?.history,
   );
   const crumb = breadcrumbSchema([
     { name: "トップ", url: "/" },
@@ -92,7 +95,7 @@ export default function AuthorPage({ params }: Props) {
               {author.salon}
             </p>
             <p className="text-sm mt-3 leading-relaxed max-w-lg" style={{ color: "#5A5050" }}>
-              {author.salon}で{author.role}として活動しています。このページでは{name}が担当した施術の症例やコラムをご覧いただけます。{isEyelash ? "まつ毛パーマ・まつげエクステ・眉毛WAXなどアイラッシュメニューの仕上がりや選び方について" : "ヘアカラー・カット・パーマ・縮毛矯正など各種ヘアメニューの施術例や選び方について"}、カウンセリングのポイントも交えながらご紹介しています。ご来店前の参考にお役立てください。
+              {author.salon}で{staffMember?.history ? `${staffMember.history}の経験を持つ` : ""}{author.role}として活動しています。このページでは{name}が担当した施術の症例やコラムをご覧いただけます。{isEyelash ? "まつ毛パーマ・まつげエクステ・眉毛WAXなどアイラッシュメニューの仕上がりや選び方について" : "ヘアカラー・カット・パーマ・縮毛矯正など各種ヘアメニューの施術例や選び方について"}、カウンセリングのポイントも交えながらご紹介しています。ご来店前の参考にお役立てください。
             </p>
             <p className="text-sm mt-3" style={{ color: "#7A7070" }}>
               担当記事 {posts.length} 件
