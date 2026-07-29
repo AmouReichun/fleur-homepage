@@ -120,6 +120,7 @@ export const organizationSchema = {
     "https://g.page/r/CVY6rOf-UWbxEAE",
     "https://g.page/r/CdEFX3xXBBF7EAE",
     "https://g.page/r/CbD8dVZGgEeuEAE",
+    "https://prtimes.jp/main/html/searchrlp/company_id/187832",
   ],
   hasOfferCatalog: {
     "@type": "OfferCatalog",
