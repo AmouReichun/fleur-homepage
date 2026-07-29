@@ -73,9 +73,9 @@ export default async function HomePage() {
 
       {/* ─── Hero ─── */}
       <HeroSlideshow images={heroImages} hasImage={hasImage}>
-        <p className="text-[10px] tracking-[0.4em] text-white/45 mb-8">
-          高知市・香南市 — 美容室・アイラッシュサロン
-        </p>
+        <h2 className="text-[10px] tracking-[0.4em] text-white/45 mb-8">
+          高知県の美容室・アイラッシュサロン
+        </h2>
         <h1 className="font-serif text-5xl sm:text-6xl lg:text-7xl font-light text-white leading-[1.25] mb-6 whitespace-pre-line">
           {content.hero.title || "上品なのに、\n抜け感。"}
         </h1>
@@ -102,7 +102,7 @@ export default async function HomePage() {
           <SectionLabel index="01" en="Salon" ja="店舗案内" />
           <Reveal delay={80} className="-mt-8 mb-12 sm:mb-16">
             <p className="text-sm text-site-muted max-w-xl leading-relaxed">
-              高知市（Riv. by fleurami・Raffine）と香南市（fleurami）で3店舗を展開。髪質改善・縮毛矯正・白髪ぼかし・まつ毛パーマ・眉毛WAXをご提供しています。
+              高知県（高知市・香南市）で美容室・アイラッシュサロンを3店舗展開するfleur GROUP。髪質改善・縮毛矯正・白髪ぼかし・まつ毛パーマ・眉毛WAXをご提供しています。
             </p>
           </Reveal>
         </div>
