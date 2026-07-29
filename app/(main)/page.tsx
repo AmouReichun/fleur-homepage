@@ -3,7 +3,8 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   description:
-    "高知市・香南市の美容室（Riv. by fleurami・fleurami）とアイラッシュサロン（Raffine）。髪質改善・縮毛矯正・白髪ぼかし・まつ毛パーマ・眉毛WAXが得意。地元で選ばれ続けるサロングループ。Web・LINE予約受付中。",
+    "高知県（高知市・香南市）の美容室（Riv. by fleurami・fleurami）とアイラッシュサロン（Raffine）。髪質改善・縮毛矯正・白髪ぼかし・まつ毛パーマ・眉毛WAXが得意。地元で選ばれ続けるサロングループ。Web・LINE予約受付中。",
+  alternates: { canonical: "https://fleur-group.jp" },
 };
 import { getContentCached } from "@/lib/content";
 import { faqPageSchema, rivSalonSchema, fleuramiSalonSchema, raffineSalonSchema, founderPersonSchema } from "@/lib/structured-data";

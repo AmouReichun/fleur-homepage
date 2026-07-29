@@ -39,8 +39,8 @@ export function generateMetadata({ params }: Props): Metadata {
     : hasEyelash
     ? "まつげパーマ・ラッシュリフト・まつげエクステ・眉毛WAX"
     : "髪質改善・白髪ぼかし・縮毛矯正・艶カラー・デザインカット";
-  const title = `${area.name}の${salonLabel}｜fleur GROUP`;
-  const description = `${area.name}の${salonLabel}「fleur GROUP」。${serviceHint}など、${area.name}で受けられるメニュー一覧と各店舗のご予約案内。`;
+  const title = `高知県${area.name}の${salonLabel}｜fleur GROUP`;
+  const description = `高知県${area.name}の${salonLabel}「fleur GROUP」。${serviceHint}など、${area.name}で受けられるメニュー一覧と各店舗のご予約案内。`;
   const url = `${BASE}/area/${area.slug}`;
   return {
     title,
