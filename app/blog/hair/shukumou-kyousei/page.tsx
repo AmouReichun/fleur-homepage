@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import { getAllPosts } from "@/lib/blog/posts";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import ArticleCard from "@/components/ArticleCard";
 
 export const metadata: Metadata = {
@@ -56,8 +57,9 @@ const pageSchema = {
   breadcrumb: {
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "ヘア症例", item: "https://fleur-group.jp/blog/hair" },
-      { "@type": "ListItem", position: 2, name: "縮毛矯正", item: "https://fleur-group.jp/blog/hair/shukumou-kyousei" },
+      { "@type": "ListItem", position: 1, name: "トップ", item: "https://fleur-group.jp/" },
+      { "@type": "ListItem", position: 2, name: "ヘア症例", item: "https://fleur-group.jp/blog/hair" },
+      { "@type": "ListItem", position: 3, name: "縮毛矯正", item: "https://fleur-group.jp/blog/hair/shukumou-kyousei" },
     ],
   },
   mainEntity: {
@@ -81,6 +83,8 @@ export default function ShukumouKyouseiPage() {
   return (
     <div className="min-h-screen" style={{ background: "#F8F2EA" }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }} />
+
+      <Breadcrumbs theme="hair" items={[{ name: "トップ", url: "/" }, { name: "ヘア症例", url: "/blog/hair" }, { name: "縮毛矯正", url: "/blog/hair/shukumou-kyousei" }]} />
 
       {/* Hero */}
       <div className="relative overflow-hidden py-14 px-4 border-b border-hair-border" style={{ background: bg }}>

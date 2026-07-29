@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import { getAllPosts } from "@/lib/blog/posts";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import ArticleCard from "@/components/ArticleCard";
 
 export const metadata: Metadata = {
@@ -56,8 +57,9 @@ const pageSchema = {
   breadcrumb: {
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "アイラッシュ", item: "https://fleur-group.jp/blog/eyelash" },
-      { "@type": "ListItem", position: 2, name: "まつげパーマ", item: "https://fleur-group.jp/blog/eyelash/matsuge-perm" },
+      { "@type": "ListItem", position: 1, name: "トップ", item: "https://fleur-group.jp/" },
+      { "@type": "ListItem", position: 2, name: "アイラッシュ", item: "https://fleur-group.jp/blog/eyelash" },
+      { "@type": "ListItem", position: 3, name: "まつげパーマ", item: "https://fleur-group.jp/blog/eyelash/matsuge-perm" },
     ],
   },
   mainEntity: {
@@ -83,6 +85,8 @@ export default function MatsugePermPage() {
   return (
     <div className="min-h-screen" style={{ background: "#FBF8F8" }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }} />
+
+      <Breadcrumbs theme="eyelash" items={[{ name: "トップ", url: "/" }, { name: "アイラッシュ", url: "/blog/eyelash" }, { name: "まつげパーマ", url: "/blog/eyelash/matsuge-perm" }]} />
 
       {/* Hero */}
       <div className="relative overflow-hidden py-14 px-4 border-b border-eye-border" style={{ background: bg }}>

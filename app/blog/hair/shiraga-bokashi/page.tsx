@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import { getAllPosts } from "@/lib/blog/posts";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import ArticleCard from "@/components/ArticleCard";
 
 export const metadata: Metadata = {
@@ -53,8 +54,9 @@ const pageSchema = {
   breadcrumb: {
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "ヘア症例", item: "https://fleur-group.jp/blog/hair" },
-      { "@type": "ListItem", position: 2, name: "白髪ぼかし", item: "https://fleur-group.jp/blog/hair/shiraga-bokashi" },
+      { "@type": "ListItem", position: 1, name: "トップ", item: "https://fleur-group.jp/" },
+      { "@type": "ListItem", position: 2, name: "ヘア症例", item: "https://fleur-group.jp/blog/hair" },
+      { "@type": "ListItem", position: 3, name: "白髪ぼかし", item: "https://fleur-group.jp/blog/hair/shiraga-bokashi" },
     ],
   },
   mainEntity: {
@@ -78,6 +80,8 @@ export default function ShiragaBokashiPage() {
   return (
     <div className="min-h-screen" style={{ background: "#F9F5EE" }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }} />
+
+      <Breadcrumbs theme="hair" items={[{ name: "トップ", url: "/" }, { name: "ヘア症例", url: "/blog/hair" }, { name: "白髪ぼかし", url: "/blog/hair/shiraga-bokashi" }]} />
 
       {/* Hero */}
       <div className="relative overflow-hidden py-14 px-4 border-b border-hair-border" style={{ background: bg }}>

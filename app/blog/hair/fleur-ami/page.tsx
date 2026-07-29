@@ -3,6 +3,7 @@ import Link from "next/link";
 import { getAllPosts } from "@/lib/blog/posts";
 import ArticleCard from "@/components/ArticleCard";
 import { localBusinessSchema, breadcrumbSchema, collectionPageSchema } from "@/lib/blog/structured-data";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
   title: "fleur ami ヘア症例・コラム",
@@ -32,11 +33,12 @@ const woodBg = {
 
 export default function FleurAmiPage() {
   const posts = getAllPosts("hair").filter((p) => p.salon === "fleur ami");
-  const crumb = breadcrumbSchema([
+  const crumbItems = [
     { name: "トップ", url: "/" },
     { name: "ヘア", url: "/blog/hair" },
     { name: "fleur ami", url: "/blog/hair/fleur-ami" },
-  ]);
+  ];
+  const crumb = breadcrumbSchema(crumbItems);
   const col = collectionPageSchema(
     "fleur ami ヘア症例・コラム",
     "/blog/hair/fleur-ami",
@@ -49,6 +51,8 @@ export default function FleurAmiPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema("fleurami")) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(crumb) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(col) }} />
+
+      <Breadcrumbs theme="hair" items={crumbItems} />
 
       {/* Hero */}
       <div

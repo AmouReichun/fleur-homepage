@@ -5,6 +5,7 @@ import { getPostsByYearMonth, getAvailableMonths } from "@/lib/blog/posts";
 import ArticleCard from "@/components/ArticleCard";
 import MonthArchiveNav from "@/components/MonthArchiveNav";
 import { breadcrumbSchema } from "@/lib/blog/structured-data";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 type Props = { params: { year: string; month: string } };
 
@@ -46,17 +47,19 @@ export default function HairArchivePage({ params }: Props) {
   const months = getAvailableMonths("hair");
   const label = `${year}年${parseInt(month)}月`;
 
-  const crumb = breadcrumbSchema([
+  const crumbItems = [
     { name: "トップ", url: "/" },
     { name: "ヘア", url: "/blog/hair" },
     { name: label, url: `/blog/hair/archive/${year}/${month}` },
-  ]);
+  ];
+  const crumb = breadcrumbSchema(crumbItems);
 
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(crumb) }} />
 
       <div className="min-h-screen" style={{ background: "#F8F2EA" }}>
+        <Breadcrumbs theme="hair" items={crumbItems} />
         {/* Hero */}
         <div className="relative overflow-hidden py-12 px-4 border-b border-hair-border" style={woodBg}>
           <div className="max-w-wide mx-auto relative z-10">

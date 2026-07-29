@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { getContentCached } from "@/lib/content";
 import { breadcrumbSchema } from "@/lib/structured-data";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import RecruitForm from "@/app/components/RecruitForm";
 import { ROLES } from "@/lib/recruit-roles";
 import Reveal from "@/app/components/recruit/Reveal";
@@ -171,6 +172,7 @@ export default async function RecruitPage() {
       <StickyRecruitCTA instagramUrl={stickyInstagram} />
 
       <main className="bg-white text-site-text overflow-hidden">
+        <Breadcrumbs theme="site" items={[{ name: "ホーム", url: "/" }, { name: "採用情報", url: "/recruit" }]} />
         {/* ══════ 1. ファーストビュー ══════ */}
         <section className="relative">
           <div className="max-w-3xl mx-auto px-5 pt-16 sm:pt-24 pb-10 text-center">

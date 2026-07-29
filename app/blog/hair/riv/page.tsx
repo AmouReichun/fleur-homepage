@@ -3,6 +3,7 @@ import Link from "next/link";
 import { getAllPosts } from "@/lib/blog/posts";
 import ArticleCard from "@/components/ArticleCard";
 import { localBusinessSchema, breadcrumbSchema, collectionPageSchema } from "@/lib/blog/structured-data";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
   title: "Riv. by fleur ami ヘア症例・コラム",
@@ -34,11 +35,12 @@ export default function RivPage() {
   const posts = getAllPosts("hair").filter(
     (p) => p.salon === "Riv. by fleur ami"
   );
-  const crumb = breadcrumbSchema([
+  const crumbItems = [
     { name: "トップ", url: "/" },
     { name: "ヘア", url: "/blog/hair" },
     { name: "Riv. by fleur ami", url: "/blog/hair/riv" },
-  ]);
+  ];
+  const crumb = breadcrumbSchema(crumbItems);
   const col = collectionPageSchema(
     "Riv. by fleur ami ヘア症例・コラム",
     "/blog/hair/riv",
@@ -51,6 +53,8 @@ export default function RivPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema("riv")) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(crumb) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(col) }} />
+
+      <Breadcrumbs theme="hair" items={crumbItems} />
 
       {/* Hero */}
       <div

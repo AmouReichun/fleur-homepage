@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import { getAllPosts, getAvailableMonths } from "@/lib/blog/posts";
 import { collectionPageSchema, breadcrumbSchema } from "@/lib/blog/structured-data";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import HairSalonFilter from "@/components/HairSalonFilter";
 import MonthArchiveNav from "@/components/MonthArchiveNav";
 
@@ -53,16 +54,18 @@ export default function HairPage({
     "fleur ami（香南市）・Riv.（高知市）のスタイリストによるヘアカラー・髪質改善・白髪ぼかし・縮毛矯正の症例とコラム",
     posts,
   );
-  const crumb = breadcrumbSchema([
+  const crumbItems = [
     { name: "トップ", url: "/" },
     { name: "ヘア", url: "/blog/hair" },
-  ]);
+  ];
+  const crumb = breadcrumbSchema(crumbItems);
 
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(col) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(crumb) }} />
       <div className="min-h-screen" style={{ background: "#F8F2EA" }}>
+      <Breadcrumbs theme="hair" items={crumbItems} />
       {/* Hero — fleur ami / Riv. ヘッダー */}
       <div className="relative overflow-hidden py-14 px-4 border-b border-hair-border" style={woodBg}>
         {/* 装飾：背景の薄い透かし文字 */}

@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import { getAllPosts, getAvailableMonths } from "@/lib/blog/posts";
 import { collectionPageSchema, breadcrumbSchema } from "@/lib/blog/structured-data";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import EyelashTagFilter from "@/components/EyelashTagFilter";
 import MonthArchiveNav from "@/components/MonthArchiveNav";
 
@@ -33,16 +34,18 @@ export default function EyelashPage({
     "Raffine（高知市はりまや）のアイリストによるまつ毛パーマ・マツエク・まゆげの症例とコラム",
     posts,
   );
-  const crumb = breadcrumbSchema([
+  const crumbItems = [
     { name: "トップ", url: "/" },
     { name: "アイラッシュ", url: "/blog/eyelash" },
-  ]);
+  ];
+  const crumb = breadcrumbSchema(crumbItems);
 
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(col) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(crumb) }} />
       <div className="bg-eye-bg min-h-screen">
+      <Breadcrumbs theme="eyelash" items={crumbItems} />
       {/* Hero — Raffine ブランドヘッダー */}
       <div className="relative overflow-hidden py-14 px-4" style={{
         background: "linear-gradient(160deg, #FBF8F8 0%, #F9EEF1 50%, #F5E6EA 100%)"

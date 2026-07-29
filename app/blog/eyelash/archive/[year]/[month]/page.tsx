@@ -5,6 +5,7 @@ import { getPostsByYearMonth, getAvailableMonths } from "@/lib/blog/posts";
 import ArticleCard from "@/components/ArticleCard";
 import MonthArchiveNav from "@/components/MonthArchiveNav";
 import { breadcrumbSchema } from "@/lib/blog/structured-data";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 type Props = { params: { year: string; month: string } };
 
@@ -32,17 +33,19 @@ export default function EyelashArchivePage({ params }: Props) {
   const months = getAvailableMonths("eyelash");
   const label = `${year}年${parseInt(month)}月`;
 
-  const crumb = breadcrumbSchema([
+  const crumbItems = [
     { name: "トップ", url: "/" },
     { name: "アイラッシュ", url: "/blog/eyelash" },
     { name: label, url: `/blog/eyelash/archive/${year}/${month}` },
-  ]);
+  ];
+  const crumb = breadcrumbSchema(crumbItems);
 
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(crumb) }} />
 
       <div className="min-h-screen" style={{ background: "linear-gradient(180deg, #FBF8F8 0%, #F9EEF1 100%)" }}>
+        <Breadcrumbs theme="eyelash" items={crumbItems} />
         {/* Hero */}
         <div
           className="relative overflow-hidden py-12 px-4 border-b border-eye-border"
