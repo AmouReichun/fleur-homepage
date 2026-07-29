@@ -134,8 +134,39 @@ export function areaServiceLinksFor(
     }
     if (out.length >= 6) break;
   }
+
+  // 網羅性補完：記事が触れていなくても、解説ページが充実している一方で
+  // 記事からの内部リンクが少ない"補完メニュー"のエリアページを、空きスロットに追加する。
+  // （記事本文は変更せず、既存記事にもレンダリング時に反映される）
+  if (out.length < FILL_TARGET) {
+    const services = servicesFor(world);
+    for (const areaSlug of COMPLEMENTARY_AREA_SLUGS[world]) {
+      const svc = services.find((s) => s.areaSlug === areaSlug);
+      if (!svc) continue;
+      for (const aSlug of areaSlugs) {
+        const href = `/area/${aSlug}/${areaSlug}`;
+        if (seen.has(href)) continue;
+        seen.add(href);
+        const areaName = AREA_NAMES[aSlug] ?? aSlug;
+        out.push({ label: `${areaName}の${svc.label}`, href });
+        if (out.length >= FILL_TARGET) break;
+      }
+      if (out.length >= FILL_TARGET) break;
+    }
+  }
+
   return out;
 }
+
+// 空きスロットを埋める最低目標数（内部リンクを増やしすぎない上限）
+const FILL_TARGET = 4;
+
+// 解説ページは充実しているが記事からのリンクが少ないメニュー（world別・優先順）。
+// world と一致する店舗が必ず提供しているメニューのみ列挙（存在しないページへのリンクを防ぐ）。
+const COMPLEMENTARY_AREA_SLUGS: Record<"hair" | "eyelash", string[]> = {
+  hair: ["head-spa", "inner-color", "korean-style"],
+  eyelash: ["mayuge-wax", "led-extension"],
+};
 
 /* 記事テキスト（タイトル＋タグ＋本文）にサービスkwが含まれるか */
 function postMatchesService(post: PostMeta, svc: ServiceDef, haystack: string): boolean {
