@@ -142,8 +142,8 @@ export const rivSalonSchema = {
   "@context": "https://schema.org",
   "@type": "HairSalon",
   "@id": `${BASE}/salon/riv`,
-  name: "Riv. by fleurami",
-  alternateName: ["Riv.by fleurami", "リヴ バイ フルールアミー", "Riv. by fleur ami", "リヴ"],
+  name: "Riv.by fleurami",
+  alternateName: ["Riv. by fleurami", "リヴ バイ フルールアミー", "Riv. by fleur ami", "リヴ"],
   description:
     "高知市のヘアカラー・髪質改善専門の美容室。白髪ぼかし・艶カラー・縮毛矯正・大人女性向けの似合わせカットが得意。高知市南川添にあるヘアサロン。定休日：月曜・第1第3火曜。Googleクチコミ4.65（674件）。",
   image: {
@@ -212,8 +212,8 @@ export const fleuramiSalonSchema = {
   "@context": "https://schema.org",
   "@type": "HairSalon",
   "@id": `${BASE}/salon/fleurami`,
-  name: "fleurami",
-  alternateName: ["フルールアミー", "fleur ami", "フルールアミー野市"],
+  name: "fleur ami",
+  alternateName: ["fleurami", "フルールアミー", "フルールアミー野市"],
   description:
     "高知県香南市野市町の美容室。縮毛矯正・髪質改善・艶カラー・カットが得意。無料駐車場7台完備。のいち駅から車で約4分。くせ毛・うねりにお悩みの方に対応するヘアサロン。定休日：月曜・第1第3火曜。Googleクチコミ4.67（388件）。",
   image: {
@@ -287,8 +287,8 @@ export const raffineSalonSchema = {
   "@context": "https://schema.org",
   "@type": "BeautySalon",
   "@id": `${BASE}/salon/raffine`,
-  name: "まつげとまゆげの専門店 Raffine【ラフィーネ】",
-  alternateName: ["Raffine", "ラフィーネ", "Raffine高知", "ラフィーネ高知", "まつげサロン Raffine"],
+  name: "まつげとまゆげの専門店Raffine【ラフィーネ】",
+  alternateName: ["まつげとまゆげの専門店 Raffine【ラフィーネ】", "Raffine", "ラフィーネ", "Raffine高知", "ラフィーネ高知", "まつげサロン Raffine"],
   description:
     "高知市はりまや橋のまつげ・眉毛専門サロン。まつげパーマ（パリジャンリフト）・ラッシュリフト・韓国束感まつエク・LEDエクステ・眉毛WAX・メンズ眉WAXに対応。全席半個室。Googleクチコミ4.82（200件以上）。高知市で口コミ評価が高いアイラッシュサロン。",
   image: {
