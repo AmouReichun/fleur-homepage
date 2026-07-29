@@ -4,6 +4,13 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import type { QuickLinkCard } from "@/lib/content";
 
+const ALT_FALLBACKS: Record<string, string> = {
+  booking:  "高知県の美容室・アイラッシュサロン fleur GROUP — ご予約・店舗案内",
+  staff:    "高知県の美容室・アイラッシュサロン fleur GROUP — スタッフ紹介",
+  blog:     "高知県の美容室・アイラッシュサロン fleur GROUP — スタイリストブログ",
+  campaign: "高知県の美容室・アイラッシュサロン fleur GROUP — お知らせ・キャンペーン",
+};
+
 const FALLBACKS = [
   "from-[#2c2018] to-[#0f0a06]",
   "from-[#1c2028] to-[#080b10]",
@@ -48,7 +55,7 @@ function CardItem({ card, index }: { card: QuickLinkCard; index: number }) {
             // eslint-disable-next-line @next/next/no-img-element
             <img
               src={card.imageSrc}
-              alt={card.title}
+              alt={card.title || ALT_FALLBACKS[card.id] || "fleur GROUP"}
               loading="lazy"
               className="w-full h-full object-cover"
             />
