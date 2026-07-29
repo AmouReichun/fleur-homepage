@@ -181,6 +181,13 @@ export const rivSalonSchema = {
       closes: "18:30",
     },
   ],
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: 4.65,
+    reviewCount: 674,
+    bestRating: 5,
+    worstRating: 1,
+  },
   hasOfferCatalog: {
     "@type": "OfferCatalog",
     name: "得意メニュー",
@@ -249,6 +256,13 @@ export const fleuramiSalonSchema = {
       closes: "18:00",
     },
   ],
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: 4.67,
+    reviewCount: 388,
+    bestRating: 5,
+    worstRating: 1,
+  },
   hasOfferCatalog: {
     "@type": "OfferCatalog",
     name: "得意メニュー",
@@ -316,6 +330,13 @@ export const raffineSalonSchema = {
       closes: "18:30",
     },
   ],
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: 4.82,
+    reviewCount: 200,
+    bestRating: 5,
+    worstRating: 1,
+  },
   hasOfferCatalog: {
     "@type": "OfferCatalog",
     name: "得意メニュー",
