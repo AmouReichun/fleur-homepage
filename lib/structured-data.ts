@@ -110,6 +110,7 @@ export const organizationSchema = {
     },
   ],
   sameAs: [
+    "https://fleurami-group.com",
     "https://beauty.hotpepper.jp/slnH000528388/",
     "https://beauty.hotpepper.jp/slnH000634137/",
     "https://beauty.hotpepper.jp/kr/slnH000767549/",
