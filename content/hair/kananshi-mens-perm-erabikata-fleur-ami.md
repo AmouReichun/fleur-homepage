@@ -14,7 +14,6 @@ question: "香南市でメンズパーマをかけるとき、サロン選びで
 answer_summary: "メンズパーマはカット技術との組み合わせが仕上がりを大きく左右するため、パーマとカットを一体で提案してくれるサロンを選ぶことが重要です。香南市のfleur amiでは、カウンセリングで髪質・骨格・ライフスタイルを確認したうえで、刈り上げとパーマのバランスを提案しています。持ちの目安は2〜3ヶ月程度で、定期的なメンテナンスを前提としたスタイルづくりが得意です。"
 instagram_id: "18103194896143106"
 instagram_permalink: "https://www.instagram.com/reel/DbH8EQiBOi4/"
-draft: true
 yakkihou_flag: true
 yakkihou_words: ["絶対", "完全に"]
 faq:
