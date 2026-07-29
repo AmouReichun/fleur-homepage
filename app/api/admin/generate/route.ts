@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { imageUrlToBase64 } from "@/lib/blog/instagram-api";
 import { generateArticleFromPost } from "@/lib/blog/article-core";
-import { commitFile, deleteFile } from "@/lib/blog/github";
+import { commitFile, deleteFile, getFileContent } from "@/lib/blog/github";
 import { getFileBase64FromGithub } from "@/lib/blog/staff-uploads";
 import { generateArticleFromUpload, buildMarkdown } from "@/scripts/generate-article";
 import type { IgPost } from "@/lib/blog/instagram-api";
@@ -9,6 +9,26 @@ import type { StaffUpload } from "@/lib/blog/staff-uploads";
 
 export const runtime = "nodejs";
 export const maxDuration = 180;
+
+async function markIgIdAsProcessed(igId: string): Promise<void> {
+  try {
+    const IGNORE_PATH = "data/ig-ignored.json";
+    const cur = await getFileContent(IGNORE_PATH);
+    let ids: string[] = [];
+    if (cur) {
+      try {
+        const parsed = JSON.parse(cur.content);
+        if (Array.isArray(parsed)) ids = parsed.map(String);
+      } catch { ids = []; }
+    }
+    if (!ids.includes(igId)) {
+      ids.push(igId);
+      await commitFile(IGNORE_PATH, JSON.stringify(ids, null, 2), `processed ig post: ${igId}`, cur?.sha);
+    }
+  } catch {
+    // 失敗しても生成自体は成功扱いにする
+  }
+}
 
 async function handleInstagram(post: IgPost) {
   // 画像を取得して base64 に変換
@@ -35,6 +55,9 @@ async function handleInstagram(post: IgPost) {
   // GitHub に記事 .md をコミット
   const mdPath = `content/${result.category}/${result.slug}.md`;
   await commitFile(mdPath, result.markdown, `draft: ${post.salonName} - ${result.slug}`);
+
+  // 生成済みIDを即時記録（Vercel再ビルド前に同じ投稿が再生成されるのを防ぐ）
+  await markIgIdAsProcessed(post.id);
 
   return { slug: result.slug, category: result.category };
 }
