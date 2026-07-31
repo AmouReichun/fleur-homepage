@@ -14,7 +14,6 @@ question: "高知市で縮毛矯正と髪質改善トリートメントはどち
 answer_summary: "うねりや広がりの程度・求める仕上がり・ライフスタイルによって最適な施術は異なります。縮毛矯正はしっかりとしたストレートを長期間キープしたい方に向き、髪質改善トリートメントはやわらかなまとまりや手触りを整えたい方に向く傾向があります。高知市のRiv. by fleur amiでは、カウンセリングで髪の状態を確認しながらどちらが合うかを一緒に考えることができます。"
 instagram_id: ""
 instagram_permalink: ""
-draft: true
 yakkihou_flag: true
 yakkihou_words: ["完全に"]
 faq:
