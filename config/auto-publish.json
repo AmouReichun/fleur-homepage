@@ -1,6 +1,6 @@
 {
   "enabled": true,
-  "publishHourJST": 18,
+  "publishHourJST": 9,
   "articlesPerSalon": 1,
   "publishDaysOfWeek": [
     0,
