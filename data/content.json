@@ -1128,7 +1128,8 @@
         "美容師免許（国家資格）"
       ],
       "awards": [],
-      "slug": "nishida-nanami"
+      "slug": "nishida-nanami",
+      "hidden": true
     },
     {
       "name": "細川 彩香",
