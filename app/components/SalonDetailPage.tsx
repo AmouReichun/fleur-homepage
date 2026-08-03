@@ -21,7 +21,7 @@ export default async function SalonDetailPage({ salonKey }: { salonKey: string }
 
   // この店舗のスタッフ（既存データから抽出）
   const STAFF_SALON: Record<string, string> = { riv: "Riv. by fleurami", fleurami: "fleurami", raffine: "Raffine" };
-  const salonStaff = (content.staff ?? []).filter((m) => m.salon === STAFF_SALON[salonKey]).slice(0, 6);
+  const salonStaff = (content.staff ?? []).filter((m) => m.salon === STAFF_SALON[salonKey] && !m.hidden).slice(0, 6);
 
   // 悩み別導線（AIO：悩み→対応メニュー）。service があればサービスページへ内部リンク。
   const CONCERNS: Record<string, { q: string; a: string; service?: string }[]> = {

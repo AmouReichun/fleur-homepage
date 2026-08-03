@@ -46,7 +46,9 @@ const crumbs = [
 export default async function StaffPage() {
   const content = await getContentCached();
 
-  const personSchemas = content.staff
+  const visibleStaff = content.staff.filter((m) => !m.hidden);
+
+  const personSchemas = visibleStaff
     .filter((m) => m.slug)
     .map((m) => ({
       "@context": "https://schema.org",
@@ -103,7 +105,7 @@ export default async function StaffPage() {
       {/* タブ＋グリッド */}
       <section className="bg-white py-12 sm:py-16">
         <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
-          <StaffTabs staff={content.staff} />
+          <StaffTabs staff={visibleStaff} />
         </div>
       </section>
 

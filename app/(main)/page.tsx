@@ -176,7 +176,7 @@ export default async function HomePage() {
       <GalleryGrid posts={allPosts} />
 
       {/* ─── Staff Preview ─── */}
-      <StaffPreview staff={content.staff} />
+      <StaffPreview staff={content.staff.filter((m) => !m.hidden)} />
 
       {/* ─── FAQ ─── */}
       <section className="py-24 sm:py-36 bg-site-light">

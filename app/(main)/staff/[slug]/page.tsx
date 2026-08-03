@@ -46,7 +46,7 @@ export const dynamicParams = false;
 export async function generateStaticParams() {
   const content = await getContentCached();
   return content.staff
-    .filter((m) => m.slug)
+    .filter((m) => m.slug && !m.hidden)
     .map((m) => ({ slug: m.slug! }));
 }
 
@@ -74,7 +74,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function StaffProfilePage({ params }: Props) {
   const content = await getContentCached();
   const member = content.staff.find((m) => m.slug === params.slug);
-  if (!member) notFound();
+  if (!member || member.hidden) notFound();
 
   const salonKey = SALON_KEYS[member.salon] ?? "fleurami";
   const salonUrl = SALON_URLS[member.salon] ?? `${BASE}/salon`;

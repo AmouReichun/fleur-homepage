@@ -52,6 +52,12 @@ export default function StaffEditor({
     setData((prev) => prev.filter((_, idx) => idx !== globalIdx));
   }
 
+  function toggleHidden(globalIdx: number) {
+    const next = [...data];
+    next[globalIdx] = { ...next[globalIdx], hidden: !next[globalIdx].hidden };
+    setData(next);
+  }
+
   // タブ内での順番入れ替え（全体配列の該当2要素をスワップ）
   function move(globalIdx: number, direction: -1 | 1) {
     const pos = tabEntries.findIndex((e) => e.index === globalIdx);
@@ -152,7 +158,12 @@ export default function StaffEditor({
       {/* スタッフカード一覧 */}
       <div className="space-y-5">
         {tabEntries.map(({ member, index }, pos) => (
-          <div key={index} className="bg-[#1a1a1a] border border-[#333] rounded-sm p-4 space-y-3">
+          <div
+            key={index}
+            className={`bg-[#1a1a1a] border rounded-sm p-4 space-y-3 ${
+              member.hidden ? "border-[#555] opacity-60" : "border-[#333]"
+            }`}
+          >
             {/* ヘッダー行 */}
             <div className="flex items-center gap-2">
               <div className="flex flex-col gap-0.5">
@@ -169,7 +180,21 @@ export default function StaffEditor({
                   className="text-[10px] text-gray-400 hover:text-white disabled:opacity-20 leading-none px-1 py-0.5"
                 >▼</button>
               </div>
-              <span className="text-xs text-[#B8956A] flex-1">スタッフ {pos + 1}</span>
+              <span className="text-xs text-[#B8956A]">スタッフ {pos + 1}</span>
+              {member.hidden && (
+                <span className="text-[10px] text-gray-400 border border-[#555] rounded-full px-2 py-0.5">
+                  非表示中
+                </span>
+              )}
+              <span className="flex-1" />
+              <button
+                type="button"
+                onClick={() => toggleHidden(index)}
+                className="text-xs text-gray-400 hover:text-white transition-colors"
+              >
+                {member.hidden ? "表示する" : "非表示にする"}
+              </button>
+              <span className="text-[#444]">|</span>
               <button
                 type="button"
                 onClick={() => remove(index)}

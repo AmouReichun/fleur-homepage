@@ -81,6 +81,7 @@ export interface StaffMember {
   salon: string;
   bio: string;
   imageSrc: string;
+  hidden?: boolean; // trueならサイト非公開（データは残す。管理画面のみ表示）
   // 拡張（任意・未設定なら非表示）
   specialties?: string[]; // 得意技術
   ageGroups?: string[]; // 得意年代
