@@ -104,8 +104,8 @@ export default function GalleryGrid({ posts }: { posts: PostMeta[] }) {
                   <div className="flex-1 h-px bg-site-greige" />
                 </div>
 
-                {/* 店舗ごとのグリッド */}
-                <div className={`grid gap-8 sm:gap-10 ${salonSections.length > 1 ? "sm:grid-cols-2" : "sm:grid-cols-1 max-w-2xl"}`}>
+                {/* 店舗ごとのグリッド（1店舗でも美容室と同じタイルサイズに揃えるため常に2列） */}
+                <div className="grid gap-8 sm:gap-10 sm:grid-cols-2">
                   {salonSections.map((s) => (
                     <SalonGrid key={s.label} posts={s.posts} salonLabel={s.label} />
                   ))}
