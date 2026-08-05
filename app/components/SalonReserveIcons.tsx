@@ -5,14 +5,14 @@ import type { SalonContent } from "@/lib/content";
 
 function PhoneIcon() {
   return (
-    <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden>
+    <svg viewBox="0 0 24 24" className="w-5 h-5 sm:w-7 sm:h-7" fill="currentColor" aria-hidden>
       <path d="M6.6 10.9c1.5 2.9 3.9 5.3 6.8 6.8l2.1-2.1c.3-.3.7-.4 1.1-.3 1.1.4 2.4.6 3.6.6.6 0 1 .5 1 1V20c0 .6-.4 1-1 1C10.5 21 3 13.5 3 4.2c0-.6.5-1 1-1h3.1c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.3 1.1l-2.1 2z" />
     </svg>
   );
 }
 function WebIcon() {
   return (
-    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden>
+    <svg viewBox="0 0 24 24" className="w-5 h-5 sm:w-7 sm:h-7" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden>
       <circle cx="12" cy="12" r="9" />
       <path d="M3 12h18" />
       <path d="M12 3c2.6 2.7 2.6 15.3 0 18M12 3c-2.6 2.7-2.6 15.3 0 18" />
@@ -92,7 +92,7 @@ export default function SalonReserveIcons({
   if (channels.length === 0) return null;
 
   return (
-    <div className={`flex flex-wrap gap-x-1.5 gap-y-3 ${align === "center" ? "justify-center" : ""}`}>
+    <div className={`flex flex-wrap gap-x-1.5 gap-y-3 sm:gap-x-3 sm:gap-y-4 ${align === "center" ? "justify-center" : ""}`}>
       {channels.map((c) => {
         const tile =
           c.kind === "tel" || c.kind === "web"
@@ -101,7 +101,7 @@ export default function SalonReserveIcons({
         const inner = (
           <span className="flex flex-col items-center gap-1.5 group w-full">
             <span
-              className={`w-10 h-10 rounded-[10px] overflow-hidden flex items-center justify-center transition-transform duration-200 group-hover:-translate-y-0.5 group-hover:shadow-md ${tile}`}
+              className={`w-10 h-10 sm:w-14 sm:h-14 rounded-[10px] sm:rounded-xl overflow-hidden flex items-center justify-center transition-transform duration-200 group-hover:-translate-y-0.5 group-hover:shadow-md ${tile}`}
             >
               {c.kind === "tel" && <PhoneIcon />}
               {c.kind === "web" && <WebIcon />}
@@ -109,12 +109,12 @@ export default function SalonReserveIcons({
               {c.kind === "instagram" && <InstagramIcon uid={`${uid}-${c.kind}`} />}
               {c.kind === "hpb" && <HpbIcon />}
             </span>
-            {showLabels && <span className="text-[9px] text-site-muted text-center leading-tight tracking-tight whitespace-pre-line">{c.short}</span>}
+            {showLabels && <span className="text-[9px] sm:text-[11px] text-site-muted text-center leading-tight tracking-tight whitespace-pre-line">{c.short}</span>}
           </span>
         );
         // 各チャネルをタイル幅(40px)の等幅カラムにして整列＋横一列に収める。
         // ラベルは40px内に収まる短さ（長い場合は中央で折返し、タイル列は崩れない）。
-        const cls = "shrink-0 w-10 flex";
+        const cls = "shrink-0 w-10 sm:w-14 flex";
         return c.external ? (
           <a key={c.kind} href={c.href} target="_blank" rel="noopener noreferrer" className={cls} aria-label={c.label} title={c.label}>{inner}</a>
         ) : (
