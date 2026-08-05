@@ -2,9 +2,9 @@ name: Daily Article Generation
 
 on:
   schedule:
-    # 13:00 JST (= 04:00 UTC) に1日1回起動。GitHub Actions の遅延に強い構成。
+    # 17:00 JST (= 08:00 UTC) に1日1回起動。config/daily-generate.json の hourJST(17) と一致。
     # config/daily-generate.json の hourJST を変更する場合はこの cron も合わせて更新すること。
-    - cron: '0 4 * * *'
+    - cron: '0 8 * * *'
   workflow_dispatch:
     # 手動実行も可能（テスト用）
 
