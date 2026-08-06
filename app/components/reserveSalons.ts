@@ -21,7 +21,7 @@ export const reserveSalons: ReserveSalonEntry[] = [
   {
     key: "riv",
     name: "Riv. by fleurami",
-    area: "高知県高知市",
+    area: "高知県高知市南川添9-21 フルールアミー3 2F",
     href: "/salon/riv",
     hotpepperUrl: "https://beauty.hotpepper.jp/slnH000634137/",
     phone: "088-884-5566",
