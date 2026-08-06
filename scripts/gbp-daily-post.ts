@@ -154,7 +154,7 @@ async function main() {
   for (const [salonKey, salonArticles] of Object.entries(groupBySalon(articles))) {
     const unposted = salonArticles
       .filter((a) => !postedSlugs.has(a.slug))
-      .sort((a, b) => (a.date < b.date ? -1 : 1));
+      .sort((a, b) => (a.date > b.date ? -1 : 1)); // 新しい順（date降順）: 最新の記事を優先投稿
 
     if (unposted.length === 0) {
       console.log(`  [text][${salonKey}] 未投稿なし`);
@@ -190,7 +190,7 @@ async function main() {
   for (const [salonKey, salonArticles] of Object.entries(groupBySalon(articlesWithThumbnail))) {
     const unposted = salonArticles
       .filter((a) => !photoPostedSlugs.has(a.slug))
-      .sort((a, b) => (a.date < b.date ? -1 : 1));
+      .sort((a, b) => (a.date > b.date ? -1 : 1)); // 新しい順（date降順）: 最新の記事を優先投稿
 
     if (unposted.length === 0) {
       console.log(`  [photo][${salonKey}] 未投稿なし`);
