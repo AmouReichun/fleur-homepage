@@ -3,6 +3,8 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
+import SalonReserveIcons from "@/app/components/SalonReserveIcons";
+import { reserveSalons } from "@/app/components/reserveSalons";
 
 const navLinks = [
   { href: "/salon", label: "店舗案内" },
@@ -15,10 +17,31 @@ const navLinks = [
   { href: "/contact", label: "お問い合わせ" },
 ];
 
+/** ご予約ポップオーバー / モバイルメニュー共通の店舗別予約チャネル一覧 */
+function ReserveList({ onNavigate }: { onNavigate?: () => void }) {
+  return (
+    <div className="space-y-5">
+      {reserveSalons.map((s) => (
+        <div key={s.key}>
+          <div className="flex items-baseline gap-2 mb-2">
+            <span className="text-xs font-medium text-site-text">{s.name}</span>
+            <span className="text-[10px] text-site-muted">{s.area}</span>
+          </div>
+          {/* SalonReserveIcons の各チャネル(<a>)クリックでメニューを閉じる */}
+          <div onClick={onNavigate}>
+            <SalonReserveIcons salon={s} uid={`reserve-${s.key}`} />
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
 export default function Header() {
   const pathname = usePathname();
   const isHome = pathname === "/";
   const [isOpen, setIsOpen] = useState(false);
+  const [reserveOpen, setReserveOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -26,6 +49,12 @@ export default function Header() {
     window.addEventListener("scroll", handler, { passive: true });
     return () => window.removeEventListener("scroll", handler);
   }, []);
+
+  // ページ遷移時にメニュー・ポップオーバーを閉じる
+  useEffect(() => {
+    setReserveOpen(false);
+    setIsOpen(false);
+  }, [pathname]);
 
   const solid = !isHome || scrolled || isOpen;
 
@@ -46,21 +75,44 @@ export default function Header() {
             fleur GROUP
           </Link>
 
-          <nav className="hidden lg:flex items-center gap-5 xl:gap-7">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className={`text-[11px] tracking-[0.08em] whitespace-nowrap transition-colors duration-400 ${
-                  solid
-                    ? "text-site-text hover:text-site-accent"
-                    : "text-white/80 hover:text-white"
-                }`}
+          <div className="hidden lg:flex items-center gap-5 xl:gap-7">
+            <nav className="flex items-center gap-5 xl:gap-7">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={`text-[11px] tracking-[0.08em] whitespace-nowrap transition-colors duration-400 ${
+                    solid
+                      ? "text-site-text hover:text-site-accent"
+                      : "text-white/80 hover:text-white"
+                  }`}
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </nav>
+
+            {/* ご予約ボタン + ポップオーバー（PC） */}
+            <div className="relative">
+              <button
+                onClick={() => setReserveOpen((v) => !v)}
+                aria-expanded={reserveOpen}
+                className="px-5 py-2 rounded-full bg-site-accent text-white text-[11px] tracking-[0.18em] whitespace-nowrap hover:opacity-90 transition-opacity duration-200"
               >
-                {link.label}
-              </Link>
-            ))}
-          </nav>
+                ご予約
+              </button>
+              {reserveOpen && (
+                <>
+                  <div className="fixed inset-0 z-40" onClick={() => setReserveOpen(false)} aria-hidden />
+                  <div className="absolute right-0 top-full mt-3 z-50 w-[340px] bg-white rounded-xl shadow-xl border border-gray-100 p-5">
+                    <p className="text-[10px] tracking-[0.3em] text-site-accent uppercase mb-1">Reservation</p>
+                    <p className="text-xs text-site-muted mb-4">ご希望の店舗・方法をお選びください</p>
+                    <ReserveList onNavigate={() => setReserveOpen(false)} />
+                  </div>
+                </>
+              )}
+            </div>
+          </div>
 
           <button
             onClick={() => setIsOpen(!isOpen)}
@@ -82,6 +134,11 @@ export default function Header() {
 
       {isOpen && (
         <div className="lg:hidden bg-white border-t border-gray-100">
+          {/* ご予約（モバイルメニュー先頭） */}
+          <div className="px-8 py-5 border-b border-gray-100">
+            <p className="text-[10px] tracking-[0.3em] text-site-accent uppercase mb-3">Reservation</p>
+            <ReserveList onNavigate={() => setIsOpen(false)} />
+          </div>
           <nav className="flex flex-col py-2">
             {navLinks.map((link) => (
               <Link
