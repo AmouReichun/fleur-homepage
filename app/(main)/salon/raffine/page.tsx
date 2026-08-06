@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { raffineSalonSchema, breadcrumbSchema } from "@/lib/structured-data";
 import SalonDetailPage from "@/app/components/SalonDetailPage";
 
-const TITLE = "Raffine | 高知市のアイラッシュサロン - まつげパーマ・眉毛WAX";
-const DESC = "高知市はりまや橋のアイラッシュサロン「Raffine」。まつ毛パーマ（パリジャンリフト）・まつエク・眉毛WAXに特化した専門サロン。4〜6週間持続する施術が人気。メンズ眉WAXあり。Web・LINE予約受付中。";
+const TITLE = "マツエク・まつ毛パーマ 高知市｜眉毛WAX・アイブロウ｜アイラッシュサロン Raffine";
+const DESC = "高知市はりまや橋でマツエク・まつ毛パーマ（パリジェンヌ／ラッシュリフト）・眉毛WAX・アイブロウをお探しなら、アイラッシュサロン Raffine（ラフィーネ）。4〜6週間持続する施術が人気で、メンズ眉WAXも対応。Web・LINE予約受付中。";
 const OG_IMG = "/images/admin/salon-raffine-1782206000346.JPG";
 
 export const metadata: Metadata = {

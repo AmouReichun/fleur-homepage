@@ -63,6 +63,9 @@ export default async function SalonDetailPage({ salonKey }: { salonKey: string }
           {salon.nameReading && (
             <p className="text-xs text-site-muted tracking-widest mb-1">{salon.nameReading}</p>
           )}
+          {salon.tagline && (
+            <p className="text-sm sm:text-base text-site-text/80 font-medium mt-2">{salon.tagline}</p>
+          )}
         </div>
       </div>
 
