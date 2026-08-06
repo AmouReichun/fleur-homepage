@@ -35,6 +35,7 @@ export interface SalonContent {
   instagramUrl: string;
   imageSrc: string;
   nameReading?: string;
+  heroKeywords?: string; // h1に入れる地域＋サービスの複合キーワード（AIO/SEO用・任意）
   mapEmbedUrl: string;
   faq: FaqItem[];
   menuNotes?: string[];

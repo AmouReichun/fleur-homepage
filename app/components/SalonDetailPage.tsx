@@ -59,7 +59,12 @@ export default async function SalonDetailPage({ salonKey }: { salonKey: string }
             <span>{salon.name}</span>
           </nav>
           <p className="text-xs tracking-[0.3em] text-site-accent mb-2 uppercase">{salon.area} / {salon.salonType}</p>
-          <h1 className="font-serif text-3xl sm:text-4xl font-semibold text-site-text mb-1">{salon.name}</h1>
+          <h1 className="font-serif text-3xl sm:text-4xl font-semibold text-site-text mb-1">
+            {salon.heroKeywords && (
+              <span className="block font-sans text-sm sm:text-base font-medium text-site-accent mb-1.5">{salon.heroKeywords}</span>
+            )}
+            {salon.name}
+          </h1>
           {salon.nameReading && (
             <p className="text-xs text-site-muted tracking-widest mb-1">{salon.nameReading}</p>
           )}
