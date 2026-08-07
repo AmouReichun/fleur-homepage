@@ -1,7 +1,7 @@
 /**
- * 毎日1回、各サロンの未送信ブログ記事を1件ずつ GBP に投稿するスクリプト。
- *   - 「最新情報（テキスト投稿）」: 未送信記事を1件/サロン → data/gbp-posted.json で管理
- *   - 「写真投稿」              : サムネイルのある未送信記事を1件/サロン → data/gbp-photos-posted.json で管理
+ * 毎日1回、各サロンの未送信ブログ記事を PER_SALON 件ずつ GBP に投稿するスクリプト。
+ *   - 「最新情報（テキスト投稿）」: 未送信記事を PER_SALON 件/サロン → data/gbp-posted.json で管理
+ *   - 「写真投稿」              : サムネイルのある未送信記事を PER_SALON 件/サロン → data/gbp-photos-posted.json で管理
  * GitHub Actions から実行される（gbp-daily-post.yml）。
  */
 import * as fs from "fs";
@@ -13,6 +13,10 @@ const POSTED_PATH = path.join(process.cwd(), "data", "gbp-posted.json");
 const PHOTOS_POSTED_PATH = path.join(process.cwd(), "data", "gbp-photos-posted.json");
 const SITE_ORIGIN = "https://fleur-group.jp";
 const WEBHOOK_URL = process.env.GBP_WEBHOOK_URL;
+
+// 1実行あたり各サロンから投稿する件数（テキスト・写真それぞれ）。
+// バックログ消化のため 1→2 に増。GBPのスパム判定様子見のため env で調整可能。
+const PER_SALON = Number(process.env.GBP_PER_SALON) || 2;
 
 const SALON_NAME_TO_KEY: Record<string, string> = {
   "fleur ami": "fleurami",
@@ -161,16 +165,17 @@ async function main() {
       continue;
     }
 
-    const target = unposted[0];
-    try {
-      await postTextToGbp(target);
-      postedSlugs.add(target.slug);
-      console.log(`  ✓ [text][${salonKey}] ${target.slug}`);
-      textPosted++;
-    } catch (e) {
-      console.error(
-        `  ✗ [text][${salonKey}] ${target.slug} — ${e instanceof Error ? e.message : String(e)}`,
-      );
+    for (const target of unposted.slice(0, PER_SALON)) {
+      try {
+        await postTextToGbp(target);
+        postedSlugs.add(target.slug);
+        console.log(`  ✓ [text][${salonKey}] ${target.slug}`);
+        textPosted++;
+      } catch (e) {
+        console.error(
+          `  ✗ [text][${salonKey}] ${target.slug} — ${e instanceof Error ? e.message : String(e)}`,
+        );
+      }
     }
   }
 
@@ -197,16 +202,17 @@ async function main() {
       continue;
     }
 
-    const target = unposted[0];
-    try {
-      await postPhotoToGbp(target);
-      photoPostedSlugs.add(target.slug);
-      console.log(`  ✓ [photo][${salonKey}] ${target.slug}`);
-      photoPosted++;
-    } catch (e) {
-      console.error(
-        `  ✗ [photo][${salonKey}] ${target.slug} — ${e instanceof Error ? e.message : String(e)}`,
-      );
+    for (const target of unposted.slice(0, PER_SALON)) {
+      try {
+        await postPhotoToGbp(target);
+        photoPostedSlugs.add(target.slug);
+        console.log(`  ✓ [photo][${salonKey}] ${target.slug}`);
+        photoPosted++;
+      } catch (e) {
+        console.error(
+          `  ✗ [photo][${salonKey}] ${target.slug} — ${e instanceof Error ? e.message : String(e)}`,
+        );
+      }
     }
   }
 
@@ -215,7 +221,9 @@ async function main() {
     console.log(`[photo] 完了: ${photoPosted} 件投稿`);
   }
 
-  console.log(`\n[gbp-daily-post] 完了 — テキスト: ${textPosted}件 / 写真: ${photoPosted}件`);
+  console.log(
+    `\n[gbp-daily-post] 完了（各サロン最大${PER_SALON}件）— テキスト: ${textPosted}件 / 写真: ${photoPosted}件`,
+  );
 }
 
 main().catch((e) => {
