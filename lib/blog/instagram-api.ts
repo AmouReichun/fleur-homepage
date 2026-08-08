@@ -15,8 +15,8 @@ export type IgPost = {
 };
 
 const SALONS: Record<SalonKey, { name: string; category: "hair" | "eyelash" }> = {
-  fleurami: { name: "fleur ami",         category: "hair" },
-  riv:      { name: "Riv. by fleur ami", category: "hair" },
+  fleurami: { name: "fleurami",         category: "hair" },
+  riv:      { name: "Riv. by fleurami", category: "hair" },
   raffine:  { name: "Raffine",           category: "eyelash" },
 };
 

@@ -7,8 +7,8 @@ const STRUCTURE = [
     categoryLabel: "美容室",
     en: "Hair Salon",
     salons: [
-      { label: "fleur ami", salonKey: "fleurami" },
-      { label: "Riv. by fleur ami", salonKey: "Riv. by fleurami" },
+      { label: "fleurami", salonKey: "fleurami" },
+      { label: "Riv. by fleurami", salonKey: "Riv. by fleurami" },
     ],
   },
   {

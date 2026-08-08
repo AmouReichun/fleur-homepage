@@ -9,8 +9,8 @@
 const SITE_ORIGIN = "https://fleur-group.jp";
 
 const SALON_NAME_TO_KEY: Record<string, string> = {
-  "fleur ami": "fleurami",
-  "Riv. by fleur ami": "riv",
+  "fleurami": "fleurami",
+  "Riv. by fleurami": "riv",
   "Raffine": "raffine",
 };
 
@@ -65,7 +65,7 @@ export async function postNewsToGbp(item: {
 
 /**
  * ブログ記事を対象店舗のGBPに「最新情報（投稿）」として送る。
- * salonName は frontmatter の salon フィールド値（例: "Riv. by fleur ami"）。
+ * salonName は frontmatter の salon フィールド値（例: "Riv. by fleurami"）。
  * 投稿成功時は "webhook:{salonKey}" を返す。未設定・対象なしは null。
  */
 export async function postBlogArticleToGbp(article: {

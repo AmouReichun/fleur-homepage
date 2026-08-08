@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import StaffUploadForm from "./StaffUploadForm";
 
 const SALON_INFO = {
-  fleurami: { label: "fleur ami", sub: "ヘアサロン・香南市" },
+  fleurami: { label: "fleurami", sub: "ヘアサロン・香南市" },
   riv:      { label: "Riv.",      sub: "ヘアサロン・高知市" },
   raffine:  { label: "Raffine",   sub: "アイラッシュ・高知市" },
 } as const;

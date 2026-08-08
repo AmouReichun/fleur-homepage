@@ -5,14 +5,14 @@ import { localBusinessSchema } from "@/lib/blog/structured-data";
 export const metadata: Metadata = {
   title: "フルールグループとは",
   description:
-    "高知県のヘアサロン fleur ami（香南市）・Riv.（高知市）と、まつ毛パーマ・マツエク・まゆげ専門サロン Raffine（高知市はりまや）を展開するグループ。白髪ぼかし・艶カラー・髪質改善・まつげパーマ・マツエクを得意とする。",
+    "高知県のヘアサロン fleurami（香南市）・Riv.（高知市）と、まつ毛パーマ・マツエク・まゆげ専門サロン Raffine（高知市はりまや）を展開するグループ。白髪ぼかし・艶カラー・髪質改善・まつげパーマ・マツエクを得意とする。",
   alternates: { canonical: "/blog/about" },
 };
 
 const salonDetails = [
   {
     key: "fleurami" as const,
-    name: "fleur ami",
+    name: "fleurami",
     nameJa: "フルールアミー",
     category: "Hair Salon",
     categoryJa: "ヘアサロン",
@@ -34,7 +34,7 @@ const salonDetails = [
   },
   {
     key: "riv" as const,
-    name: "Riv. by fleur ami",
+    name: "Riv. by fleurami",
     nameJa: "リヴ バイ フルールアミー",
     category: "Hair Salon",
     categoryJa: "ヘアサロン",
@@ -173,8 +173,8 @@ export default function AboutPage() {
           {/* ── 3店舗バッジ ── */}
           <div className="flex flex-wrap justify-center gap-4 sm:gap-8">
             {[
-              { name: "fleur ami", sub: "Hair · 香南市", hpb: "https://beauty.hotpepper.jp/slnH000528388/" },
-              { name: "Riv. by fleur ami", sub: "Hair · 高知市", hpb: "https://beauty.hotpepper.jp/slnH000634137/" },
+              { name: "fleurami", sub: "Hair · 香南市", hpb: "https://beauty.hotpepper.jp/slnH000528388/" },
+              { name: "Riv. by fleurami", sub: "Hair · 高知市", hpb: "https://beauty.hotpepper.jp/slnH000634137/" },
               { name: "Raffine", sub: "Lash & Brow · 高知市", hpb: "https://beauty.hotpepper.jp/kr/slnH000767549/" },
             ].map((s) => (
               <a
@@ -461,7 +461,7 @@ export default function AboutPage() {
             />
             <div className="space-y-1.5">
               <p className="text-xs leading-loose break-keep" style={{ color: "#A89070" }}>
-                fleur ami・Riv. by fleur ami は<span style={{ color: "#7A6850" }}>株式会社フルール・アミー</span>が運営します。
+                fleurami・Riv. by fleurami は<span style={{ color: "#7A6850" }}>株式会社フルール・アミー</span>が運営します。
               </p>
               <p className="text-xs leading-loose break-keep" style={{ color: "#A89070" }}>
                 Raffine（まつげ・まゆげ専門店）は<span style={{ color: "#7A6850" }}>株式会社フルール・ロータス</span>が運営します。

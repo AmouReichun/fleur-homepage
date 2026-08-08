@@ -34,8 +34,8 @@ type GeneratedArticle = {
 };
 
 export const UPLOAD_SALONS = {
-  fleurami: { name: "fleur ami",         category: "hair"     as const },
-  riv:      { name: "Riv. by fleur ami", category: "hair"     as const },
+  fleurami: { name: "fleurami",         category: "hair"     as const },
+  riv:      { name: "Riv. by fleurami", category: "hair"     as const },
   raffine:  { name: "Raffine",           category: "eyelash"  as const },
 } as const;
 

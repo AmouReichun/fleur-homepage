@@ -6,9 +6,9 @@ import { localBusinessSchema, breadcrumbSchema, collectionPageSchema } from "@/l
 import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
-  title: "fleur ami ヘア症例・コラム",
+  title: "fleurami ヘア症例・コラム",
   description:
-    "香南市のヘアサロン fleur ami によるヘアカラー・髪質改善・白髪ぼかし・縮毛矯正の症例とコラム。大人女性（40代前後）向けのスタイル提案。",
+    "香南市のヘアサロン fleurami によるヘアカラー・髪質改善・白髪ぼかし・縮毛矯正の症例とコラム。大人女性（40代前後）向けのスタイル提案。",
   alternates: { canonical: "/blog/hair/fleur-ami" },
 };
 
@@ -32,17 +32,17 @@ const woodBg = {
 };
 
 export default function FleurAmiPage() {
-  const posts = getAllPosts("hair").filter((p) => p.salon === "fleur ami");
+  const posts = getAllPosts("hair").filter((p) => p.salon === "fleurami");
   const crumbItems = [
     { name: "トップ", url: "/" },
     { name: "ヘア", url: "/blog/hair" },
-    { name: "fleur ami", url: "/blog/hair/fleur-ami" },
+    { name: "fleurami", url: "/blog/hair/fleur-ami" },
   ];
   const crumb = breadcrumbSchema(crumbItems);
   const col = collectionPageSchema(
-    "fleur ami ヘア症例・コラム",
+    "fleurami ヘア症例・コラム",
     "/blog/hair/fleur-ami",
-    "香南市のヘアサロン fleur ami によるヘアカラー・髪質改善・白髪ぼかし・縮毛矯正の症例とコラム",
+    "香南市のヘアサロン fleurami によるヘアカラー・髪質改善・白髪ぼかし・縮毛矯正の症例とコラム",
     posts,
   );
 
@@ -64,24 +64,24 @@ export default function FleurAmiPage() {
           style={{ color: "rgba(160,120,72,0.08)", lineHeight: 1 }}
           aria-hidden="true"
         >
-          fleur ami
+          fleurami
         </span>
 
         <div className="max-w-wide mx-auto relative z-10">
           <div className="flex items-center gap-2 mb-5">
             <span className="w-1 h-1 rounded-full bg-hair-accent-warm" />
             <span className="text-xs tracking-[0.2em] text-hair-accent-warm font-cormorant">
-              fleur ami — Hair Salon / 香南市
+              fleurami — Hair Salon / 香南市
             </span>
             <span className="w-1 h-1 rounded-full bg-hair-accent-warm" />
           </div>
 
           <h1 className="font-mincho text-2xl sm:text-3xl font-medium text-hair-text mb-3 leading-snug tracking-wide">
-            fleur ami ヘア症例・コラム
+            fleurami ヘア症例・コラム
           </h1>
 
           <p className="text-sm text-hair-muted leading-relaxed max-w-md">
-            高知県香南市のヘアサロン fleur ami のスタイリストが、
+            高知県香南市のヘアサロン fleurami のスタイリストが、
             <br className="hidden sm:block" />
             カラー・髪質改善・白髪ぼかしを症例とともに解説します。
           </p>

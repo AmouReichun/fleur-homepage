@@ -5,9 +5,9 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import ArticleCard from "@/components/ArticleCard";
 
 export const metadata: Metadata = {
-  title: "高知の髪質改善サロン｜fleur ami（香南市）・Riv.（高知市）",
+  title: "高知の髪質改善サロン｜fleurami（香南市）・Riv.（高知市）",
   description:
-    "高知県で髪質改善トリートメントが受けられるヘアサロン。香南市のfleur ami・高知市のRiv. by fleur amiが、うねり・ダメージ・広がりを改善しサラサラのツヤ髪へ導きます。施術時間・効果・縮毛矯正との違いも解説。",
+    "高知県で髪質改善トリートメントが受けられるヘアサロン。香南市のfleurami・高知市のRiv. by fleuramiが、うねり・ダメージ・広がりを改善しサラサラのツヤ髪へ導きます。施術時間・効果・縮毛矯正との違いも解説。",
   alternates: { canonical: "/blog/hair/kamiushitsu-kaizen" },
   keywords: [
     "髪質改善 高知",
@@ -42,11 +42,11 @@ const woodBg = {
 const faq = [
   {
     q: "高知市で髪質改善トリートメントができる美容室は？",
-    a: "高知市南川添のRiv. by fleur ami（高知IC車4分・駐車場5台）で髪質改善トリートメントを受けられます。ホットペッパービューティーから予約が可能です。",
+    a: "高知市南川添のRiv. by fleurami（高知IC車4分・駐車場5台）で髪質改善トリートメントを受けられます。ホットペッパービューティーから予約が可能です。",
   },
   {
     q: "香南市で髪質改善ができる美容院は？",
-    a: "香南市野市町のfleur ami（のいち駅から車4分・駐車場7台）が髪質改善トリートメントを提供しています。大人女性のうねり・ダメージケアを得意とするサロンです。",
+    a: "香南市野市町のfleurami（のいち駅から車4分・駐車場7台）が髪質改善トリートメントを提供しています。大人女性のうねり・ダメージケアを得意とするサロンです。",
   },
   {
     q: "髪質改善と縮毛矯正はどう違うの？",
@@ -57,7 +57,7 @@ const faq = [
     a: "効果の目安は1〜2ヶ月程度です。1〜2ヶ月ごとの定期ケアを続けると、回を重ねるごとに髪質が改善されやすくなります。ダメージの程度や髪質によって個人差があります。",
   },
   {
-    q: "fleur ami・Riv.の髪質改善はどんな人に向いている？",
+    q: "fleurami・Riv.の髪質改善はどんな人に向いている？",
     a: "カラーを繰り返してパサつく方、雨の日に髪がふくらむ方、くせほどではないがうねりが気になる方、艶のあるまとまりやすい髪にしたい方に向いています。まずはカウンセリングで髪の状態を確認してからご提案します。",
   },
 ];
@@ -65,9 +65,9 @@ const faq = [
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "高知の髪質改善サロン｜fleur ami・Riv.",
+  name: "高知の髪質改善サロン｜fleurami・Riv.",
   description:
-    "高知県で髪質改善トリートメントが受けられるヘアサロン案内。香南市のfleur ami・高知市のRiv. by fleur ami。",
+    "高知県で髪質改善トリートメントが受けられるヘアサロン案内。香南市のfleurami・高知市のRiv. by fleurami。",
   url: "https://fleur-group.jp/blog/hair/kamiushitsu-kaizen",
   breadcrumb: {
     "@type": "BreadcrumbList",
@@ -115,7 +115,7 @@ export default function KamiushitsuKaizenPage() {
           <div className="flex items-center gap-2 mb-5">
             <span className="w-1 h-1 rounded-full bg-hair-accent-warm" />
             <span className="text-xs tracking-[0.2em] text-hair-accent-warm font-cormorant">
-              fleur ami &amp; Riv. — Hair Quality Treatment
+              fleurami &amp; Riv. — Hair Quality Treatment
             </span>
             <span className="w-1 h-1 rounded-full bg-hair-accent-warm" />
           </div>
@@ -126,7 +126,7 @@ export default function KamiushitsuKaizenPage() {
 
           <p className="text-sm text-hair-muted leading-relaxed max-w-lg">
             うねり・ダメージ・広がりにお悩みの方へ。<br className="hidden sm:block" />
-            fleur ami（香南市）と Riv.（高知市）が、<br className="hidden sm:block" />
+            fleurami（香南市）と Riv.（高知市）が、<br className="hidden sm:block" />
             あなたの髪の内側からツヤとまとまりを引き出します。
           </p>
 
@@ -203,12 +203,12 @@ export default function KamiushitsuKaizenPage() {
             高知で髪質改善ができるサロン
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-            {/* fleur ami */}
+            {/* fleurami */}
             <div className="bg-white/70 border border-hair-border p-6" style={{ borderRadius: "4px" }}>
               <p className="text-xs tracking-[0.2em] text-hair-accent-warm font-cormorant mb-1 uppercase">
                 香南市
               </p>
-              <h3 className="font-mincho text-lg text-hair-text mb-3">fleur ami</h3>
+              <h3 className="font-mincho text-lg text-hair-text mb-3">fleurami</h3>
               <ul className="space-y-1.5 text-xs text-hair-muted mb-5">
                 <li>📍 高知県香南市野市町西野230</li>
                 <li>🕐 9:00〜18:00（月・第1/3火 定休）</li>
@@ -244,7 +244,7 @@ export default function KamiushitsuKaizenPage() {
               <p className="text-xs tracking-[0.2em] text-hair-accent-warm font-cormorant mb-1 uppercase">
                 高知市
               </p>
-              <h3 className="font-mincho text-lg text-hair-text mb-3">Riv. by fleur ami</h3>
+              <h3 className="font-mincho text-lg text-hair-text mb-3">Riv. by fleurami</h3>
               <ul className="space-y-1.5 text-xs text-hair-muted mb-5">
                 <li>📍 高知県高知市南川添9-21 2F</li>
                 <li>🕐 9:30〜18:30（月・第1/3火 定休）</li>

@@ -35,7 +35,7 @@ export default async function AdminPage({
     .filter(a => a.date.startsWith(thisMonth)).length
 
   const salonStats = [
-    { name: 'fleur ami',         count: hairPublished.filter(a => a.salon === 'fleur ami').length },
+    { name: 'fleurami',         count: hairPublished.filter(a => a.salon === 'fleurami').length },
     { name: 'Riv.',              count: hairPublished.filter(a => a.salon?.startsWith('Riv')).length },
     { name: 'Raffine',           count: eyelashPublished.filter(a => a.salon === 'Raffine').length },
   ]

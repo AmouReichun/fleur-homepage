@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const shouldIndex = posts.length >= 5;
   return {
     title: `${tag}の施術例・ヘアコラム一覧 | 高知のヘアサロン fleur GROUP`,
-    description: `高知のヘアサロン fleur ami・Riv. by fleur amiによる「${tag}」の施術例とコラム${posts.length}件。${tag}のメニュー選びの参考に。`,
+    description: `高知のヘアサロン fleurami・Riv. by fleuramiによる「${tag}」の施術例とコラム${posts.length}件。${tag}のメニュー選びの参考に。`,
     alternates: { canonical: `/blog/hair/tag/${encodeURIComponent(tag)}` },
     robots: { index: shouldIndex, follow: true },
   };

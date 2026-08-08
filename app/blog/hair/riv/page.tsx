@@ -6,9 +6,9 @@ import { localBusinessSchema, breadcrumbSchema, collectionPageSchema } from "@/l
 import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
-  title: "Riv. by fleur ami ヘア症例・コラム",
+  title: "Riv. by fleurami ヘア症例・コラム",
   description:
-    "高知市のヘアサロン Riv. by fleur ami によるヘアカラー・髪質改善・縮毛矯正・ハイライトの症例とコラム。20〜40代向けスタイル提案。",
+    "高知市のヘアサロン Riv. by fleurami によるヘアカラー・髪質改善・縮毛矯正・ハイライトの症例とコラム。20〜40代向けスタイル提案。",
   alternates: { canonical: "/blog/hair/riv" },
 };
 
@@ -33,18 +33,18 @@ const woodBg = {
 
 export default function RivPage() {
   const posts = getAllPosts("hair").filter(
-    (p) => p.salon === "Riv. by fleur ami"
+    (p) => p.salon === "Riv. by fleurami"
   );
   const crumbItems = [
     { name: "トップ", url: "/" },
     { name: "ヘア", url: "/blog/hair" },
-    { name: "Riv. by fleur ami", url: "/blog/hair/riv" },
+    { name: "Riv. by fleurami", url: "/blog/hair/riv" },
   ];
   const crumb = breadcrumbSchema(crumbItems);
   const col = collectionPageSchema(
-    "Riv. by fleur ami ヘア症例・コラム",
+    "Riv. by fleurami ヘア症例・コラム",
     "/blog/hair/riv",
-    "高知市のヘアサロン Riv. by fleur ami によるヘアカラー・髪質改善・縮毛矯正・ハイライトの症例とコラム",
+    "高知市のヘアサロン Riv. by fleurami によるヘアカラー・髪質改善・縮毛矯正・ハイライトの症例とコラム",
     posts,
   );
 
@@ -73,17 +73,17 @@ export default function RivPage() {
           <div className="flex items-center gap-2 mb-5">
             <span className="w-1 h-1 rounded-full bg-hair-accent-warm" />
             <span className="text-xs tracking-[0.2em] text-hair-accent-warm font-cormorant">
-              Riv. by fleur ami — Hair Salon / 高知市
+              Riv. by fleurami — Hair Salon / 高知市
             </span>
             <span className="w-1 h-1 rounded-full bg-hair-accent-warm" />
           </div>
 
           <h1 className="font-mincho text-2xl sm:text-3xl font-medium text-hair-text mb-3 leading-snug tracking-wide">
-            Riv. by fleur ami ヘア症例・コラム
+            Riv. by fleurami ヘア症例・コラム
           </h1>
 
           <p className="text-sm text-hair-muted leading-relaxed max-w-md">
-            高知市のヘアサロン Riv. by fleur ami のスタイリストが、
+            高知市のヘアサロン Riv. by fleurami のスタイリストが、
             <br className="hidden sm:block" />
             髪質改善・縮毛矯正・ハイライトを症例とともに解説します。
           </p>

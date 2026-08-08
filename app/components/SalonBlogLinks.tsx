@@ -41,7 +41,7 @@ export default async function SalonBlogLinks({
     salonKey === "riv"
       ? posts.filter(isRiv)
       : salonKey === "fleurami"
-      ? posts.filter((p) => p.salon?.includes("fleur ami") && !isRiv(p))
+      ? posts.filter((p) => p.salon?.includes("fleurami") && !isRiv(p))
       : posts; // raffine = 全eyelash
   const list = filtered.slice(0, 4);
 

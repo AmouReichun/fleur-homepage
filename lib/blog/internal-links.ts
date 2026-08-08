@@ -18,7 +18,7 @@ export const SALONS: Record<
     web: "https://beauty.postas.asia/reserve/top?CODE=3df04abf87b551597a2b2595613d7d63b3843d96225b54738262420b60f751ff",
   },
   riv: {
-    key: "riv", name: "Riv.by fleurami", area: "高知市", world: "hair", hub: "/blog/hair/riv",
+    key: "riv", name: "Riv. by fleurami", area: "高知市", world: "hair", hub: "/blog/hair/riv",
     hpb: "https://beauty.hotpepper.jp/slnH000634137/",
     phone: "088-884-5566", instagram: "https://www.instagram.com/riv.kochi",
     line: "https://liff.line.me/2006084473-gbABZ6Lz/l/2a078394G2/hair",

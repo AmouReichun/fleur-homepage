@@ -30,8 +30,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 const SALON_ADDRESS: Record<string, { address: string; type: "HairSalon" | "BeautySalon" }> = {
-  "fleur ami":         { address: "野市町西野230", type: "HairSalon" },
-  "Riv. by fleur ami": { address: "南川添9-21", type: "HairSalon" },
+  "fleurami":         { address: "野市町西野230", type: "HairSalon" },
+  "Riv. by fleurami": { address: "南川添9-21", type: "HairSalon" },
   "Raffine":           { address: "はりまや町1-4-8", type: "BeautySalon" },
 };
 

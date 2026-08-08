@@ -33,7 +33,7 @@ export default function HomePage() {
             </span>
           </h1>
           <p className="text-sm sm:text-base text-group-muted leading-relaxed max-w-xl mb-8">
-            fleur ami（香南市）・Riv.（高知市）のヘアスタイリスト、
+            fleurami（香南市）・Riv.（高知市）のヘアスタイリスト、
             <br />
             Raffine（高知市）のアイリストが、
             <br />
@@ -68,7 +68,7 @@ export default function HomePage() {
               <div className="flex items-center gap-2 mb-1">
                 <span className="w-1 h-1 rounded-full bg-hair-accent-warm" />
                 <p className="text-xs text-hair-accent-warm tracking-[0.18em] uppercase font-cormorant">
-                  fleur ami &amp; Riv. — Hair
+                  fleurami &amp; Riv. — Hair
                 </p>
               </div>
               <h2 className="font-mincho text-xl sm:text-2xl font-medium text-hair-text tracking-wide">
@@ -226,7 +226,7 @@ export default function HomePage() {
               {[
                 {
                   num: "01",
-                  name: "fleur ami",
+                  name: "fleurami",
                   nameJa: "フルールアミー",
                   type: "Hair Salon",
                   area: "高知県香南市",
@@ -235,7 +235,7 @@ export default function HomePage() {
                 },
                 {
                   num: "02",
-                  name: "Riv. by fleur ami",
+                  name: "Riv. by fleurami",
                   nameJa: "リヴ バイ フルールアミー",
                   type: "Hair Salon",
                   area: "高知県高知市",

@@ -17,7 +17,7 @@ export async function GET() {
     "@context": "https://schema.org",
     "@type": "Dataset",
     name: "フルールグループ 症例・コラム 記事データ",
-    description: "高知県のヘアサロン（fleur ami・Riv.）とまつげ・まゆげサロン（Raffine）の施術症例・コラム記事の構造化データ。",
+    description: "高知県のヘアサロン（fleurami・Riv.）とまつげ・まゆげサロン（Raffine）の施術症例・コラム記事の構造化データ。",
     url: `${SITE_URL}/api/articles.json`,
     publisher: {
       "@type": "Organization",

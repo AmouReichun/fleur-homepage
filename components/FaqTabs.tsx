@@ -113,7 +113,7 @@ export default function FaqTabs({ hairFaqs, eyelashFaqs }: Props) {
                     {tab === "hair" ? "ヘア" : "アイラッシュ"}
                   </span>
                   <span className="text-[10px] tracking-wide mt-0.5" style={{ color: ia ? ac : "#C4B8A0" }}>
-                    {tab === "hair" ? "fleur ami・Riv." : "Raffine"} / {total}件
+                    {tab === "hair" ? "fleurami・Riv." : "Raffine"} / {total}件
                   </span>
                   {ia && (
                     <span className="absolute bottom-0 left-0 right-0 h-0.5" style={{ background: ac }} />

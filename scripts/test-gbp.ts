@@ -11,14 +11,14 @@ async function main() {
     process.exit(1);
   }
 
-  console.log("\n--- テスト投稿（fleur ami / hair） ---");
+  console.log("\n--- テスト投稿（fleurami / hair） ---");
   const result = await postBlogArticleToGbp({
     title: "テスト投稿 - 動作確認",
     excerpt: "これはGBP自動投稿の動作確認テストです。このメッセージは後ほど削除してください。",
     thumbnail: "/images/uploads/raffine/raffine-mqp27vis.jpg",
     slug: "test-gbp-verification",
     category: "hair",
-    salonName: "fleur ami",
+    salonName: "fleurami",
   });
 
   if (result) {

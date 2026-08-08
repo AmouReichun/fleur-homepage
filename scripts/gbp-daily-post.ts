@@ -20,8 +20,8 @@ const WEBHOOK_URL = process.env.GBP_WEBHOOK_URL;
 const PER_SALON = Number(process.env.GBP_PER_SALON) || 1;
 
 const SALON_NAME_TO_KEY: Record<string, string> = {
-  "fleur ami": "fleurami",
-  "Riv. by fleur ami": "riv",
+  "fleurami": "fleurami",
+  "Riv. by fleurami": "riv",
   Raffine: "raffine",
 };
 

@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const label = `${year}年${parseInt(month)}月`;
   return {
     title: `${label}のヘア記事`,
-    description: `${label}に公開されたfleur ami・Riv.のヘアカラー・髪質改善・縮毛矯正の症例とコラム一覧。`,
+    description: `${label}に公開されたfleurami・Riv.のヘアカラー・髪質改善・縮毛矯正の症例とコラム一覧。`,
     alternates: { canonical: `/blog/hair/archive/${year}/${month}` },
   };
 }
@@ -75,7 +75,7 @@ export default function HairArchivePage({ params }: Props) {
             </h1>
             <p className="text-sm text-hair-muted">{posts.length}件</p>
             <p className="text-sm text-hair-muted mt-3 leading-relaxed max-w-lg">
-              {label}に高知県のヘアサロンfleur ami・Riv. by fleur amiのスタイリストが公開した施術例とコラムです。ヘアカラー・髪質改善トリートメント・縮毛矯正・カット・パーマなどの施術選びや仕上がりのポイントを、実際の症例をもとにご紹介しています。ご来店前の参考にお役立てください。
+              {label}に高知県のヘアサロンfleurami・Riv. by fleuramiのスタイリストが公開した施術例とコラムです。ヘアカラー・髪質改善トリートメント・縮毛矯正・カット・パーマなどの施術選びや仕上がりのポイントを、実際の症例をもとにご紹介しています。ご来店前の参考にお役立てください。
             </p>
 
             <div className="flex items-center gap-4 mt-5">

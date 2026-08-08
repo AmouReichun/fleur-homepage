@@ -7,7 +7,7 @@ import FaqTabs, { type FaqEntry } from "@/components/FaqTabs";
 export const metadata: Metadata = {
   title: "よくある質問（FAQ）",
   description:
-    "高知のヘアサロン（fleur ami・Riv.）とまつげ・まゆげサロン（Raffine）に関するよくある質問。ヘアカラー・縮毛矯正・髪質改善・まつげパーマ・マツエクについて解説します。",
+    "高知のヘアサロン（fleurami・Riv.）とまつげ・まゆげサロン（Raffine）に関するよくある質問。ヘアカラー・縮毛矯正・髪質改善・まつげパーマ・マツエクについて解説します。",
   alternates: { canonical: "/blog/faq" },
 };
 

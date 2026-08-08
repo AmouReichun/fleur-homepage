@@ -252,8 +252,8 @@ export async function generateAllThumbnails(inputs: ThumbInput[]): Promise<Map<s
 // 単体実行：生成済み記事からサムネを再生成
 // ─────────────────────────────────────────────────────────
 const SALON_DIR: Record<string, string> = {
-  "fleur ami":         "fleurami",
-  "riv. by fleur ami": "riv",
+  "fleurami":         "fleurami",
+  "riv. by fleurami": "riv",
   "raffine":           "raffine",
 };
 

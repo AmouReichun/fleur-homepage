@@ -142,7 +142,7 @@ export const rivSalonSchema = {
   "@context": "https://schema.org",
   "@type": "HairSalon",
   "@id": `${BASE}/salon/riv`,
-  name: "Riv.by fleurami",
+  name: "Riv. by fleurami",
   alternateName: ["Riv. by fleurami", "リヴ バイ フルールアミー", "Riv. by fleur ami", "リヴ"],
   description:
     "高知市のヘアカラー・髪質改善専門の美容室。白髪ぼかし・艶カラー・縮毛矯正・大人女性向けの似合わせカットが得意。高知市南川添にあるヘアサロン。定休日：月曜・第1第3火曜。Googleクチコミ4.65（674件）。",
@@ -205,7 +205,7 @@ export const fleuramiSalonSchema = {
   "@context": "https://schema.org",
   "@type": "HairSalon",
   "@id": `${BASE}/salon/fleurami`,
-  name: "fleur ami",
+  name: "fleurami",
   alternateName: ["fleurami", "フルールアミー", "フルールアミー野市"],
   description:
     "高知県香南市野市町の美容室。縮毛矯正・髪質改善・艶カラー・カットが得意。無料駐車場7台完備。のいち駅から車で約4分。くせ毛・うねりにお悩みの方に対応するヘアサロン。定休日：月曜・第1第3火曜。Googleクチコミ4.67（388件）。",

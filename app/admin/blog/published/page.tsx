@@ -13,8 +13,8 @@ const SALON_GROUPS: {
   type: 'hair' | 'eyelash'
   match: (salon: string) => boolean
 }[] = [
-  { key: 'fleurami', label: 'fleur ami',         type: 'hair',    match: s => s === 'fleur ami' },
-  { key: 'riv',      label: 'Riv. by fleur ami', type: 'hair',    match: s => s.startsWith('Riv') },
+  { key: 'fleurami', label: 'fleurami',         type: 'hair',    match: s => s === 'fleurami' },
+  { key: 'riv',      label: 'Riv. by fleurami', type: 'hair',    match: s => s.startsWith('Riv') },
   { key: 'raffine',  label: 'Raffine',           type: 'eyelash', match: s => s === 'Raffine' },
 ]
 

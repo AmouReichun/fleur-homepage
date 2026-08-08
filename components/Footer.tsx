@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const salons = [
   {
-    name: "fleur ami",
+    name: "fleurami",
     sub: "ヘアサロン",
     address: "高知県香南市野市町西野230",
     hours: "9:00〜18:00",
@@ -14,7 +14,7 @@ const salons = [
     instagram: "https://www.instagram.com/fleurami_info/",
   },
   {
-    name: "Riv. by fleur ami",
+    name: "Riv. by fleurami",
     sub: "ヘアサロン",
     address: "高知県高知市南川添9-21 フルールアミー3 2F",
     hours: "9:30〜18:30",

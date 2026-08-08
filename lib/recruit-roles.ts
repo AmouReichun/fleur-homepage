@@ -42,7 +42,7 @@ export interface RoleDef {
 }
 
 const LOC_FLEURAMI: RoleLocation = { locality: "香南市", salonName: "fleurami", streetAddress: "野市町西野230", postalCode: "781-5233" };
-const LOC_RIV: RoleLocation = { locality: "高知市", salonName: "Riv.by fleurami", streetAddress: "南川添9-21 フルールアミー3 2F", postalCode: "781-0082" };
+const LOC_RIV: RoleLocation = { locality: "高知市", salonName: "Riv. by fleurami", streetAddress: "南川添9-21 フルールアミー3 2F", postalCode: "781-0082" };
 const LOC_RAFFINE: RoleLocation = { locality: "高知市", salonName: "Raffine", streetAddress: "はりまや町1-4-8 TNはりまやビル3F", postalCode: "780-0822" };
 
 const COMMON_CONDITIONS = [
@@ -60,7 +60,7 @@ export const ROLES: RoleDef[] = [
     occupation: "美容師",
     metaTitle: "高知市・香南市の美容師（スタイリスト）求人｜fleur GROUP",
     metaDescription:
-      "高知市・香南市で美容師（スタイリスト）を募集。髪質改善・白髪ぼかし・艶カラーが学べる地域密着サロン。月給23万円＋歩合、完全週休2日制・社会保険完備。香南市fleurami・高知市Riv.by fleurami。転職・Uターン・ブランクOK。",
+      "高知市・香南市で美容師（スタイリスト）を募集。髪質改善・白髪ぼかし・艶カラーが学べる地域密着サロン。月給23万円＋歩合、完全週休2日制・社会保険完備。香南市fleurami・高知市Riv. by fleurami。転職・Uターン・ブランクOK。",
     areas: ["高知市", "香南市"],
     locations: [LOC_FLEURAMI, LOC_RIV],
     lead: "高知市・香南市で美容師（スタイリスト）を募集しています。fleur GROUPは髪質改善・白髪ぼかし・艶カラーを強みとする大人女性向けのサロン。指名や単価を伸ばしやすい技術と、長く働ける環境を用意しています。",
@@ -82,7 +82,7 @@ export const ROLES: RoleDef[] = [
     conditions: [
       { label: "休日", value: "毎週月曜・第1,3火曜＋シフト休（完全週休2日制）" },
       ...COMMON_CONDITIONS,
-      { label: "勤務地", value: "香南市（fleurami）／高知市（Riv.by fleurami）" },
+      { label: "勤務地", value: "香南市（fleurami）／高知市（Riv. by fleurami）" },
     ],
     career: [
       { step: "STEP 1", title: "入社・オリエン", text: "サロンの方針・メニュー・接客の考え方を共有。既存技術の確認から始めます。" },
@@ -92,7 +92,7 @@ export const ROLES: RoleDef[] = [
     ],
     faq: [
       { q: "ブランクがあっても応募できますか？", a: "はい。技術研修やフォロー体制があるため、ブランクのある方の復帰も歓迎しています。まずはサロン見学だけでも大丈夫です。" },
-      { q: "高知市と香南市どちらの店舗で働けますか？", a: "ご希望や通勤を考慮してご相談します。高知市はRiv.by fleurami、香南市はfleuramiが勤務地です。" },
+      { q: "高知市と香南市どちらの店舗で働けますか？", a: "ご希望や通勤を考慮してご相談します。高知市はRiv. by fleurami、香南市はfleuramiが勤務地です。" },
     ],
   },
   {
@@ -102,7 +102,7 @@ export const ROLES: RoleDef[] = [
     occupation: "美容師アシスタント",
     metaTitle: "高知市・香南市の美容師アシスタント求人（未経験・新卒OK）｜fleur GROUP",
     metaDescription:
-      "高知市・香南市で美容師アシスタントを募集。アシスタントからしっかり育成、技術研修あり。月給22万円・社会保険完備・完全週休2日制。美容学生・新卒・未経験歓迎。香南市fleurami・高知市Riv.by fleurami。",
+      "高知市・香南市で美容師アシスタントを募集。アシスタントからしっかり育成、技術研修あり。月給22万円・社会保険完備・完全週休2日制。美容学生・新卒・未経験歓迎。香南市fleurami・高知市Riv. by fleurami。",
     areas: ["高知市", "香南市"],
     locations: [LOC_FLEURAMI, LOC_RIV],
     lead: "高知市・香南市で美容師アシスタントを募集しています。fleur GROUPはアシスタントからの育成体制を整え、無理なくスタイリストデビューを目指せる環境。美容学生・新卒・未経験の方も歓迎です。",
@@ -124,7 +124,7 @@ export const ROLES: RoleDef[] = [
     conditions: [
       { label: "休日", value: "毎週月曜・第1,3火曜＋シフト休（完全週休2日制）" },
       ...COMMON_CONDITIONS,
-      { label: "勤務地", value: "香南市（fleurami）／高知市（Riv.by fleurami）" },
+      { label: "勤務地", value: "香南市（fleurami）／高知市（Riv. by fleurami）" },
     ],
     career: [
       { step: "STEP 1", title: "入社・基礎習得", text: "シャンプーやサロンワークから。接客の基本と土台を身につけます。" },

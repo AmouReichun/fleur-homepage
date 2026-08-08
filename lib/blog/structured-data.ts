@@ -5,7 +5,7 @@ const SITE_URL = process.env.SITE_URL ?? "https://fleur-group.jp";
 export const SALONS = {
   fleurami: {
     "@type": "HairSalon",
-    name: "fleur ami",
+    name: "fleurami",
     alternateName: "フルールアミー",
     telephone: "0887-56-5566",
     image: {
@@ -42,7 +42,7 @@ export const SALONS = {
             "@type": "Service",
             name: "髪質改善トリートメント",
             description:
-              "うねり・ダメージ・広がりを改善し、サラサラのツヤ髪へ近づける施術。施術時間90〜120分程度、1〜2ヶ月ごとの定期ケアが目安。香南市・fleur amiで施術可能。",
+              "うねり・ダメージ・広がりを改善し、サラサラのツヤ髪へ近づける施術。施術時間90〜120分程度、1〜2ヶ月ごとの定期ケアが目安。香南市・fleuramiで施術可能。",
           },
         },
         {
@@ -81,7 +81,7 @@ export const SALONS = {
   },
   riv: {
     "@type": "HairSalon",
-    name: "Riv. by fleur ami",
+    name: "Riv. by fleurami",
     alternateName: "リヴ バイ フルールアミー",
     telephone: "088-884-5566",
     image: {
@@ -206,7 +206,7 @@ export function organizationSchema() {
       "https://www.instagram.com/raffine0815/",
     ],
     description:
-      "高知県のヘアサロン（fleur ami・香南市 / Riv.・高知市）とまつ毛パーマ・マツエク・まゆげ専門サロン（Raffine・高知市）を展開するグループ。",
+      "高知県のヘアサロン（fleurami・香南市 / Riv.・高知市）とまつ毛パーマ・マツエク・まゆげ専門サロン（Raffine・高知市）を展開するグループ。",
     member: [SALONS.fleurami, SALONS.riv, SALONS.raffine],
   };
 }
@@ -317,7 +317,7 @@ export function webSiteSchema() {
     "@type": "WebSite",
     name: "フルールグループ 症例・コラム",
     url: SITE_URL,
-    description: "高知県のヘアサロン（fleur ami・Riv.）とアイラッシュサロン（Raffine）による施術例・コラムメディア",
+    description: "高知県のヘアサロン（fleurami・Riv.）とアイラッシュサロン（Raffine）による施術例・コラムメディア",
     potentialAction: {
       "@type": "SearchAction",
       target: {

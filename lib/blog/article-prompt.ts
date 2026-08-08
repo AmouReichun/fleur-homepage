@@ -17,8 +17,8 @@ export const AREA_BY_KEY: Record<string, string> = {
 
 // 店名 → 地域名（スタッフ投稿側の互換用）
 export const AREA_BY_NAME: Record<string, string> = {
-  "fleur ami": "香南市",
-  "Riv. by fleur ami": "高知市",
+  "fleurami": "香南市",
+  "Riv. by fleurami": "高知市",
   Raffine: "高知市",
 };
 
@@ -68,10 +68,8 @@ const SALON_FACTS: Record<string, SalonFacts> = {
 function resolveKey(salonNameOrKey: string): string {
   if (SALON_FACTS[salonNameOrKey]) return salonNameOrKey;
   const byName: Record<string, string> = {
-    "fleur ami": "fleurami",
     fleurami: "fleurami",
-    "Riv. by fleur ami": "riv",
-    "Riv.by fleurami": "riv",
+    "Riv. by fleurami": "riv",
     riv: "riv",
     Raffine: "raffine",
     raffine: "raffine",

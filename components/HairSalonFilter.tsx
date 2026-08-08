@@ -7,8 +7,8 @@ import ArticleCard from "@/components/ArticleCard";
 
 const FILTERS = [
   { label: "すべて", value: "all" },
-  { label: "fleur ami", value: "fleur ami" },
-  { label: "Riv. by fleur ami", value: "Riv. by fleur ami" },
+  { label: "fleurami", value: "fleurami" },
+  { label: "Riv. by fleurami", value: "Riv. by fleurami" },
 ] as const;
 
 type FilterValue = (typeof FILTERS)[number]["value"];

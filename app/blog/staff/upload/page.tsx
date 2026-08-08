@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 const SALONS = [
-  { key: "fleurami", label: "fleur ami", sub: "ヘアサロン・香南市" },
+  { key: "fleurami", label: "fleurami", sub: "ヘアサロン・香南市" },
   { key: "riv",      label: "Riv.",      sub: "ヘアサロン・高知市" },
   { key: "raffine",  label: "Raffine",   sub: "アイラッシュ・高知市" },
 ] as const;

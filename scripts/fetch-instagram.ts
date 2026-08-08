@@ -12,12 +12,12 @@ const APP_SECRET = process.env.META_APP_SECRET!;
 const SALONS = {
   fleurami: {
     id: process.env.IG_BUSINESS_ID_FLEURAMI!,
-    name: "fleur ami",
+    name: "fleurami",
     category: "hair" as const,
   },
   riv: {
     id: process.env.IG_BUSINESS_ID_RIV!,
-    name: "Riv. by fleur ami",
+    name: "Riv. by fleurami",
     category: "hair" as const,
   },
   raffine: {

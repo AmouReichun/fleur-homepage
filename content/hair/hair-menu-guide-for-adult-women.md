@@ -2,7 +2,7 @@
 title: "大人女性の髪、ツヤとまとまりを両立するカラーってどんな仕上がり？"
 slug: "hair-menu-guide-for-adult-women"
 category: "hair"
-salon: "Riv. by fleur ami"
+salon: "Riv. by fleurami"
 date: "2026-06-12"
 excerpt: "深みのあるダークブラウン系カラーで、光を受けてなめらかに見える髪へ。40代前後の大人女性に人気の色みと質感について、実際の施術例をもとに解説します。"
 thumbnail: "/images/thumbnails/hair-menu-guide-for-adult-women.jpg"
@@ -32,7 +32,7 @@ faq:
 
 ## 施術例：深みのあるダークブラウンカラー
 
-担当：沢村スタイリスト（Riv. by fleur ami）
+担当：沢村スタイリスト（Riv. by fleurami）
 
 ### 仕上がりの特徴
 
@@ -74,15 +74,15 @@ faq:
 
 ---
 
-## Riv. by fleur ami からひとこと
+## Riv. by fleurami からひとこと
 
-今回の施術を担当した沢村スタイリストをはじめ、Riv. by fleur ami では一人ひとりの髪の状態やご希望に合わせてカウンセリングを大切にしています。
+今回の施術を担当した沢村スタイリストをはじめ、Riv. by fleurami では一人ひとりの髪の状態やご希望に合わせてカウンセリングを大切にしています。
 
 「こんな仕上がりに近づきたい」というイメージ写真をお持ちいただくのも、スムーズなご相談につながります。
 
 ご予約・お問い合わせはお気軽にどうぞ。
 
-**Riv. by fleur ami**
+**Riv. by fleurami**
 📍 高知県
 🕐 open 9:30〜18:30
 📞 088-884-5566
