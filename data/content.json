@@ -1011,7 +1011,7 @@
       "title": "",
       "description": "",
       "href": "/blog",
-      "external": false,
+      "external": true,
       "imageSrc": "/images/admin/quicklinks-1782213773362.jpg"
     },
     {
