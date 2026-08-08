@@ -82,17 +82,29 @@ export default function SalonReserveIcons({
   uid,
   align = "start",
   showLabels = true,
+  compact = false,
 }: {
   salon: ReserveSalon;
   uid: string;
   align?: "start" | "center";
   showLabels?: boolean;
+  /** フッター等の狭いカラムで、全チャネルを1列に収めるための小型表示 */
+  compact?: boolean;
 }) {
   const channels = channelsForSalon(salon);
   if (channels.length === 0) return null;
 
+  // compact: 狭いカラムでも 5 チャネルが 1 列に収まるサイズ・余白
+  const wrapGap = compact
+    ? "gap-x-1.5 gap-y-2 sm:gap-x-2 sm:gap-y-2"
+    : "gap-x-1.5 gap-y-3 sm:gap-x-3 sm:gap-y-4";
+  const tileSize = compact
+    ? "w-9 h-9 sm:w-11 sm:h-11 rounded-lg"
+    : "w-10 h-10 sm:w-16 sm:h-16 rounded-[10px] sm:rounded-xl";
+  const colWidth = compact ? "shrink-0 w-9 sm:w-11 flex" : "shrink-0 w-10 sm:w-16 flex";
+
   return (
-    <div className={`flex flex-wrap gap-x-1.5 gap-y-3 sm:gap-x-3 sm:gap-y-4 ${align === "center" ? "justify-center" : ""}`}>
+    <div className={`flex flex-wrap ${wrapGap} ${align === "center" ? "justify-center" : ""}`}>
       {channels.map((c) => {
         const tile =
           c.kind === "tel" || c.kind === "web"
@@ -101,7 +113,7 @@ export default function SalonReserveIcons({
         const inner = (
           <span className="flex flex-col items-center gap-1.5 group w-full">
             <span
-              className={`w-10 h-10 sm:w-16 sm:h-16 rounded-[10px] sm:rounded-xl overflow-hidden flex items-center justify-center transition-transform duration-200 group-hover:-translate-y-0.5 group-hover:shadow-md ${tile}`}
+              className={`${tileSize} overflow-hidden flex items-center justify-center transition-transform duration-200 group-hover:-translate-y-0.5 group-hover:shadow-md ${tile}`}
             >
               {c.kind === "tel" && <PhoneIcon />}
               {c.kind === "web" && <WebIcon />}
@@ -112,9 +124,8 @@ export default function SalonReserveIcons({
             {showLabels && <span className="text-[9px] sm:text-xs text-site-muted text-center leading-tight tracking-tight whitespace-pre-line">{c.short}</span>}
           </span>
         );
-        // 各チャネルをタイル幅(40px)の等幅カラムにして整列＋横一列に収める。
-        // ラベルは40px内に収まる短さ（長い場合は中央で折返し、タイル列は崩れない）。
-        const cls = "shrink-0 w-10 sm:w-16 flex";
+        // 各チャネルをタイル幅の等幅カラムにして整列＋横一列に収める。
+        const cls = colWidth;
         return c.external ? (
           <a key={c.kind} href={c.href} target="_blank" rel="noopener noreferrer" className={cls} aria-label={c.label} title={c.label}>{inner}</a>
         ) : (

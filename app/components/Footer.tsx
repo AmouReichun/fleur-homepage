@@ -38,7 +38,7 @@ export default function Footer() {
                     {salon.name}
                   </Link>
                   <p className="text-xs text-white/35 mb-2">{salon.area}</p>
-                  <SalonReserveIcons salon={salon} uid={`footer-${salon.key}`} showLabels={false} />
+                  <SalonReserveIcons salon={salon} uid={`footer-${salon.key}`} showLabels={false} compact />
                 </li>
               ))}
             </ul>
