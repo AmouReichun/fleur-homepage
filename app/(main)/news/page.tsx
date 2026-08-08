@@ -35,7 +35,7 @@ export default async function NewsPage() {
       />
 
       {/* ヘッダー */}
-      <div className="bg-site-light py-10 sm:py-14">
+      <div className="bg-site-light pt-24 sm:pt-[7.5rem] pb-10 sm:pb-14">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <nav className="text-xs text-site-muted mb-4">
             <Link href="/" className="hover:text-site-accent">ホーム</Link>
