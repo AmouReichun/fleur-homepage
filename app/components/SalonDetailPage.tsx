@@ -34,6 +34,7 @@ export default async function SalonDetailPage({ salonKey }: { salonKey: string }
     riv: [
       { q: "白髪が気になるが暗くしたくない", a: "白髪ぼかし・グレイカラーで自然に明るく", service: "shiraga-bokashi" },
       { q: "髪のうねり・パサつき・ダメージ", a: "髪質改善トリートメントでサラサラのツヤ髪へ", service: "kamishitsu-kaizen" },
+      { q: "くせ毛・うねりをまっすぐ扱いやすくしたい", a: "縮毛矯正でツンとしない自然なストレートへ", service: "shukumou-kyousei" },
       { q: "大人世代に似合うツヤカラーにしたい", a: "艶カラー・似合わせカットをご提案", service: "tsuya-color" },
     ],
     raffine: [
