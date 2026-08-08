@@ -15,8 +15,9 @@ const SITE_ORIGIN = "https://fleur-group.jp";
 const WEBHOOK_URL = process.env.GBP_WEBHOOK_URL;
 
 // 1実行あたり各サロンから投稿する件数（テキスト・写真それぞれ）。
-// バックログ消化のため 1→2 に増。GBPのスパム判定様子見のため env で調整可能。
-const PER_SALON = Number(process.env.GBP_PER_SALON) || 2;
+// 1日2回（朝/夜）実行 × 1件 = 2件/サロン/日。一度に6件出すburstを避けるため1に。
+// env GBP_PER_SALON で調整可能。
+const PER_SALON = Number(process.env.GBP_PER_SALON) || 1;
 
 const SALON_NAME_TO_KEY: Record<string, string> = {
   "fleur ami": "fleurami",
