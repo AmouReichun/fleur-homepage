@@ -279,9 +279,9 @@ export default async function RecruitPage() {
               <p className="text-[11px] tracking-[0.35em] text-site-accent uppercase mb-4">Numbers</p>
               <h2 className="font-serif text-2xl sm:text-3xl font-medium">数字で見るfleur GROUP</h2>
             </Reveal>
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-y-10 gap-x-4">
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-y-10 gap-x-4">
               {stats.map((s, i) => (
-                <Reveal key={s.label || i} delay={(i % 4) * 70} className="text-center">
+                <Reveal key={s.label || i} delay={(i % 3) * 70} className="text-center">
                   <StatNumber value={s.value} suffix={s.suffix} />
                   <p className="text-[11px] sm:text-xs text-white/70 mt-3 tracking-wide">{s.label}</p>
                 </Reveal>
