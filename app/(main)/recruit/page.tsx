@@ -216,7 +216,11 @@ export default async function RecruitPage() {
             <Reveal className="text-center mb-12 sm:mb-16">
               <p className="text-[11px] tracking-[0.35em] text-site-accent uppercase mb-4">About us</p>
               <h2 className="font-serif text-2xl sm:text-3xl font-medium mb-6">私たちについて</h2>
-              <p className="text-sm sm:text-base text-site-muted leading-loose max-w-2xl mx-auto whitespace-pre-line">{aboutLead}</p>
+              <div className="max-w-2xl mx-auto space-y-3">
+                {aboutLead.split("\n").filter((l) => l.trim()).map((line, i) => (
+                  <p key={i} className="text-sm sm:text-base text-site-muted leading-loose">{line}</p>
+                ))}
+              </div>
             </Reveal>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
               {values.map((v, i) => (
