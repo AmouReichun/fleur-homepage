@@ -15,7 +15,8 @@
     "pipeline:article": "npx tsx scripts/generate-article.ts",
     "pipeline:thumb": "npx tsx scripts/generate-thumbnail.ts",
     "pipeline:regenerate": "npx tsx scripts/regenerate-articles.ts",
-    "gbp:setup": "node scripts/gbp-setup.mjs"
+    "gbp:setup": "node scripts/gbp-setup.mjs",
+    "indexnow": "npx tsx scripts/indexnow-submit.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.105.0",

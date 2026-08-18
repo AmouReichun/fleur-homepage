@@ -7,6 +7,7 @@ import * as fs from "fs";
 import * as path from "path";
 import matter from "gray-matter";
 import { isGbpConfigured, postBlogArticleToGbp } from "@/lib/gbp";
+import { submitToIndexNow, SITE_BASE } from "@/lib/indexnow";
 
 const CONTENT_DIR = path.join(process.cwd(), "content");
 const CONFIG_PATH = path.join(process.cwd(), "config", "auto-publish.json");
@@ -107,6 +108,8 @@ async function main() {
   }
 
   let publishedCount = 0;
+  const publishedUrls: string[] = [];
+  const publishedCategories = new Set<"hair" | "eyelash">();
 
   for (const [salon, articles] of Object.entries(bySalon)) {
     // 日付の古い順（FIFO）で articlesPerSalon 件まで公開
@@ -120,6 +123,8 @@ async function main() {
       const slug = path.basename(target.filePath, ".md");
       console.log(`✓ 公開: [${salon}] ${slug} (${target.date})`);
       publishedCount++;
+      publishedUrls.push(`${SITE_BASE}/blog/${target.category}/${target.slug}`);
+      publishedCategories.add(target.category);
 
       // GBP への自動投稿
       if (gbpEnabled && target.title && target.excerpt) {
@@ -147,6 +152,17 @@ async function main() {
 
   console.log(`\n合計 ${publishedCount} 件を公開しました`);
   console.log(`残り下書き（薬機法除く）: ${drafts.length - publishedCount} 件`);
+
+  // IndexNow: 公開した記事URL＋更新されるインデックスページをBing等へ通知（再クロール高速化）。
+  // 失敗しても公開処理は止めない（submitToIndexNow内でcatch済み）。
+  if (publishedUrls.length > 0) {
+    const urls = [
+      ...publishedUrls,
+      `${SITE_BASE}/blog`,
+      ...Array.from(publishedCategories).map((c) => `${SITE_BASE}/blog/${c}`),
+    ];
+    await submitToIndexNow(urls);
+  }
 }
 
 main().catch((e) => {
