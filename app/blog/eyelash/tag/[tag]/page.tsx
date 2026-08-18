@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const shouldIndex = posts.length >= 5;
   return {
     title: `${tag}の施術例・アイラッシュコラム一覧 | 高知はりまや橋 Raffine`,
-    description: `高知市はりまや橋のアイラッシュサロンRaffineによる「${tag}」の施術例とコラム${posts.length}件。${tag}のメニュー選びの参考に。`,
+    description: `高知市はりまや橋のまつげ・まゆげ専門店Raffineによる「${tag}」に関する施術例とコラム${posts.length}件をまとめました。まつげパーマ・マツエク・LEDマツエク・眉毛WAXなど、${tag}のデザイン・持ち・料金やメニュー選びの参考にご覧ください。`,
     alternates: { canonical: `/blog/eyelash/tag/${encodeURIComponent(tag)}` },
     robots: { index: shouldIndex, follow: true },
   };

@@ -24,7 +24,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const historyLabel = staffMemberForMeta?.history ? `${staffMemberForMeta.history}の` : "";
   return {
     title: `${name} | ${author.role} — ${author.salon}`,
-    description: `${author.salon}の${historyLabel}${author.role}${name}による施術例・コラム一覧。高知県の${author.category === "hair" ? "ヘアサロン" : "まつげ・まゆげサロン"}。`,
+    description:
+      author.category === "hair"
+        ? `高知県の美容室${author.salon}の${historyLabel}${author.role}${name}による施術例・スタイルコラムの一覧です。髪質改善・白髪ぼかし・縮毛矯正・艶カラー・似合わせカットなど、大人女性に向けた提案を実際の症例写真とともに紹介します。`
+        : `高知市はりまや橋のまつげ・まゆげ専門店Raffineの${historyLabel}${author.role}${name}による施術例・コラムの一覧です。まつげパーマ・ラッシュリフト・マツエク・LEDマツエク・眉毛WAXの実例を、写真とともに詳しく紹介します。`,
     alternates: { canonical: `/blog/author/${name}` },
   };
 }

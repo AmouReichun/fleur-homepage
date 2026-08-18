@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const shouldIndex = posts.length >= 5;
   return {
     title: `${tag}の施術例・ヘアコラム一覧 | 高知のヘアサロン fleur GROUP`,
-    description: `高知のヘアサロン fleurami・Riv. by fleuramiによる「${tag}」の施術例とコラム${posts.length}件。${tag}のメニュー選びの参考に。`,
+    description: `高知県の美容室 fleurami・Riv. by fleuramiによる「${tag}」に関する施術例とスタイルコラム${posts.length}件をまとめました。髪質改善・白髪ぼかし・縮毛矯正・艶カラー・似合わせカットなど、${tag}のメニュー選びやスタイルの参考にご覧ください。`,
     alternates: { canonical: `/blog/hair/tag/${encodeURIComponent(tag)}` },
     robots: { index: shouldIndex, follow: true },
   };

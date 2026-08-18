@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const label = `${year}年${parseInt(month)}月`;
   return {
     title: `${label}のアイラッシュ記事`,
-    description: `${label}に公開されたRaffineのまつ毛パーマ・マツエク・まゆげの症例とコラム一覧。`,
+    description: `${label}に高知市はりまや橋のまつげ・まゆげ専門店Raffineが公開した、まつげパーマ・ラッシュリフト・マツエク・LEDマツエク・眉毛WAXの施術例とコラムの一覧です。${label}の最新の目元デザインや症例をまとめてご覧いただけます。`,
     alternates: { canonical: `/blog/eyelash/archive/${year}/${month}` },
   };
 }

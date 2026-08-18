@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const label = `${year}年${parseInt(month)}月`;
   return {
     title: `${label}のヘア記事`,
-    description: `${label}に公開されたfleurami・Riv.のヘアカラー・髪質改善・縮毛矯正の症例とコラム一覧。`,
+    description: `${label}に高知県の美容室 fleurami・Riv. by fleuramiが公開した、髪質改善・白髪ぼかし・縮毛矯正・艶カラー・似合わせカットの施術例とスタイルコラムの一覧です。${label}の最新のヘアデザインや症例をまとめてご覧いただけます。`,
     alternates: { canonical: `/blog/hair/archive/${year}/${month}` },
   };
 }

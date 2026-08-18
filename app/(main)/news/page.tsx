@@ -6,7 +6,8 @@ import NewsTabs, { type NewsSalonMeta } from "@/app/components/NewsTabs";
 
 export const metadata: Metadata = {
   title: "最新情報",
-  description: "fleur GROUPのキャンペーン・お知らせ・最新情報をお届けします。",
+  description:
+    "高知県高知市・香南市で美容室 Riv. by fleurami・fleurami と、まつげ・まゆげ専門店 Raffine を展開する fleur GROUP のキャンペーン・お知らせ・最新情報。各店の新メニューや季節のお得な情報、休業日のご案内をお届けします。",
   alternates: { canonical: "https://fleur-group.jp/news" },
 };
 
