@@ -25,6 +25,7 @@ Allow: /
 User-agent: Googlebot
 Allow: /
 Disallow: /admin/
+Disallow: /blog/search
 
 User-agent: Amazonbot
 Allow: /

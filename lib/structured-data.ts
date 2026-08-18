@@ -312,7 +312,7 @@ export const raffineSalonSchema = {
   openingHoursSpecification: [
     {
       "@type": "OpeningHoursSpecification",
-      dayOfWeek: ["Monday", "Tuesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
       opens: "09:30",
       closes: "18:30",
     },
@@ -328,7 +328,7 @@ export const raffineSalonSchema = {
       { "@type": "Offer", itemOffered: { "@type": "Service", name: "眉毛WAX・アイブロウ（メンズ対応）", description: "黄金比デザインで顔印象をすっきり。メンズも対応" } },
     ],
   },
-  knowsAbout: ["まつげパーマ", "パリジャンリフト", "ラッシュリフト", "まつエク", "LEDエクステ", "眉毛WAX", "まつ毛パーマ", "アイラッシュ", "まつげ専門サロン", "韓国束感まつげ", "フラットラッシュ"],
+  knowsAbout: ["まつげパーマ", "パリジャンリフト", "ラッシュリフト", "まつエク", "LEDマツエク", "LEDエクステ", "眉毛WAX", "まつ毛パーマ", "アイラッシュ", "まつげ専門サロン", "韓国束感まつげ", "フラットラッシュ"],
   sameAs: [
     "https://beauty.hotpepper.jp/kr/slnH000767549/",
     "https://www.instagram.com/raffine0815",
@@ -450,7 +450,7 @@ export const faqPageSchema = {
       name: "高知市Raffineの定休日と営業時間は？",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Raffineの営業時間は9:30〜18:30。定休日は水曜です。住所：高知市はりまや町1-4-8 TNはりまやビル3F。全席半個室で完全予約制。",
+        text: "Raffineの営業時間は9:30〜18:30。定休日は不定休です（お休みはInstagram等でご案内）。住所：高知市はりまや町1-4-8 TNはりまやビル3F。全席半個室で完全予約制。",
       },
     },
     {
