@@ -53,6 +53,22 @@ const nextConfig = {
         destination: "/blog/hair",
         permanent: true,
       },
+      // 重複記事の統合（同一サムネ・同一テーマ）→ 残した記事へ集約
+      {
+        source: "/blog/eyelash/kochi-flat-lash-100-cool-design-jireikai-msh4ai5b",
+        destination: "/blog/eyelash/kochi-flat-lash-nagashi-design-guide-msh3udwq",
+        permanent: true,
+      },
+      {
+        source: "/blog/eyelash/kochi-lash-lift-jirei-mukimuki-msrllehj",
+        destination: "/blog/eyelash/kochi-lash-lift-check-points-raffine-msrm7rox",
+        permanent: true,
+      },
+      {
+        source: "/blog/hair/kanan-design-color-dark-purple-fleur-ami-ms6sfflm",
+        destination: "/blog/hair/kananshi-design-color-navy-purple-fleur-ami-ms6s1cbv",
+        permanent: true,
+      },
     ];
   },
   // 全ページ共通のセキュリティヘッダー。
