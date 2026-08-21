@@ -6,6 +6,7 @@ import * as fs from "fs";
 import * as path from "path";
 import { fetchSalonPosts, imageUrlToBase64, type SalonKey } from "../lib/blog/instagram-api";
 import { generateArticleFromPost } from "../lib/blog/article-core";
+import { getUsedThumbnails } from "../lib/blog/thumbnail-dedup";
 
 const SALONS: SalonKey[] = ["fleurami", "riv", "raffine"];
 
@@ -97,6 +98,10 @@ async function main() {
   const skipIds = new Set(Array.from(processedIds).concat(Array.from(ignoredIds)));
   console.log(`\n[daily-generate] スキップID: 処理済み ${processedIds.size} 件 + 非表示/削除済み ${ignoredIds.size} 件`);
 
+  // サムネ重複ガード: 既存記事と同じサムネの記事は生成しない
+  const usedThumbnails = getUsedThumbnails();
+  console.log(`[daily-generate] 使用中サムネ: ${usedThumbnails.size} 件`);
+
   let generated = 0;
   let apiErrors = 0;
 
@@ -141,6 +146,15 @@ async function main() {
         apiErrors++;
         continue;
       }
+
+      // サムネ重複ガード: 既存記事と同じサムネなら保存せずスキップ
+      const thumbMatch = result.markdown.match(/^thumbnail:\s*["']?([^"'\n]+)["']?\s*$/m);
+      const thumbnail = thumbMatch?.[1]?.trim();
+      if (thumbnail && usedThumbnails.has(thumbnail)) {
+        console.log(`  ⏭ サムネ重複のためスキップ: ${thumbnail}`);
+        continue;
+      }
+      if (thumbnail) usedThumbnails.add(thumbnail);
 
       // 画像を保存
       if (imageBase64) {

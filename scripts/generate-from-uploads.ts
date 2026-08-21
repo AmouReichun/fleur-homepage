@@ -9,6 +9,7 @@ import * as fs from "fs";
 import * as path from "path";
 import { generateArticleFromUpload, buildMarkdown, type UploadSalonKey } from "./generate-article";
 import type { StaffUpload } from "../lib/blog/staff-uploads";
+import { getUsedThumbnails } from "../lib/blog/thumbnail-dedup";
 
 dotenv.config({ path: ".env.local" });
 
@@ -28,6 +29,9 @@ async function main() {
   }
 
   console.log(`${files.length} 件のスタッフ投稿を処理します\n`);
+
+  // サムネ重複ガード: 既存記事と同じサムネの記事は生成しない
+  const usedThumbnails = getUsedThumbnails();
   let generated = 0;
   let failed = 0;
 
@@ -69,6 +73,15 @@ async function main() {
     }
 
     article.thumbnail = `/images/uploads/${upload.salonKey}/${upload.id}.jpg`;
+
+    // サムネ重複ガード: 既存記事と同じサムネなら保存せずスキップ
+    if (usedThumbnails.has(article.thumbnail)) {
+      console.log(`  ⏭ サムネ重複のためスキップ: ${article.thumbnail}`);
+      fs.unlinkSync(jsonPath);
+      continue;
+    }
+    usedThumbnails.add(article.thumbnail);
+
     article.slug = `${article.slug}-${Date.now().toString(36)}`;
 
     let markdown = buildMarkdown(article);
