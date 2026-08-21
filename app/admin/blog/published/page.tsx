@@ -317,6 +317,17 @@ export default async function PublishedPage({
                   </div>
 
                   <div className="flex items-center gap-2 shrink-0">
+                    {article.source === 'staff' && article.thumbnail && (
+                      <a
+                        href={`/api/admin/download-upload?path=${encodeURIComponent('public' + article.thumbnail)}`}
+                        download
+                        className="text-xs px-4 py-2 rounded-sm transition-colors"
+                        style={{ background: "#1F1A0A", color: "#C8A860", border: "1px solid #4A3A10" }}
+                        title="送信画像を 3:4（縦・中央クロップ）でダウンロード"
+                      >
+                        画像DL 3:4
+                      </a>
+                    )}
                     <Link
                       href={`/blog/${article.category}/${article.slug}`}
                       target="_blank"
