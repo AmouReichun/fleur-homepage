@@ -24,18 +24,24 @@ export default function DraftList({ articles }: { articles: AdminArticle[] }) {
   const [isPending, startTransition] = useTransition()
   const [errorMsg, setErrorMsg] = useState<string | null>(null)
   const [deletingKey, setDeletingKey] = useState<string | null>(null)
+  const [sourceFilter, setSourceFilter] = useState<'all' | 'staff' | 'instagram'>('all')
 
-  const allKeys = articles.map(a => `${a.category}/${a.slug}`)
+  // 出所フィルタ（サムネのパスで判定済みの source を使用）
+  const staffCount = articles.filter(a => a.source === 'staff').length
+  const igCount = articles.filter(a => a.source === 'instagram').length
+  const filtered = sourceFilter === 'all' ? articles : articles.filter(a => a.source === sourceFilter)
+
+  const allKeys = filtered.map(a => `${a.category}/${a.slug}`)
   const allSelected = allKeys.length > 0 && allKeys.every(k => selected.has(k))
 
   // 店舗別グループ化
   const matched = new Set<string>()
   const groups = SALON_GROUPS.map(g => {
-    const items = articles.filter(a => g.match(a.salon))
+    const items = filtered.filter(a => g.match(a.salon))
     items.forEach(a => matched.add(`${a.category}/${a.slug}`))
     return { ...g, items }
   })
-  const others = articles.filter(a => !matched.has(`${a.category}/${a.slug}`))
+  const others = filtered.filter(a => !matched.has(`${a.category}/${a.slug}`))
   if (others.length > 0) {
     groups.push({ key: 'others', label: 'その他', type: 'hair', match: () => false, items: others })
   }
@@ -188,6 +194,39 @@ export default function DraftList({ articles }: { articles: AdminArticle[] }) {
         </button>
       </div>
 
+      {/* 出所フィルタ */}
+      <div className="flex items-center gap-2 mb-3">
+        {([
+          { key: 'all',       label: `すべて ${articles.length}` },
+          { key: 'staff',     label: `● スタッフ投稿 ${staffCount}` },
+          { key: 'instagram', label: `● Instagram ${igCount}` },
+        ] as const).map(f => (
+          <button
+            key={f.key}
+            type="button"
+            onClick={() => setSourceFilter(f.key)}
+            className="text-xs px-4 py-2 rounded-full transition-colors"
+            style={{
+              background: sourceFilter === f.key ? "#222" : "#141414",
+              color: sourceFilter === f.key ? "#E8E8E8" : "#666",
+              border: "1px solid #2A2A2A",
+            }}
+          >
+            {f.label}
+          </button>
+        ))}
+      </div>
+
+      {/* フィルタ結果が空 */}
+      {filtered.length === 0 && (
+        <div
+          className="text-center py-16 rounded-sm mb-3"
+          style={{ background: "#141414", border: "1px solid #1E1E1E" }}
+        >
+          <p className="text-sm" style={{ color: "#444" }}>該当する記事はありません</p>
+        </div>
+      )}
+
       {/* 店舗タブ：各店舗セクションへスクロールジャンプ（ヘッダー直下に追従） */}
       {visibleGroups.length > 1 && (
         <nav
@@ -299,6 +338,21 @@ export default function DraftList({ articles }: { articles: AdminArticle[] }) {
                     {isHair ? "Hair" : "Eyelash"}
                   </span>
                   <span className="text-[11px]" style={{ color: "#555" }}>{article.salon}</span>
+                  {article.source === 'staff' ? (
+                    <span
+                      className="text-[9px] px-2 py-0.5 rounded-sm"
+                      style={{ background: "#1F1A0A", color: "#C8A860", border: "1px solid #4A3A10" }}
+                    >
+                      ● スタッフ投稿
+                    </span>
+                  ) : article.source === 'instagram' ? (
+                    <span
+                      className="text-[9px] px-2 py-0.5 rounded-sm"
+                      style={{ background: "#1A121E", color: "#C888C8", border: "1px solid #3A2040" }}
+                    >
+                      ● Instagram
+                    </span>
+                  ) : null}
                   {article.yakkihou_flag && (
                     <span
                       className="text-[9px] px-2 py-0.5 rounded-sm"

@@ -21,7 +21,7 @@ const SALON_GROUPS: {
 export default async function PublishedPage({
   searchParams,
 }: {
-  searchParams: { reverted?: string; saved?: string }
+  searchParams: { reverted?: string; saved?: string; source?: string }
 }) {
   const [hairAll, eyelashAll] = await Promise.all([
     getAdminArticles('hair'),
@@ -30,7 +30,16 @@ export default async function PublishedPage({
 
   const hair    = hairAll.filter(a => !a.draft)
   const eyelash = eyelashAll.filter(a => !a.draft)
-  const all = [...hair, ...eyelash].sort((a, b) => (a.date < b.date ? 1 : -1))
+  const allPublished = [...hair, ...eyelash].sort((a, b) => (a.date < b.date ? 1 : -1))
+
+  // 出所フィルタ（?source=staff / instagram）。カウントは全体、リストは絞り込み後。
+  const source: 'all' | 'staff' | 'instagram' =
+    searchParams.source === 'staff' || searchParams.source === 'instagram'
+      ? searchParams.source
+      : 'all'
+  const staffCount = allPublished.filter(a => a.source === 'staff').length
+  const igCount    = allPublished.filter(a => a.source === 'instagram').length
+  const all = source === 'all' ? allPublished : allPublished.filter(a => a.source === source)
 
   // 店舗別にグループ化（日付の新しい順）
   const matched = new Set<string>()
@@ -163,9 +172,9 @@ export default async function PublishedPage({
         )}
 
         {/* 統計 */}
-        <div className="grid grid-cols-3 gap-4 mb-10">
+        <div className="grid grid-cols-3 gap-4 mb-4">
           {[
-            { label: "公開済み合計", value: all.length },
+            { label: "公開済み合計", value: allPublished.length },
             { label: "ヘア",         value: hair.length },
             { label: "アイラッシュ", value: eyelash.length },
           ].map(({ label, value }) => (
@@ -177,6 +186,28 @@ export default async function PublishedPage({
               <p className="text-[10px] tracking-[0.2em] uppercase mb-2" style={{ color: "#555" }}>{label}</p>
               <p className="text-3xl font-light" style={{ color: "#D4C8B0" }}>{value}</p>
             </div>
+          ))}
+        </div>
+
+        {/* 出所フィルタ */}
+        <div className="flex items-center gap-2 mb-10">
+          {[
+            { key: 'all',       href: '/admin/blog/published',                  label: `すべて ${allPublished.length}` },
+            { key: 'staff',     href: '/admin/blog/published?source=staff',     label: `● スタッフ投稿 ${staffCount}` },
+            { key: 'instagram', href: '/admin/blog/published?source=instagram', label: `● Instagram ${igCount}` },
+          ].map(f => (
+            <Link
+              key={f.key}
+              href={f.href}
+              className="text-xs px-4 py-2 rounded-full transition-colors"
+              style={{
+                background: source === f.key ? "#222" : "#141414",
+                color: source === f.key ? "#E8E8E8" : "#666",
+                border: "1px solid #2A2A2A",
+              }}
+            >
+              {f.label}
+            </Link>
           ))}
         </div>
 
