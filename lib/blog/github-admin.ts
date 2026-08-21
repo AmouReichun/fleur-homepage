@@ -26,7 +26,16 @@ export type AdminArticle = {
   thumbnail?: string;
   yakkihou_flag?: boolean;
   yakkihou_words?: string[];
+  /** 記事の出所。スタッフ投稿 / Instagram自動生成 / その他（サムネのパスで判定） */
+  source: "staff" | "instagram" | "other";
 };
+
+/** サムネイル画像のパスから記事の出所を判定する。 */
+function detectSource(thumbnail?: string): AdminArticle["source"] {
+  if (thumbnail?.startsWith("/images/uploads/")) return "staff";
+  if (thumbnail?.startsWith("/images/instagram/")) return "instagram";
+  return "other";
+}
 
 async function listMdFiles(category: string): Promise<GhFile[]> {
   const res = await fetch(
@@ -58,6 +67,7 @@ async function fetchMeta(file: GhFile, category: string): Promise<AdminArticle |
     thumbnail: data.thumbnail as string | undefined,
     yakkihou_flag: data.yakkihou_flag as boolean | undefined,
     yakkihou_words: data.yakkihou_words as string[] | undefined,
+    source: detectSource(data.thumbnail as string | undefined),
   };
 }
 

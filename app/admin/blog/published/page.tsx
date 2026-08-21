@@ -261,6 +261,21 @@ export default async function PublishedPage({
                       >
                         ✓ 公開中
                       </span>
+                      {article.source === 'staff' ? (
+                        <span
+                          className="text-[9px] px-2 py-0.5 rounded-sm"
+                          style={{ background: "#1F1A0A", color: "#C8A860", border: "1px solid #4A3A10" }}
+                        >
+                          ● スタッフ投稿
+                        </span>
+                      ) : article.source === 'instagram' ? (
+                        <span
+                          className="text-[9px] px-2 py-0.5 rounded-sm"
+                          style={{ background: "#1A121E", color: "#C888C8", border: "1px solid #3A2040" }}
+                        >
+                          ● Instagram
+                        </span>
+                      ) : null}
                     </div>
                     <p className="text-sm font-medium truncate" style={{ color: "#D4C8B0" }}>
                       {article.title}
