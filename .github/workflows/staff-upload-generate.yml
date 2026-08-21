@@ -1,9 +1,12 @@
 name: Generate Article from Staff Upload
 
 on:
-  push:
-    paths:
-      - 'content/uploads/**.json'
+  schedule:
+    # 16:00 JST (= 07:00 UTC) に1日1回起動。キューの古い順に1件だけ下書き生成する。
+    # daily-generate(17JST) / auto-publish(18JST) より前に走らせ、同日の自動公開対象に入れる。
+    - cron: '0 7 * * *'
+  workflow_dispatch:
+    # 手動実行も可能（キューを1件消化）
 
 # main へ commit/push するワークフロー（daily-generate / auto-publish と共有）を
 # 直列化し、並行 push によるref衝突と同一uploadの重複記事生成を防ぐ。
