@@ -55,7 +55,7 @@ export default function SalonSlider({ salons }: { salons: SalonSlide[] }) {
   };
 
   return (
-    <div>
+    <div className="max-w-6xl mx-auto">
       {/* スライドトラック */}
       <div
         className="overflow-hidden"
@@ -69,10 +69,10 @@ export default function SalonSlider({ salons }: { salons: SalonSlide[] }) {
           style={{ transform: `translateX(-${current * 100}%)` }}
         >
           {salons.map((s, i) => (
-            <div key={s.key} className="min-w-full flex flex-col md:flex-row">
+            <div key={s.key} className="min-w-full flex flex-col md:flex-row md:items-center">
               {/* 画像 */}
-              <div className="md:w-[58%] overflow-hidden bg-site-light">
-                <div className="w-full aspect-[4/3] md:aspect-auto md:h-full min-h-[280px] sm:min-h-[420px] overflow-hidden">
+              <div className="md:w-1/2 overflow-hidden bg-site-light">
+                <div className="w-full aspect-square overflow-hidden">
                   {s.imageSrc ? (
                     // eslint-disable-next-line @next/next/no-img-element
                     <img
@@ -90,7 +90,7 @@ export default function SalonSlider({ salons }: { salons: SalonSlide[] }) {
               </div>
 
               {/* テキスト */}
-              <div className="md:w-[42%] flex flex-col justify-center px-8 sm:px-12 lg:px-16 py-14 bg-white">
+              <div className="md:w-1/2 flex flex-col justify-center px-8 sm:px-12 lg:px-16 py-14 bg-white">
                 <p className="text-[10px] tracking-[0.45em] text-site-accent uppercase mb-4">
                   {s.area} — {s.salonType}
                 </p>
