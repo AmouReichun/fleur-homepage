@@ -74,19 +74,20 @@ export default async function HomePage() {
 
       {/* ─── Hero ─── */}
       <HeroSlideshow images={heroImages} hasImage={hasImage}>
-        <h2 className="text-[10px] tracking-[0.4em] text-white/70 mb-8">
+        <h2 className="text-[10px] tracking-[0.4em] text-white/70 mb-8 animate-fadeinup">
           高知県の美容室・アイラッシュサロン
         </h2>
-        <h1 className="font-serif text-5xl sm:text-6xl lg:text-7xl font-light text-white leading-[1.25] mb-6 whitespace-pre-line">
+        <h1 className="font-serif text-5xl sm:text-6xl lg:text-7xl font-light text-white leading-[1.25] mb-6 whitespace-pre-line animate-fadeinup-slow">
           {content.hero.title || "上品なのに、\n抜け感。"}
         </h1>
         {content.hero.subtitle && (
-          <p className="text-sm text-white/75 leading-relaxed mb-12 whitespace-pre-line">
+          <p className="text-sm text-white/75 leading-relaxed mb-12 whitespace-pre-line animate-fadeinup-late">
             {content.hero.subtitle}
           </p>
         )}
         <Link
           href="/salon"
+          style={{ animation: "fadeinup 0.9s ease-out 0.7s both" }}
           className="inline-flex items-center gap-4 text-xs text-white/75 tracking-[0.3em] hover:text-white transition-colors duration-300 group"
         >
           <span>{content.hero.cta1 || "店舗を見る"}</span>

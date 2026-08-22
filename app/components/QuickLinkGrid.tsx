@@ -100,7 +100,7 @@ function CardItem({ card, index }: { card: QuickLinkCard; index: number }) {
   );
 
   const linkClass =
-    "relative block overflow-hidden group h-[155px] sm:h-[168px] lg:h-[190px] bg-stone-900";
+    "relative block overflow-hidden group h-[155px] sm:h-[168px] lg:h-[190px] bg-stone-900 transition-[transform,box-shadow] duration-300 ease-out md:hover:-translate-y-1 md:hover:shadow-xl md:hover:shadow-black/15";
 
   return (
     <div
