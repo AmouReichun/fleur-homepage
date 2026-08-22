@@ -64,7 +64,14 @@ export default function Header() {
         solid ? "bg-white/95 backdrop-blur-md border-b border-gray-100" : ""
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
+      {/* ヒーロー上（未スクロール時）は明るい写真で白文字が埋もれるため、薄い暗color scrim を敷いて可読性を確保 */}
+      {!solid && (
+        <div
+          className="absolute inset-0 bg-gradient-to-b from-black/35 via-black/15 to-transparent pointer-events-none"
+          aria-hidden
+        />
+      )}
+      <div className="relative max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
         <div className="flex items-center justify-between h-14 sm:h-16">
           <Link
             href="/"
@@ -84,7 +91,7 @@ export default function Header() {
                   className={`text-[11px] tracking-[0.08em] whitespace-nowrap transition-colors duration-400 ${
                     solid
                       ? "text-site-text hover:text-site-accent"
-                      : "text-white/80 hover:text-white"
+                      : "text-white/90 hover:text-white"
                   }`}
                 >
                   {link.label}

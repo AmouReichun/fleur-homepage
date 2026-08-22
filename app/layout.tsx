@@ -96,6 +96,12 @@ export default function RootLayout({
   // headers() を使わないため、各ページが静的/ISR＝エッジキャッシュ可能になる。
   return (
     <html lang="ja" className={`${notoSerifJP.variable} ${notoSansJP.variable}`}>
+      <head>
+        {/* JS無効時はスクロール表示ラッパーを常に可視にして本文が消えないようにする */}
+        <noscript>
+          <style>{`[data-reveal]{opacity:1 !important;transform:none !important;}`}</style>
+        </noscript>
+      </head>
       <body className="bg-site-bg text-site-text antialiased">
         {children}
 

@@ -19,8 +19,19 @@ export default function Reveal({
 }) {
   const ref = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
+  // 動きを減らす設定・IO非対応環境ではアニメーションせず即表示（アクセシビリティ / 堅牢性）
+  const [animate, setAnimate] = useState(true);
 
   useEffect(() => {
+    const reduceMotion =
+      typeof window !== "undefined" &&
+      window.matchMedia?.("(prefers-reduced-motion: reduce)").matches;
+    if (reduceMotion || typeof IntersectionObserver === "undefined") {
+      setAnimate(false);
+      setVisible(true);
+      return;
+    }
+
     const el = ref.current;
     if (!el) return;
     const observer = new IntersectionObserver(
@@ -33,18 +44,28 @@ export default function Reveal({
       { threshold: 0.1, rootMargin: "0px 0px -40px 0px" }
     );
     observer.observe(el);
-    return () => observer.disconnect();
+    // 保険: 何らかの理由で発火しなくても必ず表示する
+    const fallback = setTimeout(() => setVisible(true), 1500);
+    return () => {
+      observer.disconnect();
+      clearTimeout(fallback);
+    };
   }, []);
 
   return (
     <div
       ref={ref}
+      data-reveal
       className={className}
-      style={{
-        opacity: visible ? 1 : 0,
-        transform: visible ? "translateY(0)" : `translateY(${y}px)`,
-        transition: `opacity 0.7s ease ${delay}ms, transform 0.7s cubic-bezier(0.22,1,0.36,1) ${delay}ms`,
-      }}
+      style={
+        animate
+          ? {
+              opacity: visible ? 1 : 0,
+              transform: visible ? "translateY(0)" : `translateY(${y}px)`,
+              transition: `opacity 0.7s ease ${delay}ms, transform 0.7s cubic-bezier(0.22,1,0.36,1) ${delay}ms`,
+            }
+          : undefined
+      }
     >
       {children}
     </div>
