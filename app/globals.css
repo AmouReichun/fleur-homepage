@@ -24,6 +24,23 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+/* 上品な「やわらかい光」の背景（画像なし・CSSグラデのみ＝ほぼ無負荷）
+   温かいオフホワイトのベースに、ベージュと淡ピンクの光をふんわり重ねる。 */
+.glow-surface {
+  background-color: #F6F1EB;
+  background-image:
+    radial-gradient(70% 90% at 12% -5%, rgba(184, 149, 106, 0.10), transparent 60%),
+    radial-gradient(60% 80% at 92% 30%, rgba(240, 232, 232, 0.60), transparent 58%),
+    radial-gradient(80% 70% at 55% 110%, rgba(184, 149, 106, 0.06), transparent 62%);
+}
+/* 白セクションにも極々薄く光を差して全体を温かく（コントラストは維持） */
+.glow-surface-white {
+  background-color: #ffffff;
+  background-image:
+    radial-gradient(65% 80% at 88% 0%, rgba(240, 232, 232, 0.35), transparent 60%),
+    radial-gradient(70% 70% at 8% 100%, rgba(184, 149, 106, 0.04), transparent 60%);
+}
+
 /* アンカー移動をなめらかに（固定ヘッダー分は各要素の scroll-mt で調整済み） */
 html {
   scroll-behavior: smooth;

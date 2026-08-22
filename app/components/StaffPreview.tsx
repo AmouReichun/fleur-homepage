@@ -72,7 +72,7 @@ function StaffRow({ members, salonLabel }: { members: StaffMember[]; salonLabel:
 
 export default function StaffPreview({ staff }: { staff: StaffMember[] }) {
   return (
-    <section className="py-16 sm:py-24 bg-white overflow-hidden">
+    <section className="py-16 sm:py-24 glow-surface-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
 
         {/* セクションヘッダー */}

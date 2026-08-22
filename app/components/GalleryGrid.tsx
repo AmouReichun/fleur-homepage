@@ -63,7 +63,7 @@ export default function GalleryGrid({ posts }: { posts: PostMeta[] }) {
   if (!hasAny) return null;
 
   return (
-    <section className="py-16 sm:py-24 bg-site-bg">
+    <section className="py-16 sm:py-24 glow-surface">
       <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
 
         {/* セクションヘッダー */}

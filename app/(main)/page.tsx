@@ -99,7 +99,7 @@ export default async function HomePage() {
       <QuickLinkGrid cards={content.quickLinks ?? []} />
 
       {/* ─── Salons ─── */}
-      <section className="py-20 sm:py-24 bg-white overflow-hidden">
+      <section className="py-20 sm:py-24 glow-surface-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
           <SectionLabel index="01" en="Salon" ja="店舗案内" />
           <Reveal delay={80} className="-mt-8 mb-12 sm:mb-16">
@@ -114,7 +114,7 @@ export default async function HomePage() {
       </section>
 
       {/* ─── Menu ─── */}
-      <section className="py-20 sm:py-24 bg-site-bg">
+      <section className="py-20 sm:py-24 glow-surface">
         <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
           <SectionLabel index="02" en="Menu" ja="人気メニュー" />
 
@@ -148,7 +148,7 @@ export default async function HomePage() {
       </section>
 
       {/* ─── Blog ─── */}
-      <section className="py-20 sm:py-24 bg-white">
+      <section className="py-20 sm:py-24 glow-surface-white">
         <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
           <SectionLabel index="03" en="Blog" ja="最新ブログ" />
 
@@ -180,7 +180,7 @@ export default async function HomePage() {
       <StaffPreview staff={content.staff.filter((m) => !m.hidden)} />
 
       {/* ─── FAQ ─── */}
-      <section className="py-20 sm:py-24 bg-site-light">
+      <section className="py-20 sm:py-24 glow-surface">
         <div className="max-w-4xl mx-auto px-6 sm:px-10">
           <SectionLabel index="04" en="FAQ" ja="よくあるご質問" />
 
