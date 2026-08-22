@@ -119,7 +119,7 @@ export default async function SalonListPage() {
                     className="border border-site-greige overflow-hidden"
                   >
                     <div className={`flex flex-col lg:flex-row ${i % 2 === 1 ? "lg:flex-row-reverse" : ""}`}>
-                      <div className="lg:w-5/12 relative aspect-[4/3] lg:aspect-auto lg:min-h-[320px] overflow-hidden bg-site-light">
+                      <div className="lg:w-5/12 relative aspect-[4/3] overflow-hidden bg-site-light">
                         {salon.imageSrc ? (
                           <Image src={salon.imageSrc} alt={`${salon.name}（${salon.area}の${salon.salonType}）`} fill className="object-cover" sizes="(max-width: 1024px) 100vw, 480px" />
                         ) : (
