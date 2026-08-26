@@ -16,10 +16,10 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-group-border">
-      <div className="max-w-wide mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
+      <div className="max-w-wide mx-auto px-4 sm:px-6 h-14 sm:h-16 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2 shrink-0">
           <span
-            className={`text-sm tracking-widest font-medium ${
+            className={`text-xl sm:text-2xl tracking-widest font-medium ${
               isEyelash ? "text-eye-accent font-kaku" : "text-hair-accent font-mincho"
             }`}
           >
@@ -45,7 +45,7 @@ export default function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                className={`px-1.5 sm:px-3 py-1.5 text-xs sm:text-sm rounded transition-colors whitespace-nowrap ${
+                className={`px-1.5 sm:px-3 py-1.5 text-[11px] tracking-[0.08em] rounded transition-colors whitespace-nowrap ${
                   active
                     ? isEyelashLink
                       ? "bg-eye-accent-soft text-eye-accent font-medium"
@@ -60,10 +60,10 @@ export default function Header() {
           })}
           <Link
             href="/"
-            className="px-1.5 sm:px-3 py-1.5 text-xs sm:text-sm rounded transition-colors text-group-muted hover:text-group-text whitespace-nowrap"
+            className="px-1.5 sm:px-3 py-1.5 text-[11px] tracking-[0.08em] rounded transition-colors text-group-muted hover:text-group-text whitespace-nowrap"
           >
-            <span className="sm:hidden">公式</span>
-            <span className="hidden sm:inline">公式サイト</span>
+            <span className="sm:hidden">ホーム</span>
+            <span className="hidden sm:inline">ホーム</span>
           </Link>
         </nav>
       </div>

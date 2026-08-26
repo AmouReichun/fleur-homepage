@@ -3,10 +3,14 @@ import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { getContentCached, type SalonContent } from "@/lib/content";
-import { getAreaService, getAllAreaServiceParams } from "@/lib/areas";
+import { getAreaService, getAllAreaServiceParams, offerSalonKeysInArea } from "@/lib/areas";
+import { getService } from "@/lib/services";
 import { breadcrumbSchema } from "@/lib/structured-data";
+import { getCaseStudies } from "@/lib/blog/case-studies";
+import type { SalonKey } from "@/lib/blog/internal-links";
 import ReservationChannels from "@/app/components/ReservationChannels";
 import GoogleReviewCTA from "@/app/components/GoogleReviewCTA";
+import CaseStudySection from "@/app/components/CaseStudySection";
 
 const BASE = "https://fleur-group.jp";
 
@@ -52,6 +56,26 @@ export default async function AreaServicePage({ params }: Props) {
   const offerSalons = salonKeys.filter((k) => salons[k]);
   const worldLabel = svc.world === "eyelash" ? "アイラッシュサロン" : "美容室";
   const salonNames = offerSalons.map((k) => salons[k]?.name ?? k).join("・");
+
+  // 関連メニュー：同エリアで受けられるものはエリアページへ、それ以外はメニューページへ内部リンク
+  const relatedLinks = (svc.related ?? [])
+    .map((s) => getService(s))
+    .filter((s): s is NonNullable<typeof s> => Boolean(s))
+    .map((r) => {
+      const inArea = offerSalonKeysInArea(area, r).length > 0;
+      return { name: r.name, forWhom: r.forWhom[0], href: inArea ? `/area/${area.slug}/${r.slug}` : `/service/${r.slug}` };
+    });
+  // この店舗ページへの導線（アイラッシュ＝Raffineなど、エリア内提供店舗へ戻れるように）
+  const primarySalonKey = offerSalons[0];
+  const primarySalon = primarySalonKey ? salons[primarySalonKey] : undefined;
+
+  // このエリア×メニューの最新の施術事例（店舗×メニューで自動抽出。手動リンク不要）
+  const caseStudies = getCaseStudies({
+    salonKeys: offerSalons as SalonKey[],
+    serviceSlug: svc.slug,
+    category: svc.world,
+    limit: 6,
+  });
 
   // エリア特化の FAQ（音声検索・AIO対策）をサービスFAQの先頭に追加
   const areaFaqLead = {
@@ -209,6 +233,48 @@ export default async function AreaServicePage({ params }: Props) {
           </a>
         </div>
       </section>
+
+      {/* 最新の施術事例（店舗×メニューで自動抽出・自動更新） */}
+      <CaseStudySection
+        posts={caseStudies}
+        world={svc.world}
+        heading={`${primarySalon?.name ?? salonNames}の${svc.name} 最新施術事例`}
+        subheading={`${area.name}で実際に${svc.name}を担当したスタイリストの症例です`}
+        moreHref={`/blog${svc.blogUrl}`}
+        moreLabel={`${svc.name}の施術事例をもっと見る`}
+        bg="bg-white"
+      />
+
+      {/* 関連メニュー（内部リンク） */}
+      {relatedLinks.length > 0 && (
+        <section className="py-12 sm:py-16 bg-white border-t border-site-greige">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6">
+            <h2 className="font-serif text-2xl sm:text-3xl font-semibold text-site-text mb-8 text-center">関連メニュー</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              {relatedLinks.map((r) => (
+                <Link key={r.href} href={r.href} className="block bg-white border border-site-greige p-5 hover:border-site-accent transition-colors group">
+                  <span className="block font-serif text-base font-medium text-site-text group-hover:text-site-accent transition-colors mb-1">{r.name}</span>
+                  <span className="block text-xs text-site-muted leading-relaxed">{r.forWhom}</span>
+                  <span className="mt-3 inline-flex items-center gap-2 text-[11px] text-site-accent">詳しく見る<span className="w-4 h-px bg-current group-hover:w-6 transition-all duration-300" /></span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* 店舗ページへ戻る導線 */}
+      {primarySalon && primarySalonKey && (
+        <section className="py-10 bg-site-light border-t border-site-greige">
+          <div className="max-w-2xl mx-auto px-4 sm:px-6 text-center">
+            <p className="text-sm text-site-muted mb-4">{svc.name}を提供している店舗</p>
+            <Link href={`/salon/${primarySalonKey}`} className="inline-flex items-center gap-3 border border-site-greige bg-white px-6 py-3 text-sm text-site-text hover:border-site-accent hover:text-site-accent transition-colors group">
+              <span>{primarySalon.name}の店舗ページを見る</span>
+              <span className="w-6 h-px bg-current group-hover:w-9 transition-all duration-300" />
+            </Link>
+          </div>
+        </section>
+      )}
 
       {/* 対応店舗・ご予約 */}
       <section className="py-12 sm:py-16 bg-site-light border-t border-site-greige">

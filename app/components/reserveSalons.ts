@@ -32,7 +32,7 @@ export const reserveSalons: ReserveSalonEntry[] = [
   {
     key: "raffine",
     name: "Raffine",
-    area: "高知県高知市 はりまや橋周辺",
+    area: "高知県高知市はりまや町1-4-8 TNはりまやビル3F",
     href: "/salon/raffine",
     hotpepperUrl: "https://beauty.hotpepper.jp/kr/slnH000767549/",
     phone: "090-7120-5566",

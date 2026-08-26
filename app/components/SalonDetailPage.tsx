@@ -12,6 +12,18 @@ const SALON_LABELS: Record<string, string> = {
   raffine: "Raffine（高知市 はりまや橋）",
 };
 
+// メニューから探す（店舗→「高知＋メニュー」のローカルSEO LP への内部リンク）
+// 「高知 まつげパーマ」等で狙う主ランディングページ（/area/kochi/*）へ直接リンク評価を渡す。
+const MENU_LINKS: Record<string, { href: string; name: string; desc: string }[]> = {
+  raffine: [
+    { href: "/area/kochi/matsuge-perm", name: "まつげパーマ", desc: "自まつげを立ち上げ、すっぴんでもぱっちり" },
+    { href: "/area/kochi/matsuek", name: "マツエク", desc: "ボリューム・長さを足して華やかな目元に" },
+    { href: "/area/kochi/korean-eyelash", name: "韓国風まつげ", desc: "束感で抜け感のあるオルチャン風デザイン" },
+    { href: "/area/kochi/led-extension", name: "LEDマツエク", desc: "短時間装着・当日メイクや入浴もしやすい" },
+    { href: "/area/kochi/mayuge-wax", name: "眉毛・アイブロウ", desc: "黄金比の眉WAX。メンズ眉WAXも対応" },
+  ],
+};
+
 
 export default async function SalonDetailPage({ salonKey }: { salonKey: string }) {
   const content = await getContentCached();
@@ -44,6 +56,7 @@ export default async function SalonDetailPage({ salonKey }: { salonKey: string }
     ],
   };
   const concerns = CONCERNS[salonKey] ?? [];
+  const menuLinks = MENU_LINKS[salonKey] ?? [];
 
   if (!salon) return <div className="p-10 text-center text-site-muted">サロン情報が見つかりません</div>;
 
@@ -172,6 +185,35 @@ export default async function SalonDetailPage({ salonKey }: { salonKey: string }
                 </ul>
               </div>
             )}
+          </div>
+        </section>
+      )}
+
+      {/* メニューから探す（メニュー特化ページへの内部リンク） */}
+      {menuLinks.length > 0 && (
+        <section className="py-12 sm:py-16 bg-white border-t border-site-greige">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6">
+            <h2 className="font-serif text-2xl sm:text-3xl font-semibold text-site-text mb-3 text-center">
+              メニューから探す
+            </h2>
+            <p className="text-xs text-site-muted text-center mb-8">
+              {salon.name}の各メニューの特徴・料金の目安・よくある質問をご紹介しています
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              {menuLinks.map((m) => (
+                <Link
+                  key={m.href}
+                  href={m.href}
+                  className="flex items-center justify-between gap-3 bg-white border border-site-greige p-5 hover:border-site-accent transition-colors group"
+                >
+                  <span className="min-w-0">
+                    <span className="block font-serif text-base font-medium text-site-text group-hover:text-site-accent transition-colors">{m.name}</span>
+                    <span className="block text-xs text-site-muted mt-0.5 leading-relaxed">{m.desc}</span>
+                  </span>
+                  <span className="flex-shrink-0 text-site-accent text-lg leading-none group-hover:translate-x-1 transition-transform duration-200">→</span>
+                </Link>
+              ))}
+            </div>
           </div>
         </section>
       )}

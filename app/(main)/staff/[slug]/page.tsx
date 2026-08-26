@@ -4,7 +4,9 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { getContentCached } from "@/lib/content";
 import { breadcrumbSchema } from "@/lib/structured-data";
+import { getCaseStudies } from "@/lib/blog/case-studies";
 import ReservationChannels from "@/app/components/ReservationChannels";
+import CaseStudySection from "@/app/components/CaseStudySection";
 import type { SalonContent } from "@/lib/content";
 
 const BASE = "https://fleur-group.jp";
@@ -124,6 +126,9 @@ export default async function StaffProfilePage({ params }: Props) {
 
   const salons = content.salons as unknown as Record<string, SalonContent>;
   const isEyelash = member.salon === "Raffine";
+
+  // このスタイリストが担当した施術事例（記事のauthorと氏名で照合。自動更新）
+  const staffPosts = getCaseStudies({ author: member.name, limit: 6 });
 
   return (
     <>
@@ -300,23 +305,35 @@ export default async function StaffProfilePage({ params }: Props) {
         </div>
       </section>
 
-      {/* 施術ブログ */}
-      <section className="py-12 bg-white border-t border-site-greige">
-        <div className="max-w-5xl mx-auto px-6 sm:px-10">
-          <p className="text-[10px] tracking-[0.35em] text-site-accent mb-6 uppercase">Works</p>
-          <h2 className="font-serif text-2xl font-light text-site-text mb-3">施術ブログ</h2>
-          <p className="text-sm text-site-muted mb-6">
-            {member.name}が担当した施術の症例・ビフォーアフター写真をブログで公開しています。カット・カラー・トリートメントなど、さまざまな仕上がりをご確認いただけますので、施術のご参考にぜひご覧ください。
-          </p>
-          <Link
-            href={isEyelash ? "/blog/eyelash" : "/blog/hair"}
-            className="inline-flex items-center gap-4 text-xs tracking-[0.25em] text-site-text hover:text-site-accent transition-colors group"
-          >
-            <span>{isEyelash ? "アイラッシュブログを見る" : "ヘアブログを見る"}</span>
-            <span className="w-8 h-px bg-current group-hover:w-12 transition-all duration-300" />
-          </Link>
-        </div>
-      </section>
+      {/* 施術ブログ：担当した施術事例を自動表示（スタッフ↔症例のEntity導線） */}
+      {staffPosts.length > 0 ? (
+        <CaseStudySection
+          posts={staffPosts}
+          world={isEyelash ? "eyelash" : "hair"}
+          heading="このスタイリストの施術事例"
+          subheading={`${member.name}（${member.role}・${member.salon}）が担当した症例・ビフォーアフター写真`}
+          moreHref={`/blog/author/${encodeURIComponent(member.name)}`}
+          moreLabel="この担当者の記事をすべて見る"
+          bg="bg-white"
+        />
+      ) : (
+        <section className="py-12 bg-white border-t border-site-greige">
+          <div className="max-w-5xl mx-auto px-6 sm:px-10">
+            <p className="text-[10px] tracking-[0.35em] text-site-accent mb-6 uppercase">Works</p>
+            <h2 className="font-serif text-2xl font-light text-site-text mb-3">施術ブログ</h2>
+            <p className="text-sm text-site-muted mb-6">
+              {member.name}が担当した施術の症例・ビフォーアフター写真をブログで公開しています。カット・カラー・トリートメントなど、さまざまな仕上がりをご確認いただけますので、施術のご参考にぜひご覧ください。
+            </p>
+            <Link
+              href={isEyelash ? "/blog/eyelash" : "/blog/hair"}
+              className="inline-flex items-center gap-4 text-xs tracking-[0.25em] text-site-text hover:text-site-accent transition-colors group"
+            >
+              <span>{isEyelash ? "アイラッシュブログを見る" : "ヘアブログを見る"}</span>
+              <span className="w-8 h-px bg-current group-hover:w-12 transition-all duration-300" />
+            </Link>
+          </div>
+        </section>
+      )}
 
       {/* 予約 */}
       <section className="py-14 bg-site-light border-t border-site-greige">

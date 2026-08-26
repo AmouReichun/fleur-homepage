@@ -41,6 +41,9 @@ export default async function ServicePage({ params }: Props) {
   const content = await getContentCached();
   const salons = content.salons as unknown as Record<string, SalonContent>;
   const offerSalons = svc.salonKeys.filter((k) => salons[k]);
+  const relatedServices = (svc.related ?? [])
+    .map((s) => getService(s))
+    .filter((s): s is NonNullable<typeof s> => Boolean(s));
 
   const crumbs = [
     { name: "ホーム", url: BASE },
@@ -177,6 +180,28 @@ export default async function ServicePage({ params }: Props) {
           </a>
         </div>
       </section>
+
+      {/* 関連メニュー（内部リンク） */}
+      {relatedServices.length > 0 && (
+        <section className="py-12 sm:py-16 bg-site-light border-t border-site-greige">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6">
+            <h2 className="font-serif text-2xl sm:text-3xl font-semibold text-site-text mb-8 text-center">関連メニュー</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              {relatedServices.map((r) => (
+                <Link
+                  key={r.slug}
+                  href={`/service/${r.slug}`}
+                  className="block bg-white border border-site-greige p-5 hover:border-site-accent transition-colors group"
+                >
+                  <span className="block font-serif text-base font-medium text-site-text group-hover:text-site-accent transition-colors mb-1">{r.name}</span>
+                  <span className="block text-xs text-site-muted leading-relaxed">{r.forWhom[0]}</span>
+                  <span className="mt-3 inline-flex items-center gap-2 text-[11px] text-site-accent">詳しく見る<span className="w-4 h-px bg-current group-hover:w-6 transition-all duration-300" /></span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* エリアから探す（ローカルSEO内部リンク） */}
       <section className="py-10 bg-white border-t border-site-greige">

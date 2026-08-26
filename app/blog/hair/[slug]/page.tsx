@@ -3,12 +3,16 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import { getSlugs, getPost, getAllPosts, getAllTags } from "@/lib/blog/posts";
+import { getImageAspect } from "@/lib/blog/image-aspect";
 import { articleSchema, faqSchema, localBusinessSchema, breadcrumbSchema, personSchema, howToSchema } from "@/lib/blog/structured-data";
 import { getContent } from "@/lib/content";
 import FAQSection from "@/components/FAQSection";
 import RelatedArticles from "@/components/RelatedArticles";
 import ArticleInternalLinks from "@/components/ArticleInternalLinks";
 import { SALONS, salonKeyOf, relatedMenusFor, areaServiceLinksFor, primaryServiceCrumb, autoLinkBody } from "@/lib/blog/internal-links";
+import { normalizeName } from "@/lib/blog/case-studies";
+
+const SITE_BASE = "https://fleur-group.jp";
 
 type Props = { params: { slug: string } };
 
@@ -61,6 +65,8 @@ export default async function HairArticlePage({ params }: Props) {
   const post = await getPost("hair", params.slug).catch(() => null);
   if (!post || post.draft) notFound();
 
+  const heroAspect = await getImageAspect(post.thumbnail);
+
   const allHairPosts = getAllPosts("hair");
   const validTags = new Set(getAllTags("hair"));
   const salonKey = salonKeyOf(post);
@@ -70,7 +76,21 @@ export default async function HairArticlePage({ params }: Props) {
   const svcCrumb = primaryServiceCrumb(post, validTags, post.contentHtml);
   const linkedHtml = autoLinkBody(post.contentHtml, "hair", validTags, area);
 
-  const artSchema = articleSchema(post, params.slug);
+  // 担当スタッフを氏名（表記ゆれ吸収）で照合し、/staff/{slug} のEntityへ紐付ける
+  const staffMember = post.author
+    ? getContent().staff.find((s) => normalizeName(s.name) === normalizeName(post.author))
+    : undefined;
+  const staffSlug = staffMember?.slug;
+  const staffUrl = staffSlug ? `${SITE_BASE}/staff/${staffSlug}` : undefined;
+  const primaryServiceName = relatedMenus[0]?.label;
+
+  const artSchema = articleSchema(post, params.slug, {
+    authorId: staffUrl,
+    salonId: `${SITE_BASE}/salon/${salonKey}`,
+    salonName: post.salon,
+    salonType: "HairSalon",
+    serviceName: primaryServiceName,
+  });
   const faqSc = faqSchema(post.faq);
   const bizSchema = localBusinessSchema(salonKey as "fleurami" | "riv");
   const crumb = breadcrumbSchema([
@@ -80,9 +100,11 @@ export default async function HairArticlePage({ params }: Props) {
     { name: post.title, url: `/blog/hair/${params.slug}` },
   ]);
   const authorAddress = salonKey === "fleurami" ? "野市町西野230" : "南川添9-21";
-  const authorHistory = post.author ? getContent().staff.find((s) => s.name === post.author)?.history : undefined;
+  const authorHistory = staffMember?.history;
+  // 担当スタッフページがあればそこへ、なければ著者アーカイブへ
+  const authorLink = staffSlug ? `/staff/${staffSlug}` : `/blog/author/${encodeURIComponent(post.author)}`;
   const authorSc = post.author
-    ? personSchema(post.author, post.author_role || "スタイリスト", post.salon, "HairSalon", authorAddress, `/blog/author/${encodeURIComponent(post.author)}`, undefined, undefined, authorHistory)
+    ? personSchema(post.author, post.author_role || "スタイリスト", post.salon, "HairSalon", authorAddress, staffSlug ? `/staff/${staffSlug}` : `/blog/author/${encodeURIComponent(post.author)}`, undefined, undefined, authorHistory)
     : null;
   const howTo = post.steps?.length
     ? howToSchema(post.title, post.excerpt, post.steps, `/blog/hair/${params.slug}`)
@@ -167,7 +189,7 @@ export default async function HairArticlePage({ params }: Props) {
 
           {/* Thumbnail */}
           <div
-            className="relative aspect-[16/9] overflow-hidden mb-7 bg-[#EAD9C4]"
+            className={`relative ${heroAspect === "3/4" ? "aspect-[3/4]" : "aspect-[4/3]"} overflow-hidden mb-7 bg-[#EAD9C4]`}
             style={{ borderRadius: "2px" }}
           >
             <Image
@@ -188,15 +210,23 @@ export default async function HairArticlePage({ params }: Props) {
           </div>
           {post.author && (
             <a
-              href={`/blog/author/${encodeURIComponent(post.author)}`}
+              href={authorLink}
               className="flex items-start gap-3 p-4 mb-8 hover:opacity-80 transition-opacity"
               style={{ background: "linear-gradient(90deg, #F5EDE0, #FAF5EE)", borderLeft: "2px solid #BBA98A40", borderRadius: "2px", display: "flex" }}
             >
               <div>
                 <p className="text-[10px] tracking-[0.2em] text-hair-accent-warm uppercase font-cormorant mb-0.5">
-                  {post.author_role || "スタイリスト"} — {post.salon}
+                  担当スタイリスト — {post.salon}
                 </p>
-                <p className="text-sm font-mincho text-hair-text font-medium">{post.author}</p>
+                <p className="text-sm font-mincho text-hair-text font-medium">
+                  {post.author}<span className="text-hair-muted font-normal">／{post.author_role || "スタイリスト"}</span>
+                </p>
+                {staffMember?.specialties && staffMember.specialties.length > 0 && (
+                  <p className="text-[11px] text-hair-muted mt-1">得意施術：{staffMember.specialties.slice(0, 3).join("・")}</p>
+                )}
+                {staffSlug && (
+                  <span className="text-[11px] text-hair-accent-warm mt-1 inline-block">スタイリストのプロフィール・施術事例を見る →</span>
+                )}
               </div>
             </a>
           )}

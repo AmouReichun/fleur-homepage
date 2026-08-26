@@ -3,12 +3,16 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import { getSlugs, getPost, getAllPosts, getAllTags } from "@/lib/blog/posts";
+import { getImageAspect } from "@/lib/blog/image-aspect";
 import { articleSchema, faqSchema, localBusinessSchema, breadcrumbSchema, personSchema, howToSchema } from "@/lib/blog/structured-data";
 import { getContent } from "@/lib/content";
 import FAQSection from "@/components/FAQSection";
 import RelatedArticles from "@/components/RelatedArticles";
 import ArticleInternalLinks from "@/components/ArticleInternalLinks";
 import { SALONS, salonKeyOf, relatedMenusFor, areaServiceLinksFor, primaryServiceCrumb, autoLinkBody } from "@/lib/blog/internal-links";
+import { normalizeName } from "@/lib/blog/case-studies";
+
+const SITE_BASE = "https://fleur-group.jp";
 
 type Props = { params: { slug: string } };
 
@@ -42,6 +46,8 @@ export default async function EyelashArticlePage({ params }: Props) {
   const post = await getPost("eyelash", params.slug).catch(() => null);
   if (!post || post.draft) notFound();
 
+  const heroAspect = await getImageAspect(post.thumbnail);
+
   const allEyelashPosts = getAllPosts("eyelash");
   const validTags = new Set(getAllTags("eyelash"));
   const salonKey = salonKeyOf(post);
@@ -51,7 +57,18 @@ export default async function EyelashArticlePage({ params }: Props) {
   const svcCrumb = primaryServiceCrumb(post, validTags, post.contentHtml);
   const linkedHtml = autoLinkBody(post.contentHtml, "eyelash", validTags, area);
 
-  const artSchema = articleSchema(post, params.slug);
+  const staffMember = post.author
+    ? getContent().staff.find((s) => normalizeName(s.name) === normalizeName(post.author))
+    : undefined;
+  const staffSlug = staffMember?.slug;
+  const authorLink = staffSlug ? `/staff/${staffSlug}` : `/blog/author/${encodeURIComponent(post.author)}`;
+  const artSchema = articleSchema(post, params.slug, {
+    authorId: staffSlug ? `${SITE_BASE}/staff/${staffSlug}` : undefined,
+    salonId: `${SITE_BASE}/salon/raffine`,
+    salonName: post.salon,
+    salonType: "BeautySalon",
+    serviceName: relatedMenus[0]?.label,
+  });
   const faqSc = faqSchema(post.faq);
   const bizSchema = localBusinessSchema("raffine");
   const crumb = breadcrumbSchema([
@@ -60,9 +77,9 @@ export default async function EyelashArticlePage({ params }: Props) {
     ...(svcCrumb ? [svcCrumb] : []),
     { name: post.title, url: `/blog/eyelash/${params.slug}` },
   ]);
-  const authorHistory = post.author ? getContent().staff.find((s) => s.name === post.author)?.history : undefined;
+  const authorHistory = staffMember?.history;
   const authorSc = post.author
-    ? personSchema(post.author, post.author_role || "アイリスト", post.salon, "BeautySalon", "はりまや町1-4-8", `/blog/author/${encodeURIComponent(post.author)}`, undefined, undefined, authorHistory)
+    ? personSchema(post.author, post.author_role || "アイリスト", post.salon, "BeautySalon", "はりまや町1-4-8", staffSlug ? `/staff/${staffSlug}` : `/blog/author/${encodeURIComponent(post.author)}`, undefined, undefined, authorHistory)
     : null;
   const howTo = post.steps?.length
     ? howToSchema(post.title, post.excerpt, post.steps, `/blog/eyelash/${params.slug}`)
@@ -141,7 +158,7 @@ export default async function EyelashArticlePage({ params }: Props) {
           )}
 
           {/* Thumbnail */}
-          <div className="relative aspect-[16/9] rounded-2xl overflow-hidden mb-7 bg-[#F5E6EA]">
+          <div className={`relative ${heroAspect === "3/4" ? "aspect-[3/4]" : "aspect-[4/3]"} rounded-2xl overflow-hidden mb-7 bg-[#F5E6EA]`}>
             <Image
               src={post.thumbnail}
               alt={post.title}
@@ -160,15 +177,20 @@ export default async function EyelashArticlePage({ params }: Props) {
           </div>
           {post.author && (
             <a
-              href={`/blog/author/${encodeURIComponent(post.author)}`}
+              href={authorLink}
               className="flex items-start gap-3 p-4 mb-8 rounded-xl hover:opacity-80 transition-opacity"
               style={{ background: "linear-gradient(135deg, #FDF4F6, #F9EEF3)", borderLeft: "2px solid #C8788A40", display: "flex" }}
             >
               <div>
                 <p className="text-[10px] tracking-[0.2em] text-eye-accent uppercase font-jakarta mb-0.5">
-                  {post.author_role || "アイリスト"} — Raffine
+                  担当アイリスト — Raffine
                 </p>
-                <p className="text-sm font-kaku text-eye-text font-medium">{post.author}</p>
+                <p className="text-sm font-kaku text-eye-text font-medium">
+                  {post.author}<span className="text-eye-muted font-normal">／{post.author_role || "アイリスト"}</span>
+                </p>
+                {staffSlug && (
+                  <span className="text-[11px] text-eye-accent mt-1 inline-block">プロフィール・施術事例を見る →</span>
+                )}
               </div>
             </a>
           )}

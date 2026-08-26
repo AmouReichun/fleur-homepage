@@ -219,11 +219,25 @@ export function localBusinessSchema(salonKey: keyof typeof SALONS) {
   };
 }
 
-export function articleSchema(post: Post | PostMeta, slug: string) {
+export function articleSchema(
+  post: Post | PostMeta,
+  slug: string,
+  opts?: {
+    authorId?: string;        // 担当スタッフの Person @id（例：/staff/{slug}）。Entity再利用。
+    salonId?: string;         // 店舗の @id（例：/salon/riv）
+    salonName?: string;       // 店舗表示名
+    salonType?: string;       // "HairSalon" | "BeautySalon"
+    serviceName?: string;     // 主要施術メニュー名（about に使用）
+  },
+) {
   const url = `${SITE_URL}/blog/${post.category}/${slug}`;
   const author =
     post.author
-      ? { "@type": "Person", name: post.author }
+      ? {
+          "@type": "Person",
+          name: post.author,
+          ...(opts?.authorId ? { "@id": opts.authorId, url: opts.authorId } : {}),
+        }
       : { "@type": "Organization", name: post.salon || "フルールグループ" };
   return {
     "@context": "https://schema.org",
@@ -233,6 +247,17 @@ export function articleSchema(post: Post | PostMeta, slug: string) {
     datePublished: post.date,
     dateModified: post.updated || post.date,
     author,
+    ...(opts?.serviceName ? { about: { "@type": "Service", name: opts.serviceName } } : {}),
+    ...(opts?.salonId
+      ? {
+          mentions: {
+            "@type": opts.salonType || "HairSalon",
+            "@id": opts.salonId,
+            name: opts.salonName || post.salon,
+            url: opts.salonId,
+          },
+        }
+      : {}),
     publisher: {
       "@type": "Organization",
       name: "フルールグループ",

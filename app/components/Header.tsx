@@ -18,7 +18,7 @@ const navLinks = [
 ];
 
 /** ご予約ポップオーバー / モバイルメニュー共通の店舗別予約チャネル一覧 */
-function ReserveList({ onNavigate }: { onNavigate?: () => void }) {
+function ReserveList({ onNavigate, compact = false }: { onNavigate?: () => void; compact?: boolean }) {
   return (
     <div className="space-y-5">
       {reserveSalons.map((s) => (
@@ -29,7 +29,7 @@ function ReserveList({ onNavigate }: { onNavigate?: () => void }) {
           </div>
           {/* SalonReserveIcons の各チャネル(<a>)クリックでメニューを閉じる */}
           <div onClick={onNavigate}>
-            <SalonReserveIcons salon={s} uid={`reserve-${s.key}`} />
+            <SalonReserveIcons salon={s} uid={`reserve-${s.key}`} compact={compact} />
           </div>
         </div>
       ))}
@@ -75,7 +75,7 @@ export default function Header() {
         <div className="flex items-center justify-between h-14 sm:h-16">
           <Link
             href="/"
-            className={`font-serif text-sm tracking-[0.2em] font-medium transition-colors duration-400 ${
+            className={`font-serif text-xl sm:text-2xl tracking-[0.2em] font-medium transition-colors duration-400 ${
               solid ? "text-site-text" : "text-white"
             }`}
           >
@@ -114,7 +114,7 @@ export default function Header() {
                   <div className="absolute right-0 top-full mt-3 z-50 w-[340px] bg-white rounded-xl shadow-xl border border-gray-100 p-5">
                     <p className="text-[10px] tracking-[0.3em] text-site-accent uppercase mb-1">Reservation</p>
                     <p className="text-xs text-site-muted mb-4">ご希望の店舗・方法をお選びください</p>
-                    <ReserveList onNavigate={() => setReserveOpen(false)} />
+                    <ReserveList onNavigate={() => setReserveOpen(false)} compact />
                   </div>
                 </>
               )}
