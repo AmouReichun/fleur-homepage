@@ -6,7 +6,6 @@
 import * as fs from "fs";
 import * as path from "path";
 import matter from "gray-matter";
-import { isGbpConfigured, postBlogArticleToGbp } from "@/lib/gbp";
 import { submitToIndexNow, SITE_BASE } from "@/lib/indexnow";
 
 const CONTENT_DIR = path.join(process.cwd(), "content");
@@ -102,11 +101,8 @@ async function main() {
     bySalon[d.salon].push(d);
   }
 
-  const gbpEnabled = isGbpConfigured();
-  if (!gbpEnabled) {
-    console.log("ℹ️  GBP 環境変数が未設定のため、GBP への自動投稿はスキップします");
-  }
-
+  // GBP「最新情報」への投稿は gbp-daily-post ワークフローに一本化（重複排除・ペース制御あり）。
+  // ここで公開時にインライン投稿すると gbp-daily-post が未記録の記事を再投稿し二重掲載になるため行わない。
   let publishedCount = 0;
   const publishedUrls: string[] = [];
   const publishedCategories = new Set<"hair" | "eyelash">();
@@ -125,28 +121,6 @@ async function main() {
       publishedCount++;
       publishedUrls.push(`${SITE_BASE}/blog/${target.category}/${target.slug}`);
       publishedCategories.add(target.category);
-
-      // GBP への自動投稿
-      if (gbpEnabled && target.title && target.excerpt) {
-        try {
-          const postName = await postBlogArticleToGbp({
-            title: target.title,
-            excerpt: target.excerpt,
-            thumbnail: target.thumbnail || undefined,
-            slug: target.slug,
-            category: target.category,
-            salonName: target.salon,
-          });
-          if (postName) {
-            console.log(`  📍 GBP 投稿済み: ${postName}`);
-          } else {
-            console.log(`  ℹ️  GBP: 対象ロケーション未設定のためスキップ (salon="${target.salon}")`);
-          }
-        } catch (e) {
-          // GBP 失敗は公開を止めない
-          console.error(`  ⚠️  GBP 投稿失敗 (${salon}): ${e instanceof Error ? e.message : String(e)}`);
-        }
-      }
     }
   }
 

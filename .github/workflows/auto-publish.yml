@@ -96,8 +96,6 @@ jobs:
       - name: Auto publish articles
         if: steps.check.outputs.skip == 'false'
         run: npx tsx scripts/auto-publish.ts
-        env:
-          GBP_WEBHOOK_URL: ${{ secrets.GBP_WEBHOOK_URL }}
 
       - name: Commit and push published articles
         id: commit
