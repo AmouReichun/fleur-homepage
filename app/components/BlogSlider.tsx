@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
+import Image from "next/image";
 
 type BlogPost = {
   title: string;
@@ -73,14 +74,16 @@ export default function BlogSlider({
                 href={postUrl}
                 className="group block"
               >
-                <div className="overflow-hidden bg-site-light mb-5 aspect-[4/3]">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={thumbUrl}
-                    alt={post.title}
-                    loading="lazy"
-                    className="w-full h-full object-cover group-hover:scale-[1.04] transition-transform duration-500"
-                  />
+                <div className="relative overflow-hidden bg-site-light mb-5 aspect-[4/3]">
+                  {thumbUrl && (
+                    <Image
+                      src={thumbUrl}
+                      alt={post.title}
+                      fill
+                      sizes="(max-width: 640px) 90vw, (max-width: 1024px) 45vw, 500px"
+                      className="object-cover group-hover:scale-[1.04] transition-transform duration-500"
+                    />
+                  )}
                 </div>
                 <p className="text-[10px] text-site-accent tracking-[0.3em] uppercase mb-2">{post.category}</p>
                 <h3 className="font-serif text-base font-light leading-snug mb-2 group-hover:text-site-accent transition-colors duration-200">

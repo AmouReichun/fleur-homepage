@@ -87,7 +87,17 @@ const nextConfig = {
       // 不要なブラウザ機能を無効化
       { key: "Permissions-Policy", value: "camera=(), microphone=(), geolocation=(), browsing-topics=()" },
     ];
-    return [{ source: "/:path*", headers: securityHeaders }];
+    return [
+      { source: "/:path*", headers: securityHeaders },
+      // public/images 配下の静的画像を長期キャッシュ（ファイル名はタイムスタンプ/ハッシュ付きで実質不変）。
+      // 直接配信される og:image・JSON-LDサムネ等の再訪DL防止。
+      {
+        source: "/images/:path*",
+        headers: [
+          { key: "Cache-Control", value: "public, max-age=31536000, immutable" },
+        ],
+      },
+    ];
   },
 };
 

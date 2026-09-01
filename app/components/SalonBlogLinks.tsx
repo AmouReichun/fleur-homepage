@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { getAllPostsMeta } from "@/lib/blog/posts";
 
 type BlogPost = {
@@ -77,8 +78,9 @@ export default async function SalonBlogLinks({
               href={`/blog/${p.category}/${p.slug}`}
               className="group flex gap-4 border border-site-greige bg-white hover:border-site-accent transition-colors p-3"
             >
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={p.thumbnail} alt={p.title} width={80} height={80} className="w-20 h-20 object-cover flex-shrink-0" loading="lazy" />
+              {p.thumbnail && (
+                <Image src={p.thumbnail} alt={p.title} width={80} height={80} sizes="80px" className="w-20 h-20 object-cover flex-shrink-0" />
+              )}
               <div className="min-w-0">
                 <p className="text-sm font-medium text-site-text leading-snug line-clamp-3 group-hover:text-site-accent transition-colors">{p.title}</p>
                 <p className="text-[10px] text-site-muted mt-1">{p.date}</p>
