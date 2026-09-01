@@ -1,18 +1,10 @@
 import type { Metadata } from "next";
-import { Noto_Serif_JP } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 
-// CJKフォントは preload:false が定石（必要なサブセットだけ display:swap で遅延読込）
-// ブログ専用フォント（Shippori / Cormorant / Zen Kaku / Plus Jakarta）は
-// app/blog/layout.tsx に移動し、メインサイトの LCP に影響しないようにした
-const notoSerifJP = Noto_Serif_JP({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600"],
-  variable: "--font-noto-serif-jp",
-  display: "swap",
-  preload: false,
-});
+// メインサイトは本文・見出しとも端末内蔵フォント（iPhone=ヒラギノ角ゴ/明朝など）を使用。
+// 日本語Webフォントは全サブセットの @font-face を送りレンダーブロックCSSが巨大化するため、
+// LCP/初期描画を最優先して不採用にした（ブログ専用フォントは app/blog/layout.tsx 側）。
 
 const BASE_URL = "https://fleur-group.jp";
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
@@ -87,7 +79,7 @@ export default function RootLayout({
   // Header/Footer は app/(main)/layout.tsx に分離。ルートはhtml/body・フォント・GAのみで
   // headers() を使わないため、各ページが静的/ISR＝エッジキャッシュ可能になる。
   return (
-    <html lang="ja" className={notoSerifJP.variable}>
+    <html lang="ja">
       <head>
         {/* JS無効時はスクロール表示ラッパーを常に可視にして本文が消えないようにする */}
         <noscript>
