@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import type { QuickLinkCard } from "@/lib/content";
 
@@ -50,14 +51,14 @@ function CardItem({ card, index }: { card: QuickLinkCard; index: number }) {
     <>
       {/* 画像 or グラデーション（画像はhover時にスケール） */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="w-full h-full transition-transform duration-700 ease-out md:group-hover:scale-[1.05]">
+        <div className="relative w-full h-full transition-transform duration-700 ease-out md:group-hover:scale-[1.05]">
           {card.imageSrc ? (
-            // eslint-disable-next-line @next/next/no-img-element
-            <img
+            <Image
               src={card.imageSrc}
               alt={card.title || ALT_FALLBACKS[card.id] || "fleur GROUP"}
-              loading="lazy"
-              className="w-full h-full object-cover"
+              fill
+              sizes="(max-width: 640px) 90vw, (max-width: 1024px) 45vw, 400px"
+              className="object-cover"
             />
           ) : (
             <div

@@ -2,6 +2,7 @@
 
 import { useState, useRef, useCallback, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import SalonReserveIcons from "@/app/components/SalonReserveIcons";
 
 interface SalonSlide {
@@ -72,14 +73,15 @@ export default function SalonSlider({ salons }: { salons: SalonSlide[] }) {
             <div key={s.key} className="min-w-full flex flex-col md:flex-row md:items-center">
               {/* 画像 */}
               <div className="md:w-1/2 overflow-hidden bg-site-light">
-                <div className="w-full aspect-square overflow-hidden">
+                <div className="relative w-full aspect-square overflow-hidden">
                   {s.imageSrc ? (
-                    // eslint-disable-next-line @next/next/no-img-element
-                    <img
+                    <Image
                       src={s.imageSrc}
                       alt={`${s.name}（${s.area}の${s.salonType}）`}
-                      className="w-full h-full object-cover"
-                      loading={i === 0 ? "eager" : "lazy"}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                      className="object-cover"
+                      priority={i === 0}
                     />
                   ) : (
                     <div className="w-full h-full flex items-center justify-center">
