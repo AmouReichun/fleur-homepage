@@ -46,7 +46,7 @@ const config: Config = {
       },
       fontFamily: {
         serif: ["var(--font-noto-serif-jp)", "serif"],
-        sans: ["var(--font-noto-sans-jp)", "sans-serif"],
+        sans: ["-apple-system", "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic UI", "Yu Gothic", "Meiryo", "Noto Sans JP", "system-ui", "sans-serif"],
         // ── ブログ統合分 ──
         mincho: ["var(--font-shippori)", "Hiragino Mincho ProN", "serif"],
         cormorant: ["var(--font-cormorant)", "Georgia", "serif"],

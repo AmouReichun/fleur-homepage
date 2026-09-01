@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Noto_Serif_JP, Noto_Sans_JP } from "next/font/google";
+import { Noto_Serif_JP } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 
@@ -10,14 +10,6 @@ const notoSerifJP = Noto_Serif_JP({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600"],
   variable: "--font-noto-serif-jp",
-  display: "swap",
-  preload: false,
-});
-
-const notoSansJP = Noto_Sans_JP({
-  subsets: ["latin"],
-  weight: ["400", "500"],
-  variable: "--font-noto-sans-jp",
   display: "swap",
   preload: false,
 });
@@ -95,7 +87,7 @@ export default function RootLayout({
   // Header/Footer は app/(main)/layout.tsx に分離。ルートはhtml/body・フォント・GAのみで
   // headers() を使わないため、各ページが静的/ISR＝エッジキャッシュ可能になる。
   return (
-    <html lang="ja" className={`${notoSerifJP.variable} ${notoSansJP.variable}`}>
+    <html lang="ja" className={notoSerifJP.variable}>
       <head>
         {/* JS無効時はスクロール表示ラッパーを常に可視にして本文が消えないようにする */}
         <noscript>

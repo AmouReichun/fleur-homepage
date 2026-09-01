@@ -10,7 +10,7 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: var(--font-noto-sans-jp), sans-serif;
+  font-family: -apple-system, "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic UI", "Yu Gothic", Meiryo, "Noto Sans JP", system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 
