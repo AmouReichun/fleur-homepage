@@ -15,7 +15,7 @@ export async function GET(req: NextRequest) {
 
   const token = process.env.GITHUB_TOKEN ?? process.env.GH_PAT ?? "";
   const owner = process.env.GITHUB_OWNER ?? "AmouReichun";
-  const repo  = process.env.GITHUB_REPO  ?? "fleur-blog";
+  const repo  = process.env.GITHUB_REPO  ?? "fleur-homepage";
 
   const apiRes = await fetch(
     `https://api.github.com/repos/${owner}/${repo}/contents/${safePath}`,

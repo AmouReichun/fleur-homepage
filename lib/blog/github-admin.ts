@@ -12,7 +12,7 @@ function ghHeaders() {
 }
 
 function owner() { return process.env.GITHUB_OWNER ?? "AmouReichun"; }
-function repo()  { return process.env.GITHUB_REPO  ?? "fleur-blog"; }
+function repo()  { return process.env.GITHUB_REPO  ?? "fleur-homepage"; }
 
 type GhFile = { name: string; download_url: string; path: string };
 

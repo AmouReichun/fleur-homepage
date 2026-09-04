@@ -4,7 +4,7 @@ function cfg() {
   // Vercel 環境変数は GH_PAT、ローカルは GITHUB_TOKEN でも可
   const token = process.env.GITHUB_TOKEN ?? process.env.GH_PAT ?? "";
   const owner = process.env.GITHUB_OWNER ?? "AmouReichun";
-  const repo  = process.env.GITHUB_REPO  ?? "fleur-blog";
+  const repo  = process.env.GITHUB_REPO  ?? "fleur-homepage";
   return { token, owner, repo };
 }
 
