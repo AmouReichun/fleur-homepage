@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { getSlugs, getPost, getAllPosts, getAllTags } from "@/lib/blog/posts";
 import { getImageAspect } from "@/lib/blog/image-aspect";
-import { articleSchema, faqSchema, localBusinessSchema, breadcrumbSchema, personSchema, howToSchema } from "@/lib/blog/structured-data";
+import { articleSchema, faqSchema, localBusinessSchema, breadcrumbSchema, personSchema, howToSchema, videoObjectSchema } from "@/lib/blog/structured-data";
 import { getContent } from "@/lib/content";
 import FAQSection from "@/components/FAQSection";
 import RelatedArticles from "@/components/RelatedArticles";
@@ -84,6 +84,7 @@ export default async function EyelashArticlePage({ params }: Props) {
   const howTo = post.steps?.length
     ? howToSchema(post.title, post.excerpt, post.steps, `/blog/eyelash/${params.slug}`)
     : null;
+  const videoSc = videoObjectSchema(post);
 
   return (
     <>
@@ -93,6 +94,7 @@ export default async function EyelashArticlePage({ params }: Props) {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(crumb) }} />
       {authorSc && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(authorSc) }} />}
       {howTo && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howTo) }} />}
+      {videoSc && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(videoSc) }} />}
 
       <div className="min-h-screen" style={{ background: "linear-gradient(180deg, #FBF8F8 0%, #F9F5F6 100%)" }}>
         {/* Breadcrumb */}

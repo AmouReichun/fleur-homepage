@@ -448,6 +448,26 @@ export function personSchema(
   return schema;
 }
 
+export function videoObjectSchema(post: Post | PostMeta) {
+  if (!post.instagram_permalink) return null;
+  const permalink = post.instagram_permalink.endsWith("/")
+    ? post.instagram_permalink
+    : post.instagram_permalink + "/";
+  const thumbnailUrl = post.thumbnail.startsWith("http")
+    ? post.thumbnail
+    : `${SITE_URL}${post.thumbnail}`;
+  return {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    name: post.title,
+    description: post.excerpt,
+    thumbnailUrl,
+    uploadDate: post.date,
+    embedUrl: `${permalink}embed/`,
+    url: permalink,
+  };
+}
+
 export function faqSchema(faq: { q: string; a: string }[]) {
   if (!faq || faq.length === 0) return null;
   return {

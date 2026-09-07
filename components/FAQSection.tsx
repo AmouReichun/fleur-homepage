@@ -3,6 +3,8 @@
 import { useState } from "react";
 import type { FaqItem } from "@/lib/blog/posts";
 
+const INITIAL_SHOW = 3;
+
 type Props = {
   faq: FaqItem[];
   world: "hair" | "eyelash";
@@ -10,9 +12,13 @@ type Props = {
 
 export default function FAQSection({ faq, world }: Props) {
   const [open, setOpen] = useState<number | null>(null);
+  const [expanded, setExpanded] = useState(false);
   const isEyelash = world === "eyelash";
 
   if (!faq || faq.length === 0) return null;
+
+  const shown = expanded ? faq : faq.slice(0, INITIAL_SHOW);
+  const hidden = faq.length - INITIAL_SHOW;
 
   if (isEyelash) {
     return (
@@ -25,7 +31,7 @@ export default function FAQSection({ faq, world }: Props) {
           よくある質問
         </h2>
         <dl className="space-y-3">
-          {faq.map((item, i) => (
+          {shown.map((item, i) => (
             <div
               key={i}
               className="rounded-2xl overflow-hidden border border-eye-border/60 bg-white"
@@ -63,6 +69,15 @@ export default function FAQSection({ faq, world }: Props) {
             </div>
           ))}
         </dl>
+        {!expanded && hidden > 0 && (
+          <button
+            onClick={() => setExpanded(true)}
+            className="mt-4 text-xs text-eye-muted hover:text-eye-accent transition-colors flex items-center gap-2"
+          >
+            <span>残り{hidden}件を見る</span>
+            <span className="text-base leading-none">+</span>
+          </button>
+        )}
       </section>
     );
   }
@@ -74,7 +89,7 @@ export default function FAQSection({ faq, world }: Props) {
         よくある質問
       </h2>
       <dl className="space-y-2">
-        {faq.map((item, i) => (
+        {shown.map((item, i) => (
           <div key={i} className="border border-hair-border rounded-sm overflow-hidden">
             <dt>
               <button
@@ -103,6 +118,15 @@ export default function FAQSection({ faq, world }: Props) {
           </div>
         ))}
       </dl>
+      {!expanded && hidden > 0 && (
+        <button
+          onClick={() => setExpanded(true)}
+          className="mt-4 text-xs text-hair-muted hover:text-hair-accent transition-colors flex items-center gap-2"
+        >
+          <span>残り{hidden}件を見る</span>
+          <span className="text-base leading-none">+</span>
+        </button>
+      )}
     </section>
   );
 }

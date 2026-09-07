@@ -30,6 +30,8 @@ export type PostMeta = {
   author: string;
   author_role: string;
   steps: HowToStep[];
+  instagram_permalink?: string;
+  instagram_id?: string;
 };
 
 export type Post = PostMeta & {
@@ -68,6 +70,8 @@ export function getPostMeta(category: Category, slug: string): PostMeta & { draf
     author_role: data.author_role ?? "",
     steps: data.steps ?? [],
     draft: data.draft ?? false,
+    instagram_permalink: data.instagram_permalink,
+    instagram_id: data.instagram_id,
   };
 }
 
@@ -97,6 +101,8 @@ export async function getPost(category: Category, slug: string): Promise<Post & 
     steps: data.steps ?? [],
     contentHtml,
     draft: data.draft ?? false,
+    instagram_permalink: data.instagram_permalink,
+    instagram_id: data.instagram_id,
   };
 }
 

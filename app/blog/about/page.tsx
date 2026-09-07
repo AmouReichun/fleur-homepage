@@ -23,7 +23,6 @@ const salonDetails = [
     features: ["艶カラー", "白髪ぼかし", "髪質改善", "縮毛矯正", "カット"],
     target: "大人女性",
     rating: 4.67,
-    reviewCount: 388,
     hpb: "https://beauty.hotpepper.jp/slnH000528388/",
     instagram: "https://www.instagram.com/fleurami_info/",
     accentColor: "#BBA98A",
@@ -45,7 +44,6 @@ const salonDetails = [
     features: ["髪質改善", "縮毛矯正", "ハイライト", "白髪ぼかし", "似合わせカット"],
     target: "20歳代〜40歳代",
     rating: 4.65,
-    reviewCount: 674,
     hpb: "https://beauty.hotpepper.jp/slnH000634137/",
     instagram: "https://www.instagram.com/riv.kochi/",
     accentColor: "#BBA98A",
@@ -67,7 +65,6 @@ const salonDetails = [
     features: ["マツエク", "まつげパーマ", "パリジェンヌ", "眉毛WAX", "韓国束感"],
     target: "20歳代中心・半個室",
     rating: 4.82,
-    reviewCount: 200,
     hpb: "https://beauty.hotpepper.jp/kr/slnH000767549/",
     instagram: "https://www.instagram.com/raffine0815/",
     accentColor: "#C8788A",
@@ -333,9 +330,6 @@ export default function AboutPage() {
                         <Stars rating={salon.rating} />
                         <span className="font-dm text-sm font-medium" style={{ color: "#C8A860" }}>
                           {salon.rating.toFixed(2)}
-                        </span>
-                        <span className="text-[11px]" style={{ color: "#A89880" }}>
-                          ({salon.reviewCount}件)
                         </span>
                       </div>
 

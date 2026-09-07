@@ -81,6 +81,13 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <head>
+        {/* GA4の接続待ち時間を短縮（FCP/TTI改善） */}
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="preconnect" href="https://www.google-analytics.com" />
+        {/* Instagram/Facebook CDNへのDNS解決を事前に行う */}
+        <link rel="dns-prefetch" href="https://www.cdninstagram.com" />
+        <link rel="dns-prefetch" href="https://scontent.cdninstagram.com" />
+        <link rel="dns-prefetch" href="https://video.cdninstagram.com" />
         {/* JS無効時はスクロール表示ラッパーを常に可視にして本文が消えないようにする */}
         <noscript>
           <style>{`[data-reveal]{opacity:1 !important;transform:none !important;}`}</style>

@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
+export const revalidate = 3600;
+
 export const metadata: Metadata = {
   description:
     "高知県（高知市・香南市）の美容室（Riv. by fleurami・fleurami）とアイラッシュサロン（Raffine）。髪質改善・縮毛矯正・白髪ぼかし・まつ毛パーマ・眉毛WAXが得意。地元で選ばれ続けるサロングループ。Web・LINE予約受付中。",
@@ -63,6 +65,11 @@ export default async function HomePage() {
     allPosts.filter((p) => p.category === category).slice(0, 5);
   const hairPosts = pickPosts("hair");
   const eyelashPosts = pickPosts("eyelash");
+  // GalleryGrid用：カテゴリ別15件ずつ（内部でサロン別6件に絞る）
+  const galleryPosts = [
+    ...allPosts.filter((p) => p.category === "hair").slice(0, 15),
+    ...allPosts.filter((p) => p.category === "eyelash").slice(0, 15),
+  ];
 
   return (
     <>
@@ -174,7 +181,7 @@ export default async function HomePage() {
       </section>
 
       {/* ─── Gallery ─── */}
-      <GalleryGrid posts={allPosts} />
+      <GalleryGrid posts={galleryPosts} />
 
       {/* ─── Staff Preview ─── */}
       <StaffPreview staff={content.staff.filter((m) => !m.hidden)} />
