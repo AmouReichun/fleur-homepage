@@ -122,6 +122,13 @@ export const organizationSchema = {
     "https://g.page/r/CbD8dVZGgEeuEAE",
     "https://prtimes.jp/main/html/searchrlp/company_id/187832",
   ],
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: 4.68,
+    ratingCount: 1262,
+    bestRating: 5,
+    worstRating: 1,
+  },
   hasOfferCatalog: {
     "@type": "OfferCatalog",
     name: "美容サービス",
@@ -198,6 +205,13 @@ export const rivSalonSchema = {
     "https://www.instagram.com/riv.kochi",
     "https://g.page/r/CdEFX3xXBBF7EAE",
   ],
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: 4.65,
+    ratingCount: 674,
+    bestRating: 5,
+    worstRating: 1,
+  },
   parentOrganization: { "@type": "Organization", "@id": `${BASE}/#organization`, name: "fleur GROUP", url: BASE },
 };
 
@@ -266,6 +280,13 @@ export const fleuramiSalonSchema = {
     "https://www.instagram.com/fleurami_info",
     "https://g.page/r/CVY6rOf-UWbxEAE",
   ],
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: 4.67,
+    ratingCount: 388,
+    bestRating: 5,
+    worstRating: 1,
+  },
   parentOrganization: { "@type": "Organization", "@id": `${BASE}/#organization`, name: "fleur GROUP", url: BASE },
 };
 
@@ -334,6 +355,13 @@ export const raffineSalonSchema = {
     "https://www.instagram.com/raffine0815",
     "https://g.page/r/CbD8dVZGgEeuEAE",
   ],
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: 4.82,
+    ratingCount: 200,
+    bestRating: 5,
+    worstRating: 1,
+  },
   parentOrganization: { "@type": "Organization", "@id": `${BASE}/#organization`, name: "fleur GROUP", url: BASE },
 };
 
@@ -549,6 +577,7 @@ export const webSiteSchema = {
   "@type": "WebSite",
   name: "fleur GROUP",
   url: "https://fleur-group.jp",
+  inLanguage: "ja",
   description: "高知市・香南市で美容室・アイラッシュサロンを3店舗展開するfleur GROUP。髪質改善・白髪ぼかし・縮毛矯正・まつげパーマ・眉毛WAX。",
   potentialAction: {
     "@type": "SearchAction",

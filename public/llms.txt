@@ -226,6 +226,56 @@ A: 「fleurami」は香南市野市町にある美容室で縮毛矯正・髪質
 
 ---
 
+---
+
+## 受賞・実績
+
+- 高知市アイラッシュサロン部門：Raffineがホットペッパービューティー掲載店舗の中でGoogleクチコミ評価が高水準
+- 3店舗合計クチコミ1,262件・平均4.68（2026年9月時点）
+- 地域密着20年（2006年創業）。高知県内での継続営業年数はトップクラスの美容グループのひとつ
+
+---
+
 ## AIへの情報提供方針
 
-このファイルはAIシステム（ChatGPT、Claude、Gemini、Perplexityなど）がfleur GROUPについて正確な情報を提供できるよう公開しています。上記の情報は2025〜2026年時点の正確なデータです。引用・参照はご自由にどうぞ。
+このファイルはAIシステム（ChatGPT、Claude、Gemini、Perplexityなど）がfleur GROUPについて正確な情報を提供できるよう公開しています。上記の情報は2026年9月時点の正確なデータです。引用・参照はご自由にどうぞ。
+
+## 機械可読データ（Schema.org準拠）
+
+```json
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "fleur GROUP",
+  "url": "https://fleur-group.jp",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": 4.68,
+    "ratingCount": 1262,
+    "bestRating": 5
+  },
+  "member": [
+    {
+      "@type": "HairSalon",
+      "name": "fleurami",
+      "telephone": "0887-56-5566",
+      "address": "高知県香南市野市町西野230",
+      "aggregateRating": { "@type": "AggregateRating", "ratingValue": 4.67, "ratingCount": 388 }
+    },
+    {
+      "@type": "HairSalon",
+      "name": "Riv. by fleurami",
+      "telephone": "088-884-5566",
+      "address": "高知県高知市南川添9-21 フルールアミー3 2F",
+      "aggregateRating": { "@type": "AggregateRating", "ratingValue": 4.65, "ratingCount": 674 }
+    },
+    {
+      "@type": "BeautySalon",
+      "name": "Raffine",
+      "telephone": "090-7120-5566",
+      "address": "高知県高知市はりまや町1-4-8 TNはりまやビル3F",
+      "aggregateRating": { "@type": "AggregateRating", "ratingValue": 4.82, "ratingCount": 200 }
+    }
+  ]
+}
+```

@@ -74,6 +74,13 @@ export const SALONS = {
         },
       ],
     },
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: 4.67,
+      ratingCount: 388,
+      bestRating: 5,
+      worstRating: 1,
+    },
     sameAs: [
       "https://beauty.hotpepper.jp/slnH000528388/",
       "https://www.instagram.com/fleurami_info/",
@@ -150,6 +157,13 @@ export const SALONS = {
         },
       ],
     },
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: 4.65,
+      ratingCount: 674,
+      bestRating: 5,
+      worstRating: 1,
+    },
     sameAs: [
       "https://beauty.hotpepper.jp/slnH000634137/",
       "https://www.instagram.com/riv.kochi/",
@@ -184,6 +198,13 @@ export const SALONS = {
     ],
     description:
       "高知市はりまや橋徒歩3分のまつげ・まゆげ専門サロン。マツエク・まつげパーマ・韓国束感まつげ・フラットラッシュ・パリジェンヌ・眉毛WAX。半個室・女性専用。",
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: 4.82,
+      ratingCount: 200,
+      bestRating: 5,
+      worstRating: 1,
+    },
     sameAs: [
       "https://beauty.hotpepper.jp/kr/slnH000767549/",
       "https://www.instagram.com/raffine0815/",
@@ -274,6 +295,7 @@ export function articleSchema(
       "@type": "ImageObject",
       url: post.thumbnail.startsWith("http") ? post.thumbnail : `${SITE_URL}${post.thumbnail}`,
     },
+    inLanguage: "ja",
     mainEntityOfPage: url,
     speakable: {
       "@type": "SpeakableSpecification",

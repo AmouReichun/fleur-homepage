@@ -97,6 +97,13 @@ const nextConfig = {
           { key: "Cache-Control", value: "public, max-age=31536000, immutable" },
         ],
       },
+      // ビルドごとにハッシュが変わる静的アセットをGooglebotから隠す（robots.txtと二重防壁）
+      {
+        source: "/_next/static/:path*",
+        headers: [
+          { key: "X-Robots-Tag", value: "noindex, nofollow" },
+        ],
+      },
     ];
   },
 };
