@@ -5,6 +5,7 @@ const SITE_URL = process.env.SITE_URL ?? "https://fleur-group.jp";
 export const SALONS = {
   fleurami: {
     "@type": "HairSalon",
+    "@id": `${SITE_URL}/salon/fleurami`,
     name: "fleurami",
     alternateName: "フルールアミー",
     telephone: "0887-56-5566",
@@ -83,11 +84,13 @@ export const SALONS = {
     },
     sameAs: [
       "https://beauty.hotpepper.jp/slnH000528388/",
-      "https://www.instagram.com/fleurami_info/",
+      "https://www.instagram.com/fleurami_info",
+      "https://g.page/r/CVY6rOf-UWbxEAE",
     ],
   },
   riv: {
     "@type": "HairSalon",
+    "@id": `${SITE_URL}/salon/riv`,
     name: "Riv. by fleurami",
     alternateName: "リヴ バイ フルールアミー",
     telephone: "088-884-5566",
@@ -166,11 +169,13 @@ export const SALONS = {
     },
     sameAs: [
       "https://beauty.hotpepper.jp/slnH000634137/",
-      "https://www.instagram.com/riv.kochi/",
+      "https://www.instagram.com/riv.kochi",
+      "https://g.page/r/CdEFX3xXBBF7EAE",
     ],
   },
   raffine: {
     "@type": "BeautySalon",
+    "@id": `${SITE_URL}/salon/raffine`,
     name: "Raffine",
     alternateName: "ラフィーネ",
     telephone: "090-7120-5566",
@@ -197,7 +202,7 @@ export const SALONS = {
       },
     ],
     description:
-      "高知市はりまや橋徒歩3分のまつげ・まゆげ専門サロン。マツエク・まつげパーマ・韓国束感まつげ・フラットラッシュ・パリジェンヌ・眉毛WAX。半個室・女性専用。",
+      "高知市はりまや橋徒歩3分のまつげ・まゆげ専門サロン。マツエク・まつげパーマ・韓国束感まつげ・フラットラッシュ・パリジェンヌ・眉毛WAX（メンズ対応）。全席半個室・完全予約制。",
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: 4.82,
@@ -207,7 +212,8 @@ export const SALONS = {
     },
     sameAs: [
       "https://beauty.hotpepper.jp/kr/slnH000767549/",
-      "https://www.instagram.com/raffine0815/",
+      "https://www.instagram.com/raffine0815",
+      "https://g.page/r/CbD8dVZGgEeuEAE",
     ],
   },
 };
@@ -216,18 +222,23 @@ export function organizationSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "フルールグループ",
+    "@id": `${SITE_URL}/#organization`,
+    name: "fleur GROUP",
+    alternateName: "フルールグループ",
     url: SITE_URL,
     sameAs: [
       "https://beauty.hotpepper.jp/slnH000528388/",
-      "https://www.instagram.com/fleurami_info/",
+      "https://www.instagram.com/fleurami_info",
       "https://beauty.hotpepper.jp/slnH000634137/",
-      "https://www.instagram.com/riv.kochi/",
+      "https://www.instagram.com/riv.kochi",
       "https://beauty.hotpepper.jp/kr/slnH000767549/",
-      "https://www.instagram.com/raffine0815/",
+      "https://www.instagram.com/raffine0815",
+      "https://g.page/r/CVY6rOf-UWbxEAE",
+      "https://g.page/r/CdEFX3xXBBF7EAE",
+      "https://g.page/r/CbD8dVZGgEeuEAE",
     ],
     description:
-      "高知県のヘアサロン（fleurami・香南市 / Riv.・高知市）とまつ毛パーマ・マツエク・まゆげ専門サロン（Raffine・高知市）を展開するグループ。",
+      "高知県（高知市・香南市）で美容室2店舗（Riv. by fleurami・fleurami）とアイラッシュサロン（Raffine）を展開するfleur GROUP。髪質改善・白髪ぼかし・縮毛矯正・まつげパーマ・眉毛WAXが得意。2006年設立。",
     member: [SALONS.fleurami, SALONS.riv, SALONS.raffine],
   };
 }
@@ -281,7 +292,8 @@ export function articleSchema(
       : {}),
     publisher: {
       "@type": "Organization",
-      name: "フルールグループ",
+      "@id": `${SITE_URL}/#organization`,
+      name: "fleur GROUP",
       url: SITE_URL,
       logo: {
         "@type": "ImageObject",

@@ -14,9 +14,10 @@ const siteNavigationSchema = {
     { "@type": "SiteNavigationElement", position: 3, name: "スタッフ", url: `${BASE}/staff` },
     { "@type": "SiteNavigationElement", position: 4, name: "最新情報", url: `${BASE}/news` },
     { "@type": "SiteNavigationElement", position: 5, name: "ブログ", url: `${BASE}/blog` },
-    { "@type": "SiteNavigationElement", position: 6, name: "採用情報", url: `${BASE}/recruit` },
-    { "@type": "SiteNavigationElement", position: 7, name: "会社概要", url: `${BASE}/company` },
-    { "@type": "SiteNavigationElement", position: 8, name: "お問い合わせ", url: `${BASE}/contact` },
+    { "@type": "SiteNavigationElement", position: 6, name: "美容ガイド", url: `${BASE}/guide` },
+    { "@type": "SiteNavigationElement", position: 7, name: "採用情報", url: `${BASE}/recruit` },
+    { "@type": "SiteNavigationElement", position: 8, name: "会社概要", url: `${BASE}/company` },
+    { "@type": "SiteNavigationElement", position: 9, name: "お問い合わせ", url: `${BASE}/contact` },
   ],
 };
 

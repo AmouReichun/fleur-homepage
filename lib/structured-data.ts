@@ -211,6 +211,7 @@ export const rivSalonSchema = {
     ratingCount: 674,
     bestRating: 5,
     worstRating: 1,
+    // 注意: ratingCount は定期確認が必要。SEO-AIO-TODO.md を参照。
   },
   parentOrganization: { "@type": "Organization", "@id": `${BASE}/#organization`, name: "fleur GROUP", url: BASE },
 };
@@ -286,6 +287,7 @@ export const fleuramiSalonSchema = {
     ratingCount: 388,
     bestRating: 5,
     worstRating: 1,
+    // 注意: ratingCount は定期確認が必要。SEO-AIO-TODO.md を参照。
   },
   parentOrganization: { "@type": "Organization", "@id": `${BASE}/#organization`, name: "fleur GROUP", url: BASE },
 };
@@ -361,6 +363,7 @@ export const raffineSalonSchema = {
     ratingCount: 200,
     bestRating: 5,
     worstRating: 1,
+    // 注意: ratingCount は200件以上の概算値。定期確認が必要。SEO-AIO-TODO.md を参照。
   },
   parentOrganization: { "@type": "Organization", "@id": `${BASE}/#organization`, name: "fleur GROUP", url: BASE },
 };
