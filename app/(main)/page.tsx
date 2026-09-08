@@ -20,6 +20,7 @@ import Reveal from "@/app/components/Reveal";
 import StaffPreview from "@/app/components/StaffPreview";
 import GalleryGrid from "@/app/components/GalleryGrid";
 import ReservationChannels from "@/app/components/ReservationChannels";
+import BrandMovieSection from "@/app/components/BrandMovieSection";
 import { getAllPostsMeta } from "@/lib/blog/posts";
 
 function SectionLabel({ index, en, ja }: { index: string; en: string; ja: string }) {
@@ -67,7 +68,7 @@ export default async function HomePage() {
   const eyelashPosts = pickPosts("eyelash");
   // GalleryGrid用：カテゴリ別15件ずつ（内部でサロン別6件に絞る）
   const galleryPosts = [
-    ...allPosts.filter((p) => p.category === "hair").slice(0, 15),
+    ...allPosts.filter((p) => p.category === "hair").slice(0, 30),
     ...allPosts.filter((p) => p.category === "eyelash").slice(0, 15),
   ];
 
@@ -179,6 +180,9 @@ export default async function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* ─── Brand Movie ─── */}
+      <BrandMovieSection />
 
       {/* ─── Gallery ─── */}
       <GalleryGrid posts={galleryPosts} />
