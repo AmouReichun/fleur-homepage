@@ -3,6 +3,7 @@ import SalonReserveIcons from "@/app/components/SalonReserveIcons";
 import { reserveSalons as salons } from "@/app/components/reserveSalons";
 
 const links = [
+  { href: "/guide", label: "美容ガイド" },
   { href: "/menu", label: "メニュー" },
   { href: "/area/kochi", label: "高知市のメニュー" },
   { href: "/area/konan", label: "香南市のメニュー" },

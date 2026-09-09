@@ -214,6 +214,16 @@ export default async function HomePage() {
           {topFaq.length === 0 && (
             <p className="text-sm text-site-muted text-center py-12">FAQがまだ登録されていません</p>
           )}
+
+          <div className="mt-10 text-center">
+            <Link
+              href="/guide"
+              className="inline-flex items-center gap-4 text-xs tracking-[0.2em] text-site-text hover:text-site-accent transition-colors group"
+            >
+              <span>施術の選び方・美容ガイドを見る</span>
+              <span className="w-8 h-px bg-current group-hover:w-12 transition-all duration-300" />
+            </Link>
+          </div>
         </div>
       </section>
 
