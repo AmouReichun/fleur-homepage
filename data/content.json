@@ -1108,6 +1108,7 @@
       "salon": "fleurami",
       "bio": "艶のある美しいカラーが得意です。お客様の骨格・肌色に合わせた色をご提案します。",
       "imageSrc": "/images/admin/staff-2-1782195045005.jpg",
+      "specialties": ["艶カラー", "ヘアカラー", "似合わせカラー"],
       "qualifications": [
         "美容師免許（国家資格）"
       ],
@@ -1121,6 +1122,8 @@
       "salon": "fleurami",
       "bio": "お客様一人ひとりの魅力を引き出すスタイルをご提案します。髪質改善・白髪ぼかしが得意です。",
       "imageSrc": "/images/admin/staff-0-1782194996451.jpg",
+      "specialties": ["髪質改善", "白髪ぼかし", "グレイカラー"],
+      "ageGroups": ["40代・50代", "50代・60代"],
       "qualifications": [
         "美容師免許（国家資格）",
         "ヘアカラーリスト認定"
@@ -1135,6 +1138,7 @@
       "salon": "fleurami",
       "bio": "似合わせカットで毎日のスタイリングが楽になるように丁寧にカットします。",
       "imageSrc": "/images/admin/staff-1-1782195037653.jpg",
+      "specialties": ["縮毛矯正", "似合わせカット", "髪質改善"],
       "qualifications": [
         "美容師免許（国家資格）",
         "縮毛矯正技術認定",
@@ -1150,6 +1154,7 @@
       "salon": "Riv. by fleurami",
       "bio": "骨格に合わせた似合わせカットをご提案します。",
       "imageSrc": "/images/admin/staff-5-1782195066018.jpg",
+      "specialties": ["似合わせカット"],
       "qualifications": [
         "美容師免許（国家資格）"
       ],
@@ -1167,6 +1172,8 @@
       "salon": "Riv. by fleurami",
       "bio": "大人女性の髪の悩みに丁寧に寄り添います。白髪ぼかし・グレイカラーが得意です。",
       "imageSrc": "/images/admin/staff-4-1782195059188.jpg",
+      "specialties": ["白髪ぼかし", "グレイカラー", "髪質改善"],
+      "ageGroups": ["40代・50代", "50代・60代"],
       "qualifications": [
         "美容師免許（国家資格）",
         "ヘアカラーリスト認定"
@@ -1181,7 +1188,7 @@
       "salon": "Riv. by fleurami",
       "bio": "くせ毛・うねりのお悩みを縮毛矯正で解決します。扱いやすい髪へと導きます。",
       "imageSrc": "/images/admin/staff-3-1782195051015.jpg",
-      "specialties": [],
+      "specialties": ["縮毛矯正", "髪質改善", "くせ毛ケア"],
       "qualifications": [
         "美容師免許（国家資格）",
         "縮毛矯正技術認定",
@@ -1197,6 +1204,7 @@
       "salon": "Raffine",
       "bio": "自まつげを活かしたナチュラルな施術で、お客様の目元の美しさを引き出します。",
       "imageSrc": "/images/admin/staff-7-1782195080215.jpg",
+      "specialties": ["まつげパーマ", "ラッシュリフト"],
       "qualifications": [
         "美容師免許（国家資格）"
       ],
@@ -1210,6 +1218,7 @@
       "salon": "Raffine",
       "bio": "韓国風まつげパーマや眉毛WAXで、垢抜けた目元を作ります。",
       "imageSrc": "/images/admin/staff-8-1782195085415.jpg",
+      "specialties": ["まつげパーマ", "韓国束感まつげ", "眉毛WAX"],
       "qualifications": [
         "美容師免許（国家資格）"
       ],
@@ -1223,6 +1232,7 @@
       "salon": "Raffine",
       "bio": "丁寧なカウンセリングで、お客様のご希望に合った施術をご提供します。",
       "imageSrc": "/images/admin/staff-9-1782195090933.jpg",
+      "specialties": ["まつげエクステ", "眉毛WAX"],
       "qualifications": [
         "美容師免許（国家資格）"
       ],
@@ -1236,6 +1246,7 @@
       "salon": "Raffine",
       "bio": "メンズのお客様も大歓迎。眉毛WAXで印象をスッキリ整えます。",
       "imageSrc": "/images/admin/staff-10-1782195096084.jpg",
+      "specialties": ["眉毛WAX", "メンズ眉WAX"],
       "qualifications": [
         "美容師免許（国家資格）"
       ],

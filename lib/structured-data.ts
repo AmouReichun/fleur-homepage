@@ -124,8 +124,8 @@ export const organizationSchema = {
   ],
   aggregateRating: {
     "@type": "AggregateRating",
-    ratingValue: 4.68,
-    ratingCount: 1262,
+    ratingValue: 4.67,
+    ratingCount: 1327,
     bestRating: 5,
     worstRating: 1,
   },
@@ -152,7 +152,7 @@ export const rivSalonSchema = {
   name: "Riv. by fleurami",
   alternateName: ["Riv. by fleurami", "リヴ バイ フルールアミー", "Riv. by fleur ami", "リヴ"],
   description:
-    "高知市のヘアカラー・髪質改善専門の美容室。白髪ぼかし・艶カラー・縮毛矯正・大人女性向けの似合わせカットが得意。高知市南川添にあるヘアサロン。定休日：月曜・第1第3火曜。Googleクチコミ4.65（674件）。",
+    "高知市のヘアカラー・髪質改善専門の美容室。白髪ぼかし・艶カラー・縮毛矯正・大人女性向けの似合わせカットが得意。高知市南川添にあるヘアサロン。定休日：月曜・第1第3火曜。Googleクチコミ4.62（739件）。",
   image: {
     "@type": "ImageObject",
     url: `${BASE}/images/admin/salon-riv-1782197568767.jpg`,
@@ -207,8 +207,8 @@ export const rivSalonSchema = {
   ],
   aggregateRating: {
     "@type": "AggregateRating",
-    ratingValue: 4.65,
-    ratingCount: 674,
+    ratingValue: 4.62,
+    ratingCount: 739,
     bestRating: 5,
     worstRating: 1,
     // 注意: ratingCount は定期確認が必要。SEO-AIO-TODO.md を参照。

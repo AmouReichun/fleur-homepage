@@ -42,7 +42,7 @@ const guidePageSchema = {
       { "@type": "ListItem", position: 2, name: "縮毛矯正", url: `${BASE}/service/shukumou-kyousei` },
       { "@type": "ListItem", position: 3, name: "白髪ぼかし・グレイカラー", url: `${BASE}/service/shiraga-bokashi` },
       { "@type": "ListItem", position: 4, name: "まつげパーマ・ラッシュリフト", url: `${BASE}/service/matsuge-perm` },
-      { "@type": "ListItem", position: 5, name: "眉毛WAX・アイブロウ", url: `${BASE}/service/mayu-wax` },
+      { "@type": "ListItem", position: 5, name: "眉毛WAX・アイブロウ", url: `${BASE}/service/mayuge-wax` },
       { "@type": "ListItem", position: 6, name: "カット・似合わせカット", url: `${BASE}/service/cut` },
     ],
   },
@@ -108,19 +108,19 @@ const hairServices = [
   { href: "/service/shukumou-kyousei", name: "縮毛矯正", desc: "強いくせ毛をサラサラに", blog: "/blog/hair/shukumou-kyousei" },
   { href: "/service/shiraga-bokashi", name: "白髪ぼかし", desc: "伸びても目立ちにくいグレイブレンド", blog: "/blog/hair/shiraga-bokashi" },
   { href: "/service/cut", name: "カット・似合わせカット", desc: "骨格に合わせて再現性重視" },
-  { href: "/service/color", name: "艶カラー・透明感カラー", desc: "肌色に合わせた似合わせカラー" },
-  { href: "/service/highlight", name: "ハイライトカラー", desc: "立体感と透明感を引き出す" },
-  { href: "/service/perm", name: "パーマ・デジタルパーマ", desc: "骨格を活かした動きのあるスタイル" },
+  { href: "/service/tsuya-color", name: "艶カラー・透明感カラー", desc: "肌色に合わせた似合わせカラー" },
+  { href: "/service/inner-color", name: "インナーカラー", desc: "耳まわりに差し色を仕込むデザインカラー" },
+  { href: "/service/bob", name: "ボブ・ショートスタイル", desc: "骨格に合わせた扱いやすいボブ設計" },
   { href: "/service/head-spa", name: "ヘッドスパ", desc: "頭皮ケアで健やかな髪へ" },
 ];
 
 const eyelashServices = [
   { href: "/service/matsuge-perm", name: "まつげパーマ", desc: "自まつげを根元から立ち上げる", blog: "/blog/eyelash/matsuge-perm" },
-  { href: "/service/lash-lift", name: "ラッシュリフト", desc: "シリコンパッドで自然にカールアップ" },
-  { href: "/service/parisienne", name: "パリジャンリフト", desc: "ぱっちり目元の次世代まつパ" },
-  { href: "/service/lash-extension", name: "まつげエクステ（マツエク）", desc: "韓国束感・フラットラッシュ対応" },
+  { href: "/service/korean-eyelash", name: "韓国束感まつげ", desc: "うるっとした抜け感のある束感デザイン" },
+  { href: "/service/ek-perm", name: "エクパーマ", desc: "まつパ×エクステで下向きまつげも解決" },
+  { href: "/service/matsuek", name: "まつげエクステ（マツエク）", desc: "韓国束感・フラットラッシュ対応" },
   { href: "/service/led-extension", name: "LEDまつげエクステ", desc: "短時間装着・当日入浴OK" },
-  { href: "/service/mayu-wax", name: "眉毛WAX・アイブロウ", desc: "黄金比デザイン、メンズ対応" },
+  { href: "/service/mayuge-wax", name: "眉毛WAX・アイブロウ", desc: "黄金比デザイン、メンズ対応" },
 ];
 
 const areas = [
