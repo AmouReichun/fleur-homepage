@@ -1,10 +1,39 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { getContentCached } from "@/lib/content";
-import { breadcrumbSchema } from "@/lib/structured-data";
+import { breadcrumbSchema, organizationSchema } from "@/lib/structured-data";
 import MenuTabs from "@/app/components/MenuTabs";
 import ReservationChannels from "@/app/components/ReservationChannels";
 import { SERVICES } from "@/lib/services";
+
+const BASE = "https://fleur-group.jp";
+
+const menuOfferCatalogSchema = {
+  "@context": "https://schema.org",
+  "@type": "OfferCatalog",
+  "@id": `${BASE}/menu`,
+  name: "fleur GROUP メニュー・料金一覧",
+  description: "高知市・香南市の美容室・アイラッシュサロン fleur GROUP の全メニュー。カット・カラー・縮毛矯正・髪質改善・パーマ・まつ毛パーマ・まつエク・眉毛WAX",
+  url: `${BASE}/menu`,
+  provider: { "@type": "Organization", "@id": `${BASE}/#organization`, name: "fleur GROUP" },
+  itemListElement: SERVICES.map((svc, i) => ({
+    "@type": "ListItem",
+    position: i + 1,
+    item: {
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "Service",
+        "@id": `${BASE}/service/${svc.slug}`,
+        name: svc.name,
+        description: svc.description,
+        url: `${BASE}/service/${svc.slug}`,
+        areaServed: svc.salonKeys.some((k) => ["riv", "fleurami"].includes(k))
+          ? [{ "@type": "City", name: "高知市" }, { "@type": "City", name: "香南市" }]
+          : [{ "@type": "City", name: "高知市" }],
+      },
+    },
+  })),
+};
 
 
 export const metadata: Metadata = {
@@ -28,10 +57,9 @@ export default async function MenuPage() {
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema(crumbs)) }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema(crumbs)) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(menuOfferCatalogSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
 
       {/* ページヘッダー */}
       <div className="pt-14 sm:pt-16 bg-white border-b border-site-greige">

@@ -358,6 +358,11 @@ export default function GuidePage() {
             施術の選び方から高知の気候・地域特性まで詳しく解説しています。
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <Link href="/guide/kochi-salon-guide" className="border border-site-greige bg-site-accent/5 p-6 hover:border-site-accent transition-colors group block">
+              <span className="block text-xs tracking-[0.2em] text-site-accent mb-2 uppercase">Salon</span>
+              <span className="block font-serif text-lg font-medium text-site-text group-hover:text-site-accent transition-colors mb-1">高知の美容室・サロン選び方ガイド</span>
+              <span className="block text-xs text-site-muted leading-relaxed">高知市・香南市でおすすめの美容室・アイラッシュサロンと5つの選び方ポイント</span>
+            </Link>
             <Link href="/guide/kochi-hair-care" className="border border-site-greige bg-site-light p-6 hover:border-site-accent transition-colors group block">
               <span className="block text-xs tracking-[0.2em] text-site-accent mb-2 uppercase">Hair</span>
               <span className="block font-serif text-lg font-medium text-site-text group-hover:text-site-accent transition-colors mb-1">高知のヘアケア完全ガイド</span>
