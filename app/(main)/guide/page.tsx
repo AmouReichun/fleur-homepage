@@ -368,6 +368,11 @@ export default function GuidePage() {
               <span className="block font-serif text-lg font-medium text-site-text group-hover:text-site-accent transition-colors mb-1">高知のまつげ・眉毛ケア完全ガイド</span>
               <span className="block text-xs text-site-muted leading-relaxed">まつパvsマツエク・ラッシュリフト・眉毛WAXの選び方と施術後のケア</span>
             </Link>
+            <Link href="/guide/kochi-color-guide" className="border border-site-greige bg-site-light p-6 hover:border-site-accent transition-colors group block">
+              <span className="block text-xs tracking-[0.2em] text-site-accent mb-2 uppercase">Color</span>
+              <span className="block font-serif text-lg font-medium text-site-text group-hover:text-site-accent transition-colors mb-1">高知のカラー完全ガイド</span>
+              <span className="block text-xs text-site-muted leading-relaxed">白髪ぼかし・ブリーチ・インナーカラー・艶カラーの違いと選び方</span>
+            </Link>
           </div>
         </div>
       </section>
