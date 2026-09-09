@@ -48,6 +48,19 @@ const crumbs = [
   { name: "メニュー", url: "https://fleur-group.jp/menu" },
 ];
 
+const menuSpeakableSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": `${BASE}/menu`,
+  name: "fleur GROUP メニュー・料金一覧",
+  url: `${BASE}/menu`,
+  speakable: {
+    "@type": "SpeakableSpecification",
+    cssSelector: ["h1"],
+  },
+  about: { "@type": "Organization", "@id": `${BASE}/#organization`, name: "fleur GROUP" },
+};
+
 export default async function MenuPage() {
   const content = await getContentCached();
 
@@ -60,6 +73,7 @@ export default async function MenuPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema(crumbs)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(menuOfferCatalogSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(menuSpeakableSchema) }} />
 
       {/* ページヘッダー */}
       <div className="pt-14 sm:pt-16 bg-white border-b border-site-greige">
