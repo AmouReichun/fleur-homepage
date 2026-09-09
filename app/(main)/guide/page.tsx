@@ -348,8 +348,32 @@ export default function GuidePage() {
         </div>
       </section>
 
-      {/* ブログへのリンク */}
+      {/* 詳細ガイドサブページ */}
       <section className="py-12 sm:py-16 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
+          <h2 className="font-serif text-2xl sm:text-3xl font-semibold text-site-text mb-3">
+            詳細ガイド
+          </h2>
+          <p className="text-sm text-site-muted mb-8">
+            施術の選び方から高知の気候・地域特性まで詳しく解説しています。
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <Link href="/guide/kochi-hair-care" className="border border-site-greige bg-site-light p-6 hover:border-site-accent transition-colors group block">
+              <span className="block text-xs tracking-[0.2em] text-site-accent mb-2 uppercase">Hair</span>
+              <span className="block font-serif text-lg font-medium text-site-text group-hover:text-site-accent transition-colors mb-1">高知のヘアケア完全ガイド</span>
+              <span className="block text-xs text-site-muted leading-relaxed">縮毛矯正・髪質改善・白髪ぼかしの違いと選び方、高知の湿気対策、40代・50代向け施術</span>
+            </Link>
+            <Link href="/guide/kochi-eyelash-care" className="border border-site-greige bg-site-light p-6 hover:border-site-accent transition-colors group block">
+              <span className="block text-xs tracking-[0.2em] text-site-accent mb-2 uppercase">Eyelash</span>
+              <span className="block font-serif text-lg font-medium text-site-text group-hover:text-site-accent transition-colors mb-1">高知のまつげ・眉毛ケア完全ガイド</span>
+              <span className="block text-xs text-site-muted leading-relaxed">まつパvsマツエク・ラッシュリフト・眉毛WAXの選び方と施術後のケア</span>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ブログへのリンク */}
+      <section className="py-12 sm:py-16 bg-site-light">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <h2 className="font-serif text-2xl sm:text-3xl font-semibold text-site-text mb-3">
             施術事例・ブログ
@@ -358,15 +382,15 @@ export default function GuidePage() {
             スタイリスト・アイリストが担当した実際の施術写真と解説。
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            <Link href="/blog/hair" className="border border-site-greige p-6 hover:border-site-accent transition-colors group block text-center">
+            <Link href="/blog/hair" className="border border-site-greige bg-white p-6 hover:border-site-accent transition-colors group block text-center">
               <span className="block font-serif text-lg font-light text-site-text group-hover:text-site-accent transition-colors mb-1">ヘアブログ</span>
               <span className="block text-xs text-site-muted">カット・カラー・パーマの施術事例</span>
             </Link>
-            <Link href="/blog/eyelash" className="border border-site-greige p-6 hover:border-site-accent transition-colors group block text-center">
+            <Link href="/blog/eyelash" className="border border-site-greige bg-white p-6 hover:border-site-accent transition-colors group block text-center">
               <span className="block font-serif text-lg font-light text-site-text group-hover:text-site-accent transition-colors mb-1">アイラッシュブログ</span>
               <span className="block text-xs text-site-muted">まつげ・眉毛の施術事例</span>
             </Link>
-            <Link href="/blog/faq" className="border border-site-greige p-6 hover:border-site-accent transition-colors group block text-center">
+            <Link href="/blog/faq" className="border border-site-greige bg-white p-6 hover:border-site-accent transition-colors group block text-center">
               <span className="block font-serif text-lg font-light text-site-text group-hover:text-site-accent transition-colors mb-1">Q&A</span>
               <span className="block text-xs text-site-muted">美容室・アイラッシュのよくある疑問</span>
             </Link>

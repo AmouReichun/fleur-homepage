@@ -89,6 +89,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.75,
     })),
     { url: `${BASE}/guide`, lastModified: now, changeFrequency: "monthly", priority: 0.85 },
+    { url: `${BASE}/guide/kochi-hair-care`, lastModified: now, changeFrequency: "monthly", priority: 0.80 },
+    { url: `${BASE}/guide/kochi-eyelash-care`, lastModified: now, changeFrequency: "monthly", priority: 0.80 },
     { url: `${BASE}/company`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },
     { url: `${BASE}/contact`, lastModified: now, changeFrequency: "yearly", priority: 0.5 },
     ...blogStatic,
