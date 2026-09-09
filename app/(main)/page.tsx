@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://fleur-group.jp" },
 };
 import { getContentCached } from "@/lib/content";
-import { faqPageSchema, rivSalonSchema, fleuramiSalonSchema, raffineSalonSchema, founderPersonSchema } from "@/lib/structured-data";
+import { faqPageSchema, rivSalonSchema, fleuramiSalonSchema, raffineSalonSchema, founderPersonSchema, organizationSchema, webSiteSchema } from "@/lib/structured-data";
 import HeroSlideshow from "@/app/components/HeroSlideshow";
 import QuickLinkGrid from "@/app/components/QuickLinkGrid";
 import SalonSlider from "@/app/components/SalonSlider";
@@ -74,11 +74,25 @@ export default async function HomePage() {
 
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webSiteSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(founderPersonSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(rivSalonSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(fleuramiSalonSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(raffineSalonSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "@id": "https://fleur-group.jp/",
+        name: "fleur GROUP｜高知市・香南市の美容室・アイラッシュサロン",
+        url: "https://fleur-group.jp/",
+        speakable: {
+          "@type": "SpeakableSpecification",
+          cssSelector: ["h1", ".hero-catch", "#top-faq dt"],
+        },
+        about: { "@type": "Organization", "@id": "https://fleur-group.jp/#organization", name: "fleur GROUP" },
+      }) }} />
 
       {/* ─── Hero ─── */}
       <HeroSlideshow images={heroImages} hasImage={hasImage}>
