@@ -388,6 +388,11 @@ export default function GuidePage() {
               <span className="block font-serif text-lg font-medium text-site-text group-hover:text-site-accent transition-colors mb-1">高知のパーマ・縮毛矯正ガイド</span>
               <span className="block text-xs text-site-muted leading-relaxed">縮毛矯正・パーマ・デジタルパーマの種類と選び方・料金目安</span>
             </Link>
+            <Link href="/guide/kochi-head-spa-guide" className="border border-site-greige bg-site-light p-6 hover:border-site-accent transition-colors group block">
+              <span className="block text-xs tracking-[0.2em] text-site-accent mb-2 uppercase">Spa</span>
+              <span className="block font-serif text-lg font-medium text-site-text group-hover:text-site-accent transition-colors mb-1">高知のヘッドスパガイド</span>
+              <span className="block text-xs text-site-muted leading-relaxed">頭皮ケア・抜け毛・産後の髪の悩みとヘッドスパの効果・料金</span>
+            </Link>
           </div>
         </div>
       </section>
