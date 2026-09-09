@@ -5,6 +5,33 @@ import { breadcrumbSchema } from "@/lib/structured-data";
 
 const BASE = "https://fleur-group.jp";
 
+const serviceItemListSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "@id": `${BASE}/service`,
+  name: "fleur GROUP サービス・メニュー一覧",
+  description: "高知市・香南市のfleur GROUPで受けられる美容サービス・メニューの一覧",
+  url: `${BASE}/service`,
+  numberOfItems: SERVICES.length,
+  itemListElement: SERVICES.map((svc, i) => ({
+    "@type": "ListItem",
+    position: i + 1,
+    url: `${BASE}/service/${svc.slug}`,
+    name: svc.name,
+    item: {
+      "@type": "Service",
+      "@id": `${BASE}/service/${svc.slug}`,
+      name: svc.name,
+      description: svc.description,
+      url: `${BASE}/service/${svc.slug}`,
+      areaServed: svc.salonKeys.includes("raffine") && !svc.salonKeys.some((k) => ["riv", "fleurami"].includes(k))
+        ? [{ "@type": "City", name: "高知市" }]
+        : [{ "@type": "City", name: "高知市" }, { "@type": "City", name: "香南市" }],
+      provider: { "@type": "Organization", "@id": `${BASE}/#organization`, name: "fleur GROUP" },
+    },
+  })),
+};
+
 export const metadata: Metadata = {
   title: "メニュー・サービス一覧 | 高知市・香南市の美容室・アイラッシュサロン",
   description:
@@ -42,6 +69,7 @@ export default function ServiceIndexPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema(crumbs)) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceItemListSchema) }} />
 
       <div className="pt-14 sm:pt-16 bg-white border-b border-site-greige">
         <div className="max-w-4xl mx-auto px-6 sm:px-10 py-14 sm:py-20">

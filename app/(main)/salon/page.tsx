@@ -2,8 +2,35 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { getContentCached } from "@/lib/content";
-import { breadcrumbSchema } from "@/lib/structured-data";
+import { breadcrumbSchema, rivSalonSchema, fleuramiSalonSchema, raffineSalonSchema } from "@/lib/structured-data";
 import SalonReserveIcons from "@/app/components/SalonReserveIcons";
+
+const BASE = "https://fleur-group.jp";
+
+const salonItemListSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "@id": `${BASE}/salon`,
+  name: "fleur GROUP 店舗一覧",
+  description: "高知市・香南市のfleur GROUP 3店舗。美容室（Riv. by fleurami・fleurami）とアイラッシュサロン（Raffine）。",
+  url: `${BASE}/salon`,
+  numberOfItems: 3,
+  itemListElement: [
+    { "@type": "ListItem", position: 1, url: `${BASE}/salon/riv`, name: "Riv. by fleurami", item: { "@type": "HairSalon", "@id": `${BASE}/salon/riv`, name: "Riv. by fleurami", address: { "@type": "PostalAddress", addressLocality: "高知市", streetAddress: "南川添9-21" } } },
+    { "@type": "ListItem", position: 2, url: `${BASE}/salon/fleurami`, name: "fleurami", item: { "@type": "HairSalon", "@id": `${BASE}/salon/fleurami`, name: "fleurami", address: { "@type": "PostalAddress", addressLocality: "香南市", streetAddress: "野市町西野230" } } },
+    { "@type": "ListItem", position: 3, url: `${BASE}/salon/raffine`, name: "Raffine", item: { "@type": "BeautySalon", "@id": `${BASE}/salon/raffine`, name: "Raffine", address: { "@type": "PostalAddress", addressLocality: "高知市", streetAddress: "はりまや町1-4-8" } } },
+  ],
+};
+
+const salonSpeakableSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": `${BASE}/salon`,
+  name: "店舗案内 | fleur GROUP",
+  url: `${BASE}/salon`,
+  speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", ".salon-intro"] },
+  about: { "@type": "Organization", "@id": `${BASE}/#organization`, name: "fleur GROUP" },
+};
 
 export const metadata: Metadata = {
   title: "店舗案内",
@@ -56,10 +83,12 @@ export default async function SalonListPage() {
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema(crumbs)) }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema(crumbs)) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(salonItemListSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(salonSpeakableSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(rivSalonSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(fleuramiSalonSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(raffineSalonSchema) }} />
 
       <div className="bg-site-light pt-24 sm:pt-[7.5rem] pb-10 sm:pb-14">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
