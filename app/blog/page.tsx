@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { getAllPosts, getPostsForSearch } from "@/lib/blog/posts";
+import { breadcrumbSchema, collectionPageSchema } from "@/lib/blog/structured-data";
 import ArticleCard from "@/components/ArticleCard";
 import HomeSearchBar from "@/components/HomeSearchBar";
 
@@ -11,13 +12,42 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://fleur-group.jp/blog" },
 };
 
+const BASE = "https://fleur-group.jp";
+
+const crumbs = [{ name: "ホーム", url: BASE }, { name: "美容コラム・施術例", url: `${BASE}/blog` }];
+
+const speakableSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": `${BASE}/blog`,
+  name: "美容コラム・施術例 | fleur GROUP",
+  url: `${BASE}/blog`,
+  speakable: {
+    "@type": "SpeakableSpecification",
+    cssSelector: ["h1", ".blog-top-lead"],
+  },
+  about: { "@type": "Organization", "@id": `${BASE}/#organization`, name: "fleur GROUP" },
+};
+
 export default function HomePage() {
   const hairPosts = getAllPosts("hair").slice(0, 3);
   const eyelashPosts = getAllPosts("eyelash").slice(0, 3);
   const allPosts = getPostsForSearch();
+  const allRecent = [...getAllPosts("hair"), ...getAllPosts("eyelash")].sort(
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+  );
+  const blogCollectionSchema = collectionPageSchema(
+    "fleur GROUP 美容コラム・施術例",
+    "/blog",
+    "高知市・香南市の美容師・アイリストによるヘアカラー・髪質改善・縮毛矯正・まつげパーマの施術例とコラム",
+    allRecent,
+  );
 
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema(crumbs)) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(blogCollectionSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }} />
       {/* Hero */}
       <section className="bg-group-bg border-b border-group-border py-16 sm:py-24 px-4">
         <div className="max-w-wide mx-auto">
@@ -32,7 +62,7 @@ export default function HomePage() {
               施術例とコラム
             </span>
           </h1>
-          <p className="text-sm sm:text-base text-group-muted leading-relaxed max-w-xl mb-8">
+          <p className="blog-top-lead text-sm sm:text-base text-group-muted leading-relaxed max-w-xl mb-8">
             fleurami（香南市）・Riv.（高知市）のヘアスタイリスト、
             <br />
             Raffine（高知市）のアイリストが、
