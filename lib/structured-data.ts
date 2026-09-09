@@ -178,6 +178,10 @@ export const rivSalonSchema = {
   areaServed: [
     { "@type": "City", name: "高知市", containedInPlace: { "@type": "State", name: "高知県" } },
   ],
+  amenityFeature: [
+    { "@type": "LocationFeatureSpecification", name: "無料駐車場", value: true },
+    { "@type": "LocationFeatureSpecification", name: "駐車台数", value: "5台" },
+  ],
   priceRange: "¥¥",
   currenciesAccepted: "JPY",
   paymentAccepted: "現金, クレジットカード, PayPay, LINE Pay",
