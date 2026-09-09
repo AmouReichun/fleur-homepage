@@ -403,6 +403,11 @@ export default function GuidePage() {
               <span className="block font-serif text-lg font-medium text-site-text group-hover:text-site-accent transition-colors mb-1">高知の白髪ぼかし・グレイカラーガイド</span>
               <span className="block text-xs text-site-muted leading-relaxed">白髪染めとの違い・頻度・グレイヘア移行・料金目安</span>
             </Link>
+            <Link href="/guide/kochi-kamishitsu-kaizen-guide" className="border border-site-greige bg-site-accent/5 p-6 hover:border-site-accent transition-colors group block">
+              <span className="block text-xs tracking-[0.2em] text-site-accent mb-2 uppercase">Treatment</span>
+              <span className="block font-serif text-lg font-medium text-site-text group-hover:text-site-accent transition-colors mb-1">高知の髪質改善ガイド</span>
+              <span className="block text-xs text-site-muted leading-relaxed">酸熱トリートメント・髪質改善縮毛矯正・水素トリートメントの違いと選び方・料金目安</span>
+            </Link>
           </div>
         </div>
       </section>
