@@ -122,10 +122,24 @@ export default async function AreaServicePage({ params }: Props) {
     })),
   };
 
+  const speakableSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${BASE}/area/${area.slug}/${svc.slug}`,
+    name: `${area.name}の${svc.name}`,
+    url: `${BASE}/area/${area.slug}/${svc.slug}`,
+    speakable: {
+      "@type": "SpeakableSpecification",
+      cssSelector: ["h1", "#area-service-lead", "#area-service-faq dt"],
+    },
+    about: { "@type": "Organization", "@id": `${BASE}/#organization`, name: "fleur GROUP" },
+  };
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema(crumbs)) }} />
 
       {/* ヘッダー */}
@@ -156,7 +170,7 @@ export default async function AreaServicePage({ params }: Props) {
               <Image src={svc.image} alt={`${area.name}の${svc.name}｜${worldLabel}`} fill priority className="object-cover" sizes="(max-width: 768px) 100vw, 896px" />
             </div>
           )}
-          <p className="text-sm sm:text-base text-site-text leading-loose">
+          <p id="area-service-lead" className="text-sm sm:text-base text-site-text leading-loose">
             {area.name}で{svc.name}をお探しの方へ。{salonNames}では、{svc.name}を得意メニューとしてご提供しています。{svc.lead}
           </p>
           {svc.body && svc.body.length > 0 && (
@@ -207,19 +221,19 @@ export default async function AreaServicePage({ params }: Props) {
       </section>
 
       {/* FAQ */}
-      <section className="py-12 sm:py-16 bg-site-light">
+      <section id="area-service-faq" className="py-12 sm:py-16 bg-site-light">
         <div className="max-w-2xl mx-auto px-4 sm:px-6">
           <h2 className="font-serif text-2xl sm:text-3xl font-semibold text-site-text mb-8 text-center">
             {area.name}の{svc.name}・よくある質問
           </h2>
-          <div className="divide-y divide-site-greige border-y border-site-greige bg-white">
+          <dl className="divide-y divide-site-greige border-y border-site-greige bg-white">
             {faqAll.map((f, i) => (
               <div key={i} className="p-5">
-                <p className="text-sm font-medium leading-relaxed mb-3"><span className="text-site-accent mr-2">Q.</span>{f.q}</p>
-                <p className="text-sm text-site-muted leading-relaxed border-t border-site-greige pt-3"><span className="text-site-accent mr-2">A.</span>{f.a}</p>
+                <dt className="text-sm font-medium leading-relaxed mb-3"><span className="text-site-accent mr-2">Q.</span>{f.q}</dt>
+                <dd className="text-sm text-site-muted leading-relaxed border-t border-site-greige pt-3"><span className="text-site-accent mr-2">A.</span>{f.a}</dd>
               </div>
             ))}
-          </div>
+          </dl>
         </div>
       </section>
 
