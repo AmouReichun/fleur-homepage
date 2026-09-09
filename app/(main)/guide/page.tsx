@@ -100,7 +100,96 @@ const faqSchema = {
         text: "一般的に4〜6週間程度が目安です。まつげの生え変わりサイクルや日常のケア方法によって個人差があります。「Raffine（高知市はりまや橋）」ではまつげパーマ・ラッシュリフト・パリジャンリフトに対応しており、アフターケアのアドバイスも丁寧に行っています。",
       },
     },
+    {
+      "@type": "Question",
+      name: "高知の梅雨・夏の湿気で髪が広がる・うねるときはどうすればいいですか？",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "高知県は梅雨から夏にかけて湿度が高く、くせ毛や広がりが出やすい環境です。縮毛矯正（半永久的に直毛に整える）や髪質改善トリートメント（ダメージ補修＋まとまりUP）が効果的です。「Riv. by fleurami（高知市）」「fleurami（香南市）」では湿気の強い高知の気候を考慮した薬剤・施術を提案しています。",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "40代・50代の白髪・髪のお悩みを相談できる美容室は高知にありますか？",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "「Riv. by fleurami（高知市南川添）」は40代・50代の大人女性のお客様が多いサロンです。白髪ぼかし（ハイライトで白髪をなじませるグレイカラー）・髪質改善トリートメント・艶カラーなど、年齢とともに変化する髪の悩みに特化したメニューと丁寧なカウンセリングで対応します。「fleurami（香南市）」も同様の悩みに対応可能です。",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "まつげパーマとまつげエクステはどちらを選べばいいですか？",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "まつげパーマ（ラッシュリフト・パリジャンリフト）は自まつげを根元から立ち上げる施術で、自然な仕上がりを好む方に向いています。まつげエクステ（マツエク）は人工まつげをつけてボリュームや長さを加える施術で、より華やかな目元を求める方に向いています。「Raffine（高知市はりまや橋）」では両方に対応しており、まつげの状態や希望に合わせてカウンセリングでご提案します。",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "縮毛矯正はどのくらいの頻度でかけるのがいいですか？",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "一般的に半年〜1年に1回が目安です。くせの強さや伸びの速さによりますが、根元の伸びが目立ち始めた頃（3〜6ヶ月後）に前回との境目をなじませる施術を行うサイクルが多いです。「Riv. by fleurami（高知市）」「fleurami（香南市）」ではくせの状態を確認しながら最適なタイミングをアドバイスします。",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "高知でヘアカラーのダメージを抑えながらカラーを続けるには？",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "ダメージを最小限にしながらカラーを続けるには、①髪質に合った薬剤を選ぶこと、②ハイライトなど全体ブリーチを避けた技法を使うこと、③カラー後にトリートメントやホームケアで補修することが重要です。「Riv. by fleurami（高知市）」「fleurami（香南市）」ではダメージカウンセリングを重視しており、艶カラー・透明感カラーなど傷みにくい施術を提案します。",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "高知市でヘアカラーと白髪ぼかしを同じ日にできますか？",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "はい、「Riv. by fleurami（高知市）」では白髪ぼかしハイライトとカラーの同日施術に対応しています。ただし施術内容や髪の状態によって所要時間が変わりますので、ご予約時にご相談ください。「fleurami（香南市）」でも組み合わせ施術は可能です。",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "まつげパーマ後のケア方法を教えてください。",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "施術後24時間は水・湯・スチームにさらさないことが大切です。洗顔・シャワー時は目元を擦らずに、まつげが濡れたらそっと押さえて水分を取ります。まつげ美容液の使用でケアすると持ちが改善することもあります。「Raffine（高知市はりまや橋）」では施術後のアフターケア方法を丁寧にお伝えします。",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "はりまや橋のRaffineにバスで行くにはどうすればいいですか？",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "「Raffine（ラフィーネ）」はJR高知駅からとさでん交通バスまたは路面電車（土佐電鉄）で「はりまや橋」下車、徒歩3〜5分です。住所：高知市はりまや町1-4-8 TNはりまやビル3F。お車でも近隣の有料駐車場をご利用いただけます。詳細は予約時にお問い合わせください。",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "高知でグレイヘア（白髪を活かしたスタイル）に移行したい場合は？",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "白髪染めをやめてグレイヘアへ移行する場合、根元と既染部分の段差を目立たなくしながら自然につなぐ「グレイカラー移行」を段階的に行うのが一般的です。「Riv. by fleurami（高知市）」と「fleurami（香南市）」ではグレイカラーへの移行相談に対応しており、お客様のペースに合わせたプランをカウンセリングで提案します。",
+      },
+    },
   ],
+};
+
+const speakableSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": `${BASE}/guide`,
+  name: "高知の美容・ヘアケア情報ガイド",
+  url: `${BASE}/guide`,
+  speakable: {
+    "@type": "SpeakableSpecification",
+    cssSelector: ["h1", "#faq-section dt", "#guide-lead"],
+  },
+  about: {
+    "@type": "Organization",
+    "@id": `${BASE}/#organization`,
+    name: "fleur GROUP",
+  },
 };
 
 const hairServices = [
@@ -136,6 +225,7 @@ export default function GuidePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema(crumbs)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(guidePageSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }} />
 
       {/* ヘッダー */}
       <div className="bg-site-light pt-24 sm:pt-[7.5rem] pb-10 sm:pb-14">
@@ -149,7 +239,7 @@ export default function GuidePage() {
           <h1 className="font-serif text-3xl sm:text-4xl font-semibold text-site-text">
             高知の美容・ヘアケア情報
           </h1>
-          <p className="text-sm text-site-text leading-loose mt-4 max-w-2xl">
+          <p id="guide-lead" className="text-sm text-site-text leading-loose mt-4 max-w-2xl">
             高知県（高知市・香南市）で美容室・アイラッシュサロンを探している方のための情報ガイドです。
             髪質改善・縮毛矯正・白髪ぼかし・まつげパーマなど、施術の選び方や各サービスの詳細を、
             fleur GROUPのスタイリスト・アイリストの知見をもとにまとめています。
