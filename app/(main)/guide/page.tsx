@@ -383,6 +383,11 @@ export default function GuidePage() {
               <span className="block font-serif text-lg font-medium text-site-text group-hover:text-site-accent transition-colors mb-1">高知のメンズ美容ガイド</span>
               <span className="block text-xs text-site-muted leading-relaxed">メンズパーマ・カット・カラー・眉WAXの選び方と高知のサロン案内</span>
             </Link>
+            <Link href="/guide/kochi-perm-guide" className="border border-site-greige bg-site-light p-6 hover:border-site-accent transition-colors group block">
+              <span className="block text-xs tracking-[0.2em] text-site-accent mb-2 uppercase">Perm</span>
+              <span className="block font-serif text-lg font-medium text-site-text group-hover:text-site-accent transition-colors mb-1">高知のパーマ・縮毛矯正ガイド</span>
+              <span className="block text-xs text-site-muted leading-relaxed">縮毛矯正・パーマ・デジタルパーマの種類と選び方・料金目安</span>
+            </Link>
           </div>
         </div>
       </section>
