@@ -175,6 +175,7 @@ export async function GET() {
     `- [高知のメンズ美容ガイド](${SITE_URL}/guide/kochi-mens-beauty): メンズパーマ・カット・カラー・眉WAXの選び方`,
     `- [高知のパーマ・縮毛矯正ガイド](${SITE_URL}/guide/kochi-perm-guide): パーマ種類の違い・縮毛矯正の持ち・料金目安`,
     `- [高知のヘッドスパガイド](${SITE_URL}/guide/kochi-head-spa-guide): 頭皮ケア・抜け毛・産後の髪の悩みとヘッドスパの効果`,
+    `- [高知の白髪ぼかし・グレイカラーガイド](${SITE_URL}/guide/kochi-shiraga-guide): 白髪染めとの違い・頻度・グレイヘア移行・料金目安`,
     `- [グループ紹介](${SITE_URL}/blog/about): 店舗情報・アクセス・得意メニュー`,
     `- [よくある質問](${SITE_URL}/blog/faq): ヘア・アイラッシュの施術に関するQ&A`,
     `- [全記事データ](${SITE_URL}/api/articles.json): 構造化データ（Schema.org Dataset形式）`,

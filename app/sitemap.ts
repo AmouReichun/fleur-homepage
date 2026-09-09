@@ -96,6 +96,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/guide/kochi-mens-beauty`, lastModified: now, changeFrequency: "monthly", priority: 0.80 },
     { url: `${BASE}/guide/kochi-perm-guide`, lastModified: now, changeFrequency: "monthly", priority: 0.80 },
     { url: `${BASE}/guide/kochi-head-spa-guide`, lastModified: now, changeFrequency: "monthly", priority: 0.80 },
+    { url: `${BASE}/guide/kochi-shiraga-guide`, lastModified: now, changeFrequency: "monthly", priority: 0.82 },
     { url: `${BASE}/company`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },
     { url: `${BASE}/contact`, lastModified: now, changeFrequency: "yearly", priority: 0.5 },
     ...blogStatic,
