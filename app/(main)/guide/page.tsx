@@ -378,6 +378,11 @@ export default function GuidePage() {
               <span className="block font-serif text-lg font-medium text-site-text group-hover:text-site-accent transition-colors mb-1">高知の大人向け美容ガイド</span>
               <span className="block text-xs text-site-muted leading-relaxed">白髪・くせ毛・エイジングヘア・産後の髪の悩みと対策</span>
             </Link>
+            <Link href="/guide/kochi-mens-beauty" className="border border-site-greige bg-site-light p-6 hover:border-site-accent transition-colors group block">
+              <span className="block text-xs tracking-[0.2em] text-site-accent mb-2 uppercase">Mens</span>
+              <span className="block font-serif text-lg font-medium text-site-text group-hover:text-site-accent transition-colors mb-1">高知のメンズ美容ガイド</span>
+              <span className="block text-xs text-site-muted leading-relaxed">メンズパーマ・カット・カラー・眉WAXの選び方と高知のサロン案内</span>
+            </Link>
           </div>
         </div>
       </section>
