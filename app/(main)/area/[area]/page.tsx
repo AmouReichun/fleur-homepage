@@ -96,6 +96,19 @@ export default async function AreaPage({ params }: Props) {
     staffByKey[k] = (content.staff ?? []).filter((m) => m.salon === STAFF_SALON[k] && !m.hidden).slice(0, 4);
   }
 
+  const speakableSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${BASE}/area/${area.slug}`,
+    name: `${area.name}の${salonLabel} | fleur GROUP`,
+    url: `${BASE}/area/${area.slug}`,
+    speakable: {
+      "@type": "SpeakableSpecification",
+      cssSelector: ["h1", "#area-intro", "#area-faq dt"],
+    },
+    about: { "@type": "Organization", "@id": `${BASE}/#organization`, name: "fleur GROUP" },
+  };
+
   // エリア内店舗のEntity参照（既存の @id を参照。NAPの重複定義はしない）
   const salonItemList = {
     "@context": "https://schema.org",
@@ -116,6 +129,7 @@ export default async function AreaPage({ params }: Props) {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema(crumbs)) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }} />
       {area.faq && area.faq.length > 0 && (
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(salonFaqPageSchema(area.faq)) }} />
       )}
@@ -135,7 +149,7 @@ export default async function AreaPage({ params }: Props) {
             {area.name}の{salonLabel}
           </h1>
           {AREA_INTRO[area.slug] && (
-            <p className="text-sm text-site-text leading-loose mt-4 max-w-2xl">
+            <p id="area-intro" className="text-sm text-site-text leading-loose mt-4 max-w-2xl">
               {AREA_INTRO[area.slug]}
             </p>
           )}
@@ -279,7 +293,7 @@ export default async function AreaPage({ params }: Props) {
             <h2 className="font-serif text-2xl sm:text-3xl font-semibold text-site-text mb-8 text-center">
               {area.name}のよくある質問
             </h2>
-            <dl className="space-y-4">
+            <dl id="area-faq" className="space-y-4">
               {area.faq.map((item, i) => (
                 <div key={i} className="border border-site-greige p-5">
                   <dt className="text-sm font-medium text-site-text mb-2">Q. {item.q}</dt>
