@@ -74,11 +74,24 @@ export default async function ServicePage({ params }: Props) {
       acceptedAnswer: { "@type": "Answer", text: f.a },
     })),
   };
+  const speakableSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${BASE}/service/${svc.slug}`,
+    name: svc.title,
+    url: `${BASE}/service/${svc.slug}`,
+    speakable: {
+      "@type": "SpeakableSpecification",
+      cssSelector: ["h1", "#service-lead", "#service-faq summary span"],
+    },
+    about: { "@type": "Organization", "@id": `${BASE}/#organization`, name: "fleur GROUP" },
+  };
 
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema(crumbs)) }} />
 
       {/* ヘッダー */}
@@ -106,7 +119,7 @@ export default async function ServicePage({ params }: Props) {
               <Image src={svc.image} alt={`${svc.name}｜高知市・香南市の${svc.world === "eyelash" ? "アイラッシュサロン" : "美容室"}`} fill priority className="object-cover" sizes="(max-width: 768px) 100vw, 896px" />
             </div>
           )}
-          <p className="text-sm sm:text-base text-site-text leading-loose">{svc.lead}</p>
+          <p id="service-lead" className="text-sm sm:text-base text-site-text leading-loose">{svc.lead}</p>
           {svc.body && svc.body.length > 0 && (
             <div className="mt-6 space-y-4">
               {svc.body.map((para, i) => (
@@ -153,7 +166,7 @@ export default async function ServicePage({ params }: Props) {
       </section>
 
       {/* FAQ */}
-      <section className="py-12 sm:py-16 bg-site-light">
+      <section id="service-faq" className="py-12 sm:py-16 bg-site-light">
         <div className="max-w-2xl mx-auto px-4 sm:px-6">
           <h2 className="font-serif text-2xl sm:text-3xl font-semibold text-site-text mb-8 text-center">よくある質問</h2>
           <div className="divide-y divide-site-greige border-y border-site-greige bg-white">
