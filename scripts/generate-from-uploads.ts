@@ -1,7 +1,7 @@
 /**
  * content/uploads/*.json を読んでスタッフ投稿から記事を生成するスクリプト。
- * GitHub Actions（staff-upload-generate.yml）から1日1回の定時cronで実行される。
- * - 1回の実行で古い順に MAX_PER_RUN 件（=1件/日）だけ生成し、残りはキューに残す。
+ * GitHub Actions（staff-upload-generate.yml）から実行される。
+ * - スタッフが投稿（push）したら即座にトリガーされ、キュー全件を処理する。
  * - 生成した記事は draft: true のまま下書き保存する（公開は auto-publish バッチが担当）。
  * - 薬機法フラグの有無に関わらず下書き。フラグ有りは auto-publish の対象外。
  */
@@ -17,8 +17,8 @@ dotenv.config({ path: ".env.local" });
 const UPLOAD_DIR = path.join(process.cwd(), "content", "uploads");
 const CONTENT_DIR = path.join(process.cwd(), "content");
 
-// 1回の実行で生成する記事数（1日1回のcronで実行するため実質「1件/日」）
-const MAX_PER_RUN = 1;
+// キュー全件を一度に処理する（pushトリガーで即時実行されるため上限不要）
+const MAX_PER_RUN = Infinity;
 
 async function main() {
   if (!fs.existsSync(UPLOAD_DIR)) {
@@ -49,9 +49,7 @@ async function main() {
   }
   entries.sort((a, b) => (a.upload.timestamp < b.upload.timestamp ? -1 : 1));
 
-  console.log(
-    `キュー ${entries.length} 件。古い順に最大 ${MAX_PER_RUN} 件を下書き生成します\n`,
-  );
+  console.log(`キュー ${entries.length} 件。全件を下書き生成します\n`);
 
   // サムネ重複ガード: 既存記事と同じサムネの記事は生成しない
   const usedThumbnails = getUsedThumbnails();
