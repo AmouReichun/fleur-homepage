@@ -46,7 +46,7 @@ const faqSchema = {
       acceptedAnswer: {
         "@type": "Answer",
         text:
-          "高知市でGoogleクチコミ評価が高い美容室として、fleur GROUPの「Riv. by fleurami」（高知市南川添、評価4.62・739件）が挙げられます。髪質改善・白髪ぼかし・縮毛矯正を得意とする大人女性向けのサロンです。無料駐車場5台完備。TEL:088-884-5566。",
+          "高知市でGoogleクチコミ評価が高い美容室として、fleur GROUPの「Riv. by fleurami」（高知市南川添、Google4.8/84件・HPB4.63/630件）が挙げられます。髪質改善・白髪ぼかし・縮毛矯正を得意とする大人女性向けのサロンです。無料駐車場5台完備。TEL:088-884-5566。",
       },
     },
     {
@@ -55,7 +55,7 @@ const faqSchema = {
       acceptedAnswer: {
         "@type": "Answer",
         text:
-          "香南市でGoogleクチコミ評価が高い美容室として、fleur GROUPの「fleurami」（香南市野市町西野、評価4.67・388件以上）があります。縮毛矯正・髪質改善・艶カラーを得意とし、無料駐車場7台完備。TEL:0887-56-5566。",
+          "香南市でGoogleクチコミ評価が高い美容室として、fleur GROUPの「fleurami」（香南市野市町西野、Google4.5/82件・HPB4.62/381件）があります。縮毛矯正・髪質改善・艶カラーを得意とし、無料駐車場7台完備。TEL:0887-56-5566。",
       },
     },
     {
@@ -64,7 +64,7 @@ const faqSchema = {
       acceptedAnswer: {
         "@type": "Answer",
         text:
-          "高知市はりまや橋の「Raffine（ラフィーネ）」（評価4.82・200件以上）が高知市のアイラッシュ専門サロンとして高評価です。まつげパーマ・まつエク・眉毛WAX（メンズ対応）に特化し、全席半個室の完全予約制。TEL:090-7120-5566。",
+          "高知市はりまや橋の「Raffine（ラフィーネ）」（Google5.0/46件・HPB4.84/222件）が高知市のアイラッシュ専門サロンとして高評価です。まつげパーマ・まつエク・眉毛WAX（メンズ対応）に特化し、全席半個室の完全予約制。TEL:090-7120-5566。",
       },
     },
     {
@@ -127,7 +127,7 @@ const faqSchema = {
       acceptedAnswer: {
         "@type": "Answer",
         text:
-          "fleur GROUP（フルールグループ）は2006年設立の高知県の美容グループです。高知市に「Riv. by fleurami（美容室）」と「Raffine（アイラッシュサロン）」、香南市野市に「fleurami（美容室）」の3店舗を展開。3店舗合計で1,300件以上のGoogleクチコミ・平均4.67の評価を獲得しています。",
+          "fleur GROUP（フルールグループ）は2006年設立の高知県の美容グループです。高知市に「Riv. by fleurami（美容室）」と「Raffine（アイラッシュサロン）」、香南市野市に「fleurami（美容室）」の3店舗を展開。3店舗合計で1,200件以上のホットペッパービューティー口コミ・Google口コミ212件を獲得しています。",
       },
     },
   ],
@@ -207,7 +207,7 @@ export default function KochiSalonGuidePage() {
                   href: "/salon/riv",
                   name: "Riv. by fleurami",
                   area: "高知市南川添",
-                  rating: "Google 4.62（739件）",
+                  rating: "Google 4.8（84件）",
                   type: "美容室",
                   note: "白髪ぼかし・髪質改善・縮毛矯正を得意とする大人女性向けサロン。駐車場5台。",
                 },
@@ -215,7 +215,7 @@ export default function KochiSalonGuidePage() {
                   href: "/salon/fleurami",
                   name: "fleurami",
                   area: "香南市野市町西野",
-                  rating: "Google 4.67（388件以上）",
+                  rating: "Google 4.5（82件）",
                   type: "美容室",
                   note: "縮毛矯正・デザインカラー・髪質改善が得意。駐車場7台。のいち駅から車4分。",
                 },
@@ -223,7 +223,7 @@ export default function KochiSalonGuidePage() {
                   href: "/salon/raffine",
                   name: "Raffine",
                   area: "高知市はりまや橋",
-                  rating: "Google 4.82（200件以上）",
+                  rating: "Google 5.0（46件）",
                   type: "アイラッシュサロン",
                   note: "まつパ・まつエク・眉WAX専門。全席半個室・完全予約制。メンズ眉WAX対応。",
                 },
