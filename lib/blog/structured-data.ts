@@ -77,8 +77,8 @@ export const SALONS = {
     },
     aggregateRating: {
       "@type": "AggregateRating",
-      ratingValue: 4.67,
-      ratingCount: 388,
+      ratingValue: 4.61,
+      ratingCount: 464,
       bestRating: 5,
       worstRating: 1,
     },
@@ -163,7 +163,7 @@ export const SALONS = {
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: 4.65,
-      ratingCount: 674,
+      ratingCount: 713,
       bestRating: 5,
       worstRating: 1,
     },
@@ -205,8 +205,8 @@ export const SALONS = {
       "高知市はりまや橋徒歩3分のまつげ・まゆげ専門サロン。マツエク・まつげパーマ・韓国束感まつげ・フラットラッシュ・パリジェンヌ・眉毛WAX（メンズ対応）。全席半個室・完全予約制。",
     aggregateRating: {
       "@type": "AggregateRating",
-      ratingValue: 4.82,
-      ratingCount: 200,
+      ratingValue: 4.86,
+      ratingCount: 267,
       bestRating: 5,
       worstRating: 1,
     },

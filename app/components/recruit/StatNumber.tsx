@@ -17,7 +17,8 @@ export default function StatNumber({
   const ref = useRef<HTMLParagraphElement>(null);
   const isNumeric = /^\d+$/.test(value);
   const target = isNumeric ? parseInt(value, 10) : 0;
-  const [display, setDisplay] = useState(0);
+  // SSR/初期レンダリングでは実際の値を表示（クローラーに0を見せない）
+  const [display, setDisplay] = useState(target);
   const started = useRef(false);
 
   useEffect(() => {
@@ -31,6 +32,8 @@ export default function StatNumber({
           obs.disconnect();
           const duration = 1400;
           const start = performance.now();
+          // 視野に入った時点から0→実値へアニメーション
+          setDisplay(0);
           const tick = (now: number) => {
             const p = Math.min((now - start) / duration, 1);
             const eased = 1 - Math.pow(1 - p, 3); // easeOutCubic

@@ -13,7 +13,7 @@ const STYLISTS: Record<string, { names: string[]; role: string }> = {
     role: "スタイリスト",
   },
   riv: {
-    names: ["西森心大", "細川彩香", "沢村瑞希", "西田ななみ"],
+    names: ["西森心大", "細川彩香", "沢村瑞希"],
     role: "スタイリスト",
   },
   raffine: {

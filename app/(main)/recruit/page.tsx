@@ -53,12 +53,11 @@ const DEFAULT_VALUES = [
 const DEFAULT_STAFF_VOICES = [
   { name: "川上 凛", role: "スタイリスト", brand: "fleurami", years: "美容師歴4年", image: "/images/admin/staff-2-1782195045005.jpg", reason: "「艶カラーの仕上がりに憧れて」見学に来たのが入社のきっかけ。", joy: "お客様の『可愛い！』の一言が何よりのやりがいです。", holiday: "休日はカフェ巡りと、新しいカラーの研究をしています。", goal: "髪質改善で指名される、頼られるスタイリストになること。" },
   { name: "山岡 悠弥", role: "店長 / トップスタイリスト", brand: "fleurami", years: "美容師歴14年", image: "/images/admin/staff-1-1782195037653.jpg", reason: "技術と人を育てられる環境に惹かれて。", joy: "スタッフの成長を間近で見られること。", holiday: "家族と過ごす時間と、外部講習でのインプット。", goal: "香南市で一番『働きたい』と言われるサロンに。" },
-  { name: "西田 ななみ", role: "スタイリスト", brand: "Riv. by fleurami", years: "美容師歴3年", image: "/images/admin/staff-6-1782195072738.jpg", reason: "大人女性向けの上質な接客を学びたくて入社しました。", joy: "白髪ぼかしでお客様が明るい表情になる瞬間。", holiday: "美術館やインテリアショップで感性をリフレッシュ。", goal: "デザインカラーでも指名いただけるようになりたい。" },
   { name: "細川 彩香", role: "スタイリスト", brand: "Riv. by fleurami", years: "美容師歴8年", image: "/images/admin/staff-4-1782195059188.jpg", reason: "長く続けられる働き方ができると感じたから。", joy: "『ここに来ると元気になる』と言ってもらえること。", holiday: "ゆっくり読書とおいしいごはん。", goal: "後輩が安心して相談できる先輩でいること。" },
   { name: "やすい", role: "アイリスト", brand: "Raffine", years: "", image: "/images/admin/staff-7-1782195080215.jpg", reason: "半個室で自分のペースで施術に集中できる環境が魅力でした。", joy: "目元が変わるだけで自信を持ってもらえること。", holiday: "韓国コスメとカフェ巡りでトレンド収集。", goal: "まつ毛パーマのデザインで指名される存在に。" },
   { name: "おざき", role: "アイリスト", brand: "Raffine", years: "", image: "/images/admin/staff-8-1782195085415.jpg", reason: "同世代の仲間と楽しく働けそうだと思って。", joy: "『また来ます』と笑顔で帰ってもらえる時間。", holiday: "友達とランチ、たまに眉毛の勉強会。", goal: "眉WAXまでトータルで提案できるアイリストへ。" },
 ];
-const DEFAULT_STAFF_VOICE_NOTE = "※スタッフの声は一例です。実際の声は順次掲載予定です。";
+const DEFAULT_STAFF_VOICE_NOTE = "※掲載の内容はスタッフへのインタビューに基づきます。";
 
 const DEFAULT_STATS: { label: string; value: string; suffix?: string }[] = [
   { label: "スタッフ平均年齢", value: "26", suffix: "歳" },
