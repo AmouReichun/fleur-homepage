@@ -109,7 +109,7 @@ async function main() {
     console.log(`\n── ${salonKey} ──`);
     let posts;
     try {
-      posts = await fetchSalonPosts(salonKey, 10);
+      posts = await fetchSalonPosts(salonKey, 100);
     } catch (e) {
       console.error(`  ✗ Instagram 取得失敗: ${e}`);
       apiErrors++;
