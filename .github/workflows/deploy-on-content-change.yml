@@ -12,6 +12,9 @@ on:
 
 jobs:
   deploy:
+    # 自動生成ワークフロー（github-actions[bot]）のpushは各ワークフロー自身がデプロイするため除外。
+    # 管理画面・手動pushのみここでデプロイする。
+    if: github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5

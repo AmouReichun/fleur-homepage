@@ -256,8 +256,10 @@ export function buildBasePrompt(opts: {
   }
 
   if (opts.existingTitles && opts.existingTitles.length > 0) {
-    const titleList = opts.existingTitles.map((t) => `- ${t}`).join("\n");
-    prompt += `\n\n【既存記事タイトル一覧（このサロン・同カテゴリ）】
+    // 直近30件のみ渡す。古いタイトルとの重複リスクは低く、全件送信はプロンプトを肥大化させる。
+    const recent = opts.existingTitles.slice(-30);
+    const titleList = recent.map((t) => `- ${t}`).join("\n");
+    prompt += `\n\n【既存記事タイトル一覧（このサロン・同カテゴリ・直近${recent.length}件）】
 タイトル重複防止ルールに従い、以下と同じエリア＋メニューの組み合わせを使う場合は必ず異なる切り口を選ぶこと：
 ${titleList}`;
   }
