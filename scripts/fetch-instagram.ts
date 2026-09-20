@@ -43,7 +43,7 @@ export type IgMedia = {
   category: "hair" | "eyelash";
 };
 
-const GRAPH_BASE = "https://graph.facebook.com/v19.0";
+const GRAPH_BASE = "https://graph.facebook.com/v22.0";
 const IMAGES_DIR = path.join(process.cwd(), "public", "images", "instagram");
 
 function ensureDir(dir: string) {

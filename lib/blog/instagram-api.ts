@@ -1,4 +1,4 @@
-const GRAPH = "https://graph.facebook.com/v19.0";
+const GRAPH = "https://graph.facebook.com/v22.0";
 
 export type SalonKey = "fleurami" | "riv" | "raffine";
 
