@@ -173,7 +173,7 @@ export async function generateArticle(media: IgMedia): Promise<GeneratedArticle 
     let raw = "";
     try {
       const message = await client.messages.create({
-        model: "claude-sonnet-4-6",
+        model: "claude-haiku-4-5",
         max_tokens: 8000,
         messages: [{ role: "user", content }],
       });
@@ -320,7 +320,7 @@ ${JSON_INSTRUCTION}`;
     let raw = "";
     try {
       const message = await client.messages.create({
-        model: "claude-sonnet-4-6",
+        model: "claude-haiku-4-5",
         max_tokens: 8000,
         messages: [{ role: "user", content }],
       });

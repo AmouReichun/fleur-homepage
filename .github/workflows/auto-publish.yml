@@ -7,10 +7,11 @@ on:
     - cron: '0 9 * * *'
   workflow_dispatch:
 
-# main へ commit/push するワークフロー（staff-upload-generate / daily-generate と共有）を
-# 直列化し、並行 push によるref衝突を防ぐ。
+# auto-publish は content-push グループから独立させ、
+# staff-upload-generate の push トリガーでキャンセルされないようにする。
+# push衝突は "git pull --rebase" リトライで解決する。
 concurrency:
-  group: content-push
+  group: auto-publish
   cancel-in-progress: false
 
 jobs:

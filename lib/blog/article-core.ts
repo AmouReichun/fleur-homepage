@@ -108,7 +108,7 @@ ${JSON_INSTRUCTION}`;
   for (let attempt = 1; attempt <= 3; attempt++) {
     try {
       const message = await client.messages.create({
-        model: "claude-sonnet-4-6",
+        model: "claude-haiku-4-5",
         max_tokens: 8000,
         messages: [{ role: "user", content }],
       });
