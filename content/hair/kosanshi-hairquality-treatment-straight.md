@@ -2,7 +2,7 @@
 title: "香南市で髪質改善トリートメント｜広がりやパサつきが気になる大人女性へ"
 slug: "kosanshi-hairquality-treatment-straight"
 category: "hair"
-salon: "fleur ami"
+salon: "fleurami"
 date: "2026-06-27"
 updated: ""
 author: "山岡悠弥"

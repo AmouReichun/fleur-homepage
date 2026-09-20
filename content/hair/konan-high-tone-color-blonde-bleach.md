@@ -2,7 +2,7 @@
 title: "香南市でハイトーンカラー｜ブリーチで叶える透明感のある艶サラブロンドへ"
 slug: "konan-high-tone-color-blonde-bleach"
 category: "hair"
-salon: "fleur ami"
+salon: "fleurami"
 date: "2026-06-23"
 updated: ""
 author: "高田和花"

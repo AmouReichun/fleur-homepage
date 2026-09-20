@@ -2,7 +2,7 @@
 title: "イヤリングカラーって2色使いでどんな印象になるの？"
 slug: "earring-color-two-tone-kochi-konan-mqu914g7"
 category: "hair"
-salon: "fleur ami"
+salon: "fleurami"
 date: "2026-06-26"
 updated: ""
 author: ""

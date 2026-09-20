@@ -2,7 +2,7 @@
 title: "30〜40代の白髪染め、自然な色みで仕上げるにはどうすればいい？"
 slug: "natural-tone-shiragage-some-30-40dai-mqt5q9eu"
 category: "hair"
-salon: "fleur ami"
+salon: "fleurami"
 date: "2026-06-25"
 updated: ""
 author: ""
