@@ -1,0 +1,28 @@
+name: Weekly Health Check
+
+on:
+  schedule:
+    # 月曜 9:00 JST (= 日曜 00:00 UTC) に週1回
+    - cron: '0 0 * * 1'
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v5
+        with:
+          node-version: '22'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run health check
+        run: npx tsx scripts/health-check.ts
