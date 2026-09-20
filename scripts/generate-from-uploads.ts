@@ -17,8 +17,8 @@ dotenv.config({ path: ".env.local" });
 const UPLOAD_DIR = path.join(process.cwd(), "content", "uploads");
 const CONTENT_DIR = path.join(process.cwd(), "content");
 
-// キュー全件を一度に処理する（pushトリガーで即時実行されるため上限不要）
-const MAX_PER_RUN = Infinity;
+// 1回の実行で処理する上限（コスト抑制のため）
+const MAX_PER_RUN = 5;
 
 async function main() {
   if (!fs.existsSync(UPLOAD_DIR)) {
