@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import GuideRelatedArticles from "@/components/GuideRelatedArticles";
 import { breadcrumbSchema } from "@/lib/structured-data";
 
 const BASE = "https://fleur-group.jp";
@@ -364,6 +365,7 @@ export default function KochiBeautyPriceGuidePage() {
           </ul>
         </nav>
       </div>
+      <GuideRelatedArticles tags={["香南市美容室", "高知市美容室", "まつ毛パーマ", "艶カラー"]} category="both" />
     </>
   );
 }

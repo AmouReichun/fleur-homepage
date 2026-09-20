@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import GuideRelatedArticles from "@/components/GuideRelatedArticles";
 import { breadcrumbSchema } from "@/lib/structured-data";
 
 const BASE = "https://fleur-group.jp";
@@ -352,6 +353,7 @@ export default function KochiPermGuidePage() {
           </div>
         </div>
       </article>
+      <GuideRelatedArticles tags={["パーマ", "縮毛矯正", "メンズパーマ"]} category="hair" />
     </>
   );
 }

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import GuideRelatedArticles from "@/components/GuideRelatedArticles";
 import { breadcrumbSchema } from "@/lib/structured-data";
 
 const BASE = "https://fleur-group.jp";
@@ -304,6 +305,7 @@ export default function KochiMensBeautyPage() {
           </div>
         </div>
       </article>
+      <GuideRelatedArticles tags={["メンズパーマ", "メンズヘア", "メンズカット"]} category="hair" />
     </>
   );
 }

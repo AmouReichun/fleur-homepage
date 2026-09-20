@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import GuideRelatedArticles from "@/components/GuideRelatedArticles";
 import { breadcrumbSchema } from "@/lib/structured-data";
 
 const BASE = "https://fleur-group.jp";
@@ -337,6 +338,7 @@ export default function KochiAdultBeautyPage() {
           </Link>
         </div>
       </main>
+      <GuideRelatedArticles tags={["40代ヘアカラー", "40代ヘア", "40代ヘアスタイル", "大人女性", "白髪ぼかし"]} category="hair" />
     </>
   );
 }

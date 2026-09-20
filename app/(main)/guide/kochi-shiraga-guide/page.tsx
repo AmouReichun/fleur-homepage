@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import GuideRelatedArticles from "@/components/GuideRelatedArticles";
 import { breadcrumbSchema } from "@/lib/structured-data";
 
 const BASE = "https://fleur-group.jp";
@@ -302,6 +303,7 @@ export default function KochiShiragaGuidePage() {
           </div>
         </div>
       </article>
+      <GuideRelatedArticles tags={["白髪ぼかし", "ハイライト", "大人カラー", "40代ヘアカラー"]} category="hair" />
     </>
   );
 }
