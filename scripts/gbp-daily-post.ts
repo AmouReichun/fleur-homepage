@@ -66,7 +66,10 @@ function collectPublishedArticles(): Article[] {
         const { data } = matter(raw);
         if (data.draft === true) continue;
         const salonKey = SALON_NAME_TO_KEY[data.salon as string];
-        if (!salonKey) continue;
+        if (!salonKey) {
+          console.warn(`  ⚠ 未知のsalon名 "${data.salon}" (${name}) — SALON_NAME_TO_KEY に追加が必要`);
+          continue;
+        }
         const slug =
           (data.slug as string | undefined) ?? path.basename(name, ".md");
         articles.push({

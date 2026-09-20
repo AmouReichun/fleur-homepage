@@ -239,37 +239,59 @@ export async function generateArticle(media: IgMedia): Promise<GeneratedArticle 
 }
 
 export async function generateAllArticles(mediaList: IgMedia[]): Promise<void> {
+  // 既存記事の instagram_id を収集して重複生成を防ぐ
+  const processedIds = new Set<string>();
+  for (const cat of ["hair", "eyelash"] as const) {
+    const dir = path.join(process.cwd(), "content", cat);
+    if (!fs.existsSync(dir)) continue;
+    for (const file of fs.readdirSync(dir)) {
+      if (!file.endsWith(".md")) continue;
+      const raw = fs.readFileSync(path.join(dir, file), "utf-8");
+      const m = raw.match(/instagram_id:\s*['"]([^'"]+)['"]/);
+      if (m) processedIds.add(m[1]);
+    }
+  }
+
   let saved = 0;
   let flagged = 0;
   let failed = 0;
+  let skipped = 0;
 
   for (const media of mediaList) {
+    if (processedIds.has(media.id)) {
+      console.log(`  ⏭ スキップ（処理済み）: ${media.id}`);
+      skipped++;
+      continue;
+    }
+
     const article = await generateArticle(media);
     if (!article) { failed++; continue; }
 
     const dir = path.join(process.cwd(), "content", article.category);
     if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
 
-    const filePath = path.join(dir, `${article.slug}.md`);
-
-    // スラグ重複チェック
-    if (fs.existsSync(filePath)) {
-      article.slug = `${article.slug}-${article.instagram_id.slice(-6)}`;
+    // slug重複時は instagram_id 末尾6文字を付与して一意にする
+    let finalSlug = article.slug;
+    if (fs.existsSync(path.join(dir, `${finalSlug}.md`))) {
+      finalSlug = `${finalSlug}-${article.instagram_id.slice(-6)}`;
+      console.warn(`  ⚠️  slug重複 → ${finalSlug}`);
     }
+    article.slug = finalSlug;
 
     const markdown = buildMarkdown(article);
-    fs.writeFileSync(filePath, markdown, "utf-8");
+    fs.writeFileSync(path.join(dir, `${finalSlug}.md`), markdown, "utf-8");
+    processedIds.add(media.id); // 同一ラン内での重複も防ぐ
 
     if (article.yakkihou_flag) {
       flagged++;
-      console.log(`  ⚠️  薬機法フラグ: ${article.slug} [${article.yakkihou_words.join(", ")}]`);
+      console.log(`  ⚠️  薬機法フラグ: ${finalSlug} [${article.yakkihou_words.join(", ")}]`);
     } else {
-      console.log(`  ✅ 保存: content/${article.category}/${article.slug}.md`);
+      console.log(`  ✅ 保存: content/${article.category}/${finalSlug}.md`);
     }
     saved++;
   }
 
-  console.log(`\n📊 結果: ${saved} 件保存 / ${flagged} 件薬機法フラグ / ${failed} 件失敗`);
+  console.log(`\n📊 結果: ${saved} 件保存 / ${flagged} 件薬機法フラグ / ${failed} 件失敗 / ${skipped} 件スキップ済み`);
 }
 
 // ── スタッフ手動アップロード用エントリポイント ─────────────────────────

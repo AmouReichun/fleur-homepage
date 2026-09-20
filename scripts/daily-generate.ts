@@ -173,11 +173,18 @@ async function main() {
         console.log(`  画像保存: public/images/instagram/${salonKey}/${post.id}.jpg`);
       }
 
-      // Markdown を保存
+      // Markdown を保存（slug衝突時は instagram_id 末尾6文字を付与して一意にする）
       const mdDir = path.join(process.cwd(), "content", result.category);
       fs.mkdirSync(mdDir, { recursive: true });
-      fs.writeFileSync(path.join(mdDir, `${result.slug}.md`), result.markdown);
-      console.log(`  ✓ 記事保存: content/${result.category}/${result.slug}.md`);
+      let finalSlug = result.slug;
+      if (fs.existsSync(path.join(mdDir, `${finalSlug}.md`))) {
+        finalSlug = `${finalSlug}-${post.id.slice(-6)}`;
+        console.warn(`  ⚠ slug重複 → ${finalSlug}`);
+      }
+      fs.writeFileSync(path.join(mdDir, `${finalSlug}.md`), result.markdown.replace(
+        /^slug: ".*?"$/m, `slug: "${finalSlug}"`
+      ));
+      console.log(`  ✓ 記事保存: content/${result.category}/${finalSlug}.md`);
 
       if (result.markdown.includes("yakkihou_flag: true")) {
         console.log("  ⚠ 薬機法フラグあり — 管理画面で確認してください");
