@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 import { organizationSchema, webSiteSchema } from "@/lib/blog/structured-data";
 
 // ブログ専用フォント。全て preload:false でメインサイトの LCP に影響させない。
-const shipporiMincho = Shippori_Mincho({ subsets: ["latin"], weight: ["400", "500", "600"], variable: "--font-shippori", display: "swap", preload: false });
+const shipporiMincho = Shippori_Mincho({ subsets: ["latin"], weight: ["400", "500", "600"], variable: "--font-shippori", display: "swap", preload: true });
 const cormorant = Cormorant_Garamond({ subsets: ["latin"], weight: ["400", "500", "600"], variable: "--font-cormorant", display: "swap", preload: false });
 const zenKakuGothic = Zen_Kaku_Gothic_New({ subsets: ["latin"], weight: ["400", "500"], variable: "--font-kaku", display: "swap", preload: false });
 const plusJakarta = Plus_Jakarta_Sans({ subsets: ["latin"], weight: ["400", "500"], variable: "--font-jakarta", display: "swap", preload: false });
