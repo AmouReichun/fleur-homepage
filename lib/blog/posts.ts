@@ -12,6 +12,12 @@ export type FaqItem = {
   a: string;
 };
 
+export type ConversationItem = {
+  speaker: "stylist" | "customer";
+  customer_type?: "hair-young" | "hair-mature" | "eyelash" | "male";
+  text: string;
+};
+
 export type HowToStep = { name: string; text: string };
 
 export type PostMeta = {
@@ -32,6 +38,7 @@ export type PostMeta = {
   steps: HowToStep[];
   instagram_permalink?: string;
   instagram_id?: string;
+  conversation?: ConversationItem[];
 };
 
 export type Post = PostMeta & {
@@ -72,6 +79,7 @@ export function getPostMeta(category: Category, slug: string): PostMeta & { draf
     draft: data.draft ?? false,
     instagram_permalink: data.instagram_permalink,
     instagram_id: data.instagram_id,
+    conversation: data.conversation ?? [],
   };
 }
 
@@ -103,6 +111,7 @@ export async function getPost(category: Category, slug: string): Promise<Post & 
     draft: data.draft ?? false,
     instagram_permalink: data.instagram_permalink,
     instagram_id: data.instagram_id,
+    conversation: data.conversation ?? [],
   };
 }
 

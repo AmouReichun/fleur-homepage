@@ -9,6 +9,7 @@ import { getContent } from "@/lib/content";
 import FAQSection from "@/components/FAQSection";
 import RelatedArticles from "@/components/RelatedArticles";
 import ArticleInternalLinks from "@/components/ArticleInternalLinks";
+import ConversationSection from "@/components/ConversationSection";
 import { SALONS, salonKeyOf, relatedMenusFor, areaServiceLinksFor, primaryServiceCrumb, autoLinkBody } from "@/lib/blog/internal-links";
 import { normalizeName } from "@/lib/blog/case-studies";
 
@@ -231,6 +232,16 @@ export default async function HairArticlePage({ params }: Props) {
                 )}
               </div>
             </a>
+          )}
+
+          {/* チャット形式お悩み会話 */}
+          {post.conversation && post.conversation.length > 0 && (
+            <ConversationSection
+              conversation={post.conversation}
+              author={post.author}
+              authorRole={post.author_role}
+              world="hair"
+            />
           )}
 
           {/* Body（本文内に関連メニューへの内部リンクを自動挿入） */}
