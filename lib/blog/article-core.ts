@@ -51,10 +51,12 @@ type FaqItem = { q: string; a: string };
 
 type StepItem = { name: string; text: string };
 
+type ConvItem = { speaker: "stylist" | "customer"; customer_type?: string; text: string };
+
 type ParsedArticle = {
   title: string; slug: string; excerpt: string;
   tags: string[]; question: string; answer_summary: string;
-  faq: FaqItem[]; steps: StepItem[]; body: string;
+  faq: FaqItem[]; steps: StepItem[]; conversation?: ConvItem[]; body: string;
 };
 
 export type ArticleResult = {
@@ -150,6 +152,12 @@ ${JSON_INSTRUCTION}`;
     ? (parsed.steps ?? []).map((s) => `  - name: "${s.name.replace(/"/g, '\\"')}"\n    text: "${s.text.replace(/"/g, '\\"')}"`)
       .join("\n")
     : null;
+  const convYaml = (parsed.conversation ?? []).length > 0
+    ? (parsed.conversation ?? []).map((c) => {
+        const typeStr = c.customer_type ? `\n    customer_type: "${c.customer_type}"` : "";
+        return `  - speaker: "${c.speaker}"${typeStr}\n    text: "${c.text.replace(/"/g, '\\"')}"`;
+      }).join("\n")
+    : null;
   const tagsYaml = parsed.tags.map((t) => `"${t}"`).join(", ");
   const flags = ngWords.length > 0
     ? `draft: true\nyakkihou_flag: true\nyakkihou_words: [${ngWords.map((w) => `"${w}"`).join(", ")}]`
@@ -175,6 +183,7 @@ ${flags}
 faq:
 ${faqYaml}
 ${stepsYaml ? `steps:\n${stepsYaml}` : "steps: []"}
+${convYaml ? `conversation:\n${convYaml}` : ""}
 ---
 
 ${parsed.body}
