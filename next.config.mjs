@@ -53,6 +53,33 @@ const nextConfig = {
         destination: "/blog/hair",
         permanent: true,
       },
+      {
+        source: "/blog/hair/salon-menu-howto-choose-40s",
+        destination: "/blog/hair",
+        permanent: true,
+      },
+      // スラッグ変更された記事 → 新スラッグへ集約
+      {
+        source: "/blog/hair/kochi-shiraganobokashi-highlight-erabikata-mrkdstco",
+        destination: "/blog/hair/kochi-shiraganobokashi-highlight-erabikata-mr07elyj",
+        permanent: true,
+      },
+      {
+        source: "/blog/hair/konan-inner-color-double-color-erabikata-mrvvquc0",
+        destination: "/blog/hair/konan-inner-color-double-color-erabikata-mrvwhl9l",
+        permanent: true,
+      },
+      {
+        source: "/blog/hair/konan-shi-akami-brown-color-erabikata-mrvvvtuw",
+        destination: "/blog/hair/konan-shi-akami-brown-color-tsuya-mrcqolb5",
+        permanent: true,
+      },
+      // 旧採用URL
+      {
+        source: "/recruit-1",
+        destination: "/recruit",
+        permanent: true,
+      },
       // 重複記事の統合（同一サムネ・同一テーマ）→ 残した記事へ集約
       {
         source: "/blog/eyelash/kochi-flat-lash-100-cool-design-jireikai-msh4ai5b",
