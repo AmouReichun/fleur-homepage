@@ -3,7 +3,7 @@ title: "高知市でボブスタイルの艶感を引き出す秘訣｜大人女
 slug: "kochi-bob-tsuya-cut-color-care"
 category: "hair"
 salon: "Riv. by fleurami"
-date: "2026-04-28"
+date: "2026-09-26"
 updated: ""
 author: "西森心大"
 author_role: "スタイリスト"
@@ -14,7 +14,6 @@ question: "高知市でボブをカットするときに艶感やまとまりを
 answer_summary: "ボブの艶感は「切り方」「カラー選び」「ケア」の3つが連動しています。高知県高知市のRiv. by fleuramiでは、この3要素をカウンセリングで整理し、長期的に整いやすいスタイルをご提案しています。"
 instagram_id: "18386829244091913"
 instagram_permalink: "https://www.instagram.com/reel/DXp9NfGEqRI/"
-draft: true
 faq:
   - q: "高知市でボブをカットするなら、どんな美容室を選べばいい？"
     a: "ボブは「切り方の差が最も出やすいスタイル」です。カウンセリングで髪質や頭の形を見た上で、カット後の手入れ方法や頻度を説明してくれるサロンを選ぶことが大切です。Riv. by fleuramiでは、カットだけでなく、カラーやトリートメントとの組み合わせで長期的に艶感を保つ提案をしています。"

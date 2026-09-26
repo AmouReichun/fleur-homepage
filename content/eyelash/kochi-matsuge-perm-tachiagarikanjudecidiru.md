@@ -3,7 +3,7 @@ title: "高知市でまつ毛パーマを選ぶなら、仕上がりの「立ち
 slug: "kochi-matsuge-perm-tachiagarikanjudecidiru"
 category: "eyelash"
 salon: "Raffine"
-date: "2026-04-28"
+date: "2026-09-26"
 updated: ""
 author: "安井未琉"
 author_role: "アイリスト"
@@ -14,7 +14,6 @@ question: "高知市でまつ毛パーマを受けるとき、立ち上げ感の
 answer_summary: "立ち上げ感はロッドの太さ・巻き方の強さ・施術時間・自まつ毛の状態など複数の要素が組み合わさって決まります。高知市Raffineでは、カウンセリングでお客様の目元の骨格や毛流れを見極めた上で、最適な立ち上げ角度を提案しています。"
 instagram_id: "17958626802095965"
 instagram_permalink: "https://www.instagram.com/p/DXp9YGZAY4C/"
-draft: true
 faq:
   - q: "高知市でまつ毛パーマを初めて受けるのですが、立ち上げカールって難しくないですか？"
     a: "難しくありません。高知市Raffineではカウンセリングで、あなたの目の形や自まつ毛の癖を見た上で、自然に上がりやすい立ち上げ角度を提案します。初めての方でも、毎日のメイクがぐんとラクになる仕上がりを目指しています。"
