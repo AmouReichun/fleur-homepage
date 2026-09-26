@@ -132,3 +132,28 @@ jobs:
         env:
           VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
           VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+
+      - name: Verify published article URLs
+        if: steps.commit.outputs.committed == 'true'
+        run: |
+          echo "公開された記事のURL確認..."
+          failed=0
+          for mdfile in $(git diff HEAD~1 --name-only | grep '^content/'); do
+            if [ ! -f "$mdfile" ]; then continue; fi
+            slug=$(grep -m1 '^slug:' "$mdfile" | sed 's/slug: *"\(.*\)"/\1/')
+            if [ -z "$slug" ]; then continue; fi
+            url="https://fleur-group.jp/blog/${slug}"
+            echo "  curl: $url"
+            status=$(curl -s -o /dev/null -w "%{http_code}" --max-time 20 "$url")
+            if [ "$status" = "200" ]; then
+              echo "  ✓ $status"
+            else
+              echo "  ✗ HTTP $status: $url" >&2
+              failed=$((failed + 1))
+            fi
+          done
+          if [ "$failed" -gt 0 ]; then
+            echo "URL確認失敗: ${failed}件" >&2
+            exit 1
+          fi
+          echo "全URL確認OK"

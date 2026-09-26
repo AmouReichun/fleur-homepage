@@ -12,6 +12,7 @@ const SALON_PAT = /^salon:\s*["']?([^"'\n]+)["']?\s*$/m;
 const IG_ID_PAT = /^instagram_id:\s*"([^"]+)"/m;
 const SLUG_PAT = /^slug:\s*"([^"]+)"/m;
 const THUMBNAIL_PAT = /^thumbnail:\s*"([^"]+)"/m;
+const DATE_PAT = /^date: "(\d{4}-\d{2}-\d{2})"/m;
 
 type Issue = { level: "ERROR" | "WARN"; msg: string };
 
@@ -34,6 +35,8 @@ function run(): Issue[] {
 
   const igIdCount = new Map<string, number>();
   const slugCount = new Map<string, number>();
+  let staleDraftCount = 0;
+  let recentPublishedCount = 0;
 
   for (const { file, raw } of articles) {
     const isDraft = raw.includes("draft: true");
@@ -68,6 +71,30 @@ function run(): Issue[] {
       const imgPath = path.join(process.cwd(), "public", thumbM[1]);
       if (!fs.existsSync(imgPath)) {
         issues.push({ level: "WARN", msg: `画像ファイル欠損 ${thumbM[1]}: ${file}` });
+      }
+    }
+
+    // 下書きで日付が90日以上古い（公開時に auto-publish が日付を更新するかの監視）
+    const jstNow = new Date(Date.now() + 9 * 60 * 60 * 1000);
+    if (isDraft) {
+      const dateM = DATE_PAT.exec(raw);
+      if (dateM) {
+        const diffDays = (jstNow.getTime() - new Date(dateM[1]).getTime()) / (1000 * 60 * 60 * 24);
+        if (diffDays > 90) staleDraftCount++;
+      }
+    }
+
+    // 最近30日以内に公開された記事に conversation フィールドがない
+    if (!isDraft) {
+      const dateM = DATE_PAT.exec(raw);
+      if (dateM) {
+        const diffDays = (jstNow.getTime() - new Date(dateM[1]).getTime()) / (1000 * 60 * 60 * 24);
+        if (diffDays <= 30) {
+          recentPublishedCount++;
+          if (!raw.includes("conversation:")) {
+            issues.push({ level: "WARN", msg: `最近公開記事にconversationなし: ${file}` });
+          }
+        }
       }
     }
   }
@@ -123,6 +150,16 @@ function run(): Issue[] {
     issues.push({ level: "WARN", msg: `config/workflow読み込みエラー: ${e}` });
   }
 
+  // 90日以上古い下書き記事が滞留（公開時に日付更新されるかの監視用）
+  if (staleDraftCount > 0) {
+    issues.push({ level: "WARN", msg: `90日以上古い下書き記事: ${staleDraftCount}件 (公開時に日付が自動更新されます)` });
+  }
+
+  // 最近30日以内の公開記事が0件 = auto-publish が止まっている可能性
+  if (recentPublishedCount === 0) {
+    issues.push({ level: "WARN", msg: `最近30日以内に公開された記事が0件 — auto-publishが停止している可能性` });
+  }
+
   // 記事総数サニティチェック（急減していないか）
   const total = articles.length;
   if (total < 300) {
@@ -132,27 +169,49 @@ function run(): Issue[] {
   return issues;
 }
 
-const issues = run();
-const errors = issues.filter((i) => i.level === "ERROR");
-const warns  = issues.filter((i) => i.level === "WARN");
-
-const totalArticles = collectArticles().length;
-
-// サマリー出力
-console.log(`[health-check] ${new Date().toISOString().slice(0, 10)} 実行`);
-console.log(`  総記事数: ${totalArticles}件`);
-console.log(`  ERROR: ${errors.length}件 / WARN: ${warns.length}件`);
-
-if (warns.length > 0) {
-  console.log("\n--- WARN ---");
-  warns.forEach((w) => console.log(`  ⚠ ${w.msg}`));
+async function runHttpChecks(): Promise<Issue[]> {
+  const issues: Issue[] = [];
+  const pages = ["/", "/blog", "/area/kochi", "/area/konan"];
+  for (const page of pages) {
+    const url = `https://fleur-group.jp${page}`;
+    try {
+      const res = await fetch(url, { signal: AbortSignal.timeout(10000) });
+      if (!res.ok) {
+        issues.push({ level: "ERROR", msg: `HTTP ${res.status}: ${url}` });
+      }
+    } catch (e) {
+      issues.push({ level: "ERROR", msg: `接続失敗 ${url}: ${e}` });
+    }
+  }
+  return issues;
 }
 
-if (errors.length > 0) {
-  console.error("\n--- ERROR ---");
-  errors.forEach((e) => console.error(`  ✗ ${e.msg}`));
-  console.error("\n[health-check] 問題が検出されました。上記を確認してください。");
-  process.exit(1);
-} else {
-  console.log("\n[health-check] ✓ 問題なし");
-}
+(async () => {
+  const fileIssues = run();
+  const httpIssues = await runHttpChecks();
+  const issues = [...fileIssues, ...httpIssues];
+
+  const errors = issues.filter((i) => i.level === "ERROR");
+  const warns  = issues.filter((i) => i.level === "WARN");
+
+  const totalArticles = collectArticles().length;
+
+  // サマリー出力
+  console.log(`[health-check] ${new Date().toISOString().slice(0, 10)} 実行`);
+  console.log(`  総記事数: ${totalArticles}件`);
+  console.log(`  ERROR: ${errors.length}件 / WARN: ${warns.length}件`);
+
+  if (warns.length > 0) {
+    console.log("\n--- WARN ---");
+    warns.forEach((w) => console.log(`  ⚠ ${w.msg}`));
+  }
+
+  if (errors.length > 0) {
+    console.error("\n--- ERROR ---");
+    errors.forEach((e) => console.error(`  ✗ ${e.msg}`));
+    console.error("\n[health-check] 問題が検出されました。上記を確認してください。");
+    process.exit(1);
+  } else {
+    console.log("\n[health-check] ✓ 問題なし");
+  }
+})();
