@@ -3,7 +3,7 @@ title: "高知市で大人のショートボブを選ぶなら、質感と色選
 slug: "kochi-shortbob-shitsukan-iro-erabikata"
 category: "hair"
 salon: "Riv. by fleurami"
-date: "2026-05-01"
+date: "2026-09-26"
 updated: ""
 author: "西森心大"
 author_role: "スタイリスト"

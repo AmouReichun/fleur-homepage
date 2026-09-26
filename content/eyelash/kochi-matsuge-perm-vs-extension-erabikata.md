@@ -3,7 +3,7 @@ title: "高知市でまつ毛パーマとマツエク、どちらを選ぶべき
 slug: "kochi-matsuge-perm-vs-extension-erabikata"
 category: "eyelash"
 salon: "Raffine"
-date: "2026-04-29"
+date: "2026-09-26"
 updated: ""
 author: "尾崎あい"
 author_role: "アイリスト"

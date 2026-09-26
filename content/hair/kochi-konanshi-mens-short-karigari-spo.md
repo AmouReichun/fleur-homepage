@@ -3,7 +3,7 @@ title: "香南市でメンズショートをスッキリまとめるなら｜高
 slug: "kochi-konanshi-mens-short-karigari-spo"
 category: "hair"
 salon: "fleurami"
-date: "2026-04-29"
+date: "2026-09-26"
 updated: ""
 author: "川上凛"
 author_role: "スタイリスト"

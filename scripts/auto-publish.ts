@@ -73,9 +73,10 @@ function collectEligibleDrafts(): Draft[] {
   return result;
 }
 
-function publishFile(filePath: string): void {
+function publishFile(filePath: string, today: string): void {
   const raw = fs.readFileSync(filePath, "utf-8");
-  const updated = raw.replace(/^draft: true\r?\n/m, "");
+  let updated = raw.replace(/^draft: true\r?\n/m, "");
+  updated = updated.replace(/^(date: )"[^"]*"/m, `$1"${today}"`);
   fs.writeFileSync(filePath, updated, "utf-8");
 }
 
@@ -103,6 +104,9 @@ async function main() {
 
   // GBP「最新情報」への投稿は gbp-daily-post ワークフローに一本化（重複排除・ペース制御あり）。
   // ここで公開時にインライン投稿すると gbp-daily-post が未記録の記事を再投稿し二重掲載になるため行わない。
+  const jst = new Date(Date.now() + 9 * 60 * 60 * 1000);
+  const today = jst.toISOString().slice(0, 10);
+
   let publishedCount = 0;
   const publishedUrls: string[] = [];
   const publishedCategories = new Set<"hair" | "eyelash">();
@@ -115,7 +119,7 @@ async function main() {
     const targets = sorted.slice(0, cfg.articlesPerSalon);
 
     for (const target of targets) {
-      publishFile(target.filePath);
+      publishFile(target.filePath, today);
       const slug = path.basename(target.filePath, ".md");
       console.log(`✓ 公開: [${salon}] ${slug} (${target.date})`);
       publishedCount++;
