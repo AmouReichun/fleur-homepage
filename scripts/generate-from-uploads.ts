@@ -11,6 +11,7 @@ import * as path from "path";
 import { generateArticleFromUpload, buildMarkdown, type UploadSalonKey } from "./generate-article";
 import type { StaffUpload } from "../lib/blog/staff-uploads";
 import { getUsedThumbnails } from "../lib/blog/thumbnail-dedup";
+import { getRemainingQuota, addToMonthlyCount, getMonthlyCount } from "../lib/blog/monthly-limit";
 
 dotenv.config({ path: ".env.local" });
 
@@ -19,6 +20,7 @@ const CONTENT_DIR = path.join(process.cwd(), "content");
 
 // 1回の実行で処理する上限（コスト抑制のため）
 const MAX_PER_RUN = 5;
+const MONTHLY_LIMIT = 200;
 
 async function main() {
   if (!fs.existsSync(UPLOAD_DIR)) {
@@ -49,14 +51,21 @@ async function main() {
   }
   entries.sort((a, b) => (a.upload.timestamp < b.upload.timestamp ? -1 : 1));
 
-  console.log(`キュー ${entries.length} 件。全件を下書き生成します\n`);
+  const remaining = getRemainingQuota(MONTHLY_LIMIT);
+  console.log(`月次: ${getMonthlyCount()} / ${MONTHLY_LIMIT} 件生成済み（残り ${remaining} 件）`);
+  if (remaining <= 0) {
+    console.log("月次上限に達したためスキップ");
+    return;
+  }
+  const limit = Math.min(MAX_PER_RUN, remaining);
+  console.log(`キュー ${entries.length} 件。最大 ${limit} 件を下書き生成します\n`);
 
   // サムネ重複ガード: 既存記事と同じサムネの記事は生成しない
   const usedThumbnails = getUsedThumbnails();
   let generated = 0;
 
   for (const { file, upload } of entries) {
-    if (generated >= MAX_PER_RUN) break;
+    if (generated >= limit) break;
     const jsonPath = path.join(UPLOAD_DIR, file);
 
     console.log(`[${upload.id}] ${upload.salonName} — ${upload.memo.slice(0, 60)}`);
@@ -121,6 +130,7 @@ async function main() {
 
     fs.unlinkSync(jsonPath);
     console.log(`  ✓ JSON 削除: content/uploads/${file}`);
+    addToMonthlyCount(1);
     generated++;
   }
 

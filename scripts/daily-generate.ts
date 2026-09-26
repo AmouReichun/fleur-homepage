@@ -7,6 +7,7 @@ import * as path from "path";
 import { fetchSalonPosts, imageUrlToBase64, type SalonKey } from "../lib/blog/instagram-api";
 import { generateArticleFromPost } from "../lib/blog/article-core";
 import { getUsedThumbnails } from "../lib/blog/thumbnail-dedup";
+import { getRemainingQuota, addToMonthlyCount, getMonthlyCount } from "../lib/blog/monthly-limit";
 
 const SALONS: SalonKey[] = ["fleurami", "riv", "raffine"];
 
@@ -16,10 +17,10 @@ const SALON_ID_ENV: Record<SalonKey, string> = {
   raffine:  "IG_BUSINESS_ID_RAFFINE",
 };
 
-type GenerateConfig = { enabled: boolean; hourJST: number; perSalon: number };
+type GenerateConfig = { enabled: boolean; hourJST: number; perSalon: number; monthlyLimit: number };
 
 function loadConfig(): GenerateConfig {
-  const defaults: GenerateConfig = { enabled: true, hourJST: 10, perSalon: 1 };
+  const defaults: GenerateConfig = { enabled: true, hourJST: 10, perSalon: 1, monthlyLimit: 200 };
   try {
     const raw = fs.readFileSync(path.join(process.cwd(), "config/daily-generate.json"), "utf-8");
     return { ...defaults, ...JSON.parse(raw) };
@@ -82,7 +83,13 @@ async function main() {
     console.log("[daily-generate] 自動生成が無効のためスキップ");
     process.exit(0);
   }
+  const remaining = getRemainingQuota(config.monthlyLimit);
   console.log(`[daily-generate] 設定: ${config.hourJST}:00 JST / サロンあたり ${config.perSalon} 件`);
+  console.log(`[daily-generate] 月次: ${getMonthlyCount()} / ${config.monthlyLimit} 件生成済み（残り ${remaining} 件）`);
+  if (remaining <= 0) {
+    console.log("[daily-generate] 月次上限に達したためスキップ");
+    process.exit(0);
+  };
 
   console.log("\n■ 環境変数チェック");
   const missingSalons = checkEnvVars();
@@ -116,8 +123,13 @@ async function main() {
       continue;
     }
 
-    // まだ記事化されていない投稿を設定件数選ぶ
-    const newPosts = posts.filter((p) => !skipIds.has(p.id)).slice(0, config.perSalon);
+    // まだ記事化されていない投稿を設定件数選ぶ（残枠も考慮）
+    const remainingNow = getRemainingQuota(config.monthlyLimit) - generated;
+    if (remainingNow <= 0) {
+      console.log("  月次上限に達したためスキップ");
+      continue;
+    }
+    const newPosts = posts.filter((p) => !skipIds.has(p.id)).slice(0, Math.min(config.perSalon, remainingNow));
     if (newPosts.length === 0) {
       console.log("  新規投稿なし（全て処理済み）");
       continue;
@@ -192,6 +204,7 @@ async function main() {
 
       // 処理済みに追加（同一ランでの重複防止）
       processedIds.add(post.id);
+      addToMonthlyCount(1);
       generated++;
     }
   }
