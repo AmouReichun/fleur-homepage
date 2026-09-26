@@ -12,6 +12,7 @@ dotenv.config({ path: ".env.local" });
 const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
 
 type FaqItem = { q: string; a: string };
+type ConvItem = { speaker: "stylist" | "customer"; customer_type?: string; text: string };
 
 type GeneratedArticle = {
   title: string;
@@ -25,6 +26,9 @@ type GeneratedArticle = {
   question: string;
   answer_summary: string;
   faq: FaqItem[];
+  conversation: ConvItem[];
+  author: string;
+  author_role: string;
   draft: boolean;
   yakkihou_flag: boolean;
   yakkihou_words: string[];
@@ -32,6 +36,18 @@ type GeneratedArticle = {
   instagram_permalink: string;
   body: string;
 };
+
+const STYLISTS: Record<string, { names: string[]; role: string }> = {
+  fleurami: { names: ["西内みゆき", "山岡悠弥", "川上凛", "高田和花"], role: "スタイリスト" },
+  riv:      { names: ["西森心大", "細川彩香", "沢村瑞希"],             role: "スタイリスト" },
+  raffine:  { names: ["安井未琉", "尾崎あい"],                         role: "アイリスト" },
+};
+
+function pickStylest(salonKey: string): { name: string; role: string } {
+  const s = STYLISTS[salonKey] ?? STYLISTS["fleurami"];
+  const name = s.names[Math.floor(Math.random() * s.names.length)];
+  return { name, role: s.role };
+}
 
 export const UPLOAD_SALONS = {
   fleurami: { name: "fleurami",         category: "hair"     as const },
@@ -49,12 +65,12 @@ function loadImageAsBase64(localImagePath: string): string | null {
   return fs.readFileSync(absPath).toString("base64");
 }
 
-function buildTextPrompt(media: IgMedia): string {
+function buildTextPrompt(media: IgMedia, author: string): string {
   const area = AREA_BY_NAME[media.salonName] ?? "高知県";
   const existingTitles = getAllPosts(media.category)
     .filter((p) => p.salon === media.salonName)
     .map((p) => p.title);
-  const prompt = buildBasePrompt({ category: media.category, salonName: media.salonName, area, existingTitles });
+  const prompt = buildBasePrompt({ category: media.category, salonName: media.salonName, area, author, existingTitles });
   return `${prompt}
 
 【Instagramキャプション】
@@ -100,6 +116,13 @@ export function buildMarkdown(article: GeneratedArticle): string {
     .map((f) => `  - q: "${f.q.replace(/"/g, '\\"')}"\n    a: "${f.a.replace(/"/g, '\\"')}"`)
     .join("\n");
 
+  const convYaml = (article.conversation ?? []).length > 0
+    ? (article.conversation ?? []).map((c) => {
+        const typeStr = c.customer_type ? `\n    customer_type: "${c.customer_type}"` : "";
+        return `  - speaker: "${c.speaker}"${typeStr}\n    text: "${c.text.replace(/"/g, '\\"')}"`;
+      }).join("\n")
+    : null;
+
   const tagsYaml = article.tags.map((t) => `"${t}"`).join(", ");
 
   const flags = article.yakkihou_flag
@@ -113,8 +136,8 @@ category: "${article.category}"
 salon: "${article.salon}"
 date: "${article.date}"
 updated: ""
-author: ""
-author_role: ""
+author: "${article.author}"
+author_role: "${article.author_role}"
 excerpt: "${article.excerpt.replace(/"/g, '\\"')}"
 thumbnail: "${article.thumbnail}"
 tags: [${tagsYaml}]
@@ -125,6 +148,7 @@ instagram_permalink: "${article.instagram_permalink}"
 ${flags}
 faq:
 ${faqYaml}
+${convYaml ? `conversation:\n${convYaml}` : ""}
 ---
 
 ${article.body}
@@ -134,7 +158,10 @@ ${article.body}
 export async function generateArticle(media: IgMedia): Promise<GeneratedArticle | null> {
   console.log(`  🤖 記事生成中: ${media.salonName} / ${media.id}`);
 
-  const textPrompt = buildTextPrompt(media);
+  const stylist = pickStylest(
+    Object.entries(UPLOAD_SALONS).find(([, v]) => v.name === media.salonName)?.[0] ?? "fleurami"
+  );
+  const textPrompt = buildTextPrompt(media, stylist.name);
   const imageBase64 = loadImageAsBase64(media.localImagePath);
 
   // 画像が取得できた場合はマルチモーダル（画像＋テキスト）で渡す
@@ -164,6 +191,7 @@ export async function generateArticle(media: IgMedia): Promise<GeneratedArticle 
     question: string;
     answer_summary: string;
     faq: FaqItem[];
+    conversation?: ConvItem[];
     body: string;
   };
 
@@ -211,6 +239,9 @@ export async function generateArticle(media: IgMedia): Promise<GeneratedArticle 
   parsed.answer_summary = autoFixNgWords(parsed.answer_summary);
   parsed.body           = autoFixNgWords(parsed.body);
   parsed.faq = parsed.faq.map((f) => ({ q: autoFixNgWords(f.q), a: autoFixNgWords(f.a) }));
+  if (parsed.conversation) {
+    parsed.conversation = parsed.conversation.map((c) => ({ ...c, text: autoFixNgWords(c.text) }));
+  }
 
   const fullText = [parsed.title, parsed.excerpt, parsed.answer_summary, parsed.body, ...parsed.faq.map((f) => f.q + f.a)].join(" ");
   const ngWords = checkNgWords(fullText);
@@ -227,6 +258,9 @@ export async function generateArticle(media: IgMedia): Promise<GeneratedArticle 
     question: parsed.question,
     answer_summary: parsed.answer_summary,
     faq: parsed.faq ?? [],
+    conversation: parsed.conversation ?? [],
+    author: stylist.name,
+    author_role: stylist.role,
     draft: true,
     yakkihou_flag: ngWords.length > 0,
     yakkihou_words: ngWords,
@@ -303,12 +337,13 @@ export async function generateArticleFromUpload(params: {
 }): Promise<GeneratedArticle | null> {
   const { imagesBase64, memo, salonKey, date } = params;
   const salon = UPLOAD_SALONS[salonKey];
+  const stylist = pickStylest(salonKey);
 
   const area = AREA_BY_NAME[salon.name] ?? "高知県";
   const existingTitles = getAllPosts(salon.category)
     .filter((p) => p.salon === salon.name)
     .map((p) => p.title);
-  const textPrompt = `${buildBasePrompt({ category: salon.category, salonName: salon.name, area, existingTitles })}
+  const textPrompt = `${buildBasePrompt({ category: salon.category, salonName: salon.name, area, author: stylist.name, existingTitles })}
 
 【スタッフメモ】
 ${memo}
@@ -334,7 +369,8 @@ ${JSON_INSTRUCTION}`;
 
   type ParsedArticle = {
     title: string; slug: string; excerpt: string; tags: string[];
-    question: string; answer_summary: string; faq: FaqItem[]; body: string;
+    question: string; answer_summary: string; faq: FaqItem[];
+    conversation?: ConvItem[]; body: string;
   };
 
   let parsed: ParsedArticle | null = null;
@@ -367,6 +403,9 @@ ${JSON_INSTRUCTION}`;
   parsed.answer_summary = autoFixNgWords(parsed.answer_summary);
   parsed.body           = autoFixNgWords(parsed.body);
   parsed.faq = parsed.faq.map((f) => ({ q: autoFixNgWords(f.q), a: autoFixNgWords(f.a) }));
+  if (parsed.conversation) {
+    parsed.conversation = parsed.conversation.map((c) => ({ ...c, text: autoFixNgWords(c.text) }));
+  }
 
   const fullText = [parsed.title, parsed.excerpt, parsed.answer_summary, parsed.body, ...parsed.faq.map((f) => f.q + f.a)].join(" ");
   const ngWords = checkNgWords(fullText);
@@ -383,6 +422,9 @@ ${JSON_INSTRUCTION}`;
     question: parsed.question,
     answer_summary: parsed.answer_summary,
     faq: parsed.faq ?? [],
+    conversation: parsed.conversation ?? [],
+    author: stylist.name,
+    author_role: stylist.role,
     draft: true,
     yakkihou_flag: ngWords.length > 0,
     yakkihou_words: ngWords,
