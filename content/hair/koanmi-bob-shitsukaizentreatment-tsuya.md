@@ -3,7 +3,7 @@ title: "香南市でボブをまとめるなら、艶感を引き出す髪質改
 slug: "koanmi-bob-shitsukaizentreatment-tsuya"
 category: "hair"
 salon: "fleurami"
-date: "2026-05-01"
+date: "2026-09-26"
 updated: ""
 author: "西内みゆき"
 author_role: "スタイリスト"
@@ -14,7 +14,6 @@ question: "香南市でボブスタイルを長く楽しむために、髪質改
 answer_summary: "ボブは毛先が目立つスタイルだからこそ、髪質改善トリートメントで手触りやまとまり感を整えることが重要です。高知県香南市のfleuramiでは、艶感のあるカラーとトリートメントを組み合わせ、仕上がりと持ちの両面でご提案しています。"
 instagram_id: "18319095895252216"
 instagram_permalink: "https://www.instagram.com/reel/DXxscfRBAup/"
-draft: true
 faq:
   - q: "香南市でボブスタイルを考えているのですが、髪質改善トリートメントは必須ですか？"
     a: "必須ではありませんが、ボブは毛先の質感が大きく見えるので、手触りやまとまり感を整えたい場合には相性が良いです。現在の髪の状態を見たうえで、カウンセリングでご提案させていただきます。"

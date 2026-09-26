@@ -3,7 +3,7 @@ title: "艶感のあるロングストレートを高知市で叶えるには｜
 slug: "kochi-shitsukaizen-long-straight-gloss"
 category: "hair"
 salon: "Riv. by fleurami"
-date: "2026-05-02"
+date: "2026-09-26"
 updated: ""
 author: "西森心大"
 author_role: "スタイリスト"
@@ -14,7 +14,6 @@ question: "高知市で艶のあるロングストレートに仕上げるには
 answer_summary: "髪質改善トリートメントは、ダメージでくすみやすいロングヘアの艶感と指通りを整えやすくするメニューです。ただし、くせやうねりが強い場合は縮毛矯正との組み合わせが効果的。自身の髪の状態を診断して選ぶことが大切です。"
 instagram_id: "17978953011008473"
 instagram_permalink: "https://www.instagram.com/reel/DX0l_jLS9h9/"
-draft: true
 faq:
   - q: "高知市で髪質改善トリートメントを受けたら、どのくらい艶が続きますか？"
     a: "施術後の艶感は、自宅でのケアの頻度や質によって差が出やすいです。一般的には3〜4週間程度でツヤ感がなじみ始める傾向があります。月1回程度の施術と週1〜2回のホームケア（アウトバストリートメント）で、より長く整った状態を保ちやすくなります。"

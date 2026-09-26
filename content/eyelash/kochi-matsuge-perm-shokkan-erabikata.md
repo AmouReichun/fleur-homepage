@@ -3,7 +3,7 @@ title: "高知市でまつ毛パーマの仕上がりに迷ったら｜自然な
 slug: "kochi-matsuge-perm-shokkan-erabikata"
 category: "eyelash"
 salon: "Raffine"
-date: "2026-05-01"
+date: "2026-09-26"
 updated: ""
 author: "安井未琉"
 author_role: "アイリスト"
@@ -14,7 +14,6 @@ question: "高知市でまつ毛パーマを選ぶとき、自然な仕上がり
 answer_summary: "自然さと立ち上げは両立できます。大切なのは、自分の目元の雰囲気と日常のメイクスタイルに合わせて、カウンセリングで理想を明確に伝えること。高知市のRaffineではカールの強さやセパレート感を細かく調整し、毎日のメイクがラクになる仕上がりを実現します。"
 instagram_id: "18078992402407172"
 instagram_permalink: "https://www.instagram.com/p/DXxsxTFAbvU/"
-draft: true
 faq:
   - q: "高知市でまつ毛パーマを初めて受けるのですが、どのくらいもちますか？"
     a: "一般的には3〜4週間程度が目安です。パーマ液の効果と自まつ毛の生え替わりペースによって個人差があります。Raffineでは施術後のホームケアアドバイスもしていますので、ご相談ください。"
