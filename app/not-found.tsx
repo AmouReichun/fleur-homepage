@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "ページが見つかりません | fleur GROUP",
+  title: { absolute: "ページが見つかりません | fleur GROUP" },
 };
 
 export default function NotFound() {
