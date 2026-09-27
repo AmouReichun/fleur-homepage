@@ -20,6 +20,12 @@ const SALON_ADDRESSES: Record<string, { streetAddress: string; addressLocality: 
   raffine: { streetAddress: "はりまや町1-4-8 TNはりまやビル3F", addressLocality: "高知市", postalCode: "780-0822" },
 };
 
+const SALON_NAMES: Record<string, string> = {
+  riv: "Riv. by fleurami",
+  fleurami: "fleurami",
+  raffine: "Raffine",
+};
+
 type Props = { params: { area: string; service: string } };
 
 export const dynamicParams = false;
@@ -31,10 +37,12 @@ export function generateStaticParams() {
 export function generateMetadata({ params }: Props): Metadata {
   const data = getAreaService(params.area, params.service);
   if (!data) return {};
-  const { area, svc } = data;
+  const { area, svc, salonKeys } = data;
   const worldLabel = svc.world === "eyelash" ? "アイラッシュサロン" : "美容室";
   const title = `高知県${area.name}の${svc.name}｜${worldLabel}fleur GROUP`;
-  const description = `高知県${area.name}で${svc.name}をお探しの方へ。高知県${area.name}の${worldLabel}fleur GROUPが、${svc.name}の選び方・特徴・よくある質問を解説。施術例や料金、ご予約導線もご案内します。`;
+  const salonName = SALON_NAMES[salonKeys[0] ?? ""] ?? "fleur GROUP";
+  const restDesc = svc.description.split("。").slice(1).filter(Boolean).join("。");
+  const description = `${area.name}で${svc.name}なら${salonName}。${restDesc ? restDesc + "。" : ""}Web・LINE予約受付中。`;
   const url = `${BASE}/area/${area.slug}/${svc.slug}`;
   const ogImage = `${BASE}/api/og?title=${encodeURIComponent(`${area.name}の${svc.name}`)}&salon=${encodeURIComponent("fleur GROUP")}&category=${svc.world}`;
   return {
