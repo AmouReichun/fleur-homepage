@@ -148,7 +148,7 @@ export const SERVICES: ServiceDef[] = [
     reading: "しゅくもうきょうせい",
     world: "hair",
     salonKeys: ["fleurami", "riv"],
-    title: "縮毛矯正｜香南市・高知市の美容室",
+    title: "縮毛矯正｜高知市・香南市の美容室",
     description:
       "香南市のfleurami・高知市のRiv. by fleuramiの縮毛矯正。くせ毛・うねりをサラサラのストレートへ。薬剤選定と丁寧な施術でダメージを抑え、自然な仕上がりを目指します。",
     image: "/images/admin/salon-fleurami-1782197558743.jpg",

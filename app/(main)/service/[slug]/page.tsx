@@ -107,7 +107,13 @@ export default async function ServicePage({ params }: Props) {
           <p className="text-xs tracking-[0.3em] text-site-accent mb-2 uppercase">
             {svc.world === "eyelash" ? "Eyelash & Brow" : "Hair"} — 高知市・香南市
           </p>
-          <h1 className="font-serif text-3xl sm:text-4xl font-semibold text-site-text">{svc.name}</h1>
+          <h1 className="font-serif text-3xl sm:text-4xl font-semibold text-site-text">
+            {((): string => {
+              const areaMap: Record<string, string> = { riv: "高知市", fleurami: "香南市", raffine: "高知市" };
+              const areas = [...new Set(svc.salonKeys.map((k) => areaMap[k]).filter(Boolean))];
+              return areas.length > 0 ? areas.join("・") + "の" + svc.name : svc.name;
+            })()}
+          </h1>
         </div>
       </div>
 
