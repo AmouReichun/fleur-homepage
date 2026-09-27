@@ -45,7 +45,7 @@ const pageSchema = {
     logo: { "@type": "ImageObject", url: `${BASE}/images/logo.png` },
   },
   datePublished: "2026-09-09",
-  dateModified: "2026-09-09",
+  dateModified: "2026-09-27",
   about: [
     { "@type": "Thing", name: "白髪ぼかしカラー" },
     { "@type": "Thing", name: "ブリーチカラー" },

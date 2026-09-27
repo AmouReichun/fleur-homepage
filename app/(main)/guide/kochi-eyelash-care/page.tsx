@@ -33,7 +33,7 @@ const pageSchema = {
     "高知市はりまや橋のアイラッシュサロンRaffineのアイリストが解説するまつげパーマ・マツエク・ラッシュリフト・眉毛WAXの選び方ガイド。",
   url: `${BASE}/guide/kochi-eyelash-care`,
   datePublished: "2026-09-09",
-  dateModified: "2026-09-09",
+  dateModified: "2026-09-27",
   inLanguage: "ja",
   author: {
     "@type": "Organization",

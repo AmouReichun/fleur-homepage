@@ -33,7 +33,7 @@ const pageSchema = {
     "高知県の美容室でのヘアケアについて、縮毛矯正と髪質改善の違い、白髪ぼかし、高知の湿気対策、40代50代向け施術を解説するガイド記事。",
   url: `${BASE}/guide/kochi-hair-care`,
   datePublished: "2026-09-09",
-  dateModified: "2026-09-09",
+  dateModified: "2026-09-27",
   inLanguage: "ja",
   author: {
     "@type": "Organization",

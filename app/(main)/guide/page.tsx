@@ -5,7 +5,7 @@ import { breadcrumbSchema } from "@/lib/structured-data";
 const BASE = "https://fleur-group.jp";
 
 export const metadata: Metadata = {
-  title: "高知の美容・ヘアケア情報ガイド | fleur GROUP",
+  title: "高知の美容・ヘアケア情報ガイド",
   description:
     "高知県（高知市・香南市）の美容・ヘアケア情報を集約したガイド。髪質改善・縮毛矯正・白髪ぼかし・まつげパーマ・眉毛WAXなど、施術の選び方から高知の美容室・アイラッシュサロンの探し方まで。fleur GROUP（Riv. by fleurami・fleurami・Raffine）が提供する専門情報。",
   alternates: { canonical: `${BASE}/guide` },

@@ -11,7 +11,7 @@ import StickyRecruitCTA from "@/app/components/recruit/StickyRecruitCTA";
 import StatNumber from "@/app/components/recruit/StatNumber";
 
 export const metadata: Metadata = {
-  title: "採用情報 | 高知市・香南市の美容師・アイリスト求人 - fleur GROUP",
+  title: "採用情報 | 高知市・香南市の美容師・アイリスト求人",
   description:
     "高知市・香南市で美容師・アイリストを募集中。香南市の美容室fleurami、高知市の美容室Riv. by fleurami、高知市のまつげサロンRaffine。髪質改善・白髪ぼかし・まつげパーマなど技術が学べる職場。美容学生・20代美容師・アイリスト・転職希望者歓迎。サロン見学だけでもOK。",
   alternates: { canonical: "https://fleur-group.jp/recruit" },

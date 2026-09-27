@@ -28,7 +28,7 @@ const articleSchema = {
   description: DESC,
   url: `${BASE}/guide/kochi-perm-guide`,
   datePublished: "2026-09-09",
-  dateModified: "2026-09-09",
+  dateModified: "2026-09-27",
   author: { "@type": "Organization", "@id": `${BASE}/#organization`, name: "fleur GROUP" },
   publisher: { "@type": "Organization", "@id": `${BASE}/#organization`, name: "fleur GROUP" },
   about: [

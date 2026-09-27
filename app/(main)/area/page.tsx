@@ -6,7 +6,7 @@ import { breadcrumbSchema } from "@/lib/structured-data";
 const BASE = "https://fleur-group.jp";
 
 export const metadata: Metadata = {
-  title: "エリアから探す｜高知市・香南市の美容室・アイラッシュサロン fleur GROUP",
+  title: "エリアから探す｜高知市・香南市の美容室・アイラッシュサロン",
   description:
     "高知市・香南市でfleur GROUPのサロンを探す。高知市（Riv. by fleurami・Raffine）・香南市（fleurami）のエリア別メニュー一覧と予約案内。",
   alternates: { canonical: `${BASE}/area` },
