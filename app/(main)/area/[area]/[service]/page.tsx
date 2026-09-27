@@ -104,7 +104,8 @@ export default async function AreaServicePage({ params }: Props) {
 
   const crumbs = [
     { name: "ホーム", url: BASE },
-    { name: "エリアから探す", url: `${BASE}/area/${area.slug}` },
+    { name: "エリアから探す", url: `${BASE}/area` },
+    { name: area.name, url: `${BASE}/area/${area.slug}` },
     { name: `${area.name}の${svc.name}`, url: `${BASE}/area/${area.slug}/${svc.slug}` },
   ];
 

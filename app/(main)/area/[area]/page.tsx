@@ -105,7 +105,8 @@ export default async function AreaPage({ params }: Props) {
 
   const crumbs = [
     { name: "ホーム", url: BASE },
-    { name: "エリアから探す", url: `${BASE}/area/${area.slug}` },
+    { name: "エリアから探す", url: `${BASE}/area` },
+    { name: area.name, url: `${BASE}/area/${area.slug}` },
   ];
 
   // メニューをヘア／アイラッシュで分類（美容室メニューを明確に見せる）
