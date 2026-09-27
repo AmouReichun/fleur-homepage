@@ -37,6 +37,13 @@ const AREA_SEO: Record<string, { title: string; description: string }> = {
   },
 };
 
+const AREA_H1: Record<string, string> = {
+  kochi: "高知市の美容室・アイラッシュサロン",
+  konan: "香南市（野市）の美容室 fleurami",
+  noichi: "野市（のいち）の美容室 fleurami",
+  harimayabashi: "はりまや橋のアイラッシュサロン Raffine",
+};
+
 const AREA_INTRO: Record<string, string> = {
   kochi: "高知市には「Riv. by fleurami（南川添）」と「Raffine（はりまや橋）」の2店舗があります。美容室では髪質改善・白髪ぼかし・縮毛矯正・カット・カラーを、アイラッシュサロンではまつげパーマ・まつげエクステ・眉毛WAXをご提供しています。骨格や髪質・目元のお悩みに合わせた丁寧なカウンセリングのうえで施術を行い、毎日扱いやすく、自分らしく綺麗でいられるスタイルをご提案します。ご予約はホットペッパービューティーまたはLINEからお気軽にどうぞ。",
   konan: "香南市には「fleurami（野市町西野）」があります。縮毛矯正・髪質改善・白髪ぼかし・艶カラー・カットを得意とし、大人女性を中心に地域の皆様に選ばれているヘアサロンです。のいち駅から車で約4分、無料駐車場7台完備でアクセスも便利です。カウンセリングを大切にし、扱いやすく再現しやすいスタイルをご提案しています。ご予約はホットペッパービューティーまたはLINEから承っています。",
@@ -161,7 +168,7 @@ export default async function AreaPage({ params }: Props) {
           </nav>
           <p className="text-xs tracking-[0.3em] text-site-accent mb-2 uppercase">Area — {area.name}</p>
           <h1 className="font-serif text-3xl sm:text-4xl font-semibold text-site-text">
-            {area.name}の{salonLabel}
+            {AREA_H1[area.slug] ?? `${area.name}の${salonLabel}`}
           </h1>
           {AREA_INTRO[area.slug] && (
             <p id="area-intro" className="text-sm text-site-text leading-loose mt-4 max-w-2xl">
