@@ -142,7 +142,8 @@ jobs:
             if [ ! -f "$mdfile" ]; then continue; fi
             slug=$(grep -m1 '^slug:' "$mdfile" | sed 's/slug: *"\(.*\)"/\1/')
             if [ -z "$slug" ]; then continue; fi
-            url="https://fleur-group.jp/blog/${slug}"
+            category=$(echo "$mdfile" | sed 's|content/\([^/]*\)/.*|\1|')
+            url="https://fleur-group.jp/blog/${category}/${slug}"
             echo "  curl: $url"
             status=$(curl -s -o /dev/null -w "%{http_code}" --max-time 20 "$url")
             if [ "$status" = "200" ]; then
