@@ -193,10 +193,11 @@ export const rivSalonSchema = {
       { "@type": "Offer", itemOffered: { "@type": "Service", name: "髪質改善トリートメント", description: "うねり・ダメージ・広がりを補修してサラサラのツヤ髪へ" } },
       { "@type": "Offer", itemOffered: { "@type": "Service", name: "白髪ぼかしカラー", description: "ハイライトで白髪をなじませ、伸びても目立ちにくいグレイブレンドカラー" } },
       { "@type": "Offer", itemOffered: { "@type": "Service", name: "縮毛矯正", description: "くせ毛・うねりをサラサラのストレートへ。ダメージを抑えた自然な仕上がり" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "酸性ストレート", description: "アルカリ剤より低ダメージな次世代縮毛矯正。カラー毛・ハイダメージ毛にも対応" } },
       { "@type": "Offer", itemOffered: { "@type": "Service", name: "艶カラー・透明感カラー", description: "ツヤと透明感を引き出す似合わせカラー" } },
     ],
   },
-  knowsAbout: ["髪質改善", "白髪ぼかし", "艶カラー", "ヘアカラー", "縮毛矯正", "似合わせカット", "大人女性ヘアデザイン", "グレイカラー"],
+  knowsAbout: ["髪質改善", "白髪ぼかし", "艶カラー", "ヘアカラー", "縮毛矯正", "酸性ストレート", "似合わせカット", "大人女性ヘアデザイン", "グレイカラー"],
   sameAs: [
     "https://beauty.hotpepper.jp/slnH000634137/",
     "https://www.instagram.com/riv.kochi",
@@ -266,12 +267,13 @@ export const fleuramiSalonSchema = {
     name: "得意メニュー",
     itemListElement: [
       { "@type": "Offer", itemOffered: { "@type": "Service", name: "縮毛矯正", description: "くせ毛・うねりをサラサラのストレートへ。ダメージを抑えた自然な仕上がり" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "酸性ストレート", description: "アルカリ剤より低ダメージな次世代縮毛矯正。カラー毛・ハイダメージ毛にも対応" } },
       { "@type": "Offer", itemOffered: { "@type": "Service", name: "髪質改善トリートメント", description: "うねり・ダメージを補修してまとまりのあるツヤ髪へ" } },
       { "@type": "Offer", itemOffered: { "@type": "Service", name: "艶カラー・透明感カラー" } },
       { "@type": "Offer", itemOffered: { "@type": "Service", name: "デザインカット" } },
     ],
   },
-  knowsAbout: ["縮毛矯正", "髪質改善", "艶カラー", "ヘアカラー", "くせ毛矯正", "大人女性ヘア", "白髪ぼかし"],
+  knowsAbout: ["縮毛矯正", "酸性ストレート", "髪質改善", "艶カラー", "ヘアカラー", "くせ毛矯正", "大人女性ヘア", "白髪ぼかし"],
   sameAs: [
     "https://beauty.hotpepper.jp/slnH000528388/",
     "https://www.instagram.com/fleurami_info",

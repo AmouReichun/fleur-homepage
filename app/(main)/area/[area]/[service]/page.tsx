@@ -39,8 +39,8 @@ export function generateMetadata({ params }: Props): Metadata {
   if (!data) return {};
   const { area, svc, salonKeys } = data;
   const worldLabel = svc.world === "eyelash" ? "アイラッシュサロン" : "美容室";
-  const title = `高知県${area.name}の${svc.name}｜${worldLabel}fleur GROUP`;
   const salonName = SALON_NAMES[salonKeys[0] ?? ""] ?? "fleur GROUP";
+  const title = `${area.name}の${svc.name}｜${worldLabel}${salonName}`;
   const restDesc = svc.description.split("。").slice(1).filter(Boolean).join("。");
   const description = `${area.name}で${svc.name}なら${salonName}。${restDesc ? restDesc + "。" : ""}Web・LINE予約受付中。`;
   const url = `${BASE}/area/${area.slug}/${svc.slug}`;
