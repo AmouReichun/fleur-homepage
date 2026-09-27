@@ -3,7 +3,7 @@ title: "高知市で艶髪ショートボブを作るなら何を見るべき？
 slug: "kochi-shitsukaizen-bobtsuya-erabikata"
 category: "hair"
 salon: "Riv. by fleurami"
-date: "2026-04-23"
+date: "2026-09-27"
 updated: ""
 author: "西森心大"
 author_role: "スタイリスト"
@@ -14,7 +14,6 @@ question: "高知市でツヤのあるショートボブに仕上げるには、
 answer_summary: "ツヤのあるショートボブは、カット・カラー・髪質ケアの3つが揃って初めて完成します。高知市のRiv. by fleuramiでは、カウンセリングで髪質や生活習慣を確認し、それぞれの段階で最適な施術を提案しています。単なるスタイル選びではなく、仕上がりを長く保つケアまで含めた選択が重要です。"
 instagram_id: "17861280963623398"
 instagram_permalink: "https://www.instagram.com/reel/DXdc9pUEgQQ/"
-draft: true
 faq:
   - q: "高知市でツヤのあるボブを作りたいのですが、何から始めればいいですか？"
     a: "まずはカウンセリングで、現在の髪の状態（乾燥度合い・ダメージの有無・毛流）と、なりたいイメージを共有することが大切です。Riv. by fleuramiでは、その上で必要な施術（カット・カラー・髪質改善トリートメント）を段階的にご提案します。急いで全てをまとめるのではなく、数回のご来店を通じて理想に近づけていくアプローチもあります。"

@@ -3,7 +3,7 @@ title: "香南市でショートボブのパーマを検討中？仕上がりと
 slug: "koanami-shortbob-perm-selection-guide"
 category: "hair"
 salon: "fleurami"
-date: "2026-04-23"
+date: "2026-09-27"
 updated: ""
 author: "西内みゆき"
 author_role: "スタイリスト"
@@ -14,7 +14,6 @@ question: "香南市でショートボブにパーマをかけるとき、仕上
 answer_summary: "ショートボブのパーマは毛流を活かしたカット技術と組み合わせることで、まとまりやすく、やさしい印象に仕上がりやすくなります。持ちは毛質と施術内容で変わりますが、3〜4ヶ月程度が目安。サロン選びでは提案の丁寧さと施術後のケアアドバイスが判断基準になります。"
 instagram_id: "18068110346331716"
 instagram_permalink: "https://www.instagram.com/reel/DXdc6bCAcFU/"
-draft: true
 faq:
   - q: "香南市のfleurami でショートボブのパーマはどのくらい持ちますか？"
     a: "個人差がありますが、ショートボブのパーマは3〜4ヶ月程度が目安です。毛質やお手入れの方法で変わりますので、カウンセリングで詳しくお話しします。"

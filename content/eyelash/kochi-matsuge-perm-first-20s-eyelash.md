@@ -3,7 +3,7 @@ title: "高知市でまつ毛パーマを初めて受ける20代女性へ｜毎�
 slug: "kochi-matsuge-perm-first-20s-eyelash"
 category: "eyelash"
 salon: "Raffine"
-date: "2026-04-10"
+date: "2026-09-27"
 updated: ""
 author: "安井未琉"
 author_role: "アイリスト"
@@ -14,7 +14,6 @@ question: "高知市で初めてまつ毛パーマを受けるなら、どのサ
 answer_summary: "高知市でまつ毛パーマを選ぶときは、カール感の自然さ・毛質に合わせた薬剤選択・カウンセリングの丁寧さを見極めることが大切です。Raffineのようなまつ毛専門サロンなら、20代の目元悩みに応じた似合わせデザインが期待できます。"
 instagram_id: "18121119646615563"
 instagram_permalink: "https://www.instagram.com/p/DW7zjlRgSmb/"
-draft: true
 faq:
   - q: "高知市でまつ毛パーマを初めて受けるなら、何を準備したらいい？"
     a: "まつ毛パーマ前は、目元をメイクアップの状態でご来店いただくか、素顔でもOKです。Raffineではカウンセリング時に「毎日のメイクの仕上がり」「理想のカール感」をお伺いして、それに合わせた施術をご提案します。特に初めての方は、施術後の持ちやケア方法についても説明いたしますので、何もご用意いただく必要はありません。"
