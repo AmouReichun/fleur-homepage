@@ -97,18 +97,21 @@ function toAbsoluteUrl(src?: string): string | undefined {
 }
 
 async function postTextToGbp(article: Article): Promise<void> {
+  const thumbnailUrl = toAbsoluteUrl(article.thumbnail);
+  const payload: Record<string, string> = {
+    type: "post",
+    salonKey: article.salonKey,
+    salonName: article.salonName,
+    title: article.title,
+    excerpt: article.excerpt,
+    articleUrl: `${SITE_ORIGIN}/blog/${article.category}/${article.slug}`,
+  };
+  // thumbnailUrl が空の場合はフィールドごと省略（空文字をGBPに渡すと [500] になる）
+  if (thumbnailUrl) payload.thumbnailUrl = thumbnailUrl;
   const res = await fetch(WEBHOOK_URL!, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      type: "post",
-      salonKey: article.salonKey,
-      salonName: article.salonName,
-      title: article.title,
-      excerpt: article.excerpt,
-      thumbnailUrl: toAbsoluteUrl(article.thumbnail),
-      articleUrl: `${SITE_ORIGIN}/blog/${article.category}/${article.slug}`,
-    }),
+    body: JSON.stringify(payload),
   });
   if (!res.ok) {
     throw new Error(`Webhook エラー: ${res.status} ${await res.text()}`);
