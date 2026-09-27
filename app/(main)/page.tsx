@@ -96,12 +96,12 @@ export default async function HomePage() {
 
       {/* ─── Hero ─── */}
       <HeroSlideshow images={heroImages} hasImage={hasImage}>
-        <h2 className="text-[10px] tracking-[0.4em] text-white/70 mb-8 animate-fadeinup">
+        <h1 className="text-[10px] tracking-[0.4em] text-white/70 mb-8 animate-fadeinup">
           高知県の美容室・アイラッシュサロン
-        </h2>
-        <h1 className="font-serif text-5xl sm:text-6xl lg:text-7xl font-light text-white leading-[1.25] mb-6 whitespace-pre-line animate-fadeinup-slow">
-          {content.hero.title || "上品なのに、\n抜け感。"}
         </h1>
+        <p className="font-serif text-5xl sm:text-6xl lg:text-7xl font-light text-white leading-[1.25] mb-6 whitespace-pre-line animate-fadeinup-slow">
+          {content.hero.title || "上品なのに、\n抜け感。"}
+        </p>
         {content.hero.subtitle && (
           <p className="text-sm text-white/75 leading-relaxed mb-12 whitespace-pre-line animate-fadeinup-late">
             {content.hero.subtitle}
