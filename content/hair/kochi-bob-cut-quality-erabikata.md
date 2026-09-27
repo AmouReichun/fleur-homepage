@@ -3,7 +3,7 @@ title: "高知市でボブスタイルを整えるなら、カットと髪質感
 slug: "kochi-bob-cut-quality-erabikata"
 category: "hair"
 salon: "Riv. by fleurami"
-date: "2026-04-29"
+date: "2026-09-27"
 updated: ""
 author: "沢村瑞希"
 author_role: "スタイリスト"
@@ -14,7 +14,6 @@ question: "高知市でボブスタイルをきれいに見せるには、カッ
 answer_summary: "ボブの美しさは「切り方の正確さ」と「髪のまとまりやすさ」の両方で決まります。高知市のRiv. by fleuramiでは、カット技術と髪質を整えるトリートメントを組み合わせることで、毎日のスタイリングがしやすく、仕上がりに満足いただけるボブを実現しています。"
 instagram_id: "18119841091645582"
 instagram_permalink: "https://www.instagram.com/reel/DXsiXtykqZB/"
-draft: true
 faq:
   - q: "ボブカットって、毎日スタイリングしないと綺麗に見えないですか？"
     a: "カットの形が正確で、髪のまとまりやすさが整っていれば、朝のスタイリング時間は短くできます。高知市のRiv. by fleuramiでは、カット後に髪質改善トリートメントを組み合わせることで、毎日のまとまりやすさを目指します。個人差がありますが、ご自宅でのケアも合わせると、より一層扱いやすくなる傾向があります。"

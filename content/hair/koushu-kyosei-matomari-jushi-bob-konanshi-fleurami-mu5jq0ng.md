@@ -3,7 +3,7 @@ title: "縮毛矯正で「まとまり重視」のストレートボブを叶え
 slug: "koushu-kyosei-matomari-jushi-bob-konanshi-fleurami-mu5jq0ng"
 category: "hair"
 salon: "fleurami"
-date: "2026-09-10"
+date: "2026-09-27"
 updated: ""
 author: ""
 author_role: ""
@@ -14,7 +14,6 @@ question: "香南市で縮毛矯正をかけるとき、まとまりを重視し
 answer_summary: "縮毛矯正でまとまりを重視する場合は、施術後の仕上がりイメージ・スタイルの長さ・髪の状態の3点をカウンセリングで明確にすることが大切です。fleuramiでは香南市を中心とした大人女性に向けて、扱いやすさと艶感を両立した仕上がりを提案しています。薬剤の種類やアイロン操作の丁寧さが、毎朝のまとまりやすさに影響しやすいため、担当者との事前確認が判断材料になります。"
 instagram_id: ""
 instagram_permalink: ""
-draft: true
 faq:
   - q: "香南市のfleuramiで縮毛矯正を受けるとき、予約はどうすればいいですか？"
     a: "ホットペッパービューティーまたはLINEからご予約いただけます。初めての方でもご相談内容をあらかじめお伝えいただくと、カウンセリング時間をしっかり確保しやすくなります。"

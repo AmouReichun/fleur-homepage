@@ -3,7 +3,7 @@ title: "自まつげの長さを活かすまつ毛パーマ｜高知市Raffine�
 slug: "kochi-matsuge-perm-design-length-mu99njkb"
 category: "eyelash"
 salon: "Raffine"
-date: "2026-09-20"
+date: "2026-09-27"
 updated: ""
 author: ""
 author_role: ""
@@ -14,7 +14,6 @@ question: "自まつげの長さが短くても、まつ毛パーマで印象的
 answer_summary: "自まつげの長さを活かしたデザイン設計により、短い・細い毛でも立ち上げと束感を出しやすく、目元全体の印象を整えられます。高知市Raffineでは、一人ひとりの毛質・長さに合わせた似合わせデザインを提案しています。"
 instagram_id: ""
 instagram_permalink: ""
-draft: true
 faq:
   - q: "まつ毛が短いのですが、高知市でパーマできますか？"
     a: "はい、できます。短さや毛質に合わせたロッドサイズやカール強度を選ぶことで、無理なく立ち上げを出しやすくします。高知市Raffineではカウンセリングで毛質を確認し、その方の自まつげに合わせたデザインを提案しています。"
