@@ -8,7 +8,7 @@ updated: ""
 author: "Raffine スタイリスト"
 author_role: "アイリスト"
 excerpt: "高知市でラッシュリフト（まつ毛パーマ）や眉毛WAXを検討中の方へ。Raffineの料金・施術時間・セットメニューを詳しく解説します。帯屋町・高知市中心部からアクセス便利。"
-thumbnail: "/images/admin/salon-raffine-1782197568767.jpg"
+thumbnail: "/images/admin/salon-raffine-1782197540347.jpg"
 tags: ["ラッシュリフト", "眉毛WAX", "まつ毛パーマ", "高知市", "Raffine", "アイラッシュ", "眉毛サロン"]
 question: "高知市でラッシュリフトと眉毛WAXができるサロンの料金を知りたい"
 answer_summary: "Raffine（ラフィーヌ、高知市帯屋町2-1-40）はラッシュリフト（まつ毛パーマ）6,600円〜・眉毛WAX3,300円〜（税込）を提供するアイラッシュサロンです。セット施術にも対応しており、「目元を整えたい」方に高知市中心部でご利用いただけます。TEL: 088-823-6622。"
