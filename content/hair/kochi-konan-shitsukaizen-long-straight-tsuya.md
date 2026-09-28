@@ -3,7 +3,7 @@ title: "香南市で艶のあるロングストレートを叶えるには｜高
 slug: "kochi-konan-shitsukaizen-long-straight-tsuya"
 category: "hair"
 salon: "fleurami"
-date: "2026-04-24"
+date: "2026-09-28"
 updated: ""
 author: "川上凛"
 author_role: "スタイリスト"
@@ -14,7 +14,6 @@ question: "香南市でロングストレートの艶感を長く保つには、
 answer_summary: "ロングストレートの艶感は、カラーと髪質改善トリートメントの組み合わせ、そして通う周期が決め手になります。高知県香南市のfleuramiでは、お客様の髪の状態に合わせた提案で、手触りと見た目の変化を引き出すことができます。"
 instagram_id: "18099260650836342"
 instagram_permalink: "https://www.instagram.com/reel/DXf4kFUATqR/"
-draft: true
 faq:
   - q: "香南市で髪質改善トリートメントをするなら、どのくらいの頻度で通うべき？"
     a: "3〜4週間を目安に通うお客様が多いです。ロングストレートの場合、毛先のダメージが気になりやすいため、定期的なケアで手触りのまとまりやすさが変わります。通う周期はカウンセリングで髪の状態を見て、個別にご提案します。"

@@ -3,7 +3,7 @@ title: "高知市でまつ毛パーマを初めて受ける20代女性へ｜ナ�
 slug: "kochi-matsuge-perm-20s-natural-curl-impression"
 category: "eyelash"
 salon: "Raffine"
-date: "2026-04-24"
+date: "2026-09-28"
 updated: ""
 author: "安井未琉"
 author_role: "アイリスト"
@@ -14,7 +14,6 @@ question: "高知市でまつ毛パーマを初めて受けるなら、どんな
 answer_summary: "ナチュラルな立ち上げカールは、すっぴんでも目元の印象を変えやすく、毎日のメイクをラクにする仕上がりです。高知市のRaffineでは、お客様の毛質や骨格に合わせた丁寧なカウンセリングで、理想の目元を叶えられます。"
 instagram_id: "18100198301288219"
 instagram_permalink: "https://www.instagram.com/p/DXf4yHbAZQY/"
-draft: true
 faq:
   - q: "高知市Raffineのまつ毛パーマはどのくらいもつ？"
     a: "まつ毛パーマは通常3〜4週間程度、カールが馴染んだ状態が続く傾向があります。個人差や毛質により異なりますので、ご来店時に詳しくお伝えします。"

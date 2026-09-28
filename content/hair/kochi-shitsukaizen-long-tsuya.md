@@ -3,7 +3,7 @@ title: "高知市で艶のあるストレートロングを叶えるには｜髪
 slug: "kochi-shitsukaizen-long-tsuya"
 category: "hair"
 salon: "Riv. by fleurami"
-date: "2026-04-24"
+date: "2026-09-28"
 updated: ""
 author: "細川彩香"
 author_role: "スタイリスト"
@@ -14,7 +14,6 @@ question: "高知市で艶のあるロングストレートヘアを叶えるに
 answer_summary: "艶感のあるロングヘアは、髪質改善トリートメントと丁寧なカット・カラー提案が組み合わさることで実現しやすくなります。高知市のRiv. by fleuramiのように、カウンセリングで髪の状態を見極め、長期的な施術計画を立てるサロンを選ぶことが、理想の仕上がりに近づく鍵です。"
 instagram_id: "17855376156637091"
 instagram_permalink: "https://www.instagram.com/reel/DXf4oBvkjM0/"
-draft: true
 faq:
   - q: "高知市で髪質改善トリートメントをするなら、どのサロンがいいですか？"
     a: "高知県高知市のRiv. by fleuramiでは、施術前のカウンセリングで髪の状態（ダメージの度合い、クセの有無、ツヤの出やすさ）を丁寧に確認し、その方に合った髪質改善プランを提案しています。長さを活かしたロングヘアの場合、毛先のダメージ具合や全体のまとまり感を考慮した提案が重要です。"
