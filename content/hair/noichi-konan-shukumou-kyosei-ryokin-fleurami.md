@@ -8,7 +8,7 @@ updated: ""
 author: "fleurami スタイリスト"
 author_role: "スタイリスト"
 excerpt: "香南市野市町で縮毛矯正をお探しの方へ。fleurami（フルールアミー）の縮毛矯正料金・施術内容・アクセスをご紹介。高知市まで行かなくてもくせ毛ケアができます。"
-thumbnail: "/images/admin/salon-fleurami-1782197568767.jpg"
+thumbnail: "/images/admin/salon-fleurami-1782197558743.jpg"
 tags: ["縮毛矯正", "野市", "香南市美容室", "fleurami", "くせ毛", "縮毛矯正料金"]
 question: "野市（香南市）で縮毛矯正ができる美容室と料金を教えてほしい"
 answer_summary: "香南市野市町のfleurami（フルールアミー）では縮毛矯正に対応しています。ショート13,000円〜、ミディアム15,000円〜が目安。野市・香南市エリアのお客様にとって高知市まで足を運ばなくても確かな縮毛矯正が受けられます。TEL: 0887-56-1005。"
