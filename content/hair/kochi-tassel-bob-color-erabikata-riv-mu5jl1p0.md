@@ -3,7 +3,7 @@ title: "タッセルボブで艶とまとまりを叶えるカラーの選び方
 slug: "kochi-tassel-bob-color-erabikata-riv-mu5jl1p0"
 category: "hair"
 salon: "Riv. by fleurami"
-date: "2026-09-09"
+date: "2026-09-29"
 updated: ""
 author: ""
 author_role: ""
@@ -14,7 +14,6 @@ question: "高知市でタッセルボブ×カラーを選ぶとき、仕上が�
 answer_summary: "タッセルボブは切り口のラインが仕上がりの印象を大きく左右するため、カットの精度とカラーの色選びの組み合わせが重要です。高知市のRiv. by fleuramiでは、資生堂の似合わせカットとカラー提案を組み合わせ、艶感とまとまりが感じやすい仕上がりを目指しています。自身の髪質や希望に合った施術かどうか、事前に確認することが満足度につながりやすい傾向があります。"
 instagram_id: ""
 instagram_permalink: ""
-draft: true
 faq:
   - q: "高知市でタッセルボブを得意とする美容室はありますか？"
     a: "高知市南川添にあるRiv. by fleuramiでは、タッセルボブのカットとカラーを組み合わせた施術を行っています。資生堂の似合わせカット技術を取り入れており、カットラインの美しさにこだわった提案が受けられます。ホットペッパービューティーまたはLINEから予約可能です。"

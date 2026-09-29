@@ -3,7 +3,7 @@ title: "艶カラーで自然なトーンを叶えたい40代女性へ｜香南�
 slug: "tsuya-color-natural-tone-40dai-konan-fleurami-mu5jrojk"
 category: "hair"
 salon: "fleurami"
-date: "2026-09-10"
+date: "2026-09-29"
 updated: ""
 author: ""
 author_role: ""
@@ -14,7 +14,6 @@ question: "香南市で艶カラーを選ぶとき、自然なトーンに仕上
 answer_summary: "艶カラーで自然なトーンを求めるなら、色の選定力とトリートメントとの組み合わせ方を確認することが大切です。高知県香南市のfleuramiでは、お客様の髪の状態や生活スタイルに合わせて色味・明度・艶感を提案しています。自己判断が難しい場合は、カウンセリングで具体的な仕上がりイメージを共有してから施術に入るのが、納得感を高めやすい流れです。"
 instagram_id: ""
 instagram_permalink: ""
-draft: true
 faq:
   - q: "香南市で艶カラーをするならどこがいいですか？"
     a: "高知県香南市のfleurami（野市町西野230）は、艶カラーや白髪ぼかしカラーを得意とするサロンです。40代前後の大人女性を中心に、自然な色味と艶感を重視した提案を行っています。ホットペッパービューティーまたはLINEから予約できます。"
