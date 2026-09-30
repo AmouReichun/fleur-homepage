@@ -3,7 +3,7 @@ title: "高知市で艶カラーを長持ちさせるには？深みのある赤
 slug: "kochi-tsuya-color-akamibrown-irokimochi"
 category: "hair"
 salon: "Riv. by fleurami"
-date: "2026-04-12"
+date: "2026-09-30"
 updated: ""
 author: "西森心大"
 author_role: "スタイリスト"
@@ -14,7 +14,6 @@ question: "高知市で艶のある赤みブラウンカラーを長く楽しむ
 answer_summary: "艶カラーの色持ちは、カウンセリングの質・使用するカラー剤の選定・施術後のホームケアの三点セットで決まります。高知市のRiv. by fleuramiでは、お客様の髪質や肌色に合わせた色選びと、色持ちを意識した提案を行っています。"
 instagram_id: "18113515660705938"
 instagram_permalink: "https://www.instagram.com/reel/DXA0Lg3Es7r/"
-draft: true
 faq:
   - q: "高知市でRiv. by fleuramiの艶カラーはどのくらいの色持ちが目安ですか？"
     a: "カラーの色持ちは個人差がありますが、一般的には3〜4週間で色がやや褪せ始める傾向があります。5〜6週間ごとの根元リタッチをご提案することが多いです。髪質や自宅でのケアによって変わりますので、カウンセリング時に詳しくお伝えします。"

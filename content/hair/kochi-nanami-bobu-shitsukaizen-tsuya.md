@@ -3,7 +3,7 @@ title: "香南市でボブスタイルの艶感を引き出す髪質改善トリ
 slug: "kochi-nanami-bobu-shitsukaizen-tsuya"
 category: "hair"
 salon: "fleurami"
-date: "2026-04-12"
+date: "2026-09-30"
 updated: ""
 author: "西内みゆき"
 author_role: "スタイリスト"
@@ -14,7 +14,6 @@ question: "香南市でボブスタイルの艶感を出すなら、どのメニ
 answer_summary: "ボブは毛先の手触りと全体の艶感が目立ちやすいスタイル。髪質改善トリートメントでまとまりやすさと光沢感を整えることで、スタイルが引き立つ傾向にあります。カラーやカットと組み合わせることで、仕上がりの満足度が高まりやすいです。"
 instagram_id: "18098322782281188"
 instagram_permalink: "https://www.instagram.com/reel/DXA0INmgbh4/"
-draft: true
 faq:
   - q: "髪質改善トリートメントってどのくらい持つんですか？"
     a: "個人差がありますが、3〜4週間程度の間、手触りやまとまりやすさが整っている状態が続く傾向にあります。シャンプーの回数が多いほど早く落ちやすくなるため、3週間を目安に次回施術を検討される方が多いです。"
