@@ -3,7 +3,7 @@ title: "高知市でまつ毛パーマの仕上がりを重視する20代へ｜�
 slug: "kochi-matsuge-perm-seyakkan-nizyuudai"
 category: "eyelash"
 salon: "Raffine"
-date: "2026-04-01"
+date: "2026-10-01"
 updated: ""
 author: "安井未琉"
 author_role: "アイリスト"
@@ -14,7 +14,6 @@ question: "高知市でまつ毛パーマを選ぶとき、どのサロンなら
 answer_summary: "立ち上げ感と束感の両立は、ロッドの選定・パーマ液の知識・デザインカウンセリングの質で大きく変わります。高知県高知市のRaffineでは、個々のまつ毛の特性に合わせた施術で、毎日のメイクがラクになる目元を実現しています。"
 instagram_id: "18058461254441811"
 instagram_permalink: "https://www.instagram.com/p/DWks9-BAd3f/"
-draft: true
 faq:
   - q: "高知市でまつ毛パーマを初めて受けるのですが、立ち上げと束感の両立は難しいのですか？"
     a: "難しくありません。サロンの技術とカウンセリングの丁寧さで左右されます。Raffineでは、カウンセリング時に目の開き方・まつ毛の向き・毛質を確認し、ロッド選びとパーマ液の設定を調整しているため、立ち上げ感と束感の両立が期待できます。"

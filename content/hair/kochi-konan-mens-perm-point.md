@@ -3,7 +3,7 @@ title: "香南市でメンズパーマを選ぶなら知っておきたい、仕
 slug: "kochi-konan-mens-perm-point"
 category: "hair"
 salon: "fleurami"
-date: "2026-04-11"
+date: "2026-10-01"
 updated: ""
 author: "山岡悠弥"
 author_role: "スタイリスト"
@@ -14,7 +14,6 @@ question: "香南市でメンズパーマを失敗しないために、カット
 answer_summary: "メンズパーマの仕上がりは、毛質・長さ・カットの入れ方、そして施術後の乾かし方で大きく変わります。香南市のfleuramiでは、骨格や髪の特性に合わせた提案と、自宅でのスタイリング方法まで丁寧にお伝えすることで、長く楽しめるパーマに仕上げています。"
 instagram_id: "18586160713037057"
 instagram_permalink: "https://www.instagram.com/reel/DW-R8fVAVIF/"
-draft: true
 faq:
   - q: "メンズパーマはどのくらい持つものですか？"
     a: "毛質や乾かし方で個人差がありますが、一般的には3〜4ヶ月程度が目安です。香南市のfleuramiでは初回カウンセリング時に、あなたの髪の特性に合わせた持ちの見通しと、自宅でのお手入れ方法をお伝えしています。"

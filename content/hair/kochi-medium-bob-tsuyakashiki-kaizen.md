@@ -3,7 +3,7 @@ title: "高知市でツヤのあるミディアムボブを叶えるには｜担
 slug: "kochi-medium-bob-tsuyakashiki-kaizen"
 category: "hair"
 salon: "Riv. by fleurami"
-date: "2026-04-11"
+date: "2026-10-01"
 updated: ""
 author: "西森心大"
 author_role: "スタイリスト"
@@ -14,7 +14,6 @@ question: "高知市でツヤのあるミディアムボブに仕上げるには
 answer_summary: "ツヤのあるミディアムボブは、カット×カラー×髪質改善トリートメントの3つが揃うことで初めて叶いやすくなります。高知市のRiv. by fleuramiでは、お客様の髪質や悩みに合わせて、この組み合わせを提案しており、単体のメニューではなく「トータルで整える」ことが重要です。"
 instagram_id: "17888584842464082"
 instagram_permalink: "https://www.instagram.com/reel/DW-SCL3kg-Z/"
-draft: true
 faq:
   - q: "ミディアムボブってどのくらいの長さですか？"
     a: "肩から鎖骨あたりまでの長さを指すことが多いです。顔周りと後ろの長さのバランスで印象が大きく変わるため、カウンセリング時に目安となる画像をお持ちいただくと、より正確に仕上がりをシミュレーションできます。"
