@@ -3,7 +3,7 @@ title: "高知市でツヤのあるロングヘアを叶えるなら、髪質改
 slug: "kochi-long-hair-tsuya-shitsukaizen-syukumou"
 category: "hair"
 salon: "Riv. by fleurami"
-date: "2026-04-17"
+date: "2026-10-02"
 updated: ""
 author: "沢村瑞希"
 author_role: "スタイリスト"
@@ -14,7 +14,6 @@ question: "高知市で長めのツヤのあるヘアスタイルを叶えるに
 answer_summary: "毛先の広がりやパサつきが中心なら髪質改善トリートメント、根元から毛全体のくせやうねりが気になるなら縮毛矯正が向いています。高知市内のRiv. by fleuramiでは、カウンセリングで髪の状態を診断し、個々に最適な施術をご提案します。"
 instagram_id: "18074501609647874"
 instagram_permalink: "https://www.instagram.com/reel/DXOLMnAkrLm/"
-draft: true
 faq:
   - q: "高知市の美容室で髪質改善と縮毛矯正、どちらを選べばいいか分からないときは？"
     a: "カウンセリング時に、髪の毛先の状態、根元のくせの強さ、現在の悩み（広がり・ うねり・パサつき等）を詳しく伝えることが大切です。Riv. by fleuramiでは担当スタイリストが髪質を見極めた上で、あなたに合ったメニューを提案します。"

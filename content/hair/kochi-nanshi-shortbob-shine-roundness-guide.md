@@ -3,7 +3,7 @@ title: "香南市でボブスタイルの艶と丸みを引き出す、ショー
 slug: "kochi-nanshi-shortbob-shine-roundness-guide"
 category: "hair"
 salon: "fleurami"
-date: "2026-04-17"
+date: "2026-10-02"
 updated: ""
 author: "西内みゆき"
 author_role: "スタイリスト"
@@ -14,7 +14,6 @@ question: "香南市でショートボブの後ろ姿を丸くすっきり、か
 answer_summary: "ショートボブの後ろ姿の丸みは、レイヤーの入れ方と毛流を整えるカット技術で決まります。あわせて髪質改善トリートメントで艶感を引き出すことで、仕上がりの満足度が大きく変わります。高知県香南市のfleuramiでは、カウンセリングで髪の状態と理想の雰囲気を確認してから施術を進めます。"
 instagram_id: "18437094367136241"
 instagram_permalink: "https://www.instagram.com/reel/DXOLQbfgfvh/"
-draft: true
 faq:
   - q: "香南市でショートボブをカットするとき、どのくらいの頻度で来店すればいい？"
     a: "ショートボブは毛先の揃い具合や丸みの出方が仕上がりに大きく影響するため、4〜6週間程度を目安に来店していただく方が多いです。ただし髪の成長速度や骨格により個人差があるので、カウンセリング時にご相談ください。"

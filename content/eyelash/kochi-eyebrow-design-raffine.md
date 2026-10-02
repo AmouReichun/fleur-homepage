@@ -3,7 +3,7 @@ title: "高知市で眉毛を整えるならどこ？Raffineのアイブロウ�
 slug: "kochi-eyebrow-design-raffine"
 category: "eyelash"
 salon: "Raffine"
-date: "2026-04-05"
+date: "2026-10-02"
 updated: ""
 author: "安井未琉"
 author_role: "アイリスト"
@@ -14,7 +14,6 @@ question: "高知市で眉毛の形や濃さを整えたいとき、どんなサ
 answer_summary: "眉毛の骨格診断と顔全体のバランスを見ながら提案できるサロンを選ぶことが大切です。高知市のRaffineでは、カウンセリングで一人ひとりの悩みに寄り添った眉デザインを実現しており、整った眉が顔全体の垢抜け感につながる仕上がりを目指しています。"
 instagram_id: "18094918274118058"
 instagram_permalink: "https://www.instagram.com/p/DWu0ma5AXit/"
-draft: true
 faq:
   - q: "高知市で初めて眉毛の施術を受けるときは、どんなことを伝えればいいですか？"
     a: "現在の眉の悩み（形が決まらない、濃さが気になる、左右のバランスが悪いなど）と、理想のイメージがあればお伝えください。骨格や顔立ちに合わせたデザイン提案をいたします。スタイリストが丁寧にカウンセリングしますので、曖昧な希望でも構いません。"
