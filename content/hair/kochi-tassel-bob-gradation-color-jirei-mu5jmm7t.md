@@ -3,7 +3,7 @@ title: "タッセルボブ×グラデーションカラーで仕上がりに差�
 slug: "kochi-tassel-bob-gradation-color-jirei-mu5jmm7t"
 category: "hair"
 salon: "Riv. by fleurami"
-date: "2026-09-09"
+date: "2026-10-02"
 updated: ""
 author: ""
 author_role: ""
@@ -14,7 +14,6 @@ question: "高知市でタッセルボブとグラデーションカラーを選
 answer_summary: "タッセルボブの美しさは、カット技術とカラーの配色バランスによって大きく左右されます。根元から毛先にかけてのトーン変化を自然に設計できるかどうかが、仕上がりの印象を左右しやすいポイントです。高知県高知市のRiv. by fleuramiでは、カットとカラーの両面から仕上がりをトータルで提案しています。"
 instagram_id: ""
 instagram_permalink: ""
-draft: true
 faq:
   - q: "高知市でタッセルボブとグラデーションカラーに対応しているサロンはどこですか？"
     a: "高知県高知市のRiv. by fleuramiが対応しています。高知ICから車で約4分、無料駐車場5台完備のため、車でのご来店が便利です。ホットペッパービューティーまたはLINEから予約できます。"
