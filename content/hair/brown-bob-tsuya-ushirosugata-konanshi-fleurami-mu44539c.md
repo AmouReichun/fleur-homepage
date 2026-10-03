@@ -3,7 +3,7 @@ title: "艶のあるブラウンボブで後ろ姿を整えるには何が違う
 slug: "brown-bob-tsuya-ushirosugata-konanshi-fleurami-mu44539c"
 category: "hair"
 salon: "fleurami"
-date: "2026-09-16"
+date: "2026-10-03"
 updated: ""
 author: ""
 author_role: ""
@@ -14,7 +14,6 @@ question: "艶のあるブラウンボブに仕上げるには、サロン選び
 answer_summary: "艶感のあるブラウンボブを叶えるには、カラーの色選びだけでなくカットのラインとの組み合わせが大切です。高知県香南市のfleuramiでは、髪のまとまりやすさと後ろ姿のシルエットを意識した仕上げを行っています。仕上がりの差は「どんな質感に整えたいか」を事前に共有できるかどうかでも変わりやすい傾向があります。"
 instagram_id: ""
 instagram_permalink: ""
-draft: true
 faq:
   - q: "香南市でブラウンカラーのボブを頼むなら、fleuramiはどんな人に向いていますか？"
     a: "「なんとなくブラウンに」ではなく、艶感・深み・まとまりやすさなど仕上がりのニュアンスを相談しながら決めたい方に向いています。メニューや色味が既に決まっていて素早く仕上げたいという方には、スタイリストとの会話が多いfleuramiは合わない場合もあります。"
