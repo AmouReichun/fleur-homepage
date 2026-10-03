@@ -3,7 +3,7 @@ title: "香南市でボブカットを考えている大人女性へ｜シルバ
 slug: "kochi-konan-bob-silver-color-guide"
 category: "hair"
 salon: "fleurami"
-date: "2026-09-18"
+date: "2026-10-03"
 updated: ""
 author: "山岡悠弥"
 author_role: "スタイリスト"
@@ -14,7 +14,6 @@ question: "香南市でボブカットとシルバーカラーを組み合わせ
 answer_summary: "ニュアンスのあるシルバーカラーをボブカットに合わせることで、落ち着きと透明感を両立した洗練された印象が叶いやすくなります。特に大人女性が長期的に髪や色の雰囲気を整えたいとき、サロンでの定期的なカウンセリングと提案を重視する方に向いています。"
 instagram_id: "18134034475635672"
 instagram_permalink: "https://www.instagram.com/reel/DdaZ8RzBQdP/"
-draft: true
 faq:
   - q: "香南市でシルバーカラーとボブを組み合わせるなら、fleuramiはどんなサロンですか？"
     a: "高知県香南市のfleuramiは、40代前後の大人女性を中心に、カラーの色持ちや髪の質感を重視した施術を行っています。シルバーカラーは繊細な色調なので、カウンセリングで髪質や肌色に合わせた提案をしながら進めるスタイルです。駐車場も無料で7台分あり、のいち駅から車で約4分と通いやすいエリアです。"

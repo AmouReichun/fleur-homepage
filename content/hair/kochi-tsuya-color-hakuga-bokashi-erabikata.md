@@ -3,7 +3,7 @@ title: "高知市で艶カラーと白髪ぼかしを迷っている40代女性�
 slug: "kochi-tsuya-color-hakuga-bokashi-erabikata"
 category: "hair"
 salon: "Riv. by fleurami"
-date: "2026-09-18"
+date: "2026-10-03"
 updated: ""
 author: "沢村瑞希"
 author_role: "スタイリスト"
@@ -14,7 +14,6 @@ question: "高知市で白髪が気になり始めた40代です。艶カラー�
 answer_summary: "艶カラーは全体的に色を整えたい方向き。白髪ぼかしは白髪を目立たせないデザインを重視します。高知県高知市のRiv. by fleuramiでは、お客様の白髪の量・位置・髪質によって最適な方法を提案いたします。"
 instagram_id: "18133196071640573"
 instagram_permalink: "https://www.instagram.com/reel/DdaZ4XHySb-/"
-draft: true
 faq:
   - q: "高知市でカラーをするなら、白髪ぼかしと艶カラー、どちらがおすすめですか？"
     a: "白髪の量と位置によります。全体的に白髪が散らばっている場合は白髪ぼかしのデザインが有効。白髪が比較的少なく、全体の色ツヤを重視したい場合は艶カラーが向いています。高知市のRiv. by fleuramiでは初回カウンセリングで詳しくお聞きした上で、最適なご提案をさせていただきます。"
