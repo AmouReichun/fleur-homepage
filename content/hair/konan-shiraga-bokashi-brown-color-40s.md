@@ -3,7 +3,7 @@ title: "香南市で白髪ぼかしカラーを考えている40代女性へ｜�
 slug: "konan-shiraga-bokashi-brown-color-40s"
 category: "hair"
 salon: "fleurami"
-date: "2026-04-05"
+date: "2026-10-04"
 updated: ""
 author: "高田和花"
 author_role: "スタイリスト"
@@ -14,7 +14,6 @@ question: "香南市で白髪ぼかしカラーをするなら、どんな色を
 answer_summary: "白髪ぼかしは色選びと塗布技術で大きく仕上がりが変わります。40代女性に向いているのは、透明感とツヤ感を両立したブラウン系のカラー。肌トーンと髪質に合わせた提案を受けることで、白髪をぼかしながら大人の魅力を引き出せます。"
 instagram_id: "17881311015515311"
 instagram_permalink: "https://www.instagram.com/reel/DWutTt8gZhL/"
-draft: true
 faq:
   - q: "香南市のfleuramiで白髪ぼかしカラーをする場合、どのくらいの頻度で通う必要がありますか？"
     a: "一般的には4〜6週間ごとのご来店が目安です。白髪の伸びる速度や、色の退色の感じ方には個人差がありますので、初回時にスタイリストと相談し、あなたに合ったペースをご一緒に決めることをおすすめします。"

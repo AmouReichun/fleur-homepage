@@ -3,7 +3,7 @@ title: "高知市でまつ毛パーマの仕上がりに満足できない方へ
 slug: "kochi-matsuge-perm-atisfactory-curl-design"
 category: "eyelash"
 salon: "Raffine"
-date: "2026-03-01"
+date: "2026-10-04"
 updated: ""
 author: "尾崎あい"
 author_role: "アイリスト"
@@ -14,7 +14,6 @@ question: "高知市でまつ毛パーマの仕上がりに満足できないと
 answer_summary: "仕上がりへの満足度は、サロン選びのポイント（カール設計・毛質診断・提案力）で大きく変わります。高知市のRaffineでは、個別のまつ毛悩みに寄り添い、立ち上げカールで毎日のメイクがラクになる目元を整えるお手伝いをしています。"
 instagram_id: "18531910045064924"
 instagram_permalink: "https://www.instagram.com/p/DVUyYGjgSOi/"
-draft: true
 faq:
   - q: "高知市でまつ毛パーマをして、すぐにカールが落ちてしまいます。サロン選びで何を見るべき？"
     a: "毛質診断と設計の精度、そして施術後のケア提案がポイントです。Raffineでは初回カウンセリングで、お客様のまつ毛の特性（本数・長さ・クセ）を丁寧に確認し、その方に合うカール強度を提案しています。施術後、毎日のまつ毛ケアについてもアドバイスいたします。"

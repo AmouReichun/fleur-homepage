@@ -3,7 +3,7 @@ title: "高知市でツヤストレートロングを叶える髪質改善トリ
 slug: "kochi-shitsukaizen-long-tsuyastraight"
 category: "hair"
 salon: "Riv. by fleurami"
-date: "2026-04-05"
+date: "2026-10-04"
 updated: ""
 author: "細川彩香"
 author_role: "スタイリスト"
@@ -14,7 +14,6 @@ question: "高知市でロングヘアのツヤと手触りを整えるなら、
 answer_summary: "ロングヘアのツヤとまとまりを引き出すには、カットやカラーだけでなく、一人ひとりの髪質に合わせたトリートメント提案ができるサロンを選ぶことが重要です。高知市のRiv. by fleuramiでは、カウンセリングで髪の状態を見極め、長さを活かした髪質改善トリートメントをご提案しています。"
 instagram_id: "18129551152495599"
 instagram_permalink: "https://www.instagram.com/reel/DWutWfckk6r/"
-draft: true
 faq:
   - q: "高知市で髪質改善トリートメントを初めて受けるのですが、どのくらい持ちますか？"
     a: "個人差がありますが、施術後は3〜4週間程度、まとまりやすさや手触りの良さを感じやすい傾向があります。定期的なケアで、より長く仕上がりを保ちやすくなります。詳しくはご来店時にスタイリストへご相談ください。"
