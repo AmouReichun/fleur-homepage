@@ -182,6 +182,11 @@ export default async function RecruitPage() {
               <a href="#entry" className="bg-site-accent text-white px-8 py-3.5 text-sm font-medium tracking-wider rounded-sm hover:bg-opacity-90 transition-all">サロン見学はこちら</a>
               <a href={stickyInstagram} target="_blank" rel="noopener noreferrer" className="border border-site-greige text-site-text px-8 py-3.5 text-sm font-medium tracking-wider rounded-sm hover:border-site-accent transition-all">Instagramで見る</a>
             </div>
+            <div className="mt-7 flex flex-wrap justify-center gap-2 animate-fadeinup-late">
+              {["月給22万円〜", "残業ゼロ", "週休2日制", "有給100%消化", "社保完備"].map((tag) => (
+                <span key={tag} className="text-[11px] text-site-muted border border-site-greige px-4 py-1.5 rounded-full">{tag}</span>
+              ))}
+            </div>
           </div>
 
           <div className="space-y-4 sm:space-y-6 px-4 sm:px-6 max-w-5xl mx-auto pb-8">
@@ -206,6 +211,86 @@ export default async function RecruitPage() {
                 </div>
               </Reveal>
             ))}
+          </div>
+        </section>
+
+        {/* ══════ 働き方ハイライト ══════ */}
+        <section className="bg-site-text py-16 sm:py-20 px-5">
+          <div className="max-w-4xl mx-auto">
+            <Reveal className="text-center mb-12">
+              <p className="text-[11px] tracking-[0.35em] text-site-accent/80 uppercase mb-3">Working Conditions</p>
+              <h2 className="font-serif text-xl sm:text-2xl font-medium text-white">選ばれる理由は、<span className="text-site-accent">働き方</span>にある。</h2>
+            </Reveal>
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-8">
+              {[
+                { value: "月給22万〜", note: "スタイリスト・アイリスト", label: "給与" },
+                { value: "定時退勤", note: "残業ゼロの文化", label: "退勤" },
+                { value: "週休2日", note: "土日も月2回取得可", label: "休日" },
+                { value: "有給100%", note: "全スタッフ取得済み", label: "有給" },
+              ].map((b, i) => (
+                <Reveal key={b.label} delay={i * 80} className="text-center">
+                  <p className="font-serif text-2xl sm:text-3xl font-medium text-white leading-tight">{b.value}</p>
+                  <p className="text-[10px] text-white/50 mt-2.5 leading-snug">{b.note}</p>
+                  <div className="w-6 h-px bg-site-accent mx-auto mt-3 mb-2.5" />
+                  <p className="text-[10px] tracking-widest text-white/60 uppercase">{b.label}</p>
+                </Reveal>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ══════ こんな方へ ══════ */}
+        <section className="py-20 sm:py-24 px-5">
+          <div className="max-w-3xl mx-auto">
+            <Reveal className="text-center mb-10">
+              <p className="text-[11px] tracking-[0.35em] text-site-accent uppercase mb-4">For You</p>
+              <h2 className="font-serif text-2xl sm:text-3xl font-medium">こんな方、歓迎します</h2>
+            </Reveal>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              {[
+                "今の職場に残業・給与・人間関係の悩みがある",
+                "美容師・アイリストとして長く働き続けたい",
+                "もっと技術を磨ける環境を探している",
+                "ブランクがあって復帰できるか不安",
+                "未経験だけどアイリストに挑戦したい",
+                "まずはどんな雰囲気か見てみたい",
+              ].map((text, i) => (
+                <Reveal key={i} delay={i * 50}>
+                  <div className="flex items-start gap-3 bg-site-light rounded-xl px-5 py-4 border border-site-greige">
+                    <span className="text-site-accent text-sm mt-0.5 flex-shrink-0">✓</span>
+                    <p className="text-sm text-site-text leading-relaxed">{text}</p>
+                  </div>
+                </Reveal>
+              ))}
+            </div>
+            <Reveal className="mt-8 text-center">
+              <p className="text-sm text-site-muted leading-loose">一つでも当てはまれば、まずはサロン見学へ。<br />「ちょっと気になる」だけで大丈夫です。</p>
+            </Reveal>
+          </div>
+        </section>
+
+        {/* ══════ 代表メッセージ ══════ */}
+        <section className="py-20 sm:py-28 px-5">
+          <div className="max-w-5xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
+              <Reveal>
+                <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
+                  <Image src="/images/admin/salon-fleurami-1782197558743.jpg" alt="fleur GROUP 代表メッセージ" fill className="object-cover" sizes="(max-width: 768px) 100vw, 50vw" />
+                </div>
+              </Reveal>
+              <Reveal delay={100}>
+                <p className="text-[11px] tracking-[0.35em] text-site-accent uppercase mb-4">Our Message</p>
+                <h2 className="font-serif text-xl sm:text-[1.625rem] font-medium mb-6 leading-relaxed">
+                  美容師・アイリストとして<br />長く、輝き続けてほしい。
+                </h2>
+                <div className="space-y-4 text-sm text-site-muted leading-loose">
+                  <p>fleur GROUPを選んでくださるスタッフには、仕事を「続けられる場所」を提供したいと思っています。</p>
+                  <p>技術が上手いだけでなく、心に余裕があって、笑顔で働けること。お客様に「また来たい」と思っていただくには、まずスタッフ自身が満たされていることが大切だと考えています。</p>
+                  <p>高知で美容を仕事にしたいと思う方に、素敵なキャリアを積める場所を提供し続けたい。そう思いながら、サロンをつくっています。</p>
+                </div>
+                <p className="mt-6 text-xs text-site-muted font-medium">fleur GROUP 代表</p>
+              </Reveal>
+            </div>
           </div>
         </section>
 
@@ -247,6 +332,11 @@ export default async function RecruitPage() {
               {staffVoices.map((s, i) => (
                 <Reveal key={s.name || i} delay={(i % 3) * 80}>
                   <article className="h-full bg-white rounded-2xl overflow-hidden border border-site-greige">
+                    {s.joy && (
+                      <div className="bg-site-accent px-5 py-3.5">
+                        <p className="text-[13px] text-white font-medium text-center leading-snug">{s.joy}</p>
+                      </div>
+                    )}
                     <div className="relative aspect-[4/5] overflow-hidden">
                       <Image src={s.image} alt={`${s.name}（${s.brand}・${s.role}）`} fill className="object-cover" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" />
                       <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/65 to-transparent p-4">
@@ -257,7 +347,6 @@ export default async function RecruitPage() {
                     <div className="p-5 space-y-3">
                       {[
                         { k: "入社理由", v: s.reason },
-                        { k: "やりがい", v: s.joy },
                         { k: "休日の過ごし方", v: s.holiday },
                         { k: "将来の目標", v: s.goal },
                       ].map((row) => (
