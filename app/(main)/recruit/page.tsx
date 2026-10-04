@@ -173,10 +173,12 @@ export default async function RecruitPage() {
       <main className="bg-white text-site-text overflow-hidden">
         <Breadcrumbs theme="site" items={[{ name: "ホーム", url: "/" }, { name: "採用情報", url: "/recruit" }]} />
         {/* ══════ 1. ファーストビュー ══════ */}
-        <section className="relative">
-          <div className="max-w-3xl mx-auto px-5 pt-16 sm:pt-24 pb-10 text-center">
-            <p className="text-[11px] tracking-[0.4em] text-site-accent uppercase mb-5 animate-fadeinup">Recruit</p>
-            <h1 className="font-serif text-[26px] leading-[1.5] sm:text-4xl sm:leading-[1.5] font-medium text-balance whitespace-pre-line animate-fadeinup-slow">{heroTitle}</h1>
+        <section className="relative overflow-hidden">
+          <div className="absolute -top-24 -right-24 w-[560px] h-[560px] rounded-full bg-gradient-to-br from-rose-200/50 to-pink-200/30 blur-3xl pointer-events-none" />
+          <div className="absolute top-48 -left-36 w-[320px] h-[320px] rounded-full bg-gradient-to-tr from-fuchsia-200/30 to-violet-100/20 blur-3xl pointer-events-none" />
+          <div className="max-w-3xl mx-auto px-5 pt-16 sm:pt-24 pb-10 text-center relative">
+            <span className="inline-block bg-gradient-to-r from-rose-500 to-pink-400 text-white text-[10px] tracking-[0.3em] uppercase rounded-full px-5 py-1.5 mb-5 animate-fadeinup">Recruit</span>
+            <h1 className="font-serif text-[30px] leading-[1.45] sm:text-5xl sm:leading-[1.35] font-medium text-balance whitespace-pre-line animate-fadeinup-slow">{heroTitle}</h1>
             <p className="mt-6 text-sm sm:text-base text-site-muted leading-loose whitespace-pre-line animate-fadeinup-late">{heroLead}</p>
             <div className="mt-9 flex flex-col sm:flex-row gap-3 justify-center animate-fadeinup-late">
               <a href="#entry" className="bg-site-accent text-white px-8 py-3.5 text-sm font-medium tracking-wider rounded-sm hover:bg-opacity-90 transition-all">サロン見学はこちら</a>
@@ -184,7 +186,7 @@ export default async function RecruitPage() {
             </div>
             <div className="mt-7 flex flex-wrap justify-center gap-2 animate-fadeinup-late">
               {["月給22万円〜", "残業ゼロ", "週休2日制", "有給100%消化", "社保完備"].map((tag) => (
-                <span key={tag} className="text-[11px] text-site-muted border border-site-greige px-4 py-1.5 rounded-full">{tag}</span>
+                <span key={tag} className="text-[11px] text-rose-600 bg-rose-50 border border-rose-200 px-4 py-1.5 rounded-full font-medium">{tag}</span>
               ))}
             </div>
           </div>
@@ -215,11 +217,16 @@ export default async function RecruitPage() {
         </section>
 
         {/* ══════ 働き方ハイライト ══════ */}
-        <section className="bg-site-text py-16 sm:py-20 px-5">
-          <div className="max-w-4xl mx-auto">
+        <section className="py-16 sm:py-20 px-5 relative overflow-hidden" style={{background: "linear-gradient(135deg, #F43F5E 0%, #EC4899 55%, #A855F7 100%)"}}>
+          <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-white/8 -translate-y-1/3 translate-x-1/3 pointer-events-none" />
+          <div className="absolute bottom-0 left-0 w-72 h-72 rounded-full bg-white/8 translate-y-1/3 -translate-x-1/3 pointer-events-none" />
+          <div className="absolute inset-0 pointer-events-none select-none flex items-center justify-center overflow-hidden">
+            <p className="font-serif text-[180px] sm:text-[260px] leading-none text-white/5 font-bold tracking-wider">WORK</p>
+          </div>
+          <div className="max-w-4xl mx-auto relative">
             <Reveal className="text-center mb-12">
-              <p className="text-[11px] tracking-[0.35em] text-site-accent/80 uppercase mb-3">Working Conditions</p>
-              <h2 className="font-serif text-xl sm:text-2xl font-medium text-white">選ばれる理由は、<span className="text-site-accent">働き方</span>にある。</h2>
+              <p className="text-[11px] tracking-[0.35em] text-white/70 uppercase mb-3">Working Conditions</p>
+              <h2 className="font-serif text-xl sm:text-2xl font-medium text-white">選ばれる理由は、働き方にある。</h2>
             </Reveal>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-8">
               {[
@@ -230,8 +237,8 @@ export default async function RecruitPage() {
               ].map((b, i) => (
                 <Reveal key={b.label} delay={i * 80} className="text-center">
                   <p className="font-serif text-2xl sm:text-3xl font-medium text-white leading-tight">{b.value}</p>
-                  <div className="w-6 h-px bg-site-accent mx-auto mt-3 mb-2.5" />
-                  <p className="text-[10px] tracking-widest text-white/60 uppercase">{b.label}</p>
+                  <div className="w-6 h-px bg-white/40 mx-auto mt-3 mb-2.5" />
+                  <p className="text-[10px] tracking-widest text-white/70 uppercase">{b.label}</p>
                 </Reveal>
               ))}
             </div>
@@ -239,10 +246,10 @@ export default async function RecruitPage() {
         </section>
 
         {/* ══════ こんな方へ ══════ */}
-        <section className="py-20 sm:py-24 px-5">
+        <section className="py-20 sm:py-24 px-5 bg-rose-50">
           <div className="max-w-3xl mx-auto">
             <Reveal className="text-center mb-10">
-              <p className="text-[11px] tracking-[0.35em] text-site-accent uppercase mb-4">For You</p>
+              <p className="text-[11px] tracking-[0.35em] text-rose-500 uppercase mb-4">For You</p>
               <h2 className="font-serif text-2xl sm:text-3xl font-medium">こんな方、歓迎します</h2>
             </Reveal>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -255,8 +262,8 @@ export default async function RecruitPage() {
                 "まずはどんな雰囲気か見てみたい",
               ].map((text, i) => (
                 <Reveal key={i} delay={i * 50}>
-                  <div className="flex items-start gap-3 bg-site-light rounded-xl px-5 py-4 border border-site-greige">
-                    <span className="text-site-accent text-sm mt-0.5 flex-shrink-0">✓</span>
+                  <div className="flex items-start gap-3 bg-white rounded-xl px-5 py-4 border-l-4 border-rose-400 shadow-sm">
+                    <span className="text-rose-500 font-bold text-sm mt-0.5 flex-shrink-0">✓</span>
                     <p className="text-sm text-site-text leading-relaxed">{text}</p>
                   </div>
                 </Reveal>
@@ -320,10 +327,13 @@ export default async function RecruitPage() {
         </section>
 
         {/* ══════ 3. スタッフ紹介 ══════ */}
-        <section className="py-20 sm:py-28 px-5">
-          <div className="max-w-5xl mx-auto">
+        <section className="py-20 sm:py-28 px-5 relative overflow-hidden">
+          <div className="absolute inset-0 pointer-events-none select-none flex items-start justify-center overflow-hidden pt-4">
+            <p className="font-serif text-[120px] sm:text-[200px] leading-none text-rose-100 font-bold tracking-wider">MEMBERS</p>
+          </div>
+          <div className="max-w-5xl mx-auto relative">
             <Reveal className="text-center mb-12 sm:mb-16">
-              <p className="text-[11px] tracking-[0.35em] text-site-accent uppercase mb-4">Members</p>
+              <p className="text-[11px] tracking-[0.35em] text-rose-500 uppercase mb-4">Members</p>
               <h2 className="font-serif text-2xl sm:text-3xl font-medium mb-4">スタッフ紹介</h2>
               <p className="text-sm text-site-muted leading-loose">一緒に働く仲間の、リアルな声。</p>
             </Reveal>
@@ -332,7 +342,7 @@ export default async function RecruitPage() {
                 <Reveal key={s.name || i} delay={(i % 3) * 80}>
                   <article className="h-full bg-white rounded-2xl overflow-hidden border border-site-greige">
                     {s.joy && (
-                      <div className="bg-site-accent px-5 py-3.5">
+                      <div className="bg-gradient-to-r from-rose-500 to-pink-400 px-5 py-3.5">
                         <p className="text-[13px] text-white font-medium text-center leading-snug">{s.joy}</p>
                       </div>
                     )}
