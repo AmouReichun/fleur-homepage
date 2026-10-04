@@ -174,10 +174,10 @@ export default async function RecruitPage() {
         <Breadcrumbs theme="site" items={[{ name: "ホーム", url: "/" }, { name: "採用情報", url: "/recruit" }]} />
         {/* ══════ 1. ファーストビュー ══════ */}
         <section className="relative overflow-hidden">
-          <div className="absolute -top-24 -right-24 w-[560px] h-[560px] rounded-full bg-gradient-to-br from-rose-200/50 to-pink-200/30 blur-3xl pointer-events-none" />
-          <div className="absolute top-48 -left-36 w-[320px] h-[320px] rounded-full bg-gradient-to-tr from-fuchsia-200/30 to-violet-100/20 blur-3xl pointer-events-none" />
+          <div className="absolute -top-24 -right-24 w-[560px] h-[560px] rounded-full bg-pink-100/50 blur-3xl pointer-events-none" />
+          <div className="absolute top-48 -left-36 w-[320px] h-[320px] rounded-full bg-pink-50/80 blur-3xl pointer-events-none" />
           <div className="max-w-3xl mx-auto px-5 pt-16 sm:pt-24 pb-10 text-center relative">
-            <span className="inline-block bg-gradient-to-r from-rose-500 to-pink-400 text-white text-[10px] tracking-[0.3em] uppercase rounded-full px-5 py-1.5 mb-5 animate-fadeinup">Recruit</span>
+            <span className="inline-block bg-pink-500 text-white text-[10px] tracking-[0.3em] uppercase rounded-full px-5 py-1.5 mb-5 animate-fadeinup">Recruit</span>
             <h1 className="font-serif text-[30px] leading-[1.45] sm:text-5xl sm:leading-[1.35] font-medium text-balance whitespace-pre-line animate-fadeinup-slow">{heroTitle}</h1>
             <p className="mt-6 text-sm sm:text-base text-site-muted leading-loose whitespace-pre-line animate-fadeinup-late">{heroLead}</p>
             <div className="mt-9 flex flex-col sm:flex-row gap-3 justify-center animate-fadeinup-late">
@@ -186,7 +186,7 @@ export default async function RecruitPage() {
             </div>
             <div className="mt-7 flex flex-wrap justify-center gap-2 animate-fadeinup-late">
               {["月給22万円〜", "残業ゼロ", "週休2日制", "有給100%消化", "社保完備"].map((tag) => (
-                <span key={tag} className="text-[11px] text-rose-600 bg-rose-50 border border-rose-200 px-4 py-1.5 rounded-full font-medium">{tag}</span>
+                <span key={tag} className="text-[11px] text-pink-600 bg-pink-50 border border-pink-200 px-4 py-1.5 rounded-full font-medium">{tag}</span>
               ))}
             </div>
           </div>
@@ -217,28 +217,23 @@ export default async function RecruitPage() {
         </section>
 
         {/* ══════ 働き方ハイライト ══════ */}
-        <section className="py-16 sm:py-20 px-5 relative overflow-hidden" style={{background: "linear-gradient(135deg, #F43F5E 0%, #EC4899 55%, #A855F7 100%)"}}>
-          <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-white/8 -translate-y-1/3 translate-x-1/3 pointer-events-none" />
-          <div className="absolute bottom-0 left-0 w-72 h-72 rounded-full bg-white/8 translate-y-1/3 -translate-x-1/3 pointer-events-none" />
-          <div className="absolute inset-0 pointer-events-none select-none flex items-center justify-center overflow-hidden">
-            <p className="font-serif text-[180px] sm:text-[260px] leading-none text-white/5 font-bold tracking-wider">WORK</p>
-          </div>
-          <div className="max-w-4xl mx-auto relative">
+        <section className="py-16 sm:py-20 px-5 bg-pink-50">
+          <div className="max-w-4xl mx-auto">
             <Reveal className="text-center mb-12">
-              <p className="text-[11px] tracking-[0.35em] text-white/70 uppercase mb-3">Working Conditions</p>
-              <h2 className="font-serif text-xl sm:text-2xl font-medium text-white">選ばれる理由は、働き方にある。</h2>
+              <p className="text-[11px] tracking-[0.35em] text-pink-500 uppercase mb-3">Working Conditions</p>
+              <h2 className="font-serif text-xl sm:text-2xl font-medium text-site-text">選ばれる理由は、<span className="text-pink-500">働き方</span>にある。</h2>
             </Reveal>
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-8">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
               {[
                 { value: "月給22万〜", label: "給与" },
                 { value: "定時退勤", label: "退勤" },
                 { value: "週休2日", label: "休日" },
                 { value: "有給100%", label: "有給" },
               ].map((b, i) => (
-                <Reveal key={b.label} delay={i * 80} className="text-center">
-                  <p className="font-serif text-2xl sm:text-3xl font-medium text-white leading-tight">{b.value}</p>
-                  <div className="w-6 h-px bg-white/40 mx-auto mt-3 mb-2.5" />
-                  <p className="text-[10px] tracking-widest text-white/70 uppercase">{b.label}</p>
+                <Reveal key={b.label} delay={i * 80} className="text-center bg-white rounded-2xl py-8 px-4 shadow-sm">
+                  <p className="font-serif text-3xl sm:text-4xl font-bold text-pink-500 leading-tight">{b.value}</p>
+                  <div className="w-6 h-px bg-pink-200 mx-auto mt-3 mb-2.5" />
+                  <p className="text-[10px] tracking-widest text-site-muted uppercase">{b.label}</p>
                 </Reveal>
               ))}
             </div>
@@ -246,10 +241,10 @@ export default async function RecruitPage() {
         </section>
 
         {/* ══════ こんな方へ ══════ */}
-        <section className="py-20 sm:py-24 px-5 bg-rose-50">
+        <section className="py-20 sm:py-24 px-5 bg-pink-50">
           <div className="max-w-3xl mx-auto">
             <Reveal className="text-center mb-10">
-              <p className="text-[11px] tracking-[0.35em] text-rose-500 uppercase mb-4">For You</p>
+              <p className="text-[11px] tracking-[0.35em] text-pink-500 uppercase mb-4">For You</p>
               <h2 className="font-serif text-2xl sm:text-3xl font-medium">こんな方、歓迎します</h2>
             </Reveal>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -262,8 +257,8 @@ export default async function RecruitPage() {
                 "まずはどんな雰囲気か見てみたい",
               ].map((text, i) => (
                 <Reveal key={i} delay={i * 50}>
-                  <div className="flex items-start gap-3 bg-white rounded-xl px-5 py-4 border-l-4 border-rose-400 shadow-sm">
-                    <span className="text-rose-500 font-bold text-sm mt-0.5 flex-shrink-0">✓</span>
+                  <div className="flex items-start gap-3 bg-white rounded-xl px-5 py-4 border-l-4 border-pink-400 shadow-sm">
+                    <span className="text-pink-500 font-bold text-sm mt-0.5 flex-shrink-0">✓</span>
                     <p className="text-sm text-site-text leading-relaxed">{text}</p>
                   </div>
                 </Reveal>
@@ -285,7 +280,7 @@ export default async function RecruitPage() {
                 </div>
               </Reveal>
               <Reveal delay={100}>
-                <p className="text-[11px] tracking-[0.35em] text-site-accent uppercase mb-4">Our Message</p>
+                <p className="text-[11px] tracking-[0.35em] text-pink-500 uppercase mb-4">Our Message</p>
                 <h2 className="font-serif text-xl sm:text-[1.625rem] font-medium mb-6 leading-relaxed">
                   美容師・アイリストとして<br />長く、輝き続けてほしい。
                 </h2>
@@ -301,10 +296,10 @@ export default async function RecruitPage() {
         </section>
 
         {/* ══════ 2. 私たちについて ══════ */}
-        <section className="bg-site-light py-20 sm:py-28 px-5">
+        <section className="bg-pink-50 py-20 sm:py-28 px-5">
           <div className="max-w-4xl mx-auto">
             <Reveal className="text-center mb-12 sm:mb-16">
-              <p className="text-[11px] tracking-[0.35em] text-site-accent uppercase mb-4">About us</p>
+              <p className="text-[11px] tracking-[0.35em] text-pink-500 uppercase mb-4">About us</p>
               <h2 className="font-serif text-2xl sm:text-3xl font-medium mb-6">私たちについて</h2>
               <div className="max-w-2xl mx-auto space-y-3">
                 {aboutLead.split("\n").filter((l) => l.trim()).map((line, i) => (
@@ -316,7 +311,7 @@ export default async function RecruitPage() {
               {values.map((v, i) => (
                 <Reveal key={v.title || i} delay={i * 70}>
                   <div className="h-full bg-white rounded-xl p-7 border border-site-greige">
-                    <span className="inline-flex items-center justify-center w-11 h-11 rounded-full bg-site-light text-site-accent text-lg mb-4">{v.icon}</span>
+                    <span className="inline-flex items-center justify-center w-11 h-11 rounded-full bg-pink-100 text-pink-500 text-lg mb-4">{v.icon}</span>
                     <h3 className="font-serif text-lg font-medium mb-2.5">{v.title}</h3>
                     <p className="text-sm text-site-muted leading-relaxed">{v.text}</p>
                   </div>
@@ -329,11 +324,11 @@ export default async function RecruitPage() {
         {/* ══════ 3. スタッフ紹介 ══════ */}
         <section className="py-20 sm:py-28 px-5 relative overflow-hidden">
           <div className="absolute inset-0 pointer-events-none select-none flex items-start justify-center overflow-hidden pt-4">
-            <p className="font-serif text-[120px] sm:text-[200px] leading-none text-rose-100 font-bold tracking-wider">MEMBERS</p>
+            <p className="font-serif text-[120px] sm:text-[200px] leading-none text-pink-100 font-bold tracking-wider">MEMBERS</p>
           </div>
           <div className="max-w-5xl mx-auto relative">
             <Reveal className="text-center mb-12 sm:mb-16">
-              <p className="text-[11px] tracking-[0.35em] text-rose-500 uppercase mb-4">Members</p>
+              <p className="text-[11px] tracking-[0.35em] text-pink-500 uppercase mb-4">Members</p>
               <h2 className="font-serif text-2xl sm:text-3xl font-medium mb-4">スタッフ紹介</h2>
               <p className="text-sm text-site-muted leading-loose">一緒に働く仲間の、リアルな声。</p>
             </Reveal>
@@ -342,7 +337,7 @@ export default async function RecruitPage() {
                 <Reveal key={s.name || i} delay={(i % 3) * 80}>
                   <article className="h-full bg-white rounded-2xl overflow-hidden border border-site-greige">
                     {s.joy && (
-                      <div className="bg-gradient-to-r from-rose-500 to-pink-400 px-5 py-3.5">
+                      <div className="bg-pink-500 px-5 py-3.5">
                         <p className="text-[13px] text-white font-medium text-center leading-snug">{s.joy}</p>
                       </div>
                     )}
@@ -360,7 +355,7 @@ export default async function RecruitPage() {
                         { k: "将来の目標", v: s.goal },
                       ].map((row) => (
                         <div key={row.k}>
-                          <p className="text-[10px] tracking-wider text-site-accent mb-1">{row.k}</p>
+                          <p className="text-[10px] tracking-wider text-pink-400 mb-1">{row.k}</p>
                           <p className="text-[13px] text-site-text leading-relaxed">{row.v}</p>
                         </div>
                       ))}
@@ -377,7 +372,7 @@ export default async function RecruitPage() {
         <section className="bg-site-text text-white py-20 sm:py-28 px-5">
           <div className="max-w-4xl mx-auto">
             <Reveal className="text-center mb-12 sm:mb-16">
-              <p className="text-[11px] tracking-[0.35em] text-site-accent uppercase mb-4">Numbers</p>
+              <p className="text-[11px] tracking-[0.35em] text-pink-400 uppercase mb-4">Numbers</p>
               <h2 className="font-serif text-2xl sm:text-3xl font-medium">数字で見るfleur GROUP</h2>
             </Reveal>
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-y-10 gap-x-4">
@@ -395,7 +390,7 @@ export default async function RecruitPage() {
         <section className="py-20 sm:py-28 px-5">
           <div className="max-w-4xl mx-auto">
             <Reveal className="text-center mb-12 sm:mb-16">
-              <p className="text-[11px] tracking-[0.35em] text-site-accent uppercase mb-4">A day</p>
+              <p className="text-[11px] tracking-[0.35em] text-pink-500 uppercase mb-4">A day</p>
               <h2 className="font-serif text-2xl sm:text-3xl font-medium">1日の流れ</h2>
             </Reveal>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12">
@@ -405,14 +400,14 @@ export default async function RecruitPage() {
               ].map((col) => (
                 <Reveal key={col.title}>
                   <h3 className="font-serif text-lg font-medium mb-6 flex items-center gap-2">
-                    <span className="w-6 h-px bg-site-accent" />{col.title}の1日
+                    <span className="w-6 h-px bg-pink-400" />{col.title}の1日
                     {col.note && <span className="text-[11px] text-site-muted font-sans">（{col.note}）</span>}
                   </h3>
                   <ol className="relative border-l border-site-greige ml-2">
                     {col.data.map((d, di) => (
                       <li key={di} className="relative pl-6 pb-7 last:pb-0">
-                        <span className="absolute -left-[5px] top-1.5 w-2.5 h-2.5 rounded-full bg-site-accent" />
-                        <p className="text-sm font-serif text-site-accent">{d.time}</p>
+                        <span className="absolute -left-[5px] top-1.5 w-2.5 h-2.5 rounded-full bg-pink-400" />
+                        <p className="text-sm font-serif text-pink-500">{d.time}</p>
                         <p className="text-sm text-site-text mt-0.5">{d.text}</p>
                       </li>
                     ))}
@@ -424,10 +419,10 @@ export default async function RecruitPage() {
         </section>
 
         {/* ══════ 6. 教育制度 ══════ */}
-        <section className="bg-site-light py-20 sm:py-28 px-5">
+        <section className="bg-pink-50 py-20 sm:py-28 px-5">
           <div className="max-w-4xl mx-auto">
             <Reveal className="text-center mb-12 sm:mb-16">
-              <p className="text-[11px] tracking-[0.35em] text-site-accent uppercase mb-4">Education</p>
+              <p className="text-[11px] tracking-[0.35em] text-pink-500 uppercase mb-4">Education</p>
               <h2 className="font-serif text-2xl sm:text-3xl font-medium mb-4">教育制度</h2>
               <p className="text-sm text-site-muted leading-loose">未経験から一人立ちまで、段階を踏んで成長できます。</p>
             </Reveal>
@@ -435,7 +430,7 @@ export default async function RecruitPage() {
               {education.map((e, i) => (
                 <Reveal key={e.step || i} delay={i * 60}>
                   <div className="flex items-start gap-4 bg-white rounded-xl p-5 border border-site-greige">
-                    <span className="font-serif text-2xl text-site-accent/50 leading-none w-10 flex-shrink-0">{e.step}</span>
+                    <span className="font-serif text-2xl text-pink-300 leading-none w-10 flex-shrink-0">{e.step}</span>
                     <div>
                       <h3 className="font-serif text-base font-medium mb-1">{e.title}</h3>
                       <p className="text-sm text-site-muted leading-relaxed">{e.text}</p>
@@ -451,7 +446,7 @@ export default async function RecruitPage() {
         <section className="py-20 sm:py-28 px-5">
           <div className="max-w-4xl mx-auto">
             <Reveal className="text-center mb-12 sm:mb-16">
-              <p className="text-[11px] tracking-[0.35em] text-site-accent uppercase mb-4">Career</p>
+              <p className="text-[11px] tracking-[0.35em] text-pink-500 uppercase mb-4">Career</p>
               <h2 className="font-serif text-2xl sm:text-3xl font-medium">キャリアプラン</h2>
             </Reveal>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
@@ -465,7 +460,7 @@ export default async function RecruitPage() {
                     {c.steps.map((step, i) => (
                       <div key={i} className="w-full flex flex-col items-center">
                         <div className="w-full max-w-xs text-center bg-white border border-site-greige rounded-full py-3 text-sm font-medium shadow-sm">{step}</div>
-                        {i < c.steps.length - 1 && <span className="text-site-accent my-1.5 text-lg">↓</span>}
+                        {i < c.steps.length - 1 && <span className="text-pink-400 my-1.5 text-lg">↓</span>}
                       </div>
                     ))}
                   </div>
@@ -476,17 +471,17 @@ export default async function RecruitPage() {
         </section>
 
         {/* ══════ 8. 募集要項 ══════ */}
-        <section className="bg-site-light py-20 sm:py-28 px-5">
+        <section className="bg-pink-50 py-20 sm:py-28 px-5">
           <div className="max-w-3xl mx-auto">
             <Reveal className="text-center mb-12 sm:mb-16">
-              <p className="text-[11px] tracking-[0.35em] text-site-accent uppercase mb-4">Requirements</p>
+              <p className="text-[11px] tracking-[0.35em] text-pink-500 uppercase mb-4">Requirements</p>
               <h2 className="font-serif text-2xl sm:text-3xl font-medium">募集要項</h2>
             </Reveal>
             <div className="bg-white rounded-2xl border border-site-greige overflow-hidden">
               {requirements.map((r, i) => (
                 <Reveal key={r.label || i} delay={i * 40}>
                   <div className="flex flex-col sm:flex-row gap-1 sm:gap-4 px-6 py-5 border-b border-site-greige last:border-b-0">
-                    <p className="text-xs font-medium text-site-accent sm:w-32 flex-shrink-0 sm:pt-0.5">{r.label}</p>
+                    <p className="text-xs font-medium text-pink-500 sm:w-32 flex-shrink-0 sm:pt-0.5">{r.label}</p>
                     <p className="text-sm text-site-text leading-relaxed whitespace-pre-line">{r.value}</p>
                   </div>
                 </Reveal>
@@ -502,9 +497,9 @@ export default async function RecruitPage() {
                   <Link
                     key={r.slug}
                     href={`/recruit/${r.slug}`}
-                    className="bg-white border border-site-greige rounded-xl p-5 hover:border-site-accent transition-colors group text-center"
+                    className="bg-white border border-site-greige rounded-xl p-5 hover:border-pink-400 transition-colors group text-center"
                   >
-                    <span className="block text-sm font-medium text-site-text group-hover:text-site-accent transition-colors">{r.title}</span>
+                    <span className="block text-sm font-medium text-site-text group-hover:text-pink-500 transition-colors">{r.title}</span>
                     <span className="block text-[11px] text-site-muted mt-1">{r.areas.join("・")}</span>
                   </Link>
                 ))}
@@ -517,7 +512,7 @@ export default async function RecruitPage() {
         <section className="py-20 sm:py-28 px-5">
           <div className="max-w-2xl mx-auto">
             <Reveal className="text-center mb-12 sm:mb-16">
-              <p className="text-[11px] tracking-[0.35em] text-site-accent uppercase mb-4">FAQ</p>
+              <p className="text-[11px] tracking-[0.35em] text-pink-500 uppercase mb-4">FAQ</p>
               <h2 className="font-serif text-2xl sm:text-3xl font-medium">よくある質問</h2>
             </Reveal>
             <div className="divide-y divide-site-greige border-y border-site-greige">
@@ -525,11 +520,11 @@ export default async function RecruitPage() {
                 <details key={i} className="group py-5">
                   <summary className="flex items-start justify-between gap-5 cursor-pointer list-none">
                     <span className="font-serif text-base font-medium leading-relaxed">
-                      <span className="text-site-accent mr-2.5 text-sm">Q</span>{f.q}
+                      <span className="text-pink-500 mr-2.5 text-sm">Q</span>{f.q}
                     </span>
-                    <span className="flex-shrink-0 w-5 h-5 border border-site-greige flex items-center justify-center text-site-muted text-sm group-open:rotate-45 transition-transform duration-300 mt-1">+</span>
+                    <span className="flex-shrink-0 w-5 h-5 border border-pink-300 flex items-center justify-center text-pink-400 text-sm group-open:rotate-45 transition-transform duration-300 mt-1">+</span>
                   </summary>
-                  <p className="mt-4 text-sm text-site-muted leading-loose pl-5 border-l border-site-accent/40 whitespace-pre-line">{f.a}</p>
+                  <p className="mt-4 text-sm text-site-muted leading-loose pl-5 border-l border-pink-300 whitespace-pre-line">{f.a}</p>
                 </details>
               ))}
             </div>
@@ -540,7 +535,7 @@ export default async function RecruitPage() {
         <section id="entry" className="bg-site-text text-white pt-20 sm:pt-28 px-5 scroll-mt-20">
           <div className="max-w-2xl mx-auto text-center">
             <Reveal>
-              <p className="text-[11px] tracking-[0.35em] text-site-accent uppercase mb-5">Entry</p>
+              <p className="text-[11px] tracking-[0.35em] text-pink-400 uppercase mb-5">Entry</p>
               <h2 className="font-serif text-2xl sm:text-4xl font-medium leading-snug mb-6">まずは、サロン見学から。</h2>
               <p className="text-sm text-white/70 leading-loose mb-10">
                 「ちょっと気になる」で大丈夫です。
@@ -559,7 +554,7 @@ export default async function RecruitPage() {
             <RecruitForm salons={salonNames} />
             <p className="text-center text-xs text-white/50 mt-6">
               一般的なお問い合わせは
-              <Link href="/contact" className="text-site-accent underline underline-offset-2 mx-1">お問い合わせフォーム</Link>
+              <Link href="/contact" className="text-pink-400 underline underline-offset-2 mx-1">お問い合わせフォーム</Link>
               をご利用ください。
             </p>
           </div>
