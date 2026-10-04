@@ -223,14 +223,13 @@ export default async function RecruitPage() {
             </Reveal>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-8">
               {[
-                { value: "月給22万〜", note: "スタイリスト・アイリスト", label: "給与" },
-                { value: "定時退勤", note: "残業ゼロの文化", label: "退勤" },
-                { value: "週休2日", note: "土日も月2回取得可", label: "休日" },
-                { value: "有給100%", note: "全スタッフ取得済み", label: "有給" },
+                { value: "月給22万〜", label: "給与" },
+                { value: "定時退勤", label: "退勤" },
+                { value: "週休2日", label: "休日" },
+                { value: "有給100%", label: "有給" },
               ].map((b, i) => (
                 <Reveal key={b.label} delay={i * 80} className="text-center">
                   <p className="font-serif text-2xl sm:text-3xl font-medium text-white leading-tight">{b.value}</p>
-                  <p className="text-[10px] text-white/50 mt-2.5 leading-snug">{b.note}</p>
                   <div className="w-6 h-px bg-site-accent mx-auto mt-3 mb-2.5" />
                   <p className="text-[10px] tracking-widest text-white/60 uppercase">{b.label}</p>
                 </Reveal>
