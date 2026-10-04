@@ -231,7 +231,7 @@ export default async function RecruitPage() {
                 { value: "有給100%", label: "有給" },
               ].map((b, i) => (
                 <Reveal key={b.label} delay={i * 80} className="text-center bg-white rounded-2xl py-8 px-4 shadow-sm">
-                  <p className="font-serif text-3xl sm:text-4xl font-bold text-pink-500 leading-tight">{b.value}</p>
+                  <p className="font-serif text-3xl font-bold text-pink-500 leading-tight">{b.value}</p>
                   <div className="w-6 h-px bg-pink-200 mx-auto mt-3 mb-2.5" />
                   <p className="text-[10px] tracking-widest text-site-muted uppercase">{b.label}</p>
                 </Reveal>
@@ -303,7 +303,7 @@ export default async function RecruitPage() {
               <h2 className="font-serif text-2xl sm:text-3xl font-medium mb-6">私たちについて</h2>
               <div className="max-w-2xl mx-auto space-y-3">
                 {aboutLead.split("\n").filter((l) => l.trim()).map((line, i) => (
-                  <p key={i} className="text-sm sm:text-base text-site-muted leading-loose">{line}</p>
+                  <p key={i} className="text-sm sm:text-base text-site-muted leading-loose text-balance">{line}</p>
                 ))}
               </div>
             </Reveal>
@@ -338,7 +338,7 @@ export default async function RecruitPage() {
                   <article className="h-full bg-white rounded-2xl overflow-hidden border border-site-greige">
                     {s.joy && (
                       <div className="bg-pink-500 px-5 py-3.5">
-                        <p className="text-[13px] text-white font-medium text-center leading-snug">{s.joy}</p>
+                        <p className="text-[13px] text-white font-medium text-center leading-snug text-balance">{s.joy}</p>
                       </div>
                     )}
                     <div className="relative aspect-[4/5] overflow-hidden">
