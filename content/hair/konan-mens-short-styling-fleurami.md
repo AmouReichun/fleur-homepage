@@ -3,7 +3,7 @@ title: "香南市でメンズショートをスタイリングするなら｜高
 slug: "konan-mens-short-styling-fleurami"
 category: "hair"
 salon: "fleurami"
-date: "2026-04-10"
+date: "2026-10-04"
 updated: ""
 author: "川上凛"
 author_role: "スタイリスト"
@@ -14,7 +14,6 @@ question: "香南市でメンズショートカットを上手に仕上げるサ
 answer_summary: "メンズショートは毛流れや頭の形に合わせた細かなバランスが仕上がりを左右します。担当スタイリストとの相談で、希望するシルエットと日々のスタイリングしやすさを両立できるサロンを選ぶことが大切です。"
 instagram_id: "18129597847560839"
 instagram_permalink: "https://www.instagram.com/reel/DW7yzcTgXgF/"
-draft: true
 faq:
   - q: "香南市でメンズショートカットを上手く切ってくれるお店はどこですか？"
     a: "fleuramiは大人向けの美容室として、メンズショートも40代以上の大人の男性からの相談が多いです。毛流れや頭の形を活かしたカットを心がけており、担当スタイリスト川上凛に相談いただければ、希望に沿ったスタイルをご提案します。"

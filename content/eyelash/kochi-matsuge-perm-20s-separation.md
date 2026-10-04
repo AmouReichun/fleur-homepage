@@ -3,7 +3,7 @@ title: "高知市でまつ毛パーマを考えている20代女性へ｜セパ�
 slug: "kochi-matsuge-perm-20s-separation"
 category: "eyelash"
 salon: "Raffine"
-date: "2026-03-26"
+date: "2026-10-04"
 updated: ""
 author: "安井未琉"
 author_role: "アイリスト"
@@ -14,7 +14,6 @@ question: "高知市でまつ毛パーマを受けると、毎日のメイクは
 answer_summary: "セパレート束感のまつ毛パーマは、毎朝のビューラー時間を短縮しながら目元の立体感を出しやすくします。高知市Raffineでは、個人の目の形や毛流に合わせたカール設計により、自然で「ときめく目元」を実現しています。"
 instagram_id: "17958418581073481"
 instagram_permalink: "https://www.instagram.com/p/DWU8MCRAUCY/"
-draft: true
 faq:
   - q: "高知市でまつ毛パーマが初めてでも大丈夫ですか？"
     a: "はい、大丈夫です。Raffineではカウンセリング時に目の形や毛流を丁寧に確認し、お客様の希望に合わせたデザインを提案します。初めての方向けに施術の流れや注意点も詳しく説明いたします。"
