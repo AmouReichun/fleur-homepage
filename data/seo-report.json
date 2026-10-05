@@ -1,0 +1,4897 @@
+{
+  "generatedAt": "2026-10-05",
+  "period": {
+    "startDate": "2026-09-07",
+    "endDate": "2026-10-05"
+  },
+  "byQuery": [
+    {
+      "query": "フルールアミー 野市",
+      "clicks": 8,
+      "impressions": 127,
+      "ctr": 0.063,
+      "position": 1.1
+    },
+    {
+      "query": "美容室",
+      "clicks": 4,
+      "impressions": 46,
+      "ctr": 0.087,
+      "position": 20.8
+    },
+    {
+      "query": "美容室 高知",
+      "clicks": 4,
+      "impressions": 61,
+      "ctr": 0.0656,
+      "position": 4.9
+    },
+    {
+      "query": "高知 美容室",
+      "clicks": 4,
+      "impressions": 49,
+      "ctr": 0.0816,
+      "position": 4.2
+    },
+    {
+      "query": "fleurami",
+      "clicks": 3,
+      "impressions": 22,
+      "ctr": 0.1364,
+      "position": 7
+    },
+    {
+      "query": "フルールアミー",
+      "clicks": 3,
+      "impressions": 63,
+      "ctr": 0.0476,
+      "position": 5
+    },
+    {
+      "query": "リブ美容室",
+      "clicks": 3,
+      "impressions": 6,
+      "ctr": 0.5,
+      "position": 1.2
+    },
+    {
+      "query": "まつ毛パーマ 高知",
+      "clicks": 2,
+      "impressions": 26,
+      "ctr": 0.0769,
+      "position": 1.8
+    },
+    {
+      "query": "マツエク 高知",
+      "clicks": 2,
+      "impressions": 16,
+      "ctr": 0.125,
+      "position": 3.1
+    },
+    {
+      "query": "高知市 美容室 ランキング",
+      "clicks": 2,
+      "impressions": 11,
+      "ctr": 0.1818,
+      "position": 2.7
+    },
+    {
+      "query": "高知美容室",
+      "clicks": 2,
+      "impressions": 47,
+      "ctr": 0.0426,
+      "position": 3.7
+    },
+    {
+      "query": "40代",
+      "clicks": 1,
+      "impressions": 1,
+      "ctr": 1,
+      "position": 1
+    },
+    {
+      "query": "riv.",
+      "clicks": 1,
+      "impressions": 1,
+      "ctr": 1,
+      "position": 1
+    },
+    {
+      "query": "ノンジアミンカラー 美容室 近く",
+      "clicks": 1,
+      "impressions": 1,
+      "ctr": 1,
+      "position": 1
+    },
+    {
+      "query": "マツパ 高知",
+      "clicks": 1,
+      "impressions": 10,
+      "ctr": 0.1,
+      "position": 2.6
+    },
+    {
+      "query": "メンズ ヘアサロン",
+      "clicks": 1,
+      "impressions": 1,
+      "ctr": 1,
+      "position": 1
+    },
+    {
+      "query": "リンクはってください",
+      "clicks": 1,
+      "impressions": 1,
+      "ctr": 1,
+      "position": 1
+    },
+    {
+      "query": "眉毛サロン高知 人気",
+      "clicks": 1,
+      "impressions": 11,
+      "ctr": 0.0909,
+      "position": 6.9
+    },
+    {
+      "query": "美容院 近く",
+      "clicks": 1,
+      "impressions": 2,
+      "ctr": 0.5,
+      "position": 4.5
+    },
+    {
+      "query": "近くの美容室",
+      "clicks": 1,
+      "impressions": 22,
+      "ctr": 0.0455,
+      "position": 7.7
+    },
+    {
+      "query": "香南市 美容室",
+      "clicks": 1,
+      "impressions": 36,
+      "ctr": 0.0278,
+      "position": 1.6
+    },
+    {
+      "query": "香美市美容室",
+      "clicks": 1,
+      "impressions": 6,
+      "ctr": 0.1667,
+      "position": 7.3
+    },
+    {
+      "query": "高知 キッズカット 人気",
+      "clicks": 1,
+      "impressions": 3,
+      "ctr": 0.3333,
+      "position": 3.7
+    },
+    {
+      "query": "高知 美容室 50代",
+      "clicks": 1,
+      "impressions": 4,
+      "ctr": 0.25,
+      "position": 2.5
+    },
+    {
+      "query": "高知 美容院 おすすめ",
+      "clicks": 1,
+      "impressions": 10,
+      "ctr": 0.1,
+      "position": 2.9
+    },
+    {
+      "query": "高知まつげパーマ",
+      "clicks": 1,
+      "impressions": 1,
+      "ctr": 1,
+      "position": 2
+    },
+    {
+      "query": "高知市 カラー専門店",
+      "clicks": 1,
+      "impressions": 3,
+      "ctr": 0.3333,
+      "position": 5.3
+    },
+    {
+      "query": "高知市 花屋 おしゃれ",
+      "clicks": 1,
+      "impressions": 1,
+      "ctr": 1,
+      "position": 1
+    },
+    {
+      "query": "高知市 髪質改善",
+      "clicks": 1,
+      "impressions": 39,
+      "ctr": 0.0256,
+      "position": 1.2
+    },
+    {
+      "query": "高知市美容室",
+      "clicks": 1,
+      "impressions": 21,
+      "ctr": 0.0476,
+      "position": 5.1
+    },
+    {
+      "query": "高知県",
+      "clicks": 1,
+      "impressions": 1,
+      "ctr": 1,
+      "position": 3
+    },
+    {
+      "query": "高知県 美容室",
+      "clicks": 1,
+      "impressions": 8,
+      "ctr": 0.125,
+      "position": 2.6
+    },
+    {
+      "query": "髪質改善",
+      "clicks": 1,
+      "impressions": 4,
+      "ctr": 0.25,
+      "position": 3.3
+    },
+    {
+      "query": "amii",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 5
+    },
+    {
+      "query": "comfort",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 9
+    },
+    {
+      "query": "fixlash+ 高知 駅前 店",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 2.8
+    },
+    {
+      "query": "fleur",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 1
+    },
+    {
+      "query": "hair braid",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 3
+    },
+    {
+      "query": "hair salon near me",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 15
+    },
+    {
+      "query": "lash",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 6
+    },
+    {
+      "query": "raffine 高知",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 3.8
+    },
+    {
+      "query": "riv",
+      "clicks": 0,
+      "impressions": 10,
+      "ctr": 0,
+      "position": 5.3
+    },
+    {
+      "query": "おすすめの美容室 メンズ",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 4
+    },
+    {
+      "query": "お値段は？",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 6
+    },
+    {
+      "query": "お呼ばれ",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 1
+    },
+    {
+      "query": "ここから近い美容室 予約なし",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 1
+    },
+    {
+      "query": "この近く 美容院",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 17
+    },
+    {
+      "query": "この近くのヘアサロン",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 7
+    },
+    {
+      "query": "この近くの美容室",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 3
+    },
+    {
+      "query": "たいちゃんの美容院",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 1.5
+    },
+    {
+      "query": "どのくらいの費用",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 1
+    },
+    {
+      "query": "ふるり 美容院",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 33
+    },
+    {
+      "query": "まつげエクステ",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 8
+    },
+    {
+      "query": "まつげパーマ 高知",
+      "clicks": 0,
+      "impressions": 10,
+      "ctr": 0,
+      "position": 1.9
+    },
+    {
+      "query": "まつげパーマ 高知 安い",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 4.5
+    },
+    {
+      "query": "まつぱとまつえく",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 1
+    },
+    {
+      "query": "まつパとマツエクどっちがいい",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 2
+    },
+    {
+      "query": "まつ毛",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 1
+    },
+    {
+      "query": "まつ毛エクステ",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 3
+    },
+    {
+      "query": "まつ毛パーマ",
+      "clicks": 0,
+      "impressions": 12,
+      "ctr": 0,
+      "position": 4.4
+    },
+    {
+      "query": "まつ毛パーマ 安い 近く",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 1
+    },
+    {
+      "query": "まつ毛パーマ 高知 人気",
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 1.4
+    },
+    {
+      "query": "まるみボブ",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 22
+    },
+    {
+      "query": "アイブロウ",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 7
+    },
+    {
+      "query": "アイラ",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 7
+    },
+    {
+      "query": "アイラッシュ",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 9
+    },
+    {
+      "query": "アイラッシュサロン",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 5
+    },
+    {
+      "query": "アイリフト マツエク",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 42.3
+    },
+    {
+      "query": "アトリエ フリュイ 美容院",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 44
+    },
+    {
+      "query": "アビオール 高知",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 2
+    },
+    {
+      "query": "アフターブロウ 日本 店舗",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 6
+    },
+    {
+      "query": "イオン近く美容室",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 2
+    },
+    {
+      "query": "イオン近く美容院",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 2
+    },
+    {
+      "query": "エクステ",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 8
+    },
+    {
+      "query": "エクステ 高知",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 6.5
+    },
+    {
+      "query": "オーガニックカラー",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 2
+    },
+    {
+      "query": "オーガニックヘアカラー",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 8
+    },
+    {
+      "query": "オージュア",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 3
+    },
+    {
+      "query": "オーブ ヘアー フローラ 高知 美容院",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 29.5
+    },
+    {
+      "query": "オーブ ヘアー フローラ 高知店",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 35
+    },
+    {
+      "query": "オーブ ヘアー フローラ 高知店 求人",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 45.5
+    },
+    {
+      "query": "カットが上手い美容室 近く",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 5
+    },
+    {
+      "query": "カットが上手い美容師",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 2
+    },
+    {
+      "query": "カットが上手い美容師 高知",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 2.3
+    },
+    {
+      "query": "カットが安い 美容室",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 1.5
+    },
+    {
+      "query": "カットが安い美容室",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 8
+    },
+    {
+      "query": "カットカラー 安い",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 6
+    },
+    {
+      "query": "カラーが得意な美容室",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 1
+    },
+    {
+      "query": "カラートリートメント 美容院",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 1
+    },
+    {
+      "query": "カラー安い美容室",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 5
+    },
+    {
+      "query": "カラー専門店",
+      "clicks": 0,
+      "impressions": 9,
+      "ctr": 0,
+      "position": 3.1
+    },
+    {
+      "query": "カラー専門店 近く",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 13
+    },
+    {
+      "query": "カラー専門店 高知",
+      "clicks": 0,
+      "impressions": 12,
+      "ctr": 0,
+      "position": 9.7
+    },
+    {
+      "query": "キッズカット 高知",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 13
+    },
+    {
+      "query": "キッズカット安い",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 14
+    },
+    {
+      "query": "クレール アンド フリル アイビューティー イオン前店 高知市東秦泉寺",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 24
+    },
+    {
+      "query": "ケラスターゼ",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 4
+    },
+    {
+      "query": "コンフェティ 美容室",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 2
+    },
+    {
+      "query": "サロンラフィ 高知市城山町",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 17
+    },
+    {
+      "query": "ザキャンバス 高知 美容室 高知市杉井流",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 31.7
+    },
+    {
+      "query": "シャンプーのみ 美容室 安い",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 1
+    },
+    {
+      "query": "シャンプーブロー",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 7
+    },
+    {
+      "query": "ショートボブ 長さ どのくらい",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 17
+    },
+    {
+      "query": "ショート髪型",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 4
+    },
+    {
+      "query": "ストレートパーマ",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 7.5
+    },
+    {
+      "query": "タウンサロン香南",
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 32.4
+    },
+    {
+      "query": "タッセルボブ 切りっぱなしボブ 違い 最新 site:jp",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 5
+    },
+    {
+      "query": "ダブルカラー",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 11
+    },
+    {
+      "query": "トリプルスター 美容室 高知市朝倉己",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 12
+    },
+    {
+      "query": "トリートメントa 高知店",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 2
+    },
+    {
+      "query": "ドライカット 美容院",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 1
+    },
+    {
+      "query": "ナチュラル",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 2
+    },
+    {
+      "query": "ネイル アンド エステティック フルール 八尾市跡部北の町",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 31
+    },
+    {
+      "query": "ネイルサロン",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 19
+    },
+    {
+      "query": "ハイライト",
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 4.2
+    },
+    {
+      "query": "パリジェンヌラッシュリフト",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 5
+    },
+    {
+      "query": "パリジェンヌラッシュリフトとは",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 6
+    },
+    {
+      "query": "パーマ",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 2
+    },
+    {
+      "query": "パーマの違い",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 3
+    },
+    {
+      "query": "ビビアンロッソ 美容院",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 37
+    },
+    {
+      "query": "フィックスラッシュ",
+      "clicks": 0,
+      "impressions": 11,
+      "ctr": 0,
+      "position": 3.5
+    },
+    {
+      "query": "フィールリファイン マツエク",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 18.5
+    },
+    {
+      "query": "フェリブレ 美容室 岡崎市洞町東前田",
+      "clicks": 0,
+      "impressions": 6,
+      "ctr": 0,
+      "position": 24.2
+    },
+    {
+      "query": "フェール",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 4
+    },
+    {
+      "query": "フラワー",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 1
+    },
+    {
+      "query": "フラヴィア マツエク",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 26.5
+    },
+    {
+      "query": "フリルアイ エフネイル 河内花園店",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 34
+    },
+    {
+      "query": "フルリー 美濃加茂市太田町",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 34
+    },
+    {
+      "query": "フルン 美容院",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 44
+    },
+    {
+      "query": "フルージュ マツエク",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 32
+    },
+    {
+      "query": "フルージュ 堺市中区深井沢町",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 30
+    },
+    {
+      "query": "フルーブ エステ",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 50
+    },
+    {
+      "query": "フルーリ 美容室 船橋市西習志野",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 42
+    },
+    {
+      "query": "フルーリル 小山市西城南",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 46
+    },
+    {
+      "query": "フルーリル 美容院",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 45
+    },
+    {
+      "query": "フルール",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 1.7
+    },
+    {
+      "query": "フルール fleur's 美容院",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 31.3
+    },
+    {
+      "query": "フルール 美容院",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 42.7
+    },
+    {
+      "query": "フルール 長崎市蚊焼町",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 41
+    },
+    {
+      "query": "フルール 鵜沼 美容院",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 32
+    },
+    {
+      "query": "フルールアミ",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 1
+    },
+    {
+      "query": "フルールアミー 求人",
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 2.8
+    },
+    {
+      "query": "フルールアミー 美容室 香南市野市町西野",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 6.5
+    },
+    {
+      "query": "フルールアミー 美容院",
+      "clicks": 0,
+      "impressions": 19,
+      "ctr": 0,
+      "position": 9.6
+    },
+    {
+      "query": "フルールアミー 高知",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 1
+    },
+    {
+      "query": "フルールデリズ 求人",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 27
+    },
+    {
+      "query": "フルーヴ 美容院",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 46
+    },
+    {
+      "query": "フローラビューティーヘアー 美容院",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 41
+    },
+    {
+      "query": "ブローフィー 美容室 高知市朝倉甲",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 28
+    },
+    {
+      "query": "プロにお願いしたい",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 3
+    },
+    {
+      "query": "ヘアアイロン おすすめ",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 5
+    },
+    {
+      "query": "ヘアアレンジ 近く",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 4
+    },
+    {
+      "query": "ヘアオイル 人気ランキング",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 5
+    },
+    {
+      "query": "ヘアカット",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 12
+    },
+    {
+      "query": "ヘアカット 高知",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 10
+    },
+    {
+      "query": "ヘアカラー",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 4.8
+    },
+    {
+      "query": "ヘアカラー 専門店",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 6
+    },
+    {
+      "query": "ヘアカラー 高知",
+      "clicks": 0,
+      "impressions": 8,
+      "ctr": 0,
+      "position": 2
+    },
+    {
+      "query": "ヘアカラー専門店",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 7.3
+    },
+    {
+      "query": "ヘアカラー専門店 人気",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 1
+    },
+    {
+      "query": "ヘアカラー専門店 高知",
+      "clicks": 0,
+      "impressions": 11,
+      "ctr": 0,
+      "position": 8
+    },
+    {
+      "query": "ヘアドネーションできる美容室",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 6
+    },
+    {
+      "query": "ヘアー サロン フルール 美容院",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 49.7
+    },
+    {
+      "query": "ヘアー フルフル 美容院",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 32
+    },
+    {
+      "query": "ヘアー フルール 美容院",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 38.3
+    },
+    {
+      "query": "ヘアーカット",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 3
+    },
+    {
+      "query": "ヘアーマジック フローレン 美容院",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 42
+    },
+    {
+      "query": "ヘアーメイク",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 8
+    },
+    {
+      "query": "ヘアールームフルール 美容院",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 38
+    },
+    {
+      "query": "ヘッドスパ トリートメント",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 4
+    },
+    {
+      "query": "ヘッドスパ 高知",
+      "clicks": 0,
+      "impressions": 6,
+      "ctr": 0,
+      "position": 19.7
+    },
+    {
+      "query": "ヘッドスパ 高知 人気",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 24
+    },
+    {
+      "query": "ヘッドスパ高知",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 23
+    },
+    {
+      "query": "ヘナ",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 1
+    },
+    {
+      "query": "ヘナカラー 白髪染め",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 4
+    },
+    {
+      "query": "ヘナカラー 美容室",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 6.3
+    },
+    {
+      "query": "ホットペッパー",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 5
+    },
+    {
+      "query": "ホットペッパー 美容室",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 28.3
+    },
+    {
+      "query": "ホットペッパー 高知",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 6
+    },
+    {
+      "query": "ホットペッパービューティー",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 27
+    },
+    {
+      "query": "ホットペッパービューティー 高知",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 14
+    },
+    {
+      "query": "ホットペッパー美容室予約",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 1
+    },
+    {
+      "query": "ホットペッパー高知",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 4
+    },
+    {
+      "query": "ホツマトペッパービューティー",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 6
+    },
+    {
+      "query": "ボブ後ろ姿",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 10.5
+    },
+    {
+      "query": "マツエク",
+      "clicks": 0,
+      "impressions": 8,
+      "ctr": 0,
+      "position": 2.6
+    },
+    {
+      "query": "マツエク オフ とは 初めて",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 9
+    },
+    {
+      "query": "マツエク オフとは",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 10
+    },
+    {
+      "query": "マツエク 近く",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 7
+    },
+    {
+      "query": "マツエク 高知 人気",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 2.3
+    },
+    {
+      "query": "マツエク 高知 安い",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 3.3
+    },
+    {
+      "query": "マツエクled",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 4
+    },
+    {
+      "query": "マツパ",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 6
+    },
+    {
+      "query": "ミディアムヘア",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 27
+    },
+    {
+      "query": "ミルボン",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 9
+    },
+    {
+      "query": "ミープ 高知",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 10
+    },
+    {
+      "query": "メンズカット",
+      "clicks": 0,
+      "impressions": 23,
+      "ctr": 0,
+      "position": 39.6
+    },
+    {
+      "query": "ラッシュ 高知",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 10
+    },
+    {
+      "query": "ラッシュリフト",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 2
+    },
+    {
+      "query": "ラッシュリフトとは",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 2
+    },
+    {
+      "query": "ラフィネ",
+      "clicks": 0,
+      "impressions": 8,
+      "ctr": 0,
+      "position": 2.6
+    },
+    {
+      "query": "ラフィネ メニュー",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 4
+    },
+    {
+      "query": "ラフィネ 予約なし",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 6
+    },
+    {
+      "query": "ラフィー",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 5
+    },
+    {
+      "query": "ラフィーネ",
+      "clicks": 0,
+      "impressions": 19,
+      "ctr": 0,
+      "position": 1.5
+    },
+    {
+      "query": "ラフィーネ 高知",
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 6.4
+    },
+    {
+      "query": "ラフテル 高岡市新成町",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 37
+    },
+    {
+      "query": "ラフーン マツエク",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 31
+    },
+    {
+      "query": "ラヴェック 美容室 高知市永国寺町",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 1
+    },
+    {
+      "query": "リタッチカラー",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 2
+    },
+    {
+      "query": "リタッチカラー フルカラー 違い",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 1
+    },
+    {
+      "query": "リタッチカラーとは",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 3
+    },
+    {
+      "query": "リブ 美容室 高知市南川添",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 12.5
+    },
+    {
+      "query": "リヴ",
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 1
+    },
+    {
+      "query": "リヴバイフルールアミー",
+      "clicks": 0,
+      "impressions": 11,
+      "ctr": 0,
+      "position": 2.2
+    },
+    {
+      "query": "ルポ フルール マツエク",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 24
+    },
+    {
+      "query": "ルーフ 美容室 高知市大膳町",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 19.7
+    },
+    {
+      "query": "レイフィールド 岡崎六名 求人",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 50
+    },
+    {
+      "query": "レイヤーカット 上手な美容室",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 2
+    },
+    {
+      "query": "レナフィ",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 1
+    },
+    {
+      "query": "レミー",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 5
+    },
+    {
+      "query": "レヴォアール 美容院",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 32
+    },
+    {
+      "query": "レーブ美容室",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 4
+    },
+    {
+      "query": "ロレインブロウ 高知店 まつげ メイク",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 23
+    },
+    {
+      "query": "一宮美容室",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 17.7
+    },
+    {
+      "query": "七五三着付け 美容室",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 16
+    },
+    {
+      "query": "中学生髪型",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 10
+    },
+    {
+      "query": "丸みボブ",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 24.8
+    },
+    {
+      "query": "予約いらない美容室",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 22
+    },
+    {
+      "query": "今日 行ける 美容室 高知",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 3
+    },
+    {
+      "query": "今日 行ける 近く の美容院",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 2
+    },
+    {
+      "query": "今日空いてる美容室",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 13
+    },
+    {
+      "query": "今日行ける美容室",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 10
+    },
+    {
+      "query": "今日行ける美容室 近く",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 13
+    },
+    {
+      "query": "似合わせカットとは",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 4
+    },
+    {
+      "query": "佐古 美容院",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 2
+    },
+    {
+      "query": "個人 美容室",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 4
+    },
+    {
+      "query": "傷まない縮毛矯正",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 1
+    },
+    {
+      "query": "南国 美容室",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 18
+    },
+    {
+      "query": "南国 美容院",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 9
+    },
+    {
+      "query": "南国市 美容室",
+      "clicks": 0,
+      "impressions": 8,
+      "ctr": 0,
+      "position": 11.5
+    },
+    {
+      "query": "南国市 美容院",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 23.5
+    },
+    {
+      "query": "南国市美容室",
+      "clicks": 0,
+      "impressions": 6,
+      "ctr": 0,
+      "position": 13.3
+    },
+    {
+      "query": "南国市美容院",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 9.7
+    },
+    {
+      "query": "南国市美容院 おすすめ",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 13
+    },
+    {
+      "query": "南国美容室",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 10.3
+    },
+    {
+      "query": "南国美容院",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 9
+    },
+    {
+      "query": "四万十 市美容室 ランキング",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 3
+    },
+    {
+      "query": "土佐 山田 美容室 人気",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 10
+    },
+    {
+      "query": "夜遅くまで空いてる美容室",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 19
+    },
+    {
+      "query": "子供 美容室",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 1
+    },
+    {
+      "query": "子供 美容室 安い",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 1
+    },
+    {
+      "query": "安い美容院",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 9
+    },
+    {
+      "query": "安くカットできるお店",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 5
+    },
+    {
+      "query": "安芸市美容室",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 46
+    },
+    {
+      "query": "家の近くの美容室",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 1
+    },
+    {
+      "query": "山田美容室",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 22.7
+    },
+    {
+      "query": "成人式 美容院",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 9
+    },
+    {
+      "query": "技術の高さ",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 2
+    },
+    {
+      "query": "日本一の美容師",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 9
+    },
+    {
+      "query": "最寄りの美容室",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 3
+    },
+    {
+      "query": "月曜空いてる美容室",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 12
+    },
+    {
+      "query": "毛染め",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 5.5
+    },
+    {
+      "query": "現在地近くの美容院",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 1
+    },
+    {
+      "query": "理髪店",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 18
+    },
+    {
+      "query": "理髪店 近く",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 7.3
+    },
+    {
+      "query": "男の子 ヘアスタイル",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 2
+    },
+    {
+      "query": "白髪",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 3
+    },
+    {
+      "query": "白髪ぼかし",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 2
+    },
+    {
+      "query": "白髪ぼかし 上手い美容室",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 9
+    },
+    {
+      "query": "白髪ぼかし 染め 美容室",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 5.5
+    },
+    {
+      "query": "白髪ぼかしメンズ",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 1
+    },
+    {
+      "query": "白髪ぼかし美容院",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 8
+    },
+    {
+      "query": "白髪染め",
+      "clicks": 0,
+      "impressions": 6,
+      "ctr": 0,
+      "position": 7
+    },
+    {
+      "query": "白髪染め カット",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 1
+    },
+    {
+      "query": "白髪染め 専門店 高知",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 5.5
+    },
+    {
+      "query": "白髪染め 近く",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 2
+    },
+    {
+      "query": "白髪染め 高知",
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 1.2
+    },
+    {
+      "query": "白髪染めシャンプー ランキング",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 1
+    },
+    {
+      "query": "白髪染め専門店",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 10
+    },
+    {
+      "query": "目を大きくする方法 すっぴん",
+      "clicks": 0,
+      "impressions": 11,
+      "ctr": 0,
+      "position": 10.3
+    },
+    {
+      "query": "目元 トータルケア",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 55
+    },
+    {
+      "query": "眉サロン 高知",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 14.7
+    },
+    {
+      "query": "眉毛",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 5
+    },
+    {
+      "query": "眉毛 サロン",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 7
+    },
+    {
+      "query": "眉毛サロン",
+      "clicks": 0,
+      "impressions": 13,
+      "ctr": 0,
+      "position": 5.9
+    },
+    {
+      "query": "眉毛サロン 高知",
+      "clicks": 0,
+      "impressions": 37,
+      "ctr": 0,
+      "position": 6.9
+    },
+    {
+      "query": "眉毛サロン高知",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 11
+    },
+    {
+      "query": "眉毛パーマ",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 2
+    },
+    {
+      "query": "着付け",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 14
+    },
+    {
+      "query": "福井美容院",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 7.7
+    },
+    {
+      "query": "結婚式 髪",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 8
+    },
+    {
+      "query": "給料が高いのは？",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 4
+    },
+    {
+      "query": "縮毛",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 3
+    },
+    {
+      "query": "縮毛矯正",
+      "clicks": 0,
+      "impressions": 8,
+      "ctr": 0,
+      "position": 6.1
+    },
+    {
+      "query": "縮毛矯正 持ち どれくらい 最新 site:jp",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 9
+    },
+    {
+      "query": "縮毛矯正 高知",
+      "clicks": 0,
+      "impressions": 10,
+      "ctr": 0,
+      "position": 2.8
+    },
+    {
+      "query": "美容 室 高知 市",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 2
+    },
+    {
+      "query": "美容室 en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 3
+    },
+    {
+      "query": "美容室 グラシュローズ 岡崎市昭和町高畑",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 29
+    },
+    {
+      "query": "美容室 トリートメント",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 5
+    },
+    {
+      "query": "美容室 フルール",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 46.5
+    },
+    {
+      "query": "美容室 メンズ",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 9
+    },
+    {
+      "query": "美容室 メンズ 近く",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 7.7
+    },
+    {
+      "query": "美容室 南国市",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 4
+    },
+    {
+      "query": "美容室 女性スタッフのみ",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 4
+    },
+    {
+      "query": "美容室 子供連れ",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 2
+    },
+    {
+      "query": "美容室 白髪染め",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 12
+    },
+    {
+      "query": "美容室 美容院",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 8
+    },
+    {
+      "query": "美容室 近く",
+      "clicks": 0,
+      "impressions": 13,
+      "ctr": 0,
+      "position": 3.2
+    },
+    {
+      "query": "美容室 高知市",
+      "clicks": 0,
+      "impressions": 11,
+      "ctr": 0,
+      "position": 2.5
+    },
+    {
+      "query": "美容室アミ",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 10
+    },
+    {
+      "query": "美容室カラー",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 1
+    },
+    {
+      "query": "美容室フルール",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 47
+    },
+    {
+      "query": "美容室予約",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 1
+    },
+    {
+      "query": "美容室今日行ける",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 6
+    },
+    {
+      "query": "美容室高知",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 3.7
+    },
+    {
+      "query": "美容師",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 6.3
+    },
+    {
+      "query": "美容院",
+      "clicks": 0,
+      "impressions": 19,
+      "ctr": 0,
+      "position": 7.5
+    },
+    {
+      "query": "美容院 ami",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 9
+    },
+    {
+      "query": "美容院 en",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 4
+    },
+    {
+      "query": "美容院 中学生",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 5
+    },
+    {
+      "query": "美容院 予約",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 6
+    },
+    {
+      "query": "美容院 人気 近く",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 2
+    },
+    {
+      "query": "美容院 子供",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 4
+    },
+    {
+      "query": "美容院 安い",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 6
+    },
+    {
+      "query": "美容院 男性",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 23
+    },
+    {
+      "query": "美容院 高知",
+      "clicks": 0,
+      "impressions": 23,
+      "ctr": 0,
+      "position": 6.6
+    },
+    {
+      "query": "美容院 高知市",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 3.3
+    },
+    {
+      "query": "美容院ami",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 8
+    },
+    {
+      "query": "美容院エクステ",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 4
+    },
+    {
+      "query": "美容院カラー",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 1
+    },
+    {
+      "query": "美容院フルール",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 1
+    },
+    {
+      "query": "美容院予約",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 3
+    },
+    {
+      "query": "美容院高知",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 2
+    },
+    {
+      "query": "自然シャンプー",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 8
+    },
+    {
+      "query": "花屋",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 7
+    },
+    {
+      "query": "花恋 鴨部店",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 38
+    },
+    {
+      "query": "西山美容室",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 1.7
+    },
+    {
+      "query": "赤ちゃんカット 近く",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 2
+    },
+    {
+      "query": "近く 縮毛矯正",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 10
+    },
+    {
+      "query": "近く 美容室",
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 5.6
+    },
+    {
+      "query": "近くのまつパ",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 7
+    },
+    {
+      "query": "近くのまつ毛パーマ",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 3
+    },
+    {
+      "query": "近くのアイラッシュサロン",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 1
+    },
+    {
+      "query": "近くのカラー専門店",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 12
+    },
+    {
+      "query": "近くのヘアサロン",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 1
+    },
+    {
+      "query": "近くの美容",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 3
+    },
+    {
+      "query": "近くの美容室 800m 以内",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 3
+    },
+    {
+      "query": "近くの美容室 子供カット",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 17
+    },
+    {
+      "query": "近くの美容室メンズ",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 3
+    },
+    {
+      "query": "近くの美容室予約",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 2
+    },
+    {
+      "query": "近くの美容院",
+      "clicks": 0,
+      "impressions": 17,
+      "ctr": 0,
+      "position": 5.1
+    },
+    {
+      "query": "近くの美容院 ヘアセット",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 6.5
+    },
+    {
+      "query": "近く美容室",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 5.3
+    },
+    {
+      "query": "酸性ストレート 縮毛矯正",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 7
+    },
+    {
+      "query": "野市 美容室",
+      "clicks": 0,
+      "impressions": 11,
+      "ctr": 0,
+      "position": 2.4
+    },
+    {
+      "query": "野市 美容室 安い",
+      "clicks": 0,
+      "impressions": 15,
+      "ctr": 0,
+      "position": 2.1
+    },
+    {
+      "query": "野市 美容院",
+      "clicks": 0,
+      "impressions": 7,
+      "ctr": 0,
+      "position": 7.7
+    },
+    {
+      "query": "野市美容室",
+      "clicks": 0,
+      "impressions": 28,
+      "ctr": 0,
+      "position": 1.2
+    },
+    {
+      "query": "野村美容室",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 1
+    },
+    {
+      "query": "頭皮洗浄",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 1
+    },
+    {
+      "query": "香南市 マッサージ",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 26
+    },
+    {
+      "query": "香南市 縮毛矯正",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 2
+    },
+    {
+      "query": "香南市 美容院",
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 1.4
+    },
+    {
+      "query": "香南市美容室",
+      "clicks": 0,
+      "impressions": 28,
+      "ctr": 0,
+      "position": 1.4
+    },
+    {
+      "query": "香美市 美容室",
+      "clicks": 0,
+      "impressions": 8,
+      "ctr": 0,
+      "position": 9.1
+    },
+    {
+      "query": "高校生",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 1
+    },
+    {
+      "query": "高知",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 4
+    },
+    {
+      "query": "高知 まつげエクステ",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 2
+    },
+    {
+      "query": "高知 まつげパーマ",
+      "clicks": 0,
+      "impressions": 6,
+      "ctr": 0,
+      "position": 2
+    },
+    {
+      "query": "高知 まつ毛パーマ",
+      "clicks": 0,
+      "impressions": 18,
+      "ctr": 0,
+      "position": 1.6
+    },
+    {
+      "query": "高知 カット",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 10.7
+    },
+    {
+      "query": "高知 カラー",
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 4.4
+    },
+    {
+      "query": "高知 カラー専門店",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 7.3
+    },
+    {
+      "query": "高知 キッズカット",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 18
+    },
+    {
+      "query": "高知 ショートカット 上手い",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 5
+    },
+    {
+      "query": "高知 ネイルサロン 安い",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 36
+    },
+    {
+      "query": "高知 パーマ 上手",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 2
+    },
+    {
+      "query": "高知 ヘアカラー",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 1.7
+    },
+    {
+      "query": "高知 ヘアカラー 人気",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 1
+    },
+    {
+      "query": "高知 ヘアカラー 安い",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 8
+    },
+    {
+      "query": "高知 ヘアカラー専門店",
+      "clicks": 0,
+      "impressions": 7,
+      "ctr": 0,
+      "position": 8.3
+    },
+    {
+      "query": "高知 ヘアサロン",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 4.3
+    },
+    {
+      "query": "高知 ヘアセット",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 10
+    },
+    {
+      "query": "高知 ヘアセット 早朝",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 2
+    },
+    {
+      "query": "高知 ヘッドスパ",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 20.5
+    },
+    {
+      "query": "高知 ヘッドスパ 専門",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 24
+    },
+    {
+      "query": "高知 マツエク",
+      "clicks": 0,
+      "impressions": 13,
+      "ctr": 0,
+      "position": 2.8
+    },
+    {
+      "query": "高知 マツパ",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 2
+    },
+    {
+      "query": "高知 メイクサロン",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 3
+    },
+    {
+      "query": "高知 メンズ 美容室",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 5
+    },
+    {
+      "query": "高知 メンズカット",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 8
+    },
+    {
+      "query": "高知 メンズカット 上手い",
+      "clicks": 0,
+      "impressions": 7,
+      "ctr": 0,
+      "position": 9.9
+    },
+    {
+      "query": "高知 メンズカット 安い",
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 7
+    },
+    {
+      "query": "高知 前髪カット",
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 6
+    },
+    {
+      "query": "高知 子供カット 安い",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 1.5
+    },
+    {
+      "query": "高知 市 マツエク",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 2
+    },
+    {
+      "query": "高知 散髪 メンズ",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 15.5
+    },
+    {
+      "query": "高知 白髪染め",
+      "clicks": 0,
+      "impressions": 6,
+      "ctr": 0,
+      "position": 1.2
+    },
+    {
+      "query": "高知 眉毛サロン",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 6
+    },
+    {
+      "query": "高知 眉毛サロン 人気",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 3.3
+    },
+    {
+      "query": "高知 着付け",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 1
+    },
+    {
+      "query": "高知 着付け ヘアセット",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 10.5
+    },
+    {
+      "query": "高知 縮 毛矯正 上手い",
+      "clicks": 0,
+      "impressions": 7,
+      "ctr": 0,
+      "position": 2.3
+    },
+    {
+      "query": "高知 縮毛矯正",
+      "clicks": 0,
+      "impressions": 10,
+      "ctr": 0,
+      "position": 3.7
+    },
+    {
+      "query": "高知 縮毛矯正 上手い",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 2
+    },
+    {
+      "query": "高知 美容室 メンズ",
+      "clicks": 0,
+      "impressions": 8,
+      "ctr": 0,
+      "position": 6.5
+    },
+    {
+      "query": "高知 美容室 人気",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 5
+    },
+    {
+      "query": "高知 美容室 個人",
+      "clicks": 0,
+      "impressions": 6,
+      "ctr": 0,
+      "position": 2.2
+    },
+    {
+      "query": "高知 美容室 口コミ",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 1
+    },
+    {
+      "query": "高知 美容院",
+      "clicks": 0,
+      "impressions": 23,
+      "ctr": 0,
+      "position": 3.3
+    },
+    {
+      "query": "高知 美容院 口コミ",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 1
+    },
+    {
+      "query": "高知 髪質改善",
+      "clicks": 0,
+      "impressions": 10,
+      "ctr": 0,
+      "position": 1.4
+    },
+    {
+      "query": "高知カラー専門店",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 10.5
+    },
+    {
+      "query": "高知ヘッドスパ",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 25.3
+    },
+    {
+      "query": "高知マツエク",
+      "clicks": 0,
+      "impressions": 9,
+      "ctr": 0,
+      "position": 2.3
+    },
+    {
+      "query": "高知マツパ",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 2
+    },
+    {
+      "query": "高知メンズカット",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 14
+    },
+    {
+      "query": "高知メンズ美容室",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 16
+    },
+    {
+      "query": "高知市",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 2
+    },
+    {
+      "query": "高知市 まつげエクステ",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 1
+    },
+    {
+      "query": "高知市 まつげパーマ",
+      "clicks": 0,
+      "impressions": 6,
+      "ctr": 0,
+      "position": 1.3
+    },
+    {
+      "query": "高知市 エステ",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 21
+    },
+    {
+      "query": "高知市 ヘアセット",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 9
+    },
+    {
+      "query": "高知市 マッサージ 人気",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 142
+    },
+    {
+      "query": "高知市 マツエク",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 3.5
+    },
+    {
+      "query": "高知市 散髪 メンズ",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 31
+    },
+    {
+      "query": "高知市 白髪ぼかし",
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 5
+    },
+    {
+      "query": "高知市 眉毛サロン",
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 8
+    },
+    {
+      "query": "高知市 着付け",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 1
+    },
+    {
+      "query": "高知市 着付け 安い",
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 4.8
+    },
+    {
+      "query": "高知市 縮毛矯正",
+      "clicks": 0,
+      "impressions": 76,
+      "ctr": 0,
+      "position": 15.5
+    },
+    {
+      "query": "高知市 美容室",
+      "clicks": 0,
+      "impressions": 126,
+      "ctr": 0,
+      "position": 2.1
+    },
+    {
+      "query": "高知市 美容室 メンズ",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 2
+    },
+    {
+      "query": "高知市 美容室 安い",
+      "clicks": 0,
+      "impressions": 7,
+      "ctr": 0,
+      "position": 3.4
+    },
+    {
+      "query": "高知市 美容院",
+      "clicks": 0,
+      "impressions": 9,
+      "ctr": 0,
+      "position": 3.2
+    },
+    {
+      "query": "高知市 美容院 人気",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 1.5
+    },
+    {
+      "query": "高知市で",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 1
+    },
+    {
+      "query": "高知市にある？",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 1
+    },
+    {
+      "query": "高知市カラー専門店",
+      "clicks": 0,
+      "impressions": 18,
+      "ctr": 0,
+      "position": 6.6
+    },
+    {
+      "query": "高知市マツエク",
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 2.8
+    },
+    {
+      "query": "高知市眉毛サロン",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 7
+    },
+    {
+      "query": "高知市美容室 人気",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 1
+    },
+    {
+      "query": "高知市美容院",
+      "clicks": 0,
+      "impressions": 8,
+      "ctr": 0,
+      "position": 4.5
+    },
+    {
+      "query": "高知市美容院人気",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 3
+    },
+    {
+      "query": "高知眉毛サロン",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 5.3
+    },
+    {
+      "query": "高知眉毛サロン メンズ",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 3
+    },
+    {
+      "query": "高知県 カラー",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 6
+    },
+    {
+      "query": "高知県 美容院",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 1.5
+    },
+    {
+      "query": "高知県美容室",
+      "clicks": 0,
+      "impressions": 11,
+      "ctr": 0,
+      "position": 1.7
+    },
+    {
+      "query": "高知県美容院",
+      "clicks": 0,
+      "impressions": 6,
+      "ctr": 0,
+      "position": 1.3
+    },
+    {
+      "query": "高知縮毛矯正",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 4
+    },
+    {
+      "query": "高知美容室 カット 上手",
+      "clicks": 0,
+      "impressions": 29,
+      "ctr": 0,
+      "position": 3.4
+    },
+    {
+      "query": "高知美容院",
+      "clicks": 0,
+      "impressions": 7,
+      "ctr": 0,
+      "position": 3.6
+    },
+    {
+      "query": "高知美容院 メンズ",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 8
+    },
+    {
+      "query": "高知駅 美容室",
+      "clicks": 0,
+      "impressions": 27,
+      "ctr": 0,
+      "position": 1
+    },
+    {
+      "query": "高須 美容室",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 30
+    },
+    {
+      "query": "高須美容室",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 1
+    },
+    {
+      "query": "髪",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 5
+    },
+    {
+      "query": "髪 ハイライト",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 5
+    },
+    {
+      "query": "髪切り",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 24
+    },
+    {
+      "query": "髪切るところ メンズ",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 9.5
+    },
+    {
+      "query": "髪質改善 おすすめ 美容院",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 7
+    },
+    {
+      "query": "髪質改善 高知",
+      "clicks": 0,
+      "impressions": 11,
+      "ctr": 0,
+      "position": 2.2
+    },
+    {
+      "query": "髪質改善ストレート",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 2.7
+    },
+    {
+      "query": "髪質改善ストレート値段",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 9
+    },
+    {
+      "query": "髪質改善トリートメント",
+      "clicks": 0,
+      "impressions": 8,
+      "ctr": 0,
+      "position": 2
+    },
+    {
+      "query": "髪質改善トリートメント 縮毛矯正後",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 3
+    },
+    {
+      "query": "髪質改善美容室 エミ 求人",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 31
+    },
+    {
+      "query": "髪質改善酸性ストレート",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 10
+    },
+    {
+      "query": "＞個室美容室近く おすすめ",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 1
+    }
+  ],
+  "byPage": [
+    {
+      "page": "/",
+      "clicks": 111,
+      "impressions": 3879,
+      "ctr": 0.0286,
+      "position": 5.4
+    },
+    {
+      "page": "/salon/fleurami",
+      "clicks": 4,
+      "impressions": 78,
+      "ctr": 0.0513,
+      "position": 6.4
+    },
+    {
+      "page": "/salon/raffine",
+      "clicks": 3,
+      "impressions": 32,
+      "ctr": 0.0938,
+      "position": 11.5
+    },
+    {
+      "page": "/_next/static/css/93eb2f12da584983.css?dpl=dpl_A9rQKJpSuRaFxEMrWFmajQKoRSiV",
+      "clicks": 1,
+      "impressions": 1,
+      "ctr": 1,
+      "position": 1
+    },
+    {
+      "page": "/blog/eyelash/kochi-matsuge-exte-140-dcurl-tabakami-jirei-msh1xaoq",
+      "clicks": 1,
+      "impressions": 4,
+      "ctr": 0.25,
+      "position": 9.3
+    },
+    {
+      "page": "/blog/eyelash/kochi-matsuge-pama-natural-curl-check-points-raffine",
+      "clicks": 1,
+      "impressions": 2,
+      "ctr": 0.5,
+      "position": 7
+    },
+    {
+      "page": "/blog/eyelash/kochi-matsuge-pama-natural-curl-jitsure",
+      "clicks": 1,
+      "impressions": 5,
+      "ctr": 0.2,
+      "position": 9.4
+    },
+    {
+      "page": "/blog/eyelash/kochi-matsuge-perm-natural-curl-salon-selection",
+      "clicks": 1,
+      "impressions": 1,
+      "ctr": 1,
+      "position": 65
+    },
+    {
+      "page": "/blog/eyelash/tag/%E9%AB%98%E7%9F%A5%E5%B8%82%E3%81%BE%E3%81%A4%E3%81%92%E3%82%B5%E3%83%AD%E3%83%B3",
+      "clicks": 1,
+      "impressions": 1,
+      "ctr": 1,
+      "position": 3
+    },
+    {
+      "page": "/blog/hair/beige-tsuyacolor-40dai-konanshi-fleurami-mu5jfpre",
+      "clicks": 1,
+      "impressions": 2,
+      "ctr": 0.5,
+      "position": 10
+    },
+    {
+      "page": "/blog/hair/color-cut-kamishitsu-kaizen-treatment-mqq5zqzx",
+      "clicks": 1,
+      "impressions": 74,
+      "ctr": 0.0135,
+      "position": 8.9
+    },
+    {
+      "page": "/blog/hair/haitone-blond-straight-bob-kanan-fleurami",
+      "clicks": 1,
+      "impressions": 1,
+      "ctr": 1,
+      "position": 7
+    },
+    {
+      "page": "/blog/hair/kananshi-short-bob-ushiro-sugata-marumi-fleurami",
+      "clicks": 1,
+      "impressions": 9,
+      "ctr": 0.1111,
+      "position": 6.9
+    },
+    {
+      "page": "/blog/hair/kochi-shrinkukyosei-shitsukaizen-doujitsu-shiagari-ms5k49hl",
+      "clicks": 1,
+      "impressions": 32,
+      "ctr": 0.0313,
+      "position": 8.2
+    },
+    {
+      "page": "/blog/hair/kurokami-bob-cut-ushirosugata-matamari-konanshi-fleurami",
+      "clicks": 1,
+      "impressions": 4,
+      "ctr": 0.25,
+      "position": 8.8
+    },
+    {
+      "page": "/blog/hair/mens-cut-koubu-sukkiri-kanan-fleurami",
+      "clicks": 1,
+      "impressions": 8,
+      "ctr": 0.125,
+      "position": 5.8
+    },
+    {
+      "page": "/blog/hair/short-cut-back-silhouette-kochi-konan-fleurami-mtbu8qk1",
+      "clicks": 1,
+      "impressions": 6,
+      "ctr": 0.1667,
+      "position": 7.7
+    },
+    {
+      "page": "/blog/hair/straight-glossy-hair-adult-women-fleurami",
+      "clicks": 1,
+      "impressions": 1,
+      "ctr": 1,
+      "position": 9
+    },
+    {
+      "page": "/area/harimayabashi/matsuek",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 8
+    },
+    {
+      "page": "/area/harimayabashi/mayuge-wax",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 25
+    },
+    {
+      "page": "/area/kochi",
+      "clicks": 0,
+      "impressions": 23,
+      "ctr": 0,
+      "position": 21.7
+    },
+    {
+      "page": "/area/kochi/bleach",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 8.7
+    },
+    {
+      "page": "/area/kochi/cut",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 6
+    },
+    {
+      "page": "/area/kochi/head-spa",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 10
+    },
+    {
+      "page": "/area/kochi/kamishitsu-kaizen",
+      "clicks": 0,
+      "impressions": 6,
+      "ctr": 0,
+      "position": 11.3
+    },
+    {
+      "page": "/area/kochi/korean-style",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 15
+    },
+    {
+      "page": "/area/kochi/led-extension",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 9
+    },
+    {
+      "page": "/area/kochi/matsuek",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 27.5
+    },
+    {
+      "page": "/area/kochi/matsuge-perm",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 6
+    },
+    {
+      "page": "/area/kochi/mayuge-wax",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 9
+    },
+    {
+      "page": "/area/konan",
+      "clicks": 0,
+      "impressions": 41,
+      "ctr": 0,
+      "position": 30.3
+    },
+    {
+      "page": "/area/konan/bleach",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 3
+    },
+    {
+      "page": "/area/noichi",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 21.5
+    },
+    {
+      "page": "/area/noichi/bleach",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 7
+    },
+    {
+      "page": "/blog",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 18
+    },
+    {
+      "page": "/blog/eyelash",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 5
+    },
+    {
+      "page": "/blog/eyelash/ec-perm-lash-extension-takamachi-raffine",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 4.5
+    },
+    {
+      "page": "/blog/eyelash/jouhin-matsuge-ex-tabane-curl-mqp2b5ou",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 10
+    },
+    {
+      "page": "/blog/eyelash/kochi-bimayuwax-straight-arch-otona-impression-mu5dt04o",
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 14
+    },
+    {
+      "page": "/blog/eyelash/kochi-eyebrow-design-raffine",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 8
+    },
+    {
+      "page": "/blog/eyelash/kochi-eyebrow-styling-hone-kaku-bimayu",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 11
+    },
+    {
+      "page": "/blog/eyelash/kochi-flat-lash-120-cute-design-jirei-mstprb5c",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 11.5
+    },
+    {
+      "page": "/blog/eyelash/kochi-flat-lash-natural-design-raffine-mrvma0rb",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 6
+    },
+    {
+      "page": "/blog/eyelash/kochi-lash-lift-hitoe-tachiaage-tabusa-jireikai-mu5duv61",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 9.5
+    },
+    {
+      "page": "/blog/eyelash/kochi-lash-lift-tabasa-shiagehow-to-choose-mu5dwpy7",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 32
+    },
+    {
+      "page": "/blog/eyelash/kochi-lash-lift-tabasakan-shiagebibun-mu5jv9ry",
+      "clicks": 0,
+      "impressions": 7,
+      "ctr": 0,
+      "position": 6
+    },
+    {
+      "page": "/blog/eyelash/kochi-lash-lift-tachiagehcurl-raffine-mrvm8bib",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 4
+    },
+    {
+      "page": "/blog/eyelash/kochi-lashlift-tabakami-shiagehikaku-raffine-mu5jx29c",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 7
+    },
+    {
+      "page": "/blog/eyelash/kochi-lashperm-eyebrow-wax-set-raffine",
+      "clicks": 0,
+      "impressions": 13,
+      "ctr": 0,
+      "position": 10.5
+    },
+    {
+      "page": "/blog/eyelash/kochi-matsueki-dcurl-tabasa-erabikata-msh1z1xt",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 39.5
+    },
+    {
+      "page": "/blog/eyelash/kochi-matsuge-ekste-shizenashiage-erabikata",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 19
+    },
+    {
+      "page": "/blog/eyelash/kochi-matsuge-extension-volume-design-mu99l7fc",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 9.3
+    },
+    {
+      "page": "/blog/eyelash/kochi-matsuge-eyelash-extension-impression-erabikata-msh4lq4o",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 9.7
+    },
+    {
+      "page": "/blog/eyelash/kochi-matsuge-eyelash-extension-supppin-meryoku-raffine",
+      "clicks": 0,
+      "impressions": 19,
+      "ctr": 0,
+      "position": 11.2
+    },
+    {
+      "page": "/blog/eyelash/kochi-matsuge-pama-curl-hold-mejikara-jireikai",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 11.5
+    },
+    {
+      "page": "/blog/eyelash/kochi-matsuge-pama-erabikata-raffine",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 8
+    },
+    {
+      "page": "/blog/eyelash/kochi-matsuge-pama-fuwa-curl-jimatsuge",
+      "clicks": 0,
+      "impressions": 17,
+      "ctr": 0,
+      "position": 14.2
+    },
+    {
+      "page": "/blog/eyelash/kochi-matsuge-pama-matsuek-ryokin-souba",
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 7
+    },
+    {
+      "page": "/blog/eyelash/kochi-matsuge-pama-matsuek-trouble-qa",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 10
+    },
+    {
+      "page": "/blog/eyelash/kochi-matsuge-pama-mayu-wax-set-jirei-msh1tyn3",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 9.5
+    },
+    {
+      "page": "/blog/eyelash/kochi-matsuge-pama-me-jikara-shiagarichai",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 7
+    },
+    {
+      "page": "/blog/eyelash/kochi-matsuge-pama-mochi-hindo-nagamochi",
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 8.2
+    },
+    {
+      "page": "/blog/eyelash/kochi-matsuge-pama-natural-curl-mqv3n2z2",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 8
+    },
+    {
+      "page": "/blog/eyelash/kochi-matsuge-pama-natural-mejikara-jireikai",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 9.7
+    },
+    {
+      "page": "/blog/eyelash/kochi-matsuge-pama-natural-mejikara-raffine",
+      "clicks": 0,
+      "impressions": 7,
+      "ctr": 0,
+      "position": 24
+    },
+    {
+      "page": "/blog/eyelash/kochi-matsuge-pama-nekamoto-tachiaage-jirei",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 6.8
+    },
+    {
+      "page": "/blog/eyelash/kochi-matsuge-pama-tabasakan-curl-suuppin-meichikara",
+      "clicks": 0,
+      "impressions": 7,
+      "ctr": 0,
+      "position": 21.6
+    },
+    {
+      "page": "/blog/eyelash/kochi-matsuge-pama-tachiagewakekata-mrq37hd8",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 8
+    },
+    {
+      "page": "/blog/eyelash/kochi-matsuge-perm-20s-natural-curl-impression",
+      "clicks": 0,
+      "impressions": 7,
+      "ctr": 0,
+      "position": 9
+    },
+    {
+      "page": "/blog/eyelash/kochi-matsuge-perm-design-length-mu99njkb",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 10.5
+    },
+    {
+      "page": "/blog/eyelash/kochi-matsuge-perm-erabikata-raffine",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 6.5
+    },
+    {
+      "page": "/blog/eyelash/kochi-matsuge-perm-eyebrow-styling-combination",
+      "clicks": 0,
+      "impressions": 7,
+      "ctr": 0,
+      "position": 9.4
+    },
+    {
+      "page": "/blog/eyelash/kochi-matsuge-perm-first-20s-eyelash",
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 10.2
+    },
+    {
+      "page": "/blog/eyelash/kochi-matsuge-perm-natural-curl-guide-mu99mss5",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 7
+    },
+    {
+      "page": "/blog/eyelash/kochi-matsuge-perm-natural-lash-20s-30s",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 7
+    },
+    {
+      "page": "/blog/eyelash/kochi-matsuge-perm-separation-design",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 15
+    },
+    {
+      "page": "/blog/eyelash/kochi-matsuge-perm-seyakkan-nizyuudai",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 8
+    },
+    {
+      "page": "/blog/eyelash/kochi-matsuge-perm-shokkan-erabikata",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 10
+    },
+    {
+      "page": "/blog/eyelash/kochi-matsuge-perm-tachiaage-design-mu99m1ed",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 10
+    },
+    {
+      "page": "/blog/eyelash/kochi-matsuge-perm-tachiagarikanjudecidiru",
+      "clicks": 0,
+      "impressions": 7,
+      "ctr": 0,
+      "position": 9.1
+    },
+    {
+      "page": "/blog/eyelash/kochi-matsuge-perm-vs-extension-erabikata",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 16
+    },
+    {
+      "page": "/blog/eyelash/kochi-mens-eyebrow-wax-shape-guide-raffine-msrmb665",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 10
+    },
+    {
+      "page": "/blog/eyelash/kochi-mens-eyebrow-wax-teens-raffine-mrq31kds",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 9.5
+    },
+    {
+      "page": "/blog/eyelash/kochi-parisienne-lash-lift-erabikata",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 8.5
+    },
+    {
+      "page": "/blog/eyelash/lash-lift-vs-matsuge-perm",
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 29.4
+    },
+    {
+      "page": "/blog/eyelash/matsuge-perm-ryokin-harimayabashi-raffine-kochi",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 9.7
+    },
+    {
+      "page": "/blog/eyelash/matsuge-perma-sukunai-raffine-kochi-mqp61l5i",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 7.7
+    },
+    {
+      "page": "/blog/eyelash/nagashime-matsuge-extension-design-mqp62hln",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 1
+    },
+    {
+      "page": "/blog/eyelash/raffine-mejiri-design-mainichi-make-raku",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 9
+    },
+    {
+      "page": "/blog/eyelash/tag/%E3%83%9E%E3%83%84%E3%82%A8%E3%82%AF",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 9
+    },
+    {
+      "page": "/blog/eyelash/tag/%E7%9B%AE%E5%85%83%E3%82%B1%E3%82%A2",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 6
+    },
+    {
+      "page": "/blog/eyelash/tag/%E9%AB%98%E7%9F%A5%E5%B8%82",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 9
+    },
+    {
+      "page": "/blog/eyelash/tag/Raffine%E9%AB%98%E7%9F%A5",
+      "clicks": 0,
+      "impressions": 10,
+      "ctr": 0,
+      "position": 9.4
+    },
+    {
+      "page": "/blog/hair/20dai-blue-black-tsuya-color-kanan-fleurami-mstqlkca",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 3
+    },
+    {
+      "page": "/blog/hair/20s-face-layer-cut-konan-fleurami-mt2bfahf",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 10.3
+    },
+    {
+      "page": "/blog/hair/20s-hair-color-warm-brown-wavy-mqt1mxo1",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 11
+    },
+    {
+      "page": "/blog/hair/20s-tsuya-brown-color-aka-nashi-kanan-fleurami-msvacbtn",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 4
+    },
+    {
+      "page": "/blog/hair/30dai-marumi-short-bob-ushiroshi-kananshi-fleurami-mtmwmsgr",
+      "clicks": 0,
+      "impressions": 25,
+      "ctr": 0,
+      "position": 11.4
+    },
+    {
+      "page": "/blog/hair/40dai-hair-color-salon-erabi-kata",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 10
+    },
+    {
+      "page": "/blog/hair/40dai-hair-menu-color-perm-shukumo",
+      "clicks": 0,
+      "impressions": 30,
+      "ctr": 0,
+      "position": 8.6
+    },
+    {
+      "page": "/blog/hair/40dai-shiraga-bokashi-color-tsuyakami-konanshi-fleurami-mt2630bn",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 6
+    },
+    {
+      "page": "/blog/hair/40dai-shiraga-bokashi-highlight-shiagari-mqrjcjaq",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 4
+    },
+    {
+      "page": "/blog/hair/40dai-shiragasome-tsuya-shizenna-iromi-kananshi-fleur-ami-ms5m3uq0",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 11
+    },
+    {
+      "page": "/blog/hair/50s-shiragebokashi-shortbob-kanan-fleurami-mt2612el",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 6
+    },
+    {
+      "page": "/blog/hair/50s-straight-short-bob-glossy-finish-mqt0pfu3",
+      "clicks": 0,
+      "impressions": 6,
+      "ctr": 0,
+      "position": 10.2
+    },
+    {
+      "page": "/blog/hair/60s-shiraga-bokashi-short-bob-fleurami-mqq65jtq",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 11
+    },
+    {
+      "page": "/blog/hair/adult-short-bob-gloss-roundness",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 8.8
+    },
+    {
+      "page": "/blog/hair/adult-women-hair-menu-guide-color-cut-perm",
+      "clicks": 0,
+      "impressions": 7,
+      "ctr": 0,
+      "position": 8.3
+    },
+    {
+      "page": "/blog/hair/archive/2026/07",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 5.3
+    },
+    {
+      "page": "/blog/hair/archive/2026/08",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 20
+    },
+    {
+      "page": "/blog/hair/ash-grey-color-adult-women-mqt5r8io",
+      "clicks": 0,
+      "impressions": 9,
+      "ctr": 0,
+      "position": 10
+    },
+    {
+      "page": "/blog/hair/bob-cut-kirei-otona-josei",
+      "clicks": 0,
+      "impressions": 7,
+      "ctr": 0,
+      "position": 8.4
+    },
+    {
+      "page": "/blog/hair/chocolate-brown-tsuyacolor-30dai-konan-fleurami-mt8d4k2o",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 25
+    },
+    {
+      "page": "/blog/hair/chocolate-brown-tsuyacolor-kanamishi-fleurami-guide-mu5j2315",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 4
+    },
+    {
+      "page": "/blog/hair/cut-color-perm-shukumou-guide-adult-woman",
+      "clicks": 0,
+      "impressions": 8,
+      "ctr": 0,
+      "position": 10.8
+    },
+    {
+      "page": "/blog/hair/double-color-adult-hair-guide-mqt1l6m9",
+      "clicks": 0,
+      "impressions": 16,
+      "ctr": 0,
+      "position": 12.6
+    },
+    {
+      "page": "/blog/hair/double-color-pink-finish-mqt1lipe",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 8
+    },
+    {
+      "page": "/blog/hair/erisoku-sukkiri-short-bob-kochi-konan-fleur-ami-mshf3z3l",
+      "clicks": 0,
+      "impressions": 14,
+      "ctr": 0,
+      "position": 10
+    },
+    {
+      "page": "/blog/hair/inner-color-adult-bob-fleur-ami-mqt7crpq",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 7
+    },
+    {
+      "page": "/blog/hair/kamishitsu-kaizen-kochishi-riv-fleurami",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 9
+    },
+    {
+      "page": "/blog/hair/kamishitsu-kaizen-tsuyakam-otona-josei",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 9.3
+    },
+    {
+      "page": "/blog/hair/kananshi-bleach-high-tone-color-erabikata-mrek1xml",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 9
+    },
+    {
+      "page": "/blog/hair/kananshi-gray-highlight-haitage-40dai-fleurami-mt42dd9d",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 7
+    },
+    {
+      "page": "/blog/hair/kananshi-mens-perm-erabikata-fleur-ami",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 5
+    },
+    {
+      "page": "/blog/hair/kananshi-mini-bob-ushirosugata-fleurami-mt2jzlht",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 5
+    },
+    {
+      "page": "/blog/hair/kananshi-no-bleach-pink-brown-color-fleur-ami-ms76qc9g",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 10
+    },
+    {
+      "page": "/blog/hair/kananshi-shitsukaizen-treatment-40dai-jireii",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 9
+    },
+    {
+      "page": "/blog/hair/kananshi-short-bob-marumi-matome-40dai-msi8ekm9",
+      "clicks": 0,
+      "impressions": 10,
+      "ctr": 0,
+      "position": 9
+    },
+    {
+      "page": "/blog/hair/kananshi-shukumou-shitsukaizen-doji-erabikata-mtr9tqwo",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 10.3
+    },
+    {
+      "page": "/blog/hair/kannan-purple-color-40s-no-bleach-fleur-ami",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 9
+    },
+    {
+      "page": "/blog/hair/kao-mawari-layer-cut-20dai-nukeke-kanan-fleurami-mt2blyfw",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 11
+    },
+    {
+      "page": "/blog/hair/kashokuheki-kakusen-nashi-shrink-straight-fleurami-msirqxe2",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 11
+    },
+    {
+      "page": "/blog/hair/katashita-bob-cut-20dai-kanan-fleurami-mt2bkefg",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 7.5
+    },
+    {
+      "page": "/blog/hair/kirinashi-bob-ushiro-sugata-kochi-konanshi-fleurami",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 7
+    },
+    {
+      "page": "/blog/hair/kirinasshi-bob-otona-josei-mqq6909g",
+      "clicks": 0,
+      "impressions": 6,
+      "ctr": 0,
+      "position": 7
+    },
+    {
+      "page": "/blog/hair/koanami-shortbob-perm-selection-guide",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 10
+    },
+    {
+      "page": "/blog/hair/koanshi-bleach-inner-color-gray-purple-erabikata",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 5
+    },
+    {
+      "page": "/blog/hair/koanshi-shiraganobokashi-osharezome-40dai-mrvwfnyz",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 8
+    },
+    {
+      "page": "/blog/hair/koanshi-w-color-kiripanashi-bob-sotohane-mrvvijde",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 10
+    },
+    {
+      "page": "/blog/hair/kochi-ash-color-layer-cut-40s-guide-msfrje4b",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 10
+    },
+    {
+      "page": "/blog/hair/kochi-bob-cut-tsuyacolor-40dai",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 11
+    },
+    {
+      "page": "/blog/hair/kochi-bob-perm-40s-women-guide",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 3
+    },
+    {
+      "page": "/blog/hair/kochi-design-color-gradation-blue-grey-bob-msiblaco",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 6
+    },
+    {
+      "page": "/blog/hair/kochi-double-color-lavender-gradation-guide-mthd3ldo",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 10.8
+    },
+    {
+      "page": "/blog/hair/kochi-greige-color-tsuyakami-jirei-mu5jo9uh",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 11
+    },
+    {
+      "page": "/blog/hair/kochi-layer-bob-adult-women-guide-riv-fleurami-mu5jj99q",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 10
+    },
+    {
+      "page": "/blog/hair/kochi-layer-cut-erabikata-mr35537g",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 10
+    },
+    {
+      "page": "/blog/hair/kochi-medium-bob-tsuyakashiki-kaizen",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 27
+    },
+    {
+      "page": "/blog/hair/kochi-mens-perm-erabikata-mrvmgzbj",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 9
+    },
+    {
+      "page": "/blog/hair/kochi-mens-twist-perm-erabikata-mrq0tgym",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 6
+    },
+    {
+      "page": "/blog/hair/kochi-pink-brown-color-otona-erabikata",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 3
+    },
+    {
+      "page": "/blog/hair/kochi-shiraganobashi-pink-highlight-jirei-ms5df2j5",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 8
+    },
+    {
+      "page": "/blog/hair/kochi-shiraganobokashi-double-color-gray-bob-mt2fkx7z",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 8
+    },
+    {
+      "page": "/blog/hair/kochi-shiragas-bokashi-highlight-erabikata-mrkd6qs7",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 2
+    },
+    {
+      "page": "/blog/hair/kochi-shiragobokashi-highlight-erabikata-mrvlg7cb",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 4
+    },
+    {
+      "page": "/blog/hair/kochi-shitsukaizen-long-40dai-jireikiji",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 6
+    },
+    {
+      "page": "/blog/hair/kochi-shitsukaizen-tsuyastraight-40dai-guide",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 7
+    },
+    {
+      "page": "/blog/hair/kochi-short-bob-cut-matome-jireishi-mtin6i50",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 11
+    },
+    {
+      "page": "/blog/hair/kochi-shukumo-shitsukaizen-erabikata-mr35i2d4",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 11
+    },
+    {
+      "page": "/blog/hair/kochi-shukumo-shitsukaizen-onedaysession-guide-msh284gn",
+      "clicks": 0,
+      "impressions": 37,
+      "ctr": 0,
+      "position": 8.1
+    },
+    {
+      "page": "/blog/hair/kochi-shukumo-shitsukaizen-same-day-guide-mu5jhc86",
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 8.4
+    },
+    {
+      "page": "/blog/hair/kochi-shukumou-shitsukaizen-same-day-case-mu5jahn1",
+      "clicks": 0,
+      "impressions": 6,
+      "ctr": 0,
+      "position": 11.5
+    },
+    {
+      "page": "/blog/hair/kochi-tsuya-color-40dai-shitsuji-riv-ms5k5ufb",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 7.8
+    },
+    {
+      "page": "/blog/hair/kochi-tsuya-color-erabikata-40dai",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 8
+    },
+    {
+      "page": "/blog/hair/konan-inner-color-double-color-erabikata-mrvwhl9l",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 4
+    },
+    {
+      "page": "/blog/hair/konan-inner-color-erabikata-teens-mrvwj6yq",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 1
+    },
+    {
+      "page": "/blog/hair/konan-inner-color-gray-shitsukaizen-erabikata-mrk3koeq",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 4
+    },
+    {
+      "page": "/blog/hair/konan-mens-color-violet-fade-fleura-mi-mrohl97w",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 10
+    },
+    {
+      "page": "/blog/hair/konan-shiragazome-otona-erabikata-mrohmz27",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 9.8
+    },
+    {
+      "page": "/blog/hair/konan-shukumou-kyosei-erabi-kata-mrbavop0",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 9.5
+    },
+    {
+      "page": "/blog/hair/konanshi-mens-perm-erabikata",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 12.5
+    },
+    {
+      "page": "/blog/hair/konanshi-mens-perm-erabikata-mrcqfodf",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 9
+    },
+    {
+      "page": "/blog/hair/konanshi-tsuya-color-erabikata-40dai",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 7.7
+    },
+    {
+      "page": "/blog/hair/koshoku-kyosei-tsuyakuro-bob-konan-fleurami-mt2houmb",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 3.5
+    },
+    {
+      "page": "/blog/hair/koshukyosei-matamari-tsuya-straight-bob-konan-fleurami-mtwwub6c",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 9
+    },
+    {
+      "page": "/blog/hair/kosnan-shukumou-kyosei-brown-bob-fleur-ami-ms8n7not",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 8
+    },
+    {
+      "page": "/blog/hair/koushu-kyosei-tsuyakuro-bob-kanan-fleurami-msv76i6a",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 7.5
+    },
+    {
+      "page": "/blog/hair/mens-cut-kochishi-fleur-group",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 11
+    },
+    {
+      "page": "/blog/hair/mens-perm-finish-style-explanation-mqt1i8un",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 15
+    },
+    {
+      "page": "/blog/hair/mens-perm-style-fleurami-kochi-mqrjdb1g",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 16
+    },
+    {
+      "page": "/blog/hair/mens-perm-teens-kochi-konan-fleurami-msfrfrws",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 6
+    },
+    {
+      "page": "/blog/hair/mens-perm-ugoki-matomari-konan-fleurami-mtoaa0sv",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 21
+    },
+    {
+      "page": "/blog/hair/mens-purple-color-kochi-konan-fleurami",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 7
+    },
+    {
+      "page": "/blog/hair/natural-glossy-hair-color-20s-30s-mqq68564",
+      "clicks": 0,
+      "impressions": 10,
+      "ctr": 0,
+      "position": 9
+    },
+    {
+      "page": "/blog/hair/olive-greige-layer-bob-40s-kanan-fleurami-mstqnegb",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 3
+    },
+    {
+      "page": "/blog/hair/otona-bob-highlight-change-mqq66hym",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 12.3
+    },
+    {
+      "page": "/blog/hair/otona-short-bob-40dai-hairstyle-mqq61cu2",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 11
+    },
+    {
+      "page": "/blog/hair/perm-vs-shukumo-kyosei-chigai-erabi-kata",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 12.3
+    },
+    {
+      "page": "/blog/hair/riv",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 8
+    },
+    {
+      "page": "/blog/hair/sansei-straight-vs-shukumou-kyosei-chigai-kochi",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 8.8
+    },
+    {
+      "page": "/blog/hair/shiraga-bokashi-short-bob-30-40dai-mqq6au6v",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 7.8
+    },
+    {
+      "page": "/blog/hair/shiragage-some-shizen-iroami-30-40dai-mqt5oyst",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 9
+    },
+    {
+      "page": "/blog/hair/short-bob-lavender-brown-color-40s",
+      "clicks": 0,
+      "impressions": 7,
+      "ctr": 0,
+      "position": 7.9
+    },
+    {
+      "page": "/blog/hair/short-bob-perm-finish-mqq5yxm2",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 10
+    },
+    {
+      "page": "/blog/hair/short-bob-round-silhouette-konanshi-fleurami-msfq8jar",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 8.7
+    },
+    {
+      "page": "/blog/hair/short-layered-bob-adult-women-mqq67b8n",
+      "clicks": 0,
+      "impressions": 29,
+      "ctr": 0,
+      "position": 8.3
+    },
+    {
+      "page": "/blog/hair/shukumo-kyosei-sarasara-shikumi-mqq629b3",
+      "clicks": 0,
+      "impressions": 75,
+      "ctr": 0,
+      "position": 8.5
+    },
+    {
+      "page": "/blog/hair/shukumo-kyosei-vs-kamishitsu-kaizen-mqqgea4b",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 10
+    },
+    {
+      "page": "/blog/hair/shukumo-kyosei-vs-kamishitsu-kaizen-mqt5ece8",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 9
+    },
+    {
+      "page": "/blog/hair/shukumokyosei-treatment-chigai-mqt1iflt",
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 10.2
+    },
+    {
+      "page": "/blog/hair/shukumou-kyousei",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 7
+    },
+    {
+      "page": "/blog/hair/silver-double-color-adult-women-mqrjz08r",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 10
+    },
+    {
+      "page": "/blog/hair/straight-glossy-hair-salon-finish",
+      "clicks": 0,
+      "impressions": 11,
+      "ctr": 0,
+      "position": 7.8
+    },
+    {
+      "page": "/blog/hair/tag/%E3%83%8F%E3%82%A4%E3%83%A9%E3%82%A4%E3%83%88%E3%82%AB%E3%83%A9%E3%83%BC",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 8
+    },
+    {
+      "page": "/blog/hair/tag/%E5%88%87%E3%82%8A%E3%81%A3%E3%81%B1%E3%81%AA%E3%81%97%E3%83%9C%E3%83%96",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 7
+    },
+    {
+      "page": "/blog/hair/transparency-color-straight-medium-40s-konan-fleurami-mtpqj9vs",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 3
+    },
+    {
+      "page": "/blog/hair/tsuya-color-bob-adult-haircolor-mqt5kvo5",
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 9.6
+    },
+    {
+      "page": "/blog/hair/tsuyatsuya-sarasara-kamishitsu-riv-by-fleur-ami",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 8.5
+    },
+    {
+      "page": "/blog/hair/yosakoi-hair-set-kochi-fleurami-mslhjj90",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 8
+    },
+    {
+      "page": "/contact",
+      "clicks": 0,
+      "impressions": 8,
+      "ctr": 0,
+      "position": 23.3
+    },
+    {
+      "page": "/guide",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 18.5
+    },
+    {
+      "page": "/menu",
+      "clicks": 0,
+      "impressions": 29,
+      "ctr": 0,
+      "position": 24.1
+    },
+    {
+      "page": "/recruit",
+      "clicks": 0,
+      "impressions": 13,
+      "ctr": 0,
+      "position": 25.7
+    },
+    {
+      "page": "/recruit/eyelist",
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 2.8
+    },
+    {
+      "page": "/salon",
+      "clicks": 0,
+      "impressions": 35,
+      "ctr": 0,
+      "position": 21.5
+    },
+    {
+      "page": "/salon/riv",
+      "clicks": 0,
+      "impressions": 14,
+      "ctr": 0,
+      "position": 20.1
+    },
+    {
+      "page": "/service",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 11.5
+    },
+    {
+      "page": "/service/kamishitsu-kaizen",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 5
+    },
+    {
+      "page": "/service/matsuek",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 8
+    },
+    {
+      "page": "/service/matsuge-perm",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 9
+    },
+    {
+      "page": "/service/mayuge-wax",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 8
+    },
+    {
+      "page": "/service/mens-twist-perm",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 8
+    },
+    {
+      "page": "/staff",
+      "clicks": 0,
+      "impressions": 18,
+      "ctr": 0,
+      "position": 12.3
+    },
+    {
+      "page": "/staff/hosokawa-ayaka",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 12
+    },
+    {
+      "page": "/staff/nishimori-munehiro",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 1
+    },
+    {
+      "page": "/staff/yamaoka-yuya",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 28
+    }
+  ]
+}
