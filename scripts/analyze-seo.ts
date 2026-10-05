@@ -116,7 +116,7 @@ async function analyzeWithGSC(
   ).join("\n");
 
   const prompt = `あなたは美容室・アイラッシュサロンのSEOコンサルタントです。
-Google Search Console データを分析し、fleur GROUP（高知県）のブログSEOを改善するタスクを最大${MAX_TASKS}件、優先度順にJSON配列で出力してください。
+Google Search Console データを分析し、fleur GROUP（高知県）のブログSEOを改善するタスクを最大${MAX_TASKS}件、優先度順にJSON配列で返してください。
 
 【サロン情報】
 - fleurami: 香南市の美容室（白髪ぼかし・髪質改善・大人女性向け）
@@ -129,21 +129,8 @@ ${rewriteLines || "なし"}
 【新規記事候補KW（順位10位以下・表示50回以上・記事なし）】
 ${newLines || "なし"}
 
-【出力形式】JSON配列のみ（説明文なし）。各要素:
-{
-  "type": "rewrite" または "new_article",
-  "priority": 1〜${MAX_TASKS},
-  "targetKeyword": "主要KW",
-  "slug": "(rewriteのみ: 既存記事slug)",
-  "category": "(rewriteのみ: hair または eyelash)",
-  "salon": "fleurami/riv/raffine のいずれか",
-  "currentTitle": "(rewriteのみ: 現在のタイトル)",
-  "currentPosition": (rewriteのみ: 現在の順位),
-  "impressions": 表示回数,
-  "clicks": クリック数,
-  "ctr": CTR(小数),
-  "reason": "改善理由（100字以内）"
-}`;
+出力は JSON 配列のみ。前後に説明文や記号は一切不要。最初の文字は [ 、最後の文字は ] にすること。
+各要素のキー: type (rewrite/new_article), priority (数値), targetKeyword (文字列), slug (rewriteのみ), category (hair/eyelash), salon (fleurami/riv/raffine), currentTitle (rewriteのみ), currentPosition (rewriteのみ数値), impressions (数値), clicks (数値), ctr (小数), reason (100字以内)`;
 
   const res = await client.messages.create({
     model: "claude-opus-4-8",
@@ -152,11 +139,11 @@ ${newLines || "なし"}
   });
 
   const text = res.content[0].type === "text" ? res.content[0].text : "";
-  const match = text.match(/\[[\s\S]+\]/);
-  if (!match) throw new Error("Claude がJSON配列を返しませんでした:\n" + text.slice(0, 500));
+  console.log(`Claude レスポンス先頭: ${text.slice(0, 100)}`);
+  const parsed = extractJsonArray(text);
+  if (!parsed) throw new Error("Claude がJSON配列を返しませんでした:\n" + text.slice(0, 500));
 
-  const tasks: SeoTask[] = JSON.parse(match[0]);
-  return tasks.map((t) => {
+  return parsed.map((t: SeoTask) => {
     if (t.type === "rewrite" && t.slug) {
       const meta = Array.from(byPage.entries()).find(([, v]) => v.slug === t.slug)?.[1];
       return { ...t, filePath: meta?.filePath, category: (meta?.category ?? t.category) as "hair" | "eyelash" };
@@ -165,20 +152,77 @@ ${newLines || "なし"}
   });
 }
 
+// ─── JSON抽出ユーティリティ（コードブロック・説明文を除去してJSONだけ取り出す） ────
+
+function extractJsonArray(text: string): SeoTask[] | null {
+  // コードブロック内のJSONを優先
+  const codeBlock = text.match(/```(?:json)?\s*(\[[\s\S]+?\])\s*```/);
+  if (codeBlock) {
+    try { return JSON.parse(codeBlock[1]); } catch { /* fall through */ }
+  }
+  // 最初の [ から最後の ] まで
+  const start = text.indexOf("[");
+  const end = text.lastIndexOf("]");
+  if (start !== -1 && end > start) {
+    try { return JSON.parse(text.slice(start, end + 1)); } catch { /* fall through */ }
+  }
+  return null;
+}
+
+// ─── Claude失敗時のルールベースフォールバック ──────────────────────────────
+
+function buildRuleBasedTasks(scored: (ArticleMeta & { score: number })[]): SeoTask[] {
+  const NEW_ARTICLE_KWS = [
+    { keyword: "高知市 まつ毛パーマ 頻度", salon: "raffine", category: "eyelash" as const },
+    { keyword: "高知市 マツエク デザイン 選び方", salon: "raffine", category: "eyelash" as const },
+    { keyword: "高知市 白髪ぼかし 40代", salon: "fleurami", category: "hair" as const },
+    { keyword: "高知市 髪質改善 縮毛矯正 違い", salon: "riv", category: "hair" as const },
+    { keyword: "高知市 眉毛ワックス 初めて", salon: "raffine", category: "eyelash" as const },
+  ];
+  const tasks: SeoTask[] = [];
+  scored.slice(0, MAX_TASKS - NEW_ARTICLE_KWS.length).forEach((a, i) => {
+    tasks.push({
+      type: "rewrite",
+      priority: i + 1,
+      slug: a.slug,
+      category: a.category,
+      salon: a.salon,
+      filePath: a.filePath,
+      targetKeyword: a.tags[0] ?? a.title.slice(0, 20),
+      currentTitle: a.title,
+      impressions: 0,
+      clicks: 0,
+      reason: `品質スコア${a.score}点: FAQ${a.faqCount}個・本文${a.bodyLength}字・地域名${a.title.includes("高知") ? "あり" : "なし"}`,
+    });
+  });
+  NEW_ARTICLE_KWS.forEach((kw, i) => {
+    tasks.push({
+      type: "new_article",
+      priority: tasks.length + i + 1,
+      targetKeyword: kw.keyword,
+      category: kw.category,
+      salon: kw.salon,
+      impressions: 0,
+      clicks: 0,
+      reason: "高知×美容系で検索ボリュームが見込まれる未カバーKW",
+    });
+  });
+  return tasks.slice(0, MAX_TASKS);
+}
+
 // ─── モード2: GSCデータなし → 記事品質スコアリングによるフォールバック ─────
 
 async function analyzeWithQualityScore(all: ArticleMeta[]): Promise<SeoTask[]> {
   // 品質スコアリング（低いほどリライト優先度高）
   const scored = all
-    .filter((a) => !a.slug.startsWith("kochi-matsuge-pama-mochi")) // ピラー記事は除外
     .map((a) => {
       let score = 100;
       if (a.faqCount < 3) score -= 30;
       else if (a.faqCount < 5) score -= 15;
       if (a.bodyLength < 800) score -= 25;
       else if (a.bodyLength < 1200) score -= 10;
-      if (!a.updated) score -= 10; // 一度も更新されていない
-      if (!a.title.includes("高知")) score -= 15; // 地域名なし
+      if (!a.updated) score -= 10;
+      if (!a.title.includes("高知")) score -= 15;
       if (a.tags.length < 3) score -= 5;
       return { ...a, score };
     })
@@ -188,14 +232,12 @@ async function analyzeWithQualityScore(all: ArticleMeta[]): Promise<SeoTask[]> {
   console.log("品質スコア上位（リライト候補）:");
   scored.slice(0, 5).forEach((a) => console.log(`  ${a.score}点: ${a.title}`));
 
-  // Claudeに改善方針を決めてもらう
   const candidateList = scored.map((a) =>
     `slug: ${a.slug} | タイトル: "${a.title}" | カテゴリ: ${a.category} | サロン: ${a.salon} | FAQ数: ${a.faqCount} | 本文長: ${a.bodyLength}字 | 更新日: ${a.updated || "未更新"}`
   ).join("\n");
 
   const prompt = `あなたは美容室・アイラッシュサロンのSEOコンサルタントです。
 以下は fleur GROUP（高知県）のブログ記事のうち、品質スコアが低い記事のリストです。
-SEO改善のため、リライト優先タスクと新規記事候補タスクを合わせて最大${MAX_TASKS}件、優先度順にJSON配列で出力してください。
 
 【サロン情報】
 - fleurami: 香南市の美容室（白髪ぼかし・髪質改善・40代女性向け）
@@ -205,41 +247,40 @@ SEO改善のため、リライト優先タスクと新規記事候補タスク�
 【品質スコアが低い記事（リライト候補）】
 ${candidateList}
 
-【追加して欲しい新規記事のKW例（高知でまだ記事数が少ないとおもわれるもの）】
-・まつ毛パーマ 頻度 高知 / マツエク デザイン 高知 / 白髪ぼかし 40代 高知 / 髪質改善 縮毛矯正 違い 高知市 / 眉毛ワックス 高知市 / ヘアカラー メンテナンス 高知
+【追加して欲しい新規記事のKW例】
+・まつ毛パーマ 頻度 高知 / マツエク デザイン 高知 / 白髪ぼかし 40代 高知 / 髪質改善 縮毛矯正 違い 高知市 / 眉毛ワックス 高知市
 
-【出力形式】JSON配列のみ（説明文なし）。各要素:
-{
-  "type": "rewrite" または "new_article",
-  "priority": 1〜${MAX_TASKS},
-  "targetKeyword": "主要KW",
-  "slug": "(rewriteのみ: 既存記事slug)",
-  "category": "hair または eyelash",
-  "salon": "fleurami/riv/raffine のいずれか",
-  "currentTitle": "(rewriteのみ: 現在のタイトル)",
-  "impressions": 0,
-  "clicks": 0,
-  "reason": "改善理由（100字以内）"
-}`;
+SEO改善タスクを最大${MAX_TASKS}件、優先度順にJSON配列で返してください。
+出力は JSON 配列のみ。前後に説明文や記号は一切不要。最初の文字は [ 、最後の文字は ] にすること。
 
-  const res = await client.messages.create({
-    model: "claude-opus-4-8",
-    max_tokens: 2000,
-    messages: [{ role: "user", content: prompt }],
-  });
+各要素のキー:
+type (rewrite/new_article), priority (数値), targetKeyword (文字列), slug (rewriteのみ), category (hair/eyelash), salon (fleurami/riv/raffine), currentTitle (rewriteのみ), impressions (0), clicks (0), reason (100字以内の文字列)`;
 
-  const text = res.content[0].type === "text" ? res.content[0].text : "";
-  const match = text.match(/\[[\s\S]+\]/);
-  if (!match) throw new Error("Claude がJSON配列を返しませんでした:\n" + text.slice(0, 500));
+  try {
+    const res = await client.messages.create({
+      model: "claude-opus-4-8",
+      max_tokens: 2000,
+      messages: [{ role: "user", content: prompt }],
+    });
 
-  const tasks: SeoTask[] = JSON.parse(match[0]);
-  return tasks.map((t) => {
-    if (t.type === "rewrite" && t.slug) {
-      const meta = all.find((a) => a.slug === t.slug);
-      return { ...t, filePath: meta?.filePath, category: (meta?.category ?? t.category) as "hair" | "eyelash" };
+    const text = res.content[0].type === "text" ? res.content[0].text : "";
+    console.log(`Claude レスポンス先頭: ${text.slice(0, 100)}`);
+    const parsed = extractJsonArray(text);
+    if (!parsed) {
+      console.warn("⚠️ ClaudeのJSONパース失敗 → ルールベースフォールバックに切り替え");
+      return buildRuleBasedTasks(scored);
     }
-    return t;
-  });
+    return parsed.map((t: SeoTask) => {
+      if (t.type === "rewrite" && t.slug) {
+        const meta = all.find((a) => a.slug === t.slug);
+        return { ...t, filePath: meta?.filePath, category: (meta?.category ?? t.category) as "hair" | "eyelash" };
+      }
+      return t;
+    });
+  } catch (e) {
+    console.warn("⚠️ Claude呼び出し失敗 → ルールベースフォールバックに切り替え:", e);
+    return buildRuleBasedTasks(scored);
+  }
 }
 
 // ─── main ──────────────────────────────────────────────────────────────────
