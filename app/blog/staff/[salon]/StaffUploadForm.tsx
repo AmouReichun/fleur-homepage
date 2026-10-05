@@ -3,6 +3,7 @@
 import { useState, useRef, useCallback, useEffect } from "react";
 
 const TOKEN_STORAGE_KEY = "staff_upload_token";
+const NAME_STORAGE_KEY  = "staff_upload_name";
 
 type Props = {
   salonKey: string;
@@ -94,6 +95,7 @@ async function compressImage(file: File, maxPx = 1600, quality = 0.82): Promise<
 }
 
 export default function StaffUploadForm({ salonKey, salonLabel, salonSub }: Props) {
+  const [staffName, setStaffName] = useState("");
   const [memo, setMemo]       = useState("");
   const [preview, setPreview] = useState<string | null>(null);
   const [file, setFile]       = useState<File | null>(null);
@@ -103,11 +105,13 @@ export default function StaffUploadForm({ salonKey, salonLabel, salonSub }: Prop
   const [token, setToken]     = useState("");
   const fileRef = useRef<HTMLInputElement>(null);
 
-  // 合言葉は端末に記憶し、2回目以降は入力不要にする
+  // 名前・合言葉は端末に記憶し、2回目以降は入力不要にする
   useEffect(() => {
     try {
-      const saved = localStorage.getItem(TOKEN_STORAGE_KEY);
-      if (saved) setToken(saved);
+      const savedToken = localStorage.getItem(TOKEN_STORAGE_KEY);
+      if (savedToken) setToken(savedToken);
+      const savedName = localStorage.getItem(NAME_STORAGE_KEY);
+      if (savedName) setStaffName(savedName);
     } catch { /* localStorage 不可の環境は無視 */ }
   }, []);
 
@@ -146,14 +150,18 @@ export default function StaffUploadForm({ salonKey, salonLabel, salonSub }: Prop
     }
 
     try {
-      // 合言葉を端末に保存（次回以降は自動入力）
-      try { localStorage.setItem(TOKEN_STORAGE_KEY, token.trim()); } catch { /* 無視 */ }
+      // 名前・合言葉を端末に保存（次回以降は自動入力）
+      try {
+        localStorage.setItem(TOKEN_STORAGE_KEY, token.trim());
+        if (staffName.trim()) localStorage.setItem(NAME_STORAGE_KEY, staffName.trim());
+      } catch { /* 無視 */ }
 
       const baseName = file.name.replace(/\.[^.]+$/, "") || "photo";
       const formData = new FormData();
       formData.append("salon", salonKey);
       formData.append("memo", memo);
       formData.append("token", token.trim());
+      if (staffName.trim()) formData.append("staffName", staffName.trim());
       formData.append("images", compressed, `${baseName}.jpg`);
 
       const res = await fetch("/api/staff/upload", { method: "POST", body: formData });
@@ -171,6 +179,7 @@ export default function StaffUploadForm({ salonKey, salonLabel, salonSub }: Prop
     if (preview) URL.revokeObjectURL(preview);
     setFile(null); setPreview(null); setMemo("");
     setSubmitting(false); setDone(false); setError("");
+    // staffName は残す（同じ人が続けて送る想定）
   };
 
   // ── 完了画面 ─────────────────────────────────────────
@@ -257,6 +266,23 @@ export default function StaffUploadForm({ salonKey, salonLabel, salonSub }: Prop
             className="hidden"
             onChange={(e) => { handleFile(e.target.files); e.target.value = ""; }}
           />
+        </div>
+
+        {/* 名前 */}
+        <div className="space-y-2">
+          <p className="text-xs" style={{ color: "#555" }}>名前</p>
+          <input
+            type="text"
+            value={staffName}
+            onChange={(e) => setStaffName(e.target.value)}
+            placeholder="例：田中 花子"
+            autoComplete="name"
+            className="w-full rounded-xl px-4 py-3 text-sm focus:outline-none"
+            style={{ background: "#111", border: "1px solid #2A2A2A", color: "#E8E8E8" }}
+            onFocus={(e) => (e.target.style.borderColor = "#444")}
+            onBlur={(e)  => (e.target.style.borderColor = "#2A2A2A")}
+          />
+          <p className="text-xs" style={{ color: "#333" }}>この端末に記憶されるので、次回からは入力不要です</p>
         </div>
 
         {/* メモ */}

@@ -1,0 +1,123 @@
+name: Weekly SEO Optimization
+
+on:
+  schedule:
+    # 毎週月曜 9:00 JST (= 00:00 UTC)
+    - cron: '0 0 * * 1'
+  workflow_dispatch:
+    inputs:
+      skip_fetch:
+        description: 'fetch-search-console をスキップ（既存 seo-report.json を使う）'
+        type: boolean
+        default: false
+      skip_analyze:
+        description: 'analyze-seo をスキップ（既存 seo-tasks.json を使う）'
+        type: boolean
+        default: false
+
+concurrency:
+  group: content-push
+  cancel-in-progress: false
+
+jobs:
+  seo-optimize:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v5
+        with:
+          node-version: '22'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      # ─── Step 1: Search Console データ取得 ───────────────────────────
+      - name: Fetch Search Console data
+        if: ${{ !inputs.skip_fetch }}
+        run: npx tsx scripts/fetch-search-console.ts
+        env:
+          GSC_SERVICE_ACCOUNT_JSON: ${{ secrets.GSC_SERVICE_ACCOUNT_JSON }}
+          GSC_SITE_URL: ${{ secrets.GSC_SITE_URL }}
+
+      # ─── Step 2: Claude でSEO分析・タスク生成 ─────────────────────────
+      - name: Analyze SEO and generate tasks
+        if: ${{ !inputs.skip_analyze }}
+        run: npx tsx scripts/analyze-seo.ts
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+
+      - name: Show generated tasks
+        run: |
+          if [ -f data/seo-tasks.json ]; then
+            echo "=== SEOタスク一覧 ==="
+            node -e "
+              const t = JSON.parse(require('fs').readFileSync('data/seo-tasks.json','utf-8'));
+              t.tasks.forEach(task => console.log(\`[\${task.priority}] \${task.type}: \${task.targetKeyword} - \${task.reason}\`));
+            "
+          fi
+
+      # ─── Step 3: 既存記事リライト ────────────────────────────────────
+      - name: Rewrite articles (SEO improvement)
+        run: npx tsx scripts/rewrite-article.ts
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+
+      # ─── Step 4: キーワードドリブン新規記事生成 ──────────────────────
+      - name: Generate keyword-driven articles
+        run: npx tsx scripts/generate-keyword-article.ts
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+
+      # ─── コミット & プッシュ ─────────────────────────────────────────
+      - name: Commit and push
+        id: commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add content/ data/seo-report.json data/seo-tasks.json
+          if git diff --staged --quiet; then
+            echo "変更なし、スキップ"
+            echo "committed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          git commit -m "seo: weekly optimization $(date +'%Y-%m-%d')"
+          pushed=false
+          for i in 1 2 3 4 5; do
+            git pull --rebase --autostash origin main
+            if git push; then pushed=true; break; fi
+            echo "push衝突、リトライ $i/5"
+            sleep $((RANDOM % 5 + 3))
+          done
+          if [ "$pushed" != true ]; then
+            echo "5回リトライしてもpushに失敗しました" >&2
+            exit 1
+          fi
+          echo "committed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Deploy to Vercel (Production)
+        if: steps.commit.outputs.committed == 'true'
+        run: npx vercel --prod --yes --token ${{ secrets.VERCEL_TOKEN }}
+        env:
+          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+
+      # ─── IndexNow: 変更ページをBing/AI検索に即通知 ───────────────────
+      - name: Submit to IndexNow
+        if: steps.commit.outputs.committed == 'true'
+        run: npx tsx scripts/indexnow-submit.ts --changed
+        env:
+          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+        continue-on-error: true

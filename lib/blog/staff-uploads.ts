@@ -13,6 +13,7 @@ export type StaffUpload = {
   type: "upload";
   imageGithubPath: string;  // "public/images/uploads/fleurami/fleurami-abc.jpg"
   memo: string;
+  staffName?: string;
   salonKey: StaffUploadSalonKey;
   salonName: string;
   category: "hair" | "eyelash";

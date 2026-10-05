@@ -79,6 +79,7 @@ export async function POST(request: NextRequest) {
   const files = formData.getAll("images") as File[];
   const memo = (formData.get("memo") as string | null)?.trim() ?? "";
   const salonKey = formData.get("salon") as string | null;
+  const staffName = (formData.get("staffName") as string | null)?.trim() || undefined;
 
   if (!files.length || !memo || !salonKey || !(salonKey in UPLOAD_SALON_INFO)) {
     return NextResponse.json({ error: "写真・メモ・店舗は必須です" }, { status: 400 });
@@ -121,6 +122,7 @@ export async function POST(request: NextRequest) {
     type: "upload",
     imageGithubPath,
     memo,
+    ...(staffName ? { staffName } : {}),
     salonKey: salonKey as StaffUploadSalonKey,
     salonName: salon.name,
     category: salon.category,

@@ -16,7 +16,12 @@
     "pipeline:thumb": "npx tsx scripts/generate-thumbnail.ts",
     "pipeline:regenerate": "npx tsx scripts/regenerate-articles.ts",
     "gbp:setup": "node scripts/gbp-setup.mjs",
-    "indexnow": "npx tsx scripts/indexnow-submit.ts"
+    "indexnow": "npx tsx scripts/indexnow-submit.ts",
+    "seo:fetch": "npx tsx scripts/fetch-search-console.ts",
+    "seo:analyze": "npx tsx scripts/analyze-seo.ts",
+    "seo:rewrite": "npx tsx scripts/rewrite-article.ts",
+    "seo:gen": "npx tsx scripts/generate-keyword-article.ts",
+    "seo:run": "npm run seo:fetch && npm run seo:analyze && npm run seo:rewrite && npm run seo:gen"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.105.0",
@@ -26,6 +31,7 @@
     "@types/sharp": "^0.31.1",
     "@vercel/blob": "^2.5.0",
     "dotenv": "^17.4.2",
+    "googleapis": "^183.0.0",
     "gray-matter": "^4.0.3",
     "next": "14.2.35",
     "react": "^18",
