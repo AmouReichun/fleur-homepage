@@ -3,7 +3,7 @@ title: "高知市でまつ毛パーマとマツエク、どちらが自分に合
 slug: "kochi-matsuge-perm-vs-lash-extension"
 category: "eyelash"
 salon: "Raffine"
-date: "2026-03-19"
+date: "2026-10-05"
 updated: ""
 author: "尾崎あい"
 author_role: "アイリスト"
@@ -14,7 +14,6 @@ question: "高知市でまつ毛パーマとマツエク、どちらを選ぶべ
 answer_summary: "毎日のメイク手間を減らしたい・自まつ毛を活かしたいならパーマ、目元の印象をガラッと変えたい・長さや束感を足したいならエクステ。ライフスタイルと仕上がりの好みで判断します。"
 instagram_id: "17991708341940933"
 instagram_permalink: "https://www.instagram.com/p/DWDRNPTgT-2/"
-draft: true
 faq:
   - q: "高知市でまつ毛パーマとマツエク、どちらが長持ちするの？"
     a: "まつ毛パーマは3～4週間程度、マツエク（フラットラッシュ）は4～6週間程度が目安です。持ちの長さだけで選ぶと後悔しやすいので、毎日のメイク時間やメンテナンスの手間も合わせて検討することをおすすめします。"

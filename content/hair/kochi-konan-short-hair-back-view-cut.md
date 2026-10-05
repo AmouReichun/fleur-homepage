@@ -3,7 +3,7 @@ title: "香南市でショートヘアをすっきり仕上げるには？後ろ
 slug: "kochi-konan-short-hair-back-view-cut"
 category: "hair"
 salon: "fleurami"
-date: "2026-04-09"
+date: "2026-10-05"
 updated: ""
 author: "高田和花"
 author_role: "スタイリスト"
@@ -14,7 +14,6 @@ question: "香南市でショートヘアの後ろ姿をすっきり美しく仕
 answer_summary: "後ろ姿が決まるショートヘアは、カット時の骨格に合わせた丸みの出し方と、毛流をまとめやすくする髪質改善トリートメントの組み合わせで実現します。定期的なメンテナンスと日々のケアも、美しさを長く保つためには重要です。"
 instagram_id: "18094278857031857"
 instagram_permalink: "https://www.instagram.com/reel/DW5EfKNAbKM/"
-draft: true
 faq:
   - q: "香南市のfleuramiでショートカットを初めて受ける場合、どんなことを相談すればいいですか？"
     a: "後ろ姿の印象、毎日のスタイリング時間、髪のくせやまとまりやすさなどを伝えていただけると、顔の輪郭や頭の形に合わせた提案ができます。写真があればお持ちください。"

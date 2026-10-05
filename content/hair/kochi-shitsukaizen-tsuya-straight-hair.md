@@ -3,7 +3,7 @@ title: "高知市で艶のあるストレートヘアを手に入れるには｜
 slug: "kochi-shitsukaizen-tsuya-straight-hair"
 category: "hair"
 salon: "Riv. by fleurami"
-date: "2026-04-09"
+date: "2026-10-05"
 updated: ""
 author: "西森心大"
 author_role: "スタイリスト"
@@ -14,7 +14,6 @@ question: "高知市で艶のあるまとまったストレートヘアに仕上
 answer_summary: "髪質改善トリートメントは、ダメージを受けた毛の手触りやまとまりを整えやすくし、艶感のあるストレートヘアを叶えやすいメニューです。高知県高知市のRiv. by fleuramiでは、一人ひとりの髪質や悩みに合わせた提案と施術で、長期的に整った髪を目指すお手伝いをしています。"
 instagram_id: "18462188467097537"
 instagram_permalink: "https://www.instagram.com/reel/DW5ERkokivL/"
-draft: true
 faq:
   - q: "髪質改善トリートメントと普通のトリートメントって何が違うの？"
     a: "普通のトリートメントは一時的な潤い感を出すものですが、髪質改善トリートメントは毛の内部へ栄養成分を浸透させやすく、手触りやまとまり、艶感を整えやすく設計されています。高知市のRiv. by fleuramiで使用する製品も、持ちが3〜4週間程度続きやすいのが特徴です。"
