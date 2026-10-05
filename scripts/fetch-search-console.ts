@@ -20,11 +20,9 @@ function getDateRange(): { startDate: string; endDate: string } {
 }
 
 async function buildClient() {
-  const raw = process.env.GSC_SERVICE_ACCOUNT_JSON;
-  if (!raw) throw new Error("GSC_SERVICE_ACCOUNT_JSON が未設定です");
-  const key = JSON.parse(raw);
+  // Workload Identity Federation 使用時は google-github-actions/auth が
+  // Application Default Credentials (ADC) を自動セットするため credentials 不要
   const auth = new google.auth.GoogleAuth({
-    credentials: key,
     scopes: ["https://www.googleapis.com/auth/webmasters.readonly"],
   });
   return google.searchconsole({ version: "v1", auth });

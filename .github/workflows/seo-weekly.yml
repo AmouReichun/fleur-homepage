@@ -26,6 +26,7 @@ jobs:
 
     permissions:
       contents: write
+      id-token: write  # Workload Identity Federation に必要
 
     steps:
       - name: Checkout
@@ -43,12 +44,20 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      # ─── Google Cloud 認証（Workload Identity Federation） ──────────────
+      # WIF_PROVIDER / WIF_SERVICE_ACCOUNT が未設定の場合はスキップ
+      - name: Authenticate to Google Cloud (WIF)
+        if: ${{ secrets.WIF_PROVIDER != '' && !inputs.skip_fetch }}
+        uses: google-github-actions/auth@v2
+        with:
+          workload_identity_provider: ${{ secrets.WIF_PROVIDER }}
+          service_account: ${{ secrets.WIF_SERVICE_ACCOUNT }}
+
       # ─── Step 1: Search Console データ取得 ───────────────────────────
       - name: Fetch Search Console data
         if: ${{ !inputs.skip_fetch }}
         run: npx tsx scripts/fetch-search-console.ts
         env:
-          GSC_SERVICE_ACCOUNT_JSON: ${{ secrets.GSC_SERVICE_ACCOUNT_JSON }}
           GSC_SITE_URL: ${{ secrets.GSC_SITE_URL }}
 
       # ─── Step 2: Claude でSEO分析・タスク生成 ─────────────────────────
