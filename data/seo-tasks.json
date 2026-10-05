@@ -1,0 +1,128 @@
+{
+  "generatedAt": "2026-10-05",
+  "mode": "quality-fallback",
+  "tasks": [
+    {
+      "type": "rewrite",
+      "priority": 1,
+      "targetKeyword": "縮毛矯正 料金 野市 香南市",
+      "slug": "noichi-konan-shukumou-kyosei-ryokin-fleurami",
+      "category": "hair",
+      "salon": "fleurami",
+      "currentTitle": "野市・香南市で縮毛矯正ができる美容室｜fleurami（フルールアミー）の料金案内",
+      "impressions": 0,
+      "clicks": 0,
+      "reason": "本文691字と極端に短く情報不足。料金表・施術時間・持続期間・地域名を補強し、検索意図に応える構成へ拡充が最優先。",
+      "filePath": "/home/runner/work/fleur-homepage/fleur-homepage/content/hair/noichi-konan-shukumou-kyosei-ryokin-fleurami.md"
+    },
+    {
+      "type": "rewrite",
+      "priority": 2,
+      "targetKeyword": "白髪ぼかしハイライト 40代 高知",
+      "slug": "40dai-shiraga-bokashi-highlight-shiagari-mqrjcjaq",
+      "category": "hair",
+      "salon": "fleurami",
+      "currentTitle": "40代の白髪ぼかしハイライトって実際どんな仕上がりになるの？",
+      "impressions": 0,
+      "clicks": 0,
+      "reason": "サロンの主力メニューで集客価値が高い。地域KWと料金・頻度・ビフォーアフター視点を追加し検索上位を狙う。",
+      "filePath": "/home/runner/work/fleur-homepage/fleur-homepage/content/hair/40dai-shiraga-bokashi-highlight-shiagari-mqrjcjaq.md"
+    },
+    {
+      "type": "rewrite",
+      "priority": 3,
+      "targetKeyword": "髪質改善 高知市 ツヤ髪",
+      "slug": "kamishitsu-kaizen-tsuyakam-otona-josei",
+      "category": "hair",
+      "salon": "riv",
+      "currentTitle": "サラサラのツヤ髪になりたい。大人女性にこそ知ってほしい「髪質改善」とは？",
+      "impressions": 0,
+      "clicks": 0,
+      "reason": "Rivの主力メニューだが地域KW不在で本文も薄い。高知市KWと具体的な施術内容・効果持続を加筆し強化する。",
+      "filePath": "/home/runner/work/fleur-homepage/fleur-homepage/content/hair/kamishitsu-kaizen-tsuyakam-otona-josei.md"
+    },
+    {
+      "type": "new_article",
+      "priority": 4,
+      "targetKeyword": "髪質改善 縮毛矯正 違い 高知市",
+      "slug": "kamishitsu-kaizen-shukumo-kyosei-chigai-kochi",
+      "category": "hair",
+      "salon": "riv",
+      "impressions": 0,
+      "clicks": 0,
+      "reason": "比較検索の需要が高く差別化コンテンツに最適。両施術の違い・選び方・料金を網羅し新規流入を獲得する。"
+    },
+    {
+      "type": "new_article",
+      "priority": 5,
+      "targetKeyword": "まつ毛パーマ 頻度 高知",
+      "slug": "matsuge-perm-hindo-kochi-raffine",
+      "category": "eyelash",
+      "salon": "raffine",
+      "impressions": 0,
+      "clicks": 0,
+      "reason": "アイラッシュ記事が候補に不在でraffine強化が必要。頻度の疑問は検索需要が高く来店促進に直結する。"
+    },
+    {
+      "type": "new_article",
+      "priority": 6,
+      "targetKeyword": "マツエク デザイン 高知",
+      "slug": "matsuext-design-kochi-raffine",
+      "category": "eyelash",
+      "salon": "raffine",
+      "impressions": 0,
+      "clicks": 0,
+      "reason": "デザイン検索はマツエク選定時の主要意図。本数・カール・仕上がり例を紹介しraffineの指名予約を増やす。"
+    },
+    {
+      "type": "new_article",
+      "priority": 7,
+      "targetKeyword": "眉毛ワックス 高知市",
+      "slug": "mayuge-wax-kochi-raffine",
+      "category": "eyelash",
+      "salon": "raffine",
+      "impressions": 0,
+      "clicks": 0,
+      "reason": "眉毛WAXは競合が少なく上位獲得しやすい。施術の流れ・料金・持続を解説し新規メニュー認知を広げる。"
+    },
+    {
+      "type": "rewrite",
+      "priority": 8,
+      "targetKeyword": "白髪ぼかし 60代 ショートボブ 高知",
+      "slug": "60s-shiraga-bokashi-short-bob-fleurami-mqq65jtq",
+      "category": "hair",
+      "salon": "fleurami",
+      "currentTitle": "60代の白髪ぼかしショートボブ、仕上がりはどうなるの？",
+      "impressions": 0,
+      "clicks": 0,
+      "reason": "シニア層の白髪ぼかし需要は明確。地域KWと施術頻度・料金目安を補強しターゲット層の来店を促す。",
+      "filePath": "/home/runner/work/fleur-homepage/fleur-homepage/content/hair/60s-shiraga-bokashi-short-bob-fleurami-mqq65jtq.md"
+    },
+    {
+      "type": "rewrite",
+      "priority": 9,
+      "targetKeyword": "メンズパーマ 高知",
+      "slug": "mens-perm-style-fleurami-kochi-mqrjdb1g",
+      "category": "hair",
+      "salon": "fleurami",
+      "currentTitle": "メンズパーマってどんな仕上がりになるの？パーマスタイルの魅力と施術の流れを解説",
+      "impressions": 0,
+      "clicks": 0,
+      "reason": "類似のメンズパーマ記事が2本あり内容重複。地域KWと料金・持続を加え1本に統合強化し評価分散を防ぐ。",
+      "filePath": "/home/runner/work/fleur-homepage/fleur-homepage/content/hair/mens-perm-style-fleurami-kochi-mqrjdb1g.md"
+    },
+    {
+      "type": "rewrite",
+      "priority": 10,
+      "targetKeyword": "大人 ショートボブ 40代 高知",
+      "slug": "otona-short-bob-40dai-hairstyle-mqq61cu2",
+      "category": "hair",
+      "salon": "fleurami",
+      "currentTitle": "大人のショートボブって40代に似合うの？仕上がりのポイントを美容師が解説",
+      "impressions": 0,
+      "clicks": 0,
+      "reason": "ショートボブ系記事が多数重複。地域KWと骨格別の提案・施術例を加え代表記事として差別化し内部競合を解消。",
+      "filePath": "/home/runner/work/fleur-homepage/fleur-homepage/content/hair/otona-short-bob-40dai-hairstyle-mqq61cu2.md"
+    }
+  ]
+}
