@@ -47,7 +47,7 @@ jobs:
       # ─── Google Cloud 認証（Workload Identity Federation） ──────────────
       # WIF_PROVIDER / WIF_SERVICE_ACCOUNT が未設定の場合はスキップ
       - name: Authenticate to Google Cloud (WIF)
-        if: ${{ secrets.WIF_PROVIDER != '' && !inputs.skip_fetch }}
+        if: ${{ !inputs.skip_fetch }}
         uses: google-github-actions/auth@v2
         with:
           workload_identity_provider: ${{ secrets.WIF_PROVIDER }}
