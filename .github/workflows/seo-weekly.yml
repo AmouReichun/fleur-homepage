@@ -14,6 +14,10 @@ on:
         description: 'analyze-seo をスキップ（既存 seo-tasks.json を使う）'
         type: boolean
         default: false
+      skip_rewrite:
+        description: '既存記事のリライトをスキップ'
+        type: boolean
+        default: true
 
 concurrency:
   group: content-push
@@ -79,6 +83,7 @@ jobs:
 
       # ─── Step 3: 既存記事リライト ────────────────────────────────────
       - name: Rewrite articles (SEO improvement)
+        if: ${{ !inputs.skip_rewrite }}
         run: npx tsx scripts/rewrite-article.ts
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}

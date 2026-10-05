@@ -79,11 +79,27 @@ async function generateKeywordArticle(task: NewArticleTask): Promise<void> {
   const area = AREA_BY_KEY[key] ?? "高知市";
   const existingTitles = getExistingTitles(salonName, category);
 
-  const basePrompt = buildBasePrompt({ category, salonName, area, existingTitles });
+  const authorHistory = key === "riv"
+    ? "高知市の美容室 Riv. by fleurami のスタイリスト。髪質改善・縮毛矯正を得意とする"
+    : undefined;
+
+  const basePrompt = buildBasePrompt({
+    category, salonName, area, existingTitles,
+    author: key === "riv" ? "細川彩香" : undefined,
+    authorHistory,
+  });
 
   const articleInstruction = `
 【記事生成指示】
 キーワード「${task.targetKeyword}」で情報系ピラー記事を生成してください。
+
+【SEO必須要件】
+- タイトル: 「${task.targetKeyword}」を冒頭または冒頭付近に含め、55〜65文字に収める
+- H2見出し: 最低2つに「${task.targetKeyword}」またはその派生語・同義語を自然に含める
+- 本文: 「${task.targetKeyword}」を5〜8回自然に含める（不自然な連続使用・詰め込みは禁止）
+- excerpt: 「${task.targetKeyword}」と地域名を含む120文字以内
+- FAQ: 「${task.targetKeyword}」を含む質問を最低2問含める
+- 文字数: 2500文字以上の密度ある内容にする
 
 目的:
 - 検索順位を上げるための専門解説記事（読者の悩みに深く答える）
@@ -92,9 +108,7 @@ async function generateKeywordArticle(task: NewArticleTask): Promise<void> {
 
 注意:
 - 写真はありません（Instagram写真ドリブンではなく、テキスト中心のピラー記事）
-- 「施術事例（今回の仕上がり）」セクションは「${salonName}の施術事例・お悩み相談」として、実際にありそうなお悩みと対応例を書く
-- ターゲットキーワードをタイトル・見出し・本文に自然に織り込む
-- 2000文字以上の密度ある内容にする`;
+- 「施術事例（今回の仕上がり）」セクションは「${salonName}の施術事例・お悩み相談」として、実際にありそうなお悩みと対応例を書く`;
 
   const prompt = `${basePrompt}\n\n${articleInstruction}\n\n${JSON_INSTRUCTION}`;
 
