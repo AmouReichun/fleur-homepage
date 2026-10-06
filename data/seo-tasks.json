@@ -1,51 +1,48 @@
 {
-  "generatedAt": "2026-10-05",
+  "generatedAt": "2026-10-06",
   "mode": "gsc",
   "tasks": [
     {
       "type": "rewrite",
       "priority": 1,
-      "targetKeyword": "縮毛矯正 サラサラ 仕組み",
-      "slug": "shukumo-kyosei-sarasara-shikumi-mqq629b3",
+      "targetKeyword": "高知市 縮毛矯正 サラサラ",
+      "slug": "/blog/hair/shukumo-kyosei-sarasara-shikumi-mqq629b3",
       "category": "hair",
       "salon": "riv",
-      "currentTitle": "縮毛矯正をかけると髪がここまで変わる？サラサラになる仕組みと向いている人を解説",
+      "currentTitle": "高知市で縮毛矯正がサラサラに見える仕組みとは？向いている人を担当スタイリストが解説｜高知県高知市の美容室Riv. by fleurami",
       "currentPosition": 8.5,
-      "impressions": 75,
+      "impressions": 73,
       "clicks": 0,
       "ctr": 0,
-      "reason": "表示75回・順位8.5位と上位だがCTR0%。タイトルに地域名「高知市」と具体的ベネフィットを追加し、クリック誘発の訴求を強化すれば流入増が最も見込める。",
-      "filePath": "/home/runner/work/fleur-homepage/fleur-homepage/content/hair/shukumo-kyosei-sarasara-shikumi-mqq629b3.md"
+      "reason": "順位8.5位・表示73回と好条件ながらCTR0%。タイトル前半に数字やベネフィットを加えクリックを誘発。表示最多でインパクト大のため最優先。"
     },
     {
       "type": "rewrite",
       "priority": 2,
-      "targetKeyword": "縮毛矯正 髪質改善 同日 高知市",
-      "slug": "kochi-shukumo-shitsukaizen-onedaysession-guide-msh284gn",
+      "targetKeyword": "高知市 縮毛矯正 髪質改善 同日",
+      "slug": "/blog/hair/kochi-shukumo-shitsukaizen-onedaysession-guide-msh284gn",
       "category": "hair",
       "salon": "riv",
-      "currentTitle": "縮毛矯正＋髪質改善トリートメントを同日施術するとどう仕上がる？｜高知県高知市Riv. by fleuramiの40代向け施術ガイド",
+      "currentTitle": "縮毛矯正＋髪質改善は同日でできる？高知市で迷う40代へ違いと仕上がりを解説",
       "currentPosition": 8.1,
       "impressions": 37,
       "clicks": 0,
       "ctr": 0,
-      "reason": "順位8.1位・表示37回でCTR0%。タイトルが長く冗長なため前半30文字に要点を凝縮し、ビフォーアフター訴求を加えてクリック率改善を図る。",
-      "filePath": "/home/runner/work/fleur-homepage/fleur-homepage/content/hair/kochi-shukumo-shitsukaizen-onedaysession-guide-msh284gn.md"
+      "reason": "順位8.1位でトップ表示圏なのにCTR0%。タイトルに料金・所要時間・ビフォーアフター訴求を追加し、同テーマ記事との差別化で流入改善が見込める。"
     },
     {
       "type": "rewrite",
       "priority": 3,
-      "targetKeyword": "カラー 髪質改善 同日",
-      "slug": "color-cut-kamishitsu-kaizen-treatment-mqq5zqzx",
+      "targetKeyword": "高知市 カラー 髪質改善 同日 色持ち",
+      "slug": "/blog/hair/color-cut-kamishitsu-kaizen-treatment-mqq5zqzx",
       "category": "hair",
       "salon": "riv",
-      "currentTitle": "カラー＋髪質改善トリートメントを同日に受けると仕上がりはどう変わる？",
+      "currentTitle": "高知市でカラーと髪質改善を同日に受けると色持ち・ツヤはどう変わる？｜高知県高知市の美容室Riv. by fleurami",
       "currentPosition": 8.9,
-      "impressions": 74,
+      "impressions": 70,
       "clicks": 1,
       "ctr": 1.4,
-      "reason": "表示74回・順位8.9位と上位だがCTR1.4%と低い。地域名と「色持ち・ツヤ」など具体ベネフィットをタイトルに加え、CTR改善で表示ポテンシャルを活かす。",
-      "filePath": "/home/runner/work/fleur-homepage/fleur-homepage/content/hair/color-cut-kamishitsu-kaizen-treatment-mqq5zqzx.md"
+      "reason": "表示70回と多く順位8.9位。CTR1.4%は低水準。タイトル冒頭を質問型から具体効果（◯週間色持ち等）へ変更し、上位化とクリック率の底上げを狙う。"
     },
     {
       "type": "new_article",
@@ -53,16 +50,16 @@
       "targetKeyword": "高知市 縮毛矯正",
       "category": "hair",
       "salon": "riv",
-      "impressions": 76,
+      "impressions": 74,
       "clicks": 0,
       "ctr": 0,
-      "reason": "表示76回と需要が高いビッグKWだが順位15.5位で対応記事なし。rivの縮毛矯正強みを軸に地域特化の網羅記事を新規作成すれば上位化と集客が期待できる。"
+      "reason": "表示74回・順位15.9位のビッグKWに対応記事が無く機会損失。料金・施術例・口コミを網羅した専用ピラーページを新設し内部リンクで関連記事を集約する。"
     },
     {
       "type": "rewrite",
       "priority": 5,
-      "targetKeyword": "縮毛矯正 髪質改善 同日 仕上がり 事例",
-      "slug": "kochi-shrinkukyosei-shitsukaizen-doujitsu-shiagari-ms5k49hl",
+      "targetKeyword": "高知市 縮毛矯正 髪質改善 仕上がり 事例",
+      "slug": "/blog/hair/kochi-shrinkukyosei-shitsukaizen-doujitsu-shiagari-ms5k49hl",
       "category": "hair",
       "salon": "riv",
       "currentTitle": "縮毛矯正と髪質改善トリートメントを同日に受けるとどう仕上がる？｜高知市Riv. by fleuramiの施術事例",
@@ -70,23 +67,7 @@
       "impressions": 32,
       "clicks": 1,
       "ctr": 3.1,
-      "reason": "順位8.2位でCTR3.1%とまずまずだが、類似記事と内容が重複気味。施術事例・写真を強化し差別化、内部リンクで同テーマ記事を集約し評価を高める。",
-      "filePath": "/home/runner/work/fleur-homepage/fleur-homepage/content/hair/kochi-shrinkukyosei-shitsukaizen-doujitsu-shiagari-ms5k49hl.md"
-    },
-    {
-      "type": "rewrite",
-      "priority": 6,
-      "targetKeyword": "大人 ショートボブ 後ろ姿 カット",
-      "slug": "40dai-hair-menu-color-perm-shukumo",
-      "category": "hair",
-      "salon": "fleurami",
-      "currentTitle": "大人のショートボブ、後ろ姿がきれいに見えるカットって何が違うの？",
-      "currentPosition": 8.6,
-      "impressions": 30,
-      "clicks": 0,
-      "ctr": 0,
-      "reason": "順位8.6位・表示30回でCTR0%。slugと内容テーマがタイトルと不一致。タイトルに地域名と大人女性・白髪ぼかし訴求を加え内容と整合させクリック改善を図る。",
-      "filePath": "/home/runner/work/fleur-homepage/fleur-homepage/content/hair/40dai-hair-menu-color-perm-shukumo.md"
+      "reason": "CTR3.1%と最も高いが順位8.2位で伸び代あり。施術事例写真とお客様の悩み別見出しを追加し内容強化、同テーマ記事との役割分担で順位上位化を図る。"
     }
   ]
 }
