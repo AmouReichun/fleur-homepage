@@ -25,6 +25,12 @@ type SeoReport = {
   byPage: { page: string; clicks: number; impressions: number; ctr: number; position: number }[];
 };
 
+type AnalyticsReport = {
+  generatedAt: string;
+  period: { startDate: string; endDate: string };
+  byPage: { page: string; sessions: number; pageViews: number; bounceRate: number; avgDurationSec: number }[];
+};
+
 type SeoTask = {
   type: "rewrite" | "new_article";
   priority: number;
@@ -93,8 +99,11 @@ function buildArticleIndex(): { byPage: Map<string, ArticleMeta>; all: ArticleMe
 
 async function analyzeWithGSC(
   report: SeoReport,
-  byPage: Map<string, ArticleMeta>
+  byPage: Map<string, ArticleMeta>,
+  analytics?: AnalyticsReport
 ): Promise<SeoTask[]> {
+  const gaByPage = new Map((analytics?.byPage ?? []).map((p) => [p.page, p]));
+
   const rewriteCandidates = report.byPage
     .filter((p) => p.position >= 8 && p.position <= 35 && p.impressions >= 30 && byPage.has(p.page))
     .sort((a, b) => b.impressions - a.impressions)
@@ -108,15 +117,23 @@ async function analyzeWithGSC(
 
   const rewriteLines = rewriteCandidates.map((p) => {
     const meta = byPage.get(p.page)!;
-    return `ページ: ${p.page} | 順位: ${p.position} | 表示: ${p.impressions} | CTR: ${(p.ctr * 100).toFixed(1)}% | タイトル: "${meta.title}"`;
+    const ga = gaByPage.get(p.page);
+    const gaStr = ga
+      ? ` | セッション: ${ga.sessions} | 直帰率: ${ga.bounceRate}% | 滞在: ${ga.avgDurationSec}秒`
+      : "";
+    return `ページ: ${p.page} | 順位: ${p.position} | 表示: ${p.impressions} | CTR: ${(p.ctr * 100).toFixed(1)}%${gaStr} | タイトル: "${meta.title}"`;
   }).join("\n");
 
   const newLines = newArticleCandidates.map((q) =>
     `KW: "${q.query}" | 順位: ${q.position} | 表示: ${q.impressions} | CTR: ${(q.ctr * 100).toFixed(1)}%`
   ).join("\n");
 
+  const gaNote = analytics
+    ? `\n【GA4データあり】直帰率が高い（70%超）＋滞在時間が短い（60秒未満）ページはコンテンツ改善優先度を上げる。セッション数が多いのにCTRが低いページはタイトル改善で効果が出やすい。`
+    : "";
+
   const prompt = `あなたは美容室・アイラッシュサロンのSEOコンサルタントです。
-Google Search Console データを分析し、fleur GROUP（高知県）のブログSEOを改善するタスクを最大${MAX_TASKS}件、優先度順にJSON配列で返してください。
+Google Search Console${analytics ? "＋Google Analytics 4" : ""}データを分析し、fleur GROUP（高知県）のブログSEOを改善するタスクを最大${MAX_TASKS}件、優先度順にJSON配列で返してください。${gaNote}
 
 【サロン情報】
 - fleurami: 香南市の美容室（白髪ぼかし・髪質改善・大人女性向け）
@@ -290,14 +307,22 @@ async function main() {
   console.log(`記事数: ${all.length}件（下書き除く）`);
 
   const reportPath = path.join(process.cwd(), "data", "seo-report.json");
+  const analyticsPath = path.join(process.cwd(), "data", "analytics-report.json");
   let tasks: SeoTask[];
+
+  // GA4データがあれば読み込む
+  let analytics: AnalyticsReport | undefined;
+  if (fs.existsSync(analyticsPath)) {
+    analytics = JSON.parse(fs.readFileSync(analyticsPath, "utf-8")) as AnalyticsReport;
+    console.log(`GA4データあり（${analytics.byPage.length}ページ）`);
+  }
 
   if (fs.existsSync(reportPath)) {
     const report: SeoReport = JSON.parse(fs.readFileSync(reportPath, "utf-8"));
-    console.log(`モード: GSCデータあり（${report.period.startDate} 〜 ${report.period.endDate}）`);
+    console.log(`モード: GSC${analytics ? "＋GA4" : ""}データあり（${report.period.startDate} 〜 ${report.period.endDate}）`);
     console.log(`クエリ数: ${report.byQuery.length} / ページ数: ${report.byPage.length}`);
-    console.log("Claude でGSC分析中...");
-    tasks = await analyzeWithGSC(report, byPage);
+    console.log("Claude で分析中...");
+    tasks = await analyzeWithGSC(report, byPage, analytics);
   } else {
     console.log("モード: フォールバック（GSCレポートなし → 記事品質スコアリング）");
     console.log("Claude で品質分析中...");

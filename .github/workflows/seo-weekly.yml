@@ -64,6 +64,13 @@ jobs:
         env:
           GSC_SITE_URL: ${{ secrets.GSC_SITE_URL }}
 
+      # ─── Step 1b: Google Analytics 4 データ取得 ──────────────────────
+      - name: Fetch Analytics data
+        if: ${{ !inputs.skip_fetch }}
+        run: npx tsx scripts/fetch-analytics.ts
+        env:
+          GA4_PROPERTY_ID: ${{ secrets.GA4_PROPERTY_ID }}
+
       # ─── Step 2: Claude でSEO分析・タスク生成 ─────────────────────────
       - name: Analyze SEO and generate tasks
         if: ${{ !inputs.skip_analyze }}
