@@ -65,7 +65,7 @@ conversation:
   - speaker: stylist
     text: >-
       髪質改善は2〜4週間ごと、縮毛矯正は根元が気になる3〜6ヶ月ごとが目安です。詳しい料金はカウンセリング時にお伝えするので、迷っている段階でも気軽にご相談ください。
-draft: true
+draft: false
 seo_generated: true
 target_keyword: 髪質改善 縮毛矯正 違い 高知市
 ---

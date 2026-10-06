@@ -163,7 +163,7 @@ async function generateKeywordArticle(task: NewArticleTask): Promise<void> {
     faq: generated.faq ?? [],
     steps: generated.steps ?? [],
     conversation: generated.conversation ?? [],
-    draft: true,
+    draft: false,
     seo_generated: true,
     target_keyword: task.targetKeyword,
   };

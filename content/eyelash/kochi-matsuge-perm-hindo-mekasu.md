@@ -57,7 +57,7 @@ conversation:
   - speaker: stylist
     text: >-
       まつ毛を触る癖や、オイルクレンジングの使い方で印象が変わりやすいんです。お風呂上がりに軽く乾かすだけでもラインが整って見えやすくなりますよ。次回ケア方法もお伝えしますね。
-draft: true
+draft: false
 seo_generated: true
 target_keyword: まつ毛パーマ 頻度 高知
 ---

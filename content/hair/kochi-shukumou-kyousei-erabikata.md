@@ -60,7 +60,7 @@ conversation:
     text: カラーもしてるから傷まないか心配…。
   - speaker: stylist
     text: カラー履歴がある部分は負担が偏りやすいので、薬剤を塗り分けて調整します。状態によっては日を分けたり、髪質改善トリートメントを挟むご提案もします。
-draft: true
+draft: false
 seo_generated: true
 target_keyword: 高知市 縮毛矯正
 ---

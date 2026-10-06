@@ -59,7 +59,7 @@ conversation:
     text: ツンと真っ直ぐになりすぎるのは嫌なんだけど、自然にできる？
   - speaker: stylist
     text: 薬剤やアイロンの当て方で毛先に少し動きを残すこともできます。自然な範囲でまとまるよう、仕上がりの希望を最初に伺って調整しますね。
-draft: true
+draft: false
 seo_generated: true
 target_keyword: 高知市 縮毛矯正
 ---
