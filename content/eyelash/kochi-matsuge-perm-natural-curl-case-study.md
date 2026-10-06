@@ -3,7 +3,7 @@ title: "高知市でまつ毛パーマを受けた20代女性の目元変化｜R
 slug: "kochi-matsuge-perm-natural-curl-case-study"
 category: "eyelash"
 salon: "Raffine"
-date: "2026-03-29"
+date: "2026-10-06"
 updated: ""
 author: "安井未琉"
 author_role: "アイリスト"
@@ -14,7 +14,6 @@ question: "高知市でまつ毛パーマを考えているけれど、実際の
 answer_summary: "高知市のRaffineで対応するまつ毛パーマは、カール感と自然さのバランスを重視する20～30代女性に向いています。実際の施術事例を見ることで、自分に合うサロン選びの判断材料が得られます。"
 instagram_id: "18576955255037261"
 instagram_permalink: "https://www.instagram.com/p/DWcteXEgW6g/"
-draft: true
 faq:
   - q: "高知市でまつ毛パーマとまつ毛エクステ、どちらを選ぶべき？"
     a: "まつ毛パーマは自分のまつ毛にカールをつけるため、自然さを重視する方に向いています。一方、まつ毛エクステは長さや量を足すため、ボリューム感を求める方に向いています。Raffineではどちらも対応しているので、カウンセリングで目元の悩みに合わせて提案させていただきます。"
