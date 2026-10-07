@@ -3,7 +3,7 @@ title: "ツヤストレートロングヘアを叶えるには何が必要？｜
 slug: "kochi-tuya-straight-long-shitsukaizen"
 category: "hair"
 salon: "Riv. by fleurami"
-date: "2026-04-03"
+date: "2026-10-07"
 updated: ""
 author: "西森心大"
 author_role: "スタイリスト"
@@ -14,7 +14,6 @@ question: "高知市でツヤのあるストレートロングヘアにするに
 answer_summary: "髪質改善トリートメントとカットの組み合わせで、手触りとツヤ感を引き出しやすくなります。Riv. by fleuramiでは、カウンセリングで現在の髪の状態を見極めた上で、最適なメニューと施術の流れを提案します。"
 instagram_id: "18445509613119280"
 instagram_permalink: "https://www.instagram.com/reel/DWpmzXYktZO/"
-draft: true
 faq:
   - q: "高知市の美容室で髪質改善トリートメントを受けるなら、どのくらいの頻度で通えばいい？"
     a: "初回施術後は3〜4ヶ月程度で次回の施術を検討される方が多くいます。ツヤ感とまとまりの持ちは個人差がありますが、月1回程度のヘッドスパやトリートメントメニューを組み合わせると、仕上がりをより長く感じやすい傾向があります。"

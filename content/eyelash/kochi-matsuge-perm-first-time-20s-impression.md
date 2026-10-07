@@ -3,7 +3,7 @@ title: "高知市でまつ毛パーマを初めて受ける20代へ｜自まつ�
 slug: "kochi-matsuge-perm-first-time-20s-impression"
 category: "eyelash"
 salon: "Raffine"
-date: "2026-02-24"
+date: "2026-10-07"
 updated: ""
 author: "安井未琉"
 author_role: "アイリスト"
@@ -14,7 +14,6 @@ question: "高知市で初めてまつ毛パーマを受けるなら、どんな
 answer_summary: "高知市でまつ毛パーマを選ぶ際は、カウンセリングで自まつ毛の状態と理想の印象を丁寧に確認してくれるサロンが重要です。Raffineのような施術例を見ることで、あなたの目元にどう変わるかが判断しやすくなります。"
 instagram_id: "18062558912652729"
 instagram_permalink: "https://www.instagram.com/p/DVIPNiMAdjH/"
-draft: true
 faq:
   - q: "高知市Raffineではじめてまつ毛パーマを受けても大丈夫ですか？"
     a: "はい、大丈夫です。Raffineは初めての方へのカウンセリングを丁寧に行い、自まつ毛の毛質やクセ、理想の仕上がりを確認してから施術します。わからないことは施術前に何でも相談できます。"

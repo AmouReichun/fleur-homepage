@@ -3,7 +3,7 @@ title: "香南市でボブスタイルの後ろ姿をすっきり整えるには
 slug: "konan-bob-ushiro-sugata-katsu-shitsukaizen"
 category: "hair"
 salon: "fleurami"
-date: "2026-04-03"
+date: "2026-10-07"
 updated: ""
 author: "山岡悠弥"
 author_role: "スタイリスト"
@@ -14,7 +14,6 @@ question: "香南市でボブスタイルの後ろ姿をすっきり整えるに
 answer_summary: "ボブの後ろ姿の仕上がりは、髪質のくせやボリュームの出方と、カットの角度・長さの選び方で大きく左右されます。高知県香南市のfleuramiでは、髪質診断に基づいたカット提案で、長く整いやすいボブを実現する方が多くいます。"
 instagram_id: "18058917287433878"
 instagram_permalink: "https://www.instagram.com/reel/DWpmwtSgRmI/"
-draft: true
 faq:
   - q: "ボブの後ろ姿がはねたり広がったりするのは、髪質の問題ですか？"
     a: "髪質のくせの強さと、カットの角度・長さが合わないことが両方関係しています。くせの出方に合わせて毛流を生かすカットにすることで、朝のスタイリングもしやすくなる傾向があります。まずは髪質の特性をスタイリストに相談することが大切です。"
