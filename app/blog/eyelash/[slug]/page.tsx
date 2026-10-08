@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { seoTitle } from "@/lib/blog/seo-title";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
@@ -27,12 +28,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const post = await getPost("eyelash", params.slug).catch(() => null);
   if (!post) return {};
   const SITE_URL = process.env.SITE_URL ?? "https://fleur-group.jp";
+  const title = seoTitle(post);
   return {
-    title: post.title,
+    title: { absolute: title },
     description: post.excerpt,
     alternates: { canonical: `/blog/eyelash/${post.slug}` },
     openGraph: {
-      title: post.title,
+      title,
       description: post.excerpt,
       type: "article",
       publishedTime: post.date,

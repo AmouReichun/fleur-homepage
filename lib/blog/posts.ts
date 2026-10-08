@@ -22,6 +22,8 @@ export type HowToStep = { name: string; text: string };
 
 export type PostMeta = {
   title: string;
+  /** 検索結果用の短いタイトル（任意）。なければ seoTitle() が自動で作る */
+  seoTitle?: string;
   slug: string;
   category: Category;
   salon: string;
@@ -62,6 +64,7 @@ export function getPostMeta(category: Category, slug: string): PostMeta & { draf
   const { data } = matter(raw);
   return {
     title: data.title ?? "",
+    ...(data.seoTitle ? { seoTitle: String(data.seoTitle) } : {}),
     slug: data.slug ?? slug,
     category: data.category ?? category,
     salon: data.salon ?? "",
@@ -93,6 +96,7 @@ export async function getPost(category: Category, slug: string): Promise<Post & 
 
   return {
     title: data.title ?? "",
+    ...(data.seoTitle ? { seoTitle: String(data.seoTitle) } : {}),
     slug: data.slug ?? slug,
     category: data.category ?? category,
     salon: data.salon ?? "",

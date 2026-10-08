@@ -1,6 +1,6 @@
 {
   "enabled": true,
   "hourJST": 17,
-  "perSalon": 2,
-  "monthlyLimit": 200
+  "perSalon": 1,
+  "monthlyLimit": 60
 }

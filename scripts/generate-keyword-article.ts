@@ -94,7 +94,7 @@ async function generateKeywordArticle(task: NewArticleTask): Promise<void> {
 キーワード「${task.targetKeyword}」で情報系ピラー記事を生成してください。
 
 【SEO必須要件】
-- タイトル: 「${task.targetKeyword}」を冒頭または冒頭付近に含め、55〜65文字に収める
+- タイトル: 「${task.targetKeyword}」を冒頭または冒頭付近に含め、「｜」より前のメイン部分を28〜32文字に収める（検索結果で全部見える長さ。店名は自動で付くので入れなくてよい）
 - H2見出し: 最低2つに「${task.targetKeyword}」またはその派生語・同義語を自然に含める
 - 本文: 「${task.targetKeyword}」を5〜8回自然に含める（不自然な連続使用・詰め込みは禁止）
 - excerpt: 「${task.targetKeyword}」と地域名を含む120文字以内

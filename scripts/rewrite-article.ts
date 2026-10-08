@@ -128,9 +128,51 @@ ${existingBody.slice(0, 2000)}`;
   console.log(`  ✅ リライト完了: ${newFm.title}`);
 }
 
+
+/**
+ * 1ページ目（10位以内）に出ているのにクリックされない記事は、本文を書き換えると順位が揺れるため
+ * 「検索結果に出る部分」＝ seoTitle（短いタイトル）と excerpt（説明文）だけを直す。
+ */
+async function rewriteTitleOnly(task: RewriteTask, filePath: string): Promise<void> {
+  const raw = fs.readFileSync(filePath, "utf-8");
+  const { data: fm, content: body } = matter(raw);
+  const prompt = `あなたは高知県の美容室・まつげサロンの検索結果改善の担当です。
+次のブログ記事は検索で${task.currentPosition ?? "?"}位・表示${task.impressions}回なのにクリックが少ないです。
+検索結果に表示される「タイトル」と「説明文」だけを、クリックしたくなる形に書き直してください。本文は変えません。
+
+狙うキーワード: ${task.targetKeyword}
+今のタイトル: ${fm.title ?? ""}
+今の説明文: ${fm.excerpt ?? ""}
+本文の冒頭: ${body.slice(0, 800)}
+
+ルール:
+- seoTitle: 28〜32文字。狙うキーワードの地域名とメニュー名を前半に入れる。数字・具体的な結果・対象（例：40代、くせ毛）で中身が一目で分かるように。誇大表現（No.1、絶対、必ず）は使わない。店名は入れない（自動で付く）
+- excerpt: 80〜110文字。誰の・どんな悩みに・何が分かるかを書く。最後に店名と地域を入れる
+- 本文に書いていないこと（料金・時間など）は書かない
+
+次のJSONだけを返してください: {"seoTitle": "...", "excerpt": "..."}`;
+  const res = await client.messages.create({
+    model: "claude-opus-4-8",
+    max_tokens: 600,
+    messages: [{ role: "user", content: prompt }],
+  });
+  const text = res.content[0].type === "text" ? res.content[0].text : "";
+  const match = text.match(/\{[\s\S]+\}/);
+  if (!match) throw new Error(`Claude がJSONを返しませんでした (slug: ${task.slug})`);
+  const g = JSON.parse(match[0]) as { seoTitle?: string; excerpt?: string };
+  if (!g.seoTitle || g.seoTitle.length > 40) throw new Error(`seoTitle が不正: ${g.seoTitle}`);
+  const newFm = { ...fm, seoTitle: g.seoTitle, excerpt: g.excerpt || fm.excerpt, updated: new Date().toISOString().slice(0, 10) };
+  fs.writeFileSync(filePath, matter.stringify(body, newFm), "utf-8");
+  console.log(`  ✅ タイトル・説明文だけ改善: ${g.seoTitle}`);
+}
+
 async function main() {
   const tasks = loadTasks();
-  const rewrites = tasks.slice(0, 3); // 1回最大3件リライト（API負荷・push競合を抑制）
+  // 10位以内（1ページ目）でクリックが少ない記事 → タイトル・説明文だけ直す（最大5件）
+  // それ以外 → 本文ごとリライト（最大2件）
+  const titleOnly = tasks.filter((t) => (t.currentPosition ?? 99) <= 10).slice(0, 5);
+  const full = tasks.filter((t) => (t.currentPosition ?? 99) > 10).slice(0, 2);
+  const rewrites = [...titleOnly, ...full];
 
   if (rewrites.length === 0) {
     console.log("リライトタスクなし");
@@ -149,7 +191,8 @@ async function main() {
       continue;
     }
     try {
-      await rewriteArticle(task, filePath);
+      if ((task.currentPosition ?? 99) <= 10) await rewriteTitleOnly(task, filePath);
+      else await rewriteArticle(task, filePath);
       done++;
     } catch (e) {
       console.error(`  ❌ 失敗: ${task.slug}`, e);
