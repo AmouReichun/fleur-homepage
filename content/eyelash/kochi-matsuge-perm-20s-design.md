@@ -3,7 +3,7 @@ title: "高知市でまつげパーマを迷っている20代女性へ｜自ま�
 slug: "kochi-matsuge-perm-20s-design"
 category: "eyelash"
 salon: "Raffine"
-date: "2026-02-28"
+date: "2026-10-08"
 updated: ""
 author: "安井未琉"
 author_role: "アイリスト"
@@ -14,7 +14,6 @@ question: "高知市でまつげパーマを選ぶとき、どんなサロンを
 answer_summary: "自まつ毛の状態を丁寧に見極め、カウンセリングで理想を伝えられるサロン選びが大切です。高知市Raffineでは、一人ひとりの目元に合わせた立ち上げデザインを提案しており、毎日のメイクがラクになると好評です。"
 instagram_id: "18060610430675524"
 instagram_permalink: "https://www.instagram.com/p/DVSDx9Wkv8G/"
-draft: true
 faq:
   - q: "高知市でまつげパーマが初めてなのですが、本当に目元の印象が変わりますか？"
     a: "自まつ毛をカールさせることで、目の大きさや開き具合が強調されやすくなります。すっぴんでも印象的な目元を叶える方が多いです。ただし個人差があるため、カウンセリング時に担当スタイリストに理想の仕上がりをお伝えいただくのが大切です。"

@@ -3,7 +3,7 @@ title: "香南市で白髪ぼかしカラーをしたとき、色持ちはどの
 slug: "konan-shiraga-bokashi-iromotchi"
 category: "hair"
 salon: "fleurami"
-date: "2026-04-04"
+date: "2026-10-08"
 updated: ""
 author: "高田和花"
 author_role: "スタイリスト"
@@ -14,7 +14,6 @@ question: "香南市で白髪ぼかしカラーをするなら、色持ちや仕
 answer_summary: "白髪ぼかしカラーの色持ちは施術内容・髪質・ホームケアによって変わります。高知県香南市のfleuramiでは、一人ひとりの髪の状態に合わせた提案と、次回の通う周期の目安もお伝えしています。"
 instagram_id: "18098202635512273"
 instagram_permalink: "https://www.instagram.com/reel/DWsJzisARzx/"
-draft: true
 faq:
   - q: "白髪ぼかしカラーの色持ちはどのくらい？"
     a: "カラーの種類や髪の状態によって異なりますが、一般的には3〜4週間程度で色が薄れやすくなる傾向があります。個人差や生活習慣によっても変わるため、担当スタイリストに相談するのがおすすめです。"

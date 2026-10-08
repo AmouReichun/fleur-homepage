@@ -3,7 +3,7 @@ title: "高知市で大人の短くて軽いボブを叶えるなら｜髪質改
 slug: "kochi-bob-karakui-kirikata"
 category: "hair"
 salon: "Riv. by fleurami"
-date: "2026-04-04"
+date: "2026-10-08"
 updated: ""
 author: "西森心大"
 author_role: "スタイリスト"
@@ -14,7 +14,6 @@ question: "高知市で短くて軽いボブスタイルを手に入れるなら
 answer_summary: "短くて軽いボブは「切り方の技術」と「髪の質感」の両立で初めて仕上がります。高知市Riv. by fleuramiでは、カットの段数・角度と髪質改善トリートメントを組み合わせることで、毛先の動きと手触りが整いやすいスタイルを実現しています。"
 instagram_id: "17893070760309493"
 instagram_permalink: "https://www.instagram.com/reel/DWsJwaaEsvB/"
-draft: true
 faq:
   - q: "高知市Riv. by fleuramiで短いボブを初めてお願いするときは、どんなことを相談すればいい？"
     a: "髪の質感（硬い・柔らかい・クセの有無）、毎日のスタイリング時間、今の髪の悩み（広がり・パサつき・ボリュームなど）を伝えてください。カウンセリングで、あなたの髪質と生活に合わせたカット角度と長さをご提案します。"
