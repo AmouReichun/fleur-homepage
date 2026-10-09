@@ -13,9 +13,22 @@ const SUFFIX: Record<ReturnType<typeof salonKeyOf>, { short: string; names: RegE
   raffine: { short: "高知市のまつげ眉毛サロンRaffine", names: /Raffine|ラフィーネ/ },
 };
 
+/**
+ * 店名はタイトルの中の店名・地域名を優先して決める。
+ * frontmatter の salon 欄がタイトルと食い違っている記事があるため（例：タイトルはRiv.・salon欄はfleurami）。
+ */
+function salonFromTitle(post: PostMeta): ReturnType<typeof salonKeyOf> {
+  if (post.category === "eyelash") return "raffine";
+  const t = post.title;
+  if (/Riv\.?|リヴ|リブ/.test(t)) return "riv";
+  if (/fleur ?ami|フルールアミー|香南|野市/i.test(t)) return "fleurami";
+  if (/高知市/.test(t)) return "riv";
+  return salonKeyOf(post);
+}
+
 export function seoTitle(post: PostMeta & { seoTitle?: string }): string {
   if (post.seoTitle && post.seoTitle.trim()) return post.seoTitle.trim();
-  const key = salonKeyOf(post);
+  const key = salonFromTitle(post);
   const main = post.title.split(/[｜|]/)[0].trim();
   const { short, names } = SUFFIX[key];
   // メイン部分に地域名と店名が両方入っていれば、後ろに何も付けない
