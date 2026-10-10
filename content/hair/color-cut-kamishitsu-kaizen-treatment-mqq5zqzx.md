@@ -2,7 +2,7 @@
 title: 高知市でカラーと髪質改善を同日に受けると色持ち・ツヤはどう変わる？｜高知県高知市の美容室Riv. by fleurami
 slug: color-cut-kamishitsu-kaizen-treatment-mqq5zqzx
 category: hair
-salon: fleurami
+salon: "Riv. by fleurami"
 date: '2026-06-23'
 updated: '2026-10-05'
 author: ''

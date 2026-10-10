@@ -2,7 +2,7 @@
 title: 高知市で縮毛矯正がサラサラに見える仕組みとは？向いている人を担当スタイリストが解説｜高知県高知市の美容室Riv. by fleurami
 slug: shukumo-kyosei-sarasara-shikumi-mqq629b3
 category: hair
-salon: fleurami
+salon: "Riv. by fleurami"
 date: '2026-06-23'
 updated: '2026-10-05'
 author: ''
