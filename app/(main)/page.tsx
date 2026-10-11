@@ -12,7 +12,7 @@ import { getContentCached } from "@/lib/content";
 import { faqPageSchema, rivSalonSchema, fleuramiSalonSchema, raffineSalonSchema, founderPersonSchema, organizationSchema, webSiteSchema } from "@/lib/structured-data";
 import HeroSlideshow from "@/app/components/HeroSlideshow";
 import QuickLinkGrid from "@/app/components/QuickLinkGrid";
-import SalonSlider from "@/app/components/SalonSlider";
+import SalonCards from "@/app/components/SalonCards";
 import PopularMenuSlider from "@/app/components/PopularMenuSlider";
 import FaqSalonGroup from "@/app/components/FaqSalonGroup";
 import BlogSlider from "@/app/components/BlogSlider";
@@ -132,7 +132,7 @@ export default async function HomePage() {
           </Reveal>
         </div>
         <Reveal delay={150}>
-          <SalonSlider salons={salons} />
+          <SalonCards salons={salons} />
         </Reveal>
       </section>
 
