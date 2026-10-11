@@ -3,7 +3,7 @@ title: "高知市でトリプルカラーを選ぶなら｜ホワイトベージ
 slug: "kochi-triplecolor-whitbeige-erabikata-mv0fhvjw"
 category: "hair"
 salon: "Riv. by fleurami"
-date: "2026-10-09"
+date: "2026-10-11"
 updated: ""
 author: "西森心大"
 author_role: "スタイリスト"
@@ -14,7 +14,6 @@ question: "高知市でトリプルカラーでホワイトベージュに仕上
 answer_summary: "トリプルカラーは複数回の脱色が必要なため、髪の状態診断・施術の正確さ・カラー知識が店選びの判断基準になります。高知市内でも対応可能な美容室は限られるため、事前のカウンセリングと施術例の確認が重要です。"
 instagram_id: ""
 instagram_permalink: ""
-draft: true
 faq:
   - q: "トリプルカラーって何回サロンに通う必要があるの？"
     a: "トリプルカラーは1回の施術で3度の脱色を行うため、基本的には1日で完結します。ただし髪のダメージ状態によっては複数回に分けることもあります。高知市のRiv. by fleuramiではカウンセリングで髪の状態を確認し、最適な計画をご提案しています。"
