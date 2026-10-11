@@ -1150,7 +1150,7 @@
       "history": "美容師歴14年",
       "salon": "fleurami",
       "bio": "美容師歴14年。fleulamiの店長として、縮毛矯正・似合わせカット・髪質改善を中心に施術を行っています。くせ毛・うねり・広がりにお悩みのお客様の縮毛矯正を多く担当し、髪質に合わせた薬剤選定と丁寧な施術で自然なストレートに仕上げることを大切にしています。カットは骨格・毛量・生活スタイルを考慮し、自宅でも再現しやすいデザインをご提案します。初回カウンセリングではお悩みとなりたいイメージを丁寧にお伺いします。",
-      "imageSrc": "/images/admin/staff-1-1782195037653.jpg",
+      "imageSrc": "https://0oxripuo8b9stzsz.public.blob.vercel-storage.com/admin/staff-2-1791698006024.jpg",
       "specialties": [
         "縮毛矯正",
         "似合わせカット",
@@ -1298,10 +1298,10 @@
     },
     {
       "name": "高田　和花",
-      "role": "アシスタント",
+      "role": "スタイリスト",
       "salon": "fleurami",
       "bio": "カラーとスパにはお任せください",
-      "imageSrc": "/images/admin/staff-11-1782443986942.jpg",
+      "imageSrc": "https://0oxripuo8b9stzsz.public.blob.vercel-storage.com/admin/staff-10-1791698043085.jpg",
       "history": "美容師歴3年",
       "qualifications": [
         "美容師免許（国家資格）"
