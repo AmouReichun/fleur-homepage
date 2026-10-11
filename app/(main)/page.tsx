@@ -21,6 +21,7 @@ import StaffPreview from "@/app/components/StaffPreview";
 import GalleryGrid from "@/app/components/GalleryGrid";
 import ReservationChannels from "@/app/components/ReservationChannels";
 import BrandMovieSection from "@/app/components/BrandMovieSection";
+import RecruitFeature from "@/app/components/RecruitFeature";
 import { getAllPostsMeta } from "@/lib/blog/posts";
 
 function SectionLabel({ index, en, ja }: { index: string; en: string; ja: string }) {
@@ -96,7 +97,7 @@ export default async function HomePage() {
 
       {/* ─── Hero ─── */}
       <HeroSlideshow images={heroImages} hasImage={hasImage}>
-        <h1 className="text-[10px] tracking-[0.4em] text-white/70 mb-8 animate-fadeinup">
+        <h1 className="text-xs sm:text-sm tracking-[0.3em] text-white/85 mb-8 animate-fadeinup">
           高知県の美容室・アイラッシュサロン
         </h1>
         <p className="font-serif text-5xl sm:text-6xl lg:text-7xl font-light text-white leading-[1.25] mb-6 whitespace-pre-line animate-fadeinup-slow">
@@ -254,31 +255,8 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* ─── Recruit ─── */}
-      <section className="py-20 sm:py-24 bg-[#1a1a1a]">
-        <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
-          <Reveal className="max-w-2xl">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-6 h-px bg-site-accent" />
-              <span className="text-[10px] tracking-[0.45em] text-site-accent uppercase">Recruit</span>
-            </div>
-            <h2 className="font-serif text-2xl sm:text-3xl font-light text-white leading-relaxed tracking-[0.06em] mb-6">
-              あなたの技術と感性を、<br />
-              高知で咲かせませんか。
-            </h2>
-            <p className="text-sm text-white/50 leading-loose mb-12 max-w-md">
-              美容師・アイリストとして、お客様の「なりたい」に真剣に向き合える環境を整えています。
-            </p>
-            <Link
-              href="/recruit"
-              className="inline-flex items-center gap-4 text-xs tracking-[0.25em] text-white/80 hover:text-white transition-colors duration-300 group"
-            >
-              <span>採用情報を見る</span>
-              <span className="w-12 h-px bg-white/40 group-hover:w-16 group-hover:bg-white/70 transition-all duration-400" />
-            </Link>
-          </Reveal>
-        </div>
-      </section>
+      {/* ─── Recruit（採用特集） ─── */}
+      <RecruitFeature stats={content.recruit?.stats} />
     </>
   );
 }
