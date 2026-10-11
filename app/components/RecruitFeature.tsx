@@ -17,7 +17,14 @@ function manen(n: number) {
   return `${Math.round(n / 1000) / 10}`.replace(/\.0$/, "");
 }
 
-export default function RecruitFeature({ stats }: { stats?: Stat[] }) {
+type Voice = { name?: string; role?: string; brand?: string; image?: string };
+
+export default function RecruitFeature({ stats, voices }: { stats?: Stat[]; voices?: Voice[] }) {
+  // 写真は管理画面「採用情報 → スタッフの声 → 画像」で差し替えられる。未設定のときだけ下の PHOTOS を使う
+  const fromAdmin = (voices ?? []).filter((v) => v.image).slice(0, 3);
+  const photos = fromAdmin.length === 3
+    ? fromAdmin.map((v, i) => ({ src: v.image as string, alt: `${v.brand ?? ""} ${v.role ?? ""} ${v.name ?? ""}`.trim() + " のスタッフ写真", cls: PHOTOS[i].cls }))
+    : PHOTOS;
   const shown = FEATURE_STAT_LABELS.map((l) => (stats ?? []).find((s) => s.label === l)).filter(Boolean) as Stat[];
   return (
     <section className="relative py-24 sm:py-32 bg-[#1a1a1a] overflow-hidden" aria-labelledby="recruit-feature-title">
@@ -71,7 +78,7 @@ export default function RecruitFeature({ stats }: { stats?: Stat[] }) {
           <div className="lg:col-span-6">
             <Reveal delay={150}>
               <div className="grid grid-cols-3 gap-3 sm:gap-5 mb-10 pb-8">
-                {PHOTOS.map((p) => (
+                {photos.map((p) => (
                   <div key={p.src} className={`relative aspect-[3/4] overflow-hidden ${p.cls}`}>
                     <Image src={p.src} alt={p.alt} fill sizes="(min-width:1024px) 20vw, 30vw" className="object-cover" loading="lazy" />
                   </div>

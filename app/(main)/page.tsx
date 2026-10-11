@@ -256,7 +256,7 @@ export default async function HomePage() {
       </section>
 
       {/* ─── Recruit（採用特集） ─── */}
-      <RecruitFeature stats={content.recruit?.stats} />
+      <RecruitFeature stats={content.recruit?.stats} voices={content.recruit?.staffVoices} />
     </>
   );
 }
