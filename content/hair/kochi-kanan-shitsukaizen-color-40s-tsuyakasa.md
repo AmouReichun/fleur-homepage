@@ -3,7 +3,7 @@ title: "40代の艶感ロングヘア、香南市で髪質改善カラーを選�
 slug: "kochi-kanan-shitsukaizen-color-40s-tsuyakasa"
 category: "hair"
 salon: "fleurami"
-date: "2026-10-09"
+date: "2026-10-12"
 updated: ""
 author: "西内みゆき"
 author_role: "スタイリスト"
@@ -14,7 +14,6 @@ question: "40代で艶感のあるロングヘアを保ちたい場合、髪質�
 answer_summary: "髪質改善カラーは、色の透明感と髪のまとまり感を同時に叶える施術です。香南市のfleuramiでは、カウンセリングで髪の悩みと仕上がりのイメージを丁寧に確認し、その方の髪質に合わせた施術を提案しています。"
 instagram_id: "17986518756080688"
 instagram_permalink: "https://www.instagram.com/reel/DeQpLnlBOah/"
-draft: true
 faq:
   - q: "髪質改善とカラーを一緒にしたら髪が傷みませんか？"
     a: "同時施術の場合、施術の順序や薬剤の選択が重要です。fleuramiでは、髪への負担を考慮した施術順序と、補修成分配合の薬剤を使用しています。詳しくはカウンセリングでお聞きください。"

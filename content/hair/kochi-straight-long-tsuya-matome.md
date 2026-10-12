@@ -3,7 +3,7 @@ title: "高知市でストレートロングを選ぶなら｜艶感とまとま
 slug: "kochi-straight-long-tsuya-matome"
 category: "hair"
 salon: "Riv. by fleurami"
-date: "2026-10-09"
+date: "2026-10-12"
 updated: ""
 author: "細川彩香"
 author_role: "スタイリスト"
@@ -14,7 +14,6 @@ question: "高知市でストレートロングを美しく見せるには、ど
 answer_summary: "艶感とまとまりの両立には、単なるカットだけでなく、カラーや髪質改善トリートメント、そして定期的なケアを組み合わせることが大切です。高知市のRiv. by fleuramiでは、お客様の髪質や悩みに合わせた提案で、長さを活かしたツヤストレートを叶えています。"
 instagram_id: "17904435246355237"
 instagram_permalink: "https://www.instagram.com/reel/DeQo_Q7SqIy/"
-draft: true
 faq:
   - q: "高知市のRiv. by fleuramiで、ストレートロングの施術にはどのくらい時間がかかりますか？"
     a: "カットとカラーで約2〜2.5時間、髪質改善トリートメントを加える場合は約3時間程度が目安です。詳しくはご来店時にカウンセリングでお伝えします。"

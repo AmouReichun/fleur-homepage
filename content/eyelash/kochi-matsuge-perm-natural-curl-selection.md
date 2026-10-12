@@ -3,7 +3,7 @@ title: "高知市でまつ毛パーマを選ぶなら｜自然カールで目力
 slug: "kochi-matsuge-perm-natural-curl-selection"
 category: "eyelash"
 salon: "Raffine"
-date: "2026-10-07"
+date: "2026-10-12"
 updated: ""
 author: "安井未琉"
 author_role: "アイリスト"
@@ -14,7 +14,6 @@ question: "高知市でまつ毛パーマを受けるなら、自然なのに目
 answer_summary: "自然なカールを実現するには、カウンセリングで目の形に合わせたデザイン提案が重要です。Raffineのような自分の目の条件に合わせた施術が、毎日の自信につながります。"
 instagram_id: "18108693977618122"
 instagram_permalink: "https://www.instagram.com/p/DeLdXrgjGst/"
-draft: true
 faq:
   - q: "高知市でまつ毛パーマが初めてなのですが、本当に自然に見えますか？"
     a: "はい、施術者が目の形や毛流れを見極めて、その方に合ったカール強度を選ぶことで、自然でありながら目力が出る仕上がりが可能です。Raffineでは事前カウンセリングで、仕上がりのイメージをしっかり確認してから施術を進めています。"
