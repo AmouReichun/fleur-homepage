@@ -29,6 +29,7 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           fetch-depth: 0
+          ref: refs/heads/main
 
       # キューが空ならNode.jsインストール前にスキップ（スケジュール実行でのCI時間節約）
       - name: Check queue

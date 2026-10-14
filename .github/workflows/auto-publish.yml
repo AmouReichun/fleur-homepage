@@ -29,6 +29,7 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           fetch-depth: 0
+          ref: refs/heads/main
 
       # Node.js インストール前に設定チェックして早期終了（コスト削減）
       - name: Check schedule config
