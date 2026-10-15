@@ -3,7 +3,7 @@ title: "高知市で艶ボブを叶える髪質改善｜大人女性の「まと
 slug: "kochi-shitsukaizen-tsuya-bob"
 category: "hair"
 salon: "Riv. by fleurami"
-date: "2026-10-14"
+date: "2026-10-15"
 updated: ""
 author: "西森心大"
 author_role: "スタイリスト"
@@ -14,7 +14,6 @@ question: "高知市で大人女性が手にできるツヤのあるボブって
 answer_summary: "髪質改善トリートメントとカット技術を組み合わせることで、毛先のまとまりや手触りが整いやすくなり、ツヤのある印象のボブが叶いやすくなります。高知市のRiv. by fleuramiでは、カウンセリングで髪の状態を詳しく確認したうえで、その方に適した施術を提案しています。"
 instagram_id: "18098252420423306"
 instagram_permalink: "https://www.instagram.com/reel/DedRWmgSSCP/"
-draft: true
 faq:
   - q: "高知市の美容室で髪質改善ボブをやるなら、どのくらいの期間で効果を感じられる？"
     a: "初回から手触りやまとまりが整いやすくなった感覚を感じる方も多いです。継続的には3〜4週間ごとのトリートメントで、手触りの状態を保ちやすくなる傾向があります。個人差がありますので、担当スタイリストにご相談ください。"

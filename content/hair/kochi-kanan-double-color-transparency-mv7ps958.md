@@ -3,7 +3,7 @@ title: "香南市でダブルカラーを選ぶ前に｜透明感と艶を両立
 slug: "kochi-kanan-double-color-transparency-mv7ps958"
 category: "hair"
 salon: "fleurami"
-date: "2026-10-14"
+date: "2026-10-15"
 updated: ""
 author: "川上凛"
 author_role: "スタイリスト"
@@ -14,7 +14,6 @@ question: "香南市でダブルカラーを施術する際、透明感と艶を
 answer_summary: "ダブルカラーは1回目のブリーチで素髪の黄みを取り除き、2回目のカラーで透明感を引き出す施術です。仕上がりの満足度は、髪の状態診断、色選び、施術後のホームケアの3つで決まります。"
 instagram_id: ""
 instagram_permalink: ""
-draft: true
 faq:
   - q: "香南市のfleuramiでダブルカラーを受けたら、色はどのくらい持つ？"
     a: "一般的には3〜4週間で色が薄れ始め、5〜6週間で退色が目立ちやすくなります。髪の状態や日常のケア、紫外線の影響により個人差があります。色持ちを長くしたい場合は、カラーシャンプーの使用や定期的なホームケアがおすすめです。"
