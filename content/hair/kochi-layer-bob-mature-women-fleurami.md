@@ -3,7 +3,7 @@ title: "40代の毛先まとめ、香南市で叶える艶のあるレイヤー�
 slug: "kochi-layer-bob-mature-women-fleurami"
 category: "hair"
 salon: "fleurami"
-date: "2026-10-13"
+date: "2026-10-15"
 updated: ""
 author: "高田和花"
 author_role: "スタイリスト"
@@ -14,7 +14,6 @@ question: "40代で毛先がまとまりにくいときは、ボブにレイヤ�
 answer_summary: "毛先のまとまりや艶感は、レイヤーの入れ方とカラー・ケアの組み合わせで大きく変わります。香南市のfleuramiでは、髪の状態に合わせたレイヤーの設計と、その後の髪質改善トリートメントで、毛先までしなやかに見える仕上がりを提案しています。"
 instagram_id: "18388440001237980"
 instagram_permalink: "https://www.instagram.com/reel/Dea_TzAh2kV/"
-draft: true
 faq:
   - q: "香南市のfleuramiではボブにレイヤーを入れてもらえますか？"
     a: "はい、対応しています。毛先のまとまりや動き、髪の広がりなどのお悩みに合わせて、レイヤーの位置や量をカウンセリングで決めています。ご来店は高知県香南市野市町西野のnon駅から車で約4分です。"

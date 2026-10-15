@@ -3,7 +3,7 @@ title: "高知市でまつげパーマを選ぶなら｜目元の仕上がりを
 slug: "kochi-matsu-perm-natural"
 category: "eyelash"
 salon: "Raffine"
-date: "2026-10-13"
+date: "2026-10-15"
 updated: ""
 author: "安井未琉"
 author_role: "アイリスト"
@@ -14,7 +14,6 @@ question: "高知市でまつげパーマを受けるなら、ナチュラルに
 answer_summary: "目の形に合わせたカール設計と、施術後のケア・通う周期がポイント。高知県高知市のRaffineのような、カウンセリングで顔や目の特徴を確認してくれるサロンを選ぶことで、毎日のメイク時間を短縮しながら、すっぴんでも自信が持てる目元が叶います。"
 instagram_id: "18109110406913623"
 instagram_permalink: "https://www.instagram.com/p/Dea_onkDWf6/"
-draft: true
 faq:
   - q: "高知市でまつげパーマが初めてです。どのくらいの期間カールは持つんですか？"
     a: "まつげパーマのカールは、個人差がありますが、おおよそ4〜6週間程度が目安です。自まつ毛の生え代わり周期に合わせて、1ヶ月半～2ヶ月ごとにリペア施術を受けるお客様が多いです。Raffineでは、カール維持に必要なホームケアもお伝えします。"
