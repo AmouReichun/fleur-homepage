@@ -3,7 +3,7 @@ title: "香南市で艶カラーを選ぶなら、ベージュ系の色選びを
 slug: "kochi-nanshi-tsuya-color-beige-erabikata-mv7pxjug"
 category: "hair"
 salon: "fleurami"
-date: "2026-10-14"
+date: "2026-10-16"
 updated: ""
 author: "西内みゆき"
 author_role: "スタイリスト"
@@ -14,7 +14,6 @@ question: "香南市で艶のあるベージュ系カラーを選ぶとき、ど
 answer_summary: "艶カラーの仕上がりは、肌色・髪質・光の入り方を考慮した色選びが決め手になります。高知県香南市のfleuramiでは、カウンセリングで髪の質感や希望の雰囲気を確認したうえで、あなたに合ったベージュ系の色味を提案します。"
 instagram_id: ""
 instagram_permalink: ""
-draft: true
 faq:
   - q: "香南市のfleuramiではどんなベージュ系カラーに対応していますか？"
     a: "艶カラーを得意としており、濃いめのシルバーベージュ、温かみのあるブラウンベージュ、透明感のあるラベンダーベージュなど、複数の色系統に対応しています。カウンセリングで髪質と肌の雰囲気をみながら、最適な色味をご提案します。"
