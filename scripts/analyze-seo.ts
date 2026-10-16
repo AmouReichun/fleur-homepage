@@ -162,7 +162,7 @@ ${newLines || "なし"}
 
   return parsed.map((t: SeoTask) => {
     if (t.type === "rewrite" && t.slug) {
-      const meta = Array.from(byPage.entries()).find(([, v]) => v.slug === t.slug)?.[1];
+      const meta = byPage.get(t.slug) ?? Array.from(byPage.entries()).find(([, v]) => v.slug === t.slug)?.[1];
       return { ...t, filePath: meta?.filePath, category: (meta?.category ?? t.category) as "hair" | "eyelash" };
     }
     return t;
@@ -289,7 +289,8 @@ type (rewrite/new_article), priority (数値), targetKeyword (文字列), slug (
     }
     return parsed.map((t: SeoTask) => {
       if (t.type === "rewrite" && t.slug) {
-        const meta = all.find((a) => a.slug === t.slug);
+        const filename = t.slug.replace(/^\/blog\/[^/]+\//, "");
+        const meta = all.find((a) => a.slug === filename || a.slug === t.slug);
         return { ...t, filePath: meta?.filePath, category: (meta?.category ?? t.category) as "hair" | "eyelash" };
       }
       return t;

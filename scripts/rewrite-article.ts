@@ -45,8 +45,9 @@ function loadTasks(): RewriteTask[] {
 
 function resolveFilePath(task: RewriteTask): string | null {
   if (task.filePath && fs.existsSync(task.filePath)) return task.filePath;
+  const filename = task.slug.replace(/^\/blog\/[^/]+\//, "");
   for (const cat of ["hair", "eyelash"]) {
-    const p = path.join(process.cwd(), "content", cat, `${task.slug}.md`);
+    const p = path.join(process.cwd(), "content", cat, `${filename}.md`);
     if (fs.existsSync(p)) return p;
   }
   return null;
