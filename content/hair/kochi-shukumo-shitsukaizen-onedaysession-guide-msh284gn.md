@@ -4,12 +4,12 @@ slug: kochi-shukumo-shitsukaizen-onedaysession-guide-msh284gn
 category: hair
 salon: Riv. by fleurami
 date: '2026-08-06'
-updated: '2026-10-05'
+updated: '2026-10-16'
 author: ''
 author_role: ''
 excerpt: >-
-  高知市で縮毛矯正と髪質改善トリートメントの同日施術を検討中の40代女性へ。1回でどこまでまとまるか、向き不向き、サロン選びの基準をRiv. by
-  fleuramiが解説します。
+  縮毛矯正しても残るパサつきやうねりに悩む高知市の40代女性へ。同日施術で1回にツヤとまとまりを両立できるか、向き不向きとサロン選びの基準が分かります。高知市のRiv.
+  by fleuramiが解説。
 thumbnail: /images/uploads/riv/riv-msh1jf2s.jpg
 tags:
   - 縮毛矯正
@@ -62,6 +62,7 @@ conversation:
   - speaker: stylist
     text: >-
       ダメージの蓄積具合によっては同日施術が向かないこともあります。まずカウンセリングで今の髪の状態を見て、可否と仕上がりイメージをお伝えしてから決めていきますので安心してください。
+seoTitle: 高知市で縮毛矯正と髪質改善は同日可能？40代のうねり対策
 ---
 ## この記事で分かること
 
