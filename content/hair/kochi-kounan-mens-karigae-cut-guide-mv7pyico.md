@@ -3,7 +3,7 @@ title: "香南市でメンズカットの刈り上げ、失敗しない選び方
 slug: "kochi-kounan-mens-karigae-cut-guide-mv7pyico"
 category: "hair"
 salon: "fleurami"
-date: "2026-10-14"
+date: "2026-10-16"
 updated: ""
 author: "山岡悠弥"
 author_role: "スタイリスト"
@@ -14,7 +14,6 @@ question: "香南市で夏に向けたメンズ刈り上げカットを考える
 answer_summary: "刈り上げの仕上がりは「毛の流れを活かしたカット技術」「頭の形に合わせた調整」「維持のしやすさ」で大きく変わります。フリーハンドで調整できる技術と、長期的なメンテナンス提案まで含めて考えると、満足度が高まります。"
 instagram_id: ""
 instagram_permalink: ""
-draft: true
 faq:
   - q: "香南市の美容室fleuramiはメンズカットに対応していますか？"
     a: "はい、対応しています。高知県香南市野市町西野にあり、男性向けのカットも得意としています。刈り上げの長さ調整や毛流を活かしたスタイルなど、カウンセリングを通じてご希望に合わせた提案が可能です。"
