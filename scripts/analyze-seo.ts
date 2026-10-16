@@ -15,8 +15,21 @@ import matter from "gray-matter";
 import Anthropic from "@anthropic-ai/sdk";
 
 const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
-const MAX_TASKS = 10;
+const MAX_TASKS = 15;
 const CONTENT_DIR = path.join(process.cwd(), "content");
+
+// 毎週必ずカバーしたい最重要ターゲットキーワード。
+// GSCデータに出なくても新規記事タスクとして追加される。
+const PRIORITY_KEYWORDS: { keyword: string; salon: string; category: "hair" | "eyelash"; minPosition?: number }[] = [
+  { keyword: "高知 美容室", salon: "riv", category: "hair", minPosition: 3 },
+  { keyword: "高知市 美容室", salon: "riv", category: "hair", minPosition: 3 },
+  { keyword: "眉毛サロン 高知", salon: "raffine", category: "eyelash", minPosition: 3 },
+  { keyword: "高知 眉毛WAX", salon: "raffine", category: "eyelash", minPosition: 3 },
+  { keyword: "高知市 髪質改善", salon: "riv", category: "hair", minPosition: 1 },
+  { keyword: "高知市 縮毛矯正", salon: "riv", category: "hair", minPosition: 3 },
+  { keyword: "高知 まつ毛パーマ", salon: "raffine", category: "eyelash", minPosition: 3 },
+  { keyword: "高知 マツエク", salon: "raffine", category: "eyelash", minPosition: 3 },
+];
 
 type SeoReport = {
   generatedAt: string;
@@ -301,6 +314,77 @@ type (rewrite/new_article), priority (数値), targetKeyword (文字列), slug (
   }
 }
 
+// ─── 優先KWの補完（GSCデータに出なくても必ずタスクに含める） ─────────────────
+
+function supplementPriorityKeywords(tasks: SeoTask[], report?: SeoReport): SeoTask[] {
+  const covered = new Set(tasks.map((t) => t.targetKeyword?.toLowerCase()));
+  const queryMap = new Map((report?.byQuery ?? []).map((q) => [q.query.toLowerCase(), q]));
+
+  const additions: SeoTask[] = [];
+  for (const pk of PRIORITY_KEYWORDS) {
+    if (covered.has(pk.keyword.toLowerCase())) continue;
+    const gsc = queryMap.get(pk.keyword.toLowerCase());
+    // すでに目標順位以内なら追加しない
+    if (gsc && pk.minPosition && gsc.position <= pk.minPosition) continue;
+    additions.push({
+      type: "new_article",
+      priority: tasks.length + additions.length + 1,
+      targetKeyword: pk.keyword,
+      category: pk.category,
+      salon: pk.salon,
+      impressions: gsc?.impressions ?? 0,
+      clicks: gsc?.clicks ?? 0,
+      ctr: gsc?.ctr ?? 0,
+      reason: `最重要KW「${pk.keyword}」の強化記事。現在${gsc ? `${gsc.position.toFixed(1)}位・${gsc.impressions}回表示` : "GSCデータなし"}。目標${pk.minPosition ?? 3}位以内。`,
+    });
+  }
+  return [...tasks, ...additions];
+}
+
+// ─── 週次SEO履歴を記録 ────────────────────────────────────────────────────
+
+function recordSeoHistory(report?: SeoReport) {
+  if (!report) return;
+  const historyPath = path.join(process.cwd(), "data", "seo-history.json");
+  let history: { date: string; keywords: Record<string, { position: number; impressions: number; clicks: number }> }[] = [];
+  if (fs.existsSync(historyPath)) {
+    try { history = JSON.parse(fs.readFileSync(historyPath, "utf-8")); } catch { /* ignore */ }
+  }
+
+  const queryMap = new Map(report.byQuery.map((q) => [q.query.toLowerCase(), q]));
+  const snapshot: Record<string, { position: number; impressions: number; clicks: number }> = {};
+  for (const pk of PRIORITY_KEYWORDS) {
+    const gsc = queryMap.get(pk.keyword.toLowerCase());
+    snapshot[pk.keyword] = {
+      position: gsc ? Math.round(gsc.position * 10) / 10 : 0,
+      impressions: gsc?.impressions ?? 0,
+      clicks: gsc?.clicks ?? 0,
+    };
+  }
+
+  const today = new Date().toISOString().slice(0, 10);
+  history = history.filter((h) => h.date !== today);
+  history.push({ date: today, keywords: snapshot });
+  history.sort((a, b) => a.date.localeCompare(b.date));
+
+  fs.writeFileSync(historyPath, JSON.stringify(history, null, 2), "utf-8");
+  console.log(`📊 SEO履歴を記録: ${historyPath}`);
+
+  // 最新と前回の差分を表示
+  if (history.length >= 2) {
+    const prev = history[history.length - 2];
+    console.log("順位変動（前回比）:");
+    for (const kw of Object.keys(snapshot)) {
+      const cur = snapshot[kw].position;
+      const old = prev.keywords[kw]?.position ?? 0;
+      if (cur === 0 && old === 0) continue;
+      const diff = old > 0 && cur > 0 ? old - cur : null;
+      const arrow = diff === null ? "?" : diff > 0 ? `↑${diff.toFixed(1)}` : diff < 0 ? `↓${Math.abs(diff).toFixed(1)}` : "→";
+      console.log(`  ${arrow} 「${kw}」: ${old || "?"}位 → ${cur || "?"}位`);
+    }
+  }
+}
+
 // ─── main ──────────────────────────────────────────────────────────────────
 
 async function main() {
@@ -318,8 +402,9 @@ async function main() {
     console.log(`GA4データあり（${analytics.byPage.length}ページ）`);
   }
 
+  let report: SeoReport | undefined;
   if (fs.existsSync(reportPath)) {
-    const report: SeoReport = JSON.parse(fs.readFileSync(reportPath, "utf-8"));
+    report = JSON.parse(fs.readFileSync(reportPath, "utf-8")) as SeoReport;
     console.log(`モード: GSC${analytics ? "＋GA4" : ""}データあり（${report.period.startDate} 〜 ${report.period.endDate}）`);
     console.log(`クエリ数: ${report.byQuery.length} / ページ数: ${report.byPage.length}`);
     console.log("Claude で分析中...");
@@ -329,6 +414,12 @@ async function main() {
     console.log("Claude で品質分析中...");
     tasks = await analyzeWithQualityScore(all);
   }
+
+  // 優先KWが未カバーなら補完
+  tasks = supplementPriorityKeywords(tasks, report);
+
+  // 週次SEO履歴を記録
+  recordSeoHistory(report);
 
   const out = {
     generatedAt: new Date().toISOString().slice(0, 10),

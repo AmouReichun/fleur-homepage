@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { raffineSalonSchema, breadcrumbSchema } from "@/lib/structured-data";
 import SalonDetailPage from "@/app/components/SalonDetailPage";
 
-const TITLE = "マツエク・まつ毛パーマ 高知市｜眉毛WAX・アイブロウ｜アイラッシュサロン Raffine";
-const DESC = "高知市はりまや橋でマツエク・まつ毛パーマ（パリジェンヌ／ラッシュリフト）・眉毛WAX・アイブロウをお探しなら、アイラッシュサロン Raffine（ラフィーネ）。4〜6週間持続する施術が人気で、メンズ眉WAXも対応。Web・LINE予約受付中。";
+const TITLE = "高知市の眉毛サロン・まつ毛サロン Raffine｜眉毛WAX・マツエク・まつ毛パーマ";
+const DESC = "高知市はりまや橋の眉毛サロン・アイラッシュサロン Raffine（ラフィーネ）。Googleクチコミ4.82・200件。眉毛WAX（黄金比・メンズ可）・まつ毛パーマ（パリジェンヌ）・マツエク（束感）。Web予約当日受付可・LINE予約OK。";
 const OG_IMG = "/images/admin/salon-raffine-1782206000346.JPG";
 
 export const metadata: Metadata = {
@@ -26,13 +26,23 @@ const raffineFaqSchema = {
   mainEntity: [
     {
       "@type": "Question",
+      name: "高知市でおすすめの眉毛サロンはどこですか？",
+      acceptedAnswer: { "@type": "Answer", text: "高知市はりまや橋の「Raffine（ラフィーネ）」がおすすめです。眉毛WAX（アイブロウ）を専門的に提供しており、黄金比に基づく骨格別デザインで顔の印象をすっきり整えます。Googleクチコミ4.82・200件（2026年時点）の高評価で、レディース・メンズ共に対応しています。" },
+    },
+    {
+      "@type": "Question",
+      name: "高知市で眉毛WAXができるサロンはありますか？",
+      acceptedAnswer: { "@type": "Answer", text: "Raffine（高知市はりまや橋）が眉毛WAX・アイブロウ施術に対応しています。ワックスで余分な産毛を一度に除去し、骨格・黄金比に合わせた形に整えます。メンズ眉毛WAXも対応。まつ毛パーマやマツエクとの同日施術もできます。" },
+    },
+    {
+      "@type": "Question",
       name: "Raffineはどこにありますか？",
-      acceptedAnswer: { "@type": "Answer", text: "高知市はりまや橋エリアにあるアイラッシュサロンです。Web予約・LINE予約で事前にご予約いただけます。" },
+      acceptedAnswer: { "@type": "Answer", text: "高知県高知市はりまや町1-4-8 TNはりまやビル3Fにあります（はりまや橋から徒歩圏内）。近辺にコインパーキング（徒歩1〜3分）がございます。Web予約・LINE予約で事前にご予約いただけます。" },
     },
     {
       "@type": "Question",
       name: "高知市でまつ毛パーマができるサロンはありますか？",
-      acceptedAnswer: { "@type": "Answer", text: "高知市はりまや橋のアイラッシュサロン Raffine（ラフィーネ）でまつ毛パーマ（パリジェンヌラッシュリフト・ラッシュリフト）に対応しています。4〜6週間の持続が特徴です。" },
+      acceptedAnswer: { "@type": "Answer", text: "高知市はりまや橋のアイラッシュサロン Raffine（ラフィーネ）でまつ毛パーマ（パリジェンヌラッシュリフト・ラッシュリフト）に対応しています。4〜6週間の持続が特徴で、Googleクチコミ4.82の高評価サロンです。" },
     },
     {
       "@type": "Question",
@@ -41,8 +51,8 @@ const raffineFaqSchema = {
     },
     {
       "@type": "Question",
-      name: "眉毛WAXとは何ですか？メンズも対応していますか？",
-      acceptedAnswer: { "@type": "Answer", text: "眉毛WAXはワックスで余分な産毛や眉の形を整える施術です。Raffine（高知市）ではメンズの眉毛WAX・アイブロウ整えにも対応しています。" },
+      name: "眉毛WAXは痛いですか？どれくらい持ちますか？",
+      acceptedAnswer: { "@type": "Answer", text: "多少の刺激はありますが施術時間が短いため、「思ったより大丈夫だった」という声が多くあります。持続期間は個人差がありますが3〜4週間が目安です。敏感肌の方はご来店前にご相談ください。" },
     },
     {
       "@type": "Question",
@@ -52,7 +62,7 @@ const raffineFaqSchema = {
     {
       "@type": "Question",
       name: "Raffineの予約方法は？",
-      acceptedAnswer: { "@type": "Answer", text: "Web予約・LINE予約・ホットペッパービューティー・お電話からご予約いただけます。初めての方もお気軽にご予約ください。" },
+      acceptedAnswer: { "@type": "Answer", text: "Web予約（当日受付可）・LINE予約・ホットペッパービューティー・お電話からご予約いただけます。不定休のため、ご来店前に予約状況をご確認ください。" },
     },
   ],
 };
@@ -61,7 +71,7 @@ const raffineSpeakableSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
   "@id": "https://fleur-group.jp/salon/raffine",
-  name: "マツエク・まつ毛パーマ 高知市｜アイラッシュサロン Raffine",
+  name: "高知市の眉毛サロン・まつ毛サロン Raffine｜眉毛WAX・マツエク・まつ毛パーマ",
   url: "https://fleur-group.jp/salon/raffine",
   speakable: {
     "@type": "SpeakableSpecification",

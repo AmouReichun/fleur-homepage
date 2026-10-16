@@ -12,11 +12,11 @@ const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: {
-    default: "高知県の美容室・アイラッシュサロン | fleur GROUP",
+    default: "高知市の美容室・まつ毛サロン | fleur GROUP｜髪質改善・縮毛矯正・眉毛WAX",
     template: "%s | fleur GROUP",
   },
   description:
-    "高知県（高知市・香南市）で美容室2店舗（Riv. by fleurami・fleurami）、アイラッシュサロン1店舗（Raffine）を展開するfleur GROUP。髪質改善・白髪ぼかし・縮毛矯正・まつげパーマ・眉毛WAXなど幅広いメニューをご用意しています。",
+    "高知市・香南市の美容室・まつ毛サロン fleur GROUP。Googleクチコミ4.6以上の3店舗が髪質改善・白髪ぼかし・縮毛矯正・まつ毛パーマ・眉毛WAXに対応。土日OK・駐車場あり・Web予約当日受付。",
   keywords: [
     "高知 美容室",
     "高知県 美容室",
@@ -47,23 +47,23 @@ export const metadata: Metadata = {
     locale: "ja_JP",
     siteName: "fleur GROUP",
     url: BASE_URL,
-    title: "高知県の美容室・アイラッシュサロン | fleur GROUP",
+    title: "高知市の美容室・まつ毛サロン | fleur GROUP｜髪質改善・縮毛矯正・眉毛WAX",
     description:
-      "高知県（高知市・香南市）で3サロンを展開。髪質改善・白髪ぼかし・縮毛矯正・まつげパーマ・眉毛WAX。",
+      "高知市・香南市の美容室・まつ毛サロン fleur GROUP。Googleクチコミ4.6以上の3店舗が髪質改善・白髪ぼかし・縮毛矯正・まつ毛パーマ・眉毛WAXに対応。土日OK・駐車場あり・Web予約当日受付。",
     images: [
       {
         url: "/images/admin/hero-1782190629178.jpg",
         width: 1200,
         height: 630,
-        alt: "高知県の美容室・アイラッシュサロン | fleur GROUP",
+        alt: "高知市の美容室・まつ毛サロン | fleur GROUP",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "高知県の美容室・アイラッシュサロン | fleur GROUP",
+    title: "高知市の美容室・まつ毛サロン | fleur GROUP｜髪質改善・縮毛矯正・眉毛WAX",
     description:
-      "高知県（高知市・香南市）で3サロンを展開。髪質改善・白髪ぼかし・縮毛矯正・まつげパーマ・眉毛WAX。",
+      "高知市・香南市の美容室・まつ毛サロン fleur GROUP。Googleクチコミ4.6以上の3店舗が髪質改善・白髪ぼかし・縮毛矯正・まつ毛パーマ・眉毛WAXに対応。土日OK・駐車場あり・Web予約当日受付。",
     images: ["/images/admin/hero-1782190629178.jpg"],
   },
   ...(process.env.GOOGLE_SITE_VERIFICATION

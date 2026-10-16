@@ -4,8 +4,9 @@ import Link from "next/link";
 export const revalidate = 3600;
 
 export const metadata: Metadata = {
+  title: "高知市の美容室・まつ毛サロン | fleur GROUP｜髪質改善・縮毛矯正・眉毛WAX",
   description:
-    "高知市の美容室をお探しなら｜縮毛矯正・白髪ぼかし・髪質改善が得意なRiv.byfleurami（高知市南川添）・fleurami（香南市野市）、まつ毛パーマ・眉毛WAXのRaffine（はりまや橋）。土日OK・LINE予約受付中。",
+    "高知市・香南市の美容室・まつ毛サロン fleur GROUP。Googleクチコミ4.6以上。髪質改善・白髪ぼかし・縮毛矯正（Riv.・fleurami）、まつ毛パーマ・眉毛WAX（Raffine）。土日OK・駐車場あり・Web予約当日受付。",
   alternates: { canonical: "https://fleur-group.jp" },
 };
 import { getContentCached } from "@/lib/content";
