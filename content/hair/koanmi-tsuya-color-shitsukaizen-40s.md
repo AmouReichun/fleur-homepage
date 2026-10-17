@@ -3,7 +3,7 @@ title: "40代の大人女性向け、香南市で艶カラーと髪質改善を�
 slug: "koanmi-tsuya-color-shitsukaizen-40s"
 category: "hair"
 salon: "fleurami"
-date: "2026-10-16"
+date: "2026-10-17"
 updated: ""
 author: "川上凛"
 author_role: "スタイリスト"
@@ -14,7 +14,6 @@ question: "40代女性が白髪をカバーしながら艶のある髪を長く�
 answer_summary: "白髪の目立ちやすさと髪のパサつきは、艶カラーと髪質改善トリートメントを組み合わせることで、どちらの悩みも同時にケアできます。高知県香南市のfleuramiでは、カラー後のトリートメントを含めたトータル提案により、3〜4週間ごとの通院サイクルで髪質と色の両方を保つご提案をしています。"
 instagram_id: "17884556478624547"
 instagram_permalink: "https://www.instagram.com/reel/DeijcW7hPNM/"
-draft: true
 faq:
   - q: "艶カラーと髪質改善トリートメントは一緒にしてもいいの？"
     a: "はい。fleuramiでは、カラー当日にトリートメントを組み合わせることで、染料の定着と髪の手触りの両方を整えやすくします。ただし髪のダメージ度合いによって、カラーから1週間後にトリートメント単体を行うご提案もあります。詳細はご来店時にカウンセリングでご相談ください。"
