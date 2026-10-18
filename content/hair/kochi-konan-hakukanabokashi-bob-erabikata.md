@@ -3,7 +3,7 @@ title: "40代の白髪が目立つ短いボブ、香南市で色選びで失敗�
 slug: "kochi-konan-hakukanabokashi-bob-erabikata"
 category: "hair"
 salon: "fleurami"
-date: "2026-10-17"
+date: "2026-10-18"
 updated: ""
 author: "山岡悠弥"
 author_role: "スタイリスト"
@@ -14,7 +14,6 @@ question: "40代の短いボブで白髪を目立たせない色選びには、�
 answer_summary: "白髪ぼかしカラーは、ベースの色選び・白髪の位置・艶感の出し方が重要です。香南市のfleuramiでは、顔色や髪質に合わせた色選びと定期的なメンテナンスで、長くきれいなボブを保つご提案をしています。"
 instagram_id: "18116023319023183"
 instagram_permalink: "https://www.instagram.com/reel/Dek2t_9B0Sv/"
-draft: true
 faq:
   - q: "白髪ぼかしカラーと普通のカラーって何が違うの？"
     a: "白髪ぼかしカラーは、白髪と黒髪の両方に色が入りやすいように設計されています。普通のカラーより濃い色目を選ぶことが多く、白髪が目立ちにくく見えやすい傾向があります。香南市のfleuramiでは、お客様の白髪の出かたや髪質に合わせて色を提案します。"
