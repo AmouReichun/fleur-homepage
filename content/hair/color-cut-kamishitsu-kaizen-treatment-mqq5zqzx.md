@@ -4,12 +4,12 @@ slug: color-cut-kamishitsu-kaizen-treatment-mqq5zqzx
 category: hair
 salon: Riv. by fleurami
 date: '2026-06-23'
-updated: '2026-10-16'
+updated: '2026-10-19'
 author: ''
 author_role: ''
 excerpt: >-
-  高知市でカラーと髪質改善を同日に受けたい40代女性へ。色持ち・ツヤ・まとまりの変化、所要時間の目安、サロン選びのポイントを施術事例とともに解説します。Riv.
-  by fleurami（高知市）。
+  カラーすると毛先がパサつく、すぐ色落ちする40代女性へ。同日施術で色持ち・ツヤ・まとまりがどう変わるか、所要時間やサロン選びのポイントを施術事例とともに解説します。高知市の美容室Riv.
+  by fleurami。
 thumbnail: /images/uploads/fleurami/fleurami-mqq268i5.jpg
 tags:
   - 髪質改善
@@ -59,7 +59,7 @@ conversation:
     text: 時間ってどれくらいかかるのかな？仕事終わりでも間に合う？
   - speaker: stylist
     text: カウンセリングからカットまで含めて3〜4時間程度が目安です。髪の長さで前後するので、ご予約時にお伝えいただければ時間配分をご案内します。
-seoTitle: 高知市でカラーと髪質改善を同日施術｜40代の色持ち・ツヤの変化
+seoTitle: 高知市 カラー×髪質改善を同日施術｜40代の色持ち・ツヤの変化
 ---
 ## この記事で分かること
 
