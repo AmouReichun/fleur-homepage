@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "韓国人風メイクに合わせたアップスタイルは、40代大人女性にもよく似合うヘアスタイルです。fleuramiの施術例をもとに、垢抜けアップスタイルのポイントをご紹介します。"
-thumbnail: "/images/uploads/fleurami/fleurami-mqt57oig.jpg"
+thumbnail: "/images/uploads/fleurami/fleurami-mqt57oig.webp"
 tags: ["アップスタイル", "韓国風ヘア", "大人ヘア", "高知美容室"]
 question: "40代大人女性がアップスタイルを垢抜けてみせるには、どんなポイントが大切ですか？"
 answer_summary: "アップスタイルを垢抜けて見せるカギは、「おくれ毛の抜け感」と「肌見せのバランス」にあります。きっちりまとめすぎず、自然なルーズ感を残すことで、大人らしい柔らかな印象に仕上がりやすくなります。韓国人風メイクとの相性も良く、洗練された雰囲気を演出しやすいスタイルです。"

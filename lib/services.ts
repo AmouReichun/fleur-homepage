@@ -385,7 +385,7 @@ export const SERVICES: ServiceDef[] = [
     title: "マツエク・まつげエクステ｜高知市はりまや橋 Raffine",
     description:
       "高知市はりまや橋のRaffineのまつげエクステ。韓国束感・LEDエクステに対応。一重・奥二重でも似合うデザインで、目元のボリュームと印象アップを叶えます。",
-    image: "/images/admin/salon-raffine-1782206059975.JPG",
+    image: "/images/admin/salon-raffine-1782206059975.webp",
     blogUrl: "/eyelash/tag/%E3%81%BE%E3%81%A4%E3%81%92%E3%82%A8%E3%82%AF%E3%82%B9%E3%83%86",
     lead:
       "まつげエクステは、自まつげに人工毛を装着してボリュームや長さを足す施術です。高知市はりまや橋周辺のRaffineでは、韓国風の束感デザインやLEDエクステに対応し、なりたい目元に合わせたデザインをご提案します。",
@@ -423,7 +423,7 @@ export const SERVICES: ServiceDef[] = [
     title: "韓国風まつげ（束感デザイン）｜高知市はりまや橋 Raffine",
     description:
       "高知市はりまや橋のRaffineの韓国風まつげ。束感のあるナチュラルデザインで、うるっとした抜け感のある目元へ。マツエクの束感（ボリュームラッシュ）でも、まつげパーマ×束感でも対応。一重・奥二重のご相談も。",
-    image: "/images/admin/salon-raffine-1782206059975.JPG",
+    image: "/images/admin/salon-raffine-1782206059975.webp",
     blogUrl: "/eyelash/raffine",
     lead:
       "韓国風まつげは、毛先を数本ずつ束にして「うるっとした束感」と抜け感を出す、韓国アイドル・オルチャン風のデザインです。高知市はりまや橋周辺のRaffineでは、束感マツエク（ボリュームラッシュ）や、まつげパーマと束感を組み合わせた仕上げなど、なりたい雰囲気に合わせてご提案しています。",
@@ -462,7 +462,7 @@ export const SERVICES: ServiceDef[] = [
     title: "LEDエクステ（LEDマツエク）｜高知市はりまや橋 Raffine",
     description:
       "高知市はりまや橋のRaffineのLEDエクステ（LEDマツエク）。LED専用グルーで施術し、短時間装着・当日メイクや入浴OK・モチの良さが期待できる次世代まつげエクステです。",
-    image: "/images/admin/salon-raffine-1782206059975.JPG",
+    image: "/images/admin/salon-raffine-1782206059975.webp",
     blogUrl: "/eyelash/tag/%E3%81%BE%E3%81%A4%E3%81%92%E3%82%A8%E3%82%AF%E3%82%B9%E3%83%86",
     lead:
       "LEDエクステ（LEDマツエクとも呼ばれます）は、LEDの光で硬化する専用グルーを使うまつげエクステです。高知市はりまや橋周辺のRaffineでは、装着時間が短く、施術当日からメイクや入浴がしやすい点、モチの良さを期待できる点から、忙しい方やエクステ初めての方にもご好評をいただいています。",
@@ -542,7 +542,7 @@ export const SERVICES: ServiceDef[] = [
     title: "眉毛WAX・アイブロウ｜高知市はりまや橋 Raffine（メンズ可）",
     description:
       "高知市はりまや橋のRaffineの眉毛WAX・アイブロウ。黄金比に基づくデザインで、顔印象をすっきり。メンズ眉WAXにも対応。まつげメニューとの同時施術も可能です。",
-    image: "/images/admin/salon-raffine-1782206134916.jpg",
+    image: "/images/admin/salon-raffine-1782206134916.webp",
     blogUrl: "/eyelash/tag/%E7%9C%89%E6%AF%9BWAX",
     lead:
       "眉毛WAX（アイブロウ）は、ワックスで不要な毛を一度に処理し、骨格や黄金比に合わせて眉の形を整える施術です。高知市はりまや橋周辺のRaffineでは、レディースだけでなくメンズ眉WAXにも対応し、顔全体の印象をすっきり見せます。",

@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "香南市fleuramiのメンズパーマ施術事例をもとに、動きとまとまりを両立したい方向けに仕上がりの特徴・サロン選びの判断基準・向き不向きをスタイリストが解説します。"
-thumbnail: "/images/uploads/fleurami/fleurami-mtc7xnw4.jpg"
+thumbnail: "/images/uploads/fleurami/fleurami-mtc7xnw4.webp"
 tags: ["メンズパーマ", "香南市美容室", "メンズヘア", "fleurami", "高知県美容室"]
 question: "香南市でメンズパーマをかけるとき、動きとまとまりを両立できる仕上がりにするには何を確認すればいい？"
 answer_summary: "メンズパーマで動きとまとまりを両立するには、髪の長さや毛量・くせ毛の有無に合ったロッド選択とかけ方の設計が鍵になります。fleuramiでは香南市のお客様一人ひとりの髪質と希望スタイルをカウンセリングで確認したうえで、自然な動きが出やすい仕上がりを目指しています。スタイリングのクセをつけやすくするために、仕上げと自宅ケアのアドバイスも合わせて行っています。"

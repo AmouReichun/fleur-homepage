@@ -10,7 +10,7 @@ author_role: スタイリスト
 excerpt: >-
   高知市で縮毛矯正を検討している30〜40代女性向けに、くせ毛・うねり・広がりへの考え方、サロン選びの判断基準、通う頻度や施術の流れを解説。高知県高知市の美容室Riv.
   by fleuramiの相談例も紹介します。
-thumbnail: /images/uploads/riv/riv-mrvevxkg.jpg
+thumbnail: /images/uploads/riv/riv-mrvevxkg.webp
 tags:
   - 高知市 縮毛矯正
   - くせ毛

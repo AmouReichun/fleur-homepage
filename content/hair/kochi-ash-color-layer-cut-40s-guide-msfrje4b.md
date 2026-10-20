@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "高知市の美容室Riv. by fleuramiで行ったアッシュカラー×レイヤーカットの施術事例を紹介。40代女性の「重さ・広がり・パサつき」悩みに向けた色選びとカットの判断材料をスタイリストが解説します。"
-thumbnail: "/images/uploads/riv/riv-msfqjbgu.jpg"
+thumbnail: "/images/uploads/riv/riv-msfqjbgu.webp"
 tags: ["アッシュカラー", "レイヤーカット", "高知市美容室", "40代ヘア", "Riv. by fleurami"]
 question: "高知市でアッシュカラーとレイヤーカットを同時に受けると、どんな仕上がりになる？"
 answer_summary: "アッシュカラーはブルー系の色味で髪の赤みを抑え、透明感のある印象をつくりやすい色です。レイヤーカットと組み合わせることで、毛先に軽さと動きが生まれ、全体のシルエットがすっきり見えやすくなります。高知市のRiv. by fleuramiでは、髪の状態や骨格に合わせてカットの入れ方と色の深さを調整し、日常でも扱いやすい仕上がりを目指しています。"

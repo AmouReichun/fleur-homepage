@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "高知市でまつ毛パーマを考えている20〜30代女性へ。ナチュラルなカール感を叶えるサロン選びのポイントと、Raffineの仕上がり実例をご紹介。派手すぎない目元を目指す方必見です。"
-thumbnail: "/images/uploads/raffine/raffine-mu99gxx3.jpg"
+thumbnail: "/images/uploads/raffine/raffine-mu99gxx3.webp"
 tags: ["まつ毛パーマ", "高知市", "目元ケア", "アイデザイン"]
 question: "高知市でナチュラルなまつ毛パーマを受けたいとき、どんなサロンを選ぶべき？"
 answer_summary: "ナチュラルなまつ毛パーマは、カール感の強さより「毛流の整い方」と「仕上がりの柔らかさ」を見極めることが大切です。高知市Raffineでは、お客様の目元の骨格やまつ毛の質感に合わせた繊細なカールデザインを提案しており、すっぴんでも浮かない自然な仕上がりを実現しています。"

@@ -5,7 +5,7 @@ category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-06-20"
 excerpt: "深みのあるダークブラウンをベースに、毛先へ向かってオレンジが輝くグラデーションカラー。大人女性にも馴染みやすいその魅力と、高知のサロンRiv. by fleuramiの施術例をご紹介します。"
-thumbnail: "/images/thumbnails/adult-women-hair-menu-guide-color-cut-perm.jpg"
+thumbnail: "/images/thumbnails/adult-women-hair-menu-guide-color-cut-perm.webp"
 tags: ["グラデーションカラー", "オレンジカラー", "ダークブラウン", "高知美容室"]
 question: "ダークブラウンベースにオレンジのさし色を入れるグラデーションカラーは、40代の大人女性にも似合うのでしょうか？"
 answer_summary: "結論として、深みのあるダークブラウンをベースにしたオレンジグラデーションは、大人女性にも馴染みやすいカラーデザインのひとつです。派手になりすぎず、それでいて毛先に動きと温かみが生まれるため、落ち着いた印象を保ちながら個性を表現したい方にも向いている傾向があります。"

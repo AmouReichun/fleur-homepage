@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "香南市でインナーカラー・ダブルカラーを検討中の方へ。仕上がりの特徴、サロン選びのポイント、fleuramiの施術事例をもとに、失敗しない選び方の判断材料をお伝えします。"
-thumbnail: "/images/uploads/fleurami/fleurami-mrvv9wwt.jpg"
+thumbnail: "/images/uploads/fleurami/fleurami-mrvv9wwt.webp"
 tags: ["インナーカラー", "ダブルカラー", "香南市美容室", "fleurami", "ヘアカラー"]
 question: "香南市でインナーカラー・ダブルカラーをするとき、どのようなポイントでサロンを選べばよいですか？"
 answer_summary: "インナーカラーは土台となるベースの明るさを整えるダブルカラー施術が前提になるため、カラーの工程管理とデザインの相談力がサロン選びの鍵になります。香南市のfleuramiでは、髪の状態を確認しながらカラーの配置・濃度・色味を一緒に決めていくスタイルで対応しています。予約はホットペッパービューティーまたはLINEから受け付けています。"

@@ -8,7 +8,7 @@ updated: ""
 author: "西内みゆき"
 author_role: "スタイリスト"
 excerpt: "香南市の40代女性向け。ショートボブ×縮毛矯正で後ろ姿をすっきり丸く仕上げる方法を、実際の施術事例から解説。サロン選びの判断基準も紹介します。"
-thumbnail: "/images/uploads/fleurami/fleurami-mv7ejvil.jpg"
+thumbnail: "/images/uploads/fleurami/fleurami-mv7ejvil.webp"
 tags: ["ショートボブ", "縮毛矯正", "香南市", "40代"]
 question: "香南市でショートボブに縮毛矯正をするとき、後ろ姿をきれいに見せるにはどうしたらいい？"
 answer_summary: "ショートボブの後ろ姿をきれいに見せるには、カットの丸みと縮毛矯正による毛流の調整が重要です。高知県香南市のfleuramiでは、お客様の髪質と希望に合わせて、この2つを組み合わせた施術を提案しています。"

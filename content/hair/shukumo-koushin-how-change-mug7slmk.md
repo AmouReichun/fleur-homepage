@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "高知県香南市でストレートヘアを目指すなら、縮毛矯正の仕上がりはサロン選びで大きく変わります。fleuramiの施術事例から、仕上がりの違いを生む要因と、自分に合ったサロン選びの判断基準を解説します。"
-thumbnail: "/images/uploads/fleurami/fleurami-mug7qj43.jpg"
+thumbnail: "/images/uploads/fleurami/fleurami-mug7qj43.webp"
 tags: ["縮毛矯正", "香南市", "高知県", "ストレートヘア", "髪質改善"]
 question: "高知県香南市で縮毛矯正を受けるなら、どのサロンを選べば自分に合った仕上がりが叶うのか？"
 answer_summary: "縮毛矯正の仕上がりは、薬剤選定・加熱の加減・カット技術の組み合わせで大きく異なります。自分の髪質や仕上がりイメージをしっかり相談でき、施術後の手入れまで提案してくれるサロンを選ぶことが重要です。"

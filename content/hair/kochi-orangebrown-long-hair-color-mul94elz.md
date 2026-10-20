@@ -8,7 +8,7 @@ updated: ""
 author: "西内みゆき"
 author_role: "スタイリスト"
 excerpt: "香南市の大人女性向けサロンfleuramiが提案するオレンジブラウンカラー。透明感と温もりを両立させ、ロングヘアの艶感を引き出す仕上がりの特徴と、選ぶべき判断基準を美容師が解説します。"
-thumbnail: "/images/uploads/fleurami/fleurami-mul92h66.jpg"
+thumbnail: "/images/uploads/fleurami/fleurami-mul92h66.webp"
 tags: ["香南市カラー", "オレンジブラウン", "ロングヘア", "艶カラー", "大人女性向け"]
 question: "香南市でロングヘアのカラーを考えている40代女性が、オレンジブラウンを選ぶべき理由は何か？"
 answer_summary: "オレンジブラウンは、ロングヘアの長さをいかしながら艶感と温もりを両立させやすいカラーです。黄みと赤みのバランスによって、肌なじみが良く、毎日の印象を落ち着きある大人らしさへ整えやすい選択肢となります。"

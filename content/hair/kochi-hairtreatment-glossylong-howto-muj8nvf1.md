@@ -8,7 +8,7 @@ updated: ""
 author: "細川彩香"
 author_role: "スタイリスト"
 excerpt: "長いロングヘアにツヤとまとまりを求める40代女性へ。高知市Riv. by fleuramiの髪質改善トリートメントとカラーの組み合わせで、実際にどんな仕上がりが叶うのか、施術事例から選び方まで詳しく解説します。"
-thumbnail: "/images/uploads/riv/riv-muj8lnw0.jpg"
+thumbnail: "/images/uploads/riv/riv-muj8lnw0.webp"
 tags: ["髪質改善トリートメント", "ロングヘア", "カラー", "高知市", "ツヤ髪"]
 question: "ロングヘアでツヤとまとまりを両立させるには、どんな施術と選び方が必要なのか？"
 answer_summary: "髪質改善トリートメントと艶感のあるカラーを組み合わせることで、長さを活かしたツヤサラ髪が叶いやすくなります。ただし仕上がりは施術の質と継続的なケアの両立が大切です。高知市Riv. by fleuramiでは、お客様の髪の状態に合わせた提案と施術を行います。"

@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "高知市で白髪ぼかしを検討している40代女性向けに、サロン選びの判断基準と実際の施術事例を紹介。どんな悩みに向いているか、Riv. by fleuramiの特徴を具体的に解説します。"
-thumbnail: "/images/uploads/riv/riv-mrvl4crw.jpg"
+thumbnail: "/images/uploads/riv/riv-mrvl4crw.webp"
 tags: ["白髪ぼかし", "高知市美容室", "40代ヘアケア", "Riv.byfleurami"]
 question: "高知市で白髪ぼかしをするとき、どんなサロンを選べばいいですか？"
 answer_summary: "白髪ぼかしはハイライトや艶カラーの技術を組み合わせて、白髪が目立ちにくく見えやすい仕上がりを目指すメニューです。サロン選びでは、白髪の量・髪のコンディション・理想の仕上がりをふまえた提案力があるかどうかが判断の分かれ目になります。高知市のRiv. by fleuramiでは、カウンセリングで現状を確認しながらメニューをご提案しています。"

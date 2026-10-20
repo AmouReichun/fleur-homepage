@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "高知市のRiv. by fleuramiでカラー＆カットを受けた40代女性の施術事例を紹介。艶感とまとまりを重視したサロン選びの判断基準を具体的に解説します。"
-thumbnail: "/images/uploads/riv/riv-msib0r7w.jpg"
+thumbnail: "/images/uploads/riv/riv-msib0r7w.webp"
 tags: ["カラーカット", "艶カラー", "高知市美容室", "40代ヘア", "髪質改善"]
 question: "高知市でカラーとカットを同時に受けると、どんな仕上がりになる？"
 answer_summary: "カラーとカットを組み合わせることで、色の艶感とシルエットの美しさが同時に整いやすくなります。高知市のRiv. by fleuramiでは、カウンセリングで髪の状態や生活スタイルを確認したうえで、カラーの色選びとカットのラインを組み合わせて提案しています。仕上がりの印象は髪質・カラー履歴・求めるスタイルによって異なるため、施術前に担当者と共有することが大切です。"

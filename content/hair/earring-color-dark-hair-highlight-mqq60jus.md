@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "イヤリングカラーは、耳まわりだけに色をのせるカラー技法。暗髪ベースを活かしながら、動いたときにだけ色が見える大人のためのさりげないアクセントです。"
-thumbnail: "/images/uploads/fleurami/fleurami-mqq4gvvd.jpg"
+thumbnail: "/images/uploads/fleurami/fleurami-mqq4gvvd.webp"
 tags: ["イヤリングカラー", "暗髪カラー", "大人カラー", "fleurami"]
 question: "イヤリングカラーはどんな人に向いていて、どんな仕上がりになるの？"
 answer_summary: "イヤリングカラーとは、耳まわりや顔まわりの内側に部分的に色をのせるカラー技法です。全体を染めずに済むため、ベースの暗髪を活かしながらアクセントカラーを楽しめます。派手になりすぎず、髪が動いたときにだけ色がちらりと見える、大人女性に選ばれやすいスタイルです。"

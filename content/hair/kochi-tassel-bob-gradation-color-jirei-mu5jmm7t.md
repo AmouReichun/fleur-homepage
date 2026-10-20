@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "高知市でタッセルボブとグラデーションカラーを検討中の方へ。仕上がりの差はどこで生まれるのか、Riv. by fleuramiの施術事例をもとに判断材料を提供します。"
-thumbnail: "/images/uploads/riv/riv-mttfn012.jpg"
+thumbnail: "/images/uploads/riv/riv-mttfn012.webp"
 tags: ["タッセルボブ", "グラデーションカラー", "高知市美容室", "艶カラー", "大人女性ヘア"]
 question: "高知市でタッセルボブとグラデーションカラーを選ぶとき、仕上がりに差が出るポイントはどこですか？"
 answer_summary: "タッセルボブの美しさは、カット技術とカラーの配色バランスによって大きく左右されます。根元から毛先にかけてのトーン変化を自然に設計できるかどうかが、仕上がりの印象を左右しやすいポイントです。高知県高知市のRiv. by fleuramiでは、カットとカラーの両面から仕上がりをトータルで提案しています。"

@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "高知市ではりまや橋近くのアイラッシュサロンRaffineでラッシュリフトを検討中の20〜30代女性へ。仕上がりの差が生まれる理由と、サロン選びの判断基準を施術事例をもとに解説します。"
-thumbnail: "/images/uploads/raffine/raffine-msrlgr57.jpg"
+thumbnail: "/images/uploads/raffine/raffine-msrlgr57.webp"
 tags: ["ラッシュリフト", "まつ毛パーマ", "高知市", "Raffine", "アイラッシュサロン", "目元ケア", "眉毛WAX"]
 question: "高知市でラッシュリフトを受けるとき、仕上がりの差を生む要素は何か？"
 answer_summary: "ラッシュリフトの仕上がりは、カールの高さ・向き・セパレートの細かさで大きく変わります。カウンセリングで目の形や生えグセを確認したうえでロッドサイズや薬剤を選ぶことが、自然で持続しやすい目元につながります。高知県高知市のRaffineでは半個室でカウンセリングから施術まで一貫して対応しています。"

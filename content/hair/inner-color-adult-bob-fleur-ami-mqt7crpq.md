@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "インナーカラーは表面には出ないの？高知県のfleuramiが手がけた顎ラインボブの実例をもとに、大人女性が取り入れやすいインナーカラーの魅力をわかりやすく解説します。"
-thumbnail: "/images/uploads/fleurami/fleurami-mqt7aq2x.jpg"
+thumbnail: "/images/uploads/fleurami/fleurami-mqt7aq2x.webp"
 tags: ["インナーカラー", "ボブ", "大人カラー", "高知美容室"]
 question: "インナーカラーをボブに入れると、表面から見たときの印象はどう変わるの？"
 answer_summary: "インナーカラーは髪の内側にだけ色を入れる技法なので、表面を見ただけでは色の違いはほとんどわかりません。ただし動いたときや風が当たったときに内側の色がちらりと見えることで、さりげない奥行き感が生まれやすくなります。落ち着いたブラウンのボブに取り入れると、大人らしい品のある雰囲気を保ちながら、さりげない個性を楽しめるスタイルになります。"

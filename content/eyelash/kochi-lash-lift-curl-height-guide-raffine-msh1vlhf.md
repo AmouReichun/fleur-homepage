@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "高知市ではりまや橋近くのRaffineでラッシュリフトを検討中の20〜30代女性へ。カールの高さや目元の開き感の違いを施術事例をもとに解説。サロン選びの判断材料になります。"
-thumbnail: "/images/uploads/raffine/raffine-msh1hmxk.jpg"
+thumbnail: "/images/uploads/raffine/raffine-msh1hmxk.webp"
 tags: ["ラッシュリフト", "まつ毛パーマ", "高知市", "Raffine", "目元デザイン"]
 question: "ラッシュリフトのカールの高さや仕上がりの違いは何で決まるの？"
 answer_summary: "ラッシュリフトの仕上がりは、ロッドの太さ・カールの高さ設定・まつ毛の長さや向きによって大きく変わります。「ふんわり立ち上がる」「くるんと丸みがある」「根元から高さが出る」など、求める印象に合わせてデザインを調整することが大切です。高知市のRaffineでは、カウンセリングでまつ毛の状態と理想のイメージを確認したうえでロッド選定を行っています。"

@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "ダブルカラーを使ったピンク系ヘアカラーの仕上がりと特徴を、高知県のヘアサロンRiv. by fleuramiの施術例をもとに丁寧に解説します。"
-thumbnail: "/images/uploads/riv/riv-mqt1iihw.jpg"
+thumbnail: "/images/uploads/riv/riv-mqt1iihw.webp"
 tags: ["ダブルカラー", "ピンクカラー", "ヘアカラー", "高知美容室"]
 question: "ダブルカラーでピンク系の色を入れると、どんな仕上がりになるのか？"
 answer_summary: "ダブルカラーとは、一度ブリーチで髪の色素を抜いてから目的のカラーを重ねる2段階の施術です。ベースを明るくしてからピンク系のカラーを乗せることで、発色がクリアになりやすく、深みのある鮮やかな色みが表現しやすくなります。写真のような艶やかなピンク〜ラズベリー系のカラーは、ダブルカラーならではの仕上がりです。"

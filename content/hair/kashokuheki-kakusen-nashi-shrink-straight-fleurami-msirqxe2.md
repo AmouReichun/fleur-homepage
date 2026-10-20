@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "香南市で縮毛矯正のみを検討している40代女性向け。カット無しでもツヤのあるストレートに整いやすい理由と、fleuramiの施術事例・選び方の判断基準を解説します。"
-thumbnail: "/images/uploads/fleurami/fleurami-msiro51w.jpg"
+thumbnail: "/images/uploads/fleurami/fleurami-msiro51w.webp"
 tags: ["縮毛矯正", "髪質改善", "香南市美容室", "大人女性ヘア", "ストレートヘア"]
 question: "カットなしで縮毛矯正だけを受けた場合、どんな仕上がりになる？"
 answer_summary: "カット無しの縮毛矯正でも、根元から毛先までのうねりや広がりが落ち着きやすく、ツヤのあるストレートに整いやすい傾向があります。長さを変えずに手触りや見た目の印象を変えたい方に向いている施術です。高知県香南市のfleuramiでは、髪の状態に合わせた薬剤選定とアイロン操作で、自然なストレートに仕上げる施術を行っています。"

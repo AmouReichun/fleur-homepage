@@ -8,7 +8,7 @@ updated: ""
 author: "川上凛"
 author_role: "スタイリスト"
 excerpt: "香南市でダブルカラーを考えている方へ。ブリーチとカラーの組み合わせで透明感を引き出す仕組み、色持ちの目安、自宅ケアのポイントを美容師が解説。fleuramiの施術事例も紹介します。"
-thumbnail: "/images/uploads/fleurami/fleurami-mv7ppq7d.jpg"
+thumbnail: "/images/uploads/fleurami/fleurami-mv7ppq7d.webp"
 tags: ["ダブルカラー", "ブリーチ", "ハイトーンカラー", "髪質改善", "香南市美容室"]
 question: "香南市でダブルカラーを施術する際、透明感と艶を両立させるために何が重要なのか？"
 answer_summary: "ダブルカラーは1回目のブリーチで素髪の黄みを取り除き、2回目のカラーで透明感を引き出す施術です。仕上がりの満足度は、髪の状態診断、色選び、施術後のホームケアの3つで決まります。"

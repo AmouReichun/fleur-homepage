@@ -10,7 +10,7 @@ author_role: ''
 excerpt: >-
   パサつき・広がりが気になる40代前後の大人女性へ。高知市の美容室Riv. by
   fleuramiが、髪質改善でツヤ髪を目指す選び方・施術の流れ・持ちの目安を施術事例とともに解説します。
-thumbnail: /images/instagram/riv/18099446108331604.jpg
+thumbnail: /images/instagram/riv/18099446108331604.webp
 tags:
   - 髪質改善
   - 高知市 美容室

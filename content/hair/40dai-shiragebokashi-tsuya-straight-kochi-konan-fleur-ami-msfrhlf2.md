@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "香南市fleuramiで40代女性が白髪ぼかしカラーを施術したアフター事例。艶感とまとまりを両立する仕上がりの判断基準をスタイリストが解説します。"
-thumbnail: "/images/uploads/fleurami/fleurami-msfqzzlb.jpg"
+thumbnail: "/images/uploads/fleurami/fleurami-msfqzzlb.webp"
 tags: ["白髪ぼかし", "40代ヘアカラー", "香南市美容室", "艶カラー", "fleurami"]
 question: "香南市で40代女性が白髪ぼかしをするとき、艶のあるまとまりやすい仕上がりを選ぶにはどこを見ればいい？"
 answer_summary: "白髪ぼかしの仕上がりは、カラーの配置・明度設計・施術後の手触りのケアによって大きく変わります。香南市のfleuramiでは、40代女性の白髪の分布や髪の状態にあわせてカラーを設計し、白髪を目立ちにくくしながら艶感のある仕上がりを目指しています。単に白髪を染めるのではなく、「次回まで気になりにくく過ごせるかどうか」を判断基準に置いた提案が特徴です。"

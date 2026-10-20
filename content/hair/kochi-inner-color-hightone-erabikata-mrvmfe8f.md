@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "高知市でインナーカラー・ハイトーンカラーを検討中の方へ。どんなサロンを選べばいいか、施術事例をもとに判断材料をお伝えします。Riv. by fleurami（高知市）対応。"
-thumbnail: "/images/uploads/riv/riv-mrvlebul.jpg"
+thumbnail: "/images/uploads/riv/riv-mrvlebul.webp"
 tags: ["インナーカラー", "ハイトーンカラー", "高知市美容室", "カラーリング", "Riv.byfleurami"]
 question: "高知市でインナーカラー・ハイトーンカラーを選ぶとき、どんなポイントを見ればよいですか？"
 answer_summary: "インナーカラーとハイトーンカラーは、ベースの黒髪を活かしながら隠れた色味を楽しめるデザインカラーです。仕上がりの自然さや色の発色はブリーチの精度に左右されるため、カラーの扱いに慣れたスタイリストへの相談が判断基準になります。高知市のRiv. by fleuramiでは、カウンセリングをもとに髪の状態や希望に合わせた提案を行っています。"

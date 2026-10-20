@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "香南市で深みのある赤みブラウンのヘアカラーを検討中の20代女性へ。fleuramiの艶カラーで何が変わるか、サロン選びの判断材料をまとめました。"
-thumbnail: "/images/uploads/fleurami/fleurami-mrvven8e.jpg"
+thumbnail: "/images/uploads/fleurami/fleurami-mrvven8e.webp"
 tags: ["香南市", "艶カラー", "赤みブラウン", "ヘアカラー", "fleurami"]
 question: "香南市で深みのある赤みブラウンカラーを仕上げるには、どんなサロン・施術を選べばいいですか？"
 answer_summary: "赤みブラウンは色の深みと艶感のバランスが仕上がりを大きく左右します。香南市のfleuramiでは、カウンセリングで髪の状態と希望トーンを丁寧に確認したうえで配合を調整しています。深みと透明感を両立させたい方は、色持ちや次回の色変化まで含めて相談できるサロンを選ぶことが判断材料のひとつになります。"

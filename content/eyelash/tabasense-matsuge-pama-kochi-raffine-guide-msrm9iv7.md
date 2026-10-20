@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "束感まつ毛パーマを検討中の高知市在住20〜30代女性へ。仕上がりの特徴・サロン選びの基準・Raffineの施術事例を具体的に解説。自分に向いているか判断できる記事です。"
-thumbnail: "/images/uploads/raffine/raffine-msrlhcwu.jpg"
+thumbnail: "/images/uploads/raffine/raffine-msrlhcwu.webp"
 tags: ["まつ毛パーマ", "束感まつ毛", "高知市", "Raffine", "アイラッシュ"]
 question: "束感まつ毛パーマはどんな人に向いていて、仕上がりはどう変わるのか？"
 answer_summary: "束感まつ毛パーマは、自まつ毛を活かしながらセパレートされた繊細なカールを出したい方に向いています。マスカラなしでも目元に立体感が出やすく、毎日のメイク時間を短縮したい方からも選ばれる傾向があります。ただし自まつ毛の量や状態によって仕上がりに個人差があるため、カウンセリングで事前に確認することが大切です。"

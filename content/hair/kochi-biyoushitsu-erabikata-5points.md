@@ -10,7 +10,7 @@ author_role: スタイリスト
 excerpt: >-
   高知 美容室をどう選べばいいか迷う40代前後の方へ。高知県高知市のRiv. by
   fleuramiが、カウンセリング・技術・通いやすさなど後悔しない5つの判断基準を中立的に解説します。
-thumbnail: /images/uploads/riv/riv-mt2fcivh.jpg
+thumbnail: /images/uploads/riv/riv-mt2fcivh.webp
 tags:
   - 高知 美容室
   - 美容室選び

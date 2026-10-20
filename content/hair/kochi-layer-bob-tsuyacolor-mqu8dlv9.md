@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "高知市のヘアサロンRiv. by fleuramiで施術したレイヤーボブ×艶カラーの仕上がりをご紹介。ボリュームや動きに悩む大人女性におすすめのスタイルです。"
-thumbnail: "/images/uploads/riv/riv-mqu8bbab.jpg"
+thumbnail: "/images/uploads/riv/riv-mqu8bbab.webp"
 tags: ["レイヤーボブ", "艶カラー", "高知市美容院", "大人ヘア", "ボブスタイル"]
 question: "高知市でレイヤーボブと艶カラーを組み合わせるとどんな仕上がりになる？"
 answer_summary: "レイヤーボブは毛先に動きと軽さを出しながら、全体のシルエットをすっきりまとめられるスタイルです。艶カラーと組み合わせることで、光を受けたときの透明感とまとまり感が生まれやすくなります。高知市のRiv. by fleuramiでは、お一人おひとりの髪質やライフスタイルに合わせてカットとカラーを提案しています。"

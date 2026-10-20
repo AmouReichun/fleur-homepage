@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "高知市ではりまや橋近くのアイラッシュサロンRaffineが、フラットラッシュ100本ナチュラルデザインの仕上がりをもとに「選び方・向いている人・施術の流れ」を解説。マツエク初心者〜経験者の判断材料として。"
-thumbnail: "/images/uploads/raffine/raffine-mrvlo8zt.jpg"
+thumbnail: "/images/uploads/raffine/raffine-mrvlo8zt.webp"
 tags: ["フラットラッシュ", "マツエク高知市", "ナチュラルまつ毛", "Raffine高知", "アイラッシュサロン"]
 question: "高知市でフラットラッシュのナチュラルデザインを選ぶとき、何を基準にサロンを選べばいい？"
 answer_summary: "フラットラッシュはまつ毛への負担が少なく、ナチュラルながら目元の印象を変えやすいのが特徴です。サロン選びでは本数・カール・デザイン提案力を確認することが判断の基準になります。高知市はりまや橋近くのRaffineでは、カウンセリングで一人ひとりの目の形に合わせたデザイン提案を行っています。"

@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "高知市ではりまや橋近くのアイラッシュサロンRaffineによる、ラッシュリフト・ナチュラル束感仕上げの施術事例を紹介。自まつ毛を活かしたいと考えている方が、サロン選びの判断材料にできる記事です。"
-thumbnail: "/images/uploads/raffine/raffine-mtwkojm4.jpg"
+thumbnail: "/images/uploads/raffine/raffine-mtwkojm4.webp"
 tags: ["ラッシュリフト", "束感まつ毛", "まつ毛パーマ", "高知市アイラッシュ", "Raffine", "眉毛WAX", "自まつ毛"]
 question: "ラッシュリフトで束感のあるナチュラル仕上げにするには、サロン選びで何を確認すればよいですか？"
 answer_summary: "ラッシュリフトの束感仕上げは、カールの高さとセパレート加工の精度によって仕上がりの印象が大きく変わります。自まつ毛の長さ・硬さ・量に合わせたロッド選定とデザイン提案ができるサロンかどうかを確認することがポイントです。高知市のRaffineでは、ナチュラルさを保ちながら束感を出すバランスを相談しながら決められます。"

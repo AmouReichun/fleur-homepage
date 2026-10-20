@@ -8,7 +8,7 @@ updated: ""
 author: "川上凛"
 author_role: "スタイリスト"
 excerpt: "香南市でデザインカラーを考えている方へ。単なるカラー選びではなく、仕上がりの質感・透明感・色持ちを見据えたサロン選びのポイント、fleuramiの施術事例から学べることをまとめました。"
-thumbnail: "/images/uploads/fleurami/fleurami-muj65o8k.jpg"
+thumbnail: "/images/uploads/fleurami/fleurami-muj65o8k.webp"
 tags: ["デザインカラー", "香南市", "カラーリング", "艶感", "高知県"]
 question: "香南市でデザインカラーをするなら、どうやってサロンやメニューを選べばいい？"
 answer_summary: "デザインカラーは色選び以上に「仕上がりの質感・透明感・次の施術計画」が重要です。カウンセリングで具体的な仕上がりイメージを共有し、髪の状態に合わせた提案が受けられるサロンを選ぶことが失敗を避ける判断基準になります。"

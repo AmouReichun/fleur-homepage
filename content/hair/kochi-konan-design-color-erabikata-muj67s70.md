@@ -8,7 +8,7 @@ updated: ""
 author: "高田和花"
 author_role: "スタイリスト"
 excerpt: "香南市でデザインカラーを考えている40代女性へ。透明感と艶感を両立させるための色選びのポイント、サロン選びの判断基準をfleuramiのスタイリストが解説。実際の施術事例から学べます。"
-thumbnail: "/images/uploads/fleurami/fleurami-muj65o8k.jpg"
+thumbnail: "/images/uploads/fleurami/fleurami-muj65o8k.webp"
 tags: ["デザインカラー", "香南市", "高知県", "カラー選び", "大人女性"]
 question: "香南市でデザインカラーを選ぶとき、どうやって色を決めれば透明感と艶感の両方が出やすいのか？"
 answer_summary: "デザインカラーの仕上がりは、ベースの色選びと施術方法で大きく変わります。肌色や髪質に合わせた色選び、カラーの入れ方を丁寧にカウンセリングで確認することが、理想の透明感と艶感を引き出すための第一歩です。"

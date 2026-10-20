@@ -10,7 +10,7 @@ author_role: スタイリスト
 excerpt: >-
   高知市で縮毛矯正を考えている方へ。料金の見方や持ちの目安、くせ毛・うねりのお悩み別の選び方を、高知県高知市の美容室Riv. by
   fleuramiが具体的に解説します。
-thumbnail: /images/uploads/riv/riv-msib2rrc.jpg
+thumbnail: /images/uploads/riv/riv-msib2rrc.webp
 tags:
   - 高知市 縮毛矯正
   - くせ毛

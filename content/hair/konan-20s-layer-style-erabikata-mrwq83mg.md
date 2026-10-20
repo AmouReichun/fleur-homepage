@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "香南市でレイヤーカットを検討中の20代女性へ。仕上がりの違いを生む「サロン選びの判断基準」をfleuramiのスタイリストが具体的に解説します。"
-thumbnail: "/images/uploads/fleurami/fleurami-mrwq5ouj.jpg"
+thumbnail: "/images/uploads/fleurami/fleurami-mrwq5ouj.webp"
 tags: ["レイヤーカット", "香南市美容室", "20代ヘアスタイル", "fleurami", "ヘアカット"]
 question: "香南市でレイヤースタイルをオーダーするとき、どのサロンを選べばいい？"
 answer_summary: "レイヤーカットは「どこまで動きを出すか」「毛量や骨格に合わせて設計されているか」でまったく仕上がりが変わります。香南市のfleuramiでは、カウンセリングで髪の状態・生え方・普段のスタイリング習慣を確認したうえでカットの方向を提案しています。「なんとなく重い」「動きを出したいが広がりが心配」など、漠然とした悩みから一緒に整理したい方に向いているサロンです。"

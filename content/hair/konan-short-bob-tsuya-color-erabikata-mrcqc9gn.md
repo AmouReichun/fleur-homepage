@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "香南市でショートボブと艶カラーを検討中の40代前後の女性向け。仕上がりの質・サロン選びの基準・fleuramiの施術事例を具体的に解説します。"
-thumbnail: "/images/uploads/fleurami/fleurami-mrcq0xo3.jpg"
+thumbnail: "/images/uploads/fleurami/fleurami-mrcq0xo3.webp"
 tags: ["ショートボブ", "艶カラー", "香南市美容室", "ハイライト", "大人ヘア"]
 question: "香南市でショートボブ×艶カラーを仕上げてくれるサロンを選ぶとき、何を基準にすればいい？"
 answer_summary: "仕上がりの艶感・カットの設計力・カラーの配色バランスを実例で確認できるサロンを選ぶことがポイントです。香南市のfleuramiでは、ショートボブのシルエットとハイライトを組み合わせた艶カラーを得意としており、40代前後の大人女性が「まとまりやすく・手入れしやすい」スタイルを相談できる環境を整えています。"

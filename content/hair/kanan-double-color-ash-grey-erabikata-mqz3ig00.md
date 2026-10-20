@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "香南市でダブルカラーを検討中の方へ。fleuramiでの施術事例をもとに、サロン選びの判断基準・向き不向き・仕上がりの目安を具体的に解説します。"
-thumbnail: "/images/uploads/fleurami/fleurami-mqz3fqxh.jpg"
+thumbnail: "/images/uploads/fleurami/fleurami-mqz3fqxh.webp"
 tags: ["ダブルカラー", "アッシュグレー", "香南市美容室", "カラー", "fleurami"]
 question: "香南市でダブルカラーをするとき、サロン選びで何を確認すればいい？"
 answer_summary: "ダブルカラーは1度ブリーチしてから希望色を入れる工程のため、仕上がりの色味・ダメージのバランスをカウンセリングで確認できるサロンを選ぶことが重要です。香南市のfleuramiでは、落ち着いたアッシュグレー系の仕上がりを得意としており、20〜40代の方の「派手になりすぎず、透明感のあるカラー」の相談に対応しています。まずは希望の色味・現在の髪の状態・ライフスタイルをあわせて伝えることが、満足度の高い仕上がりへの近道です。"

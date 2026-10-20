@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "高知市でレイヤーボブを検討中の40代女性向け。動きと軽さを両立するカットの選び方や、Riv. by fleuramiの施術事例をもとに仕上がりの判断材料を解説します。"
-thumbnail: "/images/uploads/riv/riv-mttf8g4v.jpg"
+thumbnail: "/images/uploads/riv/riv-mttf8g4v.webp"
 tags: ["レイヤーボブ", "高知市美容室", "40代ヘアスタイル", "カット", "艶カラー", "Riv. by fleurami"]
 question: "高知市でレイヤーボブを選ぶとき、仕上がりの差はどこで生まれる？"
 answer_summary: "レイヤーボブの仕上がりは、カット技術だけでなく毛量調整・レイヤーの入れ方・カラーとの組み合わせによって大きく変わります。Riv. by fleurami（高知県高知市）では、お客様の骨格・髪質・ライフスタイルに合わせたカウンセリングをもとにスタイルを提案しており、動きと軽さを出しつつもまとまりやすい仕上がりを目指した施術が可能です。"

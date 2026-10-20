@@ -1014,7 +1014,7 @@
       "description": "",
       "href": "/salon",
       "external": false,
-      "imageSrc": "/images/admin/quicklinks-1782213749493.jpg"
+      "imageSrc": "/images/admin/quicklinks-1782213749493.webp"
     },
     {
       "id": "staff",
@@ -1022,7 +1022,7 @@
       "description": "",
       "href": "/staff",
       "external": false,
-      "imageSrc": "/images/admin/quicklinks-1782213763518.jpg"
+      "imageSrc": "/images/admin/quicklinks-1782213763518.webp"
     },
     {
       "id": "blog",
@@ -1030,7 +1030,7 @@
       "description": "",
       "href": "/blog",
       "external": true,
-      "imageSrc": "/images/admin/quicklinks-1782213773362.jpg"
+      "imageSrc": "/images/admin/quicklinks-1782213773362.webp"
     },
     {
       "id": "campaign",
@@ -1038,7 +1038,7 @@
       "description": "",
       "href": "/news",
       "external": false,
-      "imageSrc": "/images/admin/quicklinks-1782212409286.jpg"
+      "imageSrc": "/images/admin/quicklinks-1782212409286.webp"
     }
   ],
   "topFaq": [
@@ -1125,7 +1125,7 @@
       "history": "美容師歴4年",
       "salon": "fleurami",
       "bio": "美容師歴4年。fleuramiのスタイリストとして、艶カラー・ヘアカラー・似合わせカラーを中心に施術しています。お客様の骨格・肌色・髪の状態に合わせて色味や明るさを選び、仕上がりの艶感にこだわります。「透明感のある色にしたい」「どんな色が似合うか分からない」というご相談も、カウンセリングで丁寧にお伺いしながらご提案します。髪質改善にも力を入れて学んでおり、カラーと合わせて髪のコンディション作りをサポートします。",
-      "imageSrc": "/images/admin/staff-2-1782195045005.jpg",
+      "imageSrc": "/images/admin/staff-2-1782195045005.webp",
       "specialties": [
         "艶カラー",
         "ヘアカラー",
@@ -1443,7 +1443,7 @@
         "role": "スタイリスト",
         "brand": "fleurami",
         "years": "美容師歴4年",
-        "image": "/images/admin/staff-2-1782195045005.jpg",
+        "image": "/images/admin/staff-2-1782195045005.webp",
         "reason": "「艶カラーの仕上がりに憧れて」見学に来たのが入社のきっかけ。",
         "joy": "お客様の『可愛い！』の一言が何よりのやりがいです。",
         "holiday": "休日はカフェ巡りと、新しいカラーの研究をしています。",
@@ -1465,7 +1465,7 @@
         "role": "アイリスト",
         "brand": "Raffine",
         "years": "",
-        "image": "/images/admin/staff-8-1782195085415.jpg",
+        "image": "/images/admin/staff-8-1782195085415.webp",
         "reason": "同世代の仲間と楽しく働けそうだと思って。",
         "joy": "『また来ます』と笑顔で帰ってもらえる時間。",
         "holiday": "友達とランチ、たまに眉毛の勉強会。",

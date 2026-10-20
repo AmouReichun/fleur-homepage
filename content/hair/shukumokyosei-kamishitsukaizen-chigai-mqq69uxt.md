@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "「縮毛矯正と髪質改善、何が違うの？」と迷う方へ。高知県のRiv. by fleuramiが、ツヤのある真っすぐな仕上がりの実例をもとに、それぞれの特徴と選び方をわかりやすく解説します。"
-thumbnail: "/images/uploads/riv/riv-mqq5gw5p.jpg"
+thumbnail: "/images/uploads/riv/riv-mqq5gw5p.webp"
 tags: ["縮毛矯正", "髪質改善", "ストレートヘア", "高知美容室"]
 question: "縮毛矯正と髪質改善はどう違い、どちらを選ぶべきか？"
 answer_summary: "縮毛矯正はくせ・うねりをしっかり伸ばしてまっすぐに整える施術で、髪質改善はダメージを補いながらツヤや手触りを整えることを目的とした施術です。どちらが向いているかはくせの強さや髪の状態によって異なります。Riv. by fleuramiではカウンセリングをもとに、お一人おひとりに合った施術をご提案しています。"

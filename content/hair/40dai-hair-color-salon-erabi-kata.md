@@ -5,7 +5,7 @@ category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-06-14"
 excerpt: "写真に映るのは、自然な光沢と滑らかさが印象的なストレートスタイル。大人女性が求める「まとまりやすい髪」に近づくためのヒントを、高知のサロンRiv. by fleuramiの施術例からご紹介します。"
-thumbnail: "/images/thumbnails/40dai-hair-color-salon-erabi-kata.jpg"
+thumbnail: "/images/thumbnails/40dai-hair-color-salon-erabi-kata.webp"
 tags: ["ストレートヘア", "髪質ケア", "大人女性の髪", "高知美容室"]
 question: "サラサラで艶のあるストレートヘアは、どのような施術や日頃のケアで実現できるのでしょうか？"
 answer_summary: "写真の仕上がりのように、美しいストレートと自然な艶感を持つスタイルは、適切な施術選びとアフターケアの組み合わせによって実現しやすくなります。大人の髪は一人ひとりのくせや状態が異なるため、担当スタイリストとしっかり相談したうえでアプローチを決めることが大切です。"

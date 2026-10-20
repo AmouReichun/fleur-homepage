@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "香南市で毛先を整えるカットを検討している方へ。fleuramiが「ただ切る」だけでなく、髪の状態・今後のスタイルを踏まえた提案をどう行っているか、判断材料として解説します。"
-thumbnail: "/images/uploads/fleurami/fleurami-mrx6wknr.jpg"
+thumbnail: "/images/uploads/fleurami/fleurami-mrx6wknr.webp"
 tags: ["香南市", "カット", "毛先カット", "10代", "髪型相談", "fleurami", "高知県美容室"]
 question: "香南市でカットだけのメニューでも、髪の悩みや将来のスタイルを一緒に相談できる美容室はありますか？"
 answer_summary: "香南市のfleuramiでは、カットのみの来店でも現在の髪の状態を確認しながら、次のスタイルへ向けた提案を合わせて行っています。「とりあえず毛先だけ切りたい」という来店でも、今後の方向性を整理するきっかけになることがあります。ただし相談時間を必要とするため、短時間・相談なしで済ませたい方には向かない場合があります。"

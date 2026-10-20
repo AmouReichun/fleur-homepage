@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "香南市でメンズパーマを検討中の方へ。fleuramiの施術事例をもとに、後頭部の動きとまとまりを両立する仕上がりの特徴と、サロン選びの判断基準を解説します。高知県香南市在住の方向け。"
-thumbnail: "/images/uploads/fleurami/fleurami-mu8lnzog.jpg"
+thumbnail: "/images/uploads/fleurami/fleurami-mu8lnzog.webp"
 tags: ["メンズパーマ", "香南市美容室", "fleurami", "高知県メンズヘア", "メンズスタイル"]
 question: "香南市でメンズパーマをかけると、後頭部の動きとまとまりはどのように仕上がるのか？"
 answer_summary: "fleuramiのメンズパーマは、トップから後頭部にかけて自然な動きと束感を出しながら、サイドと襟足をすっきり整えるスタイルが得意です。ゆるめのニュアンスウェーブからしっかりとした動きまで、髪質や長さに合わせて調整できます。仕上がりの持ちは髪質やケア状況によって個人差がありますが、おおむね2〜3ヶ月を目安に次回の来店を提案することが多いです。"

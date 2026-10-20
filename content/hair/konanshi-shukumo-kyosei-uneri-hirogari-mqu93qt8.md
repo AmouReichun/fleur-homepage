@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "香南市のヘアサロンfleur amiで縮毛矯正を施術。うねりや広がりが気になる方に向けて、施術内容・ホームケア・よくある質問まで丁寧にご紹介します。"
-thumbnail: "/images/uploads/fleurami/fleurami-mqu91ikc.jpg"
+thumbnail: "/images/uploads/fleurami/fleurami-mqu91ikc.webp"
 tags: ["縮毛矯正", "香南市", "髪質改善", "サラサラヘア", "fleur ami"]
 question: "香南市でうねりや広がりが気になる髪に縮毛矯正は効果的？"
 answer_summary: "縮毛矯正は、くせ毛によるうねりや湿気による広がりをまとめやすくする施術です。香南市のfleur amiでは、髪の状態に合わせた薬剤選定と丁寧なアイロン工程で、サラッとしたまとまり感のある仕上がりを目指しています。気になる方はぜひ一度ご相談ください。"

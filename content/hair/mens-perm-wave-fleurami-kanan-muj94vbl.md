@@ -8,7 +8,7 @@ updated: ""
 author: "西内みゆき"
 author_role: "スタイリスト"
 excerpt: "くせ毛やうねりに悩む男性が香南市でメンズパーマを選ぶ際の判断基準と、仕上がりの持ちや選び方を解説。fleuramiのメンズ向け施術事例から、髪質に合わせた提案方法を紹介します。"
-thumbnail: "/images/uploads/fleurami/fleurami-muj8x3mq.jpg"
+thumbnail: "/images/uploads/fleurami/fleurami-muj8x3mq.webp"
 tags: ["メンズパーマ", "香南市", "くせ毛", "メンズスタイル", "美容室"]
 question: "香南市でメンズパーマをかけるなら、どんなポイントを確認して選べばいい？"
 answer_summary: "メンズパーマは髪質・くせの強さ・なりたい雰囲気に応じて施術内容が大きく変わります。事前カウンセリングで髪の状態を正確に判断し、スタイリングのしやすさと仕上がりのバランスを見極めることが重要です。高知県香南市のfleuramiでは、個別の髪質に合わせた提案を行っています。"

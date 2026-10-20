@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "高知市で縮毛矯正か髪質改善トリートメントか迷っている40代女性へ。Riv. by fleuramiの美容師が、2つの施術の違い・向いている髪質・選び方の基準を具体的に解説します。"
-thumbnail: "/images/uploads/riv/riv-mr077sbk.jpg"
+thumbnail: "/images/uploads/riv/riv-mr077sbk.webp"
 tags: ["縮毛矯正", "髪質改善", "高知市美容室", "大人女性ヘアケア", "Riv.byfleurami"]
 question: "高知市で縮毛矯正と髪質改善トリートメントはどう違い、どちらを選べばいいのか？"
 answer_summary: "縮毛矯正はくせ・うねりを長期間抑えたい方向け、髪質改善トリートメントはダメージや広がりを整えてツヤを出したい方向けの施術です。髪の状態・悩みの種類・通う頻度の希望によって最適な選択肢が異なります。高知市のRiv. by fleuramiでは、カウンセリングで髪質・生活スタイルを確認したうえで提案しています。"

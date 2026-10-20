@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "香南市fleuramiで施術した30代のショートボブ事例をもとに、後ろ姿の丸みと艶感を両立するカットとカラーの選び方を解説。大人女性がサロンを選ぶ判断材料として活用できます。"
-thumbnail: "/images/uploads/fleurami/fleurami-mto0ueds.jpg"
+thumbnail: "/images/uploads/fleurami/fleurami-mto0ueds.webp"
 tags: ["ショートボブ", "艶カラー", "30代ヘア", "香南市美容室", "fleurami"]
 question: "30代がショートボブで後ろ姿の丸みと艶感を両立させるには、カットとカラーで何を見ればいい？"
 answer_summary: "後ろ姿の丸みと艶感を同時に出すには、カットのシルエット設計とカラーの色味・明度の組み合わせが鍵になります。香南市のfleurami（高知県香南市）では、大人女性の骨格や髪質に合わせたカウンセリングをもとに、仕上がりの方向性を一緒に決める流れをとっています。まずは「どんな後ろ姿にしたいか」を言語化してから来店すると、提案がスムーズになりやすいです。"

@@ -9,7 +9,7 @@ author: ''
 author_role: ''
 excerpt: >-
   ショートボブがのっぺりする、動きが出ないとお悩みの40代女性へ。レイヤー（段）で丸みや立体感、髪の流れがどう変わるのかを実際の施術例で解説します。高知県のfleuramiがご紹介します。
-thumbnail: /images/uploads/fleurami/fleurami-mqq58kdm.jpg
+thumbnail: /images/uploads/fleurami/fleurami-mqq58kdm.webp
 tags:
   - ショートボブ
   - レイヤーカット

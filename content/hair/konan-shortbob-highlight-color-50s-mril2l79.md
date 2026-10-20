@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "香南市で50代女性向けのショートボブ×ハイライトカラーを検討中の方へ。仕上がりの特徴・サロン選びの基準・fleuramiの施術事例をまとめた判断材料記事です。"
-thumbnail: "/images/uploads/fleurami/fleurami-mrikzzqy.jpg"
+thumbnail: "/images/uploads/fleurami/fleurami-mrikzzqy.webp"
 tags: ["香南市", "ショートボブ", "ハイライトカラー", "50代ヘアスタイル", "艶カラー", "白髪ぼかし", "fleurami"]
 question: "香南市で50代女性がショートボブ×ハイライトカラーをするとき、どのサロンをどんな基準で選べばいい？"
 answer_summary: "ショートボブ×ハイライトは、カットとカラーの両方のバランスが仕上がりを左右するため、「カット設計×カラー設計を一緒に相談できるサロン」を選ぶことが重要です。香南市のfleuramiでは、50代の髪の状態や白髪の割合に合わせてハイライトの入れ方を提案し、艶感と自然な立体感が出やすい仕上がりを目指しています。"

@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "艶やかで自然な仕上がりを求める20〜30代の方へ。高知県のヘアサロンfleuramiでの施術例をもとに、透明感のあるブラウン系カラーの特徴と選び方をわかりやすく解説します。"
-thumbnail: "/images/uploads/fleurami/fleurami-mqq5cs8u.jpg"
+thumbnail: "/images/uploads/fleurami/fleurami-mqq5cs8u.webp"
 tags: ["ヘアカラー", "艶カラー", "ショートボブ", "高知美容室", "fleurami"]
 question: "20〜30代が自然な艶感のあるヘアカラーを選ぶとき、何を基準にすればいいの？"
 answer_summary: "自然な艶感を出したいなら、透明感のあるブラウン系トーンのカラーが選ばれやすい傾向があります。光に当たったときにやわらかく輝く色味は、派手になりすぎず、日常に馴染みやすいのが特徴です。高知県のfleuramiでは、お客様のご希望と髪質に合わせて、自然なトーンの中で最大限の艶感を引き出すカラー提案を行っています。"

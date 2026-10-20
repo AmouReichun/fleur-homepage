@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "ダブルカラーは大人女性にも人気の染め方です。写真の施術例をもとに、仕上がりの質感・色みの特徴、どんな方に向いているかをRiv. by fleuramiのスタイリストが丁寧に解説します。"
-thumbnail: "/images/uploads/riv/riv-mqt1giug.jpg"
+thumbnail: "/images/uploads/riv/riv-mqt1giug.webp"
 tags: ["ダブルカラー", "大人カラー", "ヘアカラー", "高知美容室"]
 question: "ダブルカラーは40代の大人女性にも似合う仕上がりになるの？"
 answer_summary: "ダブルカラーは、ベースの色を一度調整してから目的の色を重ねる染め方です。深みのあるダークトーンからグラデーションやハイライトまで、幅広い表現が可能なため、大人女性にも取り入れやすいカラー技術のひとつです。仕上がりのイメージや髪の状態に合わせてデザインを組み立てることが大切です。"

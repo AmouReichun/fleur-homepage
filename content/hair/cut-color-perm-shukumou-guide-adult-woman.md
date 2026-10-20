@@ -5,7 +5,7 @@ category: "hair"
 salon: "fleurami"
 date: "2026-06-12"
 excerpt: "丸みのあるシルエットが美しいショートボブ。後ろ姿の仕上がりにこだわりたい大人女性に向けて、fleurami（高知）のスタイリストが施術例をもとに解説します。"
-thumbnail: "/images/thumbnails/cut-color-perm-shukumou-guide-adult-woman.jpg"
+thumbnail: "/images/thumbnails/cut-color-perm-shukumou-guide-adult-woman.webp"
 tags: ["ショートボブ", "カット", "大人ヘア", "高知美容室"]
 question: "大人女性のショートボブで、後ろ姿が美しく見えるためにはどんなカットのポイントが大切なの？"
 answer_summary: "後ろ姿の美しさは、ネープ（えり足）の刈り上げと丸みのあるシルエットのバランスで決まりやすいです。頭の丸みに沿ってカットされたボブは、後頭部のふくらみが自然に出て、すっきりとした印象を与えやすくなります。fleuramiでは、お客様の骨格や毛量に合わせてシルエットを丁寧に整えています。"

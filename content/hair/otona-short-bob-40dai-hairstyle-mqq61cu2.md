@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "40代からのショートボブは、すっきりとした首元と自然なボリューム感が魅力。高知県のfleuramiの施術例をもとに、大人女性に似合うショートボブの仕上がりポイントを丁寧に解説します。"
-thumbnail: "/images/uploads/fleurami/fleurami-mqq4k1jx.jpg"
+thumbnail: "/images/uploads/fleurami/fleurami-mqq4k1jx.webp"
 tags: ["ショートボブ", "大人ヘア", "40代ヘアスタイル", "fleurami"]
 question: "40代女性にショートボブは似合うのか、どんな仕上がりが大人らしく見えるのか？"
 answer_summary: "ショートボブは、首元をすっきり見せながら自然なボリューム感を出しやすいスタイルで、40代女性にも取り入れやすい選択肢のひとつです。髪のツヤ感や毛流れを意識したカットによって、落ち着いた大人らしい印象に仕上がる傾向があります。高知県のfleuramiでは、お一人おひとりの骨格や髪質に合わせたショートボブのご提案をしています。"

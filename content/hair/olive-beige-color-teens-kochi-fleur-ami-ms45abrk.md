@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "香南市の美容室fleuramiで10代のお客様に施術した、透明感のあるオリーブベージュカラーの仕上がりと選び方を解説。カラーのみか髪質改善との組み合わせか、サロン選びの判断材料を提供します。"
-thumbnail: "/images/uploads/fleurami/fleurami-ms457diq.jpg"
+thumbnail: "/images/uploads/fleurami/fleurami-ms457diq.webp"
 tags: ["オリーブベージュ", "髪質改善カラー", "10代ヘアカラー", "香南市美容室", "fleurami"]
 question: "10代が透明感のあるオリーブベージュカラーを選ぶとき、仕上がりを左右するポイントは何か？"
 answer_summary: "オリーブベージュの透明感は、ベースの明るさと薬剤の配合バランスが仕上がりに大きく影響します。髪質改善トリートメントと組み合わせることで、艶感ととまとまりやすさを同時に引き出しやすい傾向があります。香南市のfleuramiでは、カウンセリングでベースの状態を確認したうえで施術内容を提案しています。"

@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "高知市で艶カラーを検討中の40代女性へ。仕上がりの特徴・サロン選びの判断基準・Riv. by fleuramiの施術事例をスタイリストが具体的に解説します。"
-thumbnail: "/images/uploads/riv/riv-ms5jp3hm.jpg"
+thumbnail: "/images/uploads/riv/riv-ms5jp3hm.webp"
 tags: ["艶カラー", "高知市", "40代ヘアカラー", "髪質改善", "Riv.byfleurami"]
 question: "高知市で艶カラーを選ぶと、実際にどんな仕上がりになるのか？"
 answer_summary: "艶カラーは髪表面の光の反射を意識した色設計で、ツヤ感のある仕上がりになりやすい施術です。高知市のRiv. by fleuramiでは、お客様の髪の状態や骨格に合わせてカラーの明度・彩度を調整しながら仕上げています。白髪の有無・髪のダメージ具合・普段のスタイリング習慣なども踏まえてご提案するため、カウンセリングに時間をかけることを大切にしています。"

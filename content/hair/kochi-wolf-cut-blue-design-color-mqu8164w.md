@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "高知市のヘアサロン「Riv. by fleurami」で人気のウルフカット×ブルーデザインカラー。毛先にビビッドなブルーを忍ばせた大人の個性派スタイルを詳しくご紹介します。"
-thumbnail: "/images/uploads/riv/riv-mqu7ysg7.jpg"
+thumbnail: "/images/uploads/riv/riv-mqu7ysg7.webp"
 tags: ["ウルフカット", "デザインカラー", "インナーカラー", "高知市美容院", "大人ヘア"]
 question: "高知市でウルフカットとブルーのデザインカラーを組み合わせたスタイルにするには、どんな施術をすればいい？"
 answer_summary: "ウルフカットで動きと軽さを出しながら、毛先にブルーのカラーをプラスするデザインカラーを組み合わせることで、落ち着いたダークベースの中に鮮やかな色味が映える個性的なスタイルに仕上がります。高知市のRiv. by fleuramiでは、お客様の髪質や骨格に合わせてカットとカラーを丁寧にデザインしています。"

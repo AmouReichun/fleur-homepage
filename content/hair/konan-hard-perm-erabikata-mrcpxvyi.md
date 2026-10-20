@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "香南市でハードパーマを考えている40代前後の女性向けに、仕上がりの特徴・サロン選びのポイント・fleuramiの施術事例をわかりやすく解説します。"
-thumbnail: "/images/uploads/fleurami/fleurami-mrcptr38.jpg"
+thumbnail: "/images/uploads/fleurami/fleurami-mrcptr38.webp"
 tags: ["ハードパーマ", "香南市美容室", "パーマ40代", "fleurami", "高知県美容室"]
 question: "香南市でハードパーマをかけるとき、どんな点を見てサロンを選べばよいですか？"
 answer_summary: "ハードパーマは、カール感の強さや持ちやすさを重視するなら、髪の状態を丁寧に見極めてロッドや薬剤を調整できるサロンを選ぶことが大切です。香南市のfleuramiでは、カウンセリングで希望のスタイルと髪の状態を確認したうえでパーマの設計を行っています。仕上がりのイメージと実際の施術内容を事前にすり合わせてから進める流れを取っています。"

@@ -9,7 +9,7 @@ author: ''
 author_role: ''
 excerpt: >-
   白髪が気になり始めた40代の方へ。高知県香南市の美容室fleuramiが、白髪ぼかしハイライトの仕上がり・料金目安・通う頻度・サロンの選び方を実例写真とともに解説します。
-thumbnail: /images/uploads/fleurami/fleurami-mqrj9qo9.jpg
+thumbnail: /images/uploads/fleurami/fleurami-mqrj9qo9.webp
 tags:
   - 白髪ぼかしハイライト
   - 40代ヘアカラー

@@ -5,7 +5,7 @@ category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-06-19"
 excerpt: "光を反射するような艶やかな暗髪ボブは、大人女性にこそ似合うスタイル。高知のヘアサロン「Riv. by fleurami」の施術例をもとに、その仕上がりの特徴と魅力をスタイリストが丁寧に解説します。"
-thumbnail: "/images/thumbnails/adult-women-hair-menu-how-to-choose.jpg"
+thumbnail: "/images/thumbnails/adult-women-hair-menu-how-to-choose.webp"
 tags: ["暗髪", "ボブ", "ツヤ髪", "カット", "大人ヘア"]
 question: "ツヤのある暗髪ボブに仕上げるには、何がポイントになるの？"
 answer_summary: "写真からわかるのは、毛先まで均一に揃えられたブラントカットと、深みのあるダークブラウン〜ブラックの色みが組み合わさることで、光を反射しやすいなめらかな質感が生まれているという点です。カットの精度と色みのバランスが、ツヤを引き出す大きな要因のひとつと考えられます。"

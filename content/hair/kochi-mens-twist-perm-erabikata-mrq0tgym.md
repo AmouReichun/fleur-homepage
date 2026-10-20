@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "高知市でメンズツイストパーマを検討中の方へ。仕上がりの質・持ちの目安・サロン選びの基準をRiv. by fleuramiの施術事例をもとに解説します。"
-thumbnail: "/images/uploads/riv/riv-mrq0qzsb.jpg"
+thumbnail: "/images/uploads/riv/riv-mrq0qzsb.webp"
 tags: ["メンズパーマ", "ツイストパーマ", "高知市美容室", "メンズヘア", "Riv. by fleurami"]
 question: "高知市でメンズツイストパーマをかけるとき、どのような基準でサロンを選べばよいですか？"
 answer_summary: "メンズツイストパーマは、髪の長さ・毛質・希望のカール感によって仕上がりが大きく変わるため、カウンセリングでの擦り合わせが仕上がりの質を左右します。高知市のRiv. by fleuramiでは、ツイストの細さやカールの強さを事前に確認したうえで施術を進めるため、「思っていたのと違う」というズレが起きにくい傾向があります。持ちの目安は個人差がありますが、2〜3ヶ月を一つの目安に通う方が多いです。"

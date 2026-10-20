@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "50代の方のストレートショートボブを、内側から光を放つような艶感と丸みのあるシルエットで仕上げる方法を、高知県のヘアサロンfleuramiの施術例をもとに詳しく解説します。"
-thumbnail: "/images/uploads/fleurami/fleurami-mqt0nl7r.jpg"
+thumbnail: "/images/uploads/fleurami/fleurami-mqt0nl7r.webp"
 tags: ["ショートボブ", "ストレート", "50代ヘア", "艶髪"]
 question: "50代のストレート髪でも、艶やかで丸みのきれいなショートボブに仕上げることができますか？"
 answer_summary: "はい、50代のストレート髪はその質感を活かすことで、丸みのある美しいシルエットのショートボブに仕上げやすい素地があります。カット技術とブローの仕上げ方によって、内側から光を放つような艶感を引き出すことができる傾向があります。高知県のfleuramiでは、一人ひとりの髪質に合わせたカットで、そのような仕上がりを目指しています。"

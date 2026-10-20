@@ -8,7 +8,7 @@ updated: ""
 author: "西内みゆき"
 author_role: "スタイリスト"
 excerpt: "40代女性が香南市でショートヘアの後ろ姿をすっきり整えたいとき、カットとカラーをどう選べばいい？fleuramiのスタイリスト西内みゆきが、仕上がりの判断基準と施術のポイントを具体的に解説します。"
-thumbnail: "/images/uploads/fleurami/fleurami-muj8wiud.jpg"
+thumbnail: "/images/uploads/fleurami/fleurami-muj8wiud.webp"
 tags: ["香南市の美容室", "ショートヘア", "40代向けカット", "髪質改善", "カラー"]
 question: "香南市でショートヘアの後ろ姿をすっきり見せるには、カットとカラーをどう組み合わせるべき？"
 answer_summary: "後ろ姿の印象は、カットのライン感と毛束の流れ、そしてカラーの艶感で大きく変わります。高知県香南市のfleuramiでは、骨格や髪質に合わせたカット設計と、肌馴染みのいいカラー選びで、大人女性らしい洗練された後ろ姿を叶えています。"

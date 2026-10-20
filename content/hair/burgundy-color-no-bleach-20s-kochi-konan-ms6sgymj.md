@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "ブリーチなしで深みのあるバーガンディカラーを叶えたい20代向けに、香南市の美容室fleuramiが仕上がりの目安・サロン選びの判断基準・施術事例を解説します。"
-thumbnail: "/images/uploads/fleurami/fleurami-ms6rz8xu.jpg"
+thumbnail: "/images/uploads/fleurami/fleurami-ms6rz8xu.webp"
 tags: ["バーガンディカラー", "ブリーチなしカラー", "艶カラー", "香南市美容室", "20代ヘアカラー"]
 question: "ブリーチなしでバーガンディカラーはどこまで仕上がるの？"
 answer_summary: "ブリーチなしでも、ベースの明るさや色素の蓄積状態によって、深みのあるバーガンディに仕上げやすいケースがあります。ただし元の髪色が暗い場合は発色が控えめになる傾向があるため、事前のカウンセリングで仕上がりのイメージをすり合わせることが大切です。香南市のfleuramiでは、お客様の髪の状態に合わせて色の深みや赤みのバランスを提案しています。"

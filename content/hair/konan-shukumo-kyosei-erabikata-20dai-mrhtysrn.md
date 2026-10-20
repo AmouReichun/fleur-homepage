@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "香南市で縮毛矯正を検討中の方へ。fleuramiが施術事例をもとに、サロン選びの判断基準・向いている人・仕上がりのポイントを丁寧に解説します。"
-thumbnail: "/images/uploads/fleurami/fleurami-mrhtw6wl.jpg"
+thumbnail: "/images/uploads/fleurami/fleurami-mrhtw6wl.webp"
 tags: ["縮毛矯正", "香南市", "髪質改善", "艶髪", "fleurami"]
 question: "香南市で縮毛矯正を受けるとき、どんなポイントでサロンを選べばいいですか？"
 answer_summary: "縮毛矯正はアイロン技術・薬剤の選定・カウンセリングの質が仕上がりに大きく影響します。香南市のfleuramiでは、髪の状態やライフスタイルをもとにコースを提案し、自然なストレートとツヤ感が出やすい仕上がりを目指しています。「ただ伸ばすだけ」ではなく、毎日扱いやすい髪になることを軸に施術を組み立てています。"

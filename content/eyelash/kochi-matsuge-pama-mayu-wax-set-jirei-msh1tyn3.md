@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "高知市ではりまや橋近くのRaffineで人気のまつ毛パーマ×眉毛WAXセット。目元全体の印象を整えたい20〜30代女性向けに、仕上がりの特徴・向き不向き・施術事例を具体的に解説します。"
-thumbnail: "/images/uploads/raffine/raffine-msh1h07p.jpg"
+thumbnail: "/images/uploads/raffine/raffine-msh1h07p.webp"
 tags: ["まつ毛パーマ", "眉毛WAX", "高知市", "Raffine", "目元ケア"]
 question: "まつ毛パーマと眉毛WAXを同時に受けると、目元の印象はどう変わる？"
 answer_summary: "まつ毛パーマで上向きカールを出し、眉毛WAXで眉の輪郭を整えることで、目元全体の「フレーム」が一度にまとまりやすくなる傾向があります。片方だけより、両方合わせることで目と眉の距離感や黄金バランスが整いやすく、すっぴんでも目元の印象が変わりやすいと感じる方もいます。高知市はりまや橋近くのRaffineでは、まつ毛の状態や眉の骨格に合わせてカウンセリングを行ったうえで施術しています。"

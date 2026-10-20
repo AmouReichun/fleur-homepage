@@ -8,7 +8,7 @@ updated: ""
 author: "高田和花"
 author_role: "スタイリスト"
 excerpt: "メンズパーマで長めの髪を活かしたスタイルを作りたい方へ。香南市fleuramiの施術事例から、仕上がりのポイント・持ちの目安・サロン選びの判断基準を解説します。"
-thumbnail: "/images/uploads/fleurami/fleurami-muj8xh3y.jpg"
+thumbnail: "/images/uploads/fleurami/fleurami-muj8xh3y.webp"
 tags: ["メンズパーマ", "香南市", "メンズヘア", "高知県"]
 question: "メンズパーマで長めの髪を活かしたニュアンス感のあるスタイルを作るには、どんなポイントをおさえるべき？"
 answer_summary: "メンズパーマの仕上がりは、パーマの強さ・毛流のの方向・カットのレイヤーバランスで大きく変わります。長さを活かしたスタイルを叶えるには、施術前のカウンセリングで「どんな毛流感を出すか」を明確にすること、そして定期的なカットとスタイリングで形を保つことが重要です。"

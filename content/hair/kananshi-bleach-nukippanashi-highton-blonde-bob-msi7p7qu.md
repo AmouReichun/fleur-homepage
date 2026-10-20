@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "高知県香南市のfleuramiで、ブリーチ後のぬきっぱなし仕上げによるハイトーンブロンドボブの施術事例を紹介。仕上がりの判断基準やサロン選びのポイントを大人女性向けに解説します。"
-thumbnail: "/images/uploads/fleurami/fleurami-msi7mbc9.jpg"
+thumbnail: "/images/uploads/fleurami/fleurami-msi7mbc9.webp"
 tags: ["ブリーチ", "ハイトーンカラー", "ショートボブ", "香南市美容室", "fleurami"]
 question: "ブリーチぬきっぱなしでハイトーンブロンドボブに仕上げるとき、サロン選びで何を確認すればよいですか？"
 answer_summary: "ブリーチぬきっぱなしの仕上がりは、ムラなくリフトアップできるかどうかがポイントです。香南市のfleuramiでは、カウンセリングで髪の状態を確認したうえでブリーチ回数や放置時間を調整し、透き通るようなブロンドトーンに整えています。仕上がりには個人差があるため、事前に髪の履歴や希望の明るさを共有することが大切です。"

@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "高知市ではりまや橋近くのアイサロンRaffineによるラッシュリフト×束感仕上げの施術事例を解説。立ち上げカールの仕上がりの差はどこで生まれるか、サロン選びの判断材料を20〜30代女性向けにまとめています。"
-thumbnail: "/images/uploads/raffine/raffine-mtwkn4uw.jpg"
+thumbnail: "/images/uploads/raffine/raffine-mtwkn4uw.webp"
 tags: ["ラッシュリフト", "まつ毛パーマ", "束感まつ毛", "高知市アイサロン", "Raffine"]
 question: "高知市でラッシュリフト×束感仕上げを受けるとき、仕上がりの差はどこで決まるのか？"
 answer_summary: "ラッシュリフト×束感仕上げの仕上がりは、カールの立ち上げ角度と束の分け方のバランスによって大きく変わります。自まつ毛の長さ・量・向きに合わせたロッド選びとグルーピングが、すっぴんでも印象的な目元を作る鍵です。高知県高知市のRaffineでは、カウンセリングで目の形と希望の印象を確認してからデザインを提案しています。"

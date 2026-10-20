@@ -8,7 +8,7 @@ updated: ""
 author: "西森心大"
 author_role: "スタイリスト"
 excerpt: "高知市でレイヤーボブを考えている40代女性へ。動きと丸みのある仕上がりの違い、似合わせのポイント、Riv. by fleuramiでの施術事例を紹介します。"
-thumbnail: "/images/uploads/riv/riv-mv6dwthr.jpg"
+thumbnail: "/images/uploads/riv/riv-mv6dwthr.webp"
 tags: ["レイヤーボブ", "高知市", "ボブスタイル", "大人向けカット"]
 question: "高知市でレイヤーボブを頼むとき、どんなポイントを確認すれば自分に似合う仕上がりになるのか？"
 answer_summary: "レイヤーボブは「毛先の動きの出し方」「レイヤーの入れ方」「顔周りのバランス」で仕上がりが大きく変わります。高知市でも担当スタイリストとの相談で、骨格や髪質に合わせた提案を受けることが選ぶ際の鍵になります。"

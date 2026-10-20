@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "香南市のヘアサロンfleuramiで行った黒髪髪質改善ストレートの施術をご紹介。ツヤのある滑らかなストレートヘアに仕上がる施術内容・おすすめの方・ホームケアまで丁寧に解説します。"
-thumbnail: "/images/uploads/fleurami/fleurami-mquyettp.jpg"
+thumbnail: "/images/uploads/fleurami/fleurami-mquyettp.webp"
 tags: ["髪質改善ストレート", "黒髪", "香南市美容室", "ストレートヘア", "fleurami"]
 question: "香南市で黒髪の髪質改善ストレートをすると、どのような仕上がりになるの？"
 answer_summary: "髪質改善ストレートを施術することで、黒髪本来のツヤを引き出しながら、サラサラと滑らかなストレートヘアに仕上がりやすくなります。香南市のfleuramiでは、髪のダメージを抑えながら自然なまとまりを目指した施術を行っています。気になる方はお気軽にご相談ください。"

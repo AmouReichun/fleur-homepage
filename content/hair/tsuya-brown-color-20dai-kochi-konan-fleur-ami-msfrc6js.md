@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "香南市fleuramiで20代が選んだ自然な艶ブラウンカラーの施術事例。仕上がりの特徴・サロン選びの判断基準・通う目安まで、高知県香南市の大人向け美容室が具体的に解説します。"
-thumbnail: "/images/uploads/fleurami/fleurami-msfqwuus.jpg"
+thumbnail: "/images/uploads/fleurami/fleurami-msfqwuus.webp"
 tags: ["艶カラー", "ブラウンカラー", "20代ヘアカラー", "香南市美容室", "髪質改善"]
 question: "20代が自然な艶ブラウンカラーを選ぶとき、仕上がりの差はどこで生まれるのか？"
 answer_summary: "艶ブラウンカラーの仕上がりを左右するのは、色のトーン選びと髪の状態に合わせた薬剤設計のバランスです。とくに20代でも乾燥や広がりが気になる場合は、カラーと併せて髪の状態を整えるケアを検討するとまとまりやすくなる傾向があります。高知県香南市のfleuramiでは、カウンセリングで現在の髪の状態と希望する仕上がりを丁寧に確認したうえで施術を提案しています。"

@@ -9,7 +9,7 @@ author: ''
 author_role: ''
 excerpt: >-
   高知市で髪質改善と縮毛矯正の違いが分からず迷う40代前後の女性へ。仕組み・持ち・料金の目安・向き不向きを比較し、どちらを選ぶべきかの判断材料を美容師が解説します。
-thumbnail: /images/uploads/riv/riv-mttf7cp3.jpg
+thumbnail: /images/uploads/riv/riv-mttf7cp3.webp
 tags:
   - 髪質改善
   - 縮毛矯正

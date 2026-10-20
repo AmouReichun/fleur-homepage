@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "透明感のあるウォームブラウン×ゆるふわウェーブで、今っぽい抜け感スタイルに。Riv. by fleuramiの施術例をもとに、色みや質感の特徴をわかりやすく解説します。"
-thumbnail: "/images/uploads/riv/riv-mqt1j2dw.jpg"
+thumbnail: "/images/uploads/riv/riv-mqt1j2dw.webp"
 tags: ["ヘアカラー", "ブラウンカラー", "ウェーブスタイル", "高知美容室"]
 question: "20代に人気のカラーリングで、今っぽいツヤ感と透明感を両立するにはどうすればいい？"
 answer_summary: "今っぽい仕上がりを求めるなら、赤みを抑えたウォームブラウン系のカラーリングがおすすめです。ツヤと透明感を同時に引き出しやすく、ゆるいウェーブスタイルと合わせることで、軽やかで洗練された印象になりやすいです。Riv. by fleuramiでは、お一人おひとりの髪質や骨格に合わせた色提案を行っています。"

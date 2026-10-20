@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "ダブルカラーで叶える艶やかな明るめシルバー。高知県のヘアサロンfleuramiの施術例をもとに、仕上がりの特徴や向いている人、よくある疑問をわかりやすく解説します。"
-thumbnail: "/images/uploads/fleurami/fleurami-mqq4ngl1.jpg"
+thumbnail: "/images/uploads/fleurami/fleurami-mqq4ngl1.webp"
 tags: ["ダブルカラー", "シルバーカラー", "ボブ", "艶髪"]
 question: "ダブルカラーで艶のある明るめシルバーを出すことはできるの？"
 answer_summary: "ダブルカラーとは、まずベースとなる髪色をブリーチで明るくしてから、目的のカラーを重ねる2段階の染色方法です。この工程を踏むことで、シルバーのような淡い寒色系の色みを発色しやすくする効果が期待できます。艶感のある仕上がりを求める方にも選ばれやすい施術です。"

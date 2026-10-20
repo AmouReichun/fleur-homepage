@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "立ち上げまつ毛パーマで目元がどう変わるのか、高知市Raffineの施術事例から実際の仕上がりを具体的に解説。サロン選びで重要なポイントと、自分に合った施術を見つけるための判断基準をご紹介します。"
-thumbnail: "/images/uploads/raffine/raffine-mu99gg67.jpg"
+thumbnail: "/images/uploads/raffine/raffine-mu99gg67.webp"
 tags: ["高知市", "まつ毛パーマ", "立ち上げカール", "目元メイク", "アイラッシュ"]
 question: "立ち上げまつ毛パーマを高知市で受けるなら、どんなサロンを選べば理想の目元に近づけるのか？"
 answer_summary: "高知市でまつ毛パーマを選ぶときは、デザイン提案の丁寧さ、自まつ毛の状態を踏まえた施術、通う周期の目安を確認することが大切です。Raffineでは個別カウンセリングを通じて、一人ひとりに合った立ち上げデザインを実現しており、初めての方にも安心です。"

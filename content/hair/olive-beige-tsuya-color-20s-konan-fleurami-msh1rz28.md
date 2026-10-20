@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "香南市で明るめオリーブベージュの艶カラーを検討している20代女性へ。色の選び方・仕上がりの目安・サロン選びの基準をfleuramiのスタイリストが具体的に解説します。"
-thumbnail: "/images/uploads/fleurami/fleurami-msh14i28.jpg"
+thumbnail: "/images/uploads/fleurami/fleurami-msh14i28.webp"
 tags: ["艶カラー", "オリーブベージュ", "香南市", "20代ヘアカラー", "髪質改善カラー"]
 question: "香南市で明るめのオリーブベージュカラーを叶えるには、どんなサロン・施術を選べばいい？"
 answer_summary: "オリーブベージュは赤みやオレンジみを抑えつつ、透明感と艶感を出しやすいカラーです。明るさを出したい場合はブリーチの要否・ベースの状態・仕上げのトリートメントの組み合わせが仕上がりを左右します。香南市のfleuramiでは、カウンセリングでベースと希望を確認したうえでカラー設計を提案しています。"

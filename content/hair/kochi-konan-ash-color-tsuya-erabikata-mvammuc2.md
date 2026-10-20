@@ -8,7 +8,7 @@ updated: ""
 author: "西内みゆき"
 author_role: "スタイリスト"
 excerpt: "高知県香南市で40代向けのアッシュ系カラーをお探しですか？艶カラーで透明感を表現する仕上がりの秘密と、色持ちを長くするポイントをスタイリスト西内みゆきが解説します。"
-thumbnail: "/images/uploads/fleurami/fleurami-mvamkn3n.jpg"
+thumbnail: "/images/uploads/fleurami/fleurami-mvamkn3n.webp"
 tags: ["香南市", "アッシュ系カラー", "艶カラー", "40代", "髪色選び"]
 question: "香南市でアッシュ系カラーを選ぶとき、艶感のある仕上がりにするにはどんなポイントを見ればいい？"
 answer_summary: "アッシュ系カラーの透明感を活かしつつ艶感を引き出すには、ベースの髪色・光の当たり方・トリートメントの組み合わせが重要です。高知県香南市のfleuramiでは、一人ひとりの髪質と目指す印象に合わせた色選びと施術で、長く満足いただけるカラーをご提案しています。"

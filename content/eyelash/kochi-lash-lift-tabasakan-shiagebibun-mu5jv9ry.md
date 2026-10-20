@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "高知市ではりまや橋近くのRaffineによるラッシュリフト×束感仕上げの施術事例を紹介。カールが続かない・目元の印象が薄いとお悩みの方向けにサロン選びの判断材料を解説します。"
-thumbnail: "/images/uploads/raffine/raffine-mtwklvfb.jpg"
+thumbnail: "/images/uploads/raffine/raffine-mtwklvfb.webp"
 tags: ["ラッシュリフト", "まつ毛パーマ", "束感まつ毛", "高知市", "Raffine"]
 question: "高知市でラッシュリフト×束感仕上げを受けるとき、仕上がりの持ちや印象の差はどこで決まる？"
 answer_summary: "ラッシュリフト×束感仕上げの仕上がりは、カールの高さ設定と束の分け方の技術に左右されやすい傾向があります。高知市のRaffineでは自まつ毛の長さ・向き・量感をカウンセリングで確認したうえでデザインを決めるため、アフター写真のような繊細な束感カールが出やすい状態を整えています。持ちは個人差があるものの、一般的に4〜6週間を目安に次回来店を案内しています。"

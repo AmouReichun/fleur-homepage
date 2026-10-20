@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "高知市・Raffineの眉毛ワックス施術事例をもとに、眉の形が分からない・自己処理が不安な20〜30代女性が、サロン選びで見るべきポイントを具体的に解説します。"
-thumbnail: "/images/uploads/raffine/raffine-mrvlrflz.jpg"
+thumbnail: "/images/uploads/raffine/raffine-mrvlrflz.webp"
 tags: ["眉毛ワックス", "高知市アイラッシュサロン", "美眉", "Raffine高知", "眉毛サロン"]
 question: "高知市で眉毛ワックスを受けるとき、どのサロンをどんな基準で選べばいい？"
 answer_summary: "眉毛ワックスはただ「毛を抜く」のではなく、骨格・顔の印象・普段のメイクスタイルに合わせた設計が仕上がりを左右します。高知市のRaffineでは、形・眉山の丸み・間引きの量などをカウンセリングで決めてからワックスをかけるため、自眉の雰囲気を残しながら整えたい方に向いています。まずは予約時に現在の眉の状態と希望イメージを共有するとスムーズです。"

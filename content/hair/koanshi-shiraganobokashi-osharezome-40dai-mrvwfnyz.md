@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "香南市で白髪ぼかしとおしゃれ染めを検討中の40代女性向け。fleuramiの施術事例をもとに、サロン選びの判断基準・向いている人・向いていない人を具体的に解説します。"
-thumbnail: "/images/uploads/fleurami/fleurami-mrvv34dz.jpg"
+thumbnail: "/images/uploads/fleurami/fleurami-mrvv34dz.webp"
 tags: ["白髪ぼかし", "おしゃれ染め", "香南市美容室", "40代ヘアカラー", "fleurami"]
 question: "香南市で白髪ぼかしとおしゃれ染めを両立するには、どんなサロンをどんな基準で選べばいい？"
 answer_summary: "白髪ぼかしとおしゃれ染めを両立するには、白髪の量・生え方・なりたいイメージに合わせた配合設計ができるサロンを選ぶことが大切です。香南市のfleuramiでは、カウンセリングで現状を整理したうえでカラー設計を行い、艶感のあるまとまりやすい仕上がりを目指しています。通う周期の目安や次回提案も含めて相談できる環境を整えています。"
