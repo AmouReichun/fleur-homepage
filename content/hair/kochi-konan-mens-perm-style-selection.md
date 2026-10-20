@@ -3,7 +3,7 @@ title: "メンズパーマを香南市で選ぶなら何を見る？スタイル
 slug: "kochi-konan-mens-perm-style-selection"
 category: "hair"
 salon: "fleurami"
-date: "2026-10-07"
+date: "2026-10-20"
 updated: ""
 author: "山岡悠弥"
 author_role: "スタイリスト"
@@ -14,7 +14,6 @@ question: "メンズパーマの仕上がりは、どうやって見分けて選
 answer_summary: "メンズパーマは、かける位置・強さ・髪質との相性で仕上がりが大きく異なります。香南市のfleuramiでは、顔型や骨格、ライフスタイルに合わせた施術を提案するため、まずはカウンセリングで「どんな印象にしたいのか」を相談することが選ぶポイントです。"
 instagram_id: "18100091312565808"
 instagram_permalink: "https://www.instagram.com/reel/DeLdHnCBSLG/"
-draft: true
 faq:
   - q: "メンズパーマって毎日セットが必要？手間が少ないスタイルもある？"
     a: "ドライだけで形が出やすいパーマもあれば、ジェルやワックスでセットするパーマもあります。朝の時間や手間にどれだけ余裕があるか、スタイリストに伝えることで、あなたのライフスタイルに合う提案が可能です。香南市のfleuramiではカウンセリング時にそのあたりを詳しく聞いています。"

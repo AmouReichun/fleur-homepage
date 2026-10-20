@@ -3,7 +3,7 @@ title: "高知市でボブの艶感を引き出すには｜カット×カラー�
 slug: "kochi-bob-tsuyakan-care-combination"
 category: "hair"
 salon: "Riv. by fleurami"
-date: "2026-10-07"
+date: "2026-10-20"
 updated: ""
 author: "沢村瑞希"
 author_role: "スタイリスト"
@@ -14,7 +14,6 @@ question: "ボブスタイルで艶感が出ない理由は何か、そしてそ
 answer_summary: "艶感はカット（ラインと毛流の整え方）・カラー選び（深みのある色）・定期的なトリートメント（手触りとツヤ）の3つが揃うことで初めて完成します。高知市のRiv. by fleuramiでは、これら全体をトータルで提案するため、一度の施術で見た目が整いやすくなります。"
 instagram_id: "18105580616252170"
 instagram_permalink: "https://www.instagram.com/reel/DeLdKtDSfAO/"
-draft: true
 faq:
   - q: "高知市でボブの艶感を出したいなら、美容室選びで何を見るべき？"
     a: "カット技術（毛先のラインが揃っているか）、カラーの提案内容（深みのある色か、明るさだけを重視していないか）、トリートメントの種類（毎回の施術に含まれているか）の3つを確認しましょう。Riv. by fleuramiは、カット後に基本的にカラー・トリートメントの相談をして、バランスの取れた提案をするため、来店ごとに艶感が整いやすくなります。"

@@ -3,7 +3,7 @@ title: "高知市でまつ毛パーマを選ぶなら｜自然な立ち上げと
 slug: "kochi-matsugeperma-tachiagarikasoku"
 category: "eyelash"
 salon: "Raffine"
-date: "2026-02-22"
+date: "2026-10-20"
 updated: ""
 author: "尾崎あい"
 author_role: "アイリスト"
@@ -14,7 +14,6 @@ question: "高知市でまつ毛パーマを受けるとき、『立ち上げが
 answer_summary: "立ち上げと自然さの両立は、カール形状・毛流の方向・デザインの選び方で実現できます。Raffineでは施術前のカウンセリングで理想の目元を詳しくヒアリングし、お客様の毛質や骨格に合わせた束感・セパレートデザインを提案しています。"
 instagram_id: "18029563472604647"
 instagram_permalink: "https://www.instagram.com/p/DVCvY9cgWFh/"
-draft: true
 faq:
   - q: "立ち上げまつ毛パーマって、どのくらい立ち上がるの？"
     a: "立ち上げカールはロッド（カーラー）のサイズで調整します。高知市のRaffineでは、カウンセリングで理想の角度（30〜60度程度）を確認してから施術。毎日のメイク時間や、すっぴん時の見え方など、シーンに応じたカール度合いを提案しています。個人の毛質や毛の長さで仕上がりに差が出るため、カウンセリングで詳しくお伝えします。"
