@@ -1,6 +1,5 @@
 User-agent: *
 Allow: /
-Disallow: /admin/
 Disallow: /blog/search
 
 # AI crawlers — explicitly allowed for AIO / AI Overviews
@@ -24,7 +23,6 @@ Allow: /
 
 User-agent: Googlebot
 Allow: /
-Disallow: /admin/
 Disallow: /blog/search
 
 User-agent: Amazonbot

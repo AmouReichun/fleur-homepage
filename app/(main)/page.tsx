@@ -1,16 +1,17 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import dynamic from "next/dynamic";
 
 export const revalidate = 3600;
 
 export const metadata: Metadata = {
-  title: "高知市の美容室・まつ毛サロン | fleur GROUP｜髪質改善・縮毛矯正・眉毛WAX",
+  title: { absolute: "高知市の美容室・まつ毛サロン｜髪質改善・縮毛矯正・眉毛WAX｜fleur GROUP" },
   description:
     "高知市・香南市の美容室・まつ毛サロン fleur GROUP。Googleクチコミ4.6以上。髪質改善・白髪ぼかし・縮毛矯正（Riv.・fleurami）、まつ毛パーマ・眉毛WAX（Raffine）。土日OK・駐車場あり・Web予約当日受付。",
   alternates: { canonical: "https://fleur-group.jp" },
 };
 import { getContentCached } from "@/lib/content";
-import { faqPageSchema, rivSalonSchema, fleuramiSalonSchema, raffineSalonSchema, founderPersonSchema, organizationSchema, webSiteSchema } from "@/lib/structured-data";
+import { faqPageSchema, rivSalonSchema, fleuramiSalonSchema, raffineSalonSchema, founderPersonSchema } from "@/lib/structured-data";
 import HeroSlideshow from "@/app/components/HeroSlideshow";
 import QuickLinkGrid from "@/app/components/QuickLinkGrid";
 import SalonCards from "@/app/components/SalonCards";
@@ -21,9 +22,13 @@ import Reveal from "@/app/components/Reveal";
 import StaffPreview from "@/app/components/StaffPreview";
 import GalleryGrid from "@/app/components/GalleryGrid";
 import ReservationChannels from "@/app/components/ReservationChannels";
-import BrandMovieSection from "@/app/components/BrandMovieSection";
 import RecruitFeature from "@/app/components/RecruitFeature";
 import { getAllPostsMeta } from "@/lib/blog/posts";
+
+const BrandMovieSection = dynamic(() => import("@/app/components/BrandMovieSection"), {
+  ssr: false,
+  loading: () => <div className="py-20 sm:py-28 bg-[#111111]" aria-hidden="true" />,
+});
 
 function SectionLabel({ index, en, ja }: { index: string; en: string; ja: string }) {
   return (
@@ -76,8 +81,6 @@ export default async function HomePage() {
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webSiteSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(founderPersonSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(rivSalonSchema) }} />
