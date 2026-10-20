@@ -10,7 +10,7 @@ author_role: ''
 excerpt: >-
   高知市で湿気やうねりに悩む大人女性へ。縮毛矯正で髪がサラサラに見える仕組みと、向いている人・向いていない人の判断ポイントを解説します。高知県高知市の美容室Riv.
   by fleuramiがお届けします。
-thumbnail: /images/uploads/fleurami/fleurami-mqq4l2du.jpg
+thumbnail: /images/uploads/fleurami/fleurami-mqq4l2du.webp
 tags:
   - 縮毛矯正
   - 高知市美容室

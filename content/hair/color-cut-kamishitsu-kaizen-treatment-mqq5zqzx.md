@@ -10,7 +10,7 @@ author_role: ''
 excerpt: >-
   カラーすると毛先がパサつく、すぐ色落ちする40代女性へ。同日施術で色持ち・ツヤ・まとまりがどう変わるか、所要時間やサロン選びのポイントを施術事例とともに解説します。高知市の美容室Riv.
   by fleurami。
-thumbnail: /images/uploads/fleurami/fleurami-mqq268i5.jpg
+thumbnail: /images/uploads/fleurami/fleurami-mqq268i5.webp
 tags:
   - 髪質改善
   - 艶カラー

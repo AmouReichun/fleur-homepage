@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "香南市で大人のショートボブを考えている40代女性へ。丸みのある後ろ姿を仕上げるカットのポイントと、fleuramiの施術事例をスタイリストが解説します。"
-thumbnail: "/images/uploads/fleurami/fleurami-msi7nkbn.jpg"
+thumbnail: "/images/uploads/fleurami/fleurami-msi7nkbn.webp"
 tags: ["ショートボブ", "香南市", "大人女性", "40代", "カット"]
 question: "香南市でショートボブの丸みとまとまりを出すには、どのような施術を選べばよいですか？"
 answer_summary: "ショートボブで丸みとまとまりを出すには、カットの段差（グラデーション）の入れ方と毛量の調整が重要になります。高知県香南市のfleuramiでは、カウンセリングで骨格や毛質を確認したうえで、後頭部に丸みが出やすいようカットラインを設計しています。仕上がりの印象は担当者の技術やカット方針によって異なるため、事前に見本写真を持参して相談するとイメージのすり合わせがしやすくなります。"

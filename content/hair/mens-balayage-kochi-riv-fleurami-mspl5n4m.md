@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "高知市の美容室Riv. by fleuramiのメンズバレイヤージュ施術事例。40代前後の男性・女性が参考にできる、立体感・透明感を出すための選び方と仕上がりの目安を担当スタイリストが解説します。"
-thumbnail: "/images/uploads/riv/riv-mspl2w90.jpg"
+thumbnail: "/images/uploads/riv/riv-mspl2w90.webp"
 tags: ["メンズバレイヤージュ", "高知市美容室", "ハイライトカラー", "Riv. by fleurami", "メンズカラー"]
 question: "高知市でメンズバレイヤージュを受けるとき、仕上がりと向き不向きをどう判断すればいい？"
 answer_summary: "メンズバレイヤージュは、毛先に向かって自然に明るさが広がる技法で、短い髪でも立体感や軽さが出やすい傾向があります。高知市のRiv. by fleuramiでは、ベースカラーとのトーン差・毛量・フォルムを見ながらデザインを提案しているため、カウンセリング時に仕上がりイメージを共有することが判断の基準になります。"

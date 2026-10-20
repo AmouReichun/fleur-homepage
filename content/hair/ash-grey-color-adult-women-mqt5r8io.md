@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "「アッシュグレーは若い人向け？」と感じていませんか？落ち着いたトーンのアッシュグレーは、大人女性の肌なじみがよく、上品な印象を引き出しやすいカラーです。高知・fleuramiの施術例をもとに解説します。"
-thumbnail: "/images/uploads/fleurami/fleurami-mqt5obch.jpg"
+thumbnail: "/images/uploads/fleurami/fleurami-mqt5obch.webp"
 tags: ["アッシュグレー", "大人カラー", "ヘアカラー", "fleurami"]
 question: "アッシュグレーカラーは40代前後の大人女性に似合うのか？"
 answer_summary: "落ち着いたトーンのアッシュグレーは、派手になりすぎず上品な雰囲気を出しやすいため、大人女性にも取り入れやすいカラーです。透明感のあるくすみ感が髪全体を均一に見せ、ナチュラルで洗練された印象につながりやすい傾向があります。「派手なカラーは避けたいけれど、変化を楽しみたい」という方に特に向いているスタイルです。"

@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "ナチュラルなのに存在感がある「上品まつエク」。束感×Cカールで作るすっきり目元の特徴と、高知・Raffineの施術例をアイリストが解説します。"
-thumbnail: "/images/uploads/raffine/raffine-mqp27arq.jpg"
+thumbnail: "/images/uploads/raffine/raffine-mqp27arq.webp"
 tags: ["まつエク", "上品マツエク", "束感まつエク", "高知まつエク"]
 question: "「上品まつエク」ってどんなデザインで、どんな目元に向いているの？"
 answer_summary: "「上品まつエク」とは、束感とカール感を活かして目元に立体感を出しながらも、派手になりすぎないバランスのよいまつエクデザインです。均一に並べるのではなく束をところどころ作ることで、自まつ毛のような自然さとまつエクならではの存在感を両立しやすいのが特徴です。トレンド感のある目元を目指したい方に人気の仕上がりです。"

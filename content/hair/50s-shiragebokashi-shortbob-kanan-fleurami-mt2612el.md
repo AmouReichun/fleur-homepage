@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "50代で白髪が気になり始めた方向け。香南市fleuramiの白髪ぼかしカラー×ショートボブの施術事例をもとに、艶感と自然な色味を両立するための選び方を解説します。"
-thumbnail: "/images/uploads/fleurami/fleurami-mt25tbof.jpg"
+thumbnail: "/images/uploads/fleurami/fleurami-mt25tbof.webp"
 tags: ["白髪ぼかし", "ショートボブ", "50代ヘア", "香南市美容室", "fleurami"]
 question: "50代の白髪ぼかしショートボブで、艶と自然な仕上がりを両立するにはどうすればよいですか？"
 answer_summary: "白髪ぼかしカラーは、白髪をしっかりと染めるのではなく周囲の髪の色に馴染ませる技術で、50代の方にも自然な印象になりやすい選択肢です。ショートボブとの組み合わせでは、カット設計とカラーの配置バランスが仕上がりの艶感に影響しやすいため、両方を熟慮できるサロン選びが判断基準になります。高知県香南市のfleuramiでは、カウンセリングをもとに色の配置とカットラインを合わせて提案しています。"

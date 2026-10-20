@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "香南市でイヤリングカラーを検討中の方向け。サロン選びの判断基準・仕上がりの目安・fleuramiの施術事例を具体的に紹介。40代前後の大人女性にも参考になる内容です。"
-thumbnail: "/images/uploads/fleurami/fleurami-mrsm9qg9.jpg"
+thumbnail: "/images/uploads/fleurami/fleurami-mrsm9qg9.webp"
 tags: ["イヤリングカラー", "香南市美容室", "fleurami", "インナーカラー", "髪色"]
 question: "香南市でイヤリングカラーをするとき、どんな基準でサロンを選べばいい？"
 answer_summary: "イヤリングカラーは耳まわりだけに色を入れるため、全体の髪色とのバランスを見ながら提案できるサロンを選ぶことが重要です。香南市のfleuramiでは、ベースの髪色・明るさ・ライフスタイルに合わせてカラーの入れ方を相談しながら決めていきます。初めての方や「どんな色が似合うか分からない」という方も、カウンセリングから対応しています。"

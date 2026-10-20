@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "髪質改善縮毛矯正は、くせをのばしながら髪の内部まで補修成分を届け、ツヤとまとまりを同時に整えやすい施術です。高知県のRiv. by fleuramiの症例をもとに詳しく解説します。"
-thumbnail: "/images/thumbnails/shitsushitsu-kaizen-shukumokyosei-chigai-mqowt6ze.jpg"
+thumbnail: "/images/thumbnails/shitsushitsu-kaizen-shukumokyosei-chigai-mqowt6ze.webp"
 tags: ["髪質改善縮毛矯正", "縮毛矯正", "ツヤ髪", "高知美容室"]
 question: "髪質改善縮毛矯正は、従来の縮毛矯正とどう違い、どんな方に向いているのか？"
 answer_summary: "髪質改善縮毛矯正は、くせやうねりをのばす縮毛矯正の効果に加え、髪の内部を整える補修成分を組み合わせた施術です。仕上がりにツヤと柔らかさが出やすく、硬くなりがちな従来の縮毛矯正とは異なる質感を目指せる傾向があります。くせ毛やうねりにお悩みで、なおかつ髪のツヤやまとまりも求める方に向いています。"

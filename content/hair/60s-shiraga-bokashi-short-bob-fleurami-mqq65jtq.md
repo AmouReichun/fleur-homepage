@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "60代の方の白髪ぼかしカラー＋カットの仕上がりをご紹介。ツヤのあるブラウンベースのショートボブが、後ろ姿からも美しく映える施術例を高知県のfleuramiがわかりやすく解説します。"
-thumbnail: "/images/uploads/fleurami/fleurami-mqq4o8gb.jpg"
+thumbnail: "/images/uploads/fleurami/fleurami-mqq4o8gb.webp"
 tags: ["白髪ぼかし", "ショートボブ", "60代ヘア", "大人カラー"]
 question: "60代の方が白髪ぼかしカラーとカットを合わせると、どんな仕上がりになるの？"
 answer_summary: "白髪ぼかしカラーとカットを組み合わせることで、白髪を自然になじませながら、ツヤ感のある美しいショートスタイルに仕上げることができます。高知県のfleuramiでは、お一人おひとりの髪質や白髪の状態に合わせてカラーとカットを提案しています。まとまりのある丸みのあるシルエットが、後ろ姿からも品よく映えやすいスタイルです。"

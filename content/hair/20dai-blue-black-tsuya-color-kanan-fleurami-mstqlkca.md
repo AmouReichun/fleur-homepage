@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "香南市で「光に当たると青みが出るブルーブラック」を求める20代向け。艶カラーの仕上がりの差がどこで生まれるか、fleurami（高知県香南市）の施術事例をもとに解説します。"
-thumbnail: "/images/uploads/fleurami/fleurami-mstqdwv9.jpg"
+thumbnail: "/images/uploads/fleurami/fleurami-mstqdwv9.webp"
 tags: ["艶カラー", "ブルーブラック", "香南市", "20代カラー", "fleurami"]
 question: "香南市で20代がブルーブラックの艶カラーを受けるとき、仕上がりの差はどこで生まれるのか？"
 answer_summary: "ブルーブラックの艶カラーは、色の深みと青みのバランス・地毛の赤みへの対処・仕上げの工程によって見え方が大きく変わりやすいです。香南市のfleurami（高知県香南市）では、光に当たったときの青みをきれいに感じやすいよう、カウンセリングで髪の状態と希望を丁寧に確認してから配合を決めています。"

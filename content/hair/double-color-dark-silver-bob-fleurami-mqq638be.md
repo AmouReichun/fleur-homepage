@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "「シルバー系にしたいけど、どんな施術が必要？」そんな疑問にお答えします。高知県のフルールアミが手がけた透明感のある濃いめシルバーボブの施術例をもとに詳しく解説します。"
-thumbnail: "/images/uploads/fleurami/fleurami-mqq4la8z.jpg"
+thumbnail: "/images/uploads/fleurami/fleurami-mqq4la8z.webp"
 tags: ["ダブルカラー", "シルバーカラー", "ボブ", "透明感カラー"]
 question: "透明感のある濃いめシルバーカラーを出すには、ダブルカラーが必要ですか？"
 answer_summary: "透明感のある濃いめシルバーを表現するには、ブリーチを使ったダブルカラーが必要になるケースが多いです。もともとの髪の明度によって仕上がりに差が出やすいため、ベースを整えてからカラーを重ねる方法が適しています。高知県のfleuramiでは、ご希望の色みとベースの状態を丁寧にカウンセリングしたうえで施術しています。"

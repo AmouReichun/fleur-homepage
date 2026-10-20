@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "高知県香南市のfleurami。40代の白髪ぼかしカラーで「艶が出ない」「白髪が目立ちやすい」と感じている方に向けて、サロン選びの判断基準と実際の施術事例を解説します。"
-thumbnail: "/images/uploads/fleurami/fleurami-mt25tyjb.jpg"
+thumbnail: "/images/uploads/fleurami/fleurami-mt25tyjb.webp"
 tags: ["白髪ぼかし", "艶カラー", "40代ヘアカラー", "香南市美容室", "fleurami"]
 question: "40代の白髪ぼかしカラーで艶と自然な色味を両立させるには、何を基準にサロンを選べばいい？"
 answer_summary: "白髪ぼかしで艶と自然な色味を両立させるには、白髪の割合・髪の状態・求める明るさのバランスをカウンセリングで丁寧に整理できるサロンを選ぶことが重要です。香南市のfleuramiでは、白髪の分布や髪のコンディションをもとに色の選定を行い、艶感のある仕上がりを目指した提案を行っています。単に白髪を隠すだけでなく、長く色持ちしやすい状態を意識した施術の流れが特徴です。"

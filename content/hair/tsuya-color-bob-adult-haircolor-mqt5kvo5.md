@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "艶カラーとは、光を反射するようなツヤ感を引き出すヘアカラーの総称。高知・fleuramiの施術例をもとに、40代女性に人気の艶感ボブの魅力をわかりやすく解説します。"
-thumbnail: "/images/uploads/fleurami/fleurami-mqt5iukn.jpg"
+thumbnail: "/images/uploads/fleurami/fleurami-mqt5iukn.webp"
 tags: ["艶カラー", "ボブ", "大人ヘアカラー", "高知美容室"]
 question: "艶カラーとはどんなカラーで、どんな人に向いているの？"
 answer_summary: "艶カラーとは、髪の表面が光を均一に反射するような、透明感とツヤ感を重視したヘアカラーの総称です。赤みや黄みを活かしたブラウン系の色みを選ぶと、特に艶感が出やすい傾向があります。ハリ・コシが気になりやすい大人の髪にも、色みの工夫でリッチな質感を演出しやすいスタイルです。"

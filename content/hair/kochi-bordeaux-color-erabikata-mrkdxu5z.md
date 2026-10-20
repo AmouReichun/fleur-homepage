@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "高知市の美容室Riv. by fleuramiで仕上げたボルドー系カラーをもとに、40代前後の女性が艶感のある赤み系カラーを選ぶ際の判断材料をまとめました。"
-thumbnail: "/images/uploads/riv/riv-mrkd6lg2.jpg"
+thumbnail: "/images/uploads/riv/riv-mrkd6lg2.webp"
 tags: ["高知市", "ボルドーカラー", "艶カラー", "美容室", "Riv. by fleurami"]
 question: "高知市でボルドー系カラーを選ぶとき、どんなサロン・どんな施術内容を基準にすればいいの？"
 answer_summary: "ボルドー系カラーは赤みと深みのバランスが仕上がりを左右するため、カウンセリングで現状の髪の状態や求めるトーンをきちんとすり合わせられるサロンを選ぶことが大切です。高知市のRiv. by fleuramiでは、お客様の髪の状態や生活スタイルに合わせた色設計を提案しており、艶感のある仕上がりと色持ちの目安も含めて事前に相談することができます。"

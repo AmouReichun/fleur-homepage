@@ -10,7 +10,7 @@ author_role: スタイリスト
 excerpt: >-
   高知市で美容室を探している40代前後の方へ。高知 美容室を選ぶときに見るべき基準、カウンセリングや通う頻度の目安、Riv. by
   fleuramiが向いている人までを担当スタイリストが解説します。
-thumbnail: /images/uploads/riv/riv-mr35a98j.jpg
+thumbnail: /images/uploads/riv/riv-mr35a98j.webp
 tags:
   - 高知 美容室
   - 髪質改善

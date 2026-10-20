@@ -10,7 +10,7 @@ author_role: ''
 excerpt: >-
   縮毛矯正しても残るパサつきやうねりに悩む高知市の40代女性へ。同日施術で1回にツヤとまとまりを両立できるか、向き不向きとサロン選びの基準が分かります。高知市のRiv.
   by fleuramiが解説。
-thumbnail: /images/uploads/riv/riv-msh1jf2s.jpg
+thumbnail: /images/uploads/riv/riv-msh1jf2s.webp
 tags:
   - 縮毛矯正
   - 髪質改善

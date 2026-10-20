@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "高知県香南市の美容室fleuramiが10代男性のメンズパーマ施術事例をもとに、仕上がりで後悔しないサロン選びの判断基準をスタイリストが解説します。"
-thumbnail: "/images/uploads/fleurami/fleurami-msnvpw5f.jpg"
+thumbnail: "/images/uploads/fleurami/fleurami-msnvpw5f.webp"
 tags: ["メンズパーマ", "香南市", "10代", "fleurami", "高知県美容室"]
 question: "香南市でメンズパーマをかけるとき、仕上がりで後悔しないために何を確認すればいい？"
 answer_summary: "メンズパーマは髪の長さ・太さ・クセの状態によって適切なロッドや薬剤の選び方が変わるため、カウンセリングで現状をしっかり共有することが仕上がりの差につながります。fleuramiでは香南市を中心に、ナチュラルな動きから立ち上がり感まで、希望のスタイルに合わせた提案を行っています。施術時間の目安は90〜120分程度で、持ちの目安は3〜4ヶ月程度です（個人差があります）。"

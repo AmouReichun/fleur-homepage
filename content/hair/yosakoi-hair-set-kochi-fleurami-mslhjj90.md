@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "高知県香南市のfleurami担当スタイリストが、よさこいヘアセットの仕上がりポイントと選び方を施術事例をもとに解説。踊り子衣装に映えるセットを探している方の判断材料になる記事です。"
-thumbnail: "/images/uploads/fleurami/fleurami-mslhgrnq.jpg"
+thumbnail: "/images/uploads/fleurami/fleurami-mslhgrnq.webp"
 tags: ["よさこいヘアセット", "香南市美容室", "ヘアセット", "高知県fleurami", "大人女性ヘア"]
 question: "香南市でよさこいヘアセットを依頼するとき、仕上がりの差はどこで生まれるのか？"
 answer_summary: "よさこいヘアセットは衣装・踊り・顔まわりとのバランスが仕上がりを左右します。fleuramiでは事前のカウンセリングで衣装の色味やコンセプトを確認し、飾り・ヘアバンド・まとめ方を含めてトータルで提案しています。当日のスタイルキープを考えた土台の作り方や固め方の調整も含め、施術前の確認が仕上がりの差につながりやすい傾向があります。"

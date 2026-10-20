@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "高知市ではりまや橋近くのアイラッシュサロンRaffineのマツエク施術事例を紹介。ぱっちりとナチュラル、どちらのデザインにも対応できる理由と、自分に合うデザインの選び方を担当アイリスト目線で解説します。"
-thumbnail: "/images/uploads/raffine/raffine-msh1lw2t.jpg"
+thumbnail: "/images/uploads/raffine/raffine-msh1lw2t.webp"
 tags: ["まつげエクステ", "マツエク", "高知市", "ナチュラルまつげ", "束感まつげ", "高知県", "Raffine", "はりまや橋"]
 question: "マツエクでぱっちりデザインとナチュラルデザイン、どちらを選べばいいの？"
 answer_summary: "選ぶデザインはまつ毛の状態・目の形・求める印象によって変わります。カール・長さ・本数・スタイルの組み合わせで、同じマツエクでも印象は大きく変わります。高知市のRaffineでは初回カウンセリングでどちらの方向性にも対応しており、相談しながら決めることができます。"

@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "高知市で艶カラーを検討中の40代女性向け。赤みパープルブラウンのツヤストレートスタイルを例に、仕上がりの特徴・サロン選びの基準・Riv. by fleuramiの施術事例を解説します。"
-thumbnail: "/images/uploads/riv/riv-mt2d6yo6.jpg"
+thumbnail: "/images/uploads/riv/riv-mt2d6yo6.webp"
 tags: ["艶カラー", "髪質改善", "高知市美容室", "40代ヘア", "Riv. by fleurami"]
 question: "高知市で艶カラーを選ぶとき、深みと透明感を両立させるために何を確認すればいい？"
 answer_summary: "深みと透明感を同時に出すには、ベースの明るさ調整とカラーの配合バランスが鍵になります。高知市のRiv. by fleuramiでは、お客様の髪の状態に合わせてカラーレシピをカウンセリングで決定し、仕上がりの色みと艶感を両立しやすい施術を提案しています。個人差はありますが、赤みを含むパープルブラウン系は深みと光の反射を出しやすい傾向があります。"

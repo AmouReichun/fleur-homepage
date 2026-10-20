@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "香南市でインナーカラーを検討中の方へ。fleuramiの施術事例をもとに、サロン選びの判断基準・仕上がりの目安・向いている人と向いていない人を整理した記事です。"
-thumbnail: "/images/uploads/fleurami/fleurami-mrvvaqyv.jpg"
+thumbnail: "/images/uploads/fleurami/fleurami-mrvvaqyv.webp"
 tags: ["インナーカラー", "香南市美容室", "カラー", "fleurami", "高知県美容室"]
 question: "香南市でインナーカラーを入れるとき、サロン選びで何を基準にすればいいですか？"
 answer_summary: "インナーカラーはベースの髪色・ブリーチの有無・入れる位置によって仕上がりが大きく変わるため、カウンセリングで希望と髪の状態を丁寧にすり合わせてくれるサロンを選ぶことが重要です。香南市のfleuramiでは、見せたいスタイルと普段の生活に合わせて色・範囲・明るさを提案しています。初めてのインナーカラーでも相談から始められます。"

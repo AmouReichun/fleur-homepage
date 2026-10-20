@@ -8,7 +8,7 @@ updated: ""
 author: "高田和花"
 author_role: "スタイリスト"
 excerpt: "切りっぱなしボブに透明感ブラウンカラーを組み合わせたい40代女性へ。香南市の美容室fleuramiの施術事例から、仕上がりを決める要素とサロン選びの判断基準を分かりやすく解説します。"
-thumbnail: "/images/uploads/fleurami/fleurami-musbgntw.jpg"
+thumbnail: "/images/uploads/fleurami/fleurami-musbgntw.webp"
 tags: ["ボブ", "カラー", "透明感", "香南市", "40代", "艶カラー"]
 question: "切りっぱなしボブに透明感ブラウンカラーを合わせるとき、どのような仕上がりになり、どんなサロンを選べばよいのか？"
 answer_summary: "切りっぱなしボブの透明感ブラウンは、カットの毛流れとカラーの透け感が組み合わさることで初めて完成します。高知県香南市のfleuramiのような、カット・カラーの両面から提案できるサロンを選ぶことが、理想の仕上がりに近づく判断基準となります。"

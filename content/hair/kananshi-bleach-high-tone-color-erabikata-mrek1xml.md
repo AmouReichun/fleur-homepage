@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "香南市でブリーチやハイトーンカラーを検討中の20〜40代の方へ。仕上がりの目安・サロン選びの基準・fleuramiの施術事例をもとに、後悔しない選択のための判断材料を整理します。"
-thumbnail: "/images/uploads/fleurami/fleurami-mrejzek5.jpg"
+thumbnail: "/images/uploads/fleurami/fleurami-mrejzek5.webp"
 tags: ["香南市", "ブリーチカラー", "ハイトーンカラー", "ブロンドヘア", "fleurami"]
 question: "香南市でブリーチ・ハイトーンカラーを選ぶとき、何を基準にサロンを決めればいいですか？"
 answer_summary: "ブリーチを使ったハイトーンカラーは、毛の状態の見極めと施術後のケア提案がセットでなければ、仕上がりに満足しにくいメニューです。香南市のfleuramiでは、カウンセリングで現在の毛の状態・希望の色・ライフスタイルを確認したうえで施術プランを提案しています。まずは相談だけでも受け付けています。"

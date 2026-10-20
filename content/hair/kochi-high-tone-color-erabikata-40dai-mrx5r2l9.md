@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "高知市の美容室Riv. by fleuramiが、ハイトーンカラーを検討中の40代女性向けに、色選びの基準・サロン選びのポイント・施術事例をもとに解説します。"
-thumbnail: "/images/uploads/riv/riv-mrx5cf7v.jpg"
+thumbnail: "/images/uploads/riv/riv-mrx5cf7v.webp"
 tags: ["高知市", "ハイトーンカラー", "艶カラー", "美容室", "40代ヘアカラー"]
 question: "高知市でハイトーンカラーを選ぶとき、40代女性はどんなポイントを見ればいい？"
 answer_summary: "ハイトーンカラーは色の鮮やかさと褪色のスピードが両立しにくいため、仕上がりのゴール設定とホームケアの方向性を事前にすり合わせることが大切です。高知市のRiv. by fleuramiでは、カウンセリングで髪の状態と生活スタイルを確認しながら色みと明度を提案しているため、初めてのハイトーンでも選びやすい環境が整っています。"

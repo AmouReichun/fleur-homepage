@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "香南市・高知県在住の40代女性が「落ち着いた自然な色味の艶カラー」を選ぶ前に知っておきたいポイントと、fleuramiの施術事例を解説。サロン選びの判断材料として活用してください。"
-thumbnail: "/images/uploads/fleurami/fleurami-mt5bs2l5.jpg"
+thumbnail: "/images/uploads/fleurami/fleurami-mt5bs2l5.webp"
 tags: ["艶カラー", "香南市", "40代女性", "大人カラー", "fleurami"]
 question: "40代女性が香南市で落ち着いた艶カラーを選ぶとき、何を基準にサロンを選べばいい？"
 answer_summary: "艶カラーは色味の選び方と施術の組み合わせで仕上がりの印象が大きく変わります。40代女性の場合、白髪の出方や髪の状態に合わせて色設計を相談できるサロンを選ぶことが、長く満足のいく仕上がりにつながりやすいです。高知県香南市のfleuramiでは、カウンセリングで現状の髪の状態や希望の色味を確認したうえで施術プランを提案しています。"

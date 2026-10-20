@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "高知市で縮毛矯正を検討している40代女性向けに、仕上がりの特徴・サロン選びの基準・Riv. by fleuramiの施術事例をスタイリストが解説します。"
-thumbnail: "/images/uploads/riv/riv-msfql94n.jpg"
+thumbnail: "/images/uploads/riv/riv-msfql94n.webp"
 tags: ["縮毛矯正", "高知市", "40代髪質", "Riv. by fleurami", "高知県美容室"]
 question: "高知市で縮毛矯正を選ぶとき、仕上がりや持ちに差が出る要因は何ですか？"
 answer_summary: "縮毛矯正の仕上がりは、薬剤の選定・アイロンの技術・アフターケアの提案の組み合わせで大きく変わります。高知市のRiv. by fleuramiでは、カウンセリングで髪の状態を確認したうえで施術内容を調整しており、自然なストレート感とツヤ感を両立しやすい仕上がりを目指しています。ただし髪の状態やもともとのクセの強さによって個人差があります。"

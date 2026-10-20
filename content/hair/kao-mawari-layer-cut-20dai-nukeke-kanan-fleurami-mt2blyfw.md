@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "香南市fleurami。20代向け顔周りレイヤーカットの施術事例。顔まわりに動きが出にくい・重たく見える悩みを抱える方が、カットだけで印象を変えるポイントを解説します。"
-thumbnail: "/images/uploads/fleurami/fleurami-mt2beaye.jpg"
+thumbnail: "/images/uploads/fleurami/fleurami-mt2beaye.webp"
 tags: ["顔周りレイヤー", "カット", "20代", "香南市", "fleurami"]
 question: "20代が顔周りレイヤーカットで抜け感を出すには、どこを見てサロンを選べばいい？"
 answer_summary: "顔周りレイヤーは、入れる位置・長さのバランス・フェイスフレーミングの意図設計がポイントです。高知県香南市のfleurami では、顔の形や骨格に合わせたカウンセリングを経て、レイヤーの入れ方を一人ひとり調整しています。カットのみでも印象が変わりやすく、次回のカラーや髪質改善と組み合わせやすいスタイルを目指して仕上げています。"

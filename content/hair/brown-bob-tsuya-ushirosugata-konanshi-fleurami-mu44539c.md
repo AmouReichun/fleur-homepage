@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "高知県香南市のfleurami。ブラウン系カラーで艶のあるボブスタイルを求める大人女性向けに、仕上がりの違いを生む選び方の判断基準と施術事例を解説します。"
-thumbnail: "/images/uploads/fleurami/fleurami-mtwqn0bd.jpg"
+thumbnail: "/images/uploads/fleurami/fleurami-mtwqn0bd.webp"
 tags: ["艶カラー", "ブラウンカラー", "ボブ", "香南市美容室", "大人女性ヘア"]
 question: "艶のあるブラウンボブに仕上げるには、サロン選びと施術で何を確認すればいいのか？"
 answer_summary: "艶感のあるブラウンボブを叶えるには、カラーの色選びだけでなくカットのラインとの組み合わせが大切です。高知県香南市のfleuramiでは、髪のまとまりやすさと後ろ姿のシルエットを意識した仕上げを行っています。仕上がりの差は「どんな質感に整えたいか」を事前に共有できるかどうかでも変わりやすい傾向があります。"

@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "香南市のヘアサロンfleur amiで施術したイヤリングカラー2色使いの仕上がりをご紹介。耳まわりにさりげなくカラーを忍ばせる、大人にも取り入れやすいトレンドスタイルです。"
-thumbnail: "/images/uploads/fleurami/fleurami-mqu8ynty.jpg"
+thumbnail: "/images/uploads/fleurami/fleurami-mqu8ynty.webp"
 tags: ["イヤリングカラー", "2色カラー", "香南市美容室", "インナーカラー", "fleur ami"]
 question: "イヤリングカラーを2色使いにするとどんな仕上がりになりますか？"
 answer_summary: "イヤリングカラーを2色使いにすることで、表面からは落ち着いたダークトーンを保ちながら、耳まわりにのぞくカラーがさりげなく個性を演出します。髪を動かしたときだけチラリと見える奥行き感が、シンプルなスタイルに華やかさを加えてくれる傾向があります。派手になりすぎず、大人の女性にも取り入れやすいカラーデザインです。"

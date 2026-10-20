@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "香南市でWカラーと切りっぱなしボブを検討中の30代女性向け。仕上がりの艶・まとまり・サロン選びの判断基準をfleuramiの施術事例をもとに解説します。"
-thumbnail: "/images/uploads/fleurami/fleurami-mroh6nxx.jpg"
+thumbnail: "/images/uploads/fleurami/fleurami-mroh6nxx.webp"
 tags: ["Wカラー", "切りっぱなしボブ", "香南市美容室", "艶カラー", "髪質改善"]
 question: "香南市でWカラーと切りっぱなしボブを仕上げるとき、サロン選びで何を基準にすればよいですか？"
 answer_summary: "Wカラー（ベースカラー＋ハイライトやグロスなどの重ね使い）は、色の選び方と塗布のバランスで仕上がりの艶やまとまり感が大きく変わります。香南市のfleuramiでは、カウンセリングで髪の状態と希望を確認したうえで配合・手順を組み立てるため、「なんとなく重く見える」「パサつきが気になる」といった悩みを抱えた方が判断材料を持って来店できます。"

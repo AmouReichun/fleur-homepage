@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "高知県香南市のfleurami。艶カラーで自然なトーンを希望する方に向け、仕上がりの特徴・サロン選びの基準・施術事例を解説します。40代前後の大人女性が判断材料として使える内容です。"
-thumbnail: "/images/uploads/fleurami/fleurami-mtuxjwfd.jpg"
+thumbnail: "/images/uploads/fleurami/fleurami-mtuxjwfd.webp"
 tags: ["艶カラー", "香南市", "大人女性", "髪質改善", "高知県美容室"]
 question: "香南市で艶カラーを選ぶとき、自然なトーンに仕上げるために何を確認すればいいですか？"
 answer_summary: "艶カラーで自然なトーンを求めるなら、色の選定力とトリートメントとの組み合わせ方を確認することが大切です。高知県香南市のfleuramiでは、お客様の髪の状態や生活スタイルに合わせて色味・明度・艶感を提案しています。自己判断が難しい場合は、カウンセリングで具体的な仕上がりイメージを共有してから施術に入るのが、納得感を高めやすい流れです。"

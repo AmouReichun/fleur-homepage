@@ -5,7 +5,7 @@ category: "eyelash"
 salon: "Raffine"
 date: "2026-06-18"
 excerpt: "まつ毛パーマと眉毛スタイリングを組み合わせると、目元全体の印象がまとまりやすくなります。高知県のまつ毛・まゆげサロンRaffineの症例をもとに、仕上がりの特徴を詳しく解説します。"
-thumbnail: "/images/thumbnails/matsuge-paama-mayu-styling-mejiri.jpg"
+thumbnail: "/images/thumbnails/matsuge-paama-mayu-styling-mejiri.webp"
 tags: ["まつ毛パーマ", "眉毛スタイリング", "目元ケア", "Raffine高知"]
 question: "まつ毛パーマと眉毛スタイリングを同時に施術すると、どんな仕上がりになるの？"
 answer_summary: "まつ毛パーマで自まつ毛を根元から立ち上げ、眉毛スタイリングで眉の形・流れを整えることで、目元全体に統一感が生まれやすくなります。マスクをしていても目元だけで顔の印象を作りやすい組み合わせとして人気があります。ナチュラルながらも「ちゃんとしてる」雰囲気を求める方に向いている施術です。"

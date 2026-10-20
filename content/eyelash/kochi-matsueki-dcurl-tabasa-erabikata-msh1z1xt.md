@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "高知市ではりまや橋近くのRaffineで行ったDカール束感マツエクの施術事例をもとに、エクステの太さ・長さ・カール選びの判断基準と、自分に向いている仕上がりを探したい方向けに解説します。"
-thumbnail: "/images/uploads/raffine/raffine-msh1k0xl.jpg"
+thumbnail: "/images/uploads/raffine/raffine-msh1k0xl.webp"
 tags: ["まつげエクステ", "Dカール", "束感マツエク", "高知市", "Raffine"]
 question: "Dカールの束感まつげエクステで目元の印象を変えるには、何を基準に選べばいい？"
 answer_summary: "Dカールの束感エクステは、カールの高さと長さのバランスが仕上がりの自然さや目力に直結します。今回の事例（D11＋D12の組み合わせ）のように、目の形やまつ毛の生え方に合わせて太さや長さの配置を変えることで、ナチュラルに目が開いて見えやすい印象をつくりやすくなります。高知県高知市のRaffineでは施術前のカウンセリングでご要望と実際のまつ毛の状態を確認してからデザインを提案しています。"

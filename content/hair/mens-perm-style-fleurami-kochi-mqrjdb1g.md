@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "メンズパーマの仕上がりや施術の流れが気になる方へ。高知県のヘアサロン「fleurami」の症例写真をもとに、ふんわりカールのスタイルとその特徴をわかりやすく解説します。"
-thumbnail: "/images/uploads/fleurami/fleurami-mqrjaivf.jpg"
+thumbnail: "/images/uploads/fleurami/fleurami-mqrjaivf.webp"
 tags: ["メンズパーマ", "メンズヘア", "パーマスタイル", "高知美容室"]
 question: "メンズパーマはどんな髪型に仕上がるの？どんな人に向いている？"
 answer_summary: "メンズパーマは、自然なカールやウェーブをつけることで、立体感とボリューム感のあるスタイルを作りやすい施術です。直毛でぺたんとなりやすい髪にも動きが生まれ、スタイリングがしやすくなる傾向があります。サイドをすっきりとフェードにしながらトップにカールをのせることで、メリハリのある洗練された印象になります。"

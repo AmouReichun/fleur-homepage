@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "香南市のヘアサロンfleuramiで手がけた赤みオレンジブラウンの艶カラー事例をもとに、カラー選びの判断材料を解説。20〜40代で「透明感のある赤みブラウンを試したい」方に向けた内容です。"
-thumbnail: "/images/uploads/fleurami/fleurami-mrcqlyvp.jpg"
+thumbnail: "/images/uploads/fleurami/fleurami-mrcqlyvp.webp"
 tags: ["艶カラー", "赤みブラウン", "香南市美容室", "オレンジブラウン", "fleurami"]
 question: "香南市で赤みのある艶ブラウンカラーにするとき、どんな点を確認しておくべきか？"
 answer_summary: "赤みブラウン系カラーは、ベースの明るさと色のバランスで仕上がりが大きく変わるため、カウンセリングで現在の髪の状態や希望のトーンをしっかり共有することが重要です。香南市のfleuramiでは、肌トーンや生活スタイルに合わせた色の組み立てを相談しながら進めることができます。透明感・赤み・オレンジ感の配合は担当者との対話で調整できるため、まずは写真や言葉で「なりたいイメージ」を持参するとスムーズです。"

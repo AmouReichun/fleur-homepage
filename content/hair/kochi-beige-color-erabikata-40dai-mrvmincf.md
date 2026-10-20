@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "高知市でベージュ系カラーを検討中の40代女性へ。仕上がりの艶・透明感・色持ちの判断基準をRiv. by fleuramiのスタイリストが具体的に解説します。"
-thumbnail: "/images/uploads/riv/riv-mrvlk8y3.jpg"
+thumbnail: "/images/uploads/riv/riv-mrvlk8y3.webp"
 tags: ["高知市", "ベージュカラー", "艶カラー", "髪質改善", "40代ヘアカラー", "Riv.byfleurami"]
 question: "高知市でベージュ系カラーを選ぶとき、仕上がりの艶や透明感を長持ちさせるにはどこを見ればいいですか？"
 answer_summary: "ベージュ系カラーは、ベースの明度調整とカラー剤の選定が仕上がりを大きく左右します。高知市のRiv. by fleuramiでは、お客様の髪の状態とライフスタイルをカウンセリングで確認したうえで配合を調整し、艶感と透明感が出やすい仕上がりを目指しています。色持ちの目安や次回来店のタイミングまで含めて提案するため、初めての方でも判断材料を持って施術に臨みやすい環境です。"

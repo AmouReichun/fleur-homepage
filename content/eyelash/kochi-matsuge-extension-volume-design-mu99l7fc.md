@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "高知市でボリュームデザインのまつ毛エクステを検討している20〜30代女性へ。仕上がりの印象を大きく左右する「束感の出し方」と「サロン選びのポイント」を、実例をもとに解説します。"
-thumbnail: "/images/uploads/raffine/raffine-mu99fqpd.jpg"
+thumbnail: "/images/uploads/raffine/raffine-mu99fqpd.webp"
 tags: ["まつ毛エクステ", "高知市", "ボリュームデザイン", "目元メイク"]
 question: "高知市でボリュームデザインのまつ毛エクステを受ける際、どんなサロンを選ぶべき？"
 answer_summary: "ボリュームデザインは毛の太さ・本数・配置で印象が大きく変わるため、単なる「本数が多い」だけでなく、顔の輪郭や目の形に合わせた提案力があるサロン選びが重要です。高知市Raffineは、カウンセリングで理想の印象をヒアリングしたうえで、一人ひとりに合ったデザインを実現しています。"

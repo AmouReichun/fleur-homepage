@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "高知市でまつ毛パーマを考えている20〜30代女性へ。自まつげが短い・細いと感じる方も、長さを活かした立ち上げデザインで目元の印象を変えやすい。Raffineの施術事例から、素まつげを活かす選び方を解説。"
-thumbnail: "/images/uploads/raffine/raffine-mu99i11d.jpg"
+thumbnail: "/images/uploads/raffine/raffine-mu99i11d.webp"
 tags: ["まつ毛パーマ", "高知市", "目元デザイン", "自まつげ"]
 question: "自まつげの長さが短くても、まつ毛パーマで印象的な目元に仕上げることはできるのか？"
 answer_summary: "自まつげの長さを活かしたデザイン設計により、短い・細い毛でも立ち上げと束感を出しやすく、目元全体の印象を整えられます。高知市Raffineでは、一人ひとりの毛質・長さに合わせた似合わせデザインを提案しています。"

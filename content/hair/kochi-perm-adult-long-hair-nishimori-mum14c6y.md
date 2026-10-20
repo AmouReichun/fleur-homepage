@@ -8,7 +8,7 @@ updated: ""
 author: "西森心大"
 author_role: "スタイリスト"
 excerpt: "高知市でパーマをかけたいけど、大人っぽく仕上がるか不安な方へ。毛先の動きと全体のまとまりを両立させるパーマの選び方と、仕上がりを長く保つケアのコツを解説します。"
-thumbnail: "/images/uploads/riv/riv-mum12cre.jpg"
+thumbnail: "/images/uploads/riv/riv-mum12cre.webp"
 tags: ["パーマ", "高知市", "ロングヘア", "大人ヘア"]
 question: "高知市でパーマをかけるなら、どうすれば大人っぽく、まとまりのある仕上がりになる？"
 answer_summary: "パーマの強さ・薬剤選定・乾かし方の3つを意識することで、大人女性にこそ似合う動きのあるロングヘアが叶います。Riv. by fleuramiでは、髪質や毛流に合わせた施術と、自宅でのスタイリング提案までを含めてサポートしています。"

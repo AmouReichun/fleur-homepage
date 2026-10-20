@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "うねりや広がりが気になる方へ。縮毛矯正と髪質改善の違い、仕上がりの特徴、どちらを選ぶべきかをfleuramiのスタイリストがわかりやすく解説します。"
-thumbnail: "/images/uploads/fleurami/fleurami-mqt5cgh1.jpg"
+thumbnail: "/images/uploads/fleurami/fleurami-mqt5cgh1.webp"
 tags: ["縮毛矯正", "髪質改善", "ストレートヘア", "大人の髪ケア"]
 question: "縮毛矯正と髪質改善は何が違うの？どちらが自分に合っている？"
 answer_summary: "縮毛矯正は強いくせ・うねりをしっかりまっすぐに整える施術、髪質改善はツヤや手触りを整えながらクセを落ち着かせる施術です。どちらもお悩みに応じて選ぶことができますが、仕上がりのイメージや髪の状態によって最適な方法は異なります。高知県のfleuramiでは、お客様の髪質とライフスタイルに合わせてご提案しています。"

@@ -8,7 +8,7 @@ updated: ""
 author: "高田和花"
 author_role: "スタイリスト"
 excerpt: "40代向けグレージュカラーの透明感を活かすポイントとは？香南市の美容室fleuramiが、色選び・施術・ケアの判断基準を具体的に解説します。"
-thumbnail: "/images/uploads/fleurami/fleurami-mul0indx.jpg"
+thumbnail: "/images/uploads/fleurami/fleurami-mul0indx.webp"
 tags: ["グレージュ", "カラー", "透明感", "香南市", "高知県"]
 question: "香南市でグレージュカラーの透明感を活かすには、どのサロンをどう選べばいい？"
 answer_summary: "グレージュの透明感は、ベースの明るさ・アンダートーン・施術後のケアで大きく変わります。香南市のfleuramiでは、髪の状態に合わせた色選びと提案を重視し、長期的に透明感を保つためのカウンセリングと施術を行っています。"

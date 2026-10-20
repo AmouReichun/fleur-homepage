@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "高知市で切りっぱなしボブを検討中の40代女性向け。仕上がりの差が生まれるポイント・サロン選びの判断基準・Riv. by fleuramiの施術事例を解説します。"
-thumbnail: "/images/uploads/riv/riv-msh1244m.jpg"
+thumbnail: "/images/uploads/riv/riv-msh1244m.webp"
 tags: ["切りっぱなしボブ", "カット", "高知市", "40代ヘア", "Riv. by fleurami"]
 question: "高知市で切りっぱなしボブを選ぶとき、仕上がりの差はどこで生まれるのか？"
 answer_summary: "切りっぱなしボブは「ライン」の精度と「毛量調整」のバランスで仕上がりに大きな差が出やすいスタイルです。髪の量・骨格・くせの強さに合わせて毛先のラインを設計することが、スタイルを長くきれいに保つ鍵になります。Riv. by fleuramiでは高知市の大人女性の髪質に合わせたカウンセリングをもとに、切り方と質感を整える提案をしています。"

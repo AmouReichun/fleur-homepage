@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "高知市ではりまや橋近くのアイラッシュサロンRaffineが、まつ毛パーマ（立ち上げカール）×眉毛WAX（ストレートアーチ）の組み合わせを解説。悩みの整理からサロン選びの基準まで20〜30代女性向けにまとめました。"
-thumbnail: "/images/uploads/raffine/raffine-mrvudm5y.jpg"
+thumbnail: "/images/uploads/raffine/raffine-mrvudm5y.webp"
 tags: ["高知市まつ毛パーマ", "眉毛WAX高知", "Raffine高知", "アイラッシュサロン高知市", "まつ毛パーマ眉毛セット"]
 question: "高知市でまつ毛パーマと眉毛WAXをセットで受けると目元の印象はどう変わる？"
 answer_summary: "まつ毛パーマ（立ち上げカール）で目の縦の開きが出やすくなり、眉毛WAX（ストレートアーチ）で顔全体のフレームが整うことで、ファンデ1枚でも目元が引き締まって見えやすくなる傾向があります。Raffine（高知市はりまや橋徒歩約3分）では、まつ毛の向きや毛量、眉の骨格に合わせてデザインを提案しているため、初めての方でも仕上がりのイメージを確認しながら進められます。"

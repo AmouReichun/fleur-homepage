@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "高知市のRiv. by fleuramiで仕上げたボルドーカラーの施術事例。赤みのある深みカラーで艶感を出したい40代女性に向け、色選びの基準と仕上がりの目安を解説します。"
-thumbnail: "/images/uploads/riv/riv-mspf8fve.jpg"
+thumbnail: "/images/uploads/riv/riv-mspf8fve.webp"
 tags: ["ボルドーカラー", "艶カラー", "高知市美容室", "40代ヘアカラー", "Riv. by fleurami"]
 question: "ボルドーカラーで艶感と深みを出すために、40代女性がサロン選びで確認すべきポイントは何か？"
 answer_summary: "ボルドーカラーは赤みと深みのある色調が特徴で、発色と色持ちはベースの明るさと染め方の技術に左右されやすい傾向があります。40代の髪は乾燥や白髪が気になり始める時期でもあるため、カラー剤の選定とトリートメントの組み合わせ方が仕上がりの差になりやすいです。高知市のRiv. by fleuramiでは、髪のコンディションをカウンセリングで確認したうえで色設計を行い、艶感のある仕上がりを目指しています。"

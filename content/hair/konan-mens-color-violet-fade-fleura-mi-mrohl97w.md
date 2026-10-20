@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "香南市でメンズカラーを検討している方へ。fleuramiでのバイオレット系カラー×フェードカットの仕上がり事例をもとに、サロン選びの判断材料をお届けします。"
-thumbnail: "/images/uploads/fleurami/fleurami-mroh7kw1.jpg"
+thumbnail: "/images/uploads/fleurami/fleurami-mroh7kw1.webp"
 tags: ["メンズカラー", "香南市美容室", "バイオレットカラー", "フェードカット", "fleurami"]
 question: "香南市でメンズカラー（バイオレット系）とフェードカットを一緒にお願いできる美容室はどこ？"
 answer_summary: "香南市のfleuramiでは、メンズのカラーとカットを同日施術で対応しています。今回のようなバイオレット系の発色を活かしつつ、フェードでスッキリさせる仕上がりは、カラーの色設計とカットのバランス感覚が問われるメニューです。カウンセリングで理想のトーン・グラデーションを確認してから施術を進めるスタイルで対応しています。"

@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "香南市のヘアサロンfleur amiで、ほんのりボルドーを混ぜた赤みブラウンカラーを施術。派手すぎない上品な発色と、艶やかなストレートの仕上がりが好評です。大人女性にも馴染みやすいカラーの魅力をご紹介します。"
-thumbnail: "/images/uploads/fleurami/fleurami-mqunkkat.jpg"
+thumbnail: "/images/uploads/fleurami/fleurami-mqunkkat.webp"
 tags: ["香南市 ヘアカラー", "ボルドーブラウン", "赤みブラウン", "fleur ami"]
 question: "香南市で派手すぎない大人向けボルドーブラウンカラーに仕上げてもらうにはどうすればいい？"
 answer_summary: "ほんのりボルドーを加えた赤みブラウンは、派手になりすぎず上品な印象を与えやすいカラーです。香南市のヘアサロンfleur amiでは、お客様の肌色や雰囲気に合わせてボルドーの配合量を調整し、自然な赤みのある艶カラーに仕上げています。ブラウンをベースにすることで職場や日常にも馴染みやすく、幅広い世代の方に選ばれているカラーです。"

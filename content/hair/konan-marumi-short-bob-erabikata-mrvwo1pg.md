@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "香南市で丸みショートボブを検討中の方へ。fleuramiの施術事例をもとに、仕上がりの特徴・サロン選びのポイント・向いている人の条件を具体的に解説します。"
-thumbnail: "/images/uploads/fleurami/fleurami-mrvvlili.jpg"
+thumbnail: "/images/uploads/fleurami/fleurami-mrvvlili.webp"
 tags: ["ショートボブ", "香南市美容室", "丸みショートボブ", "fleurami", "大人ショート"]
 question: "香南市で丸みショートボブを切るとき、どんな基準でサロンを選べばいい？"
 answer_summary: "丸みショートボブは、シルエットのバランス・襟足の処理・頭の丸みの作り方で仕上がりが大きく変わります。香南市のfleuramiでは、頭のかたちに合わせたカットで丸みとスッキリ感を両立した仕上がりを提案しています。カウンセリングで髪質・生え癖・ライフスタイルを確認したうえで施術するため、持ちの良い形になりやすい傾向があります。"

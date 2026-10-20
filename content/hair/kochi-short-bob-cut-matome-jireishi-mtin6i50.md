@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "高知市の美容室Riv. by fleuramiで、カットのみでショートボブの丸みとまとまりを整えた施術事例。40代女性が感じやすい広がり・ペタンコ悩みに、カット技術がどう影響するかを具体的に解説します。"
-thumbnail: "/images/uploads/riv/riv-mt9kkwrt.jpg"
+thumbnail: "/images/uploads/riv/riv-mt9kkwrt.webp"
 tags: ["ショートボブ", "カット", "高知市", "40代女性", "Riv. by fleurami"]
 question: "カットだけでショートボブの丸みやまとまりは変わるのか？"
 answer_summary: "カットの技術と設計次第で、ショートボブの丸みシルエットやまとまりやすさは大きく変わります。特に40代以降は髪の質感が変化しやすいため、骨格や毛量に合わせた切り方の選択が仕上がりを左右します。高知県高知市のRiv. by fleuramiでは、カウンセリングで骨格・毛量・生え癖を確認したうえでカットを進めるため、スタイリングのしやすさを重視した仕上がりを目指せます。"

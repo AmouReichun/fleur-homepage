@@ -8,7 +8,7 @@ updated: ""
 author: "細川彩香"
 author_role: "スタイリスト"
 excerpt: "高知市で艶カラーを検討中の40代前後の女性へ。Riv. by fleuramiが向いている人・向いていない人を正直に解説。サロン選びの判断材料としてご活用ください。"
-thumbnail: "/images/instagram/riv/18126993751645625.jpg"
+thumbnail: "/images/instagram/riv/18126993751645625.webp"
 tags: ["高知市美容室", "艶カラー", "大人女性カラー", "Riv.byfleurami", "高知カラー"]
 question: "高知市で艶感のある髪色を長く楽しむには、どんなサロン・メニューを選べばいいか？"
 answer_summary: "艶カラーを長く楽しむには、色設計の丁寧さと、褪色後の印象まで見越した提案ができるサロン選びが大切です。高知市のRiv. by fleuramiでは、髪のまとまりや光の反射を意識したカラー設計を行っています。仕上がりの方向性を相談しながら決めたい方に向いているサロンです。"

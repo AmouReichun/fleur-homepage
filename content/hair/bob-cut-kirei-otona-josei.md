@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "髪の美しさは、カットの精度で大きく変わります。高知・香南市のRiv. by fleuramiによる、大人女性のためのボブカット施術例をご紹介します。"
-thumbnail: "/images/instagram/riv/18026409176650908.jpg"
+thumbnail: "/images/instagram/riv/18026409176650908.webp"
 tags: ["ボブカット", "髪質改善", "大人女性ヘア", "高知美容室"]
 question: "ボブカットは、髪のまとまりや美しさに影響するの？"
 answer_summary: "カットの精度は、髪の見た目の美しさに直結します。毛先が均一に揃ったボブは、髪一本一本のツヤや流れが際立ちやすくなります。Riv. by fleuramiでは、お客様の髪質やライフスタイルに合わせた丁寧なカットをご提案しています。"

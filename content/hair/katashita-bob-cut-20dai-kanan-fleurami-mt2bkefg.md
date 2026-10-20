@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "高知県香南市のfleurami（フルラミ）で行った20代向け肩下ボブカットの施術事例。「広がる・重い・まとまらない」悩みをカットだけで整えるポイントを解説します。"
-thumbnail: "/images/uploads/fleurami/fleurami-mt2bdiei.jpg"
+thumbnail: "/images/uploads/fleurami/fleurami-mt2bdiei.webp"
 tags: ["肩下ボブ", "ボブカット", "20代ヘア", "香南市美容室", "fleurami"]
 question: "20代の肩下ボブで「まとまらない・広がりやすい」と感じるとき、カットで何が変わるのか？"
 answer_summary: "肩下ボブの「まとまらない」は、重さのバランスや毛先の厚みが仕上がりを左右しやすいです。fleuramiでは髪の状態と生え癖を確認したうえで、自宅でもまとまりやすいラインを意識したカットを提案しています。高知県香南市で相談しながら決めたい方に向いているサロンです。"

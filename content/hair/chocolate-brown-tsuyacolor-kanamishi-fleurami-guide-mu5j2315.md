@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "香南市の美容室fleuramiで仕上げたチョコレートブラウンカラーの施術事例をもとに、艶と深みを両立したい大人女性がサロンを選ぶ際の判断基準をスタイリストが解説します。"
-thumbnail: "/images/uploads/fleurami/fleurami-mtksza4d.jpg"
+thumbnail: "/images/uploads/fleurami/fleurami-mtksza4d.webp"
 tags: ["チョコレートブラウン", "艶カラー", "香南市美容室", "大人女性カラー", "fleurami"]
 question: "香南市でチョコレートブラウンの艶カラーを選ぶとき、仕上がりの差はどこで生まれるのか？"
 answer_summary: "チョコレートブラウンカラーの仕上がりは、色の配合・明度設定・カラー後のトリートメント選択によって大きく変わりやすい傾向があります。香南市のfleurami（フルラミ）では、艶と深みを両立しやすいカラー設計を提案しており、大人女性の髪の状態や生活スタイルに合わせた選択肢を相談しながら決めることができます。来店前に仕上がりの目安や選び方の基準を把握しておくと、カウンセリングがより具体的になりやすいです。"

@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "マツエクと眉ワックスを同日に施術するだけで、目元の印象がガラッと変わる。高知のサロンRaffineの症例をもとに、その効果とデザインの魅力を解説します。"
-thumbnail: "/images/uploads/raffine/raffine-mqp27vis.jpg"
+thumbnail: "/images/uploads/raffine/raffine-mqp27vis.webp"
 tags: ["マツエク", "眉ワックス", "垢抜け", "高知まつ毛サロン"]
 question: "マツエクと眉ワックスを組み合わせると、どうして垢抜けた目元になりやすいの？"
 answer_summary: "マツエクで下まつ毛・上まつ毛に束感と存在感を出しながら、眉ワックスで眉の形を整えることで、目元全体のバランスが整いやすくなります。どちらか一方だけでなく、同時に施術することで顔全体のフレームが引き締まり、垢抜けた印象になりやすい傾向があります。"

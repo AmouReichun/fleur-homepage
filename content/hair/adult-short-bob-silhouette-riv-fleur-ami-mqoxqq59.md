@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "40代前後の大人女性に人気の「丸みショートボブ」。ふんわりとしたシルエットと自然なツヤ感が特徴で、すっきりとした首元と上品な印象を両立しやすいスタイルです。"
-thumbnail: "/images/thumbnails/adult-short-bob-silhouette-riv-fleur-ami-mqoxqq59.jpg"
+thumbnail: "/images/thumbnails/adult-short-bob-silhouette-riv-fleur-ami-mqoxqq59.webp"
 tags: ["ショートボブ", "大人ショート", "40代ヘア", "高知美容室"]
 question: "40代前後の大人女性が短髪にするとき、どんなシルエットを選べばよいですか？"
 answer_summary: "丸みを意識したショートボブは、頭のシルエットをきれいに見せやすく、大人世代に馴染みやすいスタイルのひとつです。毛先を自然に流すことで首元がすっきりと見え、上品で清潔感のある印象になりやすい傾向があります。カラーと組み合わせることで、より立体感や艶感も出しやすくなります。"

@@ -10,7 +10,7 @@ author_role: ''
 excerpt: >-
   40代前後の大人女性に人気の、艶やかな赤みブラウンのボブスタイル。高知・香南市のRiv. by fleurami
   の施術例をもとに、色の特徴や似合わせのポイントをわかりやすく解説します。
-thumbnail: /images/instagram/riv/17908440003244684.jpg
+thumbnail: /images/instagram/riv/17908440003244684.webp
 tags:
   - ボブ
   - 赤みブラウン

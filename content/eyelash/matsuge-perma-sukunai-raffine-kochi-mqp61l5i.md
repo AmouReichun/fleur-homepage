@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "まつ毛が少なくてもまつ毛パーマは楽しめます。高知市はりまや橋近くのRaffineが施術した症例写真をもとに、束感カールデザインの特徴や向いている目元を詳しく解説します。"
-thumbnail: "/images/uploads/raffine/raffine-mqp29l46.jpg"
+thumbnail: "/images/uploads/raffine/raffine-mqp29l46.webp"
 tags: ["まつ毛パーマ", "束感カール", "まつ毛少なめ", "高知市サロン"]
 question: "まつ毛が少なくても、まつ毛パーマで華やかな目元に仕上げることはできるの？"
 answer_summary: "まつ毛が少なめの方でも、デザインとカールの方向を工夫することで存在感のある目元を演出しやすくなります。Raffineでは1本1本の毛を活かした束感カールを提案しており、写真のようにくっきりとしたセパレート感が生まれやすい仕上がりを目指しています。まつ毛の本数に自信がない方にこそ、一度体験していただきたい施術です。"

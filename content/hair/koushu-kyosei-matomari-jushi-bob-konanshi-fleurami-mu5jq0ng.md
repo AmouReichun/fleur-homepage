@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "香南市で縮毛矯正を検討している大人女性へ。まとまりを重視した仕上がりを選ぶ際の判断基準と、fleuramiの施術事例をもとに解説します。"
-thumbnail: "/images/uploads/fleurami/fleurami-mtuxiobi.jpg"
+thumbnail: "/images/uploads/fleurami/fleurami-mtuxiobi.webp"
 tags: ["縮毛矯正", "まとまり重視", "香南市", "fleurami", "大人女性", "ストレートボブ", "艶カラー"]
 question: "香南市で縮毛矯正をかけるとき、まとまりを重視した仕上がりにするには何を確認すればよいか？"
 answer_summary: "縮毛矯正でまとまりを重視する場合は、施術後の仕上がりイメージ・スタイルの長さ・髪の状態の3点をカウンセリングで明確にすることが大切です。fleuramiでは香南市を中心とした大人女性に向けて、扱いやすさと艶感を両立した仕上がりを提案しています。薬剤の種類やアイロン操作の丁寧さが、毎朝のまとまりやすさに影響しやすいため、担当者との事前確認が判断材料になります。"

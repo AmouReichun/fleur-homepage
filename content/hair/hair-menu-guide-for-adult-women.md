@@ -5,7 +5,7 @@ category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-06-12"
 excerpt: "深みのあるダークブラウン系カラーで、光を受けてなめらかに見える髪へ。40代前後の大人女性に人気の色みと質感について、実際の施術例をもとに解説します。"
-thumbnail: "/images/thumbnails/hair-menu-guide-for-adult-women.jpg"
+thumbnail: "/images/thumbnails/hair-menu-guide-for-adult-women.webp"
 tags: ["カラー", "髪質改善", "大人女性", "高知美容室"]
 question: "大人女性が艶やかでまとまった印象の髪を目指すとき、どんなカラーが向いていますか？"
 answer_summary: "写真のように深みのあるダークブラウン系のカラーは、光を受けたときに髪表面のツヤが際立ちやすい傾向があります。暗すぎず、でも落ち着いた色みは、40代前後の大人女性のライフスタイルや肌馴染みともなじみやすいと感じる方が多い色みです。仕上がりのなめらかさは、カラーの色選びと施術後のケアが組み合わさることで生まれやすくなります。"

@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "白髪が気になり始めた30〜40代の方へ。高知県のヘアサロンfleuramiが、自然なトーンの白髪染めの仕上がりと選び方のポイントをわかりやすく解説します。"
-thumbnail: "/images/uploads/fleurami/fleurami-mqt5mtu6.jpg"
+thumbnail: "/images/uploads/fleurami/fleurami-mqt5mtu6.webp"
 tags: ["白髪染め", "大人女性ヘア", "自然な色味", "高知美容室"]
 question: "30〜40代の白髪染めで、悪目立ちせず自然な印象に仕上げるにはどうすればよいですか？"
 answer_summary: "白髪染めは「暗くしすぎない・明るくしすぎない」自然なトーン選びがポイントです。地毛のベースカラーに馴染む色設計をすることで、白髪をカバーしながらも不自然な印象になりにくくなります。30〜40代の方には、赤みやバイオレット系を含むナチュラルブラウン系の色味が馴染みやすい傾向があります。"

@@ -8,7 +8,7 @@ updated: ""
 author: "細川彩香"
 author_role: "スタイリスト"
 excerpt: "高知市でメンズカラーとカットを同時に施術する際、スタイルと質感をどう両立させるか。Riv. by fleuramiのスタイリスト細川彩香が、実際の仕上がり事例から失敗しない選び方を解説します。"
-thumbnail: "/images/uploads/riv/riv-mumey832.jpg"
+thumbnail: "/images/uploads/riv/riv-mumey832.webp"
 tags: ["メンズカラー", "メンズカット", "高知市", "スタイリング"]
 question: "高知市でメンズカラーとカットを同時にしたいとき、スタイルと質感の両立って実際に可能？"
 answer_summary: "可能ですが、カラーとカットの順序・薬剤選び・乾かし方の工夫が重要です。Riv. by fleuramiでは、スタイルの骨格を活かしながら質感を整えるアプローチで、長さを活かした洗練された仕上がりを実現しています。"

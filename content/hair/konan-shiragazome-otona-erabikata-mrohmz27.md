@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "香南市で白髪染めを検討中の30〜40代女性向け。落ち着いたトーンで自然な仕上がりを求める方が、サロン選びで見るべきポイントをfleuramiの施術事例をもとに解説します。"
-thumbnail: "/images/uploads/fleurami/fleurami-mroha1iu.jpg"
+thumbnail: "/images/uploads/fleurami/fleurami-mroha1iu.webp"
 tags: ["白髪染め", "香南市 美容室", "艶カラー", "30代40代ヘアケア", "fleurami"]
 question: "香南市で白髪染めをするとき、自然な仕上がりと艶感を両立するにはどんなサロンを選べばいい？"
 answer_summary: "白髪染めで自然な艶感を出すには、染料の選定とトーン設定のバランスが仕上がりを左右します。香南市のfleuramiでは、30〜40代の大人女性が日常で扱いやすい落ち着いたカラーを軸に、カウンセリングで個々の髪色・肌色・ライフスタイルに合わせた提案を行っています。"

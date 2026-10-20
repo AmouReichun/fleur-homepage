@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "香南市のヘアサロンfleuramiで髪質改善カラーを施術したアフター事例をご紹介。艶やかでまとまりのある美しい仕上がりの特徴や、向いている方・ホームケア方法まで詳しく解説します。"
-thumbnail: "/images/uploads/fleurami/fleurami-mqtqdllp.jpg"
+thumbnail: "/images/uploads/fleurami/fleurami-mqtqdllp.webp"
 tags: ["髪質改善カラー", "香南市美容院", "艶髪", "fleurami"]
 question: "香南市で髪質改善カラーを受けると、どのような仕上がりや質感を期待できますか？"
 answer_summary: "髪質改善カラーは、カラーリングと同時に髪の内部を補修・保護する成分を浸透させることで、艶やかでまとまりやすい髪質へと導く施術です。カラー後特有のパサつきや広がりが気になりにくく、サラサラとした手触りが持続しやすい傾向があります。香南市のfleuramiでは、お客様一人ひとりの髪の状態に合わせた処方でご提案しています。"

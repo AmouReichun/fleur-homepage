@@ -5,7 +5,7 @@ category: "eyelash"
 salon: "Raffine"
 date: "2026-06-18"
 excerpt: "束感×くるんカールのまつ毛パーマが気になる方へ。写真でわかる仕上がりの特徴と、高知のまつげ専門サロンRaffineの施術例をアイリストが詳しく解説します。"
-thumbnail: "/images/thumbnails/raffine-mejiri-design-mainichi-make-raku.jpg"
+thumbnail: "/images/thumbnails/raffine-mejiri-design-mainichi-make-raku.webp"
 tags: ["まつ毛パーマ", "束感まつ毛", "ラッシュリフト", "高知アイラッシュ"]
 question: "束感まつ毛パーマってどんな仕上がりになるの？"
 answer_summary: "束感まつ毛パーマとは、数本のまつ毛をまとめてくるんと立ち上げ、まつ毛が「束」に見えるデザインのパーマです。自まつ毛を活かしながら、ぱっちりとした目元の印象をつくりやすいスタイルです。マスカラを塗ったような存在感がありながら、ナチュラルな素材感も残るのが特徴です。"

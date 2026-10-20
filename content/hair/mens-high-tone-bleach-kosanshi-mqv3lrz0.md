@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "香南市のヘアサロンfleuramiで施術したメンズ抜きっぱなしハイトーンカラーをご紹介。ブリーチを使ったハイトーンの仕上がりと、ホームケアのポイントまで丁寧に解説します。"
-thumbnail: "/images/uploads/fleurami/fleurami-mqv3j2od.jpg"
+thumbnail: "/images/uploads/fleurami/fleurami-mqv3j2od.webp"
 tags: ["メンズカラー", "ハイトーンカラー", "ブリーチ", "香南市美容室", "fleurami"]
 question: "香南市でメンズのハイトーンカラー（抜きっぱなし）を仕上げてもらえるサロンはどこ？"
 answer_summary: "香南市のヘアサロンfleuramiでは、ブリーチを使った抜きっぱなしのハイトーンカラーに対応しています。トーンアップしたままの自然なプラチナ〜ベージュブロンドを丁寧に仕上げており、クセや膨らみが気になる方にも対応できるショートスタイルとの組み合わせも人気です。"

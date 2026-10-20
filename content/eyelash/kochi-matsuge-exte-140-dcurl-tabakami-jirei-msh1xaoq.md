@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "高知市ではりまや橋近くのアイラッシュサロンRaffineで施術した、140本Dカール束感まつげエクステの仕上がりと選び方を解説。自分に合う本数・カールを探している20〜30代女性へ。"
-thumbnail: "/images/uploads/raffine/raffine-msh1ios4.jpg"
+thumbnail: "/images/uploads/raffine/raffine-msh1ios4.webp"
 tags: ["まつげエクステ", "高知市", "Raffine", "Dカール", "束感まつ毛", "高知県アイラッシュ", "フラットラッシュ"]
 question: "高知市でまつげエクステを140本・Dカールで付けると、仕上がりはどんな目元になる？"
 answer_summary: "140本のDカールまつげエクステは、自まつ毛に対して適度な存在感と束感を出しやすく、すっぴんでも目元がはっきり見えやすい仕上がりになる傾向があります。高知市のRaffineでは、目の横幅・まつ毛の状態・普段のメイク習慣に合わせて長さ・太さ・本数を調整し、自然になじむ仕上がりを提案しています。"

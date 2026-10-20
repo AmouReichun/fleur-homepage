@@ -8,7 +8,7 @@ updated: ""
 author: "高田和花"
 author_role: "スタイリスト"
 excerpt: "長めボブにレイヤーを入れるとどう変わるのか、仕上がりのポイントを香南市の美容室fleuramiのスタイリスト高田和花が解説。動きやすさと大人っぽさを両立させるカット技術の秘密を、実例を交えて紹介します。"
-thumbnail: "/images/uploads/fleurami/fleurami-mv6epb2n.jpg"
+thumbnail: "/images/uploads/fleurami/fleurami-mv6epb2n.webp"
 tags: ["香南市", "ボブカット", "レイヤーカット", "大人ヘアスタイル"]
 question: "長めボブにレイヤーを入れると、実際にどんな仕上がりになるのか？"
 answer_summary: "レイヤーを入れることで、毛先に空気感と動きが生まれ、全体のシルエットが整いやすくなります。長さを活かしながらも軽やかな印象を叶え、スタイリングのしやすさも向上しやすい仕上がりが期待できます。"

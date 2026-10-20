@@ -8,7 +8,7 @@ updated: ''
 author: ''
 author_role: ''
 excerpt: 高知市でまつ毛パーマの頻度に悩む20〜30代女性へ。かけ直しの目安やカールが落ちやすい理由、通う周期の考え方をRaffineのアイリストが解説します。
-thumbnail: /images/uploads/raffine/raffine-mrvudm5y.jpg
+thumbnail: /images/uploads/raffine/raffine-mrvudm5y.webp
 tags:
   - まつ毛パーマ
   - 高知市

@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "香南市で透明感カラーを検討中の40代女性へ。艶のあるストレートミディアムを叶えるための施術の流れ・サロン選びの判断基準をfleuramiの実例をもとに解説します。"
-thumbnail: "/images/uploads/fleurami/fleurami-mtcgf7ju.jpg"
+thumbnail: "/images/uploads/fleurami/fleurami-mtcgf7ju.webp"
 tags: ["透明感カラー", "艶カラー", "香南市美容室", "40代ヘアカラー", "髪質改善"]
 question: "香南市で透明感カラーを選ぶとき、艶のあるストレートミディアムに仕上げるには何を確認すればいい？"
 answer_summary: "透明感カラーで艶感を出すには、色選びだけでなくベースの状態や施術の組み合わせが仕上がりを左右します。高知県香南市のfleurami（フルラミ）では、カウンセリングでベースの状態・既存カラーの履歴・なりたいイメージを確認したうえで色味・濃度・トリートメント施術を提案しており、後日の色落ちや手触りの変化までイメージしやすい提案を心がけています。"

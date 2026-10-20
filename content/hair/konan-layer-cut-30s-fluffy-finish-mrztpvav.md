@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "香南市でレイヤーカットを検討中の30代女性向け。ふんわり軽やかな仕上がりを叶えるためのサロン選びの判断基準と、fleuramiでの施術事例を具体的に紹介します。"
-thumbnail: "/images/uploads/fleurami/fleurami-mrztn84p.jpg"
+thumbnail: "/images/uploads/fleurami/fleurami-mrztn84p.webp"
 tags: ["レイヤーカット", "香南市美容室", "ふんわりヘア", "30代ヘアスタイル", "fleurami"]
 question: "香南市でレイヤーカットを受けてふんわりした仕上がりにするには、どんなサロンを選べばいい？"
 answer_summary: "ふんわり軽やかな仕上がりを求めるレイヤーカットでは、髪質・毛量・骨格に合わせたカット設計ができるサロンを選ぶことが重要です。香南市のfleuramiでは、カウンセリングで希望の仕上がりイメージを丁寧に確認したうえで、レイヤーの入れ方や軽さのバランスを調整しています。仕上がりが長持ちしやすいよう、次回来店の目安（2〜3ヶ月程度）もご提案しています。"

@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "高知市でタッセルボブを検討中の40代女性へ。切りっぱなしの断面が美しく見えるための条件と、Riv. by fleuramiの施術事例をもとに選び方の判断材料をお届けします。"
-thumbnail: "/images/uploads/riv/riv-ms5jmlns.jpg"
+thumbnail: "/images/uploads/riv/riv-ms5jmlns.webp"
 tags: ["タッセルボブ", "切りっぱなしボブ", "高知市美容室", "グラデーションカラー", "40代ヘアスタイル"]
 question: "高知市でタッセルボブを選ぶとき、仕上がりの差はどこで生まれるのか？"
 answer_summary: "タッセルボブの仕上がりの差は、毛先の切り方の精度とカラーのグラデーション設計によって生まれやすい傾向があります。切りっぱなしの断面が美しく見えるためには、カットラインの水平感とカラーの抜け感を同時に設計することが重要です。高知市のRiv. by fleuramiでは、カットとカラーの両面からスタイルをトータルで提案しています。"

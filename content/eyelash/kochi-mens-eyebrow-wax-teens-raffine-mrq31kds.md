@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "高知市のアイラッシュ・眉毛サロンRaffineで施術したメンズアイブロウWAXの事例を紹介。10代男性が「男らしさを残しつつ優しい印象」に整えるためのポイントと、サロン選びの判断材料をまとめた記事です。"
-thumbnail: "/images/uploads/raffine/raffine-mrq2z26p.jpg"
+thumbnail: "/images/uploads/raffine/raffine-mrq2z26p.webp"
 tags: ["メンズアイブロウ", "眉毛WAX", "高知市", "Raffine", "10代男性"]
 question: "高知市で10代男性が眉毛WAXを受けるとき、どんなサロンを選べばいい？"
 answer_summary: "眉毛WAXはデザインの方向性をカウンセリングで共有できるサロンを選ぶことが大切です。男性らしさを残しつつ優しい印象に整えるには、顔全体のバランスを見ながら形を提案してくれるスタッフがいるかどうかが判断のポイントになります。高知市のRaffineではメンズアイブロウに対応しており、ストレートデザインを軸にした自然な仕上がりを提案しています。"

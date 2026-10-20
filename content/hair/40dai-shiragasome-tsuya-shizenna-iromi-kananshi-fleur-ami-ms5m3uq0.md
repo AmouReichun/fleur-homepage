@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "香南市で白髪染めを検討中の40代女性へ。艶感と自然な色味を両立したい方向けに、fleuramiでの施術事例と、サロン選びで確認すべきポイントをまとめました。"
-thumbnail: "/images/uploads/fleurami/fleurami-ms5m0xke.jpg"
+thumbnail: "/images/uploads/fleurami/fleurami-ms5m0xke.webp"
 tags: ["白髪染め", "艶カラー", "40代", "香南市", "fleurami", "白髪ぼかし", "大人女性"]
 question: "40代の白髪染めで、艶感と自然な色味を両立するにはどうすればいい？"
 answer_summary: "白髪染めで艶と自然な色味を両立するには、薬剤の選定とカラーレシピが重要なポイントになります。香南市のfleuramiでは、カウンセリングで仕上がりのイメージを丁寧にすり合わせたうえで、艶が出やすいカラー設計を提案しています。白髪の量や髪の状態によって最適な選択肢が変わるため、まずは相談から始めることをおすすめします。"

@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "シルバーカラーをダブルカラーで表現すると、どんな仕上がりになるの？高知県のfleuramiの施術例をもとに、大人女性に向けた明るめシルバーの魅力をわかりやすく解説します。"
-thumbnail: "/images/uploads/fleurami/fleurami-mqrjx03r.jpg"
+thumbnail: "/images/uploads/fleurami/fleurami-mqrjx03r.webp"
 tags: ["シルバーカラー", "ダブルカラー", "大人カラー", "高知美容室"]
 question: "ダブルカラーで仕上げる明るめシルバーは、大人女性にも似合うの？"
 answer_summary: "ダブルカラーで作る明るめシルバーは、透明感とツヤ感を両立しやすいカラーです。ブリーチで土台を整えてからシルバー系の色味をのせることで、深みのある独特の質感が生まれやすい傾向があります。落ち着いたトーンを保ちながらも個性を出したい大人女性にも取り入れやすいスタイルのひとつです。"

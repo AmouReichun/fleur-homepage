@@ -6,7 +6,7 @@ salon: fleurami
 date: '2026-06-18'
 excerpt: >-
   40代前後の大人女性に人気のショートボブ。自分では見えない後ろ姿のシルエットが気になる方へ、えり足のライン・後頭部の丸み・髪の流れなど美しく見えるカットのポイントを施術例で解説します。高知・野市のfleuramiより。
-thumbnail: /images/thumbnails/40dai-hair-menu-color-perm-shukumo.jpg
+thumbnail: /images/thumbnails/40dai-hair-menu-color-perm-shukumo.webp
 tags:
   - ショートボブ
   - 大人のカット

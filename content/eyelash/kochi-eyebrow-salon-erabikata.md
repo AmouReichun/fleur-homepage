@@ -10,7 +10,7 @@ author_role: ''
 excerpt: >-
   眉毛サロン
   高知でどこを選ぶか迷う20〜30代女性へ。眉毛WAXの選び方の基準、向き不向き、はりまや橋近くのRaffineの相談例まで、来店前に知りたい判断材料をまとめました。
-thumbnail: /images/uploads/raffine/raffine-mstpqgsy.jpg
+thumbnail: /images/uploads/raffine/raffine-mstpqgsy.webp
 tags:
   - 眉毛サロン 高知
   - 眉毛WAX

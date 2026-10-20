@@ -8,7 +8,7 @@ updated: ""
 author: "西内みゆき"
 author_role: "スタイリスト"
 excerpt: "香南市の40代女性に向け、艶感を引き出すベージュ系カラーの選び方をスタイリスト解説。色選びの判断基準と仕上がりの違いが分かります。高知県香南市fleurami。"
-thumbnail: "/images/uploads/fleurami/fleurami-mv7psb9v.jpg"
+thumbnail: "/images/uploads/fleurami/fleurami-mv7psb9v.webp"
 tags: ["艶カラー", "ベージュカラー", "カラーリング", "40代", "香南市"]
 question: "香南市で艶のあるベージュ系カラーを選ぶとき、どの色味なら自分に似合うのか、どう判断すればいい？"
 answer_summary: "艶カラーの仕上がりは、肌色・髪質・光の入り方を考慮した色選びが決め手になります。高知県香南市のfleuramiでは、カウンセリングで髪の質感や希望の雰囲気を確認したうえで、あなたに合ったベージュ系の色味を提案します。"

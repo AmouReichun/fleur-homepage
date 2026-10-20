@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "高知市で髪のまとまりや手触りが気になる40代女性へ。カット＆トリートメントで仕上がりがどう変わるか、Riv. by fleuramiの施術事例をもとに選び方の判断材料を解説します。"
-thumbnail: "/images/uploads/riv/riv-msh19efe.jpg"
+thumbnail: "/images/uploads/riv/riv-msh19efe.webp"
 tags: ["高知市", "髪質改善トリートメント", "カット", "40代ヘア", "Riv. by fleurami"]
 question: "高知市でカット＆トリートメントを受けると、髪のまとまりや手触りはどう変わる？"
 answer_summary: "カットで毛量・長さのバランスを整えながらトリートメントで手触りを整えることで、仕上がり直後から指通りがスムーズに感じやすくなる傾向があります。高知市のRiv. by fleuramiでは、お客様の髪の状態と生活スタイルに合わせてカットラインとトリートメントの種類を提案しています。ただし仕上がりの持ちや変化には個人差があります。"

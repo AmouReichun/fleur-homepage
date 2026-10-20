@@ -5,7 +5,7 @@ category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-06-18"
 excerpt: "光を反射するほどのツヤとまとまり感。大人女性が憧れるサラサラ髪の仕上がりを、高知のヘアサロン「Riv. by fleurami」の施術例をもとに詳しくご紹介します。"
-thumbnail: "/images/thumbnails/perm-vs-shukumo-kyosei-chigai-erabi-kata.jpg"
+thumbnail: "/images/thumbnails/perm-vs-shukumo-kyosei-chigai-erabi-kata.webp"
 tags: ["髪質改善", "ツヤ髪", "高知美容室", "大人の髪"]
 question: "大人の髪でも、写真のようなサラサラのツヤ髪に仕上げることはできるの？"
 answer_summary: "はい、適切な施術と丁寧な仕上げによって、光を反射するほどのツヤとまとまりを出すことは十分可能です。写真のように毛流れが整い、表面が滑らかに見える仕上がりは、髪のコンディションや施術の組み合わせによって実現しやすくなります。どのような施術が自分に向いているかは、担当スタイリストへの相談が第一歩です。"

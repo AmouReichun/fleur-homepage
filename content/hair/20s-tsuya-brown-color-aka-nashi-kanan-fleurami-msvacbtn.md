@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "赤みが出やすい・色がすぐ褪せると感じている香南市の20代女性向け。艶のあるブラウンカラーを選ぶ判断基準と、fleuramiでの施術事例を解説します。"
-thumbnail: "/images/uploads/fleurami/fleurami-msva9jpf.jpg"
+thumbnail: "/images/uploads/fleurami/fleurami-msva9jpf.webp"
 tags: ["艶カラー", "ブラウンカラー", "香南市美容室", "赤み消し", "20代ヘアカラー"]
 question: "赤みを抑えながら艶のあるブラウンカラーを仕上げるには、何をどう選べばいい？"
 answer_summary: "赤みを抑えた艶ブラウンを叶えるには、カラー剤の色味（寒色系・アッシュ系のベース選択）と明度のバランスが仕上がりを左右します。高知県香南市のfleuramiでは、カウンセリングで現在の髪の状態と希望の色味を丁寧に確認したうえで配合を調整しており、艶感のある落ち着いたブラウンに仕上がりやすい施術を提案しています。"

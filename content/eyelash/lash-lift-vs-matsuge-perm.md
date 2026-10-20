@@ -5,7 +5,7 @@ category: "eyelash"
 salon: "Raffine"
 date: "2026-06-20"
 excerpt: "高知市はりまや町のまつげ・まゆげ専門店Raffineが、ラッシュリフトの仕上がりの特徴や施術例をわかりやすく解説。自まつげを活かした自然なカール感が気になる方へ。"
-thumbnail: "/images/thumbnails/lash-lift-vs-matsuge-perm.jpg"
+thumbnail: "/images/thumbnails/lash-lift-vs-matsuge-perm.webp"
 tags: ["ラッシュリフト", "まつげパーマ", "高知まつげサロン", "目元ケア"]
 question: "ラッシュリフトとは何で、どんな仕上がりになるの？"
 answer_summary: "ラッシュリフトとは、自まつげそのものをカールアップさせるパーマ施術です。エクステのように人工毛を足すのではなく、地まつげのカール・ハリ・向きを整えることで、すっぴんでも目元に自然な抜け感と存在感を出しやすい施術です。毎朝のビューラー要らずで過ごしたい方や、ナチュラルな仕上がりを好む方に支持される傾向があります。"

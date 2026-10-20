@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "高知市で縮毛矯正と艶カラーを同時に検討している40代女性へ。仕上がりの質・ダメージの抑え方・サロン選びの基準を、Riv. by fleuramiの施術事例をもとに具体的に解説します。"
-thumbnail: "/images/uploads/riv/riv-mrvl1cxe.jpg"
+thumbnail: "/images/uploads/riv/riv-mrvl1cxe.webp"
 tags: ["高知市", "縮毛矯正", "艶カラー", "髪質改善", "Riv. by fleurami"]
 question: "高知市で縮毛矯正と艶カラーを同時にするとき、サロン選びで何を見ればいい？"
 answer_summary: "縮毛矯正と艶カラーを同日に行う場合、施術の順序・薬剤のバランス・アフターケアの提案力がサロン選びの大きな判断基準になります。Riv. by fleurami（高知市）では、カウンセリングで髪の状態を確認したうえで施術設計を行い、艶感のある仕上がりを目指しています。仕上がりや通う頻度の目安まで相談したい方に向いているサロンです。"

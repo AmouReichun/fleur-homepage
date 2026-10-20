@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "流し目デザインのまつ毛エクステとは、目尻に向かってカールと束感を流すように仕上げるデザイン。ナチュラルなのに色気が出やすく、韓国っぽい抜け感にも対応できる人気スタイルです。"
-thumbnail: "/images/uploads/raffine/raffine-mqp28p8c.jpg"
+thumbnail: "/images/uploads/raffine/raffine-mqp28p8c.webp"
 tags: ["まつ毛エクステ", "流し目デザイン", "韓国まつ毛", "高知まつ毛サロン"]
 question: "流し目デザインのまつ毛エクステはどんな仕上がりになる？"
 answer_summary: "流し目デザインは、上まつ毛を目尻側に向かって流れるように束感をつけながらカールさせるスタイルです。目元に抜け感と立体感が生まれやすく、ナチュラルでも印象的な目元に仕上がりやすいのが特徴です。高知市はりまや橋近くのRaffineでも人気の高いデザインのひとつです。"

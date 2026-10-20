@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "高知市でメンズパーマを検討中の方へ。サロン選びの判断基準・施術の流れ・仕上がりの目安をRiv. by fleuramiのスタイリストが具体的に解説します。"
-thumbnail: "/images/uploads/riv/riv-mrvlgmgo.jpg"
+thumbnail: "/images/uploads/riv/riv-mrvlgmgo.webp"
 tags: ["メンズパーマ", "高知市美容室", "メンズヘア", "パーマ", "Riv.byfleurami"]
 question: "高知市でメンズパーマをかけるとき、サロン選びで何を基準にすればいい？"
 answer_summary: "メンズパーマは髪質・骨格・希望スタイルのすり合わせが仕上がりを左右しやすいため、カウンセリングの丁寧さとスタイル提案の幅が重要な判断材料になります。高知市のRiv. by fleuramiでは、カットとパーマの組み合わせを前提にスタイルを設計しており、ツイスト系・無造作感など多様なニュアンスに対応しています。"

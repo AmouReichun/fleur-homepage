@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "香南市でブリーチを使ったデザインカラーを検討している20代女性向けに、サロン選びの判断基準・施術事例・fleuramiが向いている人をわかりやすく解説します。"
-thumbnail: "/images/uploads/fleurami/fleurami-mrvv0lqy.jpg"
+thumbnail: "/images/uploads/fleurami/fleurami-mrvv0lqy.webp"
 tags: ["デザインカラー", "ブリーチ", "ハイライト", "香南市美容室", "fleurami"]
 question: "香南市でブリーチを使ったデザインカラーをするとき、どんな基準でサロンを選べばいいの？"
 answer_summary: "ブリーチを使うデザインカラーは、仕上がりのトーン設計やダメージを考慮したカラー計画が求められます。香南市のfleuramiでは、カウンセリングで髪の状態と希望のデザインをすり合わせたうえで施術プランを提案しています。「どんなデザインにしたいか決まっていない」という方も相談から始めやすい環境を整えています。"

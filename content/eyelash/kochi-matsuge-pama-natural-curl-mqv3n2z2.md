@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "高知市のまつげ・眉毛サロンRaffineで施術したまつげパーマのご紹介。マスカラいらずのナチュラルカールで、すっぴんでも印象的な目元をキープしやすい人気メニューです。"
-thumbnail: "/images/uploads/raffine/raffine-mqv3jwrx.jpg"
+thumbnail: "/images/uploads/raffine/raffine-mqv3jwrx.webp"
 tags: ["まつげパーマ", "高知市", "Raffine", "ナチュラルまつげ"]
 question: "高知市でまつげパーマを受けるとどんな仕上がりになる？"
 answer_summary: "高知市のRaffineでまつげパーマを施術すると、自まつげを根元からふんわりと立ち上げ、目元に自然な開きと清潔感を出しやすい仕上がりになります。マスカラやビューラーなしでも目がぱっちり見えやすく、朝のメイク時間を短縮したい方に向いているメニューです。カールの持続は個人差がありますが、目安として4〜6週間程度とされています。"

@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "高知市ではりまや橋近くのRaffineで受けられる美眉ワックス（ストレートアーチ型）。間引き・メイク仕上げまで含む施術の仕上がりと、サロン選びの判断材料を20〜30代女性向けに解説します。"
-thumbnail: "/images/uploads/raffine/raffine-mtwkv0bn.jpg"
+thumbnail: "/images/uploads/raffine/raffine-mtwkv0bn.webp"
 tags: ["眉毛WAX", "美眉ワックス", "高知市", "Raffine", "アイブロウ", "ストレートアーチ"]
 question: "高知市で美眉ワックス（ストレートアーチ型）を受けるとき、大人っぽい仕上がりにするために何を確認すればいい？"
 answer_summary: "ストレートアーチ型の眉はアーチの高さと眉尻の角度のバランスで印象が大きく変わります。高知市のRaffineでは、WAX脱毛による余分な産毛の除去・間引きによる毛量調整・メイク仕上げまでをセットで行い、骨格に合わせた女性らしい眉を整えています。サロン選びでは「形の設計力」と「仕上げまでのトータル対応」を確認することが、仕上がりの差につながりやすいです。"

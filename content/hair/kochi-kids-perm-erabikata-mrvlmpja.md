@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "高知市でお子さんのパーマを検討中の親御さんへ。キッズパーマの特徴・サロン選びの基準・Riv. by fleuramiの施術事例をまとめました。"
-thumbnail: "/images/uploads/riv/riv-mrvl7sx3.jpg"
+thumbnail: "/images/uploads/riv/riv-mrvl7sx3.webp"
 tags: ["キッズパーマ", "高知市美容室", "子どもヘアスタイル", "Riv. by fleurami"]
 question: "高知市でキッズパーマを受けさせるとき、どのようなポイントでサロンを選べばよいですか？"
 answer_summary: "キッズパーマは子どもの髪質や頭皮への配慮が大切なため、カウンセリングをしっかり行うサロンを選ぶことが判断の基準になります。高知市のRiv. by fleuramiでは、お子さんの髪の状態を確認しながら薬剤や巻き方を調整し、自然なウェーブ仕上がりを目指しています。パーマ後のホームケアについても案内しているので、初めての場合でも相談しながら進めることができます。"

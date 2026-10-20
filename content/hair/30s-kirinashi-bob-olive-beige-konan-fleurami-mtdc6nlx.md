@@ -8,7 +8,7 @@ updated: ""
 author: ""
 author_role: ""
 excerpt: "香南市在住の30代女性向け。切りっぱなしボブ×オリーブベージュカラーの仕上がりと選び方を施術事例をもとに解説。高知県香南市のfleurami担当スタイリストが判断材料を提供します。"
-thumbnail: "/images/uploads/fleurami/fleurami-mt9b5wq5.jpg"
+thumbnail: "/images/uploads/fleurami/fleurami-mt9b5wq5.webp"
 tags: ["切りっぱなしボブ", "オリーブベージュ", "艶カラー", "30代ヘア", "香南市美容室"]
 question: "30代女性が切りっぱなしボブ×オリーブベージュカラーを選ぶとき、仕上がりの差はどこで生まれるのか？"
 answer_summary: "切りっぱなしボブは、カットラインの精度と毛量調整のバランスが仕上がりを左右しやすいスタイルです。オリーブベージュカラーと組み合わせることで、艶感と柔らかな印象を引き出しやすくなります。香南市のfleurami では、カウンセリングで髪の状態と理想のシルエットを丁寧に確認したうえで施術を進めています。"
