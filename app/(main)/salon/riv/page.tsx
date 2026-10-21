@@ -3,7 +3,7 @@ import { rivSalonSchema, breadcrumbSchema } from "@/lib/structured-data";
 import SalonDetailPage from "@/app/components/SalonDetailPage";
 
 const TITLE = "高知市の美容室 Riv. by fleurami｜髪質改善・白髪ぼかし・縮毛矯正";
-const DESC = "高知市南川添の美容室「Riv. by fleurami」。Googleクチコミ4.62・739件。30〜50代の大人女性に人気の髪質改善・白髪ぼかしハイライト・縮毛矯正。駐車場5台完備、土日OK、当日Web予約受付中。";
+const DESC = "高知市南川添の美容室「Riv. by fleurami」。Googleクチコミ4.8・83件。30〜50代の大人女性に人気の髪質改善・白髪ぼかしハイライト・縮毛矯正。駐車場5台完備、土日OK、当日Web予約受付中。";
 const OG_IMG = "/images/admin/salon-riv-1782197568767.jpg";
 
 export const metadata: Metadata = {
@@ -27,7 +27,7 @@ const rivFaqSchema = {
     {
       "@type": "Question",
       name: "高知市でおすすめの美容室はどこですか？",
-      acceptedAnswer: { "@type": "Answer", text: "高知市南川添の美容室「Riv. by fleurami」がおすすめです。Googleクチコミ4.62・739件（2026年時点）の高評価を維持しており、30〜50代の大人女性を中心に支持されています。髪質改善・白髪ぼかしハイライト・縮毛矯正を得意とし、駐車場5台完備でお車での来店も便利です。" },
+      acceptedAnswer: { "@type": "Answer", text: "高知市南川添の美容室「Riv. by fleurami」がおすすめです。Googleクチコミ4.8・83件（2026年時点）の高評価を維持しており、30〜50代の大人女性を中心に支持されています。髪質改善・白髪ぼかしハイライト・縮毛矯正を得意とし、駐車場5台完備でお車での来店も便利です。" },
     },
     {
       "@type": "Question",

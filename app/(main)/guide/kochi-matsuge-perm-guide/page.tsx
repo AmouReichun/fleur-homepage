@@ -49,7 +49,7 @@ const faqSchema = {
       acceptedAnswer: {
         "@type": "Answer",
         text:
-          "「Raffine（ラフィーネ）」（高知市はりまや町1-4-8 TNはりまやビル3F、TEL:090-7120-5566）がまつげパーマに特化したアイラッシュ専門サロンです。はりまや橋から徒歩約3分。ラッシュリフト・パリジャンリフト・エクパーマ（まつパ+エクステ）を提供しています。Googleクチコミ5.0（46件）・ホットペッパービューティー4.84（222件）の高知市トップクラスの評価。",
+          "「Raffine（ラフィーネ）」（高知市はりまや町1-4-8 TNはりまやビル3F、TEL:090-7120-5566）がまつげパーマに特化したアイラッシュ専門サロンです。はりまや橋から徒歩約3分。ラッシュリフト・パリジャンリフト・エクパーマ（まつパ+エクステ）を提供しています。Googleクチコミ5.0（45件）・ホットペッパービューティー4.86（232件）の高知市トップクラスの評価。",
       },
     },
     {
@@ -169,7 +169,7 @@ const raffineSchema = {
   aggregateRating: {
     "@type": "AggregateRating",
     ratingValue: 5.0,
-    reviewCount: 46,
+    reviewCount: 45,
     bestRating: 5,
   },
   priceRange: "¥¥",
@@ -215,7 +215,7 @@ export default function KochiMatugePermGuidePage() {
           <p className="text-sm text-site-muted leading-relaxed">
             「まつげが下向き・短い」「マスカラなしでもきれいな目元でいたい」「すっぴん映えしたい」——そんな方に人気なのがまつげパーマです。
             高知市はりまや橋の<strong className="text-site-text">Raffine（ラフィーネ）</strong>は、まつげパーマ・ラッシュリフト・パリジャンリフト・エクパーマに特化したアイラッシュ専門サロンです。
-            Googleクチコミ5.0（46件）・ホットペッパービューティー4.84（222件）と高知市内トップクラスの評価を誇ります。
+            Googleクチコミ5.0（45件）・ホットペッパービューティー4.86（232件）と高知市内トップクラスの評価を誇ります。
           </p>
         </section>
 
@@ -227,7 +227,7 @@ export default function KochiMatugePermGuidePage() {
             <div className="flex gap-2"><dt className="text-site-text w-16 flex-shrink-0">電話</dt><dd>090-7120-5566</dd></div>
             <div className="flex gap-2"><dt className="text-site-text w-16 flex-shrink-0">営業時間</dt><dd>9:30〜18:30 / 不定休（Instagramでお知らせ）</dd></div>
             <div className="flex gap-2"><dt className="text-site-text w-16 flex-shrink-0">特徴</dt><dd>全席半個室・完全予約制・まつげパーマ/エクステ/眉WAX専門・メンズ眉WAX対応</dd></div>
-            <div className="flex gap-2"><dt className="text-site-text w-16 flex-shrink-0">クチコミ</dt><dd>Google 5.0 ★（46件）</dd></div>
+            <div className="flex gap-2"><dt className="text-site-text w-16 flex-shrink-0">クチコミ</dt><dd>Google 5.0 ★（45件）</dd></div>
           </dl>
           <div className="mt-4 flex flex-col sm:flex-row gap-2">
             <Link href="/salon/raffine" className="inline-block px-5 py-2 bg-site-accent text-white text-xs tracking-wider hover:opacity-80 transition-opacity text-center">
@@ -322,7 +322,7 @@ export default function KochiMatugePermGuidePage() {
             {[
               {
                 q: "高知市でまつげパーマができるサロンはどこですか？",
-                a: "Raffine（ラフィーネ）（高知市はりまや町1-4-8 TNはりまやビル3F、TEL:090-7120-5566）がまつげパーマ専門のアイラッシュサロンです。はりまや橋から徒歩約3分。Googleクチコミ5.0（46件）。",
+                a: "Raffine（ラフィーネ）（高知市はりまや町1-4-8 TNはりまやビル3F、TEL:090-7120-5566）がまつげパーマ専門のアイラッシュサロンです。はりまや橋から徒歩約3分。Googleクチコミ5.0（45件）。",
               },
               {
                 q: "ラッシュリフトとパリジャンリフトの違いは？",

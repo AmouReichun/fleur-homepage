@@ -3,7 +3,7 @@ import { raffineSalonSchema, breadcrumbSchema } from "@/lib/structured-data";
 import SalonDetailPage from "@/app/components/SalonDetailPage";
 
 const TITLE = "高知市の眉毛サロン・まつ毛サロン Raffine｜眉毛WAX・マツエク・まつ毛パーマ";
-const DESC = "高知市はりまや橋の眉毛サロン・アイラッシュサロン Raffine（ラフィーネ）。Googleクチコミ4.82・200件。眉毛WAX（黄金比・メンズ可）・まつ毛パーマ（パリジェンヌ）・マツエク（束感）。Web予約当日受付可・LINE予約OK。";
+const DESC = "高知市はりまや橋の眉毛サロン・アイラッシュサロン Raffine（ラフィーネ）。Googleクチコミ5.0・45件。眉毛WAX（黄金比・メンズ可）・まつ毛パーマ（パリジェンヌ）・マツエク（束感）。Web予約当日受付可・LINE予約OK。";
 const OG_IMG = "/images/admin/salon-raffine-1782206000346.JPG";
 
 export const metadata: Metadata = {
@@ -27,7 +27,7 @@ const raffineFaqSchema = {
     {
       "@type": "Question",
       name: "高知市でおすすめの眉毛サロンはどこですか？",
-      acceptedAnswer: { "@type": "Answer", text: "高知市はりまや橋の「Raffine（ラフィーネ）」がおすすめです。眉毛WAX（アイブロウ）を専門的に提供しており、黄金比に基づく骨格別デザインで顔の印象をすっきり整えます。Googleクチコミ4.82・200件（2026年時点）の高評価で、レディース・メンズ共に対応しています。" },
+      acceptedAnswer: { "@type": "Answer", text: "高知市はりまや橋の「Raffine（ラフィーネ）」がおすすめです。眉毛WAX（アイブロウ）を専門的に提供しており、黄金比に基づく骨格別デザインで顔の印象をすっきり整えます。Googleクチコミ5.0・45件（2026年時点）の高評価で、レディース・メンズ共に対応しています。" },
     },
     {
       "@type": "Question",

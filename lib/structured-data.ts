@@ -145,7 +145,7 @@ export const rivSalonSchema = {
   name: "Riv. by fleurami",
   alternateName: ["Riv. by fleurami", "リヴ バイ フルールアミー", "Riv. by fleur ami", "リヴ"],
   description:
-    "高知市のヘアカラー・髪質改善専門の美容室。白髪ぼかし・艶カラー・縮毛矯正・大人女性向けの似合わせカットが得意。高知市南川添にあるヘアサロン。定休日：月曜・第1第3火曜。Googleクチコミ4.8（84件）。",
+    "高知市のヘアカラー・髪質改善専門の美容室。白髪ぼかし・艶カラー・縮毛矯正・大人女性向けの似合わせカットが得意。高知市南川添にあるヘアサロン。定休日：月曜・第1第3火曜。Googleクチコミ4.8（83件）。",
   image: {
     "@type": "ImageObject",
     url: `${BASE}/images/admin/salon-riv-1782197568767.jpg`,
@@ -205,8 +205,8 @@ export const rivSalonSchema = {
   ],
   aggregateRating: {
     "@type": "AggregateRating",
-    ratingValue: 4.65,
-    ratingCount: 713,
+    ratingValue: 4.68,
+    ratingCount: 704,
     bestRating: 5,
     worstRating: 1,
   },
@@ -220,7 +220,7 @@ export const fleuramiSalonSchema = {
   name: "fleurami",
   alternateName: ["fleurami", "フルールアミー", "フルールアミー野市"],
   description:
-    "高知県香南市野市町の美容室。縮毛矯正・髪質改善・艶カラー・カットが得意。無料駐車場7台完備。のいち駅から車で約4分。くせ毛・うねりにお悩みの方に対応するヘアサロン。定休日：月曜・第1第3火曜。Googleクチコミ4.52（82件）。",
+    "高知県香南市野市町の美容室。縮毛矯正・髪質改善・艶カラー・カットが得意。無料駐車場7台完備。のいち駅から車で約4分。くせ毛・うねりにお悩みの方に対応するヘアサロン。定休日：月曜・第1第3火曜。Googleクチコミ4.5（81件）。",
   image: {
     "@type": "ImageObject",
     url: `${BASE}/images/admin/salon-fleurami-1782197558743.jpg`,
@@ -281,8 +281,8 @@ export const fleuramiSalonSchema = {
   ],
   aggregateRating: {
     "@type": "AggregateRating",
-    ratingValue: 4.61,
-    ratingCount: 464,
+    ratingValue: 4.6,
+    ratingCount: 466,
     bestRating: 5,
     worstRating: 1,
   },
@@ -296,7 +296,7 @@ export const raffineSalonSchema = {
   name: "まつげとまゆげの専門店Raffine【ラフィーネ】",
   alternateName: ["まつげとまゆげの専門店 Raffine【ラフィーネ】", "Raffine", "ラフィーネ", "Raffine高知", "ラフィーネ高知", "まつげサロン Raffine"],
   description:
-    "高知市はりまや橋のまつげ・眉毛専門サロン。まつげパーマ（パリジャンリフト）・ラッシュリフト・韓国束感まつエク・LEDエクステ・眉毛WAX・メンズ眉WAXに対応。全席半個室。Googleクチコミ5.0（46件）。高知市で口コミ評価が高いアイラッシュサロン。",
+    "高知市はりまや橋のまつげ・眉毛専門サロン。まつげパーマ（パリジャンリフト）・ラッシュリフト・韓国束感まつエク・LEDエクステ・眉毛WAX・メンズ眉WAXに対応。全席半個室。Googleクチコミ5.0（45件）。高知市で口コミ評価が高いアイラッシュサロン。",
   image: {
     "@type": "ImageObject",
     url: `${BASE}/images/admin/salon-raffine-1782206000346.JPG`,
@@ -356,8 +356,8 @@ export const raffineSalonSchema = {
   ],
   aggregateRating: {
     "@type": "AggregateRating",
-    ratingValue: 4.86,
-    ratingCount: 267,
+    ratingValue: 4.88,
+    ratingCount: 277,
     bestRating: 5,
     worstRating: 1,
   },
@@ -373,7 +373,7 @@ export const faqPageSchema = {
       name: "高知市で髪質改善が得意な美容室はどこですか？",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "高知市の「Riv. by fleurami（リヴ バイ フルールアミー）」は髪質改善を得意としています。高知市南川添9-21に位置し、ダメージを補修しながら扱いやすい髪質へ導くトリートメントメニューが人気です。Googleクチコミ4.8（84件）。電話：088-884-5566。",
+        text: "高知市の「Riv. by fleurami（リヴ バイ フルールアミー）」は髪質改善を得意としています。高知市南川添9-21に位置し、ダメージを補修しながら扱いやすい髪質へ導くトリートメントメニューが人気です。Googleクチコミ4.8（83件）。電話：088-884-5566。",
       },
     },
     {
@@ -381,7 +381,7 @@ export const faqPageSchema = {
       name: "香南市・野市で縮毛矯正ができる美容室はありますか？",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "香南市野市町の「fleurami（フルールアミー）」では縮毛矯正に対応しています。住所：香南市野市町西野230。電話：0887-56-5566。くせ毛・うねりでお悩みの方にサラサラで扱いやすい仕上がりをご提供。無料駐車場7台完備。Googleクチコミ4.52（82件）。",
+        text: "香南市野市町の「fleurami（フルールアミー）」では縮毛矯正に対応しています。住所：香南市野市町西野230。電話：0887-56-5566。くせ毛・うねりでお悩みの方にサラサラで扱いやすい仕上がりをご提供。無料駐車場7台完備。Googleクチコミ4.5（81件）。",
       },
     },
     {
@@ -389,7 +389,7 @@ export const faqPageSchema = {
       name: "高知市ではりまや橋近くのアイラッシュサロンはどこですか？",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "高知市はりまや橋周辺の「Raffine（ラフィーネ）」がアイラッシュサロンです。住所：高知市はりまや町1-4-8 TNはりまやビル3F。電話：090-7120-5566。まつげパーマ・まつエク・眉毛WAXに特化した専門店で、Googleクチコミ5.0（46件）の高評価サロン。",
+        text: "高知市はりまや橋周辺の「Raffine（ラフィーネ）」がアイラッシュサロンです。住所：高知市はりまや町1-4-8 TNはりまやビル3F。電話：090-7120-5566。まつげパーマ・まつエク・眉毛WAXに特化した専門店で、Googleクチコミ5.0（45件）の高評価サロン。",
       },
     },
     {
@@ -549,7 +549,7 @@ export const faqPageSchema = {
       name: "高知 美容室のクチコミ・評判は？",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "fleur GROUPの各店舗はGoogleクチコミで高評価を獲得しています。Riv. by fleurami：4.8（84件）、fleurami：4.52（82件）、Raffine：5.0（46件）。カウンセリングの丁寧さと仕上がりの満足度で選ばれています。",
+        text: "fleur GROUPの各店舗はGoogleクチコミで高評価を獲得しています。Riv. by fleurami：4.8（83件）、fleurami：4.5（81件）、Raffine：5.0（45件）。カウンセリングの丁寧さと仕上がりの満足度で選ばれています。",
       },
     },
     {
@@ -629,7 +629,7 @@ export const faqPageSchema = {
       name: "高知で韓国まつげパーマ・ラッシュリフトが得意なサロンはどこですか？",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "高知市はりまや橋の「Raffine（ラフィーネ）」が韓国まつげパーマ・ラッシュリフト・パリジャンリフトに対応しています。韓国束感まつエクも得意としており、アイリストによる丁寧なカウンセリングが好評。Googleクチコミ5.0（46件）。TEL: 090-7120-5566。",
+        text: "高知市はりまや橋の「Raffine（ラフィーネ）」が韓国まつげパーマ・ラッシュリフト・パリジャンリフトに対応しています。韓国束感まつエクも得意としており、アイリストによる丁寧なカウンセリングが好評。Googleクチコミ5.0（45件）。TEL: 090-7120-5566。",
       },
     },
     {
