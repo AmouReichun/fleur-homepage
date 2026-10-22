@@ -3,7 +3,7 @@ title: "高知市でメンズパーマを選ぶなら｜仕上がりと質感の
 slug: "kochi-mens-perm-shitsugan"
 category: "hair"
 salon: "Riv. by fleurami"
-date: "2026-04-01"
+date: "2026-10-22"
 updated: ""
 author: "細川彩香"
 author_role: "スタイリスト"
@@ -14,7 +14,6 @@ question: "メンズパーマで「かっこいい仕上がり」と「毎日扱
 answer_summary: "メンズパーマは、スタイルの選び方と施術後のケアによって、見た目の質感と日々の扱いやすさのバランスを取ることができます。高知市のRiv. by fleuramiでは、頭の形や毛流に合わせた提案により、個人差に対応した仕上がりを実現しています。"
 instagram_id: "17972389595866857"
 instagram_permalink: "https://www.instagram.com/reel/DWkspz2Eti5/"
-draft: true
 faq:
   - q: "メンズパーマって毎日セットが必要ですか？"
     a: "パーマの強さやかけ方によって異なります。弱めのナチュラルパーマなら寝癖直し程度で済む方も多く、強めのウェーブパーマならスタイリング剤を使った仕上げが前提になることが多いです。カウンセリング時に日々のセット時間をどのくらい取れるか伝えていただければ、それに合わせた提案ができます。"

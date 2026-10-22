@@ -3,7 +3,7 @@ title: "高知市で眉毛を整えたい20代へ｜眉毛WAXで垢抜けるま�
 slug: "kochi-eyebrow-wax-20s-guide"
 category: "eyelash"
 salon: "Raffine"
-date: "2026-02-21"
+date: "2026-10-22"
 updated: ""
 author: "尾崎あい"
 author_role: "アイリスト"
@@ -14,7 +14,6 @@ question: "高知市で眉毛WAXを初めて受ける20代女性は、どのよ�
 answer_summary: "眉毛WAXはカウンセリングで理想の眉の形を相談し、ほぼ痛みなく短時間で整えられる施術です。高知市Raffineでは20代向けのトレンド眉デザインと、個人の顔立ちに合わせた提案が得意。施術後の眉は毛の流れが整い、メイクがしやすく、目元の印象が大きく変わります。"
 instagram_id: "18109659799668665"
 instagram_permalink: "https://www.instagram.com/p/DVAA5A9AZ56/"
-draft: true
 faq:
   - q: "眉毛WAXって痛くないですか？"
     a: "個人差がありますが、ほぼ痛みがないか、あっても瞬間的です。Raffineでは痛みを最小限にするための事前カウンセリングと、丁寧な施術を心がけています。初めてで不安な場合は、事前にスタイリストにお伝えください。"

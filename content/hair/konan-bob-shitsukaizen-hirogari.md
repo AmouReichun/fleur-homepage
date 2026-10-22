@@ -3,7 +3,7 @@ title: "香南市でボブのおさまりを整える髪質改善トリートメ
 slug: "konan-bob-shitsukaizen-hirogari"
 category: "hair"
 salon: "fleurami"
-date: "2026-04-01"
+date: "2026-10-22"
 updated: ""
 author: "山岡悠弥"
 author_role: "スタイリスト"
@@ -14,7 +14,6 @@ question: "ボブスタイルを長く楽しむために、髪質改善トリー
 answer_summary: "髪質改善トリートメントは、毛先の広がりやうねりが気になるボブスタイルに特に効果的です。施術後は毛の手触りやツヤが整いやすくなり、スタイリングがしやすくなる傾向があります。高知県香南市のfleuramiでは、カットと組み合わせることで長期間おさまりの良いボブを実現しています。"
 instagram_id: "17958234065938021"
 instagram_permalink: "https://www.instagram.com/reel/DWksuBUgZnu/"
-draft: true
 faq:
   - q: "香南市でボブの広がりが気になるときは、どのメニューを選べばいい？"
     a: "髪質改善トリートメントとカットの組み合わせをおすすめします。トリートメントで毛のツヤとおさまりを整えつつ、カットで形を調整することで、長期間きれいなボブが保ちやすくなります。"
