@@ -1338,7 +1338,8 @@
         "美容師免許（国家資格）"
       ],
       "awards": [],
-      "slug": "takagi-takuma"
+      "slug": "takagi-takuma",
+      "hidden": true
     }
   ],
   "recruit": {
