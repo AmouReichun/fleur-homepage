@@ -3,7 +3,7 @@ title: "高知市で白髪ぼかしカラー、色落ちを抑えるには？｜
 slug: "kochi-shiraga-bokashi-iromotchi-erabikata"
 category: "hair"
 salon: "Riv. by fleurami"
-date: "2026-04-01"
+date: "2026-10-24"
 updated: ""
 author: "沢村瑞希"
 author_role: "スタイリスト"
@@ -14,7 +14,6 @@ question: "高知市で白髪ぼかしカラーの色持ちを長くするには
 answer_summary: "白髪ぼかしカラーの色持ちを左右するのは、使う薬剤・カラーの設計・施術後のケアの3つです。高知市でRiv. by fleuramiのようなサロンを選ぶなら、単なる白髪隠しではなく「長く色を保ち、毛先の色落ちを抑える提案」ができるかどうかが判断基準になります。"
 instagram_id: "17979147128995747"
 instagram_permalink: "https://www.instagram.com/reel/DWksomQElHg/"
-draft: true
 faq:
   - q: "白髪ぼかしカラーって何ですか？普通のカラーと何が違う？"
     a: "白髪ぼかしカラーは、白髪をしっかりと染めるのではなく、根元や白髪が目立ちやすい部分に色を入れて『白髪が気になりにくく見える』ようにする施術です。普通のカラーより細かい色設計が必要になるため、サロン選びが色持ちに大きく影響します。"

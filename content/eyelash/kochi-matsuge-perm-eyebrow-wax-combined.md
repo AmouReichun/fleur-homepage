@@ -3,7 +3,7 @@ title: "高知市でまつげパーマと眉毛WAX、同時施術で目元印象
 slug: "kochi-matsuge-perm-eyebrow-wax-combined"
 category: "eyelash"
 salon: "Raffine"
-date: "2026-02-20"
+date: "2026-10-24"
 updated: ""
 author: "尾崎あい"
 author_role: "アイリスト"
@@ -14,7 +14,6 @@ question: "高知市でまつげパーマを受けるなら、眉毛WAXと同時
 answer_summary: "まつげの立ち上がりと眉の形が連動することで、目元全体のバランスが整い、印象的で垢抜けた顔立ちに見えやすくなります。毎朝のメイク時間も短くなり、すっぴんでの目元の印象も安定しやすくなる傾向があります。"
 instagram_id: "18073823585139853"
 instagram_permalink: "https://www.instagram.com/p/DU9eFP4Adek/"
-draft: true
 faq:
   - q: "高知市でまつげパーマと眉毛WAXを同時にしても大丈夫ですか？"
     a: "大丈夫です。むしろ同時施術することで、目元全体のバランスが整いやすくなります。施術時間は約60〜90分程度で、別々に受けるよりも効率的です。"

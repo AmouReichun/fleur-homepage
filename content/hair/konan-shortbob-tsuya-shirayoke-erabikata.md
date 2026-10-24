@@ -3,7 +3,7 @@ title: "香南市でショートボブをまとめるなら、艶カラーと白
 slug: "konan-shortbob-tsuya-shirayoke-erabikata"
 category: "hair"
 salon: "fleurami"
-date: "2026-03-31"
+date: "2026-10-24"
 updated: ""
 author: "西内みゆき"
 author_role: "スタイリスト"
@@ -14,7 +14,6 @@ question: "香南市でショートボブをまとめるなら、艶カラーと
 answer_summary: "艶カラーは透明感と光沢感を引き出すメニュー。白髪ぼかしは根元の白髪を自然に見えにくくするメニューです。髪の状態と悩みによって最適な選択が変わります。"
 instagram_id: "18111276445754520"
 instagram_permalink: "https://www.instagram.com/reel/DWhzPi5AWjQ/"
-draft: true
 faq:
   - q: "香南市でショートボブの艶カラーってどんなメニュー？"
     a: "光が当たったときのツヤ感と色の透明感を引き出すカラーリングです。深みのある落ち着いた色を選びながら、毛先の軽さや柔らかさが見えやすくなります。個人差がありますが、色持ちは3〜4ヶ月程度が目安です。"
