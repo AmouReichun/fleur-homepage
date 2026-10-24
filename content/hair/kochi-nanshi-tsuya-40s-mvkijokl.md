@@ -3,7 +3,7 @@ title: "香南市で縮毛矯正を選ぶなら、艶感を重視したい40代�
 slug: "kochi-nanshi-tsuya-40s-mvkijokl"
 category: "hair"
 salon: "fleurami"
-date: "2026-10-23"
+date: "2026-10-24"
 updated: ""
 author: "川上凛"
 author_role: "スタイリスト"
@@ -14,7 +14,6 @@ question: "香南市で縮毛矯正をするなら、艶感と柔らかさを両
 answer_summary: "縮毛矯正は単なるストレート化ではなく、毛質診断に基づいた薬剤選定と加熱処理の調整で、艶感と自然な柔らかさを引き出すことが可能です。高知県香南市のfleuarmiでは、施術前後のケア提案を含めて、長期的に艶のあるストレートを保つ施術を行っています。"
 instagram_id: ""
 instagram_permalink: ""
-draft: true
 faq:
   - q: "香南市でfleuarmiの縮毛矯正を選ぶ理由は何ですか？"
     a: "毛質の状態を丁寧に診断し、薬剤と加熱の強度をお客様ごとに調整します。単に真っすぐにするだけでなく、艶感と柔らかさを両立させた仕上がりを提案することが、fleuarmiの施術の特徴です。"
