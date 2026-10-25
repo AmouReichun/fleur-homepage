@@ -3,7 +3,7 @@ title: "香南市で艶カラーを選ぶなら、白髪ぼかしと組み合わ
 slug: "konan-tsuya-color-shiraganobokashi-kumiawase"
 category: "hair"
 salon: "fleurami"
-date: "2026-03-29"
+date: "2026-10-25"
 updated: ""
 author: "高田和花"
 author_role: "スタイリスト"
@@ -14,7 +14,6 @@ question: "香南市で艶カラーと白髪ぼかしを組み合わせると、
 answer_summary: "艶カラーと白髪ぼかしを組み合わせることで、白髪が気になりにくく見えながらも、全体に透明感と深さのある仕上がりになりやすい。色選びと施術の組み合わせがポイント。"
 instagram_id: "18103511983926953"
 instagram_permalink: "https://www.instagram.com/reel/DWcr9aqgZKa/"
-draft: true
 faq:
   - q: "香南市のfleuramiで艶カラーと白髪ぼかしは同じ日にできるの？"
     a: "はい、同じ日に施術できます。白髪ぼかしハイライトと艶カラーを組み合わせる場合、施術時間は90〜120分程度が目安です。髪の状態によって異なるため、カウンセリング時に確認ることをおすすめします。"

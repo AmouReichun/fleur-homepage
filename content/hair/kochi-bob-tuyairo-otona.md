@@ -3,7 +3,7 @@ title: "高知市で大人の髪、ツヤ感を出すボブカットとカラー
 slug: "kochi-bob-tuyairo-otona"
 category: "hair"
 salon: "Riv. by fleurami"
-date: "2026-03-31"
+date: "2026-10-25"
 updated: ""
 author: "細川彩香"
 author_role: "スタイリスト"
@@ -14,7 +14,6 @@ question: "高知市で大人女性が似合うツヤのあるボブをつくる
 answer_summary: "ツヤのあるボブは「切り方」「カラー選び」「髪質ケア」の3つが揃って初めて引き出されます。高知市の美容室Riv. by fleuramiでは、お客様の髪質と顔立ちに合わせて、この3つを整えながら提案することで、長く大事にできる仕上がりを目指しています。"
 instagram_id: "18094573369844670"
 instagram_permalink: "https://www.instagram.com/reel/DWhzhWzEprI/"
-draft: true
 faq:
   - q: "高知市で大人のボブカットを選ぶとき、どのサロンを選べばいい？"
     a: "カット技術だけでなく、カラーと髪質ケアをセットで考えてくれるサロンがおすすめです。Riv. by fleuramiでは、ボブカットにハイライトや白髪ぼかしを組み合わせる際も、全体のバランスと髪へのダメージを考慮して提案します。まずはカウンセリングで、どんな仕上がりを望んでいるかを聞いてもらい、実現可能な方法をご説明するサロンを選ぶことが大切です。"

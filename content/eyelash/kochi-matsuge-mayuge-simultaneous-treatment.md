@@ -3,7 +3,7 @@ title: "高知市でまつ毛パーマと眉毛WAX、同時施術で目元が変
 slug: "kochi-matsuge-mayuge-simultaneous-treatment"
 category: "eyelash"
 salon: "Raffine"
-date: "2026-02-16"
+date: "2026-10-25"
 updated: ""
 author: "尾崎あい"
 author_role: "アイリスト"
@@ -14,7 +14,6 @@ question: "高知市でまつ毛パーマと眉毛WAXを同時に受けると、
 answer_summary: "まつ毛の立ち上げと眉の形が同時に整うことで、目元全体のバランスが整いやすくなります。個別に受けるより短時間で完成し、毎日のメイクがぐっとラクになる傾向があります。"
 instagram_id: "18434373202118216"
 instagram_permalink: "https://www.instagram.com/p/DUzRJ_XAUP0/"
-draft: true
 faq:
   - q: "まつ毛パーマと眉毛WAXは同じ日に受けても大丈夫ですか？"
     a: "はい、同時施術が可能です。高知市のRaffineでは、カウンセリング時に目元全体のバランスを確認しながら、最適な施術順序で進めることで、目元の印象を整えやすくなります。施術時間は通常60〜90分程度が目安です。"
