@@ -79,6 +79,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...areaHubs,
     ...areaServices,
     { url: `${BASE}/menu`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${BASE}/lp`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE}/staff`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE}/news`, lastModified: now, changeFrequency: "weekly", priority: 0.6 },
     { url: `${BASE}/recruit`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },

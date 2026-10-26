@@ -19,6 +19,7 @@ const otherSections = [
   { key: "recruit", label: "採用情報", href: "/admin/recruit" },
   { key: "company", label: "会社概要", href: "/admin/company" },
   { key: "blog", label: "📝　ブログ管理", href: "/admin/blog" },
+  { key: "lp", label: "📣　LINE誘導LP", href: "/admin/lp" },
 ];
 
 export default function AdminSidebar({ content }: { content: SiteContent }) {

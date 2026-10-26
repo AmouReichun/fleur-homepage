@@ -3,6 +3,8 @@ const nextConfig = {
   experimental: {
     optimizePackageImports: ["@next/third-parties"],
     serverComponentsExternalPackages: ["sharp"],
+    // 管理画面の写真アップロード（ブラウザ側で長辺2000pxに縮小後に送信）用に上限を少し広げる
+    serverActions: { bodySizeLimit: "4mb" },
   },
   images: {
     formats: ["image/avif", "image/webp"],
