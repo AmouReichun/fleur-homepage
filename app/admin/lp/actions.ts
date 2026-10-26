@@ -1,19 +1,11 @@
 "use server";
 
-import { cookies } from "next/headers";
 import { put } from "@vercel/blob";
 import sharp from "sharp";
 import { getContentLatest } from "@/lib/content";
-import { verifySessionToken } from "@/lib/admin-auth";
+import { requireAdmin } from "@/lib/admin-guard";
 import { getLpStore, type LpContent, type LpStore } from "@/lib/lp";
 import { saveContent } from "../actions";
-
-// サーバーアクションは任意のURLへPOSTして呼べるため、middleware に頼らず各アクション内でも認証を確認する
-async function requireAdmin() {
-  if (!(await verifySessionToken(cookies().get("admin_session")?.value))) {
-    throw new Error("ログインが必要です");
-  }
-}
 
 async function writeStore(store: LpStore) {
   const res = await saveContent("lp", JSON.stringify(store));

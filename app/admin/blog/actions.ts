@@ -5,6 +5,7 @@ import { redirect } from 'next/navigation'
 import { revalidatePath } from 'next/cache'
 import matter from 'gray-matter'
 import { commitFile, getFileContent, deleteFile } from '@/lib/blog/github'
+import { ADMIN_AUTH_ERROR, isAdmin, requireAdmin } from '@/lib/admin-guard'
 
 const IGNORE_PATH = 'data/ig-ignored.json'
 
@@ -41,6 +42,7 @@ export async function logout() {
 }
 
 export async function saveArticle(formData: FormData) {
+  await requireAdmin()
   const category = formData.get('category') as string
   const slug = formData.get('slug') as string
   const from = (formData.get('from') as string) ?? 'draft'
@@ -91,6 +93,7 @@ export async function saveArticle(formData: FormData) {
 }
 
 export async function revertToDraft(category: string, slug: string) {
+  await requireAdmin()
   const ghPath = `content/${category}/${slug}.md`
   const file = await getFileContent(ghPath)
   if (!file) throw new Error(`GitHub にファイルが見つかりません: ${ghPath}`)
@@ -106,6 +109,7 @@ export async function revertToDraft(category: string, slug: string) {
 }
 
 export async function approveArticle(category: string, slug: string) {
+  await requireAdmin()
   const ghPath = `content/${category}/${slug}.md`
   const file = await getFileContent(ghPath)
   if (!file) throw new Error(`GitHub にファイルが見つかりません: ${ghPath}`)
@@ -119,6 +123,7 @@ export async function approveArticle(category: string, slug: string) {
 export async function bulkApprove(
   items: { category: string; slug: string }[]
 ): Promise<{ error: string } | undefined> {
+  if (!(await isAdmin())) return { error: ADMIN_AUTH_ERROR }
   if (items.length === 0) return
 
   for (const { category, slug } of items) {
@@ -143,6 +148,7 @@ export async function deleteArticle(
   category: string,
   slug: string,
 ): Promise<{ error?: string }> {
+  if (!(await isAdmin())) return { error: ADMIN_AUTH_ERROR }
   try {
     const ghPath = `content/${category}/${slug}.md`
     const file = await getFileContent(ghPath)
@@ -162,6 +168,7 @@ export async function deleteArticle(
 export async function bulkDeleteArticles(
   items: { category: string; slug: string }[]
 ): Promise<{ error?: string }> {
+  if (!(await isAdmin())) return { error: ADMIN_AUTH_ERROR }
   if (items.length === 0) return {}
   for (const { category, slug } of items) {
     try {
@@ -198,6 +205,7 @@ const GENERATE_DEFAULTS: DailyGenerateConfig = {
 }
 
 export async function getDailyGenerateConfig(): Promise<DailyGenerateConfig> {
+  await requireAdmin()
   const file = await getFileContent(DAILY_GENERATE_CONFIG)
   if (!file) return { ...GENERATE_DEFAULTS }
   try {
@@ -210,6 +218,7 @@ export async function getDailyGenerateConfig(): Promise<DailyGenerateConfig> {
 export async function saveDailyGenerateConfig(
   config: DailyGenerateConfig
 ): Promise<{ error?: string }> {
+  if (!(await isAdmin())) return { error: ADMIN_AUTH_ERROR }
   try {
     const file = await getFileContent(DAILY_GENERATE_CONFIG)
     const content = JSON.stringify(config, null, 2) + "\n"
@@ -244,6 +253,7 @@ const CONFIG_DEFAULTS: AutoPublishConfig = {
 }
 
 export async function getAutoPublishConfig(): Promise<AutoPublishConfig> {
+  await requireAdmin()
   const file = await getFileContent(AUTO_PUBLISH_CONFIG)
   if (!file) return { ...CONFIG_DEFAULTS }
   try {
@@ -256,6 +266,7 @@ export async function getAutoPublishConfig(): Promise<AutoPublishConfig> {
 export async function saveAutoPublishConfig(
   config: AutoPublishConfig
 ): Promise<{ error?: string }> {
+  if (!(await isAdmin())) return { error: ADMIN_AUTH_ERROR }
   try {
     const file = await getFileContent(AUTO_PUBLISH_CONFIG)
     const content = JSON.stringify(config, null, 2) + "\n"

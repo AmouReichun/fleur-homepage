@@ -7,6 +7,7 @@ import { redirect } from "next/navigation";
 import { revalidateTag } from "next/cache";
 import { getContentLatest, type NewsItem } from "@/lib/content";
 import { createSessionToken } from "@/lib/admin-auth";
+import { ADMIN_AUTH_ERROR, isAdmin, requireAdmin } from "@/lib/admin-guard";
 import { isGbpConfigured, postNewsToGbp } from "@/lib/gbp";
 import { put } from "@vercel/blob";
 
@@ -78,6 +79,7 @@ export async function logoutAction() {
 }
 
 export async function addSalon(key: string, name: string, salonType: string, area: string) {
+  if (!(await isAdmin())) return { success: false, error: ADMIN_AUTH_ERROR };
   const current = await getContentLatest();
   if (current.salons[key]) return { success: false, error: "同じキーのサロンが既に存在します" };
   current.salons[key] = {
@@ -100,6 +102,7 @@ export async function addSalon(key: string, name: string, salonType: string, are
 }
 
 export async function saveSalonOrder(order: string[]) {
+  await requireAdmin();
   const current = await getContentLatest();
   current.salonOrder = order;
   const newJson = JSON.stringify(current, null, 2);
@@ -119,6 +122,7 @@ export async function saveSalonOrder(order: string[]) {
 }
 
 export async function saveContent(sectionKey: string, dataJson: string) {
+  if (!(await isAdmin())) return { success: false, error: ADMIN_AUTH_ERROR };
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const data: any = JSON.parse(dataJson);
   const current = await getContentLatest();
@@ -231,6 +235,7 @@ async function commitToGitHub(content: string) {
 }
 
 export async function uploadImage(formData: FormData): Promise<string> {
+  await requireAdmin();
   const file = formData.get("file") as File;
   const section = formData.get("section") as string;
   const bytes = await file.arrayBuffer();
