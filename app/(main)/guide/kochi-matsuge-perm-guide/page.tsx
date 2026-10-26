@@ -166,12 +166,6 @@ const raffineSchema = {
     addressCountry: "JP",
   },
   geo: { "@type": "GeoCoordinates", latitude: 33.5597, longitude: 133.5380 },
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: 5.0,
-    reviewCount: 45,
-    bestRating: 5,
-  },
   priceRange: "¥¥",
   openingHoursSpecification: [
     { "@type": "OpeningHoursSpecification", dayOfWeek: ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], opens: "09:30", closes: "18:30" },

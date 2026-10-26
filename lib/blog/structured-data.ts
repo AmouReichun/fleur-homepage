@@ -75,13 +75,6 @@ export const SALONS = {
         },
       ],
     },
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: 4.6,
-      ratingCount: 466,
-      bestRating: 5,
-      worstRating: 1,
-    },
     sameAs: [
       "https://beauty.hotpepper.jp/slnH000528388/",
       "https://www.instagram.com/fleurami_info",
@@ -160,13 +153,6 @@ export const SALONS = {
         },
       ],
     },
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: 4.68,
-      ratingCount: 704,
-      bestRating: 5,
-      worstRating: 1,
-    },
     sameAs: [
       "https://beauty.hotpepper.jp/slnH000634137/",
       "https://www.instagram.com/riv.kochi",
@@ -203,13 +189,6 @@ export const SALONS = {
     ],
     description:
       "高知市はりまや橋徒歩3分のまつげ・まゆげ専門サロン。マツエク・まつげパーマ・韓国束感まつげ・フラットラッシュ・パリジェンヌ・眉毛WAX（メンズ対応）。全席半個室・完全予約制。",
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: 4.88,
-      ratingCount: 277,
-      bestRating: 5,
-      worstRating: 1,
-    },
     sameAs: [
       "https://beauty.hotpepper.jp/kr/slnH000767549/",
       "https://www.instagram.com/raffine0815",
