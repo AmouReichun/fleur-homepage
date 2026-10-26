@@ -203,13 +203,6 @@ export const rivSalonSchema = {
     "https://www.instagram.com/riv.kochi",
     "https://g.page/r/CdEFX3xXBBF7EAE",
   ],
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: 4.68,
-    ratingCount: 704,
-    bestRating: 5,
-    worstRating: 1,
-  },
   parentOrganization: { "@type": "Organization", "@id": `${BASE}/#organization`, name: "fleur GROUP", url: BASE },
 };
 
@@ -279,13 +272,6 @@ export const fleuramiSalonSchema = {
     "https://www.instagram.com/fleurami_info",
     "https://g.page/r/CVY6rOf-UWbxEAE",
   ],
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: 4.6,
-    ratingCount: 466,
-    bestRating: 5,
-    worstRating: 1,
-  },
   parentOrganization: { "@type": "Organization", "@id": `${BASE}/#organization`, name: "fleur GROUP", url: BASE },
 };
 
@@ -354,13 +340,6 @@ export const raffineSalonSchema = {
     "https://www.instagram.com/raffine0815",
     "https://g.page/r/CbD8dVZGgEeuEAE",
   ],
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: 4.88,
-    ratingCount: 277,
-    bestRating: 5,
-    worstRating: 1,
-  },
   parentOrganization: { "@type": "Organization", "@id": `${BASE}/#organization`, name: "fleur GROUP", url: BASE },
 };
 
