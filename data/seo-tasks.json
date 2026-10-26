@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-19",
+  "generatedAt": "2026-10-26",
   "mode": "gsc",
   "tasks": [
     {
@@ -14,38 +14,38 @@
       "impressions": 79,
       "clicks": 0,
       "ctr": 0,
-      "reason": "表示最多かつ順位8.5位と1ページ目目前だがCTR0%。タイトル冒頭に数値効果や悩み訴求を追加しクリック率改善の余地が最大。",
+      "reason": "順位8.5・表示79と最多だがCTR0%で機会損失が大。タイトルを前半に悩み訴求を配置し、冗長なサロン名を短縮。ディスクリプション最適化でCTR改善を最優先。",
       "filePath": "/home/runner/work/fleur-homepage/fleur-homepage/content/hair/shukumo-kyosei-sarasara-shikumi-mqq629b3.md"
     },
     {
       "type": "rewrite",
       "priority": 2,
+      "targetKeyword": "大人 ショートボブ 後ろ姿 カット",
+      "slug": "/blog/hair/40dai-hair-menu-color-perm-shukumo",
+      "category": "hair",
+      "salon": "riv",
+      "currentTitle": "大人のショートボブ、後ろ姿がきれいに見えるカットって何が違うの？",
+      "currentPosition": 9,
+      "impressions": 32,
+      "clicks": 0,
+      "ctr": 0,
+      "reason": "slugは40代メニューだがタイトルがショートボブと不一致。CTR0%かつ内容不整合のため、slugに合わせた40代ヘアメニュー記事へ本文・タイトルを再設計すべき。",
+      "filePath": "/home/runner/work/fleur-homepage/fleur-homepage/content/hair/40dai-hair-menu-color-perm-shukumo.md"
+    },
+    {
+      "type": "rewrite",
+      "priority": 3,
       "targetKeyword": "高知市 カラー 髪質改善 同日",
       "slug": "/blog/hair/color-cut-kamishitsu-kaizen-treatment-mqq5zqzx",
       "category": "hair",
       "salon": "riv",
       "currentTitle": "高知市でカラーと髪質改善を同日に受けると色持ち・ツヤはどう変わる？｜高知県高知市の美容室Riv. by fleurami",
-      "currentPosition": 8.9,
-      "impressions": 61,
-      "clicks": 0,
-      "ctr": 0,
-      "reason": "表示61回で順位9位付近ながらCTR0%。タイトルが長く後半の店名が冗長。悩み解決型の見出しとメタ説明最適化で改善。",
+      "currentPosition": 8.4,
+      "impressions": 54,
+      "clicks": 1,
+      "ctr": 1.8,
+      "reason": "順位8.4・表示54と好位置だがCTR1.8%と低い。タイトル冒頭にメリット数値を加え、冗長なサロン名を圧縮。メタ最適化で上位表示の恩恵を取り切る。",
       "filePath": "/home/runner/work/fleur-homepage/fleur-homepage/content/hair/color-cut-kamishitsu-kaizen-treatment-mqq5zqzx.md"
-    },
-    {
-      "type": "rewrite",
-      "priority": 3,
-      "targetKeyword": "40代 ヘアメニュー カラー パーマ 縮毛矯正",
-      "slug": "/blog/hair/40dai-hair-menu-color-perm-shukumo",
-      "category": "hair",
-      "salon": "riv",
-      "currentTitle": "大人のショートボブ、後ろ姿がきれいに見えるカットって何が違うの？",
-      "currentPosition": 8.9,
-      "impressions": 34,
-      "clicks": 0,
-      "ctr": 0,
-      "reason": "slugのKW（40代メニュー）とタイトル（ショートボブ）が不一致でCTR0%。KWに沿ったタイトルへ修正し検索意図を一致させる。",
-      "filePath": "/home/runner/work/fleur-homepage/fleur-homepage/content/hair/40dai-hair-menu-color-perm-shukumo.md"
     },
     {
       "type": "rewrite",
@@ -55,11 +55,11 @@
       "category": "hair",
       "salon": "fleurami",
       "currentTitle": "大人のショートボブ、レイヤーを入れるとどう変わる？",
-      "currentPosition": 8.3,
-      "impressions": 41,
+      "currentPosition": 8.1,
+      "impressions": 34,
       "clicks": 1,
-      "ctr": 2.4,
-      "reason": "唯一クリック有だが地域名が無くCTRは低い。タイトルに高知県・サロン名や年代訴求を追加しローカル検索での訴求力を強化。",
+      "ctr": 2.9,
+      "reason": "順位8.1と最上位でCTR2.9%と比較的良好。タイトルに地域名・サロン名・ターゲット年代を追加し検索意図適合を高め、1位化とクリック上積みを狙う。",
       "filePath": "/home/runner/work/fleur-homepage/fleur-homepage/content/hair/short-layered-bob-adult-women-mqq67b8n.md"
     },
     {
@@ -68,25 +68,36 @@
       "targetKeyword": "高知 美容室",
       "category": "hair",
       "salon": "riv",
-      "impressions": 30,
-      "clicks": 3,
-      "ctr": 0.1,
-      "reason": "最重要KW「高知 美容室」の強化記事。現在4.8位・30回表示。目標3位以内。"
+      "impressions": 24,
+      "clicks": 0,
+      "ctr": 0,
+      "reason": "最重要KW「高知 美容室」の強化記事。現在4.5位・24回表示。目標3位以内。"
     },
     {
       "type": "new_article",
       "priority": 6,
-      "targetKeyword": "眉毛サロン 高知",
-      "category": "eyelash",
-      "salon": "raffine",
-      "impressions": 0,
+      "targetKeyword": "高知市 美容室",
+      "category": "hair",
+      "salon": "riv",
+      "impressions": 35,
       "clicks": 0,
       "ctr": 0,
-      "reason": "最重要KW「眉毛サロン 高知」の強化記事。現在GSCデータなし。目標3位以内。"
+      "reason": "最重要KW「高知市 美容室」の強化記事。現在3.8位・35回表示。目標3位以内。"
     },
     {
       "type": "new_article",
       "priority": 7,
+      "targetKeyword": "眉毛サロン 高知",
+      "category": "eyelash",
+      "salon": "raffine",
+      "impressions": 2,
+      "clicks": 0,
+      "ctr": 0,
+      "reason": "最重要KW「眉毛サロン 高知」の強化記事。現在8.5位・2回表示。目標3位以内。"
+    },
+    {
+      "type": "new_article",
+      "priority": 8,
       "targetKeyword": "高知 眉毛WAX",
       "category": "eyelash",
       "salon": "raffine",
@@ -97,25 +108,14 @@
     },
     {
       "type": "new_article",
-      "priority": 8,
+      "priority": 9,
       "targetKeyword": "高知市 髪質改善",
       "category": "hair",
       "salon": "riv",
-      "impressions": 22,
-      "clicks": 1,
-      "ctr": 0.0455,
-      "reason": "最重要KW「高知市 髪質改善」の強化記事。現在1.2位・22回表示。目標1位以内。"
-    },
-    {
-      "type": "new_article",
-      "priority": 9,
-      "targetKeyword": "高知市 縮毛矯正",
-      "category": "hair",
-      "salon": "riv",
-      "impressions": 40,
+      "impressions": 19,
       "clicks": 0,
       "ctr": 0,
-      "reason": "最重要KW「高知市 縮毛矯正」の強化記事。現在9.6位・40回表示。目標3位以内。"
+      "reason": "最重要KW「高知市 髪質改善」の強化記事。現在1.2位・19回表示。目標1位以内。"
     },
     {
       "type": "new_article",
