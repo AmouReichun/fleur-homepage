@@ -3,7 +3,7 @@ title: "香南市で艶ボブを長く楽しむ髪質改善｜40代向けカラ�
 slug: "konan-tsuya-bob-shitsukaizen-care"
 category: "hair"
 salon: "fleurami"
-date: "2026-03-28"
+date: "2026-10-27"
 updated: ""
 author: "西内みゆき"
 author_role: "スタイリスト"
@@ -14,7 +14,6 @@ question: "40代の髪が広がりやすく色が褪せやすい悩みを解決�
 answer_summary: "髪質改善トリートメントと艶カラーを組み合わせ、定期的な補色と自宅でのドライヤーケアで、香南市のfleurami利用者の多くが3〜4週間程度色持ちと手触りを実感しています。カウンセリングで髪の状態に合わせた提案が、長期的な満足度を左右します。"
 instagram_id: "17978875683003075"
 instagram_permalink: "https://www.instagram.com/reel/DWaSKozAXHU/"
-draft: true
 faq:
   - q: "香南市の美容室で髪質改善トリートメントを受けたら、どのくらい効果が続きますか？"
     a: "トリートメントの持ちは一般的に2〜3週間程度で、3週間目から徐々に効果が薄れる傾向があります。定期的なメンテナンスを希望される方は、3〜4週間周期でのご来店がおすすめです。自宅での正しいドライヤー方法も、手触りを長く保つポイントになります。"

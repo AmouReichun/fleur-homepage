@@ -3,7 +3,7 @@ title: "高知市で髪質改善ボブを選ぶなら｜短さを活かしたツ
 slug: "kochi-shitsukaizen-bob-tsuya-matomar"
 category: "hair"
 salon: "Riv. by fleurami"
-date: "2026-03-31"
+date: "2026-10-27"
 updated: ""
 author: "西森心大"
 author_role: "スタイリスト"
@@ -14,7 +14,6 @@ question: "高知市で短いボブをツヤツヤにまとめるには、どん
 answer_summary: "短いボブは髪質の違いが視覚的に出やすいため、カット＋髪質改善トリートメント＋カラーを組み合わせることで、まとまりやすく見える仕上がりが実現しやすくなります。Riv. by fleuramiでは、お客様の髪の状態に応じて最適な施術順序と期間を提案しています。"
 instagram_id: "17863090191655851"
 instagram_permalink: "https://www.instagram.com/reel/DWhzSEeEoEU/"
-draft: true
 faq:
   - q: "髪質改善トリートメントってボブにも役立つんですか？"
     a: "短い毛ほど、手触りや見た目の変化を感じやすい傾向があります。ボブの場合、毛先が目立つので、乾燥や広がりが気になりやすい部分が整いやすくなると実感いただけることが多いです。ただし個人差がありますので、カウンセリング時にご相談ください。"

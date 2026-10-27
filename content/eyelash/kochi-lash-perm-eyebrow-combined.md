@@ -3,7 +3,7 @@ title: "高知市でまつ毛パーマと眉毛を同時施術｜目元全体の
 slug: "kochi-lash-perm-eyebrow-combined"
 category: "eyelash"
 salon: "Raffine"
-date: "2026-02-15"
+date: "2026-10-27"
 updated: ""
 author: "安井未琉"
 author_role: "アイリスト"
@@ -14,7 +14,6 @@ question: "まつ毛パーマと眉毛WAXを同時に受けると、目元の印
 answer_summary: "まつ毛と眉毛は目元の輪郭を作る重要な要素です。両方を同時に整えることで、目元全体のバランスが整い、毎日のメイクがラクになりやすいだけでなく、印象をより引き出しやすくなります。高知市のRaffineでは、カウンセリングを通じて一人ひとりの目元に合わせた提案をしています。"
 instagram_id: "18106056856827585"
 instagram_permalink: "https://www.instagram.com/p/DUwwHK2Eny6/"
-draft: true
 faq:
   - q: "高知市でまつ毛パーマと眉毛WAXを同時に受けられるサロンを探しています"
     a: "高知県高知市のRaffineは、まつ毛パーマと眉毛WAXどちらにも対応しており、同時施術が可能です。カウンセリング時に「目元全体を整えたい」とお伝えいただければ、施術の順序や所要時間（通常は60〜90分程度）をご提案いたします。"
