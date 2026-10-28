@@ -3,7 +3,7 @@ title: "高知市でツヤのある暗髪を手に入れるには｜カラーと
 slug: "kochi-dark-hair-tsuya-color-shitsukaizen"
 category: "hair"
 salon: "Riv. by fleurami"
-date: "2026-10-27"
+date: "2026-10-28"
 updated: ""
 author: "沢村瑞希"
 author_role: "スタイリスト"
@@ -14,7 +14,6 @@ question: "高知市で暗髪のツヤ感を引き出すには、カラーと髪
 answer_summary: "暗髪こそ光沢感が命です。高知市のRiv. by fleuramiでは、カラー施術と同日または並行して髪質改善トリートメントを組み合わせることで、色の深さと手触りのまとまりを両立させやすくしています。光の当たり方で変わる奥行き感が、暗髪の魅力を最大限に引き出します。"
 instagram_id: "18101424833074319"
 instagram_permalink: "https://www.instagram.com/reel/De-_T-0yYyS/"
-draft: true
 faq:
   - q: "高知市で暗髪のカラーをするなら、髪質改善は必須ですか？"
     a: "必須ではありませんが、組み合わせることで手触りと光沢感が整いやすくなります。特に繰り返しカラーをしている髪や、乾燥が気になる方には、あわせて検討する価値があります。個人の髪の状態によって異なるため、カウンセリングでご相談ください。"

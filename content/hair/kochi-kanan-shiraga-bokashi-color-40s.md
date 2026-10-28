@@ -3,7 +3,7 @@ title: "香南市で白髪ぼかしカラーをするなら｜40代向けの色�
 slug: "kochi-kanan-shiraga-bokashi-color-40s"
 category: "hair"
 salon: "fleurami"
-date: "2026-10-27"
+date: "2026-10-28"
 updated: ""
 author: "川上凛"
 author_role: "スタイリスト"
@@ -14,7 +14,6 @@ question: "香南市で白髪ぼかしカラーをするときは、どんな色
 answer_summary: "白髪ぼかしカラーは色の濃さと明度、そしてアンダートーンの組み合わせで、白髪を目立たなく見せる効果が変わります。高知県香南市のfleuramiでは、お客様の肌や髪の状態に合わせて色を提案し、施術後の色持ちを高めるケア方法もアドバイスしています。"
 instagram_id: "18169275532471598"
 instagram_permalink: "https://www.instagram.com/reel/De-_PhZhwA0/"
-draft: true
 faq:
   - q: "白髪ぼかしカラーと通常のカラーの違いは何ですか？"
     a: "白髪ぼかしカラーは、白髪と黒髪の色の差を目立たなくするために、暗めの色か透け感のあるトーンを選びます。通常のカラーと比べると、白髪に色が入りやすく、全体的にまとまりのある仕上がりになりやすい傾向があります。"

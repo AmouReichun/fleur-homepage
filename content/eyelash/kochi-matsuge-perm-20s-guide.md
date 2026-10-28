@@ -3,7 +3,7 @@ title: "高知市でまつ毛パーマ、20代向けの目元選びのポイン�
 slug: "kochi-matsuge-perm-20s-guide"
 category: "eyelash"
 salon: "Raffine"
-date: "2026-10-27"
+date: "2026-10-28"
 updated: ""
 author: "安井未琉"
 author_role: "アイリスト"
@@ -14,7 +14,6 @@ question: "高知市で20代向けのまつ毛パーマを受けたいとき、�
 answer_summary: "まつ毛パーマは自まつ毛の形を活かしたカール施術です。高知市で選ぶ際は、カウンセリングで目の形や希望の仕上がりを丁寧に聞いてくれるサロン、施術事例で仕上がりが確認できるサロンを基準に選ぶことが大切です。Raffineではお客様に合わせた自然なカール設計が得意です。"
 instagram_id: "17917841160541958"
 instagram_permalink: "https://www.instagram.com/p/De-_ibvl94G/"
-draft: true
 faq:
   - q: "高知市のRaffineでまつ毛パーマを初めて受ける場合、どのくらい時間がかかりますか？"
     a: "施術時間は目安として60分程度です。カウンセリングを含めると、ご来店から施術完了まで約90分～120分を見ておくとよいでしょう。お忙しい方はご予約時にお伝えいただければ、スケジュール調整いたします。"
