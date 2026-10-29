@@ -3,7 +3,7 @@ title: "高知市でベージュカラーを長くツヤツヤに保つには｜
 slug: "kochi-beige-color-shitsukaizen-tsuya-mvrmyjc0"
 category: "hair"
 salon: "Riv. by fleurami"
-date: "2026-10-28"
+date: "2026-10-29"
 updated: ""
 author: "西森心大"
 author_role: "スタイリスト"
@@ -14,7 +14,6 @@ question: "高知市でベージュカラーをキレイに長く保ちながら
 answer_summary: "ベージュ系カラーは色持ちが短く見えやすいため、カラーと同時に髪質改善トリートメントを組み合わせることで、色の透明感が引き立ちツヤが続きやすくなります。高知市のRiv. by fleuramiでは、カウンセリングで髪の状態に合わせたプランを提案しています。"
 instagram_id: ""
 instagram_permalink: ""
-draft: true
 faq:
   - q: "高知市のRiv. by fleuramiでベージュカラーと髪質改善は同じ日にできますか？"
     a: "はい、同じ日に施術することができます。カラー後に髪質改善トリートメントを施すことで、色をしっかり定着させながら、ツヤとまとまりを整えやすくします。ただし施術時間は通常より長くなる（2時間半～3時間程度）ため、予約時にお知らせください。"

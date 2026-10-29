@@ -3,7 +3,7 @@ title: "高知市でまつ毛パーマ、自然な仕上がりを選ぶポイン
 slug: "kochi-matsuge-perm-natural-finish-select"
 category: "eyelash"
 salon: "Raffine"
-date: "2026-10-28"
+date: "2026-10-29"
 updated: ""
 author: "安井未琉"
 author_role: "アイリスト"
@@ -14,7 +14,6 @@ question: "高知市でまつ毛パーマを受けるなら、どんな仕上が
 answer_summary: "ナチュラルかつ目力のある仕上がりを実現するには、カウンセリングで自まつ毛の特性を活かした施術提案をするサロンを選ぶことが重要です。高知市のRaffineでは、お客様の毛流を丁寧に見極め、根元から毛先までの美しいカール形成に注力しています。"
 instagram_id: "18022226504727956"
 instagram_permalink: "https://www.instagram.com/p/DfBfY0bFyTU/"
-draft: true
 faq:
   - q: "高知市Raffineのまつ毛パーマは、どんなお客様に選ばれていますか？"
     a: "20〜30代を中心とした、朝のメイク時間を短縮したい方や、すっぴんでも目元の印象を整えたいというお悩みをお持ちの女性に選ばれています。自まつ毛を活かしたナチュラルな仕上がりを希望される方が多くご来店いただいています。"
