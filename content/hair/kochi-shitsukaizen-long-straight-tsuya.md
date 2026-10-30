@@ -3,7 +3,7 @@ title: "高知市でツヤのあるロングストレートを叶えるには｜
 slug: "kochi-shitsukaizen-long-straight-tsuya"
 category: "hair"
 salon: "Riv. by fleurami"
-date: "2026-03-29"
+date: "2026-10-30"
 updated: ""
 author: "西森心大"
 author_role: "スタイリスト"
@@ -14,7 +14,6 @@ question: "高知市で髪質改善トリートメントを受けると、ツヤ
 answer_summary: "髪質改善トリートメントは1回の施術でもまとまりやすさを感じやすいものの、ツヤとしなやかさが定着するには3〜4週間ごとに3〜4回程度の継続が目安です。高知市内のRiv. by fleuramiでは、髪の状態に合わせた提案と自宅ケアのアドバイスで、長期的にツヤのあるロングストレートを整えるお手伝いをしています。"
 instagram_id: "18069975890284678"
 instagram_permalink: "https://www.instagram.com/reel/DWcsoXnEnNV/"
-draft: true
 faq:
   - q: "髪質改善トリートメントは1回で効果を実感できますか？"
     a: "1回の施術でも手触りのなめらかさやまとまりやすさを感じやすいですが、ツヤ感と髪の芯からのしなやかさが定着するには、3〜4週間ごとに複数回（目安：3〜4回）の継続施術がおすすめです。個人差があるため、カウンセリング時にご相談ください。"

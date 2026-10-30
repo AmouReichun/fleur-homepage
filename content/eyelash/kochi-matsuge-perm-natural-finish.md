@@ -3,7 +3,7 @@ title: "高知市でまつ毛パーマ、ナチュラルに仕上げるコツ｜
 slug: "kochi-matsuge-perm-natural-finish"
 category: "eyelash"
 salon: "Raffine"
-date: "2026-02-14"
+date: "2026-10-30"
 updated: ""
 author: "尾崎あい"
 author_role: "アイリスト"
@@ -14,7 +14,6 @@ question: "高知市でまつ毛パーマをナチュラルに仕上げるには
 answer_summary: "ナチュラルなカールは、立ち上げの強さ・セパレート感・毛流の調整に左右されます。高知市のサロンでも、カウンセリング時に仕上がりのイメージを具体的に相談し、施術実績が豊富なアイリストを選ぶことが大切です。"
 instagram_id: "18433172320118559"
 instagram_permalink: "https://www.instagram.com/p/DUuFzTngdNW/"
-draft: true
 faq:
   - q: "高知市でまつ毛パーマ初心者でも失敗しないコツは？"
     a: "カウンセリングで「ナチュラルに見えることを重視」と伝え、アイリストに施術実例を見せてもらうことが大切です。高知市はりまや町のRaffineでも、カウンセリング時に理想の仕上がりを詳しくヒアリングしています。通う前に口コミや施術写真で雰囲気をチェックするのもおすすめです。"

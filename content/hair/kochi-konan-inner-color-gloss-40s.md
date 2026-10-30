@@ -3,7 +3,7 @@ title: "香南市で艶カラーを長く楽しむには｜40代向けインナ�
 slug: "kochi-konan-inner-color-gloss-40s"
 category: "hair"
 salon: "fleurami"
-date: "2026-03-27"
+date: "2026-10-30"
 updated: ""
 author: "山岡悠弥"
 author_role: "スタイリスト"
@@ -14,7 +14,6 @@ question: "香南市で艶カラーとインナーカラーを組み合わせる
 answer_summary: "艶カラーで全体の透明感と深みを整えながら、インナーカラーでさりげないアクセントを加えることで、大人っぽさと洗練された印象の両立が叶いやすくなります。色持ちや施術の頻度も含めた提案を受けることが、長く楽しむ鍵になります。"
 instagram_id: "17978238303004097"
 instagram_permalink: "https://www.instagram.com/reel/DWYLtSygWcg/"
-draft: true
 faq:
   - q: "香南市のfleuramiで艶カラーとインナーカラーを組み合わせると、施術時間はどのくらいかかりますか？"
     a: "艶カラーは約60〜90分、インナーカラーをプラスする場合は全体で120〜150分程度が目安です。毛量や色の濃さによって変わりますので、カウンセリング時にご確認ください。"
