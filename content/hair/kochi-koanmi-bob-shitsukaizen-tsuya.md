@@ -3,7 +3,7 @@ title: "香南市でボブを長く楽しむ髪質改善トリートメント｜
 slug: "kochi-koanmi-bob-shitsukaizen-tsuya"
 category: "hair"
 salon: "fleurami"
-date: "2026-03-26"
+date: "2026-10-31"
 updated: ""
 author: "山岡悠弥"
 author_role: "スタイリスト"
@@ -14,7 +14,6 @@ question: "香南市でボブスタイルの艶感と扱いやすさを両立さ
 answer_summary: "髪質改善トリートメントは、毛先の乾燥やまとまりにくさが気になるボブスタイルを整えやすくします。定期的なケアで艶感が続きやすく、スタイリングの時間短縮にもつながる傾向があります。"
 instagram_id: "17961611289058425"
 instagram_permalink: "https://www.instagram.com/reel/DWU6hZsga8U/"
-draft: true
 faq:
   - q: "香南市で髪質改善トリートメントってどのくらいの頻度で通うべき？"
     a: "カラーや紫外線の影響を受けやすい毛先から中心に3〜4週間の間隔で通う方が多いです。生活環境や髪のダメージ具合により個人差があるため、初回カウンセリングで担当美容師に相談いただくのがおすすめです。"

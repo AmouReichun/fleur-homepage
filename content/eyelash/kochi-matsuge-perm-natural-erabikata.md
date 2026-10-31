@@ -3,7 +3,7 @@ title: "高知市でまつ毛パーマ、ナチュラル仕上げを選ぶなら
 slug: "kochi-matsuge-perm-natural-erabikata"
 category: "eyelash"
 salon: "Raffine"
-date: "2026-02-13"
+date: "2026-10-31"
 updated: ""
 author: "安井未琉"
 author_role: "アイリスト"
@@ -14,7 +14,6 @@ question: "高知市でまつ毛パーマを選ぶとき、ナチュラル仕上
 answer_summary: "ナチュラルなカールは「派手さがない=効果がない」ではなく、日常のメイクに溶け込みながら目元の印象を整える施術です。高知市Raffineでは、カウンセリングで仕上がりの具体例を確認してから施術するため、理想とのズレを防げます。"
 instagram_id: "17853160425593629"
 instagram_permalink: "https://www.instagram.com/p/DUrrnXEAdn-/"
-draft: true
 faq:
   - q: "高知市でまつ毛パーマのナチュラル仕上げって、毎日のメイクでも大丈夫？"
     a: "はい。むしろナチュラルカールだからこそ、毎日のメイクに取り入れやすいという特徴があります。派手なカールは仕上がりが浮いてしまうこともありますが、控え目なカールなら仕事場や日常生活で自然に溶け込みます。個人差はありますが、カール感が控え目でも目元全体の印象が整う傾向があります。"
