@@ -3,7 +3,7 @@ title: "香南市でボブの艶感を引き出す｜髪質改善トリートメ
 slug: "kochi-nanshi-bob-shitsukaizen-color-tsuyakan"
 category: "hair"
 salon: "fleurami"
-date: "2026-03-20"
+date: "2026-11-01"
 updated: ""
 author: "川上凛"
 author_role: "スタイリスト"
@@ -14,7 +14,6 @@ question: "ボブスタイルで艶感を引き出すには、カットだけで
 answer_summary: "艶感はカラー選びと髪の質感の両方で決まります。高知県香南市のfleuramiでは、髪質改善トリートメントで毛髪の手触りと光沢感を整えた上で、肌なじみの良いカラーを提案することで、立体的で洗練された印象のボブに仕上げています。"
 instagram_id: "17857194765582670"
 instagram_permalink: "https://www.instagram.com/reel/DWGCa04AXLT/"
-draft: true
 faq:
   - q: "香南市でボブスタイルの艶感がない場合、何が原因ですか？"
     a: "原因は複数考えられます。毛髪の乾燥や広がりで光が散乱していることもあれば、カラー選びで髪が重く見えている場合もあります。高知県香南市のfleuramiではカウンセリングで髪質とカラーの両面からアプローチし、どちらを優先するか判断します。"

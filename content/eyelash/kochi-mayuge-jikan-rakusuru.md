@@ -3,7 +3,7 @@ title: "高知市で眉毛を整える前に知っておきたい｜メイクの
 slug: "kochi-mayuge-jikan-rakusuru"
 category: "eyelash"
 salon: "Raffine"
-date: "2026-02-08"
+date: "2026-11-01"
 updated: ""
 author: "安井未琉"
 author_role: "アイリスト"
@@ -14,7 +14,6 @@ question: "高知市で眉毛を整えると、毎日のメイク時間や朝の
 answer_summary: "眉毛WAXで形や毛流れを整えると、すっぴんでも整った印象になり、毎朝の眉毛描きの手間が大幅に減ります。高知市のRaffineでは、顔立ちに合わせた眉毛デザインを提案することで、メイク時間の短縮と毎日の気分向上の両立が可能です。"
 instagram_id: "18064070381648812"
 instagram_permalink: "https://www.instagram.com/p/DUerVWhAZEv/"
-draft: true
 faq:
   - q: "眉毛WAXって痛くないですか？初めてでも大丈夫ですか？"
     a: "WAXは毛を根元から取り除く施術のため、多少の刺激は感じる方もいます。ただしRaffineでは肌質に合わせたケアを行い、施術後の赤みを抑えるよう丁寧に対応しています。初めての方は事前にカウンセリングで不安をお伝えいただければ、より丁寧に進めます。"

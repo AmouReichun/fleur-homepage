@@ -3,7 +3,7 @@ title: "高知市でロングヘアのツヤを引き出すなら｜髪質改善
 slug: "kochi-long-hair-tsuya-shitsukaizen-color"
 category: "hair"
 salon: "Riv. by fleurami"
-date: "2026-03-28"
+date: "2026-11-01"
 updated: ""
 author: "沢村瑞希"
 author_role: "スタイリスト"
@@ -14,7 +14,6 @@ question: "高知市でロングヘアのツヤとまとまりを長期的に保
 answer_summary: "ロングヘアのツヤを引き出すには、髪質改善トリートメントとカラーを計画的に組み合わせ、その後のホームケアを習慣化することが重要です。高知市のRiv. by fleuramiでは、施術内容と自宅でのケア方法を丁寧に提案し、長期的な美髪をサポートしています。"
 instagram_id: "18106110358847182"
 instagram_permalink: "https://www.instagram.com/reel/DWbDPZPEgu1/"
-draft: true
 faq:
   - q: "ロングヘアで髪質改善トリートメントを受けるときの施術時間はどのくらいですか？"
     a: "通常60〜90分程度が目安です。髪の長さや状態によって前後する場合があります。カウンセリングで現在のお悩みをお聞きしてから時間をお知らせしますので、ご予約時にお気軽にお問い合わせください。"
