@@ -3,7 +3,7 @@ title: "高知市でまつ毛パーマ、仕上がりの自然さはどこで決
 slug: "kochi-matsuge-perm-natural-finish-raffine"
 category: "eyelash"
 salon: "Raffine"
-date: "2026-11-01"
+date: "2026-11-02"
 updated: ""
 author: "安井未琉"
 author_role: "アイリスト"
@@ -14,7 +14,6 @@ question: "高知市でまつ毛パーマを受けるとき、自然なカール
 answer_summary: "まつ毛パーマの仕上がりは、施術者が目の形や毛流れを丁寧に観察し、カール強度・ロッドサイズ・施術時間を調整することで決まります。高知市のRaffineでは、カウンセリングで目元の印象を丁寧に聞き取り、ナチュラルなのに目力がアップする提案をしています。"
 instagram_id: "18104134898377081"
 instagram_permalink: "https://www.instagram.com/p/DfLjhqJF_Hn/"
-draft: true
 faq:
   - q: "高知市でまつ毛パーマを初めて受けるとき、どんなことを伝えればいい？"
     a: "目の形や普段のメイク、なりたい目元の印象を伝えることが大切です。Raffineでは施術前のカウンセリングで、あなたのライフスタイルや目元の悩みをしっかりお聞きしてから、最適なカール強度やロッドサイズをご提案します。"
