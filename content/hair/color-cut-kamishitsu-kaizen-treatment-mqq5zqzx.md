@@ -4,11 +4,11 @@ slug: color-cut-kamishitsu-kaizen-treatment-mqq5zqzx
 category: hair
 salon: Riv. by fleurami
 date: '2026-06-23'
-updated: '2026-10-26'
+updated: '2026-11-02'
 author: ''
 author_role: ''
 excerpt: >-
-  カラーで毛先がパサつく、すぐ色落ちする40代女性へ。同日施術で色持ち・ツヤ・まとまりがどう変わるか、所要時間の目安やサロン選びのポイントを施術事例つきで解説。高知市の美容室Riv.
+  カラーで毛先がパサつく、すぐ色落ちする40代女性へ。同日施術で色持ち・ツヤ・まとまりがどう変わるか、所要時間の目安やサロン選びのポイントを施術事例つきで解説します。高知市の美容室Riv.
   by fleurami。
 thumbnail: /images/uploads/fleurami/fleurami-mqq268i5.webp
 tags:
@@ -59,7 +59,7 @@ conversation:
     text: 時間ってどれくらいかかるのかな？仕事終わりでも間に合う？
   - speaker: stylist
     text: カウンセリングからカットまで含めて3〜4時間程度が目安です。髪の長さで前後するので、ご予約時にお伝えいただければ時間配分をご案内します。
-seoTitle: 高知市でカラーと髪質改善を同日に｜色持ち・ツヤの変化と選び方
+seoTitle: 高知市カラー×髪質改善を同日に｜40代の色持ち・ツヤの変化
 ---
 ## この記事で分かること
 
