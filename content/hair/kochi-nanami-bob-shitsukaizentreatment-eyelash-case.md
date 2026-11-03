@@ -3,7 +3,7 @@ title: "40代が選ぶボブスタイル、香南市で艶感を引き出す髪�
 slug: "kochi-nanami-bob-shitsukaizentreatment-eyelash-case"
 category: "hair"
 salon: "fleurami"
-date: "2026-10-28"
+date: "2026-11-03"
 updated: ""
 author: "山岡悠弥"
 author_role: "スタイリスト"
@@ -14,7 +14,6 @@ question: "香南市でボブスタイルを美しく保ちたい40代女性が�
 answer_summary: "ボブスタイルは毛先の状態が目立ちやすく、艶感とまとまりやすさが全体の印象を左右します。髪質改善トリートメントは、手触りを整えやすく、毎日のスタイリングがしやすくなる傾向があるため、40代ならではの髪悩みに向いています。"
 instagram_id: "18639587938060917"
 instagram_permalink: "https://www.instagram.com/reel/DfBfIEKhqTn/"
-draft: true
 faq:
   - q: "髪質改善トリートメントはボブスタイルに本当に必要ですか？"
     a: "基本的にしも必須ではありませんが、ボブは毛先の状態が全体の印象を大きく左右するため、艶感とまとまりやすさを整えたい場合に向いています。施術により手触りが整いやすくなり、毎日のスタイリング時間が短くなったと感じる方も多いです。"

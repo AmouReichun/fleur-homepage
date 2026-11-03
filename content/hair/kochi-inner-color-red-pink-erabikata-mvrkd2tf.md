@@ -3,7 +3,7 @@ title: "高知市でインナーカラーを入れるなら｜赤・ピンク系
 slug: "kochi-inner-color-red-pink-erabikata-mvrkd2tf"
 category: "hair"
 salon: "Riv. by fleurami"
-date: "2026-10-28"
+date: "2026-11-03"
 updated: ""
 author: "沢村瑞希"
 author_role: "スタイリスト"
@@ -14,7 +14,6 @@ question: "高知市でインナーカラーの赤・ピンク系を入れると
 answer_summary: "インナーカラーの赤・ピンク系は、ベースの髪色とのバランス・色選びの明度・トーンによって印象が大きく変わります。高知市のRiv. by fleuramiでは、カウンセリングで髪質や似合わせを踏まえ、透明感を引き出す色提案と褪色を見据えたケアアドバイスで、長く楽しめるインナーカラーを実現します。"
 instagram_id: ""
 instagram_permalink: ""
-draft: true
 faq:
   - q: "インナーカラーってどのくらいの期間、色が持つんですか？"
     a: "赤・ピンク系のインナーカラーは、通常3〜5週間程度で徐々に褪色が目立つようになります。色持ちは施術後のホームケア（紫外線対策・適切なシャンプー・トリートメント）や、元々の髪のダメージ具合によって変わります。高知市のRiv. by fleuramiでは施術時にケア方法をご提案していますので、ご相談ください。"
