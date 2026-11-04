@@ -3,7 +3,7 @@ title: "香南市でトーンダウンカラーを選ぶときに確認すべき
 slug: "kochi-konan-tonedown-color-point-mvsvgqh0"
 category: "hair"
 salon: "fleurami"
-date: "2026-10-29"
+date: "2026-11-04"
 updated: ""
 author: "西内みゆき"
 author_role: "スタイリスト"
@@ -14,7 +14,6 @@ question: "香南市でトーンダウンカラーの仕上がりを左右する
 answer_summary: "トーンダウンカラーの仕上がりは、現在の髪色・ブリーチ履歴・使用する色素の種類で大きく異なります。カウンセリングで髪の状態を丁寧に診断し、透明感と艶を両立できる提案をするサロンを選ぶことが重要です。"
 instagram_id: ""
 instagram_permalink: ""
-draft: true
 faq:
   - q: "トーンダウンカラーとは何ですか？"
     a: "ハイトーンから暗めの色に変える施術を指します。透明感を保ちながら落ち着いた印象に仕上げる場合と、赤みや黄みを活かした深みのある色に変える場合があります。どちらに仕上げるかは、髪の履歴と希望の印象で判断します。"
