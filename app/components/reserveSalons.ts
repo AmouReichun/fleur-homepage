@@ -9,7 +9,7 @@ export type ReserveSalonEntry = ReserveSalon & { key: string; area: string; href
 export const reserveSalons: ReserveSalonEntry[] = [
   {
     key: "fleurami",
-    name: "fleurami",
+    name: "fleur ami",
     area: "高知県香南市野市町西野230",
     href: "/salon/fleurami",
     hotpepperUrl: "https://beauty.hotpepper.jp/slnH000528388/",
@@ -20,7 +20,7 @@ export const reserveSalons: ReserveSalonEntry[] = [
   },
   {
     key: "riv",
-    name: "Riv. by fleurami",
+    name: "Riv. by fleur ami",
     area: "高知県高知市南川添9-21 フルールアミー3 2F",
     href: "/salon/riv",
     hotpepperUrl: "https://beauty.hotpepper.jp/slnH000634137/",

@@ -7,7 +7,7 @@ import ReservationChannels from "@/app/components/ReservationChannels";
 import GoogleReviewCTA from "@/app/components/GoogleReviewCTA";
 
 const SALON_LABELS: Record<string, string> = {
-  riv: "Riv. by fleurami（高知市）",
+  riv: "Riv. by fleur ami（高知市）",
   fleurami: "fleurami（香南市）",
   raffine: "Raffine（高知市 はりまや橋）",
 };

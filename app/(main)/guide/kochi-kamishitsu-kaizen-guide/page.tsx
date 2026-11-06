@@ -50,7 +50,7 @@ const faqSchema = {
       acceptedAnswer: {
         "@type": "Answer",
         text:
-          "高知市南川添のRiv. by fleuramiと香南市野市のfleuramiで髪質改善トリートメントを提供しています。酸熱トリートメント・髪質改善縮毛矯正どちらも対応可能です。予約はLINEまたはHot Pepperからお申し込みください。",
+          "高知市南川添のRiv. by fleur amiと香南市野市のfleur amiで髪質改善トリートメントを提供しています。酸熱トリートメント・髪質改善縮毛矯正どちらも対応可能です。予約はLINEまたはHot Pepperからお申し込みください。",
       },
     },
     {
@@ -284,7 +284,7 @@ export default function KochiKamishitsuKaizenGuidePage() {
             {[
               {
                 q: "高知市で髪質改善ができる美容室はありますか？",
-                a: "高知市南川添のRiv. by fleuramiと香南市野市のfleuramiで髪質改善トリートメントを提供しています。酸熱トリートメント・髪質改善縮毛矯正どちらも対応可能です。",
+                a: "高知市南川添のRiv. by fleur amiと香南市野市のfleur amiで髪質改善トリートメントを提供しています。酸熱トリートメント・髪質改善縮毛矯正どちらも対応可能です。",
               },
               {
                 q: "髪質改善トリートメントと普通のトリートメントの違いは？",
@@ -324,20 +324,20 @@ export default function KochiKamishitsuKaizenGuidePage() {
           <p className="text-xs tracking-[0.3em] text-site-accent uppercase mb-2">Booking</p>
           <p className="font-serif text-xl font-semibold text-site-text mb-2">高知市・香南市で髪質改善を体験する</p>
           <p className="text-xs text-site-muted mb-6">
-            Riv. by fleurami（高知市）・fleurami（香南市）で承っています。
+            Riv. by fleur ami（高知市）・fleur ami（香南市）で承っています。
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link
               href="/salon/riv"
               className="inline-block px-6 py-2.5 bg-site-accent text-white text-xs tracking-wider hover:opacity-80 transition-opacity"
             >
-              Riv. by fleurami を見る
+              Riv. by fleur ami を見る
             </Link>
             <Link
               href="/salon/fleurami"
               className="inline-block px-6 py-2.5 border border-site-accent text-site-accent text-xs tracking-wider hover:bg-site-accent hover:text-white transition-colors"
             >
-              fleurami を見る
+              fleur ami を見る
             </Link>
           </div>
         </section>

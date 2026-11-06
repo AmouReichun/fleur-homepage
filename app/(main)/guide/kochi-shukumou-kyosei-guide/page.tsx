@@ -6,7 +6,7 @@ import { breadcrumbSchema } from "@/lib/structured-data";
 const BASE = "https://fleur-group.jp";
 const TITLE = "高知市の縮毛矯正ガイド｜料金・持ち・酸性ストレートとの違いを解説";
 const DESC =
-  "高知市・香南市で縮毛矯正を検討中の方へ。料金相場・施術時間・持ち・向いている髪質・酸性ストレートとの違いをfleur GROUPが解説。Riv.byfleurami（高知市）・fleurami（香南市）で対応。";
+  "高知市・香南市で縮毛矯正を検討中の方へ。料金相場・施術時間・持ち・向いている髪質・酸性ストレートとの違いをfleur GROUPが解説。Riv.byfleurami（高知市）・fleur ami（香南市）で対応。";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -47,7 +47,7 @@ const faqSchema = {
       name: "高知市で縮毛矯正ができる美容室と料金は？",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "高知市南川添9-21のRiv. by fleurami（TEL: 088-884-5566）では縮毛矯正に対応しています。料金はショート15,000円〜、ミディアム17,000円〜、セミロング19,000円〜、ロング22,000円〜（税込・長さ・状態により変動）が目安です。香南市野市のfleurami（TEL: 0887-56-1005）でも縮毛矯正をご提供しています。",
+        text: "高知市南川添9-21のRiv. by fleur ami（TEL: 088-884-5566）では縮毛矯正に対応しています。料金はショート15,000円〜、ミディアム17,000円〜、セミロング19,000円〜、ロング22,000円〜（税込・長さ・状態により変動）が目安です。香南市野市のfleur ami（TEL: 0887-56-1005）でも縮毛矯正をご提供しています。",
       },
     },
     {
@@ -79,7 +79,7 @@ const faqSchema = {
       name: "高知の梅雨・夏の湿気で髪が広がる場合に縮毛矯正は有効ですか？",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "有効です。高知県は梅雨から夏にかけて湿度が高く、くせ毛や広がりが強く出やすい環境です。縮毛矯正は半永久的にくせを伸ばすため、湿気の影響を大幅に減らせます。Riv. by fleurami（高知市）・fleurami（香南市）では高知の気候に合わせた薬剤選定で施術しています。",
+        text: "有効です。高知県は梅雨から夏にかけて湿度が高く、くせ毛や広がりが強く出やすい環境です。縮毛矯正は半永久的にくせを伸ばすため、湿気の影響を大幅に減らせます。Riv. by fleur ami（高知市）・fleur ami（香南市）では高知の気候に合わせた薬剤選定で施術しています。",
       },
     },
     {
@@ -95,7 +95,7 @@ const faqSchema = {
       name: "メンズも縮毛矯正はできますか？",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "はい、Riv. by fleurami（高知市）・fleurami（香南市）ではメンズの縮毛矯正にも対応しています。男性はショートが多くなりますが、くせの強さや仕上がりのイメージをカウンセリングで共有してから施術します。メンズショートで13,000円〜が目安です。",
+        text: "はい、Riv. by fleur ami（高知市）・fleur ami（香南市）ではメンズの縮毛矯正にも対応しています。男性はショートが多くなりますが、くせの強さや仕上がりのイメージをカウンセリングで共有してから施術します。メンズショートで13,000円〜が目安です。",
       },
     },
     {
@@ -103,7 +103,7 @@ const faqSchema = {
       name: "縮毛矯正で「ぺたんこ」や「ヘルメット感」にならないようにできますか？",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "薬剤の強さと根元の処理を適切に行うことで、自然なストレートに仕上げることが可能です。Riv. by fleuramiでは「根元のボリュームを残しながら毛先だけ落ち着かせたい」などの細かいご要望をカウンセリングで確認し、仕上がりイメージを共有してから施術します。",
+        text: "薬剤の強さと根元の処理を適切に行うことで、自然なストレートに仕上げることが可能です。Riv. by fleur amiでは「根元のボリュームを残しながら毛先だけ落ち着かせたい」などの細かいご要望をカウンセリングで確認し、仕上がりイメージを共有してから施術します。",
       },
     },
   ],
@@ -158,7 +158,7 @@ export default function KochiShukumouKyoseiGuidePage() {
               縮毛矯正は、アルカリ性の薬剤でシスチン結合を還元し、アイロンで真っすぐに伸ばした後に2剤で形を定着させる施術です。くせ毛・うねり・広がりを半永久的にストレートにできるため、高知の梅雨〜夏の湿度が高い時期でも扱いやすい髪に整えます。
             </p>
             <p className="text-sm sm:text-base text-site-text leading-loose mt-3">
-              fleur GROUPのRiv. by fleurami（高知市南川添）とfleurami（香南市野市）では、くせの強さと髪のダメージを考慮した薬剤選定を重視し、自然なストレートに仕上げることを得意としています。
+              fleur GROUPのRiv. by fleur ami（高知市南川添）とfleur ami（香南市野市）では、くせの強さと髪のダメージを考慮した薬剤選定を重視し、自然なストレートに仕上げることを得意としています。
             </p>
           </section>
 
@@ -172,7 +172,7 @@ export default function KochiShukumouKyoseiGuidePage() {
                   <tr className="bg-site-light">
                     <th className="text-left p-3 text-site-text font-medium border-b border-site-greige w-1/3">髪の長さ</th>
                     <th className="text-left p-3 text-site-text font-medium border-b border-site-greige">高知市の相場</th>
-                    <th className="text-left p-3 text-site-accent font-medium border-b border-site-greige">Riv. by fleurami</th>
+                    <th className="text-left p-3 text-site-accent font-medium border-b border-site-greige">Riv. by fleur ami</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -262,7 +262,7 @@ export default function KochiShukumouKyoseiGuidePage() {
               {[
                 {
                   title: "ぺたんこ・ヘルメット感になった",
-                  body: "根元まで薬剤を当てすぎるとトップが潰れます。Riv. by fleuramiでは根元の処理を慎重に行い、自然な立ち上がりが出るよう仕上げます。",
+                  body: "根元まで薬剤を当てすぎるとトップが潰れます。Riv. by fleur amiでは根元の処理を慎重に行い、自然な立ち上がりが出るよう仕上げます。",
                 },
                 {
                   title: "不自然にピンピンになった",
@@ -299,13 +299,13 @@ export default function KochiShukumouKyoseiGuidePage() {
             <h2 className="font-serif text-lg font-semibold text-site-text mb-3">ご予約・お問い合わせ</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-site-muted">
               <div>
-                <p className="font-medium text-site-text mb-1">Riv. by fleurami（高知市）</p>
+                <p className="font-medium text-site-text mb-1">Riv. by fleur ami（高知市）</p>
                 <p>高知市南川添9-21 2F</p>
                 <p>TEL: 088-884-5566</p>
                 <p>営業: 9:30〜18:30（月・第1第3火 定休）</p>
               </div>
               <div>
-                <p className="font-medium text-site-text mb-1">fleurami（香南市）</p>
+                <p className="font-medium text-site-text mb-1">fleur ami（香南市）</p>
                 <p>香南市野市町みどりが丘1-182</p>
                 <p>TEL: 0887-56-1005</p>
                 <p>営業: 9:00〜18:00（月・第2第4火 定休）</p>
@@ -316,13 +316,13 @@ export default function KochiShukumouKyoseiGuidePage() {
                 href="/salon/riv"
                 className="text-xs px-4 py-2 border border-site-accent text-site-accent hover:bg-site-accent hover:text-white transition-colors"
               >
-                Riv. by fleurami 詳細
+                Riv. by fleur ami 詳細
               </Link>
               <Link
                 href="/salon/fleurami"
                 className="text-xs px-4 py-2 border border-site-accent text-site-accent hover:bg-site-accent hover:text-white transition-colors"
               >
-                fleurami 詳細
+                fleur ami 詳細
               </Link>
             </div>
           </section>

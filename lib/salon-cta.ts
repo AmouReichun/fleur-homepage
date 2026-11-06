@@ -15,12 +15,12 @@ interface SalonCta {
 
 const SALON_CTA: Record<SalonCtaKey, SalonCta> = {
   fleurami: {
-    name: "fleurami",
+    name: "fleur ami",
     address: "高知県香南市野市町西野230",
     reviewUrl: "https://g.page/r/CVY6rOf-UWbxEAE/review",
   },
   riv: {
-    name: "Riv. by fleurami",
+    name: "Riv. by fleur ami",
     address: "高知県高知市南川添9-21 フルールアミー3 2F",
     reviewUrl: "https://g.page/r/CdEFX3xXBBF7EAE/review",
   },

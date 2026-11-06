@@ -127,7 +127,7 @@ const img = (src: string, alt: string): LpImage => ({ src, alt });
 
 export const DEFAULT_LP: LpContent = {
   hero: {
-    eyebrow: "fleurami ／ Riv. by fleurami",
+    eyebrow: "fleurami ／ Riv. by fleur ami",
     title: "あなたらしい美しさを、\nもっと自由に。",
     subtitle: "髪質も、似合うスタイルも、一人ひとり違うから。\nあなたに寄り添うヘアデザインを。",
     image: img(
@@ -303,7 +303,7 @@ export const DEFAULT_LP: LpContent = {
       },
       {
         title: "香南市・高知市の2店舗、駐車場あり",
-        text: "香南市野市町の fleurami、高知市南川添の Riv. by fleurami。どちらも駐車場があり、お車でも通いやすい立地です。",
+        text: "香南市野市町の fleur ami、高知市南川添の Riv. by fleur ami。どちらも駐車場があり、お車でも通いやすい立地です。",
       },
     ],
   },
@@ -346,11 +346,11 @@ export const DEFAULT_LP: LpContent = {
       },
       {
         q: "駐車場はありますか？",
-        a: "fleurami（香南市）は無料駐車場7台（先着順）、Riv. by fleurami（高知市）は駐車場5台（先着順）で、近くにコインパーキング（徒歩3分）もあります。",
+        a: "fleurami（香南市）は無料駐車場7台（先着順）、Riv. by fleur ami（高知市）は駐車場5台（先着順）で、近くにコインパーキング（徒歩3分）もあります。",
       },
       {
         q: "営業時間と定休日を教えてください。",
-        a: "fleurami は 9:00〜18:00、Riv. by fleurami は 9:30〜18:30 です。定休日はどちらも月曜日・第1第3火曜日です。",
+        a: "fleurami は 9:00〜18:00、Riv. by fleur ami は 9:30〜18:30 です。定休日はどちらも月曜日・第1第3火曜日です。",
       },
     ],
   },
@@ -366,9 +366,9 @@ export const DEFAULT_LP: LpContent = {
   line: { fleurami: "", riv: "" },
   stickyCtaLabel: "LINEで相談・予約",
   seo: {
-    title: "髪質改善・白髪ぼかし・似合わせカット｜高知市・香南市の美容室 fleurami／Riv. by fleurami",
+    title: "髪質改善・白髪ぼかし・似合わせカット｜高知市・香南市の美容室 fleur ami／Riv. by fleur ami",
     description:
-      "高知県香南市の fleurami、高知市の Riv. by fleurami。髪の広がり・白髪・似合う髪型のお悩みに、髪質改善トリートメント・白髪ぼかしカラー・似合わせ科学カットでお応えします。ご相談・ご予約は公式LINEから。",
+      "高知県香南市の fleur ami、高知市の Riv. by fleur ami。髪の広がり・白髪・似合う髪型のお悩みに、髪質改善トリートメント・白髪ぼかしカラー・似合わせ科学カットでお応えします。ご相談・ご予約は公式LINEから。",
     ogImage: "https://0oxripuo8b9stzsz.public.blob.vercel-storage.com/admin/hero-1790487252859.png",
   },
   experiment: { enabled: false, id: "hero-copy-1", heroTitleB: "", heroSubtitleB: "", ctaLabelB: "" },

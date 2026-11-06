@@ -5,7 +5,7 @@
 // 方針（2026-11 社長OK）：
 // - 料金・担当・流れなど「うちにしかない事実」だけを書く。推測や誇張（No.1など）は書かない
 // - 料金はホットペッパー掲載価格。変わったらここも直す
-// - 同じ店舗の重複ページ（野市＝香南市と同じfleurami）は検索に出さない（NOINDEX_AREA_SERVICES）
+// - 同じ店舗の重複ページ（野市＝香南市と同じfleur ami）は検索に出さない（NOINDEX_AREA_SERVICES）
 
 export interface ExtraPriceRow {
   name: string;
@@ -45,11 +45,11 @@ export interface AreaServiceExtra {
 
 export const AREA_SERVICE_EXTRAS: Record<string, AreaServiceExtra> = {
   "kochi/shiraga-bokashi": {
-    title: "高知市の白髪ぼかし｜料金・担当・流れ｜Riv. by fleurami（南川添）",
+    title: "高知市の白髪ぼかし｜料金・担当・流れ｜Riv. by fleur ami（南川添）",
     description:
-      "高知市南川添の美容室Riv. by fleuramiの白髪ぼかし。細いハイライトで白髪をなじませ、根元が伸びても目立ちにくいカラーに。初回11,900円〜の料金表、担当スタイリスト、施術の流れ、白髪染めとの違いを掲載。駐車場5台。",
+      "高知市南川添の美容室Riv. by fleur amiの白髪ぼかし。細いハイライトで白髪をなじませ、根元が伸びても目立ちにくいカラーに。初回11,900円〜の料金表、担当スタイリスト、施術の流れ、白髪染めとの違いを掲載。駐車場5台。",
     intro: [
-      "高知市南川添の美容室「Riv. by fleurami（リヴ バイ フルールアミー）」は、「白髪染めをやめたい」「暗く塗りつぶすカラーから卒業したい」という30〜50代の女性が多く通う、白髪ぼかしを得意とするサロンです。",
+      "高知市南川添の美容室「Riv. by fleur ami（リヴ バイ フルールアミー）」は、「白髪染めをやめたい」「暗く塗りつぶすカラーから卒業したい」という30〜50代の女性が多く通う、白髪ぼかしを得意とするサロンです。",
       "Riv.の白髪ぼかしは、白髪が多い場所に細いハイライト（部分的に明るくする筋）を入れて、白髪と髪の色の差を小さくしてから、全体を艶カラーで整えるのが基本の流れです。根元が伸びても白い線がくっきり出にくいため、短い間隔で白髪染めをくり返すループから抜け出しやすくなります。",
       "ハイライトの本数は「5枚まで・15枚まで・30枚まで」の3段階から、白髪の量とどこまで明るくしたいかで決めます。初めての方は少ない本数から試して、仕上がりを見ながら次回以降に増やしていく方法もあります。",
     ],
@@ -91,7 +91,7 @@ export const AREA_SERVICE_EXTRAS: Record<string, AreaServiceExtra> = {
         {
           slug: "hosokawa-ayaka",
           name: "細川 彩香",
-          salonName: "Riv. by fleurami",
+          salonName: "Riv. by fleur ami",
           text: "美容師歴8年。白髪ぼかし・グレイカラー・髪質改善が得意で、30〜50代の「白髪を染めるのに疲れた」というご相談を多く担当しています。",
         },
       ],
@@ -108,7 +108,7 @@ export const AREA_SERVICE_EXTRAS: Record<string, AreaServiceExtra> = {
       },
       {
         q: "白髪ぼかしの担当を指名できますか？",
-        a: "はい。Riv. by fleuramiには白髪ぼかし・グレイカラーを得意とする細川 彩香が在籍しています。ホットペッパービューティーから指名してご予約いただけます（指名料300円）。",
+        a: "はい。Riv. by fleur amiには白髪ぼかし・グレイカラーを得意とする細川 彩香が在籍しています。ホットペッパービューティーから指名してご予約いただけます（指名料300円）。",
       },
       {
         q: "Riv.に駐車場はありますか？",
@@ -118,11 +118,11 @@ export const AREA_SERVICE_EXTRAS: Record<string, AreaServiceExtra> = {
     templateFaqLimit: 3,
   },
   "konan/shiraga-bokashi": {
-    title: "香南市の白髪ぼかし｜料金・担当・流れ｜fleurami（野市町・駐車場無料）",
+    title: "香南市の白髪ぼかし｜料金・担当・流れ｜fleur ami（野市町・駐車場無料）",
     description:
-      "香南市野市町の美容室fleurami（フルールアミー）の白髪ぼかし。細いハイライトで白髪をなじませ、伸びても目立ちにくいカラーに。初回11,900円〜の料金表、担当スタイリスト、施術の流れ、白髪染めとの違いを掲載。無料駐車場7台。",
+      "香南市野市町の美容室fleur ami（フルールアミー）の白髪ぼかし。細いハイライトで白髪をなじませ、伸びても目立ちにくいカラーに。初回11,900円〜の料金表、担当スタイリスト、施術の流れ、白髪染めとの違いを掲載。無料駐車場7台。",
     intro: [
-      "香南市野市町の美容室「fleurami（フルールアミー）」では、「白髪染めをくり返すのに疲れた」「暗い色ばかりで顔まわりが重く見える」という40〜60代の女性から、白髪ぼかしのご相談を多くいただいています。",
+      "香南市野市町の美容室「fleur ami（フルールアミー）」では、「白髪染めをくり返すのに疲れた」「暗い色ばかりで顔まわりが重く見える」という40〜60代の女性から、白髪ぼかしのご相談を多くいただいています。",
       "fleuramiの白髪ぼかしは、白髪が目立つ場所に細いハイライト（部分的に明るくする筋）を入れて白髪との色の差を小さくし、全体をカラーでなじませるやり方です。根元が伸びても白い線がくっきり出にくいので、白髪染めの間隔をあけやすくなります。",
       "初めての方は、ハイライト5枚以下で分け目や顔まわりから試すのがおすすめです。白髪が多い方・立体感をしっかり出したい方は、15枚までのメニューもあります。",
     ],
@@ -162,7 +162,7 @@ export const AREA_SERVICE_EXTRAS: Record<string, AreaServiceExtra> = {
         {
           slug: "nishiuti-miyuki",
           name: "西内 みゆき",
-          salonName: "fleurami",
+          salonName: "fleur ami",
           text: "美容師歴20年以上のトップスタイリスト。髪質改善・白髪ぼかし（グレイブレンドカラー）が得意で、40〜60代の「白髪が気になり始めた」というご相談を多く担当しています。",
         },
       ],
@@ -170,7 +170,7 @@ export const AREA_SERVICE_EXTRAS: Record<string, AreaServiceExtra> = {
     access: "香南市野市町西野230（のいち駅から車で約4分）。無料駐車場7台（先着順）。",
     faq: [
       {
-        q: "香南市のfleuramiで白髪ぼかしはいくらでできますか？",
+        q: "香南市のfleur amiで白髪ぼかしはいくらでできますか？",
         a: "初めての方は「白髪ぼかし（ハイライト5枚以下）＋カラー＋カット」が11,900円です。白髪が多い方・立体感を出したい方向けに、ハイライト15枚まで（艶トリートメント付き）の18,900円もあります（ホットペッパー掲載価格・2026年11月時点・税込）。",
       },
       {
@@ -179,7 +179,7 @@ export const AREA_SERVICE_EXTRAS: Record<string, AreaServiceExtra> = {
       },
       {
         q: "白髪ぼかしの担当を指名できますか？",
-        a: "はい。fleuramiには白髪ぼかし・グレイカラーを得意とする西内 みゆきが在籍しています。ホットペッパービューティーから指名してご予約いただけます（指名料300円）。",
+        a: "はい。fleur amiには白髪ぼかし・グレイカラーを得意とする西内 みゆきが在籍しています。ホットペッパービューティーから指名してご予約いただけます（指名料300円）。",
       },
       {
         q: "fleuramiに駐車場はありますか？",
@@ -190,20 +190,20 @@ export const AREA_SERVICE_EXTRAS: Record<string, AreaServiceExtra> = {
   },
   "kochi/shukumou-kyousei": shukumouExtra({
     areaName: "高知市",
-    salonName: "Riv. by fleurami",
+    salonName: "Riv. by fleur ami",
     salonKana: "リヴ バイ フルールアミー",
     place: "高知市南川添",
-    titleSuffix: "Riv. by fleurami（南川添）",
+    titleSuffix: "Riv. by fleur ami（南川添）",
     parking: "駐車場5台",
     access: "高知市南川添9-21 フルールアミー3 2F（高知ICから車で約4分）。駐車場5台（先着順）、近くにコインパーキングあり（徒歩3分）。",
     parkingFaq: "店舗前に5台（先着順）あります。満車の場合は、近くのコインパーキング（徒歩3分）をご利用ください。",
     staff: [
-      { slug: "nishimori-munehiro", name: "西森 心大", salonName: "Riv. by fleurami", text: "美容師歴15年のマネージャー。縮毛矯正・髪質改善・くせ毛ケアが得意で、強いくせ毛から「広がりだけ抑えたい」というご相談まで担当しています。" },
+      { slug: "nishimori-munehiro", name: "西森 心大", salonName: "Riv. by fleur ami", text: "美容師歴15年のマネージャー。縮毛矯正・髪質改善・くせ毛ケアが得意で、強いくせ毛から「広がりだけ抑えたい」というご相談まで担当しています。" },
     ],
   }),
   "konan/shukumou-kyousei": shukumouExtra({
     areaName: "香南市",
-    salonName: "fleurami",
+    salonName: "fleur ami",
     salonKana: "フルールアミー",
     place: "香南市野市町",
     titleSuffix: "fleurami（野市町・駐車場無料）",
@@ -211,26 +211,26 @@ export const AREA_SERVICE_EXTRAS: Record<string, AreaServiceExtra> = {
     access: "香南市野市町西野230（のいち駅から車で約4分）。無料駐車場7台（先着順）。",
     parkingFaq: "店舗に無料駐車場が7台あります（先着順）。のいち駅から車で約4分です。",
     staff: [
-      { slug: "yamaoka-yuya", name: "山岡 悠弥", salonName: "fleurami", text: "美容師歴14年の店長・トップスタイリスト。縮毛矯正・似合わせカット・髪質改善が得意で、くせを伸ばしたあとのまとまりやすいカットまで担当しています。" },
+      { slug: "yamaoka-yuya", name: "山岡 悠弥", salonName: "fleur ami", text: "美容師歴14年の店長・トップスタイリスト。縮毛矯正・似合わせカット・髪質改善が得意で、くせを伸ばしたあとのまとまりやすいカットまで担当しています。" },
     ],
   }),
   "kochi/kamishitsu-kaizen": kamishitsuExtra({
     areaName: "高知市",
-    salonName: "Riv. by fleurami",
+    salonName: "Riv. by fleur ami",
     salonKana: "リヴ バイ フルールアミー",
     place: "高知市南川添",
-    titleSuffix: "Riv. by fleurami（南川添）",
+    titleSuffix: "Riv. by fleur ami（南川添）",
     parking: "駐車場5台",
     access: "高知市南川添9-21 フルールアミー3 2F（高知ICから車で約4分）。駐車場5台（先着順）、近くにコインパーキングあり（徒歩3分）。",
     parkingFaq: "店舗前に5台（先着順）あります。満車の場合は、近くのコインパーキング（徒歩3分）をご利用ください。",
     staff: [
-      { slug: "nishimori-munehiro", name: "西森 心大", salonName: "Riv. by fleurami", text: "美容師歴15年のマネージャー。縮毛矯正・髪質改善・くせ毛ケアが得意で、「縮毛矯正をするほどではないけれど広がる」というご相談も多く担当しています。" },
-      { slug: "hosokawa-ayaka", name: "細川 彩香", salonName: "Riv. by fleurami", text: "美容師歴8年。白髪ぼかし・グレイカラー・髪質改善が得意で、カラーと髪質改善を組み合わせた艶髪づくりを担当しています。" },
+      { slug: "nishimori-munehiro", name: "西森 心大", salonName: "Riv. by fleur ami", text: "美容師歴15年のマネージャー。縮毛矯正・髪質改善・くせ毛ケアが得意で、「縮毛矯正をするほどではないけれど広がる」というご相談も多く担当しています。" },
+      { slug: "hosokawa-ayaka", name: "細川 彩香", salonName: "Riv. by fleur ami", text: "美容師歴8年。白髪ぼかし・グレイカラー・髪質改善が得意で、カラーと髪質改善を組み合わせた艶髪づくりを担当しています。" },
     ],
   }),
   "konan/kamishitsu-kaizen": kamishitsuExtra({
     areaName: "香南市",
-    salonName: "fleurami",
+    salonName: "fleur ami",
     salonKana: "フルールアミー",
     place: "香南市野市町",
     titleSuffix: "fleurami（野市町・駐車場無料）",
@@ -238,21 +238,21 @@ export const AREA_SERVICE_EXTRAS: Record<string, AreaServiceExtra> = {
     access: "香南市野市町西野230（のいち駅から車で約4分）。無料駐車場7台（先着順）。",
     parkingFaq: "店舗に無料駐車場が7台あります（先着順）。のいち駅から車で約4分です。",
     staff: [
-      { slug: "yamaoka-yuya", name: "山岡 悠弥", salonName: "fleurami", text: "美容師歴14年の店長・トップスタイリスト。縮毛矯正・似合わせカット・髪質改善が得意で、髪の状態に合わせて髪質改善と縮毛矯正を使い分けてご提案しています。" },
-      { slug: "nishiuti-miyuki", name: "西内 みゆき", salonName: "fleurami", text: "美容師歴20年以上のトップスタイリスト。髪質改善・白髪ぼかしが得意で、40〜60代の乾燥・パサつきのご相談を多く担当しています。" },
+      { slug: "yamaoka-yuya", name: "山岡 悠弥", salonName: "fleur ami", text: "美容師歴14年の店長・トップスタイリスト。縮毛矯正・似合わせカット・髪質改善が得意で、髪の状態に合わせて髪質改善と縮毛矯正を使い分けてご提案しています。" },
+      { slug: "nishiuti-miyuki", name: "西内 みゆき", salonName: "fleur ami", text: "美容師歴20年以上のトップスタイリスト。髪質改善・白髪ぼかしが得意で、40〜60代の乾燥・パサつきのご相談を多く担当しています。" },
     ],
   }),
   "kochi/tsuya-color": tsuyaColorExtra({
     areaName: "高知市",
-    salonName: "Riv. by fleurami",
+    salonName: "Riv. by fleur ami",
     salonKana: "リヴ バイ フルールアミー",
     place: "高知市南川添",
-    titleSuffix: "Riv. by fleurami（南川添）",
+    titleSuffix: "Riv. by fleur ami（南川添）",
     parking: "駐車場5台",
     access: "高知市南川添9-21 フルールアミー3 2F（高知ICから車で約4分）。駐車場5台（先着順）、近くにコインパーキングあり（徒歩3分）。",
     parkingFaq: "店舗前に5台（先着順）あります。満車の場合は、近くのコインパーキング（徒歩3分）をご利用ください。",
     staff: [
-      { slug: "hosokawa-ayaka", name: "細川 彩香", salonName: "Riv. by fleurami", text: "美容師歴8年。艶カラーに加え、白髪ぼかし・グレイカラー・髪質改善が得意で、明るさと艶を両立させたい大人女性のカラーを多く担当しています。" },
+      { slug: "hosokawa-ayaka", name: "細川 彩香", salonName: "Riv. by fleur ami", text: "美容師歴8年。艶カラーに加え、白髪ぼかし・グレイカラー・髪質改善が得意で、明るさと艶を両立させたい大人女性のカラーを多く担当しています。" },
     ],
     rows: [
       { name: "【初めての方】艶カラー＋カット＋集中マスクTR", price: "9,900円", note: "通常12,800円" },
@@ -264,7 +264,7 @@ export const AREA_SERVICE_EXTRAS: Record<string, AreaServiceExtra> = {
   }),
   "konan/tsuya-color": tsuyaColorExtra({
     areaName: "香南市",
-    salonName: "fleurami",
+    salonName: "fleur ami",
     salonKana: "フルールアミー",
     place: "香南市野市町",
     titleSuffix: "fleurami（野市町・駐車場無料）",
@@ -272,7 +272,7 @@ export const AREA_SERVICE_EXTRAS: Record<string, AreaServiceExtra> = {
     access: "香南市野市町西野230（のいち駅から車で約4分）。無料駐車場7台（先着順）。",
     parkingFaq: "店舗に無料駐車場が7台あります（先着順）。のいち駅から車で約4分です。",
     staff: [
-      { slug: "kawakami-rin", name: "川上 凛", salonName: "fleurami", text: "美容師歴4年。艶カラー・似合わせカラーが得意で、肌の色や普段の服装に合わせた色選びを一緒に考えます。" },
+      { slug: "kawakami-rin", name: "川上 凛", salonName: "fleur ami", text: "美容師歴4年。艶カラー・似合わせカラーが得意で、肌の色や普段の服装に合わせた色選びを一緒に考えます。" },
     ],
     rows: [
       { name: "【初めての方】艶カラー＋似合わせカット", price: "8,900円", note: "通常11,700円" },
@@ -284,16 +284,16 @@ export const AREA_SERVICE_EXTRAS: Record<string, AreaServiceExtra> = {
   }),
   "kochi/cut": cutExtra({
     areaName: "高知市",
-    salonName: "Riv. by fleurami",
+    salonName: "Riv. by fleur ami",
     salonKana: "リヴ バイ フルールアミー",
     place: "高知市南川添",
-    titleSuffix: "Riv. by fleurami（南川添）",
+    titleSuffix: "Riv. by fleur ami（南川添）",
     parking: "駐車場5台",
     access: "高知市南川添9-21 フルールアミー3 2F（高知ICから車で約4分）。駐車場5台（先着順）、近くにコインパーキングあり（徒歩3分）。",
     parkingFaq: "店舗前に5台（先着順）あります。満車の場合は、近くのコインパーキング（徒歩3分）をご利用ください。",
     staff: [
-      { slug: "sawamura-mizuki", name: "沢村 瑞希", salonName: "Riv. by fleurami", text: "美容師歴4年。似合わせカットが得意で、20〜30代を中心にレイヤー・顔まわりのデザインを多く担当しています。" },
-      { slug: "nishimori-munehiro", name: "西森 心大", salonName: "Riv. by fleurami", text: "美容師歴15年のマネージャー。くせ毛を生かしたカットや、縮毛矯正・髪質改善と合わせたまとまりやすいカットが得意です。" },
+      { slug: "sawamura-mizuki", name: "沢村 瑞希", salonName: "Riv. by fleur ami", text: "美容師歴4年。似合わせカットが得意で、20〜30代を中心にレイヤー・顔まわりのデザインを多く担当しています。" },
+      { slug: "nishimori-munehiro", name: "西森 心大", salonName: "Riv. by fleur ami", text: "美容師歴15年のマネージャー。くせ毛を生かしたカットや、縮毛矯正・髪質改善と合わせたまとまりやすいカットが得意です。" },
     ],
     rows: [
       { name: "【初めての方】カット＋シャンプー（骨格に似合わせ）", price: "4,200円", note: "通常4,700円" },
@@ -304,7 +304,7 @@ export const AREA_SERVICE_EXTRAS: Record<string, AreaServiceExtra> = {
   }),
   "konan/cut": cutExtra({
     areaName: "香南市",
-    salonName: "fleurami",
+    salonName: "fleur ami",
     salonKana: "フルールアミー",
     place: "香南市野市町",
     titleSuffix: "fleurami（野市町・駐車場無料）",
@@ -312,7 +312,7 @@ export const AREA_SERVICE_EXTRAS: Record<string, AreaServiceExtra> = {
     access: "香南市野市町西野230（のいち駅から車で約4分）。無料駐車場7台（先着順）。",
     parkingFaq: "店舗に無料駐車場が7台あります（先着順）。のいち駅から車で約4分です。",
     staff: [
-      { slug: "yamaoka-yuya", name: "山岡 悠弥", salonName: "fleurami", text: "美容師歴14年の店長・トップスタイリスト。似合わせカットが得意で、ショート・ボブなど毎朝まとまりやすいスタイルを多く担当しています。" },
+      { slug: "yamaoka-yuya", name: "山岡 悠弥", salonName: "fleur ami", text: "美容師歴14年の店長・トップスタイリスト。似合わせカットが得意で、ショート・ボブなど毎朝まとまりやすいスタイルを多く担当しています。" },
     ],
     rows: [
       { name: "【初めての方】似合わせカット（ショート・ボブが得意）", price: "4,200円", note: "通常4,700円" },
@@ -541,7 +541,7 @@ function cutExtra(s: PricedSalonFacts): AreaServiceExtra {
 
 /** 同じ店舗の重複ページ（検索には出さない）。キーは `${areaSlug}/${serviceSlug}` */
 export const NOINDEX_AREA_SERVICES = new Set<string>([
-  // 野市はfleurami（香南市野市町）の所在地で、/area/konan/shiraga-bokashi と同じ内容になるため
+  // 野市はfleur ami（香南市野市町）の所在地で、/area/konan/shiraga-bokashi と同じ内容になるため
   "noichi/shiraga-bokashi",
   "noichi/shukumou-kyousei",
   "noichi/kamishitsu-kaizen",
@@ -551,7 +551,7 @@ export function getAreaServiceExtra(areaSlug: string, serviceSlug: string): Area
   return AREA_SERVICE_EXTRAS[`${areaSlug}/${serviceSlug}`];
 }
 
-/** 野市（noichi）はfleurami＝香南市（konan）と同じ店舗なので、メニュー別ページはすべて検索に出さない（エリアのトップ /area/noichi は残す） */
+/** 野市（noichi）はfleur ami＝香南市（konan）と同じ店舗なので、メニュー別ページはすべて検索に出さない（エリアのトップ /area/noichi は残す） */
 const NOINDEX_AREAS = new Set<string>(["noichi"]);
 
 export function isNoindexAreaService(areaSlug: string, serviceSlug: string): boolean {

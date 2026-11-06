@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     "縮毛矯正 香南市",
     "fleurami",
     "Raffine",
-    "Riv. by fleurami",
+    "Riv. by fleur ami",
   ],
   alternates: {
     canonical: BASE_URL,

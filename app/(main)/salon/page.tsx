@@ -12,7 +12,7 @@ const salonItemListSchema = {
   "@type": "ItemList",
   "@id": `${BASE}/salon`,
   name: "fleur GROUP 店舗一覧",
-  description: "高知市・香南市のfleur GROUP 3店舗。美容室（Riv. by fleurami・fleurami）とアイラッシュサロン（Raffine）。",
+  description: "高知市・香南市のfleur GROUP 3店舗。美容室（Riv. by fleur ami・fleur ami）とアイラッシュサロン（Raffine）。",
   url: `${BASE}/salon`,
   numberOfItems: 3,
   itemListElement: [
@@ -35,7 +35,7 @@ const salonSpeakableSchema = {
 export const metadata: Metadata = {
   title: "店舗案内",
   description:
-    "高知市・香南市のfleur GROUP 3店舗をご案内。美容室「fleurami」（香南市）「Riv. by fleurami」（高知市）、アイラッシュサロン「Raffine」（高知市はりまや橋）。メニュー・アクセス・予約はこちら。",
+    "高知市・香南市のfleur GROUP 3店舗をご案内。美容室「fleur ami」（香南市）「Riv. by fleur ami」（高知市）、アイラッシュサロン「Raffine」（高知市はりまや橋）。メニュー・アクセス・予約はこちら。",
   alternates: { canonical: "https://fleur-group.jp/salon" },
 };
 

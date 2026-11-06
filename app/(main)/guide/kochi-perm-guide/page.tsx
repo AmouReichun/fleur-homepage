@@ -49,7 +49,7 @@ const faqSchema = {
       acceptedAnswer: {
         "@type": "Answer",
         text:
-          "fleur GROUPの「Riv. by fleurami（高知市南川添）」と「fleurami（香南市野市）」が縮毛矯正を得意としています。くせ毛・うねりの状態に合わせた薬剤選定とアイロン技術で、ダメージを抑えながら自然なストレートに仕上げます。",
+          "fleur GROUPの「Riv. by fleur ami（高知市南川添）」と「fleur ami（香南市野市）」が縮毛矯正を得意としています。くせ毛・うねりの状態に合わせた薬剤選定とアイロン技術で、ダメージを抑えながら自然なストレートに仕上げます。",
       },
     },
     {
@@ -85,7 +85,7 @@ const faqSchema = {
       acceptedAnswer: {
         "@type": "Answer",
         text:
-          "fleur GROUPの「Riv. by fleurami（高知市）」と「fleurami（香南市）」でエクパーマ（エクステ＋パーマ）に対応しています。自まつ毛が短い・下向きで悩む方向けのアイラッシュ施術です。",
+          "fleur GROUPの「Riv. by fleur ami（高知市）」と「fleur ami（香南市）」でエクパーマ（エクステ＋パーマ）に対応しています。自まつ毛が短い・下向きで悩む方向けのアイラッシュ施術です。",
       },
     },
     {
@@ -130,7 +130,7 @@ const faqSchema = {
       acceptedAnswer: {
         "@type": "Answer",
         text:
-          "高知県は梅雨から夏にかけて湿度が非常に高く、くせ毛や広がりが出やすい環境です。縮毛矯正は湿気によるうねりを半永久的に抑える最も効果の高い施術です。「Riv. by fleurami（高知市）」「fleurami（香南市）」では高知の高湿度に合わせた薬剤選定を行っています。",
+          "高知県は梅雨から夏にかけて湿度が非常に高く、くせ毛や広がりが出やすい環境です。縮毛矯正は湿気によるうねりを半永久的に抑える最も効果の高い施術です。「Riv. by fleur ami（高知市）」「fleur ami（香南市）」では高知の高湿度に合わせた薬剤選定を行っています。",
       },
     },
     {
@@ -139,7 +139,7 @@ const faqSchema = {
       acceptedAnswer: {
         "@type": "Answer",
         text:
-          "ツイストパーマは毛束をねじりながらロッドで巻くパーマで、無造作な動きと束感が特徴です。メンズに人気のスタイルで、スタイリングが簡単なのが特長です。「Riv. by fleurami（高知市）」「fleurami（香南市）」で対応しています。",
+          "ツイストパーマは毛束をねじりながらロッドで巻くパーマで、無造作な動きと束感が特徴です。メンズに人気のスタイルで、スタイリングが簡単なのが特長です。「Riv. by fleur ami（高知市）」「fleur ami（香南市）」で対応しています。",
       },
     },
   ],
@@ -303,8 +303,8 @@ export default function KochiPermGuidePage() {
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {[
-                { href: "/salon/riv", name: "Riv. by fleurami", area: "高知市南川添", note: "縮毛矯正・髪質改善・白髪ぼかし" },
-                { href: "/salon/fleurami", name: "fleurami", area: "香南市野市", note: "縮毛矯正・デザインカラー・髪質改善" },
+                { href: "/salon/riv", name: "Riv. by fleur ami", area: "高知市南川添", note: "縮毛矯正・髪質改善・白髪ぼかし" },
+                { href: "/salon/fleurami", name: "fleur ami", area: "香南市野市", note: "縮毛矯正・デザインカラー・髪質改善" },
               ].map((s) => (
                 <Link
                   key={s.href}

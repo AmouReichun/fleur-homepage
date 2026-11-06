@@ -7,7 +7,7 @@ const BASE = "https://fleur-group.jp";
 export const metadata: Metadata = {
   title: "高知の美容・ヘアケア情報ガイド",
   description:
-    "高知県（高知市・香南市）の美容・ヘアケア情報を集約したガイド。髪質改善・縮毛矯正・白髪ぼかし・まつげパーマ・眉毛WAXなど、施術の選び方から高知の美容室・アイラッシュサロンの探し方まで。fleur GROUP（Riv. by fleurami・fleurami・Raffine）が提供する専門情報。",
+    "高知県（高知市・香南市）の美容・ヘアケア情報を集約したガイド。髪質改善・縮毛矯正・白髪ぼかし・まつげパーマ・眉毛WAXなど、施術の選び方から高知の美容室・アイラッシュサロンの探し方まで。fleur GROUP（Riv. by fleur ami・fleur ami・Raffine）が提供する専門情報。",
   alternates: { canonical: `${BASE}/guide` },
   openGraph: {
     title: "高知の美容・ヘアケア情報ガイド | fleur GROUP",
@@ -57,7 +57,7 @@ const faqSchema = {
       name: "髪質改善と縮毛矯正はどう違いますか？",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "縮毛矯正はくせ毛を薬剤とアイロンで半永久的にまっすぐ伸ばす施術で、強いくせ毛に向いています。髪質改善トリートメントはダメージを補修しながら扱いやすい質感に整える施術で、軽いくせ・ダメージが気になる方に向いています。高知市のRiv. by fleuramiと香南市のfleuramiではカウンセリングで最適な施術をご提案します。",
+        text: "縮毛矯正はくせ毛を薬剤とアイロンで半永久的にまっすぐ伸ばす施術で、強いくせ毛に向いています。髪質改善トリートメントはダメージを補修しながら扱いやすい質感に整える施術で、軽いくせ・ダメージが気になる方に向いています。高知市のRiv. by fleur amiと香南市のfleur amiではカウンセリングで最適な施術をご提案します。",
       },
     },
     {
@@ -65,7 +65,7 @@ const faqSchema = {
       name: "白髪ぼかしと白髪染めは何が違いますか？",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "白髪染めは白髪を暗い色で覆い隠す技術で、根元が伸びると白髪が目立ちやすくなります。白髪ぼかしはハイライトや細かい明るめのカラーを使って白髪を髪全体に自然になじませる技術で、伸びても境目が目立ちにくく、長く楽しめるのが特長です。「Riv. by fleurami」と「fleurami」が得意としています。",
+        text: "白髪染めは白髪を暗い色で覆い隠す技術で、根元が伸びると白髪が目立ちやすくなります。白髪ぼかしはハイライトや細かい明るめのカラーを使って白髪を髪全体に自然になじませる技術で、伸びても境目が目立ちにくく、長く楽しめるのが特長です。「Riv. by fleur ami」と「fleur ami」が得意としています。",
       },
     },
     {
@@ -89,7 +89,7 @@ const faqSchema = {
       name: "香南市・野市で美容室に行くなら駐車場はありますか？",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "香南市野市町の「fleurami（フルールアミー）」は無料駐車場を7台完備しています。のいち駅から車で約4分。縮毛矯正・髪質改善・艶カラーが得意で、大人女性を中心にご来店いただいています。TEL: 0887-56-5566。",
+        text: "香南市野市町の「fleur ami（フルールアミー）」は無料駐車場を7台完備しています。のいち駅から車で約4分。縮毛矯正・髪質改善・艶カラーが得意で、大人女性を中心にご来店いただいています。TEL: 0887-56-5566。",
       },
     },
     {
@@ -105,7 +105,7 @@ const faqSchema = {
       name: "高知の梅雨・夏の湿気で髪が広がる・うねるときはどうすればいいですか？",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "高知県は梅雨から夏にかけて湿度が高く、くせ毛や広がりが出やすい環境です。縮毛矯正（半永久的に直毛に整える）や髪質改善トリートメント（ダメージ補修＋まとまりUP）が効果的です。「Riv. by fleurami（高知市）」「fleurami（香南市）」では湿気の強い高知の気候を考慮した薬剤・施術を提案しています。",
+        text: "高知県は梅雨から夏にかけて湿度が高く、くせ毛や広がりが出やすい環境です。縮毛矯正（半永久的に直毛に整える）や髪質改善トリートメント（ダメージ補修＋まとまりUP）が効果的です。「Riv. by fleur ami（高知市）」「fleur ami（香南市）」では湿気の強い高知の気候を考慮した薬剤・施術を提案しています。",
       },
     },
     {
@@ -113,7 +113,7 @@ const faqSchema = {
       name: "40代・50代の白髪・髪のお悩みを相談できる美容室は高知にありますか？",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "「Riv. by fleurami（高知市南川添）」は40代・50代の大人女性のお客様が多いサロンです。白髪ぼかし（ハイライトで白髪をなじませるグレイカラー）・髪質改善トリートメント・艶カラーなど、年齢とともに変化する髪の悩みに特化したメニューと丁寧なカウンセリングで対応します。「fleurami（香南市）」も同様の悩みに対応可能です。",
+        text: "「Riv. by fleur ami（高知市南川添）」は40代・50代の大人女性のお客様が多いサロンです。白髪ぼかし（ハイライトで白髪をなじませるグレイカラー）・髪質改善トリートメント・艶カラーなど、年齢とともに変化する髪の悩みに特化したメニューと丁寧なカウンセリングで対応します。「fleur ami（香南市）」も同様の悩みに対応可能です。",
       },
     },
     {
@@ -129,7 +129,7 @@ const faqSchema = {
       name: "縮毛矯正はどのくらいの頻度でかけるのがいいですか？",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "一般的に半年〜1年に1回が目安です。くせの強さや伸びの速さによりますが、根元の伸びが目立ち始めた頃（3〜6ヶ月後）に前回との境目をなじませる施術を行うサイクルが多いです。「Riv. by fleurami（高知市）」「fleurami（香南市）」ではくせの状態を確認しながら最適なタイミングをアドバイスします。",
+        text: "一般的に半年〜1年に1回が目安です。くせの強さや伸びの速さによりますが、根元の伸びが目立ち始めた頃（3〜6ヶ月後）に前回との境目をなじませる施術を行うサイクルが多いです。「Riv. by fleur ami（高知市）」「fleur ami（香南市）」ではくせの状態を確認しながら最適なタイミングをアドバイスします。",
       },
     },
     {
@@ -137,7 +137,7 @@ const faqSchema = {
       name: "高知でヘアカラーのダメージを抑えながらカラーを続けるには？",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "ダメージを最小限にしながらカラーを続けるには、①髪質に合った薬剤を選ぶこと、②ハイライトなど全体ブリーチを避けた技法を使うこと、③カラー後にトリートメントやホームケアで補修することが重要です。「Riv. by fleurami（高知市）」「fleurami（香南市）」ではダメージカウンセリングを重視しており、艶カラー・透明感カラーなど傷みにくい施術を提案します。",
+        text: "ダメージを最小限にしながらカラーを続けるには、①髪質に合った薬剤を選ぶこと、②ハイライトなど全体ブリーチを避けた技法を使うこと、③カラー後にトリートメントやホームケアで補修することが重要です。「Riv. by fleur ami（高知市）」「fleur ami（香南市）」ではダメージカウンセリングを重視しており、艶カラー・透明感カラーなど傷みにくい施術を提案します。",
       },
     },
     {
@@ -145,7 +145,7 @@ const faqSchema = {
       name: "高知市でヘアカラーと白髪ぼかしを同じ日にできますか？",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "はい、「Riv. by fleurami（高知市）」では白髪ぼかしハイライトとカラーの同日施術に対応しています。ただし施術内容や髪の状態によって所要時間が変わりますので、ご予約時にご相談ください。「fleurami（香南市）」でも組み合わせ施術は可能です。",
+        text: "はい、「Riv. by fleur ami（高知市）」では白髪ぼかしハイライトとカラーの同日施術に対応しています。ただし施術内容や髪の状態によって所要時間が変わりますので、ご予約時にご相談ください。「fleur ami（香南市）」でも組み合わせ施術は可能です。",
       },
     },
     {
@@ -169,7 +169,7 @@ const faqSchema = {
       name: "高知でグレイヘア（白髪を活かしたスタイル）に移行したい場合は？",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "白髪染めをやめてグレイヘアへ移行する場合、根元と既染部分の段差を目立たなくしながら自然につなぐ「グレイカラー移行」を段階的に行うのが一般的です。「Riv. by fleurami（高知市）」と「fleurami（香南市）」ではグレイカラーへの移行相談に対応しており、お客様のペースに合わせたプランをカウンセリングで提案します。",
+        text: "白髪染めをやめてグレイヘアへ移行する場合、根元と既染部分の段差を目立たなくしながら自然につなぐ「グレイカラー移行」を段階的に行うのが一般的です。「Riv. by fleur ami（高知市）」と「fleur ami（香南市）」ではグレイカラーへの移行相談に対応しており、お客様のペースに合わせたプランをカウンセリングで提案します。",
       },
     },
   ],
@@ -213,7 +213,7 @@ const eyelashServices = [
 ];
 
 const areas = [
-  { href: "/area/kochi", name: "高知市", desc: "Riv. by fleurami（南川添）、Raffine（はりまや橋）の2店舗" },
+  { href: "/area/kochi", name: "高知市", desc: "Riv. by fleur ami（南川添）、Raffine（はりまや橋）の2店舗" },
   { href: "/area/konan", name: "香南市", desc: "fleurami（野市町西野）。無料駐車場7台完備" },
   { href: "/area/noichi", name: "野市", desc: "fleurami（野市町西野）。のいち駅から車で約4分" },
   { href: "/area/harimayabashi", name: "はりまや橋", desc: "Raffine（はりまや町）。まつげ・眉毛の専門サロン" },
@@ -254,7 +254,7 @@ export default function GuidePage() {
             ヘアメニューから探す
           </h2>
           <p className="text-sm text-site-muted mb-8">
-            高知市・香南市の美容室（Riv. by fleurami・fleurami）で受けられる施術の解説と事例。
+            高知市・香南市の美容室（Riv. by fleur ami・fleur ami）で受けられる施術の解説と事例。
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {hairServices.map((svc) => (
@@ -460,8 +460,8 @@ export default function GuidePage() {
           <h2 className="font-serif text-2xl font-semibold text-site-text mb-6">fleur GROUP 店舗案内</h2>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
             {[
-              { href: "/salon/riv", name: "Riv. by fleurami", area: "高知市南川添", type: "美容室" },
-              { href: "/salon/fleurami", name: "fleurami", area: "香南市野市町", type: "美容室" },
+              { href: "/salon/riv", name: "Riv. by fleur ami", area: "高知市南川添", type: "美容室" },
+              { href: "/salon/fleurami", name: "fleur ami", area: "香南市野市町", type: "美容室" },
               { href: "/salon/raffine", name: "Raffine", area: "高知市はりまや橋", type: "アイラッシュサロン" },
             ].map((s) => (
               <Link key={s.href} href={s.href} className="border border-site-greige bg-white p-5 hover:border-site-accent transition-colors group block">

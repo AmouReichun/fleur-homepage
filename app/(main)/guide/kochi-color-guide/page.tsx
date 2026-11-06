@@ -84,7 +84,7 @@ const faqSchema = {
       name: "グレイヘア（白髪を活かした銀髪スタイル）への移行はどのくらいかかりますか？",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "白髪染めをやめてグレイヘアに移行する期間は、髪の長さと既染部分の長さによって異なります。ショート〜ボブなら3〜6ヶ月、ミディアム以上では1〜2年かかるケースもあります。白髪ぼかし（ハイライトカラー）を段階的に使うことで、境目を目立たせずに自然なグラデーションで移行できます。高知市のRiv. by fleuramiでご相談ください。",
+        text: "白髪染めをやめてグレイヘアに移行する期間は、髪の長さと既染部分の長さによって異なります。ショート〜ボブなら3〜6ヶ月、ミディアム以上では1〜2年かかるケースもあります。白髪ぼかし（ハイライトカラー）を段階的に使うことで、境目を目立たせずに自然なグラデーションで移行できます。高知市のRiv. by fleur amiでご相談ください。",
       },
     },
     {
@@ -108,7 +108,7 @@ const faqSchema = {
       name: "高知市で透明感カラー・外国人風カラーができる美容室は？",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "高知市南川添の「Riv. by fleurami」と香南市野市の「fleurami」で透明感カラー・アッシュ・グレージュ・ベージュなど外国人風カラーに対応しています。髪の状態に合わせたブリーチ工程と艶カラーで、発色・色落ち後まで設計した提案が好評です。",
+        text: "高知市南川添の「Riv. by fleur ami」と香南市野市の「fleur ami」で透明感カラー・アッシュ・グレージュ・ベージュなど外国人風カラーに対応しています。髪の状態に合わせたブリーチ工程と艶カラーで、発色・色落ち後まで設計した提案が好評です。",
       },
     },
     {
@@ -124,7 +124,7 @@ const faqSchema = {
       name: "艶カラーとはどんな施術ですか？どんな人に向いていますか？",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "艶カラーは、発色と透明感・ツヤ感を重視した施術です。ダメージを抑えながら上品な光沢のある仕上がりを目指します。大人っぽく洗練された印象にしたい方、明るくなりすぎずツヤのある色味を楽しみたい40〜50代の方に特に人気です。高知市のRiv. by fleuramiでは肌色・骨格に合わせた艶カラーを得意としています。",
+        text: "艶カラーは、発色と透明感・ツヤ感を重視した施術です。ダメージを抑えながら上品な光沢のある仕上がりを目指します。大人っぽく洗練された印象にしたい方、明るくなりすぎずツヤのある色味を楽しみたい40〜50代の方に特に人気です。高知市のRiv. by fleur amiでは肌色・骨格に合わせた艶カラーを得意としています。",
       },
     },
     {
@@ -148,7 +148,7 @@ const faqSchema = {
       name: "高知市・香南市でカラー・白髪ぼかしを相談できる美容室はどこですか？",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "fleur GROUPの「Riv. by fleurami（高知市南川添9-21、TEL:088-884-5566）」と「fleurami（香南市野市町西野230、TEL:0887-56-5566）」で白髪ぼかし・グレイカラー・インナーカラー・ブリーチ・艶カラーに対応しています。どちらもホットペッパービューティーまたはLINEでご予約いただけます。",
+        text: "fleur GROUPの「Riv. by fleur ami（高知市南川添9-21、TEL:088-884-5566）」と「fleur ami（香南市野市町西野230、TEL:0887-56-5566）」で白髪ぼかし・グレイカラー・インナーカラー・ブリーチ・艶カラーに対応しています。どちらもホットペッパービューティーまたはLINEでご予約いただけます。",
       },
     },
     {
@@ -164,7 +164,7 @@ const faqSchema = {
       name: "高知でグレージュやアッシュカラーができる美容室は？",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "「Riv. by fleurami（高知市）」と「fleurami（香南市）」でグレージュ・アッシュ・ベージュ・ラベンダーなど透明感系カラーに対応しています。日本人の髪に多い赤みを抑えてくすみのある外国人風カラーを仕上げる技術が得意です。",
+        text: "「Riv. by fleur ami（高知市）」と「fleur ami（香南市）」でグレージュ・アッシュ・ベージュ・ラベンダーなど透明感系カラーに対応しています。日本人の髪に多い赤みを抑えてくすみのある外国人風カラーを仕上げる技術が得意です。",
       },
     },
   ],
@@ -323,10 +323,10 @@ export default function KochiColorGuidePage() {
               → 艶カラーサービスページ
             </Link>
             <Link href="/salon/riv" className="text-xs text-stone-500 underline underline-offset-2 hover:text-stone-800">
-              → Riv. by fleurami（高知市）
+              → Riv. by fleur ami（高知市）
             </Link>
             <Link href="/salon/fleurami" className="text-xs text-stone-500 underline underline-offset-2 hover:text-stone-800">
-              → fleurami（香南市）
+              → fleur ami（香南市）
             </Link>
           </div>
         </section>
@@ -350,7 +350,7 @@ export default function KochiColorGuidePage() {
         <div className="border border-stone-200 rounded-sm p-6 mt-10">
           <p className="text-sm font-light text-stone-800 mb-3">カラーのご相談はfleur GROUPへ</p>
           <p className="text-xs text-stone-500 leading-loose mb-4">
-            高知市のRiv. by fleurami・香南市のfleuramiでカラーカウンセリングを承っています。
+            高知市のRiv. by fleur ami・香南市のfleur amiでカラーカウンセリングを承っています。
             なりたいイメージの写真があるとスムーズです。ホットペッパービューティーまたはLINEからご予約ください。
           </p>
           <div className="flex flex-wrap gap-4">
@@ -358,13 +358,13 @@ export default function KochiColorGuidePage() {
               href="/salon/riv"
               className="text-xs tracking-[0.15em] text-stone-600 border border-stone-300 px-4 py-2 hover:bg-stone-50"
             >
-              Riv. by fleurami（高知市）
+              Riv. by fleur ami（高知市）
             </Link>
             <Link
               href="/salon/fleurami"
               className="text-xs tracking-[0.15em] text-stone-600 border border-stone-300 px-4 py-2 hover:bg-stone-50"
             >
-              fleurami（香南市）
+              fleur ami（香南市）
             </Link>
           </div>
         </div>

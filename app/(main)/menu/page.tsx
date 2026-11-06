@@ -135,7 +135,7 @@ export default async function MenuPage() {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
             {[
               { href: "/hair/kamiushitsu-kaizen", label: "髪質改善の症例・効果を見る", sub: "fleurami（香南市）・Riv.（高知市）" },
-              { href: "/hair", label: "縮毛矯正・白髪ぼかし・艶カラーの記事一覧", sub: "美容室（fleurami・Riv.）" },
+              { href: "/hair", label: "縮毛矯正・白髪ぼかし・艶カラーの記事一覧", sub: "美容室（fleur ami・Riv.）" },
               { href: "/eyelash/raffine", label: "まつげパーマ・マツエク・眉WAXの記事一覧", sub: "Raffine（高知市 はりまや橋）" },
             ].map((l) => (
               <a

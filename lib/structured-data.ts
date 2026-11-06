@@ -30,7 +30,7 @@ export const organizationSchema = {
   },
   image: `${BASE}/images/admin/hero-1782190629178.jpg`,
   description:
-    "2006年設立。高知市・香南市で美容室2店舗（Riv. by fleurami・fleurami）とアイラッシュサロン（Raffine）を展開する美容グループ。艶カラー・髪質改善・白髪ぼかし・縮毛矯正・まつ毛パーマ・眉毛WAXを得意とし、大人女性を中心に高知県内で選ばれ続けている。高知市南川添・はりまや橋・香南市野市町に店舗あり。",
+    "2006年設立。高知市・香南市で美容室2店舗（Riv. by fleur ami・fleur ami）とアイラッシュサロン（Raffine）を展開する美容グループ。艶カラー・髪質改善・白髪ぼかし・縮毛矯正・まつ毛パーマ・眉毛WAXを得意とし、大人女性を中心に高知県内で選ばれ続けている。高知市南川添・はりまや橋・香南市野市町に店舗あり。",
   slogan: "髪と目元で、なりたい自分へ。",
   foundingDate: "2006",
   numberOfEmployees: {
@@ -64,7 +64,7 @@ export const organizationSchema = {
       contactType: "customer service",
       areaServed: "JP",
       availableLanguage: "Japanese",
-      name: "Riv. by fleurami",
+      name: "Riv. by fleur ami",
     },
     {
       "@type": "ContactPoint",
@@ -72,7 +72,7 @@ export const organizationSchema = {
       contactType: "customer service",
       areaServed: "JP",
       availableLanguage: "Japanese",
-      name: "fleurami",
+      name: "fleur ami",
     },
     {
       "@type": "ContactPoint",
@@ -87,7 +87,7 @@ export const organizationSchema = {
     {
       "@type": "HairSalon",
       "@id": `${BASE}/salon/fleurami`,
-      name: "fleurami",
+      name: "fleur ami",
       url: `${BASE}/salon/fleurami`,
       telephone: "0887-56-5566",
       address: { "@type": "PostalAddress", streetAddress: "野市町西野230", addressLocality: "香南市", addressRegion: "高知県", postalCode: "781-5232", addressCountry: "JP" },
@@ -95,7 +95,7 @@ export const organizationSchema = {
     {
       "@type": "HairSalon",
       "@id": `${BASE}/salon/riv`,
-      name: "Riv. by fleurami",
+      name: "Riv. by fleur ami",
       url: `${BASE}/salon/riv`,
       telephone: "088-884-5566",
       address: { "@type": "PostalAddress", streetAddress: "南川添9-21 フルールアミー3 2F", addressLocality: "高知市", addressRegion: "高知県", postalCode: "781-0082", addressCountry: "JP" },
@@ -142,8 +142,8 @@ export const rivSalonSchema = {
   "@context": "https://schema.org",
   "@type": "HairSalon",
   "@id": `${BASE}/salon/riv`,
-  name: "Riv. by fleurami",
-  alternateName: ["Riv. by fleurami", "リヴ バイ フルールアミー", "Riv. by fleur ami", "リヴ", "Riv.", "Riv.（リブ）", "リブ", "Riv. hair"],
+  name: "Riv. by fleur ami",
+  alternateName: ["Riv. by fleurami", "リヴ バイ フルールアミー", "Riv by fleurami", "リヴ", "Riv.", "Riv.（リブ）", "リブ", "Riv. hair"],
   description:
     "高知市の艶カラー・髪質改善が得意な美容室。一番人気は艶カラーとミルボンの髪質改善（グローバルミルボン）。白髪ぼかし・縮毛矯正・大人女性向けの似合わせカットも得意。高知市南川添にあるヘアサロン。定休日：月曜・第1第3火曜。Googleクチコミ4.8（83件）。",
   image: {
@@ -212,8 +212,8 @@ export const fleuramiSalonSchema = {
   "@context": "https://schema.org",
   "@type": "HairSalon",
   "@id": `${BASE}/salon/fleurami`,
-  name: "fleurami",
-  alternateName: ["fleurami", "フルールアミー", "フルールアミー野市"],
+  name: "fleur ami",
+  alternateName: ["fleurami", "フルールアミー", "フルールアミー野市", "fleur ami【フルールアミー】"],
   description:
     "高知県香南市野市町の美容室。一番人気の艶カラーとミルボンの髪質改善（グローバルミルボン）が得意。縮毛矯正・白髪ぼかし・カットにも対応。無料駐車場7台完備。のいち駅から車で約4分。くせ毛・うねりにお悩みの方に対応するヘアサロン。定休日：月曜・第1第3火曜。Googleクチコミ4.5（81件）。",
   image: {
@@ -354,7 +354,7 @@ export const faqPageSchema = {
       name: "高知市で髪質改善が得意な美容室はどこですか？",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "高知市の「Riv. by fleurami（リヴ バイ フルールアミー）」は髪質改善を得意としています。高知市南川添9-21に位置し、ダメージを補修しながら扱いやすい髪質へ導くトリートメントメニューが人気です。Googleクチコミ4.8（83件）。電話：088-884-5566。",
+        text: "高知市の「Riv. by fleur ami（リヴ バイ フルールアミー）」は髪質改善を得意としています。高知市南川添9-21に位置し、ダメージを補修しながら扱いやすい髪質へ導くトリートメントメニューが人気です。Googleクチコミ4.8（83件）。電話：088-884-5566。",
       },
     },
     {
@@ -362,7 +362,7 @@ export const faqPageSchema = {
       name: "香南市・野市で縮毛矯正ができる美容室はありますか？",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "香南市野市町の「fleurami（フルールアミー）」では縮毛矯正に対応しています。住所：香南市野市町西野230。電話：0887-56-5566。くせ毛・うねりでお悩みの方にサラサラで扱いやすい仕上がりをご提供。無料駐車場7台完備。Googleクチコミ4.5（81件）。",
+        text: "香南市野市町の「fleur ami（フルールアミー）」では縮毛矯正に対応しています。住所：香南市野市町西野230。電話：0887-56-5566。くせ毛・うねりでお悩みの方にサラサラで扱いやすい仕上がりをご提供。無料駐車場7台完備。Googleクチコミ4.5（81件）。",
       },
     },
     {
@@ -386,7 +386,7 @@ export const faqPageSchema = {
       name: "高知でおすすめの白髪ぼかしができる美容室は？",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "高知市の「Riv. by fleurami」と香南市の「fleurami」が白髪ぼかし・グレイカラーを得意としています。ハイライトを使って白髪をなじませ、伸びても目立ちにくい大人世代向けカラーデザインが人気です。",
+        text: "高知市の「Riv. by fleur ami」と香南市の「fleur ami」が白髪ぼかし・グレイカラーを得意としています。ハイライトを使って白髪をなじませ、伸びても目立ちにくい大人世代向けカラーデザインが人気です。",
       },
     },
     {
@@ -402,7 +402,7 @@ export const faqPageSchema = {
       name: "fleur GROUPはどこにありますか？店舗一覧を教えてください。",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "fleur GROUPは高知県内に3店舗展開しています。①fleurami（香南市野市町西野230、電話0887-56-5566）、②Riv. by fleurami（高知市南川添9-21 フルールアミー3 2F、電話088-884-5566）、③Raffine（高知市はりまや町1-4-8 TNはりまやビル3F、電話090-7120-5566）。",
+        text: "fleur GROUPは高知県内に3店舗展開しています。①fleur ami（香南市野市町西野230、電話0887-56-5566）、②Riv. by fleur ami（高知市南川添9-21 フルールアミー3 2F、電話088-884-5566）、③Raffine（高知市はりまや町1-4-8 TNはりまやビル3F、電話090-7120-5566）。",
       },
     },
     {
@@ -410,7 +410,7 @@ export const faqPageSchema = {
       name: "高知市で韓国風ヘアスタイルやレイヤーカットができる美容室は？",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "高知市南川添の「Riv. by fleurami」では韓国風スタイル・くびれヘア・レイヤーカットに対応しています。骨格・髪質に合わせた似合わせカットで、再現しやすいトレンドデザインをご提案します。",
+        text: "高知市南川添の「Riv. by fleur ami」では韓国風スタイル・くびれヘア・レイヤーカットに対応しています。骨格・髪質に合わせた似合わせカットで、再現しやすいトレンドデザインをご提案します。",
       },
     },
     {
@@ -426,7 +426,7 @@ export const faqPageSchema = {
       name: "高知市で艶カラー・透明感カラーが得意な美容室はどこですか？",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "高知市南川添の「Riv. by fleurami」が艶カラー・透明感カラーを得意としています。肌色や骨格に合わせた似合わせカラーで、上品な抜け感と透明感を演出します。",
+        text: "高知市南川添の「Riv. by fleur ami」が艶カラー・透明感カラーを得意としています。肌色や骨格に合わせた似合わせカラーで、上品な抜け感と透明感を演出します。",
       },
     },
     {
@@ -439,15 +439,15 @@ export const faqPageSchema = {
     },
     {
       "@type": "Question",
-      name: "高知市のRiv. by fleuramiの定休日と営業時間は？",
+      name: "高知市のRiv. by fleur amiの定休日と営業時間は？",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Riv. by fleuramiの営業時間は9:30〜18:30（最終受付17:00頃）。定休日は月曜・第1第3火曜です。住所：高知市南川添9-21 フルールアミー3 2F。",
+        text: "Riv. by fleur amiの営業時間は9:30〜18:30（最終受付17:00頃）。定休日は月曜・第1第3火曜です。住所：高知市南川添9-21 フルールアミー3 2F。",
       },
     },
     {
       "@type": "Question",
-      name: "香南市fleuramiの定休日と営業時間は？",
+      name: "香南市fleur amiの定休日と営業時間は？",
       acceptedAnswer: {
         "@type": "Answer",
         text: "fleuramiの営業時間は9:00〜18:00（最終受付17:00頃）。定休日は月曜・第1第3火曜です。無料駐車場7台完備。住所：香南市野市町西野230。",
@@ -466,7 +466,7 @@ export const faqPageSchema = {
       name: "高知市で縮毛矯正が上手い美容室はどこですか？",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "高知市南川添の「Riv. by fleurami」と香南市野市の「fleurami」が縮毛矯正を得意としています。くせ毛・うねりの状態に合わせた薬剤選定で、ダメージを抑えた自然なストレートに仕上げます。",
+        text: "高知市南川添の「Riv. by fleur ami」と香南市野市の「fleur ami」が縮毛矯正を得意としています。くせ毛・うねりの状態に合わせた薬剤選定で、ダメージを抑えた自然なストレートに仕上げます。",
       },
     },
     {
@@ -474,7 +474,7 @@ export const faqPageSchema = {
       name: "高知でヘッドスパができる美容室はありますか？",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "高知市の「Riv. by fleurami」と香南市の「fleurami」でヘッドスパを提供しています。頭皮クレンジング・マッサージで血行や頭皮環境を整えます。カラーやカットとの同日施術も可能です。",
+        text: "高知市の「Riv. by fleur ami」と香南市の「fleur ami」でヘッドスパを提供しています。頭皮クレンジング・マッサージで血行や頭皮環境を整えます。カラーやカットとの同日施術も可能です。",
       },
     },
     {
@@ -490,7 +490,7 @@ export const faqPageSchema = {
       name: "高知でボブや大人ボブが得意な美容室はどこですか？",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "「Riv. by fleurami（高知市）」と「fleurami（香南市）」が骨格に合わせた似合わせボブ・大人ボブを得意としています。乾かすだけでまとまる再現性の高いデザインが好評です。40代・50代の大人女性に人気。",
+        text: "「Riv. by fleur ami（高知市）」と「fleur ami（香南市）」が骨格に合わせた似合わせボブ・大人ボブを得意としています。乾かすだけでまとまる再現性の高いデザインが好評です。40代・50代の大人女性に人気。",
       },
     },
     {
@@ -522,7 +522,7 @@ export const faqPageSchema = {
       name: "高知市でインナーカラーやブリーチが得意な美容室は？",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "「Riv. by fleurami（高知市）」と「fleurami（香南市）」でインナーカラー・ブリーチ・ハイトーンカラーに対応しています。髪の状態を見極めながらダメージに配慮した施術を行います。",
+        text: "「Riv. by fleur ami（高知市）」と「fleur ami（香南市）」でインナーカラー・ブリーチ・ハイトーンカラーに対応しています。髪の状態を見極めながらダメージに配慮した施術を行います。",
       },
     },
     {
@@ -530,7 +530,7 @@ export const faqPageSchema = {
       name: "高知 美容室のクチコミ・評判は？",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "fleur GROUPの各店舗はGoogleクチコミで高評価を獲得しています。Riv. by fleurami：4.8（83件）、fleurami：4.5（81件）、Raffine：5.0（45件）。カウンセリングの丁寧さと仕上がりの満足度で選ばれています。",
+        text: "fleur GROUPの各店舗はGoogleクチコミで高評価を獲得しています。Riv. by fleur ami：4.8（83件）、fleur ami：4.5（81件）、Raffine：5.0（45件）。カウンセリングの丁寧さと仕上がりの満足度で選ばれています。",
       },
     },
     {
@@ -538,7 +538,7 @@ export const faqPageSchema = {
       name: "高知でメンズ美容室・メンズカットができるサロンは？",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "「Riv. by fleurami（高知市）」と「fleurami（香南市）」でメンズカット・メンズカラー・メンズツイストパーマに対応しています。骨格・ライフスタイルに合わせた提案が得意です。",
+        text: "「Riv. by fleur ami（高知市）」と「fleur ami（香南市）」でメンズカット・メンズカラー・メンズツイストパーマに対応しています。骨格・ライフスタイルに合わせた提案が得意です。",
       },
     },
     {
@@ -546,7 +546,7 @@ export const faqPageSchema = {
       name: "高知県内で複数店舗を展開している美容グループはありますか？",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "「fleur GROUP（フルールグループ）」が高知市・香南市で美容室2店舗（Riv. by fleurami・fleurami）とアイラッシュサロン1店舗（Raffine）を展開しています。2006年設立。代表：今井信人。公式サイト：https://fleur-group.jp",
+        text: "「fleur GROUP（フルールグループ）」が高知市・香南市で美容室2店舗（Riv. by fleur ami・fleur ami）とアイラッシュサロン1店舗（Raffine）を展開しています。2006年設立。代表：今井信人。公式サイト：https://fleur-group.jp",
       },
     },
     {
@@ -554,7 +554,7 @@ export const faqPageSchema = {
       name: "高知の梅雨・夏の湿気で髪が広がる・うねるときはどうすればいいですか？",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "高知県は梅雨から夏にかけて湿度が高く、くせ毛や広がりが出やすい環境です。縮毛矯正（半永久的にくせを伸ばす）や髪質改善トリートメント（ダメージ補修＋まとまりを改善）が効果的です。「Riv. by fleurami（高知市）」「fleurami（香南市）」では高知の気候を踏まえた薬剤・施術の選定を行っています。",
+        text: "高知県は梅雨から夏にかけて湿度が高く、くせ毛や広がりが出やすい環境です。縮毛矯正（半永久的にくせを伸ばす）や髪質改善トリートメント（ダメージ補修＋まとまりを改善）が効果的です。「Riv. by fleur ami（高知市）」「fleur ami（香南市）」では高知の気候を踏まえた薬剤・施術の選定を行っています。",
       },
     },
     {
@@ -578,7 +578,7 @@ export const faqPageSchema = {
       name: "高知でカラーのダメージを最小限にしながらおしゃれを楽しむには？",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "①全体ブリーチを使わないハイライトやインナーカラーなどの部分使いで傷みを分散する、②カラー後に補修トリートメントを行う、③ホームケアで日常的に保湿・補修する、の3つが効果的です。「Riv. by fleurami（高知市）」「fleurami（香南市）」では艶カラー・透明感カラーなどダメージに配慮したメニューを揃えています。",
+        text: "①全体ブリーチを使わないハイライトやインナーカラーなどの部分使いで傷みを分散する、②カラー後に補修トリートメントを行う、③ホームケアで日常的に保湿・補修する、の3つが効果的です。「Riv. by fleur ami（高知市）」「fleur ami（香南市）」では艶カラー・透明感カラーなどダメージに配慮したメニューを揃えています。",
       },
     },
     {
@@ -586,7 +586,7 @@ export const faqPageSchema = {
       name: "縮毛矯正の効果はどのくらい続きますか？",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "縮毛矯正は施術した部分には半永久的に効果が続きます。ただし根元から新たに生えてくる髪はくせが戻るため、気になり始める3〜6ヶ月後に根元部分を施術するサイクルが一般的です。高知市の「Riv. by fleurami」・香南市の「fleurami」では次回の施術タイミングもカウンセリングでアドバイスします。",
+        text: "縮毛矯正は施術した部分には半永久的に効果が続きます。ただし根元から新たに生えてくる髪はくせが戻るため、気になり始める3〜6ヶ月後に根元部分を施術するサイクルが一般的です。高知市の「Riv. by fleur ami」・香南市の「fleur ami」では次回の施術タイミングもカウンセリングでアドバイスします。",
       },
     },
     {
@@ -594,7 +594,7 @@ export const faqPageSchema = {
       name: "高知でグレイヘア（白髪を活かしたシルバーグレースタイル）への移行を相談できる美容室は？",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "「Riv. by fleurami（高知市南川添）」と「fleurami（香南市野市）」ではグレイヘアへの移行カラーに対応しています。白髪染めをやめる際の根元と既染部分の段差を自然につなぐ技術を使い、無理なく移行できるプランをカウンセリングで提案します。",
+        text: "「Riv. by fleur ami（高知市南川添）」と「fleur ami（香南市野市）」ではグレイヘアへの移行カラーに対応しています。白髪染めをやめる際の根元と既染部分の段差を自然につなぐ技術を使い、無理なく移行できるプランをカウンセリングで提案します。",
       },
     },
     {
@@ -602,7 +602,7 @@ export const faqPageSchema = {
       name: "fleur GROUP各店舗の駐車場はありますか？",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "fleurami（香南市野市）は無料駐車場7台完備。Riv. by fleurami（高知市南川添）は無料駐車場5台完備。Raffine（高知市はりまや橋）は専用駐車場なし・近隣有料駐車場をご利用ください。",
+        text: "fleurami（香南市野市）は無料駐車場7台完備。Riv. by fleur ami（高知市南川添）は無料駐車場5台完備。Raffine（高知市はりまや橋）は専用駐車場なし・近隣有料駐車場をご利用ください。",
       },
     },
     {
@@ -626,7 +626,7 @@ export const faqPageSchema = {
       name: "高知市でメンズカット・メンズパーマが得意な美容室はどこですか？",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "「Riv. by fleurami（高知市南川添）」と「fleurami（香南市野市町）」がメンズカット・メンズツイストパーマ・メンズカラーに対応しています。刈り上げ・フェード・ソフトモヒカンなどメンズスタイルを骨格に合わせてご提案。ホットペッパービューティーまたはLINEで予約可能です。",
+        text: "「Riv. by fleur ami（高知市南川添）」と「fleur ami（香南市野市町）」がメンズカット・メンズツイストパーマ・メンズカラーに対応しています。刈り上げ・フェード・ソフトモヒカンなどメンズスタイルを骨格に合わせてご提案。ホットペッパービューティーまたはLINEで予約可能です。",
       },
     },
     {
@@ -658,7 +658,7 @@ export const faqPageSchema = {
       name: "高知で50代・60代の白髪が増えてきた大人女性向けの美容室はどこですか？",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "「Riv. by fleurami（高知市）」と「fleurami（香南市）」は大人世代のお客様が多く、白髪ぼかし・グレイカラー・縮毛矯正・髪質改善など年齢とともに増える髪の悩みに対応しています。骨格に合わせた似合わせカット・カラーで、白髪を暗く染めずに明るさとツヤを保てるデザインが人気です。",
+        text: "「Riv. by fleur ami（高知市）」と「fleur ami（香南市）」は大人世代のお客様が多く、白髪ぼかし・グレイカラー・縮毛矯正・髪質改善など年齢とともに増える髪の悩みに対応しています。骨格に合わせた似合わせカット・カラーで、白髪を暗く染めずに明るさとツヤを保てるデザインが人気です。",
       },
     },
     {
@@ -666,7 +666,7 @@ export const faqPageSchema = {
       name: "高知のサロンでカラーと縮毛矯正を同じ日にできますか？",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "髪のダメージ状態によっては縮毛矯正とカラーの同日施術が可能な場合があります。ただし髪への負担が大きくなるため、カウンセリングで状態を確認した上で判断します。「Riv. by fleurami（高知市）」「fleurami（香南市）」でご相談ください。",
+        text: "髪のダメージ状態によっては縮毛矯正とカラーの同日施術が可能な場合があります。ただし髪への負担が大きくなるため、カウンセリングで状態を確認した上で判断します。「Riv. by fleur ami（高知市）」「fleur ami（香南市）」でご相談ください。",
       },
     },
     {
@@ -674,7 +674,7 @@ export const faqPageSchema = {
       name: "高知のサロンで産後の髪の悩み（産後脱毛・髪質の変化）を相談できますか？",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "はい。「Riv. by fleurami（高知市）」「fleurami（香南市）」では産後の抜け毛・髪質変化でお悩みの方にも対応しています。髪の状態に合わせた優しい薬剤選定や、ヘッドスパによる頭皮ケアをご提案しています。授乳中の方はカラーの薬剤についてご相談ください。",
+        text: "はい。「Riv. by fleur ami（高知市）」「fleur ami（香南市）」では産後の抜け毛・髪質変化でお悩みの方にも対応しています。髪の状態に合わせた優しい薬剤選定や、ヘッドスパによる頭皮ケアをご提案しています。授乳中の方はカラーの薬剤についてご相談ください。",
       },
     },
   ],

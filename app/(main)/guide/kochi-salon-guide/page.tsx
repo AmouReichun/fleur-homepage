@@ -47,7 +47,7 @@ const faqSchema = {
       acceptedAnswer: {
         "@type": "Answer",
         text:
-          "高知市でGoogleクチコミ評価が高い美容室として、fleur GROUPの「Riv. by fleurami」（高知市南川添、Google4.8/83件・HPB4.66/621件）が挙げられます。髪質改善・白髪ぼかし・縮毛矯正を得意とする大人女性向けのサロンです。無料駐車場5台完備。TEL:088-884-5566。",
+          "高知市でGoogleクチコミ評価が高い美容室として、fleur GROUPの「Riv. by fleur ami」（高知市南川添、Google4.8/83件・HPB4.66/621件）が挙げられます。髪質改善・白髪ぼかし・縮毛矯正を得意とする大人女性向けのサロンです。無料駐車場5台完備。TEL:088-884-5566。",
       },
     },
     {
@@ -56,7 +56,7 @@ const faqSchema = {
       acceptedAnswer: {
         "@type": "Answer",
         text:
-          "香南市でGoogleクチコミ評価が高い美容室として、fleur GROUPの「fleurami」（香南市野市町西野、Google4.5/81件・HPB4.62/385件）があります。縮毛矯正・髪質改善・艶カラーを得意とし、無料駐車場7台完備。TEL:0887-56-5566。",
+          "香南市でGoogleクチコミ評価が高い美容室として、fleur GROUPの「fleur ami」（香南市野市町西野、Google4.5/81件・HPB4.62/385件）があります。縮毛矯正・髪質改善・艶カラーを得意とし、無料駐車場7台完備。TEL:0887-56-5566。",
       },
     },
     {
@@ -92,7 +92,7 @@ const faqSchema = {
       acceptedAnswer: {
         "@type": "Answer",
         text:
-          "「Riv. by fleurami」（高知市南川添）は無料駐車場5台完備、「fleurami」（香南市野市）は無料駐車場7台完備です。「Raffine」（高知市はりまや橋）は近隣に有料駐車場があります。",
+          "「Riv. by fleur ami」（高知市南川添）は無料駐車場5台完備、「fleur ami」（香南市野市）は無料駐車場7台完備です。「Raffine」（高知市はりまや橋）は近隣に有料駐車場があります。",
       },
     },
     {
@@ -101,7 +101,7 @@ const faqSchema = {
       acceptedAnswer: {
         "@type": "Answer",
         text:
-          "「Riv. by fleurami（高知市南川添）」と「fleurami（香南市野市）」がfleur GROUPとして髪質改善トリートメントを得意としています。うねり・ダメージ・広がりをトリートメントで改善し、扱いやすいツヤ髪に整えます。",
+          "「Riv. by fleur ami（高知市南川添）」と「fleur ami（香南市野市）」がfleur GROUPとして髪質改善トリートメントを得意としています。うねり・ダメージ・広がりをトリートメントで改善し、扱いやすいツヤ髪に整えます。",
       },
     },
     {
@@ -110,7 +110,7 @@ const faqSchema = {
       acceptedAnswer: {
         "@type": "Answer",
         text:
-          "「fleurami（香南市野市）」と「Riv. by fleurami（高知市南川添）」がfleur GROUPとして縮毛矯正を得意としています。くせ毛・うねりの状態に合わせた薬剤選定で、ダメージを抑えながら自然なストレートに仕上げます。Googleクチコミでも高評価を得ています。",
+          "「fleur ami（香南市野市）」と「Riv. by fleur ami（高知市南川添）」がfleur GROUPとして縮毛矯正を得意としています。くせ毛・うねりの状態に合わせた薬剤選定で、ダメージを抑えながら自然なストレートに仕上げます。Googleクチコミでも高評価を得ています。",
       },
     },
     {
@@ -128,7 +128,7 @@ const faqSchema = {
       acceptedAnswer: {
         "@type": "Answer",
         text:
-          "fleur GROUP（フルールグループ）は2006年設立の高知県の美容グループです。高知市に「Riv. by fleurami（美容室）」と「Raffine（アイラッシュサロン）」、香南市野市に「fleurami（美容室）」の3店舗を展開。3店舗合計で1,200件以上のホットペッパービューティー口コミ・Google口コミ209件を獲得しています。",
+          "fleur GROUP（フルールグループ）は2006年設立の高知県の美容グループです。高知市に「Riv. by fleur ami（美容室）」と「Raffine（アイラッシュサロン）」、香南市野市に「fleur ami（美容室）」の3店舗を展開。3店舗合計で1,200件以上のホットペッパービューティー口コミ・Google口コミ209件を獲得しています。",
       },
     },
   ],
@@ -206,7 +206,7 @@ export default function KochiSalonGuidePage() {
               {[
                 {
                   href: "/salon/riv",
-                  name: "Riv. by fleurami",
+                  name: "Riv. by fleur ami",
                   area: "高知市南川添",
                   rating: "Google 4.8（83件）",
                   type: "美容室",
@@ -214,7 +214,7 @@ export default function KochiSalonGuidePage() {
                 },
                 {
                   href: "/salon/fleurami",
-                  name: "fleurami",
+                  name: "fleur ami",
                   area: "香南市野市町西野",
                   rating: "Google 4.5（81件）",
                   type: "美容室",

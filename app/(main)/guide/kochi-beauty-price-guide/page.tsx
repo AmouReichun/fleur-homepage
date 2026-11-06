@@ -49,7 +49,7 @@ const faqSchema = {
       acceptedAnswer: {
         "@type": "Answer",
         text:
-          "高知市の美容室のカット料金は、シャンプー・ブロー込みで3,500〜6,000円程度が目安です。fleur GROUPのRiv. by fleuramiでは4,500〜5,500円前後。スタイリストの指名・経験年数によって料金が異なります。",
+          "高知市の美容室のカット料金は、シャンプー・ブロー込みで3,500〜6,000円程度が目安です。fleur GROUPのRiv. by fleur amiでは4,500〜5,500円前後。スタイリストの指名・経験年数によって料金が異なります。",
       },
     },
     {
@@ -76,7 +76,7 @@ const faqSchema = {
       acceptedAnswer: {
         "@type": "Answer",
         text:
-          "高知市・香南市の髪質改善トリートメント（酸熱トリートメント）の料金目安はショート〜ミディアムで12,000〜18,000円程度です。fleur GROUPのRiv. by fleurami・fleuramiでも同程度の料金となっています。髪質改善縮毛矯正は25,000〜35,000円前後が目安です。",
+          "高知市・香南市の髪質改善トリートメント（酸熱トリートメント）の料金目安はショート〜ミディアムで12,000〜18,000円程度です。fleur GROUPのRiv. by fleur ami・fleur amiでも同程度の料金となっています。髪質改善縮毛矯正は25,000〜35,000円前後が目安です。",
       },
     },
     {
@@ -112,7 +112,7 @@ const faqSchema = {
       acceptedAnswer: {
         "@type": "Answer",
         text:
-          "高知市の美容室のヘッドスパ料金は3,000〜6,000円前後（20〜40分）が目安です。fleur GROUPのRiv. by fleuramiではヘッドスパ単品から対応しています。カットやカラーとのセット施術も可能です。",
+          "高知市の美容室のヘッドスパ料金は3,000〜6,000円前後（20〜40分）が目安です。fleur GROUPのRiv. by fleur amiではヘッドスパ単品から対応しています。カットやカラーとのセット施術も可能です。",
       },
     },
     {
@@ -202,7 +202,7 @@ export default function KochiBeautyPriceGuidePage() {
         <section id="price-intro">
           <p className="text-sm text-site-muted leading-relaxed">
             高知市・香南市で美容室やアイラッシュサロンを検討している方のために、施術ごとの料金目安をまとめました。
-            fleur GROUP（Riv. by fleurami・fleurami・Raffine）での実際の料金水準を参考に、高知の相場感をご確認ください。
+            fleur GROUP（Riv. by fleur ami・fleur ami・Raffine）での実際の料金水準を参考に、高知の相場感をご確認ください。
             料金は髪の長さ・状態・スタイリストによって変わります。予約前にホットペッパービューティーでクーポン・詳細料金をご確認ください。
           </p>
         </section>
@@ -294,7 +294,7 @@ export default function KochiBeautyPriceGuidePage() {
             {[
               {
                 q: "高知市の美容室のカット料金はいくらですか？",
-                a: "シャンプー・ブロー込みで3,500〜6,000円程度が目安です。fleur GROUPのRiv. by fleuramiでは4,500〜5,500円前後。スタイリストの指名・経験年数によって異なります。",
+                a: "シャンプー・ブロー込みで3,500〜6,000円程度が目安です。fleur GROUPのRiv. by fleur amiでは4,500〜5,500円前後。スタイリストの指名・経験年数によって異なります。",
               },
               {
                 q: "高知市のヘアカラー料金はいくらですか？",
@@ -334,10 +334,10 @@ export default function KochiBeautyPriceGuidePage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link href="/salon/riv" className="inline-block px-6 py-2.5 bg-site-accent text-white text-xs tracking-wider hover:opacity-80 transition-opacity">
-              Riv. by fleurami（高知市）
+              Riv. by fleur ami（高知市）
             </Link>
             <Link href="/salon/fleurami" className="inline-block px-6 py-2.5 border border-site-accent text-site-accent text-xs tracking-wider hover:bg-site-accent hover:text-white transition-colors">
-              fleurami（香南市）
+              fleur ami（香南市）
             </Link>
             <Link href="/salon/raffine" className="inline-block px-6 py-2.5 border border-site-greige text-site-text text-xs tracking-wider hover:border-site-accent hover:text-site-accent transition-colors">
               Raffine（はりまや橋）

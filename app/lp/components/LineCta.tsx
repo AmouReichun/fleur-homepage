@@ -2,7 +2,7 @@
 
 // LPのLINE導線をまとめるコンポーネント群。
 // どのボタンも「店舗選択シート」を開き、店舗を選んだ瞬間に line_click を計測して公式LINEへ遷移する。
-// （fleurami と Riv. で公式LINEが別アカウントのため、店舗選択を必ず挟む）
+// （fleur ami と Riv. で公式LINEが別アカウントのため、店舗選択を必ず挟む）
 
 import { createContext, useCallback, useContext, useEffect, useRef, useState } from "react";
 import { track } from "@/lib/lp-track";

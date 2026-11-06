@@ -6,7 +6,7 @@ import { LP_GALLERY_CATEGORIES, type LpGalleryCategory, type LpGalleryItem } fro
 import { track } from "@/lib/lp-track";
 import { LineButton } from "./LineCta";
 
-const SALON_LABEL: Record<string, string> = { fleurami: "fleurami", riv: "Riv. by fleurami" };
+const SALON_LABEL: Record<string, string> = { fleurami: "fleur ami", riv: "Riv. by fleur ami" };
 
 /** メニューカードの「事例を見る」から、カテゴリを指定してギャラリーへ移動するためのイベント */
 export const GALLERY_FILTER_EVENT = "lp:gallery-filter";

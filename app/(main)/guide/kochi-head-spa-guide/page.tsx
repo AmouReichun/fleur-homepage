@@ -48,7 +48,7 @@ const faqSchema = {
       acceptedAnswer: {
         "@type": "Answer",
         text:
-          "fleur GROUPの「Riv. by fleurami（高知市南川添）」と「fleurami（香南市野市）」でヘッドスパを受けられます。頭皮の状態に合わせたスカルプトリートメントと頭皮マッサージで、健やかな髪の土台を整えます。",
+          "fleur GROUPの「Riv. by fleur ami（高知市南川添）」と「fleur ami（香南市野市）」でヘッドスパを受けられます。頭皮の状態に合わせたスカルプトリートメントと頭皮マッサージで、健やかな髪の土台を整えます。",
       },
     },
     {
@@ -259,8 +259,8 @@ export default function KochiHeadSpaGuidePage() {
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {[
-                { href: "/salon/riv", name: "Riv. by fleurami", area: "高知市南川添", note: "ヘッドスパ・髪質改善・白髪ぼかし" },
-                { href: "/salon/fleurami", name: "fleurami", area: "香南市野市", note: "ヘッドスパ・縮毛矯正・髪質改善" },
+                { href: "/salon/riv", name: "Riv. by fleur ami", area: "高知市南川添", note: "ヘッドスパ・髪質改善・白髪ぼかし" },
+                { href: "/salon/fleurami", name: "fleur ami", area: "香南市野市", note: "ヘッドスパ・縮毛矯正・髪質改善" },
               ].map((s) => (
                 <Link
                   key={s.href}

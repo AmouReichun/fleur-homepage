@@ -49,7 +49,7 @@ const faqSchema = {
       acceptedAnswer: {
         "@type": "Answer",
         text:
-          "fleur GROUPのRiv. by fleurami（高知市南川添）とfleurami（香南市野市）でメンズパーマに対応しています。ツイストパーマ・スパイラルパーマ・無造作パーマなど幅広いスタイルをご提案します。",
+          "fleur GROUPのRiv. by fleur ami（高知市南川添）とfleur ami（香南市野市）でメンズパーマに対応しています。ツイストパーマ・スパイラルパーマ・無造作パーマなど幅広いスタイルをご提案します。",
       },
     },
     {
@@ -231,7 +231,7 @@ export default function KochiMensBeautyPage() {
               {[
                 {
                   q: "高知市・香南市でメンズパーマができる美容室はありますか？",
-                  a: "fleur GROUPのRiv. by fleurami（高知市南川添）とfleurami（香南市野市）でメンズパーマに対応しています。ツイストパーマ・スパイラルパーマ・無造作パーマなど幅広いスタイルをご提案します。",
+                  a: "fleur GROUPのRiv. by fleur ami（高知市南川添）とfleur ami（香南市野市）でメンズパーマに対応しています。ツイストパーマ・スパイラルパーマ・無造作パーマなど幅広いスタイルをご提案します。",
                 },
                 {
                   q: "ツイストパーマとは何ですか？どんな仕上がりになりますか？",
@@ -280,8 +280,8 @@ export default function KochiMensBeautyPage() {
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               {[
-                { href: "/salon/riv", name: "Riv. by fleurami", area: "高知市南川添", note: "メンズカット・パーマ対応" },
-                { href: "/salon/fleurami", name: "fleurami", area: "香南市野市", note: "メンズカット・縮毛矯正対応" },
+                { href: "/salon/riv", name: "Riv. by fleur ami", area: "高知市南川添", note: "メンズカット・パーマ対応" },
+                { href: "/salon/fleurami", name: "fleur ami", area: "香南市野市", note: "メンズカット・縮毛矯正対応" },
                 { href: "/salon/raffine", name: "Raffine", area: "高知市はりまや橋", note: "メンズ眉WAX対応" },
               ].map((s) => (
                 <Link

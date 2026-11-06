@@ -9,7 +9,7 @@ type Stat = { label: string; value: string; suffix?: string };
 const FEATURE_STAT_LABELS = ["有給取得率", "平均退勤", "スタッフ平均年齢", "店舗数"];
 const PHOTOS = [
   { src: "/images/admin/staff-2-1782195045005.webp", alt: "fleurami スタイリストのスタッフ写真", cls: "col-span-1 translate-y-0" },
-  { src: "/images/admin/staff-4-1782195059188.webp", alt: "Riv. by fleurami スタイリストのスタッフ写真", cls: "col-span-1 translate-y-8" },
+  { src: "/images/admin/staff-4-1782195059188.webp", alt: "Riv. by fleur ami スタイリストのスタッフ写真", cls: "col-span-1 translate-y-8" },
   { src: "/images/admin/staff-7-1782195080215.webp", alt: "Raffine アイリストのスタッフ写真", cls: "col-span-1 translate-y-0" },
 ];
 

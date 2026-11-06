@@ -22,8 +22,8 @@ const SALON_ADDRESSES: Record<string, { streetAddress: string; addressLocality: 
 };
 
 const SALON_NAMES: Record<string, string> = {
-  riv: "Riv. by fleurami",
-  fleurami: "fleurami",
+  riv: "Riv. by fleur ami",
+  fleurami: "fleur ami",
   raffine: "Raffine",
 };
 
