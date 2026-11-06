@@ -153,7 +153,7 @@ export default async function RecruitPage() {
   const stats = recruit.stats?.length ? recruit.stats : DEFAULT_STATS;
   const dayHair = recruit.dayHair?.length ? recruit.dayHair : DEFAULT_DAY_HAIR;
   const dayEye = recruit.dayEye?.length ? recruit.dayEye : DEFAULT_DAY_EYE;
-  const dayHairNote = recruit.dayHairNote ?? "fleuramiの例";
+  const dayHairNote = recruit.dayHairNote ?? "fleur amiの例";
   const dayEyeNote = recruit.dayEyeNote ?? "Raffineの例";
   const education = recruit.education?.length ? recruit.education : DEFAULT_EDUCATION;
   const careerHair = recruit.careerHair?.length ? recruit.careerHair : DEFAULT_CAREER_HAIR;

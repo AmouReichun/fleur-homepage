@@ -450,7 +450,7 @@ export const faqPageSchema = {
       name: "香南市fleur amiの定休日と営業時間は？",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "fleuramiの営業時間は9:00〜18:00（最終受付17:00頃）。定休日は月曜・第1第3火曜です。無料駐車場7台完備。住所：香南市野市町西野230。",
+        text: "fleur amiの営業時間は9:00〜18:00（最終受付17:00頃）。定休日は月曜・第1第3火曜です。無料駐車場7台完備。住所：香南市野市町西野230。",
       },
     },
     {
@@ -602,7 +602,7 @@ export const faqPageSchema = {
       name: "fleur GROUP各店舗の駐車場はありますか？",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "fleurami（香南市野市）は無料駐車場7台完備。Riv. by fleur ami（高知市南川添）は無料駐車場5台完備。Raffine（高知市はりまや橋）は専用駐車場なし・近隣有料駐車場をご利用ください。",
+        text: "fleur ami（香南市野市）は無料駐車場7台完備。Riv. by fleur ami（高知市南川添）は無料駐車場5台完備。Raffine（高知市はりまや橋）は専用駐車場なし・近隣有料駐車場をご利用ください。",
       },
     },
     {

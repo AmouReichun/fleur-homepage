@@ -96,7 +96,7 @@ export default function AreaHubPage() {
             <p className="text-sm text-site-muted mb-6">各サロンの詳細・アクセス・予約はこちら</p>
             <div className="flex flex-wrap gap-4 justify-center">
               {[
-                { href: "/salon/fleurami", name: "fleurami（香南市）" },
+                { href: "/salon/fleurami", name: "fleur ami（香南市）" },
                 { href: "/salon/riv", name: "Riv. by fleur ami（高知市）" },
                 { href: "/salon/raffine", name: "Raffine（高知市）" },
               ].map((s) => (

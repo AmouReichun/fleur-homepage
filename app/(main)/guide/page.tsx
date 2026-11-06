@@ -214,8 +214,8 @@ const eyelashServices = [
 
 const areas = [
   { href: "/area/kochi", name: "高知市", desc: "Riv. by fleur ami（南川添）、Raffine（はりまや橋）の2店舗" },
-  { href: "/area/konan", name: "香南市", desc: "fleurami（野市町西野）。無料駐車場7台完備" },
-  { href: "/area/noichi", name: "野市", desc: "fleurami（野市町西野）。のいち駅から車で約4分" },
+  { href: "/area/konan", name: "香南市", desc: "fleur ami（野市町西野）。無料駐車場7台完備" },
+  { href: "/area/noichi", name: "野市", desc: "fleur ami（野市町西野）。のいち駅から車で約4分" },
   { href: "/area/harimayabashi", name: "はりまや橋", desc: "Raffine（はりまや町）。まつげ・眉毛の専門サロン" },
 ];
 

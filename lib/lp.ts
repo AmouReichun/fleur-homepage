@@ -127,7 +127,7 @@ const img = (src: string, alt: string): LpImage => ({ src, alt });
 
 export const DEFAULT_LP: LpContent = {
   hero: {
-    eyebrow: "fleurami ／ Riv. by fleur ami",
+    eyebrow: "fleur ami ／ Riv. by fleur ami",
     title: "あなたらしい美しさを、\nもっと自由に。",
     subtitle: "髪質も、似合うスタイルも、一人ひとり違うから。\nあなたに寄り添うヘアデザインを。",
     image: img(
@@ -346,11 +346,11 @@ export const DEFAULT_LP: LpContent = {
       },
       {
         q: "駐車場はありますか？",
-        a: "fleurami（香南市）は無料駐車場7台（先着順）、Riv. by fleur ami（高知市）は駐車場5台（先着順）で、近くにコインパーキング（徒歩3分）もあります。",
+        a: "fleur ami（香南市）は無料駐車場7台（先着順）、Riv. by fleur ami（高知市）は駐車場5台（先着順）で、近くにコインパーキング（徒歩3分）もあります。",
       },
       {
         q: "営業時間と定休日を教えてください。",
-        a: "fleurami は 9:00〜18:00、Riv. by fleur ami は 9:30〜18:30 です。定休日はどちらも月曜日・第1第3火曜日です。",
+        a: "fleur ami は 9:00〜18:00、Riv. by fleur ami は 9:30〜18:30 です。定休日はどちらも月曜日・第1第3火曜日です。",
       },
     ],
   },
