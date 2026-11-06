@@ -242,6 +242,86 @@ export const AREA_SERVICE_EXTRAS: Record<string, AreaServiceExtra> = {
       { slug: "nishiuti-miyuki", name: "西内 みゆき", salonName: "fleurami", text: "美容師歴20年以上のトップスタイリスト。髪質改善・白髪ぼかしが得意で、40〜60代の乾燥・パサつきのご相談を多く担当しています。" },
     ],
   }),
+  "kochi/tsuya-color": tsuyaColorExtra({
+    areaName: "高知市",
+    salonName: "Riv. by fleurami",
+    salonKana: "リヴ バイ フルールアミー",
+    place: "高知市南川添",
+    titleSuffix: "Riv. by fleurami（南川添）",
+    parking: "駐車場5台",
+    access: "高知市南川添9-21 フルールアミー3 2F（高知ICから車で約4分）。駐車場5台（先着順）、近くにコインパーキングあり（徒歩3分）。",
+    parkingFaq: "店舗前に5台（先着順）あります。満車の場合は、近くのコインパーキング（徒歩3分）をご利用ください。",
+    staff: [
+      { slug: "hosokawa-ayaka", name: "細川 彩香", salonName: "Riv. by fleurami", text: "美容師歴8年。艶カラーに加え、白髪ぼかし・グレイカラー・髪質改善が得意で、明るさと艶を両立させたい大人女性のカラーを多く担当しています。" },
+    ],
+    rows: [
+      { name: "【初めての方】艶カラー＋カット＋集中マスクTR", price: "9,900円", note: "通常12,800円" },
+      { name: "【2〜4回目】艶カラー＋似合わせカット", price: "11,200円" },
+      { name: "【2〜4回目】艶カラー＋カット＋集中マスクTR", price: "12,300円" },
+      { name: "艶カラー＋集中マスクTR（カットなし）", price: "10,100円" },
+    ],
+    firstPrice: "9,900円（艶カラー＋カット＋集中マスクTR）",
+  }),
+  "konan/tsuya-color": tsuyaColorExtra({
+    areaName: "香南市",
+    salonName: "fleurami",
+    salonKana: "フルールアミー",
+    place: "香南市野市町",
+    titleSuffix: "fleurami（野市町・駐車場無料）",
+    parking: "無料駐車場7台",
+    access: "香南市野市町西野230（のいち駅から車で約4分）。無料駐車場7台（先着順）。",
+    parkingFaq: "店舗に無料駐車場が7台あります（先着順）。のいち駅から車で約4分です。",
+    staff: [
+      { slug: "kawakami-rin", name: "川上 凛", salonName: "fleurami", text: "美容師歴4年。艶カラー・似合わせカラーが得意で、肌の色や普段の服装に合わせた色選びを一緒に考えます。" },
+    ],
+    rows: [
+      { name: "【初めての方】艶カラー＋似合わせカット", price: "8,900円", note: "通常11,700円" },
+      { name: "【初めての方】艶カラー＋カット＋集中マスクTR", price: "9,900円", note: "通常12,800円" },
+      { name: "【初めての方・カットなし】艶カラー＋集中マスクTR", price: "8,000円", note: "通常10,600円" },
+      { name: "【2〜4回目】艶カラー＋カット", price: "11,200円" },
+    ],
+    firstPrice: "8,900円（艶カラー＋似合わせカット）",
+  }),
+  "kochi/cut": cutExtra({
+    areaName: "高知市",
+    salonName: "Riv. by fleurami",
+    salonKana: "リヴ バイ フルールアミー",
+    place: "高知市南川添",
+    titleSuffix: "Riv. by fleurami（南川添）",
+    parking: "駐車場5台",
+    access: "高知市南川添9-21 フルールアミー3 2F（高知ICから車で約4分）。駐車場5台（先着順）、近くにコインパーキングあり（徒歩3分）。",
+    parkingFaq: "店舗前に5台（先着順）あります。満車の場合は、近くのコインパーキング（徒歩3分）をご利用ください。",
+    staff: [
+      { slug: "sawamura-mizuki", name: "沢村 瑞希", salonName: "Riv. by fleurami", text: "美容師歴4年。似合わせカットが得意で、20〜30代を中心にレイヤー・顔まわりのデザインを多く担当しています。" },
+      { slug: "nishimori-munehiro", name: "西森 心大", salonName: "Riv. by fleurami", text: "美容師歴15年のマネージャー。くせ毛を生かしたカットや、縮毛矯正・髪質改善と合わせたまとまりやすいカットが得意です。" },
+    ],
+    rows: [
+      { name: "【初めての方】カット＋シャンプー（骨格に似合わせ）", price: "4,200円", note: "通常4,700円" },
+      { name: "カット＋炭酸スパor集中マスクTR", price: "5,800円" },
+      { name: "前髪ストレート＋カット", price: "10,000円" },
+    ],
+    firstPrice: "4,200円（カット＋シャンプー）",
+  }),
+  "konan/cut": cutExtra({
+    areaName: "香南市",
+    salonName: "fleurami",
+    salonKana: "フルールアミー",
+    place: "香南市野市町",
+    titleSuffix: "fleurami（野市町・駐車場無料）",
+    parking: "無料駐車場7台",
+    access: "香南市野市町西野230（のいち駅から車で約4分）。無料駐車場7台（先着順）。",
+    parkingFaq: "店舗に無料駐車場が7台あります（先着順）。のいち駅から車で約4分です。",
+    staff: [
+      { slug: "yamaoka-yuya", name: "山岡 悠弥", salonName: "fleurami", text: "美容師歴14年の店長・トップスタイリスト。似合わせカットが得意で、ショート・ボブなど毎朝まとまりやすいスタイルを多く担当しています。" },
+    ],
+    rows: [
+      { name: "【初めての方】似合わせカット（ショート・ボブが得意）", price: "4,200円", note: "通常4,700円" },
+      { name: "カット＋集中ケアマスクTR", price: "5,800円" },
+      { name: "似合わせカット＋炭酸プチスパ", price: "5,800円" },
+      { name: "前髪ストレート＋カット", price: "10,000円" },
+    ],
+    firstPrice: "4,200円（似合わせカット）",
+  }),
 };
 
 // ---- 縮毛矯正・髪質改善ページの共通の形（料金は2店とも同じホットペッパー掲載価格） ----
@@ -380,6 +460,85 @@ function kamishitsuExtra(s: SalonFacts): AreaServiceExtra {
   };
 }
 
+
+interface PricedSalonFacts extends SalonFacts {
+  rows: ExtraPriceRow[];
+  firstPrice: string;
+}
+
+function tsuyaColorExtra(s: PricedSalonFacts): AreaServiceExtra {
+  const staffNames = s.staff.map((m) => m.name).join("・");
+  return {
+    title: `${s.areaName}の艶カラー｜料金・担当・流れ｜${s.titleSuffix}`,
+    description: `${s.place}の美容室${s.salonName}の艶カラー。暗くしなくても艶が出て、色持ちしやすい大人女性のためのカラー。初回${s.firstPrice}の料金表、担当スタイリスト、施術の流れを掲載。${s.parking}。`,
+    intro: [
+      `${s.place}の美容室「${s.salonName}（${s.salonKana}）」の艶カラーは、「カラーをするとパサついて見える」「すぐ色が抜けて黄ばむ」という30〜50代の女性に選ばれている、いちばん予約の多いメニューのひとつです。`,
+      "髪の明るさと肌の色、普段の服装に合わせて色を選び、カラーのあとに集中マスクトリートメントで手触りと艶を整えます。白髪が気になり始めた方には、白髪ぼかしと組み合わせる方法もご提案しています。",
+      "広がり・パサつきが強い方は、髪質改善トリートメント（GM）と組み合わせることで、色の艶とまとまりを両立しやすくなります。",
+    ],
+    price: {
+      heading: `${s.salonName}の艶カラーの料金`,
+      rows: s.rows,
+      note: "ホットペッパービューティー掲載価格（2026年11月時点・税込）。髪の長さや量によって料金が変わる場合があります。指名料300円。",
+    },
+    flow: {
+      heading: "艶カラーの流れ",
+      steps: [
+        { title: "1. カウンセリング", text: "なりたい明るさ・色味、前回のカラーの時期、白髪やダメージの状態を確認します。" },
+        { title: "2. 色を決める", text: "肌の色や普段の服装に合わせて、暗くしすぎずに艶が出る色をご提案します。" },
+        { title: "3. カラー", text: "根元と毛先で薬剤を使い分け、ダメージを抑えながら染めていきます。" },
+        { title: "4. トリートメント", text: "集中マスクトリートメントで、手触りと艶を整えます（メニューに応じて）。" },
+        { title: "5. カット・仕上げ", text: "似合わせカットとブローで仕上げ、色持ちをよくするおうちでのケアをお伝えします。" },
+      ],
+    },
+    staff: { heading: "艶カラーを担当するスタイリスト", members: s.staff },
+    access: s.access,
+    faq: [
+      { q: `${s.areaName}の${s.salonName}で艶カラーはいくらでできますか？`, a: `初めての方は${s.firstPrice}です（ホットペッパー掲載価格・2026年11月時点・税込）。2〜4回目の方向けの価格もあります。` },
+      { q: "白髪があっても艶カラーはできますか？", a: "できます。白髪の量によっては、白髪ぼかし（ハイライト）と組み合わせて、明るさを保ちながら白髪をなじませる方法もご提案します。" },
+      { q: "艶カラーの担当を指名できますか？", a: `はい。${staffNames}を指名してホットペッパービューティーからご予約いただけます（指名料300円）。` },
+      { q: `${s.salonName}に駐車場はありますか？`, a: s.parkingFaq },
+    ],
+    templateFaqLimit: 3,
+  };
+}
+
+function cutExtra(s: PricedSalonFacts): AreaServiceExtra {
+  const staffNames = s.staff.map((m) => m.name).join("・");
+  return {
+    title: `${s.areaName}の似合わせカット｜料金・担当｜${s.titleSuffix}`,
+    description: `${s.place}の美容室${s.salonName}の似合わせカット。骨格・髪質・くせに合わせて、乾かすだけでまとまるショート・ボブ・レイヤー・顔まわりカットに。初回${s.firstPrice}の料金表と担当スタイリストを掲載。${s.parking}。`,
+    intro: [
+      `${s.place}の美容室「${s.salonName}（${s.salonKana}）」の似合わせカットは、骨格・髪質・くせ・生えぐせを見て、毎朝のスタイリングがラクになる形に整えるカットです。`,
+      "ショート・ボブ・レイヤーカット・顔まわりのカットなど、流行の形も「その人の髪で再現できるか」を考えてご提案します。くせ毛の方には、くせを生かすカットや、前髪ストレート・縮毛矯正との組み合わせもご相談いただけます。",
+      "写真やSNSの画像を見せていただければ、そのデザインを似合う形に調整してお作りします。",
+    ],
+    price: {
+      heading: `${s.salonName}のカットの料金`,
+      rows: s.rows,
+      note: "ホットペッパービューティー掲載価格（2026年11月時点・税込）。指名料300円。",
+    },
+    flow: {
+      heading: "似合わせカットの流れ",
+      steps: [
+        { title: "1. カウンセリング", text: "なりたいイメージ（写真があればお見せください）と、普段のスタイリング・お悩みを確認します。" },
+        { title: "2. 骨格・髪質を見る", text: "顔の形・頭の形・くせ・生えぐせを見て、似合う長さとシルエットを決めます。" },
+        { title: "3. カット", text: "乾かしたときにまとまるよう、毛量と段差を調整しながら切ります。" },
+        { title: "4. 仕上げ", text: "おうちで再現しやすい乾かし方・スタイリングの仕方をお伝えします。" },
+      ],
+    },
+    staff: { heading: "似合わせカットを担当するスタイリスト", members: s.staff },
+    access: s.access,
+    faq: [
+      { q: `${s.areaName}の${s.salonName}でカットはいくらですか？`, a: `初めての方は${s.firstPrice}です（ホットペッパー掲載価格・2026年11月時点・税込）。` },
+      { q: "流行りのレイヤーカットや韓国風の髪型もできますか？", a: "できます。写真を見せていただければ、髪質や骨格に合わせて、おうちでも再現しやすい形に調整してお作りします。" },
+      { q: "カットの担当を指名できますか？", a: `はい。${staffNames}を指名してホットペッパービューティーからご予約いただけます（指名料300円）。` },
+      { q: `${s.salonName}に駐車場はありますか？`, a: s.parkingFaq },
+    ],
+    templateFaqLimit: 3,
+  };
+}
+
 /** 同じ店舗の重複ページ（検索には出さない）。キーは `${areaSlug}/${serviceSlug}` */
 export const NOINDEX_AREA_SERVICES = new Set<string>([
   // 野市はfleurami（香南市野市町）の所在地で、/area/konan/shiraga-bokashi と同じ内容になるため
@@ -392,6 +551,9 @@ export function getAreaServiceExtra(areaSlug: string, serviceSlug: string): Area
   return AREA_SERVICE_EXTRAS[`${areaSlug}/${serviceSlug}`];
 }
 
+/** 野市（noichi）はfleurami＝香南市（konan）と同じ店舗なので、メニュー別ページはすべて検索に出さない（エリアのトップ /area/noichi は残す） */
+const NOINDEX_AREAS = new Set<string>(["noichi"]);
+
 export function isNoindexAreaService(areaSlug: string, serviceSlug: string): boolean {
-  return NOINDEX_AREA_SERVICES.has(`${areaSlug}/${serviceSlug}`);
+  return NOINDEX_AREAS.has(areaSlug) || NOINDEX_AREA_SERVICES.has(`${areaSlug}/${serviceSlug}`);
 }

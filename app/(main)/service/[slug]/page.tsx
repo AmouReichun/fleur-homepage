@@ -8,6 +8,7 @@ import { AREAS, offerSalonKeysInArea } from "@/lib/areas";
 import { breadcrumbSchema } from "@/lib/structured-data";
 import ReservationChannels from "@/app/components/ReservationChannels";
 import GoogleReviewCTA from "@/app/components/GoogleReviewCTA";
+import { getAreaServiceExtra } from "@/lib/area-service-extras";
 
 const BASE = "https://fleur-group.jp";
 
@@ -45,6 +46,11 @@ export default async function ServicePage({ params }: Props) {
     .map((s) => getService(s))
     .filter((s): s is NonNullable<typeof s> => Boolean(s));
 
+  // 地域×メニューページの独自データ（料金表・担当）がある地域だけ、店舗別に要点をまとめて表示する
+  const areaExtras = AREAS.map((a) => ({ area: a, extra: getAreaServiceExtra(a.slug, svc.slug) })).filter(
+    (x): x is { area: (typeof AREAS)[number]; extra: NonNullable<ReturnType<typeof getAreaServiceExtra>> } => Boolean(x.extra?.price)
+  );
+
   const crumbs = [
     { name: "ホーム", url: BASE },
     { name: "メニュー", url: `${BASE}/menu` },
@@ -58,6 +64,21 @@ export default async function ServicePage({ params }: Props) {
     serviceType: svc.name,
     description: svc.description,
     areaServed: ["高知市", "香南市"],
+    ...(areaExtras.length > 0
+      ? {
+          offers: areaExtras.flatMap(({ extra }) =>
+            (extra.price?.rows ?? [])
+              .map((r) => ({ r, n: Number(r.price.replace(/[^0-9]/g, "")) }))
+              .filter(({ n }) => n >= 1000)
+              .map(({ r, n }) => ({
+                "@type": "Offer",
+                name: `${r.name}（${extra.staff?.members[0]?.salonName ?? ""}）`,
+                price: n,
+                priceCurrency: "JPY",
+              }))
+          ),
+        }
+      : {}),
     provider: offerSalons.map((k) => ({
       "@type": svc.world === "eyelash" ? "BeautySalon" : "HairSalon",
       name: salons[k].name,
@@ -135,6 +156,52 @@ export default async function ServicePage({ params }: Props) {
           )}
         </div>
       </section>
+
+      {/* 店舗別の料金・担当（地域ページの独自データから） */}
+      {areaExtras.length > 0 && (
+        <section className="py-12 sm:py-16 bg-site-light border-t border-site-greige">
+          <div className="max-w-3xl mx-auto px-4 sm:px-6">
+            <h2 className="font-serif text-2xl sm:text-3xl font-semibold text-site-text mb-8 text-center">店舗別の{svc.name}の料金と担当</h2>
+            <div className="space-y-10">
+              {areaExtras.map(({ area, extra }) => (
+                <div key={area.slug}>
+                  <h3 className="font-serif text-lg font-medium text-site-text mb-3">{extra.price!.heading}（{area.name}）</h3>
+                  <div className="overflow-x-auto">
+                    <table className="w-full bg-white border border-site-greige text-sm">
+                      <tbody>
+                        {extra.price!.rows.map((r) => (
+                          <tr key={r.name} className="border-b border-site-greige last:border-b-0">
+                            <th scope="row" className="text-left font-normal text-site-text p-4 leading-relaxed">{r.name}</th>
+                            <td className="text-right text-site-text p-4 whitespace-nowrap align-top">
+                              <span className="font-medium">{r.price}</span>
+                              {r.note && <span className="block text-[11px] text-site-muted">{r.note}</span>}
+                            </td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                  {extra.staff && (
+                    <p className="text-sm text-site-text leading-relaxed mt-3">
+                      <span className="text-site-accent mr-2">担当</span>
+                      {extra.staff.members.map((m, i) => (
+                        <span key={m.slug}>
+                          {i > 0 && "・"}
+                          <Link href={`/staff/${m.slug}`} className="underline underline-offset-2 hover:text-site-accent">{m.name}</Link>
+                        </span>
+                      ))}
+                    </p>
+                  )}
+                  <Link href={`/area/${area.slug}/${svc.slug}`} className="mt-3 inline-flex items-center gap-2 text-sm text-site-accent">
+                    {area.name}の{svc.name}（流れ・よくある質問）を見る<span className="w-4 h-px bg-current" />
+                  </Link>
+                </div>
+              ))}
+            </div>
+            <p className="text-xs text-site-muted leading-relaxed mt-6">{areaExtras[0].extra.price!.note}</p>
+          </div>
+        </section>
+      )}
 
       {/* こんなお悩みの方へ */}
       <section className="py-12 sm:py-16 bg-site-light">
