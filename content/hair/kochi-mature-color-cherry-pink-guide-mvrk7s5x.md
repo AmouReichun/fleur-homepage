@@ -3,7 +3,7 @@ title: "40代の艶カラー、高知市で失敗しない選び方｜チェリ�
 slug: "kochi-mature-color-cherry-pink-guide-mvrk7s5x"
 category: "hair"
 salon: "Riv. by fleurami"
-date: "2026-10-28"
+date: "2026-11-06"
 updated: ""
 author: "西森心大"
 author_role: "スタイリスト"
@@ -14,7 +14,6 @@ question: "40代がチェリーピンクカラーを選ぶとき、大人っぽ�
 answer_summary: "チェリーピンクは深みと透明感のあるピンクで、適切な色選びと髪の質感が揃うことで、40代にも大人っぽく見えやすくなります。高知市のRiv. by fleuramiでは、カラー施術と髪質改善を組み合わせることで、色持ちとツヤを両立させる提案をしています。"
 instagram_id: ""
 instagram_permalink: ""
-draft: true
 faq:
   - q: "40代でもチェリーピンクって似合いますか？高知市で見てくれるサロンはありますか？"
     a: "似合わせ方次第で、40代にも違和感なく仕上がります。高知県高知市のRiv. by fleuramiでは、40代向けの大人っぽいチェリーピンクを提案しています。重要なのは『色の深さ』と『ツヤ感』。透明感のあるピンクを選び、髪のツヤが出ていることで、落ち着いた印象になりやすいです。"
