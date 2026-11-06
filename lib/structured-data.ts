@@ -143,7 +143,7 @@ export const rivSalonSchema = {
   "@type": "HairSalon",
   "@id": `${BASE}/salon/riv`,
   name: "Riv. by fleurami",
-  alternateName: ["Riv. by fleurami", "リヴ バイ フルールアミー", "Riv. by fleur ami", "リヴ"],
+  alternateName: ["Riv. by fleurami", "リヴ バイ フルールアミー", "Riv. by fleur ami", "リヴ", "Riv.", "Riv.（リブ）", "リブ", "Riv. hair"],
   description:
     "高知市のヘアカラー・髪質改善専門の美容室。白髪ぼかし・艶カラー・縮毛矯正・大人女性向けの似合わせカットが得意。高知市南川添にあるヘアサロン。定休日：月曜・第1第3火曜。Googleクチコミ4.8（83件）。",
   image: {
@@ -202,6 +202,8 @@ export const rivSalonSchema = {
     "https://beauty.hotpepper.jp/slnH000634137/",
     "https://www.instagram.com/riv.kochi",
     "https://g.page/r/CdEFX3xXBBF7EAE",
+    "https://map.yahoo.co.jp/v3/place/8iURbUOIqaI",
+    "https://www.facebook.com/p/Riv%E3%83%AA%E3%83%B4-61550209223229/",
   ],
   parentOrganization: { "@type": "Organization", "@id": `${BASE}/#organization`, name: "fleur GROUP", url: BASE },
 };
