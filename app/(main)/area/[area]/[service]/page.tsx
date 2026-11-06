@@ -11,6 +11,7 @@ import type { SalonKey } from "@/lib/blog/internal-links";
 import ReservationChannels from "@/app/components/ReservationChannels";
 import GoogleReviewCTA from "@/app/components/GoogleReviewCTA";
 import CaseStudySection from "@/app/components/CaseStudySection";
+import { getAreaServiceExtra, isNoindexAreaService } from "@/lib/area-service-extras";
 
 const BASE = "https://fleur-group.jp";
 
@@ -40,15 +41,18 @@ export function generateMetadata({ params }: Props): Metadata {
   const { area, svc, salonKeys } = data;
   const worldLabel = svc.world === "eyelash" ? "アイラッシュサロン" : "美容室";
   const salonName = SALON_NAMES[salonKeys[0] ?? ""] ?? "fleur GROUP";
-  const title = `${area.name}の${svc.name}｜${worldLabel}${salonName}`;
+  const extra = getAreaServiceExtra(area.slug, svc.slug);
+  const noindex = isNoindexAreaService(area.slug, svc.slug);
+  const title = extra?.title ?? `${area.name}の${svc.name}｜${worldLabel}${salonName}`;
   const restDesc = svc.description.split("。").slice(1).filter(Boolean).join("。");
-  const description = `${area.name}で${svc.name}なら${salonName}。${restDesc ? restDesc + "。" : ""}Web・LINE予約受付中。`;
+  const description = extra?.description ?? `${area.name}で${svc.name}なら${salonName}。${restDesc ? restDesc + "。" : ""}Web・LINE予約受付中。`;
   const url = `${BASE}/area/${area.slug}/${svc.slug}`;
   const ogImage = `${BASE}/api/og?title=${encodeURIComponent(`${area.name}の${svc.name}`)}&salon=${encodeURIComponent("fleur GROUP")}&category=${svc.world}`;
   return {
     title,
     description,
     alternates: { canonical: url },
+    ...(noindex ? { robots: { index: false, follow: true } } : {}),
     openGraph: { title, description, url, images: [ogImage] },
     twitter: { card: "summary_large_image", title, description, images: [ogImage] },
   };
@@ -90,7 +94,11 @@ export default async function AreaServicePage({ params }: Props) {
     q: `${area.name}で${svc.name}ができる${worldLabel}はどこですか？`,
     a: `${area.name}では「${salonNames}」で${svc.name}を受けられます。事前のカウンセリングで髪や目元の状態・ご希望を伺ったうえで施術内容をご提案します。ご予約はホットペッパービューティーやLINEから承っています。`,
   };
-  const faqAll = [areaFaqLead, ...svc.faq];
+  const extra = getAreaServiceExtra(area.slug, svc.slug);
+  // 独自データがあるページは、そのページだけのFAQを先頭に置き、テンプレートFAQは数件だけにする（重複を減らす）
+  const faqAll = extra
+    ? [...extra.faq, ...svc.faq.slice(0, extra.templateFaqLimit ?? 3)]
+    : [areaFaqLead, ...svc.faq];
 
   const faqPageSchema = {
     "@context": "https://schema.org",
@@ -179,10 +187,18 @@ export default async function AreaServicePage({ params }: Props) {
               <Image src={svc.image} alt={`${area.name}の${svc.name}｜${worldLabel}`} fill priority className="object-cover" sizes="(max-width: 768px) 100vw, 896px" />
             </div>
           )}
+          {extra ? (
+            <div id="area-service-lead" className="space-y-4">
+              {extra.intro.map((para, i) => (
+                <p key={i} className="text-sm sm:text-base text-site-text leading-loose">{para}</p>
+              ))}
+            </div>
+          ) : (
           <p id="area-service-lead" className="text-sm sm:text-base text-site-text leading-loose">
             {area.name}で{svc.name}をお探しの方へ。{salonNames}では、{svc.name}を得意メニューとしてご提供しています。{svc.lead}
           </p>
-          {svc.body && svc.body.length > 0 && (
+          )}
+          {!extra && svc.body && svc.body.length > 0 && (
             <div className="mt-6 space-y-4">
               {svc.body.map((para, i) => (
                 <p key={i} className="text-sm text-site-text leading-loose">{para}</p>
@@ -196,6 +212,93 @@ export default async function AreaServicePage({ params }: Props) {
           </p>
         </div>
       </section>
+
+      {extra?.price && (
+        <section className="py-12 sm:py-16 bg-site-light">
+          <div className="max-w-3xl mx-auto px-4 sm:px-6">
+            <h2 className="font-serif text-2xl sm:text-3xl font-semibold text-site-text mb-8 text-center">{extra.price.heading}</h2>
+            <div className="overflow-x-auto">
+              <table className="w-full bg-white border border-site-greige text-sm">
+                <tbody>
+                  {extra.price.rows.map((r) => (
+                    <tr key={r.name} className="border-b border-site-greige last:border-b-0">
+                      <th scope="row" className="text-left font-normal text-site-text p-4 leading-relaxed">{r.name}</th>
+                      <td className="text-right text-site-text p-4 whitespace-nowrap align-top">
+                        <span className="font-medium">{r.price}</span>
+                        {r.note && <span className="block text-[11px] text-site-muted">{r.note}</span>}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <p className="text-xs text-site-muted leading-relaxed mt-3">{extra.price.note}</p>
+          </div>
+        </section>
+      )}
+
+      {extra?.compare && (
+        <section className="py-12 sm:py-16 bg-white">
+          <div className="max-w-3xl mx-auto px-4 sm:px-6">
+            <h2 className="font-serif text-2xl sm:text-3xl font-semibold text-site-text mb-8 text-center">{extra.compare.heading}</h2>
+            <div className="overflow-x-auto">
+              <table className="w-full border border-site-greige text-sm min-w-[520px]">
+                <thead>
+                  <tr className="bg-site-light">
+                    {extra.compare.head.map((h, i) => (
+                      <th key={i} scope="col" className="p-3 text-left font-medium text-site-text border-b border-site-greige">{h}</th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody>
+                  {extra.compare.rows.map((row) => (
+                    <tr key={row[0]} className="border-b border-site-greige last:border-b-0">
+                      <th scope="row" className="p-3 text-left font-medium text-site-text whitespace-nowrap">{row[0]}</th>
+                      <td className="p-3 text-site-muted leading-relaxed">{row[1]}</td>
+                      <td className="p-3 text-site-text leading-relaxed">{row[2]}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {extra?.flow && (
+        <section className="py-12 sm:py-16 bg-site-light">
+          <div className="max-w-3xl mx-auto px-4 sm:px-6">
+            <h2 className="font-serif text-2xl sm:text-3xl font-semibold text-site-text mb-8 text-center">{extra.flow.heading}</h2>
+            <ol className="space-y-3">
+              {extra.flow.steps.map((st) => (
+                <li key={st.title} className="bg-white border border-site-greige p-4">
+                  <span className="block font-serif text-base font-medium text-site-text mb-1">{st.title}</span>
+                  <span className="block text-sm text-site-muted leading-relaxed">{st.text}</span>
+                </li>
+              ))}
+            </ol>
+            {extra.flow.note && <p className="text-xs text-site-muted leading-relaxed mt-3">{extra.flow.note}</p>}
+          </div>
+        </section>
+      )}
+
+      {extra?.staff && (
+        <section className="py-12 sm:py-16 bg-white">
+          <div className="max-w-3xl mx-auto px-4 sm:px-6">
+            <h2 className="font-serif text-2xl sm:text-3xl font-semibold text-site-text mb-8 text-center">{extra.staff.heading}</h2>
+            <div className="space-y-3">
+              {extra.staff.members.map((m) => (
+                <Link key={m.slug} href={`/staff/${m.slug}`} className="block border border-site-greige p-5 hover:border-site-accent transition-colors group">
+                  <span className="block font-serif text-base font-medium text-site-text group-hover:text-site-accent">{m.name}<span className="ml-2 text-xs text-site-muted">{m.salonName}</span></span>
+                  <span className="block text-sm text-site-muted leading-relaxed mt-2">{m.text}</span>
+                  <span className="mt-3 inline-flex items-center gap-2 text-[11px] text-site-accent">プロフィールを見る<span className="w-4 h-px bg-current group-hover:w-6 transition-all duration-300" /></span>
+                </Link>
+              ))}
+            </div>
+            {extra.access && <p className="text-sm text-site-text leading-relaxed mt-6"><span className="text-site-accent mr-2">アクセス</span>{extra.access}</p>}
+          </div>
+        </section>
+      )}
 
       {/* こんなお悩みの方へ */}
       <section className="py-12 sm:py-16 bg-site-light">
@@ -215,6 +318,7 @@ export default async function AreaServicePage({ params }: Props) {
       </section>
 
       {/* 特徴 */}
+      {!extra && (
       <section className="py-12 sm:py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <h2 className="font-serif text-2xl sm:text-3xl font-semibold text-site-text mb-8 text-center">{svc.name}の特徴</h2>
@@ -228,6 +332,7 @@ export default async function AreaServicePage({ params }: Props) {
           </div>
         </div>
       </section>
+      )}
 
       {/* FAQ */}
       <section id="area-service-faq" className="py-12 sm:py-16 bg-site-light">

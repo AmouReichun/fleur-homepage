@@ -1,6 +1,7 @@
 import { MetadataRoute } from "next";
 import { getAllServiceSlugs } from "@/lib/services";
 import { AREAS, getAllAreaServiceParams } from "@/lib/areas";
+import { isNoindexAreaService } from "@/lib/area-service-extras";
 import { getAllRoleSlugs } from "@/lib/recruit-roles";
 import { getAllPosts, getAllTags, getAllAuthors, getAvailableMonths } from "@/lib/blog/posts";
 
@@ -22,7 +23,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: "monthly" as const,
     priority: 0.8,
   }));
-  const areaServices: MetadataRoute.Sitemap = getAllAreaServiceParams().map(({ area, service }) => ({
+  const areaServices: MetadataRoute.Sitemap = getAllAreaServiceParams().filter(({ area, service }) => !isNoindexAreaService(area, service)).map(({ area, service }) => ({
     url: `${BASE}/area/${area}/${service}`,
     lastModified: now,
     changeFrequency: "monthly" as const,
