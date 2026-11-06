@@ -188,12 +188,204 @@ export const AREA_SERVICE_EXTRAS: Record<string, AreaServiceExtra> = {
     ],
     templateFaqLimit: 3,
   },
+  "kochi/shukumou-kyousei": shukumouExtra({
+    areaName: "高知市",
+    salonName: "Riv. by fleurami",
+    salonKana: "リヴ バイ フルールアミー",
+    place: "高知市南川添",
+    titleSuffix: "Riv. by fleurami（南川添）",
+    parking: "駐車場5台",
+    access: "高知市南川添9-21 フルールアミー3 2F（高知ICから車で約4分）。駐車場5台（先着順）、近くにコインパーキングあり（徒歩3分）。",
+    parkingFaq: "店舗前に5台（先着順）あります。満車の場合は、近くのコインパーキング（徒歩3分）をご利用ください。",
+    staff: [
+      { slug: "nishimori-munehiro", name: "西森 心大", salonName: "Riv. by fleurami", text: "美容師歴15年のマネージャー。縮毛矯正・髪質改善・くせ毛ケアが得意で、強いくせ毛から「広がりだけ抑えたい」というご相談まで担当しています。" },
+    ],
+  }),
+  "konan/shukumou-kyousei": shukumouExtra({
+    areaName: "香南市",
+    salonName: "fleurami",
+    salonKana: "フルールアミー",
+    place: "香南市野市町",
+    titleSuffix: "fleurami（野市町・駐車場無料）",
+    parking: "無料駐車場7台",
+    access: "香南市野市町西野230（のいち駅から車で約4分）。無料駐車場7台（先着順）。",
+    parkingFaq: "店舗に無料駐車場が7台あります（先着順）。のいち駅から車で約4分です。",
+    staff: [
+      { slug: "yamaoka-yuya", name: "山岡 悠弥", salonName: "fleurami", text: "美容師歴14年の店長・トップスタイリスト。縮毛矯正・似合わせカット・髪質改善が得意で、くせを伸ばしたあとのまとまりやすいカットまで担当しています。" },
+    ],
+  }),
+  "kochi/kamishitsu-kaizen": kamishitsuExtra({
+    areaName: "高知市",
+    salonName: "Riv. by fleurami",
+    salonKana: "リヴ バイ フルールアミー",
+    place: "高知市南川添",
+    titleSuffix: "Riv. by fleurami（南川添）",
+    parking: "駐車場5台",
+    access: "高知市南川添9-21 フルールアミー3 2F（高知ICから車で約4分）。駐車場5台（先着順）、近くにコインパーキングあり（徒歩3分）。",
+    parkingFaq: "店舗前に5台（先着順）あります。満車の場合は、近くのコインパーキング（徒歩3分）をご利用ください。",
+    staff: [
+      { slug: "nishimori-munehiro", name: "西森 心大", salonName: "Riv. by fleurami", text: "美容師歴15年のマネージャー。縮毛矯正・髪質改善・くせ毛ケアが得意で、「縮毛矯正をするほどではないけれど広がる」というご相談も多く担当しています。" },
+      { slug: "hosokawa-ayaka", name: "細川 彩香", salonName: "Riv. by fleurami", text: "美容師歴8年。白髪ぼかし・グレイカラー・髪質改善が得意で、カラーと髪質改善を組み合わせた艶髪づくりを担当しています。" },
+    ],
+  }),
+  "konan/kamishitsu-kaizen": kamishitsuExtra({
+    areaName: "香南市",
+    salonName: "fleurami",
+    salonKana: "フルールアミー",
+    place: "香南市野市町",
+    titleSuffix: "fleurami（野市町・駐車場無料）",
+    parking: "無料駐車場7台",
+    access: "香南市野市町西野230（のいち駅から車で約4分）。無料駐車場7台（先着順）。",
+    parkingFaq: "店舗に無料駐車場が7台あります（先着順）。のいち駅から車で約4分です。",
+    staff: [
+      { slug: "yamaoka-yuya", name: "山岡 悠弥", salonName: "fleurami", text: "美容師歴14年の店長・トップスタイリスト。縮毛矯正・似合わせカット・髪質改善が得意で、髪の状態に合わせて髪質改善と縮毛矯正を使い分けてご提案しています。" },
+      { slug: "nishiuti-miyuki", name: "西内 みゆき", salonName: "fleurami", text: "美容師歴20年以上のトップスタイリスト。髪質改善・白髪ぼかしが得意で、40〜60代の乾燥・パサつきのご相談を多く担当しています。" },
+    ],
+  }),
 };
+
+// ---- 縮毛矯正・髪質改善ページの共通の形（料金は2店とも同じホットペッパー掲載価格） ----
+
+interface SalonFacts {
+  areaName: string;
+  salonName: string;
+  salonKana: string;
+  place: string;
+  titleSuffix: string;
+  parking: string;
+  access: string;
+  parkingFaq: string;
+  staff: ExtraStaff[];
+}
+
+function shukumouExtra(s: SalonFacts): AreaServiceExtra {
+  const staffNames = s.staff.map((m) => m.name).join("・");
+  return {
+    title: `${s.areaName}の縮毛矯正｜料金・担当・流れ｜${s.titleSuffix}`,
+    description: `${s.place}の美容室${s.salonName}の縮毛矯正。くせ毛・うねり・広がりを、ツンとしない自然なストレートに。初回14,800円〜の料金表、担当スタイリスト、施術の流れ、髪質改善との違いを掲載。${s.parking}。`,
+    intro: [
+      `${s.place}の美容室「${s.salonName}（${s.salonKana}）」では、「朝のブローに時間がかかる」「雨の日に広がる」「前に縮毛矯正をしたら不自然にまっすぐになった」というくせ毛のお悩みに、縮毛矯正で向き合っています。`,
+      `縮毛矯正は、薬剤とアイロンでくせを伸ばし、かけた部分のまっすぐな状態を長く保つ施術です。${s.salonName}では、くせの強さ・髪の太さ・これまでのカラーやダメージを見て薬剤を選び、毛先まで不自然にピンとしない、まとまりのあるストレートを目指します。`,
+      "ダメージが気になる方には、縮毛矯正と髪質改善トリートメント（GM）を一緒に行うメニューもあります。くせを伸ばしながら、手触りと艶も整えたい方におすすめです。",
+    ],
+    price: {
+      heading: `${s.salonName}の縮毛矯正の料金`,
+      rows: [
+        { name: "【初めての方】縮毛矯正＋カット", price: "14,800円", note: "通常16,800円" },
+        { name: "【初めての方】縮毛矯正＋カット＋髪質改善TR（GM）", price: "19,900円", note: "通常23,800円" },
+        { name: "縮毛矯正＋カット＋髪質改善TR（GM）（2回目以降）", price: "23,300円" },
+      ],
+      note: "ホットペッパービューティー掲載価格（2026年11月時点・税込）。髪の長さや量によって料金が変わる場合があります。指名料300円。",
+    },
+    flow: {
+      heading: "縮毛矯正の流れ",
+      steps: [
+        { title: "1. カウンセリング", text: "くせの強さと出る場所、前回の縮毛矯正やカラーの時期、なりたい仕上がり（まっすぐ／毛先に丸み）を確認します。" },
+        { title: "2. 薬剤を選ぶ", text: "根元・中間・毛先で髪の状態が違うため、場所ごとに薬剤の強さを変えてダメージを抑えます。" },
+        { title: "3. アイロン", text: "根元に折れ目がつかないよう、少しずつアイロンでくせを伸ばしていきます。" },
+        { title: "4. 仕上げの薬剤・トリートメント", text: "形を固定し、GMメニューの方は髪質改善トリートメントで手触りと艶を整えます。" },
+        { title: "5. カット・仕上げ", text: "ストレートに合わせてカットし、次回の目安とおうちでの乾かし方をお伝えします。" },
+      ],
+      note: "所要時間は髪の長さとくせの強さで変わります。ご予約時に目安の時間をご確認ください。",
+    },
+    compare: {
+      heading: "縮毛矯正と髪質改善の違い",
+      head: ["", "縮毛矯正", "髪質改善（GM）"],
+      rows: [
+        ["目的", "くせ・うねりを伸ばす", "手触り・艶・まとまりを整える"],
+        ["くせへの効果", "強いくせも伸ばせる", "広がりを抑える（くせ自体は残る）"],
+        ["持ち", "かけた部分は長く続く（伸びた根元は次回）", "1か月前後が目安。続けるほど整いやすい"],
+        ["向いている人", "くせ毛・うねりで毎朝のブローが大変な方", "くせは弱いが、広がり・パサつきが気になる方"],
+      ],
+    },
+    staff: { heading: "縮毛矯正を担当するスタイリスト", members: s.staff },
+    access: s.access,
+    faq: [
+      {
+        q: `${s.areaName}の${s.salonName}で縮毛矯正はいくらでできますか？`,
+        a: `初めての方は「縮毛矯正＋カット」が14,800円、髪質改善トリートメント（GM）付きが19,900円です（ホットペッパー掲載価格・2026年11月時点・税込）。髪の長さや量によって料金が変わる場合があります。`,
+      },
+      {
+        q: "前に縮毛矯正をしたら不自然にまっすぐになりました。自然にできますか？",
+        a: "髪の状態に合わせて薬剤を選び、毛先まで不自然にピンとしないストレートを目指します。毛先に丸みを残したいなど、なりたい仕上がりをカウンセリングでお伝えください。",
+      },
+      {
+        q: "縮毛矯正の担当を指名できますか？",
+        a: `はい。${s.salonName}には縮毛矯正を得意とする${staffNames}が在籍しています。ホットペッパービューティーから指名してご予約いただけます（指名料300円）。`,
+      },
+      { q: `${s.salonName}に駐車場はありますか？`, a: s.parkingFaq },
+    ],
+    templateFaqLimit: 3,
+  };
+}
+
+function kamishitsuExtra(s: SalonFacts): AreaServiceExtra {
+  const staffNames = s.staff.map((m) => m.name).join("・");
+  return {
+    title: `${s.areaName}の髪質改善｜料金・担当・流れ｜${s.titleSuffix}`,
+    description: `${s.place}の美容室${s.salonName}の髪質改善トリートメント（GM）。広がり・パサつき・うねりを抑えて、乾かすだけでまとまる艶髪に。初回9,800円〜の料金表、担当スタイリスト、施術の流れ、縮毛矯正との違いを掲載。${s.parking}。`,
+    intro: [
+      `${s.place}の美容室「${s.salonName}（${s.salonKana}）」の髪質改善は、「縮毛矯正をするほどではないけれど広がる」「カラーをくり返してパサつく」「年齢とともに髪がうねってきた」という30〜50代の女性に選ばれているメニューです。`,
+      `${s.salonName}の髪質改善トリートメント（GM）は、髪の内側に栄養を入れて、熱で定着させることで、手触り・艶・まとまりを整える施術です。くせを伸ばす縮毛矯正とは違い、髪の質感そのものを整えるのが目的です。`,
+      "カットやカラーと同じ日にできるので、「カラーのついでに髪質も整えたい」という方にもおすすめです。くせが強い方には、縮毛矯正と組み合わせるメニューもご提案しています。",
+    ],
+    price: {
+      heading: `${s.salonName}の髪質改善の料金`,
+      rows: [
+        { name: "【初めての方】髪質改善TR（GM）＋カット", price: "9,800円", note: "通常11,700円" },
+        { name: "【初めての方】艶カラー＋カット＋髪質改善（GM）", price: "14,900円", note: "通常18,700円" },
+        { name: "【2〜4回目】髪質改善TR（GM）＋カット", price: "11,200円" },
+      ],
+      note: "ホットペッパービューティー掲載価格（2026年11月時点・税込）。髪の長さや量によって料金が変わる場合があります。指名料300円。",
+    },
+    flow: {
+      heading: "髪質改善の流れ",
+      steps: [
+        { title: "1. カウンセリング", text: "広がり・パサつき・うねりの出方と、これまでのカラーや縮毛矯正の履歴を確認します。" },
+        { title: "2. 髪の状態に合わせて準備", text: "ダメージの強い場所と弱い場所を見分けて、トリートメントの入れ方を決めます。" },
+        { title: "3. 髪質改善トリートメント", text: "髪の内側に栄養を入れ、熱で定着させて手触りと艶を整えます。" },
+        { title: "4. カット・カラー（メニューに応じて）", text: "まとまりやすいカットや艶カラーを組み合わせます。" },
+        { title: "5. 仕上げ", text: "乾かし方のコツと、効果を長持ちさせるおうちでのケアをお伝えします。" },
+      ],
+      note: "所要時間はメニューと髪の長さで変わります。ご予約時に目安の時間をご確認ください。",
+    },
+    compare: {
+      heading: "髪質改善と縮毛矯正の違い",
+      head: ["", "髪質改善（GM）", "縮毛矯正"],
+      rows: [
+        ["目的", "手触り・艶・まとまりを整える", "くせ・うねりを伸ばす"],
+        ["仕上がり", "自然な動きを残したまま、まとまる", "まっすぐなストレート"],
+        ["持ち", "1か月前後が目安。続けるほど整いやすい", "かけた部分は長く続く（伸びた根元は次回）"],
+        ["向いている人", "くせは弱いが、広がり・パサつきが気になる方", "くせ毛・うねりで毎朝のブローが大変な方"],
+      ],
+    },
+    staff: { heading: "髪質改善を担当するスタイリスト", members: s.staff },
+    access: s.access,
+    faq: [
+      {
+        q: `${s.areaName}の${s.salonName}で髪質改善はいくらでできますか？`,
+        a: `初めての方は「髪質改善TR（GM）＋カット」が9,800円、艶カラー＋カット＋髪質改善（GM）が14,900円です。2〜4回目の方向けに、髪質改善TR（GM）＋カット11,200円もあります（ホットペッパー掲載価格・2026年11月時点・税込）。`,
+      },
+      {
+        q: "髪質改善と縮毛矯正、どちらが合っているか分かりません。",
+        a: "くせを伸ばしてまっすぐにしたい方は縮毛矯正、くせは弱いけれど広がり・パサつきを抑えたい方は髪質改善が向いています。カウンセリングで髪を見てからご提案しますので、迷っている方もそのままご予約ください。",
+      },
+      {
+        q: "髪質改善の担当を指名できますか？",
+        a: `はい。${s.salonName}には髪質改善を得意とする${staffNames}が在籍しています。ホットペッパービューティーから指名してご予約いただけます（指名料300円）。`,
+      },
+      { q: `${s.salonName}に駐車場はありますか？`, a: s.parkingFaq },
+    ],
+    templateFaqLimit: 3,
+  };
+}
 
 /** 同じ店舗の重複ページ（検索には出さない）。キーは `${areaSlug}/${serviceSlug}` */
 export const NOINDEX_AREA_SERVICES = new Set<string>([
   // 野市はfleurami（香南市野市町）の所在地で、/area/konan/shiraga-bokashi と同じ内容になるため
   "noichi/shiraga-bokashi",
+  "noichi/shukumou-kyousei",
+  "noichi/kamishitsu-kaizen",
 ]);
 
 export function getAreaServiceExtra(areaSlug: string, serviceSlug: string): AreaServiceExtra | undefined {
