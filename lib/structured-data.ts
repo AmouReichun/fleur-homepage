@@ -30,7 +30,7 @@ export const organizationSchema = {
   },
   image: `${BASE}/images/admin/hero-1782190629178.jpg`,
   description:
-    "2006年設立。高知市・香南市で美容室2店舗（Riv. by fleurami・fleurami）とアイラッシュサロン（Raffine）を展開する美容グループ。髪質改善・白髪ぼかし・縮毛矯正・まつ毛パーマ・眉毛WAXを得意とし、大人女性を中心に高知県内で選ばれ続けている。高知市南川添・はりまや橋・香南市野市町に店舗あり。",
+    "2006年設立。高知市・香南市で美容室2店舗（Riv. by fleurami・fleurami）とアイラッシュサロン（Raffine）を展開する美容グループ。艶カラー・髪質改善・白髪ぼかし・縮毛矯正・まつ毛パーマ・眉毛WAXを得意とし、大人女性を中心に高知県内で選ばれ続けている。高知市南川添・はりまや橋・香南市野市町に店舗あり。",
   slogan: "髪と目元で、なりたい自分へ。",
   foundingDate: "2006",
   numberOfEmployees: {
@@ -145,7 +145,7 @@ export const rivSalonSchema = {
   name: "Riv. by fleurami",
   alternateName: ["Riv. by fleurami", "リヴ バイ フルールアミー", "Riv. by fleur ami", "リヴ", "Riv.", "Riv.（リブ）", "リブ", "Riv. hair"],
   description:
-    "高知市のヘアカラー・髪質改善専門の美容室。白髪ぼかし・艶カラー・縮毛矯正・大人女性向けの似合わせカットが得意。高知市南川添にあるヘアサロン。定休日：月曜・第1第3火曜。Googleクチコミ4.8（83件）。",
+    "高知市の艶カラー・髪質改善が得意な美容室。一番人気は艶カラーとミルボンの髪質改善（グローバルミルボン）。白髪ぼかし・縮毛矯正・大人女性向けの似合わせカットも得意。高知市南川添にあるヘアサロン。定休日：月曜・第1第3火曜。Googleクチコミ4.8（83件）。",
   image: {
     "@type": "ImageObject",
     url: `${BASE}/images/admin/salon-riv-1782197568767.jpg`,
@@ -197,7 +197,7 @@ export const rivSalonSchema = {
       { "@type": "Offer", itemOffered: { "@type": "Service", name: "艶カラー・透明感カラー", description: "ツヤと透明感を引き出す似合わせカラー" } },
     ],
   },
-  knowsAbout: ["髪質改善", "白髪ぼかし", "艶カラー", "ヘアカラー", "縮毛矯正", "酸性ストレート", "似合わせカット", "大人女性ヘアデザイン", "グレイカラー"],
+  knowsAbout: ["艶カラー", "ヘアカラー", "髪質改善", "ミルボン グローバルミルボン", "白髪ぼかし", "ハイライト", "縮毛矯正", "酸性ストレート", "似合わせカット", "大人女性ヘアデザイン", "グレイカラー"],
   sameAs: [
     "https://beauty.hotpepper.jp/slnH000634137/",
     "https://www.instagram.com/riv.kochi",
@@ -215,7 +215,7 @@ export const fleuramiSalonSchema = {
   name: "fleurami",
   alternateName: ["fleurami", "フルールアミー", "フルールアミー野市"],
   description:
-    "高知県香南市野市町の美容室。縮毛矯正・髪質改善・艶カラー・カットが得意。無料駐車場7台完備。のいち駅から車で約4分。くせ毛・うねりにお悩みの方に対応するヘアサロン。定休日：月曜・第1第3火曜。Googleクチコミ4.5（81件）。",
+    "高知県香南市野市町の美容室。一番人気の艶カラーとミルボンの髪質改善（グローバルミルボン）が得意。縮毛矯正・白髪ぼかし・カットにも対応。無料駐車場7台完備。のいち駅から車で約4分。くせ毛・うねりにお悩みの方に対応するヘアサロン。定休日：月曜・第1第3火曜。Googleクチコミ4.5（81件）。",
   image: {
     "@type": "ImageObject",
     url: `${BASE}/images/admin/salon-fleurami-1782197558743.jpg`,
@@ -268,7 +268,7 @@ export const fleuramiSalonSchema = {
       { "@type": "Offer", itemOffered: { "@type": "Service", name: "デザインカット" } },
     ],
   },
-  knowsAbout: ["縮毛矯正", "酸性ストレート", "髪質改善", "艶カラー", "ヘアカラー", "くせ毛矯正", "大人女性ヘア", "白髪ぼかし"],
+  knowsAbout: ["艶カラー", "ヘアカラー", "髪質改善", "ミルボン グローバルミルボン", "インナーカラー", "白髪ぼかし", "縮毛矯正", "酸性ストレート", "大人女性ヘア"],
   sameAs: [
     "https://beauty.hotpepper.jp/slnH000528388/",
     "https://www.instagram.com/fleurami_info",
@@ -686,7 +686,7 @@ export const webSiteSchema = {
   name: "fleur GROUP",
   url: "https://fleur-group.jp",
   inLanguage: "ja",
-  description: "高知市・香南市で美容室・アイラッシュサロンを3店舗展開するfleur GROUP。髪質改善・白髪ぼかし・縮毛矯正・まつげパーマ・眉毛WAX。",
+  description: "高知市・香南市で美容室・アイラッシュサロンを3店舗展開するfleur GROUP。艶カラー・髪質改善・白髪ぼかし・縮毛矯正・まつげパーマ・眉毛WAX。",
   potentialAction: {
     "@type": "SearchAction",
     target: {
