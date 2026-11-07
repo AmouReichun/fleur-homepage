@@ -1,6 +1,7 @@
 ---
 title: "高知市の眉毛WAX実例：毛流れを整えたナチュラル眉｜Raffine"
 slug: "kochi-mayuge-wax-natural-keinagare-mw64lclc"
+merged_into: "kochi-eyebrow-salon-erabikata"
 category: "eyelash"
 salon: "Raffine"
 date: "2026-11-07"

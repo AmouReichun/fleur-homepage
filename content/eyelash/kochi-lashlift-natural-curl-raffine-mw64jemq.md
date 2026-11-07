@@ -1,6 +1,7 @@
 ---
 title: "高知市のまつげパーマ実例：ナチュラルカールの目元｜Raffine"
 slug: "kochi-lashlift-natural-curl-raffine-mw64jemq"
+merged_into: "kochi-matsuge-pama-me-jikara-shiagarichai"
 category: "eyelash"
 salon: "Raffine"
 date: "2026-11-07"

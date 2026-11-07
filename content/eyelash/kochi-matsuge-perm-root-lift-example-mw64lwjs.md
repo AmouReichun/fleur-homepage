@@ -1,6 +1,7 @@
 ---
 title: "高知市のまつげパーマ実例：根元から立ち上げる｜Raffine"
 slug: "kochi-matsuge-perm-root-lift-example-mw64lwjs"
+merged_into: "kochi-matsuge-pama-me-jikara-shiagarichai"
 category: "eyelash"
 salon: "Raffine"
 date: "2026-11-07"

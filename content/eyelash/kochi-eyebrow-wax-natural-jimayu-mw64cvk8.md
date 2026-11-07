@@ -1,6 +1,7 @@
 ---
 title: "高知市の眉毛WAX実例：自眉を活かした自然な形に整える"
 slug: "kochi-eyebrow-wax-natural-jimayu-mw64cvk8"
+merged_into: "kochi-eyebrow-salon-erabikata"
 category: "eyelash"
 salon: "Raffine"
 date: "2026-11-07"

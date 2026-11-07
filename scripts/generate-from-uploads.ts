@@ -12,6 +12,30 @@ import { generateArticleFromUpload, buildMarkdown, type UploadSalonKey } from ".
 import type { StaffUpload } from "../lib/blog/staff-uploads";
 import { getUsedThumbnails } from "../lib/blog/thumbnail-dedup";
 import { getRemainingQuota, addToMonthlyCount, getMonthlyCount } from "../lib/blog/monthly-limit";
+import { titleSimilarity } from "../lib/blog/topic-gate";
+
+/**
+ * ほぼ同じタイトルの記事が既にあれば、その記事（統合済みならその親）の slug を返す。
+ * スタッフ投稿は本物の実例なので捨てずに保存し、merged_into で親記事へまとめる（2026-11-07）。
+ */
+function findMergeTarget(category: string, salon: string, title: string): string | null {
+  const dir = path.join(CONTENT_DIR, category);
+  if (!fs.existsSync(dir)) return null;
+  let best = 0;
+  let target: string | null = null;
+  for (const f of fs.readdirSync(dir)) {
+    if (!f.endsWith(".md")) continue;
+    const raw = fs.readFileSync(path.join(dir, f), "utf-8");
+    if (raw.match(/^salon:\s*["']?(.+?)["']?\s*$/m)?.[1] !== salon) continue;
+    const t = raw.match(/^title:\s*["']?(.+?)["']?\s*$/m)?.[1] ?? "";
+    const sim = titleSimilarity(title, t);
+    if (sim > best) {
+      best = sim;
+      target = raw.match(/^merged_into:\s*["']?([a-z0-9-]+)/m)?.[1] ?? f.replace(/\.md$/, "");
+    }
+  }
+  return best >= 0.6 ? target : null;
+}
 
 dotenv.config({ path: ".env.local" });
 
@@ -108,7 +132,12 @@ async function main() {
 
     // 常に draft: true のまま保存（公開は auto-publish バッチが担当）。
     // buildMarkdown は draft: true を出力するため、そのまま書き出す。
-    const markdown = buildMarkdown(article);
+    let markdown = buildMarkdown(article);
+    const mergeTarget = findMergeTarget(article.category, article.salon, article.title);
+    if (mergeTarget) {
+      markdown = markdown.replace(/^(slug:.*)$/m, `$1\nmerged_into: "${mergeTarget}"`);
+      console.log(`  ↪ ほぼ同じ記事があるため親記事へまとめる: ${mergeTarget}`);
+    }
 
     if (article.yakkihou_flag) {
       console.log(`  ⚠ 薬機法フラグ [${article.yakkihou_words.join(", ")}] → 下書き保存（管理者確認・自動公開対象外）`);

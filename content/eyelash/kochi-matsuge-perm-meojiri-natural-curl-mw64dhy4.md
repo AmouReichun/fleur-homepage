@@ -1,6 +1,7 @@
 ---
 title: "高知市まつげパーマ実例：目尻まで自然に立ち上げカール｜Raffine"
 slug: "kochi-matsuge-perm-meojiri-natural-curl-mw64dhy4"
+merged_into: "kochi-matsuge-pama-me-jikara-shiagarichai"
 category: "eyelash"
 salon: "Raffine"
 date: "2026-11-07"

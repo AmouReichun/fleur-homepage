@@ -1,6 +1,7 @@
 ---
 title: "高知市のまつげパーマ実例｜目尻まで均一に立ち上げたカール"
 slug: "kochi-matsuge-perm-meziri-uniform-curl-mw6463oq"
+merged_into: "kochi-matsuge-pama-me-jikara-shiagarichai"
 category: "eyelash"
 salon: "Raffine"
 date: "2026-11-07"

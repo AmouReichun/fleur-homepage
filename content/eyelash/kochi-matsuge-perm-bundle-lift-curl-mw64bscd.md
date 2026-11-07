@@ -1,6 +1,7 @@
 ---
 title: "高知市のまつげパーマ実例：束感の立ち上げカール｜Raffineの定価¥5,500（税込）"
 slug: "kochi-matsuge-perm-bundle-lift-curl-mw64bscd"
+merged_into: "kochi-matsuge-pama-me-jikara-shiagarichai"
 category: "eyelash"
 salon: "Raffine"
 date: "2026-11-07"
