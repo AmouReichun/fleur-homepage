@@ -3,7 +3,7 @@ title: "高知市でメンズカットを選ぶなら、スタイルと質感の
 slug: "kochi-mens-cut-style-texture-216444"
 category: "hair"
 salon: "Riv. by fleurami"
-date: "2026-10-28"
+date: "2026-11-07"
 updated: ""
 author: "沢村瑞希"
 author_role: "スタイリスト"
@@ -14,7 +14,6 @@ question: "高知市でメンズカットを選ぶときは、どんなポイン
 answer_summary: "メンズカットは「長さの調整」だけでなく、毛流を活かしたシルエット、質感の出し方、スタイリングのしやすさまでが仕上がりの質を左右します。高知市内でも技術者による差が大きいため、カウンセリングで悩みやライフスタイルを聞いてくれるサロンを選ぶことが失敗を防ぐコツです。"
 instagram_id: "18092461514216444"
 instagram_permalink: "https://www.instagram.com/reel/DfBfMFeyyI_/"
-draft: true
 faq:
   - q: "高知市のメンズカットで『サラサラな質感』が出るのはなぜ？"
     a: "質感は、カットの角度・毛流を読む精度・毛先の処理方法に大きく左右されます。Riv. by fleur amiでは、カット時に毛の流れ方を確認しながら進め、毛先の質感が整うよう丁寧に仕上げます。また、カット後のスタイリング方法もお伝えすることで、自宅での再現性を高めます。"

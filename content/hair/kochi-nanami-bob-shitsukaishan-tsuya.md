@@ -3,7 +3,7 @@ title: "香南市でボブをまとめたい40代へ｜髪質改善トリート�
 slug: "kochi-nanami-bob-shitsukaishan-tsuya"
 category: "hair"
 salon: "fleurami"
-date: "2026-11-01"
+date: "2026-11-07"
 updated: ""
 author: "西内みゆき"
 author_role: "スタイリスト"
@@ -14,7 +14,6 @@ question: "40代のボブスタイル、毛先の広がりや艶不足をどう�
 answer_summary: "髪質改善トリートメントを組み合わせることで、ボブの毛先がまとまりやすく、艶感が引き出しやすくなります。高知県香南市のfleur amiでは、カウンセリングで髪の状態を見極め、一人ひとりに合わせた施術を提案しています。"
 instagram_id: "18092468849230725"
 instagram_permalink: "https://www.instagram.com/reel/DfLjQWdBhtw/"
-draft: true
 faq:
   - q: "香南市で髪質改善トリートメントを受けるときの施術時間は？"
     a: "施術内容にもよりますが、シャンプー～ドライまで60〜90分程度が目安です。カット・カラーと組み合わせる場合は、トータルで2時間30分前後を予定いただくことが多いです。"
