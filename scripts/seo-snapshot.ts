@@ -42,7 +42,7 @@ async function ga() {
   const run = async (dimensions: string[], metrics: string[], startDate = day(90), extra: object = {}) =>
     (await an.properties.runReport({
       property,
-      requestBody: { dateRanges: [{ startDate, endDate: "yesterday" }], dimensions: dimensions.map((name) => ({ name })), metrics: metrics.map((name) => ({ name })), limit: 2000, ...extra },
+      requestBody: { dateRanges: [{ startDate, endDate: "yesterday" }], dimensions: dimensions.map((name) => ({ name })), metrics: metrics.map((name) => ({ name })), limit: "2000", ...extra },
     })).data;
   const res = {
     bySource: await run(["sessionSource", "sessionMedium"], ["sessions", "engagedSessions", "keyEvents"]),
@@ -57,5 +57,8 @@ async function ga() {
   console.log("GA4 ok");
 }
 
-await gsc().catch((e) => console.error("GSC error", e.message));
-await ga().catch((e) => console.error("GA4 error", e.message));
+(async () => {
+  await gsc().catch((e) => console.error("GSC error", e.message));
+  if (process.env.GA4_PROPERTY_ID) await ga().catch((e) => console.error("GA4 error", e.message));
+  else console.log("GA4_PROPERTY_ID 未設定 → GA4はスキップ");
+})();
