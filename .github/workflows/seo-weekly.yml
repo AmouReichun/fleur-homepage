@@ -136,10 +136,10 @@ jobs:
           VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
           VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
 
-      # ─── IndexNow: 変更ページをBing/AI検索に即通知 ───────────────────
+      # ─── IndexNow: 週1回、サイト全体（sitemapの全URL）をBing/AI検索に通知 ───
+      # 以前は記事の変更分（--changed）だけで、地域×メニュー・ガイド・スタッフページの修正が通知されなかった（2026-11-08）
       - name: Submit to IndexNow
-        if: steps.commit.outputs.committed == 'true'
-        run: npx tsx scripts/indexnow-submit.ts --changed
+        run: npx tsx scripts/indexnow-submit.ts --all
         env:
           VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
           VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
