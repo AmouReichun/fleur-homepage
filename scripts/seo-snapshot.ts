@@ -66,6 +66,11 @@ async function ga() {
       const r = await admin.accountSummaries.list({ pageSize: 50 });
       const props = (r.data.accountSummaries ?? []).flatMap((a) => (a.propertySummaries ?? []).map((p) => ({ account: a.displayName, property: p.property, name: p.displayName })));
       console.log("GA4 properties:", JSON.stringify(props));
+      if (!props.length) {
+        const f = process.env.GOOGLE_APPLICATION_CREDENTIALS;
+        const sa = f ? (JSON.parse(fs.readFileSync(f, "utf-8")).service_account_impersonation_url ?? "").match(/serviceAccounts\/([^:]+)/)?.[1] : "";
+        console.log(`GA4に権限がありません。GA4の「プロパティのアクセス管理」でこのアドレスを「閲覧者」に追加してください: ${sa}`);
+      }
       const hit = props.find((p) => /fleur|フルール/i.test(`${p.name}`)) ?? props[0];
       if (hit?.property) process.env.GA4_PROPERTY_ID = hit.property;
     } catch (e) {
