@@ -13,7 +13,7 @@ export function generateMetadata({
   const base: Metadata = {
     title: "まつげ・まゆげ症例・コラム",
     description:
-      "高知市「Raffine」のアイリストによるまつ毛パーマ・マツエク・眉毛WAXの施術例とコラム。韓国束感・フラットラッシュ・パリジャンリフト・眉毛WAXについて写真付きで詳しく解説。",
+      "高知市「Raffine」のアイリストによるまつ毛パーマ・マツエク・眉毛WAXの施術例とコラム。韓国束感・フラットラッシュ・パリジェンヌ・眉毛WAXについて写真付きで詳しく解説。",
     alternates: { canonical: "/blog/eyelash" },
   };
   if (searchParams.tag) base.robots = { index: false, follow: true };

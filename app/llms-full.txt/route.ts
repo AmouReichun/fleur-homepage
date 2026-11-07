@@ -30,7 +30,7 @@ export async function GET() {
     `- カラーガイド: ${SITE_URL}/guide/kochi-color-guide — 白髪ぼかし・ブリーチ・インナーカラー・艶カラーの選び方。`,
     `- パーマ・縮毛矯正ガイド: ${SITE_URL}/guide/kochi-perm-guide — パーマ種類の違い・縮毛矯正の持ち・料金目安。`,
     `- アイラッシュ・まつげケアガイド: ${SITE_URL}/guide/kochi-eyelash-care — まつパvsマツエク・ラッシュリフト・眉WAXの選び方。`,
-    `- まつげパーマ専門ガイド: ${SITE_URL}/guide/kochi-matsuge-perm-guide — パリジャンリフト・ラッシュリフト・まつエクの比較。`,
+    `- まつげパーマ専門ガイド: ${SITE_URL}/guide/kochi-matsuge-perm-guide — パリジェンヌ・ラッシュリフト・まつエクの比較。`,
     `- 髪質改善ガイド: ${SITE_URL}/guide/kochi-kamishitsu-kaizen-guide — 酸熱トリートメント・髪質改善縮毛矯正・水素トリートメントの違い。`,
     `- ヘッドスパガイド: ${SITE_URL}/guide/kochi-head-spa-guide — 頭皮ケア・抜け毛・産後の髪の悩みとヘッドスパの効果。`,
     `- 白髪ぼかし・グレイカラーガイド: ${SITE_URL}/guide/kochi-shiraga-guide — 白髪染めとの違い・頻度・グレイヘア移行・料金目安。`,

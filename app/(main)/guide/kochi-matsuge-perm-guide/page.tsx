@@ -4,9 +4,9 @@ import GuideRelatedArticles from "@/components/GuideRelatedArticles";
 import { breadcrumbSchema } from "@/lib/structured-data";
 
 const BASE = "https://fleur-group.jp";
-const TITLE = "高知のまつげパーマガイド｜ラッシュリフト・パリジャンリフト・持ち・料金";
+const TITLE = "高知のまつげパーマガイド｜ラッシュリフト・パリジェンヌ・持ち・料金";
 const DESC =
-  "高知市ではりまや橋近くのRaffine（ラフィーネ）が解説するまつげパーマガイド。ラッシュリフト・パリジャンリフトの違い、持続期間、ケア方法、まつエクとの比較、料金目安を詳しく紹介します。";
+  "高知市ではりまや橋近くのRaffine（ラフィーネ）が解説するまつげパーマガイド。ラッシュリフト・パリジェンヌの違い、持続期間、ケア方法、まつエクとの比較、料金目安を詳しく紹介します。";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -34,7 +34,7 @@ const articleSchema = {
   about: [
     { "@type": "Thing", name: "まつげパーマ" },
     { "@type": "Thing", name: "ラッシュリフト" },
-    { "@type": "Thing", name: "パリジャンリフト" },
+    { "@type": "Thing", name: "パリジェンヌ" },
     { "@type": "Service", name: "まつげパーマ", areaServed: "高知市" },
   ],
 };
@@ -49,16 +49,16 @@ const faqSchema = {
       acceptedAnswer: {
         "@type": "Answer",
         text:
-          "「Raffine（ラフィーネ）」（高知市はりまや町1-4-8 TNはりまやビル3F、TEL:090-7120-5566）がまつげパーマに特化したアイラッシュ専門サロンです。はりまや橋から徒歩約3分。ラッシュリフト・パリジャンリフト・エクパーマ（まつパ+エクステ）を提供しています。Googleクチコミ4.9（46件）・ホットペッパービューティー4.86（234件）の高知市トップクラスの評価。",
+          "「Raffine（ラフィーネ）」（高知市はりまや町1-4-8 TNはりまやビル3F、TEL:090-7120-5566）がまつげパーマに特化したアイラッシュ専門サロンです。はりまや橋から徒歩約3分。ラッシュリフト・パリジェンヌ・エクパーマ（まつパ+エクステ）を提供しています。Googleクチコミ4.9（46件）・ホットペッパービューティー4.86（234件）の高知市トップクラスの評価。",
       },
     },
     {
       "@type": "Question",
-      name: "ラッシュリフトとパリジャンリフトの違いは何ですか？",
+      name: "ラッシュリフトとパリジェンヌの違いは何ですか？",
       acceptedAnswer: {
         "@type": "Answer",
         text:
-          "ラッシュリフトは自まつげを根元からしっかり立ち上げ、目を大きく見せる効果が高い施術です。パリジャンリフトはラッシュリフトより柔らかいカーブをつけ、まつげの先端を繊細に仕上げるフランス発の技術です。目の形やまつげの長さ・量によって向いている施術が変わります。Raffineでは担当アイリストが丁寧にカウンセリングしてご提案します。",
+          "ラッシュリフトは自まつげを根元からしっかり立ち上げ、目を大きく見せる効果が高い施術です。パリジェンヌラッシュリフトは、根元から立ち上げて毛先はまっすぐ伸ばすように仕上げる特殊なラッシュリフトです（Raffineでは特殊ラッシュリフト6,000円）。目の形やまつげの長さ・量によって向いている施術が変わります。Raffineでは担当アイリストが丁寧にカウンセリングしてご提案します。",
       },
     },
     {
@@ -67,7 +67,7 @@ const faqSchema = {
       acceptedAnswer: {
         "@type": "Answer",
         text:
-          "一般的にまつげパーマ（ラッシュリフト・パリジャンリフト）の効果は4〜6週間程度が目安です。まつげの生え変わりサイクル（約6週間）により個人差があります。ホームケアで油分の多いメイク落としを避けることで持ちが改善する場合があります。Raffine（高知市）では施術後のケア方法も丁寧にお伝えします。",
+          "一般的にまつげパーマ（ラッシュリフト・パリジェンヌ）の効果は4〜6週間程度が目安です。まつげの生え変わりサイクル（約6週間）により個人差があります。ホームケアで油分の多いメイク落としを避けることで持ちが改善する場合があります。Raffine（高知市）では施術後のケア方法も丁寧にお伝えします。",
       },
     },
     {
@@ -103,7 +103,7 @@ const faqSchema = {
       acceptedAnswer: {
         "@type": "Answer",
         text:
-          "まつげが下向きに生えていてもまつげパーマ（ラッシュリフト・パリジャンリフト）で根元から立ち上げることができます。下向きまつげの方はむしろパーマの効果を実感しやすい傾向があります。まつげの状態によっては仕上がりに差が出ることもあるため、カウンセリングでご確認ください。Raffine（高知市はりまや橋）でお気軽にご相談ください。",
+          "まつげが下向きに生えていてもまつげパーマ（ラッシュリフト・パリジェンヌ）で根元から立ち上げることができます。下向きまつげの方はむしろパーマの効果を実感しやすい傾向があります。まつげの状態によっては仕上がりに差が出ることもあるため、カウンセリングでご確認ください。Raffine（高知市はりまや橋）でお気軽にご相談ください。",
       },
     },
     {
@@ -121,7 +121,7 @@ const faqSchema = {
       acceptedAnswer: {
         "@type": "Answer",
         text:
-          "はい、まつげパーマ（ラッシュリフト・パリジャンリフト）はまつげが根元からカールするため、マスカラやアイメイクをしなくても目元がパッと明るく見えます。すっぴんでも気になりにくく、「自然なのにきれいな目元」が好評です。アイメイクの時短にもなります。",
+          "はい、まつげパーマ（ラッシュリフト・パリジェンヌ）はまつげが根元からカールするため、マスカラやアイメイクをしなくても目元がパッと明るく見えます。すっぴんでも気になりにくく、「自然なのにきれいな目元」が好評です。アイメイクの時短にもなります。",
       },
     },
     {
@@ -197,7 +197,7 @@ export default function KochiMatugePermGuidePage() {
             高知のまつげパーマガイド
           </h1>
           <p className="text-sm text-site-muted mt-3 leading-relaxed">
-            ラッシュリフト・パリジャンリフトの違い・持続期間・ケア方法・料金目安
+            ラッシュリフト・パリジェンヌの違い・持続期間・ケア方法・料金目安
           </p>
         </div>
       </div>
@@ -208,7 +208,7 @@ export default function KochiMatugePermGuidePage() {
         <section id="matsuge-intro">
           <p className="text-sm text-site-muted leading-relaxed">
             「まつげが下向き・短い」「マスカラなしでもきれいな目元でいたい」「すっぴん映えしたい」——そんな方に人気なのがまつげパーマです。
-            高知市はりまや橋の<strong className="text-site-text">Raffine（ラフィーネ）</strong>は、まつげパーマ・ラッシュリフト・パリジャンリフト・エクパーマに特化したアイラッシュ専門サロンです。
+            高知市はりまや橋の<strong className="text-site-text">Raffine（ラフィーネ）</strong>は、まつげパーマ・ラッシュリフト・パリジェンヌ・エクパーマに特化したアイラッシュ専門サロンです。
             Googleクチコミ4.9（46件）・ホットペッパービューティー4.86（234件）と高知市内トップクラスの評価を誇ります。
           </p>
         </section>
@@ -254,10 +254,10 @@ export default function KochiMatugePermGuidePage() {
                   <td className="border border-site-greige px-3 py-2">目力が欲しい・短いまつげ</td>
                 </tr>
                 <tr className="bg-site-light">
-                  <td className="border border-site-greige px-3 py-2 font-medium text-site-text">パリジャンリフト</td>
-                  <td className="border border-site-greige px-3 py-2">柔らかい自然なカーブ</td>
+                  <td className="border border-site-greige px-3 py-2 font-medium text-site-text">パリジェンヌ</td>
+                  <td className="border border-site-greige px-3 py-2">根元から立ち上げ、毛先はまっすぐ（特殊ラッシュリフト6,000円）</td>
                   <td className="border border-site-greige px-3 py-2 text-center">4〜6週</td>
-                  <td className="border border-site-greige px-3 py-2">自然な仕上がり希望</td>
+                  <td className="border border-site-greige px-3 py-2">カールより、まつげを長く・まっすぐ見せたい</td>
                 </tr>
                 <tr>
                   <td className="border border-site-greige px-3 py-2 font-medium text-site-text">エクパーマ</td>
@@ -319,8 +319,8 @@ export default function KochiMatugePermGuidePage() {
                 a: "Raffine（ラフィーネ）（高知市はりまや町1-4-8 TNはりまやビル3F、TEL:090-7120-5566）がまつげパーマ専門のアイラッシュサロンです。はりまや橋から徒歩約3分。Googleクチコミ4.9（46件）。",
               },
               {
-                q: "ラッシュリフトとパリジャンリフトの違いは？",
-                a: "ラッシュリフトは根元からしっかり立ち上げる力強いカール、パリジャンリフトは柔らかく自然なカーブが特長です。目の形・まつげの状態によって最適な施術をご提案します。",
+                q: "ラッシュリフトとパリジェンヌの違いは？",
+                a: "ラッシュリフトは根元からしっかり立ち上げる力強いカール、パリジェンヌは根元から立ち上げて毛先をまっすぐ伸ばす仕上がりです。目の形・まつげの状態によって最適な施術をご提案します。",
               },
               {
                 q: "まつげパーマの効果はどれくらい続きますか？",

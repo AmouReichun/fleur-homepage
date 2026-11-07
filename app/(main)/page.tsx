@@ -7,7 +7,7 @@ export const revalidate = 3600;
 export const metadata: Metadata = {
   title: { absolute: "高知市の美容室・まつ毛サロン｜艶カラー・髪質改善・眉毛WAX｜fleur GROUP" },
   description:
-    "高知市・香南市の美容室・まつ毛サロン fleur GROUP。Googleクチコミ4.6以上。一番人気の艶カラーとミルボンの髪質改善、白髪ぼかし・縮毛矯正（Riv.・fleur ami）、まつ毛パーマ・眉毛WAX（Raffine）。土日OK・駐車場あり・Web予約当日受付。",
+    "高知市・香南市の美容室・まつ毛サロン fleur GROUP。Googleクチコミ4.5〜4.9。一番人気の艶カラーとミルボンの髪質改善、白髪ぼかし・縮毛矯正（Riv.・fleur ami）、まつ毛パーマ・眉毛WAX（Raffine）。土日OK・駐車場あり・Web予約当日受付。",
   alternates: { canonical: "https://fleur-group.jp" },
 };
 import { getContentCached } from "@/lib/content";

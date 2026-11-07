@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     template: "%s | fleur GROUP",
   },
   description:
-    "高知市・香南市の美容室・まつ毛サロン fleur GROUP。Googleクチコミ4.6以上の3店舗が髪質改善・白髪ぼかし・縮毛矯正・まつ毛パーマ・眉毛WAXに対応。土日OK・駐車場あり・Web予約当日受付。",
+    "高知市・香南市の美容室・まつ毛サロン fleur GROUP。Googleクチコミ4.5〜4.9の3店舗が髪質改善・白髪ぼかし・縮毛矯正・まつ毛パーマ・眉毛WAXに対応。土日OK・駐車場あり・Web予約当日受付。",
   keywords: [
     "高知 美容室",
     "高知県 美容室",
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     url: BASE_URL,
     title: "高知市の美容室・まつ毛サロン | fleur GROUP｜艶カラー・髪質改善・眉毛WAX",
     description:
-      "高知市・香南市の美容室・まつ毛サロン fleur GROUP。Googleクチコミ4.6以上の3店舗が髪質改善・白髪ぼかし・縮毛矯正・まつ毛パーマ・眉毛WAXに対応。土日OK・駐車場あり・Web予約当日受付。",
+      "高知市・香南市の美容室・まつ毛サロン fleur GROUP。Googleクチコミ4.5〜4.9の3店舗が髪質改善・白髪ぼかし・縮毛矯正・まつ毛パーマ・眉毛WAXに対応。土日OK・駐車場あり・Web予約当日受付。",
     images: [
       {
         url: "/images/admin/hero-1782190629178.jpg",
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "高知市の美容室・まつ毛サロン | fleur GROUP｜艶カラー・髪質改善・眉毛WAX",
     description:
-      "高知市・香南市の美容室・まつ毛サロン fleur GROUP。Googleクチコミ4.6以上の3店舗が髪質改善・白髪ぼかし・縮毛矯正・まつ毛パーマ・眉毛WAXに対応。土日OK・駐車場あり・Web予約当日受付。",
+      "高知市・香南市の美容室・まつ毛サロン fleur GROUP。Googleクチコミ4.5〜4.9の3店舗が髪質改善・白髪ぼかし・縮毛矯正・まつ毛パーマ・眉毛WAXに対応。土日OK・駐車場あり・Web予約当日受付。",
     images: ["/images/admin/hero-1782190629178.jpg"],
   },
   ...(process.env.GOOGLE_SITE_VERIFICATION

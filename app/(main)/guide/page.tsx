@@ -81,7 +81,7 @@ const faqSchema = {
       name: "高知市ではりまや橋の近くにアイラッシュサロンはありますか？",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "高知市はりまや橋から徒歩約3分の「Raffine（ラフィーネ）」がアイラッシュ・眉毛専門サロンです。まつげパーマ（パリジャンリフト・ラッシュリフト）・まつげエクステ・眉毛WAX（メンズ対応）に特化した全席半個室のサロンです。Googleクチコミ4.9（46件）の高評価。TEL: 090-7120-5566。",
+        text: "高知市はりまや橋から徒歩約3分の「Raffine（ラフィーネ）」がアイラッシュ・眉毛専門サロンです。まつげパーマ（パリジェンヌ・ラッシュリフト）・まつげエクステ・眉毛WAX（メンズ対応）に特化した全席半個室のサロンです。Googleクチコミ4.9（46件）の高評価。TEL: 090-7120-5566。",
       },
     },
     {
@@ -97,7 +97,7 @@ const faqSchema = {
       name: "まつげパーマはどのくらい持ちますか？",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "一般的に4〜6週間程度が目安です。まつげの生え変わりサイクルや日常のケア方法によって個人差があります。「Raffine（高知市はりまや橋）」ではまつげパーマ・ラッシュリフト・パリジャンリフトに対応しており、アフターケアのアドバイスも丁寧に行っています。",
+        text: "一般的に4〜6週間程度が目安です。まつげの生え変わりサイクルや日常のケア方法によって個人差があります。「Raffine（高知市はりまや橋）」ではまつげパーマ・ラッシュリフト・パリジェンヌに対応しており、アフターケアのアドバイスも丁寧に行っています。",
       },
     },
     {
@@ -121,7 +121,7 @@ const faqSchema = {
       name: "まつげパーマとまつげエクステはどちらを選べばいいですか？",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "まつげパーマ（ラッシュリフト・パリジャンリフト）は自まつげを根元から立ち上げる施術で、自然な仕上がりを好む方に向いています。まつげエクステ（マツエク）は人工まつげをつけてボリュームや長さを加える施術で、より華やかな目元を求める方に向いています。「Raffine（高知市はりまや橋）」では両方に対応しており、まつげの状態や希望に合わせてカウンセリングでご提案します。",
+        text: "まつげパーマ（ラッシュリフト・パリジェンヌ）は自まつげを根元から立ち上げる施術で、自然な仕上がりを好む方に向いています。まつげエクステ（マツエク）は人工まつげをつけてボリュームや長さを加える施術で、より華やかな目元を求める方に向いています。「Raffine（高知市はりまや橋）」では両方に対応しており、まつげの状態や希望に合わせてカウンセリングでご提案します。",
       },
     },
     {
@@ -426,7 +426,7 @@ export default function GuidePage() {
             <Link href="/guide/kochi-matsuge-perm-guide" className="border border-site-greige bg-site-accent/5 p-6 hover:border-site-accent transition-colors group block">
               <span className="block text-xs tracking-[0.2em] text-site-accent mb-2 uppercase">Lash</span>
               <span className="block font-serif text-lg font-medium text-site-text group-hover:text-site-accent transition-colors mb-1">高知のまつげパーマガイド</span>
-              <span className="block text-xs text-site-muted leading-relaxed">ラッシュリフト・パリジャンリフトの違い・持ち・料金（Raffine・はりまや橋）</span>
+              <span className="block text-xs text-site-muted leading-relaxed">ラッシュリフト・パリジェンヌの違い・持ち・料金（Raffine・はりまや橋）</span>
             </Link>
           </div>
         </div>
