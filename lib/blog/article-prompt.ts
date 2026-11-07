@@ -75,7 +75,7 @@ const POSITIONING: Record<SalonDisplayKey, { main: string; audience: string; acc
   raffine: {
     main: "まつげパーマ（ラッシュリフト） → 眉毛WAX（美眉デザインWAX・メンズ眉毛WAX） → まつげエクステ（フラットラッシュ・エクパーマ）",
     audience: "20〜30代の女性が中心。男性もすべてのメニューを利用できる",
-    access: "はりまや橋から徒歩約3分（TNはりまやビル3F）",
+    access: "はりまや橋電停から徒歩約1分（TNはりまやビル3F）",
     combos: [],
     notes: [
       "全席半個室・予約優先制",

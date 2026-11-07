@@ -49,7 +49,7 @@ const faqSchema = {
       acceptedAnswer: {
         "@type": "Answer",
         text:
-          "「Raffine（ラフィーネ）」（高知市はりまや町1-4-8 TNはりまやビル3F、TEL:090-7120-5566）がまつげパーマに特化したアイラッシュ専門サロンです。はりまや橋から徒歩約3分。ラッシュリフト・パリジェンヌ・エクパーマ（まつパ+エクステ）を提供しています。Googleクチコミ4.9（46件）・ホットペッパービューティー4.86（234件）。",
+          "「Raffine（ラフィーネ）」（高知市はりまや町1-4-8 TNはりまやビル3F、TEL:090-7120-5566）がまつげパーマに特化したアイラッシュ専門サロンです。はりまや橋電停から徒歩約1分。ラッシュリフト・パリジェンヌ・エクパーマ（まつパ+エクステ）を提供しています。Googleクチコミ4.9（46件）・ホットペッパービューティー4.86（234件）。",
       },
     },
     {
@@ -217,7 +217,7 @@ export default function KochiMatugePermGuidePage() {
         <section className="bg-site-light border border-site-greige p-5 sm:p-6">
           <h2 className="font-serif text-lg font-semibold text-site-text mb-3">Raffine（ラフィーネ）</h2>
           <dl className="text-xs text-site-muted space-y-1.5">
-            <div className="flex gap-2"><dt className="text-site-text w-16 flex-shrink-0">住所</dt><dd>高知市はりまや町1-4-8 TNはりまやビル3F（はりまや橋から徒歩3分）</dd></div>
+            <div className="flex gap-2"><dt className="text-site-text w-16 flex-shrink-0">住所</dt><dd>高知市はりまや町1-4-8 TNはりまやビル3F（はりまや橋電停から徒歩約1分）</dd></div>
             <div className="flex gap-2"><dt className="text-site-text w-16 flex-shrink-0">電話</dt><dd>090-7120-5566</dd></div>
             <div className="flex gap-2"><dt className="text-site-text w-16 flex-shrink-0">営業時間</dt><dd>9:30〜18:30 / 不定休（Instagramでお知らせ）</dd></div>
             <div className="flex gap-2"><dt className="text-site-text w-16 flex-shrink-0">特徴</dt><dd>全席半個室・予約優先制・まつげパーマ/エクステ/眉WAX専門・メンズ眉WAX対応</dd></div>
@@ -316,7 +316,7 @@ export default function KochiMatugePermGuidePage() {
             {[
               {
                 q: "高知市でまつげパーマができるサロンはどこですか？",
-                a: "Raffine（ラフィーネ）（高知市はりまや町1-4-8 TNはりまやビル3F、TEL:090-7120-5566）がまつげパーマ専門のアイラッシュサロンです。はりまや橋から徒歩約3分。Googleクチコミ4.9（46件）。",
+                a: "Raffine（ラフィーネ）（高知市はりまや町1-4-8 TNはりまやビル3F、TEL:090-7120-5566）がまつげパーマ専門のアイラッシュサロンです。はりまや橋電停から徒歩約1分。Googleクチコミ4.9（46件）。",
               },
               {
                 q: "ラッシュリフトとパリジェンヌの違いは？",

@@ -95,7 +95,7 @@ const faqSchema = {
       name: "高知市のはりまや橋からRaffineへのアクセスは？",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Raffineは高知市はりまや町1-4-8 TNはりまやビル3Fに位置し、はりまや橋から徒歩約3分です。お車の方は近辺のコインパーキング（徒歩1〜3分）をご利用ください。TEL: 090-7120-5566。",
+        text: "Raffineは高知市はりまや町1-4-8 TNはりまやビル3Fに位置し、はりまや橋電停から徒歩約1分です。お車の方は近辺のコインパーキング（徒歩1〜3分）をご利用ください。TEL: 090-7120-5566。",
       },
     },
   ],
@@ -263,7 +263,7 @@ export default function KochiMayuSalonGuidePage() {
               <p>〒780-0822 高知県高知市はりまや町1-4-8 TNはりまやビル3F</p>
               <p>TEL: 090-7120-5566</p>
               <p>営業時間: 9:30〜18:30（不定休）</p>
-              <p className="mt-2 text-xs">はりまや橋から徒歩約3分・近辺にコインパーキングあり</p>
+              <p className="mt-2 text-xs">はりまや橋電停から徒歩約1分・近辺にコインパーキングあり</p>
             </div>
             <div className="mt-4 flex flex-wrap gap-3">
               <Link
