@@ -58,7 +58,7 @@ function getExistingTitles(salonName: string, category: "hair" | "eyelash"): str
     return getAllPosts(category)
       .filter((p) => p.salon === salonName)
       .map((p) => p.title)
-      .slice(-30);
+      .slice(0, 30); // getAllPosts は新しい順
   } catch {
     return [];
   }
@@ -79,14 +79,10 @@ async function generateKeywordArticle(task: NewArticleTask): Promise<void> {
   const area = AREA_BY_KEY[key] ?? "高知市";
   const existingTitles = getExistingTitles(salonName, category);
 
-  const authorHistory = key === "riv"
-    ? "高知市の美容室 Riv. by fleurami のスタイリスト。髪質改善・縮毛矯正を得意とする"
-    : undefined;
-
   const basePrompt = buildBasePrompt({
     category, salonName, area, existingTitles,
-    author: key === "riv" ? "細川彩香" : undefined,
-    authorHistory,
+    author: undefined,
+    articleType: "guide",
   });
 
   const articleInstruction = `
@@ -99,7 +95,6 @@ async function generateKeywordArticle(task: NewArticleTask): Promise<void> {
 - 本文: 「${task.targetKeyword}」を5〜8回自然に含める（不自然な連続使用・詰め込みは禁止）
 - excerpt: 「${task.targetKeyword}」と地域名を含む120文字以内
 - FAQ: 「${task.targetKeyword}」を含む質問を最低2問含める
-- 文字数: 2500文字以上の密度ある内容にする
 
 目的:
 - 検索順位を上げるための専門解説記事（読者の悩みに深く答える）
@@ -107,15 +102,14 @@ async function generateKeywordArticle(task: NewArticleTask): Promise<void> {
 - 生成理由: ${task.reason}
 
 注意:
-- 写真はありません（Instagram写真ドリブンではなく、テキスト中心のピラー記事）
-- 「施術事例（今回の仕上がり）」セクションは「${salonName}の施術事例・お悩み相談」として、実際にありそうなお悩みと対応例を書く`;
+- 写真はありません（テキスト中心の解説記事）。施術事例・お客様の相談例は作らない`;
 
   const prompt = `${basePrompt}\n\n${articleInstruction}\n\n${JSON_INSTRUCTION}`;
 
   console.log(`  生成中: [${task.targetKeyword}] → ${key}/${category}`);
   const res = await client.messages.create({
     model: "claude-opus-4-8",
-    max_tokens: 5000,
+    max_tokens: 16000,
     messages: [{ role: "user", content: prompt }],
   });
 

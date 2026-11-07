@@ -4,7 +4,7 @@ import * as path from "path";
 import Anthropic from "@anthropic-ai/sdk";
 import { IgMedia } from "./fetch-instagram";
 import { checkNgWords, autoFixNgWords } from "../lib/blog/ng-words";
-import { buildBasePrompt, JSON_INSTRUCTION, AREA_BY_NAME } from "../lib/blog/article-prompt";
+import { buildBasePrompt, JSON_INSTRUCTION, AREA_BY_NAME, detectStaff, fixFixedPriceTilde } from "../lib/blog/article-prompt";
 import { getAllPosts } from "../lib/blog/posts";
 
 dotenv.config({ path: ".env.local" });
@@ -37,16 +37,9 @@ type GeneratedArticle = {
   body: string;
 };
 
-const STYLISTS: Record<string, { names: string[]; role: string }> = {
-  fleurami: { names: ["西内みゆき", "山岡悠弥", "川上凛", "高田和花"], role: "スタイリスト" },
-  riv:      { names: ["西森心大", "細川彩香", "沢村瑞希"],             role: "スタイリスト" },
-  raffine:  { names: ["安井未琉", "尾崎あい"],                         role: "アイリスト" },
-};
-
-function pickStylest(salonKey: string): { name: string; role: string } {
-  const s = STYLISTS[salonKey] ?? STYLISTS["fleurami"];
-  const name = s.names[Math.floor(Math.random() * s.names.length)];
-  return { name, role: s.role };
+// 担当者はキャプション/メモに書かれたスタッフ名から決める（くじ引きで決めない。見つからなければ空＝店として紹介）
+function findStylist(salonKey: string, text: string): { name: string; role: string; history?: string } {
+  return detectStaff(salonKey, text) ?? { name: "", role: "" };
 }
 
 export const UPLOAD_SALONS = {
@@ -70,7 +63,7 @@ function buildTextPrompt(media: IgMedia, author: string): string {
   const existingTitles = getAllPosts(media.category)
     .filter((p) => p.salon === media.salonName)
     .map((p) => p.title);
-  const prompt = buildBasePrompt({ category: media.category, salonName: media.salonName, area, author, existingTitles });
+  const prompt = buildBasePrompt({ category: media.category, salonName: media.salonName, area, author: author || undefined, existingTitles });
   return `${prompt}
 
 【Instagramキャプション】
@@ -158,9 +151,7 @@ ${article.body}
 export async function generateArticle(media: IgMedia): Promise<GeneratedArticle | null> {
   console.log(`  🤖 記事生成中: ${media.salonName} / ${media.id}`);
 
-  const stylist = pickStylest(
-    Object.entries(UPLOAD_SALONS).find(([, v]) => v.name === media.salonName)?.[0] ?? "fleurami"
-  );
+  const stylist = findStylist(media.salonName, media.caption ?? "");
   const textPrompt = buildTextPrompt(media, stylist.name);
   const imageBase64 = loadImageAsBase64(media.localImagePath);
 
@@ -201,11 +192,12 @@ export async function generateArticle(media: IgMedia): Promise<GeneratedArticle 
     let raw = "";
     try {
       const message = await client.messages.create({
-        model: "claude-haiku-4-5",
-        max_tokens: 8000,
+        model: "claude-sonnet-5-5",
+        max_tokens: 16000,
         messages: [{ role: "user", content }],
       });
-      raw = (message.content[0] as { text: string }).text.trim();
+      if (message.stop_reason === "max_tokens") { console.error(`  ⚠ 出力が上限で途切れました（${attempt}回目）`); continue; }
+      raw = (message.content.find((b) => b.type === "text") as { text: string } | undefined)?.text.trim() ?? "";
     } catch (e) {
       console.error(`  ❌ Claude API エラー (試行 ${attempt}/3):`, e);
       if (attempt === 3) return null;
@@ -238,6 +230,11 @@ export async function generateArticle(media: IgMedia): Promise<GeneratedArticle 
   parsed.question       = autoFixNgWords(parsed.question);
   parsed.answer_summary = autoFixNgWords(parsed.answer_summary);
   parsed.body           = autoFixNgWords(parsed.body);
+  // 定額メニューに付いた「〜」を戻す（メニュー表どおりの金額にする）
+  parsed.body           = fixFixedPriceTilde(media.salonName, parsed.body);
+  parsed.answer_summary = fixFixedPriceTilde(media.salonName, parsed.answer_summary);
+  parsed.excerpt        = fixFixedPriceTilde(media.salonName, parsed.excerpt);
+  parsed.faq = parsed.faq.map((f) => ({ q: f.q, a: fixFixedPriceTilde(media.salonName, f.a) }));
   parsed.faq = parsed.faq.map((f) => ({ q: autoFixNgWords(f.q), a: autoFixNgWords(f.a) }));
   if (parsed.conversation) {
     parsed.conversation = parsed.conversation.map((c) => ({ ...c, text: autoFixNgWords(c.text) }));
@@ -337,13 +334,13 @@ export async function generateArticleFromUpload(params: {
 }): Promise<GeneratedArticle | null> {
   const { imagesBase64, memo, salonKey, date } = params;
   const salon = UPLOAD_SALONS[salonKey];
-  const stylist = pickStylest(salonKey);
+  const stylist = findStylist(salonKey, memo);
 
   const area = AREA_BY_NAME[salon.name] ?? "高知県";
   const existingTitles = getAllPosts(salon.category)
     .filter((p) => p.salon === salon.name)
     .map((p) => p.title);
-  const textPrompt = `${buildBasePrompt({ category: salon.category, salonName: salon.name, area, author: stylist.name, existingTitles })}
+  const textPrompt = `${buildBasePrompt({ category: salon.category, salonName: salon.name, area, author: stylist.name || undefined, authorHistory: stylist.history, existingTitles })}
 
 【スタッフメモ】
 ${memo}
@@ -378,11 +375,12 @@ ${JSON_INSTRUCTION}`;
     let raw = "";
     try {
       const message = await client.messages.create({
-        model: "claude-haiku-4-5",
-        max_tokens: 8000,
+        model: "claude-sonnet-5-5",
+        max_tokens: 16000,
         messages: [{ role: "user", content }],
       });
-      raw = (message.content[0] as { text: string }).text.trim();
+      if (message.stop_reason === "max_tokens") { console.error(`  ⚠ 出力が上限で途切れました（${attempt}回目）`); continue; }
+      raw = (message.content.find((b) => b.type === "text") as { text: string } | undefined)?.text.trim() ?? "";
     } catch (e) {
       console.error(`  ❌ Claude API エラー (試行 ${attempt}/3):`, e);
       if (attempt === 3) return null;
@@ -402,6 +400,11 @@ ${JSON_INSTRUCTION}`;
   parsed.question       = autoFixNgWords(parsed.question);
   parsed.answer_summary = autoFixNgWords(parsed.answer_summary);
   parsed.body           = autoFixNgWords(parsed.body);
+  // 定額メニューに付いた「〜」を戻す（メニュー表どおりの金額にする）
+  parsed.body           = fixFixedPriceTilde(salon.name, parsed.body);
+  parsed.answer_summary = fixFixedPriceTilde(salon.name, parsed.answer_summary);
+  parsed.excerpt        = fixFixedPriceTilde(salon.name, parsed.excerpt);
+  parsed.faq = parsed.faq.map((f) => ({ q: f.q, a: fixFixedPriceTilde(salon.name, f.a) }));
   parsed.faq = parsed.faq.map((f) => ({ q: autoFixNgWords(f.q), a: autoFixNgWords(f.a) }));
   if (parsed.conversation) {
     parsed.conversation = parsed.conversation.map((c) => ({ ...c, text: autoFixNgWords(c.text) }));

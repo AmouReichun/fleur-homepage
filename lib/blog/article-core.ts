@@ -1,32 +1,14 @@
 import Anthropic from "@anthropic-ai/sdk";
 import { checkNgWords, autoFixNgWords } from "./ng-words";
-import { buildBasePrompt, JSON_INSTRUCTION } from "./article-prompt";
+import { buildBasePrompt, JSON_INSTRUCTION, detectStaff, fixFixedPriceTilde } from "./article-prompt";
 import { getAllPosts } from "./posts";
-import { getContent } from "../content";
 import type { IgPost } from "./instagram-api";
 
 const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
 
-const STYLISTS: Record<string, { names: string[]; role: string }> = {
-  fleurami: {
-    names: ["西内みゆき", "山岡悠弥", "川上凛", "高田和花"],
-    role: "スタイリスト",
-  },
-  riv: {
-    names: ["西森心大", "細川彩香", "沢村瑞希"],
-    role: "スタイリスト",
-  },
-  raffine: {
-    names: ["安井未琉", "尾崎あい"],
-    role: "アイリスト",
-  },
-};
-
-function pickStylest(salonKey: string): { name: string; role: string; history?: string } {
-  const s = STYLISTS[salonKey] ?? STYLISTS["fleurami"];
-  const name = s.names[Math.floor(Math.random() * s.names.length)];
-  const staffMember = getContent().staff.find((m) => m.name === name);
-  return { name, role: s.role, history: staffMember?.history };
+// 担当者はキャプションに書かれたスタッフ名から決める（くじ引きで決めない。見つからなければ空＝店として紹介）
+function findStylist(salonKey: string, caption: string): { name: string; role: string; history?: string } {
+  return detectStaff(salonKey, caption) ?? { name: "", role: "" };
 }
 
 // タイトル・本文で使う地域名（SEO/MEO用）
@@ -70,7 +52,7 @@ export async function generateArticleFromPost(
   post: IgPost,
   imageBase64: string | null,
 ): Promise<ArticleResult | null> {
-  const stylist = pickStylest(post.salonKey);
+  const stylist = findStylist(post.salonKey, post.caption);
   const area = AREA[post.salonKey] ?? "高知県";
   const existingTitles = getAllPosts(post.category)
     .filter((p) => p.salon === post.salonName)
@@ -79,7 +61,7 @@ export async function generateArticleFromPost(
     category: post.category,
     salonName: post.salonName,
     area,
-    author: stylist.name,
+    author: stylist.name || undefined,
     authorHistory: stylist.history,
     existingTitles,
   });
@@ -110,11 +92,12 @@ ${JSON_INSTRUCTION}`;
   for (let attempt = 1; attempt <= 3; attempt++) {
     try {
       const message = await client.messages.create({
-        model: "claude-haiku-4-5",
-        max_tokens: 8000,
+        model: "claude-sonnet-5-5",
+        max_tokens: 16000,
         messages: [{ role: "user", content }],
       });
-      const raw = (message.content[0] as { text: string }).text.trim();
+      if (message.stop_reason === "max_tokens") { console.error(`[article-core] attempt ${attempt}: 出力が上限で途切れました`); continue; }
+      const raw = (message.content.find((b) => b.type === "text") as { text: string } | undefined)?.text.trim() ?? "";
       const fenced = raw.match(/```json\s*([\s\S]*?)```/);
       const jsonStr = fenced ? fenced[1] : raw.match(/\{[\s\S]*\}/)?.[0];
       if (!jsonStr) continue;
@@ -133,6 +116,11 @@ ${JSON_INSTRUCTION}`;
   parsed.question       = autoFixNgWords(parsed.question);
   parsed.answer_summary = autoFixNgWords(parsed.answer_summary);
   parsed.body           = autoFixNgWords(parsed.body);
+  // 定額メニューに付いた「〜」を戻す（メニュー表どおりの金額にする）
+  parsed.body           = fixFixedPriceTilde(post.salonName, parsed.body);
+  parsed.answer_summary = fixFixedPriceTilde(post.salonName, parsed.answer_summary);
+  parsed.excerpt        = fixFixedPriceTilde(post.salonName, parsed.excerpt);
+  parsed.faq = parsed.faq.map((f) => ({ q: f.q, a: fixFixedPriceTilde(post.salonName, f.a) }));
   parsed.faq = parsed.faq.map((f) => ({ q: autoFixNgWords(f.q), a: autoFixNgWords(f.a) }));
   if (parsed.steps) {
     parsed.steps = parsed.steps.map((s) => ({ name: s.name, text: autoFixNgWords(s.text) }));

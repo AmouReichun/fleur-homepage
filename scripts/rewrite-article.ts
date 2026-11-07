@@ -58,7 +58,9 @@ function salonKey(salon: string): string {
     fleurami: "fleurami", "Riv. by fleurami": "riv", riv: "riv",
     raffine: "raffine", Raffine: "raffine",
   };
-  return map[salon] ?? "fleurami";
+  const k = map[salon];
+  if (!k) throw new Error(`店舗を特定できません: "${salon}"`);
+  return k;
 }
 
 async function rewriteArticle(task: RewriteTask, filePath: string): Promise<void> {
@@ -70,7 +72,7 @@ async function rewriteArticle(task: RewriteTask, filePath: string): Promise<void
   const area = AREA_BY_KEY[key] ?? "高知市";
   const category: "hair" | "eyelash" = task.category ?? (filePath.includes("/eyelash/") ? "eyelash" : "hair");
 
-  const basePrompt = buildBasePrompt({ category, salonName, area });
+  const basePrompt = buildBasePrompt({ category, salonName, area, articleType: "rewrite" });
 
   const rewriteInstruction = `
 【リライト指示】
