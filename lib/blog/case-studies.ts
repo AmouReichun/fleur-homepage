@@ -1,3 +1,4 @@
+import { staffNameVariants } from "./article-prompt";
 // 症例（施術事例）記事の抽出ヘルパー。
 // 既存の記事メタ（frontmatter）と、internal-links の店舗判定・メニューキーワード定義を再利用し、
 // 「店舗 × メニュー × 担当スタッフ」の条件で最新の施術事例を取り出す。
@@ -38,8 +39,9 @@ export function getCaseStudies(query: CaseStudyQuery): PostMeta[] {
   posts = posts.filter((p) => { if (!p.thumbnail || seenThumb.has(p.thumbnail)) return !p.thumbnail; seenThumb.add(p.thumbnail); return true; });
   if (category) posts = posts.filter((p) => p.category === category);
   if (author) {
-    const target = normalizeName(author);
-    posts = posts.filter((p) => normalizeName(p.author) === target);
+    // 「やすい」と「安井未琉」のような表記ゆれも同じ人として扱う
+    const targets = new Set([normalizeName(author), ...staffNameVariants(author)]);
+    posts = posts.filter((p) => targets.has(normalizeName(p.author)));
   }
   if (salonKeys && salonKeys.length > 0) posts = posts.filter((p) => salonKeys.includes(salonKeyOf(p)));
   if (serviceSlug) posts = posts.filter((p) => matchesService(p, serviceSlug));

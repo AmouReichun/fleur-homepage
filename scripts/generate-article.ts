@@ -331,10 +331,13 @@ export async function generateArticleFromUpload(params: {
   memo: string;
   salonKey: UploadSalonKey;
   date: string;
+  /** アップロード画面で入力した担当者名（あればメモより優先して担当を決める） */
+  staffName?: string;
 }): Promise<GeneratedArticle | null> {
-  const { imagesBase64, memo, salonKey, date } = params;
+  const { imagesBase64, memo, salonKey, date, staffName } = params;
   const salon = UPLOAD_SALONS[salonKey];
-  const stylist = findStylist(salonKey, memo);
+  const fromForm = staffName?.trim() ? findStylist(salonKey, `担当：${staffName.trim()}`) : null;
+  const stylist = fromForm?.name ? fromForm : findStylist(salonKey, memo);
 
   const area = AREA_BY_NAME[salon.name] ?? "高知県";
   const existingTitles = getAllPosts(salon.category)

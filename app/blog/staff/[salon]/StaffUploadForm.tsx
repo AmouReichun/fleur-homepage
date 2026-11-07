@@ -270,7 +270,7 @@ export default function StaffUploadForm({ salonKey, salonLabel, salonSub }: Prop
 
         {/* 名前 */}
         <div className="space-y-2">
-          <p className="text-xs" style={{ color: "#555" }}>名前</p>
+          <p className="text-xs" style={{ color: "#555" }}>施術を担当した人の名前（フルネーム）</p>
           <input
             type="text"
             value={staffName}

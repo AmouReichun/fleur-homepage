@@ -134,6 +134,23 @@ const STAFF_ALIASES: Record<string, string[]> = {
   おざき: ["尾崎あい", "尾崎"],
 };
 
+/** 同じスタッフの表記ゆれ（例：HPの「やすい」と記事の「安井未琉」）をまとめて返す。空白は除く。 */
+export function staffNameVariants(name: string | undefined | null): string[] {
+  const n = (name ?? "").replace(/[\s　]/g, "");
+  if (!n) return [];
+  for (const [key, aliases] of Object.entries(STAFF_ALIASES)) {
+    const all = [key, ...aliases].map((x) => x.replace(/[\s　]/g, ""));
+    if (all.includes(n)) return all.filter((x) => x.length >= 3 || x === key);
+  }
+  return [n];
+}
+
+/** 記事の担当者欄に書く名前（別名表にフルネームがあればそれを使い、既存記事の表記にそろえる） */
+function authorNameOf(name: string): string {
+  const aliases = STAFF_ALIASES[name.replace(/[\s　]/g, "")];
+  return aliases?.[0] ?? name;
+}
+
 /**
  * キャプション/メモから担当者を探す（くじ引きで決めない）。
  * 1) 「担当」「施術」「stylist」などの欄に書かれた名前を優先
@@ -151,7 +168,7 @@ export function detectStaff(salonNameOrKey: string, text: string): { name: strin
     if (family !== m.name && family.length >= 2) list.push(family);
     return list;
   };
-  const pick = (m: (typeof staff)[number]) => ({ name: m.name, role: m.role, history: m.history });
+  const pick = (m: (typeof staff)[number]) => ({ name: authorNameOf(m.name), role: m.role, history: m.history });
 
   // 1) 担当欄
   const fields = [...text.matchAll(/(?:担当|施術|stylist|Stylist|スタイリスト|アイリスト)\s*[：:／/]?\s*([^\s#＃、,。\n]{1,12})/g)].map((x) => norm(x[1]).replace(/(さん|様)$/, ""));

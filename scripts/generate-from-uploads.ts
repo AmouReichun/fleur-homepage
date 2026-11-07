@@ -110,6 +110,7 @@ async function main() {
       memo: upload.memo,
       salonKey: upload.salonKey as UploadSalonKey,
       date,
+      staffName: upload.staffName,
     });
 
     if (!article) {
