@@ -30,7 +30,7 @@ export const organizationSchema = {
   },
   image: `${BASE}/images/admin/hero-1782190629178.jpg`,
   description:
-    "2006年設立。高知市・香南市で美容室2店舗（Riv. by fleur ami・fleur ami）とアイラッシュサロン（Raffine）を展開する美容グループ。艶カラー・髪質改善・白髪ぼかし・縮毛矯正・まつ毛パーマ・眉毛WAXを得意とし、大人女性を中心に高知県内で選ばれ続けている。高知市南川添・はりまや橋・香南市野市町に店舗あり。",
+    "2006年設立。高知市・香南市で美容室2店舗（Riv. by fleur ami・fleur ami）と、2025年に開店したアイラッシュサロン（Raffine）を展開する美容グループ。艶カラー・髪質改善・白髪ぼかし・縮毛矯正・まつ毛パーマ・眉毛WAXを得意とし、大人女性を中心に高知県内で選ばれ続けている。高知市南川添・はりまや橋・香南市野市町に店舗あり。",
   slogan: "髪と目元で、なりたい自分へ。",
   foundingDate: "2006",
   numberOfEmployees: {
@@ -283,6 +283,7 @@ export const raffineSalonSchema = {
   "@id": `${BASE}/salon/raffine`,
   name: "Raffine",
   alternateName: ["まつげとまゆげの専門店Raffine【ラフィーネ】", "まつげとまゆげの専門店 Raffine【ラフィーネ】", "ラフィーネ", "Raffine高知", "ラフィーネ高知", "まつげサロン Raffine"],
+  foundingDate: "2025", // Raffineの開店年（社長確認 2026-11-07）。グループの設立は2006年
   description:
     "高知市はりまや橋のまつげ・眉毛専門サロン。まつげパーマ（パリジェンヌ）・ラッシュリフト・韓国束感まつエク・LEDエクステ・眉毛WAX・メンズ眉WAXに対応。全席半個室。Googleクチコミ4.9（46件）。高知市で口コミ評価が高いアイラッシュサロン。",
   image: {
