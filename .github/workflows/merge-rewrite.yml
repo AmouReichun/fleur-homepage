@@ -1,8 +1,11 @@
 name: Merge Rewrite Parents (manual)
 
 # 統合した記事（merged_into）の親記事を、子記事の要点を取り込んだ決定版に書き直す。
-# 手動実行のみ。parents を空にすると子記事を持つ親すべてが対象。
+# 毎月1日に自動（--only-new）＋手動実行。手動で parents を空にすると子記事を持つ親すべてが対象。
 on:
+  # 毎月1日 9:00 JST（= 0:00 UTC）：新しい材料が入った親記事だけ書き直す
+  schedule:
+    - cron: '0 0 1 * *'
   workflow_dispatch:
     inputs:
       parents:
@@ -30,7 +33,7 @@ jobs:
           cache: 'npm'
       - run: npm ci
       - name: Rewrite parents
-        run: npx tsx scripts/merge-rewrite-parents.ts ${{ github.event.inputs.parents }}
+        run: npx tsx scripts/merge-rewrite-parents.ts ${{ github.event_name == 'schedule' && '--only-new' || github.event.inputs.parents }}
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
       - name: Commit and push

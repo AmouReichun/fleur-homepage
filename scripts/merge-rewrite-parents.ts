@@ -56,7 +56,7 @@ function areaLinksFor(salon: string, title: string): string[] {
   return links;
 }
 
-type Child = { slug: string; title: string; body: string; faq: { q: string; a: string }[] };
+type Child = { slug: string; title: string; body: string; faq: { q: string; a: string }[]; date: string };
 
 function collect(): Map<string, { cat: string; children: Child[] }> {
   const map = new Map<string, { cat: string; children: Child[] }>();
@@ -69,7 +69,7 @@ function collect(): Map<string, { cat: string; children: Child[] }> {
       if (!data.merged_into) continue;
       const p = String(data.merged_into);
       if (!map.has(p)) map.set(p, { cat, children: [] });
-      map.get(p)!.children.push({ slug: f.replace(/\.md$/, ""), title: String(data.title ?? ""), body: content, faq: data.faq ?? [] });
+      map.get(p)!.children.push({ slug: f.replace(/\.md$/, ""), title: String(data.title ?? ""), body: content, faq: data.faq ?? [], date: String(data.date ?? "").slice(0, 10) });
     }
   }
   return map;
@@ -148,11 +148,18 @@ async function main() {
   const args = process.argv.slice(2);
   const catArg = args.find((a) => a.startsWith("--cat="))?.slice(6);
   const only = args.filter((a) => !a.startsWith("--"));
+  const onlyNew = args.includes("--only-new");
   const groups = collect();
   let ok = 0, ng = 0;
   for (const [parent, { cat, children }] of Array.from(groups.entries())) {
     if (only.length && !only.includes(parent)) continue;
     if (catArg && cat !== catArg) continue;
+    // --only-new：前回の書き直し（updated）より新しい材料（子記事）がある親だけ（毎月1日の自動実行用）
+    if (onlyNew) {
+      const pf = path.join(process.cwd(), "content", cat, `${parent}.md`);
+      const upd = String(matter(fs.readFileSync(pf, "utf-8")).data.updated ?? "").slice(0, 10);
+      if (upd && !children.some((c) => c.date > upd)) continue;
+    }
     try { await rewriteParent(parent, cat, children); ok++; } catch (e) { console.error(`  ❌ ${parent}`, e); ng++; }
   }
   console.log(`完了: ${ok}本 / 失敗 ${ng}本`);
