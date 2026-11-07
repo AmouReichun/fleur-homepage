@@ -434,7 +434,7 @@ export const faqPageSchema = {
       name: "fleur GROUPの予約方法を教えてください。",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "各店舗ともホットペッパービューティーまたはLINEでご予約いただけます。Raffineはinstagram DMからも予約可能。Web予約ページ：https://fleur-group.jp/salon",
+        text: "各店舗ともホットペッパービューティー・LINE・InstagramのDMでご予約いただけます。Web予約ページ：https://fleur-group.jp/salon",
       },
     },
     {
@@ -442,7 +442,7 @@ export const faqPageSchema = {
       name: "高知市のRiv. by fleur amiの定休日と営業時間は？",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Riv. by fleur amiの営業時間は9:30〜18:30（最終受付17:00頃）。定休日は月曜・第1第3火曜です。住所：高知市南川添9-21 フルールアミー3 2F。",
+        text: "Riv. by fleur amiの営業時間は9:30〜18:30。定休日は月曜・第1第3火曜です。住所：高知市南川添9-21 フルールアミー3 2F。",
       },
     },
     {
@@ -450,7 +450,7 @@ export const faqPageSchema = {
       name: "香南市fleur amiの定休日と営業時間は？",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "fleur amiの営業時間は9:00〜18:00（最終受付17:00頃）。定休日は月曜・第1第3火曜です。無料駐車場7台完備。住所：香南市野市町西野230。",
+        text: "fleur amiの営業時間は9:00〜18:00。定休日は月曜・第1第3火曜です。無料駐車場7台完備。住所：香南市野市町西野230。",
       },
     },
     {

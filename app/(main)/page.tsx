@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://fleur-group.jp" },
 };
 import { getContentCached } from "@/lib/content";
-import { faqPageSchema, rivSalonSchema, fleuramiSalonSchema, raffineSalonSchema, founderPersonSchema } from "@/lib/structured-data";
+import { rivSalonSchema, fleuramiSalonSchema, raffineSalonSchema, founderPersonSchema } from "@/lib/structured-data";
 import HeroSlideshow from "@/app/components/HeroSlideshow";
 import QuickLinkGrid from "@/app/components/QuickLinkGrid";
 import SalonCards from "@/app/components/SalonCards";
@@ -66,6 +66,12 @@ export default async function HomePage() {
     }))
     .filter((g) => g.items.length > 0);
   const commonFaqs = topFaq.filter((f) => !f.salon);
+  // 構造化データは「画面に出ているFAQ」と同じ中身にする（表示と食い違うとAI・Googleが信用しない）
+  const topFaqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: topFaq.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
+  };
 
   // ブログ統合: ローカルの記事メタから直接取得
   const allPosts = getAllPostsMeta();
@@ -82,7 +88,7 @@ export default async function HomePage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(founderPersonSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(topFaqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(rivSalonSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(fleuramiSalonSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(raffineSalonSchema) }} />
