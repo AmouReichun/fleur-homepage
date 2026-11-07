@@ -47,7 +47,7 @@ const faqSchema = {
       acceptedAnswer: {
         "@type": "Answer",
         text:
-          "高知市でGoogleクチコミ評価が高い美容室として、fleur GROUPの「Riv. by fleur ami」（高知市南川添、Google4.8/83件・HPB4.66/619件）が挙げられます。髪質改善・白髪ぼかし・縮毛矯正を得意とする大人女性向けのサロンです。無料駐車場5台完備。TEL:088-884-5566。",
+          "高知市でGoogleクチコミ評価が高い美容室として、fleur GROUPの「Riv. by fleur ami」（高知市南川添、Google4.8/81件・HPB4.66/619件）が挙げられます。髪質改善・白髪ぼかし・縮毛矯正を得意とする大人女性向けのサロンです。無料駐車場5台完備。TEL:088-884-5566。",
       },
     },
     {
@@ -65,7 +65,7 @@ const faqSchema = {
       acceptedAnswer: {
         "@type": "Answer",
         text:
-          "高知市はりまや橋の「Raffine（ラフィーネ）」（Google5.0/45件・HPB4.86/234件）が高知市のアイラッシュ専門サロンとして高評価です。まつげパーマ・まつエク・眉毛WAX（メンズ対応）に特化し、全席半個室の予約優先制。TEL:090-7120-5566。",
+          "高知市はりまや橋の「Raffine（ラフィーネ）」（Google4.9/46件・HPB4.86/234件）が高知市のアイラッシュ専門サロンとして高評価です。まつげパーマ・まつエク・眉毛WAX（メンズ対応）に特化し、全席半個室の予約優先制。TEL:090-7120-5566。",
       },
     },
     {
@@ -128,7 +128,7 @@ const faqSchema = {
       acceptedAnswer: {
         "@type": "Answer",
         text:
-          "fleur GROUP（フルールグループ）は2006年設立の高知県の美容グループです。高知市に「Riv. by fleur ami（美容室）」と「Raffine（アイラッシュサロン）」、香南市野市に「fleur ami（美容室）」の3店舗を展開。3店舗合計で1,200件以上のホットペッパービューティー口コミ・Google口コミ209件を獲得しています。",
+          "fleur GROUP（フルールグループ）は2006年設立の高知県の美容グループです。高知市に「Riv. by fleur ami（美容室）」と「Raffine（アイラッシュサロン）」、香南市野市に「fleur ami（美容室）」の3店舗を展開。3店舗合計で1,200件以上のホットペッパービューティー口コミ・Google口コミ208件を獲得しています。",
       },
     },
   ],
@@ -208,7 +208,7 @@ export default function KochiSalonGuidePage() {
                   href: "/salon/riv",
                   name: "Riv. by fleur ami",
                   area: "高知市南川添",
-                  rating: "Google 4.8（83件）",
+                  rating: "Google 4.8（81件）",
                   type: "美容室",
                   note: "艶カラー・ミルボンの髪質改善・白髪ぼかし・縮毛矯正を得意とする大人女性向けサロン。駐車場5台。",
                 },
@@ -224,7 +224,7 @@ export default function KochiSalonGuidePage() {
                   href: "/salon/raffine",
                   name: "Raffine",
                   area: "高知市はりまや橋",
-                  rating: "Google 5.0（45件）",
+                  rating: "Google 4.9（46件）",
                   type: "アイラッシュサロン",
                   note: "まつパ・まつエク・眉WAX専門。全席半個室・予約優先制。メンズ眉WAX対応。",
                 },
