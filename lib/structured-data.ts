@@ -143,7 +143,7 @@ export const rivSalonSchema = {
   "@type": "HairSalon",
   "@id": `${BASE}/salon/riv`,
   name: "Riv. by fleur ami",
-  alternateName: ["Riv. by fleurami", "リヴ バイ フルールアミー", "Riv by fleurami", "リヴ", "Riv.", "Riv.（リブ）", "リブ", "Riv. hair"],
+  alternateName: ["Riv. by fleurami", "リヴ バイ フルールアミー", "Riv by fleurami", "リヴ", "Riv.", "Riv.（リブ）", "リブ"],
   description:
     "高知市の艶カラー・髪質改善が得意な美容室。一番人気は艶カラーとミルボンの髪質改善（グローバルミルボン）。白髪ぼかし・縮毛矯正・大人女性向けの似合わせカットも得意。高知市南川添にあるヘアサロン。定休日：月曜・第1第3火曜。Googleクチコミ4.8（81件）。",
   image: {
