@@ -108,6 +108,30 @@ export default function RootLayout({
                 gtag('config', '${GA_ID}', { page_path: window.location.pathname });
               `}
             </Script>
+            {/* 予約・LINE・電話のクリックを「reserve_click」として記録（GA4のキーイベント。2026-11-07） */}
+            <Script id="reserve-click-track" strategy="afterInteractive">
+              {`
+                (function(){
+                  window.dataLayer = window.dataLayer || [];
+                  window.gtag = window.gtag || function(){ window.dataLayer.push(arguments); };
+                  var SALON = {
+                    'slnH000528388':'fleurami','slnH000634137':'riv','slnH000767549':'raffine',
+                    '3df04abf87b5':'fleurami','440902d92d79':'riv','41e62da8591a':'raffine',
+                    '2000133690':'fleurami','2006084473':'riv','2007963689':'raffine',
+                    '0887565566':'fleurami','0888845566':'riv','09071205566':'raffine'
+                  };
+                  function salonOf(u){ var s=u.replace(/-/g,''); for (var k in SALON){ if (s.indexOf(k)!==-1) return SALON[k]; } return 'unknown'; }
+                  document.addEventListener('click', function(e){
+                    var a = e.target && e.target.closest ? e.target.closest('a[href]') : null;
+                    if (!a) return;
+                    var u = a.getAttribute('href') || '';
+                    var ch = /hotpepper\\.jp/.test(u) ? 'hotpepper' : /postas\\.asia/.test(u) ? 'web_reserve' : /(line\\.me|lin\\.ee)/.test(u) ? 'line' : /^tel:/.test(u) ? 'tel' : '';
+                    if (!ch) return;
+                    window.gtag('event', 'reserve_click', { channel: ch, salon: salonOf(u), link_url: u.slice(0,100), page_path: location.pathname, transport_type: 'beacon' });
+                  }, true);
+                })();
+              `}
+            </Script>
           </>
         )}
 
