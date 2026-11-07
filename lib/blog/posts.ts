@@ -23,6 +23,8 @@ export type HowToStep = { name: string; text: string };
 
 export type PostMeta = {
   title: string;
+  /** カードのリンク先slug（親記事へまとめた実例は親記事）。未指定なら slug */
+  linkSlug?: string;
   /** 検索結果用の短いタイトル（任意）。なければ seoTitle() が自動で作る */
   seoTitle?: string;
   slug: string;
@@ -197,4 +199,24 @@ export function getAllTags(category: Category): string[] {
   const set = new Set<string>();
   for (const p of posts) for (const t of p.tags) set.add(t);
   return Array.from(set).sort();
+}
+
+
+/**
+ * 親記事へまとめた「新しい実例」（2026-11-07以降に、事実だけのルールで作られたスタッフ写真・インスタの実例）。
+ * 記事ページは非公開（親記事へ転送）だが、写真は本物の施術実例なので、地域×メニューページの「最新の施術事例」には出す。
+ * リンク先は親記事。薬機法フラグ付き・サムネなしは除外。
+ */
+export const MERGED_CASE_SINCE = "2026-11-07";
+export function getMergedCaseMetas(category: Category): PostMeta[] {
+  const out: PostMeta[] = [];
+  for (const slug of getSlugs(category)) {
+    const raw = fs.readFileSync(path.join(contentDir, category, `${slug}.md`), "utf8");
+    const { data } = matter(raw);
+    if (!data.merged_into || data.yakkihou_flag === true || !data.thumbnail) continue;
+    if (String(data.date ?? "") < MERGED_CASE_SINCE) continue;
+    const meta = getPostMeta(category, slug);
+    out.push({ ...meta, linkSlug: String(data.merged_into) });
+  }
+  return out;
 }

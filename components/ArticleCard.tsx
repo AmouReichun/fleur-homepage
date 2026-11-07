@@ -15,7 +15,7 @@ type Props = {
 
 export default function ArticleCard({ post, world, priority = false }: Props) {
   const isEyelash = world === "eyelash";
-  const href = `/blog/${world}/${post.slug}`;
+  const href = `/blog/${world}/${post.linkSlug ?? post.slug}`;
 
   if (isEyelash) {
     return (
