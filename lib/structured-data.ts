@@ -283,7 +283,7 @@ export const raffineSalonSchema = {
   "@id": `${BASE}/salon/raffine`,
   name: "Raffine",
   alternateName: ["まつげとまゆげの専門店Raffine【ラフィーネ】", "まつげとまゆげの専門店 Raffine【ラフィーネ】", "ラフィーネ", "Raffine高知", "ラフィーネ高知", "まつげサロン Raffine"],
-  foundingDate: "2025", // Raffineの開店年（社長確認 2026-11-07）。グループの設立は2006年
+  foundingDate: "2025-08-15", // Raffineのオープン日（社長確認 2026-11-07。会社＝フルール・ロータス設立は2025-05-29）。グループの設立は2006年
   description:
     "高知市はりまや橋のまつげ・眉毛専門サロン。まつげパーマ（パリジェンヌ）・ラッシュリフト・韓国束感まつエク・LEDエクステ・眉毛WAX・メンズ眉WAXに対応。全席半個室。Googleクチコミ4.9（46件）。高知市で口コミ評価が高いアイラッシュサロン。",
   image: {
