@@ -1,3 +1,4 @@
+import { staffNameVariants } from "@/lib/blog/article-prompt";
 import { Metadata } from "next";
 import { seoTitle } from "@/lib/blog/seo-title";
 import { salonDisplayName } from "@/lib/salon-display";
@@ -63,7 +64,7 @@ export default async function EyelashArticlePage({ params }: Props) {
   const linkedHtml = autoLinkBody(post.contentHtml, "eyelash", validTags, area);
 
   const staffMember = post.author
-    ? getContent().staff.find((s) => normalizeName(s.name) === normalizeName(post.author))
+    ? getContent().staff.find((s) => staffNameVariants(s.name).includes(normalizeName(post.author)))
     : undefined;
   const staffSlug = staffMember?.slug;
   const authorLink = staffSlug ? `/staff/${staffSlug}` : `/blog/author/${encodeURIComponent(post.author)}`;

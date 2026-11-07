@@ -1,3 +1,4 @@
+import { staffNameVariants } from "@/lib/blog/article-prompt";
 import { Metadata } from "next";
 import { seoTitle } from "@/lib/blog/seo-title";
 import { salonDisplayName, tagDisplayName } from "@/lib/salon-display";
@@ -83,7 +84,7 @@ export default async function HairArticlePage({ params }: Props) {
 
   // 担当スタッフを氏名（表記ゆれ吸収）で照合し、/staff/{slug} のEntityへ紐付ける
   const staffMember = post.author
-    ? getContent().staff.find((s) => normalizeName(s.name) === normalizeName(post.author))
+    ? getContent().staff.find((s) => staffNameVariants(s.name).includes(normalizeName(post.author)))
     : undefined;
   const staffSlug = staffMember?.slug;
   const staffUrl = staffSlug ? `${SITE_BASE}/staff/${staffSlug}` : undefined;
