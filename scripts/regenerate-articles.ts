@@ -28,7 +28,7 @@ const fetched: IgMedia[] = JSON.parse(fs.readFileSync(FETCHED_PATH, "utf-8"));
 const fetchedById = new Map(fetched.map((m) => [m.id, m]));
 
 // 対象ファイルを収集
-const targets: Array<{ filePath: string; slug: string; media: IgMedia; keepPublished: boolean }> = [];
+const targets: Array<{ filePath: string; slug: string; media: IgMedia; keepPublished: boolean; mergedInto?: string }> = [];
 
 for (const dir of CONTENT_DIRS) {
   if (!fs.existsSync(dir)) continue;
@@ -47,7 +47,10 @@ for (const dir of CONTENT_DIRS) {
     // 公開済み（draft: true がない）なら再生成後もそのまま公開を維持
     const keepPublished = !/^draft:\s*true/m.test(raw);
 
-    targets.push({ filePath, slug: slugMatch[1], media, keepPublished });
+    // 親記事へまとめた記事は目印（merged_into）を引き継ぐ
+    const mergedInto = raw.match(/^merged_into:\s*"([^"]+)"/m)?.[1];
+
+    targets.push({ filePath, slug: slugMatch[1], media, keepPublished, mergedInto });
   }
 }
 
@@ -56,7 +59,7 @@ async function main() {
 
   let done = 0, failed = 0;
 
-  for (const { filePath, slug, media, keepPublished } of targets) {
+  for (const { filePath, slug, media, keepPublished, mergedInto } of targets) {
     const article = await generateArticle(media);
     if (!article) {
       console.error(`  ❌ 失敗: ${slug}`);
@@ -76,6 +79,7 @@ async function main() {
 
     // draft フラグ：公開済みはそのまま公開維持、下書きは下書きのまま
     const draftLine = keepPublished ? "" : "draft: true\n";
+    const mergedLine = mergedInto ? `merged_into: "${mergedInto}"\n` : "";
     const yakkihouLines = article.yakkihou_flag
       ? `yakkihou_flag: true\nyakkihou_words: [${article.yakkihou_words.map((w) => `"${w}"`).join(", ")}]\n`
       : "";
@@ -83,7 +87,7 @@ async function main() {
     const newContent = `---
 title: "${article.title.replace(/"/g, '\\"')}"
 slug: "${slug}"
-category: "${article.category}"
+${mergedLine}category: "${article.category}"
 salon: "${article.salon}"
 date: "${article.date}"
 excerpt: "${article.excerpt.replace(/"/g, '\\"')}"

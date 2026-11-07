@@ -65,6 +65,7 @@ function collectPublishedArticles(): Article[] {
         const raw = fs.readFileSync(path.join(dir, name), "utf-8");
         const { data } = matter(raw);
         if (data.draft === true) continue;
+        if (data.merged_into) continue; // 親記事へまとめた記事は投稿しない
         const salonKey = SALON_NAME_TO_KEY[data.salon as string];
         if (!salonKey) {
           console.warn(`  ⚠ 未知のsalon名 "${data.salon}" (${name}) — SALON_NAME_TO_KEY に追加が必要`);

@@ -87,7 +87,7 @@ function buildArticleIndex(): { byPage: Map<string, ArticleMeta>; all: ArticleMe
       const filePath = path.join(dir, file);
       const raw = fs.readFileSync(filePath, "utf-8");
       const { data, content } = matter(raw);
-      if (!data.slug || data.draft) continue;
+      if (!data.slug || data.draft || data.merged_into) continue; // 親へまとめた記事は書き直し対象にしない
 
       const meta: ArticleMeta = {
         slug: data.slug,
