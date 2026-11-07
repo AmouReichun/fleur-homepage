@@ -49,6 +49,10 @@ async function ga() {
     bySourceMonth: await run(["yearMonth", "sessionSource"], ["sessions"], day(180)),
     landingBySource: await run(["sessionSource", "landingPage"], ["sessions", "engagedSessions", "keyEvents"]),
     events: await run(["eventName"], ["eventCount"]),
+    // 予約・LINE・電話クリック（2026-11-07〜）を流入元×店舗×経路で
+    reserveBySource: await run(["sessionSource", "customEvent:salon", "customEvent:channel"], ["eventCount"], day(90), {
+      dimensionFilter: { filter: { fieldName: "eventName", stringFilter: { value: "reserve_click" } } },
+    }).catch((e: Error) => ({ error: e.message })),
     outbound: await run(["eventName", "linkUrl"], ["eventCount"], day(90), {
       dimensionFilter: { filter: { fieldName: "eventName", stringFilter: { value: "click" } } },
     }).catch((e: Error) => ({ error: e.message })),
