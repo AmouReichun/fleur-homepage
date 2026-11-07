@@ -47,7 +47,7 @@ const faqSchema = {
       name: "高知市で眉毛WAXができるサロンはありますか？",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Raffine（ラフィーネ、高知市はりまや町1-4-8 TNはりまやビル3F TEL: 090-7120-5566）が眉毛WAX・アイブロウデザインに対応しています。料金は3,300円〜（税込）、施術時間は30〜40分が目安です。まつ毛パーマ（ラッシュリフト）とのセット施術も可能です。",
+        text: "Raffine（ラフィーネ、高知市はりまや町1-4-8 TNはりまやビル3F TEL: 090-7120-5566）が眉毛WAX・アイブロウデザインに対応しています。料金は美眉デザインWAX 5,500円（税込・通常料金）、施術時間は30〜40分が目安です。まつ毛パーマ（ラッシュリフト）とのセット施術も可能です。",
       },
     },
     {
@@ -163,15 +163,15 @@ export default function KochiMayuSalonGuidePage() {
                 <thead>
                   <tr className="bg-site-light">
                     <th className="text-left p-3 text-site-text font-medium border-b border-site-greige w-1/2">メニュー</th>
-                    <th className="text-left p-3 text-site-accent font-medium border-b border-site-greige">料金（税込・目安）</th>
+                    <th className="text-left p-3 text-site-accent font-medium border-b border-site-greige">料金（税込・通常料金）</th>
                     <th className="text-left p-3 text-site-text font-medium border-b border-site-greige">時間</th>
                   </tr>
                 </thead>
                 <tbody>
                   {[
-                    ["眉毛WAX（アイブロウ）", "3,300円〜", "30〜40分"],
-                    ["ラッシュリフト（まつ毛パーマ）", "6,600円〜", "60〜80分"],
-                    ["眉毛WAX＋ラッシュリフト", "お問い合わせ", "90〜100分"],
+                    ["美眉デザインWAX（アイブロウ・メンズも同料金）", "5,500円", "30〜40分"],
+                    ["ラッシュリフト（まつ毛パーマ）", "5,500円", "60〜80分"],
+                    ["美眉デザインWAX＋ラッシュリフト", "11,000円", "90〜100分"],
                   ].map(([menu, price, time]) => (
                     <tr key={menu} className="border-b border-site-greige last:border-0">
                       <td className="p-3 text-site-text">{menu}</td>
@@ -182,7 +182,7 @@ export default function KochiMayuSalonGuidePage() {
                 </tbody>
               </table>
             </div>
-            <p className="text-xs text-site-muted mt-2">※料金はデザイン・状態により変動します。詳細はお問い合わせください。</p>
+            <p className="text-xs text-site-muted mt-2">※Raffineのメニュー表の通常料金（2026年11月時点）。セットは単品料金の合計です。詳細はお問い合わせください。</p>
           </section>
 
           <section>

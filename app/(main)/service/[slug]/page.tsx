@@ -68,7 +68,8 @@ export default async function ServicePage({ params }: Props) {
       ? {
           offers: areaExtras.flatMap(({ extra }) =>
             (extra.price?.rows ?? [])
-              .map((r) => ({ r, n: Number(r.price.replace(/[^0-9]/g, "")) }))
+              // 最初の「〇〇円」だけを数字にする（「1枚 440円〜」「4,000円〜／3,850円〜」で数字がつながらないように）
+              .map((r) => ({ r, n: Number((r.price.match(/([0-9][0-9,]*)円/)?.[1] ?? "").replace(/,/g, "")) }))
               .filter(({ n }) => n >= 1000)
               .map(({ r, n }) => ({
                 "@type": "Offer",

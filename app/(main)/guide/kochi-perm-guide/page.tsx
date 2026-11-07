@@ -103,7 +103,7 @@ const faqSchema = {
       acceptedAnswer: {
         "@type": "Answer",
         text:
-          "fleur GROUP（2026年9月時点）の縮毛矯正の税込料金は15,000〜22,000円前後が目安です。髪の長さ・ダメージ状態・追加トリートメントの有無によって異なります。詳細はメニューページまたはホットペッパービューティーでご確認ください。",
+          "fleur GROUP（Riv. by fleur ami・fleur ami）の縮毛矯正は、ショート（カット込み）16,800円〜です。ロング料金（M＋2,500円／L＋3,500円／LL＋5,000円）と、髪質改善トリートメントを追加する場合はその料金が別途かかります（通常料金・2026年11月時点・税込）。詳細はメニューページでご確認ください。",
       },
     },
     {
@@ -254,18 +254,18 @@ export default function KochiPermGuidePage() {
                 <thead>
                   <tr className="bg-site-light">
                     <th className="text-left p-3 text-site-text font-medium border-b border-site-greige">施術</th>
-                    <th className="text-left p-3 text-site-text font-medium border-b border-site-greige">料金目安（税込）</th>
+                    <th className="text-left p-3 text-site-text font-medium border-b border-site-greige">料金（税込）</th>
                     <th className="text-left p-3 text-site-text font-medium border-b border-site-greige">所要時間</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-site-greige">
                   {[
-                    { menu: "縮毛矯正", price: "15,000〜22,000円", time: "3〜5時間" },
-                    { menu: "縮毛矯正＋カット", price: "18,000〜26,000円", time: "3.5〜5.5時間" },
-                    { menu: "髪質改善トリートメント", price: "10,000〜18,000円", time: "2〜3時間" },
-                    { menu: "パーマ（コールド）", price: "10,000〜15,000円", time: "2〜3時間" },
-                    { menu: "デジタルパーマ", price: "13,000〜18,000円", time: "3〜4時間" },
-                    { menu: "ツイストパーマ＋カット（メンズ）", price: "12,000〜16,000円", time: "2〜3時間" },
+                    { menu: "縮毛矯正＋カット（ショート）", price: "16,800円〜", time: "3〜5時間" },
+                    { menu: "縮毛矯正＋カット＋髪質改善TR（GM）", price: "23,800円〜", time: "3.5〜5.5時間" },
+                    { menu: "髪質改善トリートメント（GM）", price: "7,000円", time: "2〜3時間" },
+                    { menu: "パーマ", price: "12,000円", time: "2〜3時間" },
+                    { menu: "デジタルパーマ", price: "メニューページをご覧ください", time: "3〜4時間" },
+                    { menu: "ツイストスパイラルパーマ＋カット（メンズ）", price: "15,070円", time: "2〜3時間" },
                   ].map((row) => (
                     <tr key={row.menu}>
                       <td className="p-3 text-site-text">{row.menu}</td>
@@ -276,7 +276,7 @@ export default function KochiPermGuidePage() {
                 </tbody>
               </table>
             </div>
-            <p className="text-xs text-site-muted mt-3">※料金は2026年9月時点の目安です。髪の長さ・状態によって異なります。詳細はメニューページをご確認ください。</p>
+            <p className="text-xs text-site-muted mt-3">※fleur GROUP（Riv. by fleur ami・fleur ami）の通常料金（2026年11月時点）。縮毛矯正はロング料金別途（M＋2,500円／L＋3,500円／LL＋5,000円）。詳細は<Link href="/menu" className="underline hover:text-site-accent">メニューページ</Link>をご確認ください。</p>
           </section>
 
           <section id="perm-faq">

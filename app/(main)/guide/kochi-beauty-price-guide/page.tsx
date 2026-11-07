@@ -49,7 +49,7 @@ const faqSchema = {
       acceptedAnswer: {
         "@type": "Answer",
         text:
-          "高知市の美容室のカット料金は、シャンプー・ブロー込みで3,500〜6,000円程度が目安です。fleur GROUPのRiv. by fleur amiでは4,500〜5,500円前後。スタイリストの指名・経験年数によって料金が異なります。",
+          "高知市の美容室のカット料金は、シャンプー・ブロー込みで3,500〜6,000円程度が目安です。fleur GROUPのRiv. by fleur ami・fleur amiでは似合わせカット4,700円〜（高校生4,000円〜／中学生以下3,850円〜・通常料金）です。スタイリストの指名・経験年数によって料金が異なります。",
       },
     },
     {
@@ -58,7 +58,7 @@ const faqSchema = {
       acceptedAnswer: {
         "@type": "Answer",
         text:
-          "高知市の美容室のヘアカラー（リタッチ・全体カラー）は7,000〜15,000円程度が目安です。白髪ぼかしハイライトや特殊カラーはさらに高くなる場合があります。fleur GROUPでは艶カラー・透明感カラーが8,000〜14,000円前後（長さによる）です。",
+          "高知市の美容室のヘアカラー（リタッチ・全体カラー）は7,000〜15,000円程度が目安です。白髪ぼかしハイライトや特殊カラーはさらに高くなる場合があります。fleur GROUPでは艶カラー（ベストマッチングカラー）が7,000円〜、艶カラー＋カットが11,700円〜です（通常料金。ロング料金 M＋500円／L＋1,000円／LL＋1,500円）。",
       },
     },
     {
@@ -67,7 +67,7 @@ const faqSchema = {
       acceptedAnswer: {
         "@type": "Answer",
         text:
-          "高知市の縮毛矯正料金は15,000〜25,000円前後が相場です。髪の長さ・状態・施術範囲（全体・前髪のみなど）によって変わります。fleur GROUPでは15,000〜22,000円程度を目安にしています。詳細はホットペッパービューティーか予約時にご確認ください。",
+          "高知市の縮毛矯正料金は15,000〜25,000円前後が相場です。髪の長さ・状態・施術範囲（全体・前髪のみなど）によって変わります。fleur GROUPでは縮毛矯正（ショート・カット込み）が16,800円〜で、ロング料金（M＋2,500円／L＋3,500円／LL＋5,000円）が別途かかります。詳細はメニューページをご確認ください。",
       },
     },
     {
@@ -76,7 +76,7 @@ const faqSchema = {
       acceptedAnswer: {
         "@type": "Answer",
         text:
-          "高知市・香南市の髪質改善トリートメント（酸熱トリートメント）の料金目安はショート〜ミディアムで12,000〜18,000円程度です。fleur GROUPのRiv. by fleur ami・fleur amiでも同程度の料金となっています。髪質改善縮毛矯正は25,000〜35,000円前後が目安です。",
+          "高知市・香南市の髪質改善トリートメント（酸熱トリートメント）の料金目安はショート〜ミディアムで12,000〜18,000円程度、髪質改善縮毛矯正は25,000〜35,000円前後が相場です。fleur GROUPのRiv. by fleur ami・fleur amiでは、髪質改善トリートメント（グローバルミルボン プレミアム）7,000円、髪質改善TR＋カット11,700円〜、縮毛矯正＋カット＋髪質改善（GM）23,800円〜です（通常料金）。",
       },
     },
     {
@@ -85,7 +85,7 @@ const faqSchema = {
       acceptedAnswer: {
         "@type": "Answer",
         text:
-          "高知市のアイラッシュサロンのまつげパーマ（ラッシュリフト・パリジャンリフト）料金は6,000〜10,000円前後が目安です。Raffine（高知市はりまや橋）ではラッシュリフトが7,000〜9,000円程度。まつエクとの組み合わせ（エクパーマ）は10,000円台が多いです。",
+          "高知市のアイラッシュサロンのまつげパーマ（ラッシュリフト・パリジャンリフト）料金は6,000〜10,000円前後が目安です。Raffine（高知市はりまや橋）ではラッシュリフトが5,500円、特殊ラッシュリフト（パリジェンヌ・メーテルなど）が6,000円です（通常料金）。まつエクとの組み合わせ（エクパーマ）は、Raffineではフラットラッシュ60本エクパーマ8,000円〜です。",
       },
     },
     {
@@ -94,7 +94,7 @@ const faqSchema = {
       acceptedAnswer: {
         "@type": "Answer",
         text:
-          "高知市のまつげエクステ料金は初回フル装着で9,000〜18,000円、リペア（付け足し）で6,000〜10,000円が目安です。Raffine（高知市はりまや橋）では韓国束感・フラットラッシュ・LEDエクステを提供しています。詳細な料金はホットペッパービューティーでご確認ください。",
+          "高知市のまつげエクステ料金は初回フル装着で9,000〜18,000円、リペア（付け足し）で6,000〜10,000円が目安です。Raffine（高知市はりまや橋）では韓国束感・フラットラッシュ・LEDエクステを提供しており、フラットラッシュは40本4,000円〜180本8,800円です（通常料金）。詳細はメニューページをご確認ください。",
       },
     },
     {
@@ -103,7 +103,7 @@ const faqSchema = {
       acceptedAnswer: {
         "@type": "Answer",
         text:
-          "高知市の眉毛WAX料金は3,000〜5,000円前後が目安です。Raffine（高知市はりまや橋）では眉毛WAX単品とまつげメニューとのセット割引もあります。メンズ眉WAXも対応しています。",
+          "高知市の眉毛WAX料金は3,000〜5,000円前後が目安です。Raffine（高知市はりまや橋）では美眉デザインWAXが5,500円（メンズも同料金・通常料金）で、まつげメニューと同じ日の施術も可能です。",
       },
     },
     {
@@ -112,7 +112,7 @@ const faqSchema = {
       acceptedAnswer: {
         "@type": "Answer",
         text:
-          "高知市の美容室のヘッドスパ料金は3,000〜6,000円前後（20〜40分）が目安です。fleur GROUPのRiv. by fleur amiではヘッドスパ単品から対応しています。カットやカラーとのセット施術も可能です。",
+          "高知市の美容室のヘッドスパ料金は3,000〜6,000円前後（20〜40分）が目安です。fleur GROUPのRiv. by fleur ami・fleur amiでは特許リフトアップスパ4,200円、クレンジングスパ3,500円、プチスパ1,100円です（通常料金）。カットやカラーと同じ日の施術も可能です。",
       },
     },
     {
@@ -130,7 +130,7 @@ const faqSchema = {
       acceptedAnswer: {
         "@type": "Answer",
         text:
-          "高知市の美容室でカット＋カラーセットは12,000〜20,000円前後が目安です。fleur GROUPではカット＋艶カラー（セット）で13,000〜19,000円程度（長さ・スタイリストによる）。ホットペッパービューティーにクーポンが掲載されている場合があります。",
+          "高知市の美容室でカット＋カラーセットは12,000〜20,000円前後が目安です。fleur GROUPでは艶カラー＋似合わせカットで11,700円〜です（通常料金。ロング料金 M＋500円／L＋1,000円／LL＋1,500円）。",
       },
     },
   ],
@@ -159,13 +159,26 @@ const HAIR_PRICES = [
   { menu: "ヘッドスパ（30分）", short: "—", mid: "3,500〜5,000", long: "—" },
 ];
 
+// fleur GROUP美容室の通常料金（data/content.json の menus の定価とその合計）
+const OUR_HAIR_PRICES = [
+  { menu: "似合わせカット（高校生／中学生以下）", price: "4,700〜（4,000〜／3,850〜）" },
+  { menu: "艶カラー（ベストマッチングカラー）", price: "7,000〜" },
+  { menu: "艶カラー＋カット", price: "11,700〜" },
+  { menu: "白髪ぼかし（ハイライト5枚まで）＋カラー＋カット", price: "13,900〜" },
+  { menu: "縮毛矯正（ショート・カット込み）", price: "16,800〜" },
+  { menu: "髪質改善トリートメント（GM）＋カット", price: "11,700〜" },
+  { menu: "パーマ", price: "12,000" },
+  { menu: "ヘッドスパ（プチスパ〜特許リフトアップスパ）", price: "1,100〜4,200" },
+];
+
+// Raffineの通常料金（data/content.json の menus.raffine の定価）
 const EYELASH_PRICES = [
-  { menu: "まつげパーマ（ラッシュリフト）", price: "7,000〜9,000" },
-  { menu: "パリジャンリフト", price: "8,000〜10,000" },
-  { menu: "まつエク・フラットラッシュ（80本〜）", price: "9,000〜13,000" },
-  { menu: "韓国束感まつエク", price: "10,000〜16,000" },
-  { menu: "エクパーマ（まつパ+エクステ）", price: "11,000〜15,000" },
-  { menu: "眉毛WAX（アイブロウ）", price: "3,000〜5,000" },
+  { menu: "まつげパーマ（ラッシュリフト）", price: "5,500" },
+  { menu: "特殊ラッシュリフト（パリジェンヌ・メーテルなど）", price: "6,000" },
+  { menu: "下まつげラッシュリフト", price: "2,200" },
+  { menu: "まつエク・フラットラッシュ（40本〜180本）", price: "4,000〜8,800" },
+  { menu: "エクパーマ（フラットラッシュ60本〜180本＋エクパーマ）", price: "8,000〜12,300" },
+  { menu: "美眉デザインWAX（メンズも同料金）", price: "5,500" },
 ];
 
 export default function KochiBeautyPriceGuidePage() {
@@ -202,15 +215,15 @@ export default function KochiBeautyPriceGuidePage() {
         <section id="price-intro">
           <p className="text-sm text-site-muted leading-relaxed">
             高知市・香南市で美容室やアイラッシュサロンを検討している方のために、施術ごとの料金目安をまとめました。
-            fleur GROUP（Riv. by fleur ami・fleur ami・Raffine）での実際の料金水準を参考に、高知の相場感をご確認ください。
-            料金は髪の長さ・状態・スタイリストによって変わります。予約前にホットペッパービューティーでクーポン・詳細料金をご確認ください。
+            高知の一般的な相場と、fleur GROUP（Riv. by fleur ami・fleur ami・Raffine）の通常料金（定価）を分けて掲載しています。
+            料金は髪の長さ・状態・スタイリストによって変わります。fleur GROUPの詳しい料金は<Link href="/menu" className="underline hover:text-site-accent">メニューページ</Link>をご覧ください。
           </p>
         </section>
 
         {/* ヘアメニュー料金表 */}
         <section>
           <h2 className="font-serif text-xl font-semibold text-site-text mb-4">美容室（ヘア）料金目安</h2>
-          <p className="text-xs text-site-muted mb-3">※税込・目安料金（2026年）。長さ・状態により変動します。</p>
+          <p className="text-xs text-site-muted mb-3">※高知の一般的な相場（税込・目安・2026年）。長さ・状態により変動します。fleur GROUPの料金は下の表をご覧ください。</p>
           <div className="overflow-x-auto">
             <table className="w-full text-xs border-collapse border border-site-greige">
               <thead>
@@ -236,16 +249,41 @@ export default function KochiBeautyPriceGuidePage() {
           <p className="text-xs text-site-muted mt-2">※ カラーはリタッチ（根元のみ）の場合はショート・ミディアム問わず6,000〜8,000円前後になることもあります。</p>
         </section>
 
-        {/* アイラッシュ料金表 */}
+        {/* fleur GROUP 美容室の通常料金（定価） */}
         <section>
-          <h2 className="font-serif text-xl font-semibold text-site-text mb-4">アイラッシュ・眉毛メニュー料金目安</h2>
-          <p className="text-xs text-site-muted mb-3">※税込・目安料金（2026年）。Raffine（高知市はりまや橋）の水準を参考に記載。</p>
+          <h2 className="font-serif text-xl font-semibold text-site-text mb-4">fleur GROUP美容室（Riv. by fleur ami・fleur ami）の通常料金</h2>
+          <p className="text-xs text-site-muted mb-3">※税込・通常料金（2026年11月時点）。2店とも同じ料金です。</p>
           <div className="overflow-x-auto">
             <table className="w-full text-xs border-collapse border border-site-greige">
               <thead>
                 <tr className="bg-site-light">
                   <th className="border border-site-greige px-3 py-2 text-left text-site-text">メニュー</th>
-                  <th className="border border-site-greige px-3 py-2 text-center text-site-text">目安料金（円）</th>
+                  <th className="border border-site-greige px-3 py-2 text-center text-site-text">料金（円）</th>
+                </tr>
+              </thead>
+              <tbody className="text-site-muted">
+                {OUR_HAIR_PRICES.map((row, i) => (
+                  <tr key={i} className={i % 2 === 1 ? "bg-site-light" : ""}>
+                    <td className="border border-site-greige px-3 py-2 font-medium text-site-text">{row.menu}</td>
+                    <td className="border border-site-greige px-3 py-2 text-center">{row.price}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="text-xs text-site-muted mt-2">※ ロング料金：カラー M＋500円／L＋1,000円／LL＋1,500円、縮毛矯正 M＋2,500円／L＋3,500円／LL＋5,000円。</p>
+        </section>
+
+        {/* アイラッシュ料金表 */}
+        <section>
+          <h2 className="font-serif text-xl font-semibold text-site-text mb-4">Raffine（アイラッシュ・眉毛）の通常料金</h2>
+          <p className="text-xs text-site-muted mb-3">※税込・通常料金（2026年11月時点）。Raffine（高知市はりまや橋）のメニュー表の料金です。</p>
+          <div className="overflow-x-auto">
+            <table className="w-full text-xs border-collapse border border-site-greige">
+              <thead>
+                <tr className="bg-site-light">
+                  <th className="border border-site-greige px-3 py-2 text-left text-site-text">メニュー</th>
+                  <th className="border border-site-greige px-3 py-2 text-center text-site-text">料金（円）</th>
                 </tr>
               </thead>
               <tbody className="text-site-muted">
@@ -294,27 +332,27 @@ export default function KochiBeautyPriceGuidePage() {
             {[
               {
                 q: "高知市の美容室のカット料金はいくらですか？",
-                a: "シャンプー・ブロー込みで3,500〜6,000円程度が目安です。fleur GROUPのRiv. by fleur amiでは4,500〜5,500円前後。スタイリストの指名・経験年数によって異なります。",
+                a: "シャンプー・ブロー込みで3,500〜6,000円程度が目安です。fleur GROUPのRiv. by fleur ami・fleur amiでは似合わせカット4,700円〜（高校生4,000円〜／中学生以下3,850円〜・通常料金）です。スタイリストの指名・経験年数によって異なります。",
               },
               {
                 q: "高知市のヘアカラー料金はいくらですか？",
-                a: "全体カラーで7,000〜15,000円程度が目安。fleur GROUPの艶カラーは8,000〜14,000円前後（長さによる）です。",
+                a: "全体カラーで7,000〜15,000円程度が目安。fleur GROUPの艶カラーは7,000円〜、艶カラー＋カットは11,700円〜です（通常料金・ロング料金別途）。",
               },
               {
                 q: "高知市の縮毛矯正の料金はいくらですか？",
-                a: "15,000〜25,000円前後が相場です。fleur GROUPでは15,000〜22,000円程度を目安にしています。",
+                a: "15,000〜25,000円前後が相場です。fleur GROUPでは縮毛矯正（ショート・カット込み）16,800円〜（ロング料金別途）です。",
               },
               {
                 q: "高知で髪質改善トリートメントの料金はいくらですか？",
-                a: "酸熱トリートメントはショート〜ミディアムで12,000〜18,000円程度。髪質改善縮毛矯正は25,000〜35,000円前後が目安です。",
+                a: "相場は酸熱トリートメント（ショート〜ミディアム）で12,000〜18,000円程度、髪質改善縮毛矯正で25,000〜35,000円前後です。fleur GROUPでは髪質改善TR（GM）7,000円、髪質改善TR＋カット11,700円〜です（通常料金）。",
               },
               {
                 q: "高知市のまつげパーマ料金はいくらですか？",
-                a: "ラッシュリフトで7,000〜9,000円、パリジャンリフトで8,000〜10,000円が目安です（Raffine・高知市はりまや橋の水準）。",
+                a: "相場は6,000〜10,000円前後です。Raffine（高知市はりまや橋）ではラッシュリフト5,500円、特殊ラッシュリフト（パリジェンヌ・メーテルなど）6,000円です（通常料金）。",
               },
               {
                 q: "高知市でカットとカラーをセットするといくらですか？",
-                a: "カット＋全体カラーセットで12,000〜20,000円前後が目安です。ホットペッパービューティーにセットクーポンがある場合もあります。",
+                a: "カット＋全体カラーで12,000〜20,000円前後が相場です。fleur GROUPでは艶カラー＋似合わせカットで11,700円〜（通常料金・ロング料金別途）です。",
               },
             ].map(({ q, a }) => (
               <div key={q} className="border-b border-site-greige pb-5">

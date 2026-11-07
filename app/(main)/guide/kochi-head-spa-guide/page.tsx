@@ -93,7 +93,7 @@ const faqSchema = {
       acceptedAnswer: {
         "@type": "Answer",
         text:
-          "fleur GROUP（2026年9月時点）のヘッドスパは4,000〜6,000円前後が目安です。使用するトリートメントやオプションによって異なります。詳細はメニューページまたはホットペッパービューティーでご確認ください。",
+          "fleur GROUP（Riv. by fleur ami・fleur ami）のヘッドスパは、特許リフトアップスパ4,200円、クレンジングスパ（ホット／クール）3,500円、プチスパ1,100円です（通常料金・2026年11月時点・税込）。詳細はメニューページでご確認ください。",
       },
     },
     {
@@ -204,30 +204,30 @@ export default function KochiHeadSpaGuidePage() {
                 <thead>
                   <tr className="bg-site-light">
                     <th className="text-left p-3 text-site-text font-medium border-b border-site-greige">メニュー</th>
-                    <th className="text-left p-3 text-site-text font-medium border-b border-site-greige">料金目安（税込）</th>
+                    <th className="text-left p-3 text-site-text font-medium border-b border-site-greige">料金（税込）</th>
                     <th className="text-left p-3 text-site-text font-medium border-b border-site-greige">所要時間</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-site-greige">
                   <tr>
                     <td className="p-3 text-site-text">ヘッドスパ（単体）</td>
-                    <td className="p-3 text-site-muted">4,000〜6,000円</td>
+                    <td className="p-3 text-site-muted">1,100円（プチスパ）〜4,200円（特許リフトアップスパ）</td>
                     <td className="p-3 text-site-muted">30〜60分</td>
                   </tr>
                   <tr>
                     <td className="p-3 text-site-text">カット＋ヘッドスパ</td>
-                    <td className="p-3 text-site-muted">8,000〜11,000円</td>
+                    <td className="p-3 text-site-muted">5,800円〜（プチスパ付き）／8,900円〜（特許リフトアップスパ付き）</td>
                     <td className="p-3 text-site-muted">1.5〜2時間</td>
                   </tr>
                   <tr>
                     <td className="p-3 text-site-text">カラー＋ヘッドスパ</td>
-                    <td className="p-3 text-site-muted">12,000〜20,000円</td>
+                    <td className="p-3 text-site-muted">8,100円〜（プチスパ付き）／11,200円〜（特許リフトアップスパ付き）</td>
                     <td className="p-3 text-site-muted">2〜3時間</td>
                   </tr>
                 </tbody>
               </table>
             </div>
-            <p className="text-xs text-site-muted mt-3">※料金は2026年9月時点の目安です。詳細はメニューページをご確認ください。</p>
+            <p className="text-xs text-site-muted mt-3">※fleur GROUP（Riv. by fleur ami・fleur ami）の通常料金（2026年11月時点・税込）。カットは似合わせカット4,700円〜、カラーは艶カラー7,000円〜との合計です（カラーのロング料金別途）。詳細はメニューページをご確認ください。</p>
             <p className="mt-3">
               <Link href="/service/head-spa" className="text-site-accent text-sm hover:underline">
                 ヘッドスパサービス詳細はこちら →
