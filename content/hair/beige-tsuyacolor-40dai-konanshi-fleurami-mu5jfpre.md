@@ -1,6 +1,7 @@
 ---
 title: "ベージュ系艶カラーで後ろ姿を整えたい40代女性へ｜香南市fleur amiの髪質改善カラー施術ガイド"
 slug: "beige-tsuyacolor-40dai-konanshi-fleurami-mu5jfpre"
+merged_into: "konan-color-shitsukaizen-tsuyakami-bob"
 category: "hair"
 salon: "fleurami"
 date: "2026-09-08"

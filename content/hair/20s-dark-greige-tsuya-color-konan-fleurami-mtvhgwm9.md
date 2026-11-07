@@ -1,6 +1,7 @@
 ---
 title: "暗めグレージュで艶のあるミディアムを叶えたい20代女性へ｜高知県香南市fleur amiの艶カラー施術事例"
 slug: "20s-dark-greige-tsuya-color-konan-fleurami-mtvhgwm9"
+merged_into: "natural-glossy-hair-color-20s-30s-mqq68564"
 category: "hair"
 salon: "fleurami"
 date: "2026-09-03"

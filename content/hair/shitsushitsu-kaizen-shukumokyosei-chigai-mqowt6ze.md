@@ -1,6 +1,7 @@
 ---
 title: "髪質改善縮毛矯正って普通の縮毛矯正と何が違うの？"
 slug: "shitsushitsu-kaizen-shukumokyosei-chigai-mqowt6ze"
+merged_into: "kochi-shitsukaizen-shukumou-chigai"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-06-22"

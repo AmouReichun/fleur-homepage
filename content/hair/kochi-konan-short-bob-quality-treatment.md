@@ -1,6 +1,7 @@
 ---
 title: "香南市でショートボブの髪質をまとめたいなら｜高知県香南市fleur amiの髪質改善トリートメント事例"
 slug: "kochi-konan-short-bob-quality-treatment"
+merged_into: "kosanshi-hairquality-treatment-straight"
 category: "hair"
 salon: "fleurami"
 date: "2026-09-24"

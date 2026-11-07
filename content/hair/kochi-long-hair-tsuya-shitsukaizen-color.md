@@ -1,6 +1,7 @@
 ---
 title: "高知市でロングヘアのツヤを引き出すなら｜髪質改善とカラーの相性を美容師が解説"
 slug: "kochi-long-hair-tsuya-shitsukaizen-color"
+merged_into: "color-cut-kamishitsu-kaizen-treatment-mqq5zqzx"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-11-01"

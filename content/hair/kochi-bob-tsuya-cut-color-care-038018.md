@@ -1,6 +1,7 @@
 ---
 title: "高知市でボブの艶感を出すなら、何が違う？｜カット・カラー・ケアの関係性"
 slug: "kochi-bob-tsuya-cut-color-care-038018"
+merged_into: "kochi-color-cut-tsuyakami-40dai-riv-msib3hqw"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-10-23"

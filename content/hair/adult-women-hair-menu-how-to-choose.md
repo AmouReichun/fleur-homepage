@@ -1,6 +1,7 @@
 ---
 title: "ツヤのある暗髪ボブ、どうすれば手に入る？仕上がりの秘密を美容師が解説"
 slug: "adult-women-hair-menu-how-to-choose"
+merged_into: "bob-cut-kirei-otona-josei"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-06-19"

@@ -1,6 +1,7 @@
 ---
 title: "高知市で大人の短くて軽いボブを叶えるなら｜髪質改善と「切り方」で印象を変える選び方"
 slug: "kochi-bob-karakui-kirikata"
+merged_into: "kamishitsu-kaizen-tsuyakam-otona-josei"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-10-08"

@@ -1,6 +1,7 @@
 ---
 title: "縮毛矯正で広がり・うねりを抑えたい40代へ｜高知県高知市Riv. by fleur amiの施術事例と選び方の基準"
 slug: "kochi-shukumo-kyosei-40dai-erabikata-riv-msfroqte"
+merged_into: "shukumo-kyosei-sarasara-shikumi-mqq629b3"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-08-05"

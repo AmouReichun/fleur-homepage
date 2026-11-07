@@ -1,6 +1,7 @@
 ---
 title: "ビビッドレッドカラーで後ろ姿の印象を変えたい40代女性へ｜香南市fleur amiの艶カラー施術事例"
 slug: "vivid-red-color-40s-konanshi-fleurami"
+merged_into: "natural-glossy-hair-color-20s-30s-mqq68564"
 category: "hair"
 salon: "fleurami"
 date: "2026-10-02"

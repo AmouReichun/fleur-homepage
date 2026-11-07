@@ -1,6 +1,7 @@
 ---
 title: "ショートボブで広がりとペタンコを同時に解消するには｜高知県高知市Riv. by fleur amiの大人女性向け施術事例"
 slug: "kochi-short-bob-hirogari-petanko-riv-fleurami"
+merged_into: "bob-cut-kirei-otona-josei"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-08-26"

@@ -1,6 +1,7 @@
 ---
 title: "艶のある切りっぱなしボブを叶えるカラーと施術の選び方｜高知県香南市fleur amiの大人女性向け施術事例"
 slug: "kochi-konan-kirinashi-bob-tsuya-color-erabikata"
+merged_into: "kirinashi-bob-cut-matome-kochi-konanshi-fleurami"
 category: "hair"
 salon: "fleurami"
 date: "2026-07-30"

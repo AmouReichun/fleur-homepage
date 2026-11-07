@@ -1,6 +1,7 @@
 ---
 title: "高知市で大人のボブスタイルを整える｜艶感とまとまりを叶える髪質改善×カットの選び方"
 slug: "kochi-bob-shitsukaizen-cut-erabikata"
+merged_into: "kamishitsu-kaizen-tsuyakam-otona-josei"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-10-06"

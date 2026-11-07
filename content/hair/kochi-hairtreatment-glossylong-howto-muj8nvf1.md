@@ -1,6 +1,7 @@
 ---
 title: "長さを活かしたツヤサラ髪を叶えるには｜高知市で髪質改善カラーを選ぶなら知っておきたい仕上がりの秘密"
 slug: "kochi-hairtreatment-glossylong-howto-muj8nvf1"
+merged_into: "color-cut-kamishitsu-kaizen-treatment-mqq5zqzx"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-09-27"

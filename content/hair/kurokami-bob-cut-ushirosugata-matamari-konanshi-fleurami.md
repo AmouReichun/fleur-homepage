@@ -1,6 +1,7 @@
 ---
 title: "黒髪ボブのカットで「後ろ姿のまとまり」を整えるには何が違うのか｜高知県香南市fleur amiの大人女性向け施術事例"
 slug: "kurokami-bob-cut-ushirosugata-matamari-konanshi-fleurami"
+merged_into: "40dai-hair-menu-color-perm-shukumo"
 category: "hair"
 salon: "fleurami"
 date: "2026-08-28"

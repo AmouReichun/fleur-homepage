@@ -1,6 +1,7 @@
 ---
 title: "カット＆カラーで艶とまとまりを手に入れるには何が変わる？｜高知県高知市Riv. by fleur amiの切りっぱなしボブ施術事例"
 slug: "kochi-cut-color-tsuyamatome-bob-jirei-mtk1pg0w"
+merged_into: "kochi-kirinashi-bob-shiagaridiff-jirei-msh14thp"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-08-26"

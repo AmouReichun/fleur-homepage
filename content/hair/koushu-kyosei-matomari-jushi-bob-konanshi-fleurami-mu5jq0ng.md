@@ -1,6 +1,7 @@
 ---
 title: "縮毛矯正で「まとまり重視」のストレートボブを叶えるには何を見るべき？｜高知県香南市fleur amiの施術事例"
 slug: "koushu-kyosei-matomari-jushi-bob-konanshi-fleurami-mu5jq0ng"
+merged_into: "koshoku-kyosei-tsuyakuro-bob-konan-fleurami-mt2houmb"
 category: "hair"
 salon: "fleurami"
 date: "2026-09-27"

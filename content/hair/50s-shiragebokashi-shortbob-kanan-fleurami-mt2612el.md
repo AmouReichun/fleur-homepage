@@ -1,6 +1,7 @@
 ---
 title: "50代の白髪ぼかしショートボブ、艶と自然な仕上がりを手に入れるには何を選ぶべき？｜高知県香南市fleur amiの施術事例"
 slug: "50s-shiragebokashi-shortbob-kanan-fleurami-mt2612el"
+merged_into: "40dai-shiraga-bokashi-highlight-shiagari-mqrjcjaq"
 category: "hair"
 salon: "fleurami"
 date: "2026-08-20"

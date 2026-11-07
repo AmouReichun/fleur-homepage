@@ -1,6 +1,7 @@
 ---
 title: "落ち着いた色味の艶カラーで後ろ姿を整えたい40代女性へ｜高知県香南市fleur amiの施術事例と選び方ガイド"
 slug: "40s-tsuya-color-shizen-irome-kochi-konan-fleurami-mt6y5bly"
+merged_into: "natural-glossy-hair-color-20s-30s-mqq68564"
 category: "hair"
 salon: "fleurami"
 date: "2026-08-23"

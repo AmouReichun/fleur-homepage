@@ -1,6 +1,7 @@
 ---
 title: "高知市の髪質改善トリートメントとは？縮毛矯正との違いと料金をRiv.が解説"
 slug: "kamishitsu-kaizen-kochishi-riv-fleurami"
+merged_into: "kochi-shitsukaizen-shukumou-chigai"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-09-27"

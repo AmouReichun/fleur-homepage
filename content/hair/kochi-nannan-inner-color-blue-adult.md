@@ -1,6 +1,7 @@
 ---
 title: "香南市でインナーカラーを選ぶなら｜暗髪に映える青系色で大人の魅力を引き出す"
 slug: "kochi-nannan-inner-color-blue-adult"
+merged_into: "inner-color-adult-bob-fleur-ami-mqt7crpq"
 category: "hair"
 salon: "fleurami"
 date: "2026-10-23"

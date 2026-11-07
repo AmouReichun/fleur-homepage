@@ -1,6 +1,7 @@
 ---
 title: "香南市でボブスタイルをまとめたい40代女性へ｜髪質改善トリートメントで艶感を引き出す方法"
 slug: "konan-bob-shitsukaizen-tsuya"
+merged_into: "kosanshi-hairquality-treatment-straight"
 category: "hair"
 salon: "fleurami"
 date: "2026-05-12"

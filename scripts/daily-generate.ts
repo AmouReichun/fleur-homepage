@@ -8,7 +8,7 @@ import { fetchSalonPosts, imageUrlToBase64, type SalonKey } from "../lib/blog/in
 import { generateArticleFromPost } from "../lib/blog/article-core";
 import { getUsedThumbnails } from "../lib/blog/thumbnail-dedup";
 import { getRemainingQuota, addToMonthlyCount, getMonthlyCount } from "../lib/blog/monthly-limit";
-import { checkTopicGate } from "../lib/blog/topic-gate";
+import { checkTopicGate, type ExistingPost } from "../lib/blog/topic-gate";
 
 const SALONS: SalonKey[] = ["fleurami", "riv", "raffine"];
 
@@ -26,9 +26,9 @@ type GenerateConfig = {
 
 const SALON_NAME: Record<SalonKey, string> = { fleurami: "fleurami", riv: "Riv. by fleurami", raffine: "Raffine" };
 
-/** そのサロンの全記事（統合済み・下書き含む）のタイトルと最新日付 */
-function salonHistory(salonName: string): { titles: string[]; latest: string } {
-  const titles: string[] = [];
+/** そのサロンの全記事（統合済み・下書き含む）と最新日付 */
+function salonHistory(salonName: string): { posts: ExistingPost[]; latest: string } {
+  const posts: ExistingPost[] = [];
   let latest = "";
   for (const cat of ["hair", "eyelash"]) {
     const dir = path.join(process.cwd(), "content", cat);
@@ -39,12 +39,15 @@ function salonHistory(salonName: string): { titles: string[]; latest: string } {
       const salon = raw.match(/^salon:\s*["']?(.+?)["']?\s*$/m)?.[1];
       if (salon !== salonName) continue;
       const t = raw.match(/^title:\s*["']?(.+?)["']?\s*$/m)?.[1];
-      if (t) titles.push(t);
+      const merged = raw.match(/^merged_into:\s*["']?([a-z0-9-]+)/m)?.[1];
+      if (t) posts.push({ title: t, slug: f.replace(/\.md$/, ""), mergedInto: merged });
+      // 親記事へまとめた記事は「公開した日」に数えない（最短間隔は公開記事だけで判定）
+      if (merged) continue;
       const d = raw.match(/^date:\s*["']?([0-9-]{10})/m)?.[1] ?? "";
       if (d > latest) latest = d;
     }
   }
-  return { titles, latest };
+  return { posts, latest };
 }
 
 /** テーマ重複で見送った投稿を ig-ignored.json に足す（毎日同じ投稿で止まらないように） */
@@ -206,16 +209,22 @@ async function main() {
         continue;
       }
 
-      // テーマ重複ガード: 親記事があるテーマ・ほぼ同じタイトルは保存しない（親記事の更新で対応）
+      // テーマ重複ガード: 親記事があるテーマ・ほぼ同じタイトルは「親記事へまとめる記事」として保存する
+      // （非公開＋親へ転送。中身は次回の親記事書き直しで取り込まれる）
       const genTitle = result.markdown.match(/^title:\s*["']?(.+?)["']?\s*$/m)?.[1] ?? "";
-      const gate = checkTopicGate(SALON_NAME[salonKey], genTitle, history.titles);
+      const gate = checkTopicGate(SALON_NAME[salonKey], genTitle, history.posts);
+      let mergedInto: string | undefined;
       if (!gate.ok) {
-        console.log(`  ⏭ テーマ重複のため保存しない: ${genTitle}\n     理由: ${gate.reason}`);
-        addIgnoredId(post.id);
-        skipIds.add(post.id);
-        continue;
+        if (!gate.parent) {
+          console.log(`  ⏭ テーマ重複のため保存しない: ${genTitle}\n     理由: ${gate.reason}`);
+          addIgnoredId(post.id);
+          skipIds.add(post.id);
+          continue;
+        }
+        mergedInto = gate.parent;
+        result.markdown = result.markdown.replace(/^(slug:.*)$/m, `$1\nmerged_into: "${mergedInto}"`);
+        console.log(`  ↪ 親記事へまとめる: ${genTitle} → ${mergedInto}\n     理由: ${gate.reason}`);
       }
-      history.titles.push(genTitle);
 
       // サムネ重複ガード: 既存記事と同じサムネなら保存せずスキップ
       const thumbMatch = result.markdown.match(/^thumbnail:\s*["']?([^"'\n]+)["']?\s*$/m);
@@ -251,6 +260,7 @@ async function main() {
         finalSlug = `${finalSlug}-${post.id.slice(-6)}`;
         console.warn(`  ⚠ slug重複 → ${finalSlug}`);
       }
+      history.posts.push({ title: genTitle, slug: finalSlug, mergedInto });
       fs.writeFileSync(path.join(mdDir, `${finalSlug}.md`), result.markdown.replace(
         /^slug: ".*?"$/m, `slug: "${finalSlug}"`
       ));

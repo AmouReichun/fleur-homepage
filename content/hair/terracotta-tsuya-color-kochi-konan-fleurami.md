@@ -1,6 +1,7 @@
 ---
 title: "テラコッタ系の艶カラーで後ろ姿の印象を変えるには何が違うのか｜高知県香南市fleur amiの大人女性向け艶カラー施術事例"
 slug: "terracotta-tsuya-color-kochi-konan-fleurami"
+merged_into: "natural-glossy-hair-color-20s-30s-mqq68564"
 category: "hair"
 salon: "fleurami"
 date: "2026-09-08"

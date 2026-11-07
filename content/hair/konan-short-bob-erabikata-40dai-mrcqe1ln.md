@@ -1,6 +1,7 @@
 ---
 title: "香南市でショートボブを考えている40代女性へ｜失敗しない切り方と選ぶときに見るべきポイント"
 slug: "konan-short-bob-erabikata-40dai-mrcqe1ln"
+merged_into: "40dai-hair-menu-color-perm-shukumo"
 category: "hair"
 salon: "fleurami"
 date: "2026-07-08"

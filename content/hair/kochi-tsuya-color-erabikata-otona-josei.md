@@ -1,6 +1,7 @@
 ---
 title: "大人女性の艶カラーを長く楽しむためのポイント｜高知市Riv.スタイリストが解説"
 slug: "kochi-tsuya-color-erabikata-otona-josei"
+merged_into: "kochi-color-cut-tsuyakami-40dai-riv-msib3hqw"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-07-10"

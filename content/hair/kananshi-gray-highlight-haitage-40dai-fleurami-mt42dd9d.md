@@ -1,6 +1,7 @@
 ---
 title: "グレーハイライトで白髪を自然にぼかしたい40代女性へ｜香南市fleur amiのハイトーンカラー施術事例"
 slug: "kananshi-gray-highlight-haitage-40dai-fleurami-mt42dd9d"
+merged_into: "40dai-shiraga-bokashi-highlight-shiagari-mqrjcjaq"
 category: "hair"
 salon: "fleurami"
 date: "2026-08-21"

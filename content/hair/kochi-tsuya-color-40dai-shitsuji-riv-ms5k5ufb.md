@@ -1,6 +1,7 @@
 ---
 title: "艶カラーで印象を整えるとどんな仕上がりになる？高知市Riv. by fleur amiの40代向け施術事例"
 slug: "kochi-tsuya-color-40dai-shitsuji-riv-ms5k5ufb"
+merged_into: "kochi-color-cut-tsuyakami-40dai-riv-msib3hqw"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-07-29"

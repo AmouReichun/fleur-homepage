@@ -1,6 +1,7 @@
 ---
 title: "髪質改善トリートメントで艶とまとまりを叶えるサロンの選び方｜高知県高知市Riv. by fleur amiの40代向け施術ガイド"
 slug: "kochi-shitsukaizen-tsuyastraight-40dai-guide"
+merged_into: "kamishitsu-kaizen-tsuyakam-otona-josei"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-08-22"

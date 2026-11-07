@@ -1,6 +1,7 @@
 ---
 title: "香南市で縮毛矯正｜うねり・広がりが気になる髪にまとまりを"
 slug: "konanshi-shukumo-kyosei-uneri-hirogari-mqu93qt8"
+merged_into: "koshoku-kyosei-tsuyakuro-bob-konan-fleurami-mt2houmb"
 category: "hair"
 salon: "fleurami"
 date: "2026-06-26"

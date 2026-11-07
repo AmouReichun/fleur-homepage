@@ -1,6 +1,7 @@
 ---
 title: "メンズパーマで髪のうねりと広がりをいかす｜香南市の美容室fleur amiのメンズスタイル施術事例"
 slug: "mens-perm-wave-fleurami-kanan-muj94vbl"
+merged_into: "kananshi-mens-perm-erabikata-fleur-ami"
 category: "hair"
 salon: "fleurami"
 date: "2026-09-27"

@@ -1,6 +1,7 @@
 ---
 title: "大人のショートボブって40代に似合うの？仕上がりのポイントを美容師が解説"
 slug: "otona-short-bob-40dai-hairstyle-mqq61cu2"
+merged_into: "40dai-hair-menu-color-perm-shukumo"
 category: "hair"
 salon: "fleurami"
 date: "2026-06-23"

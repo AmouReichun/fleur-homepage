@@ -1,6 +1,7 @@
 ---
 title: "香南市でデザインカラーを選ぶなら、透明感と艶感を両立させる色選びが決め手｜高知県香南市fleur amiのカラー選び解説"
 slug: "kochi-konan-design-color-erabikata-muj67s70"
+merged_into: "silver-double-color-adult-women-mqrjz08r"
 category: "hair"
 salon: "fleurami"
 date: "2026-09-27"

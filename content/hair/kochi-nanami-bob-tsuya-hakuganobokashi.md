@@ -1,6 +1,7 @@
 ---
 title: "香南市でボブスタイルに艶感を加えたい40代女性へ｜白髪ぼかしカラーと髪質改善の組み合わせを解説"
 slug: "kochi-nanami-bob-tsuya-hakuganobokashi"
+merged_into: "40dai-shiraga-bokashi-highlight-shiagari-mqrjcjaq"
 category: "hair"
 salon: "fleurami"
 date: "2026-09-30"

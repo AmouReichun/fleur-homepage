@@ -1,6 +1,7 @@
 ---
 title: "大人の丸みショートボブ、後ろ姿がきれいに見えるポイントって何？"
 slug: "cut-color-perm-shukumou-guide-adult-woman"
+merged_into: "40dai-hair-menu-color-perm-shukumo"
 category: "hair"
 salon: "fleurami"
 date: "2026-06-12"

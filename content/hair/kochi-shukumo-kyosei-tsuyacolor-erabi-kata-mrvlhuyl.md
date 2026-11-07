@@ -1,6 +1,7 @@
 ---
 title: "高知市で縮毛矯正＋艶カラーを考えている方へ｜仕上がりで後悔しない選び方"
 slug: "kochi-shukumo-kyosei-tsuyacolor-erabi-kata-mrvlhuyl"
+merged_into: "shukumo-kyosei-sarasara-shikumi-mqq629b3"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-07-22"

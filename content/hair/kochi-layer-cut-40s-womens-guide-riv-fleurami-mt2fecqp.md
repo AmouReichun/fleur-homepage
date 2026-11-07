@@ -1,6 +1,7 @@
 ---
 title: "レイヤーカットで動きと軽さを出したい40代女性が確認すべき3つのポイント｜高知県高知市Riv. by fleur amiの施術事例"
 slug: "kochi-layer-cut-40s-womens-guide-riv-fleurami-mt2fecqp"
+merged_into: "kochi-layer-bob-matome-karusa-40dai-mtlh4j7e"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-08-21"

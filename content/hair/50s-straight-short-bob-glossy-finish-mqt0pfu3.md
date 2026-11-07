@@ -1,6 +1,7 @@
 ---
 title: "50代のストレートショートボブ、艶やかに仕上げるにはどうすればいい？"
 slug: "50s-straight-short-bob-glossy-finish-mqt0pfu3"
+merged_into: "40dai-hair-menu-color-perm-shukumo"
 category: "hair"
 salon: "fleurami"
 date: "2026-06-25"

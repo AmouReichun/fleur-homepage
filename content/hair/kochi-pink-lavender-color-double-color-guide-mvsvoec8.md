@@ -1,6 +1,7 @@
 ---
 title: "香南市でピンクラベンダーカラー、ブリーチなしで叶う？｜透明感と艶を両立させる選び方"
 slug: "kochi-pink-lavender-color-double-color-guide-mvsvoec8"
+merged_into: "natural-glossy-hair-color-20s-30s-mqq68564"
 category: "hair"
 salon: "fleurami"
 date: "2026-11-06"

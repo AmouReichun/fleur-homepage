@@ -1,6 +1,7 @@
 ---
 title: "ツヤのあるストレートロングを手に入れるには何が必要？｜高知県高知市Riv. by fleur amiの髪質改善施術事例"
 slug: "kochi-shitsukaizen-straight-long-jireishi"
+merged_into: "kamishitsu-kaizen-tsuyakam-otona-josei"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-07-31"

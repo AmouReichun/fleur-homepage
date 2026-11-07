@@ -1,6 +1,7 @@
 ---
 title: "高知市でツヤのある丸みボブを選ぶ前に知っておきたいこと｜髪のまとまりが気になる40代女性へ"
 slug: "kochi-tsuya-maru-bob-erabikata-40dai"
+merged_into: "bob-cut-kirei-otona-josei"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-07-15"

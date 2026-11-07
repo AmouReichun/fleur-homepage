@@ -1,6 +1,7 @@
 ---
 title: "香南市で黒髪の切りっぱなしボブを選ぶ前に知っておきたいこと｜20代から大人まで似合わせるポイント"
 slug: "konanshi-kiri-ppanashi-bob-kurokami-erabikata-mrvvnjew"
+merged_into: "kirinashi-bob-cut-matome-kochi-konanshi-fleurami"
 category: "hair"
 salon: "fleurami"
 date: "2026-07-22"

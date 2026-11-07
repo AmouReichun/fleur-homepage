@@ -1,6 +1,7 @@
 ---
 title: "白髪ぼかしハイライトのサロン選び判断基準｜高知市の施術事例で見る仕上がりの違い"
 slug: "kochi-shiragobokashi-highlight-erabikata-40dai-mrkdum99"
+merged_into: "shiraga-bokashi-short-bob-30-40dai-mqq6au6v"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-07-14"

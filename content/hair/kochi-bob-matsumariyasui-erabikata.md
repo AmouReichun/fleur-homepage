@@ -1,6 +1,7 @@
 ---
 title: "40代の髪がまとまらないなら、高知市での艶ストレートボブの選び方｜高知県高知市Riv. by fleur amiの施術事例から学ぶ"
 slug: "kochi-bob-matsumariyasui-erabikata"
+merged_into: "bob-cut-kirei-otona-josei"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-10-04"

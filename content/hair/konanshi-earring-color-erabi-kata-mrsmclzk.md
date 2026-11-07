@@ -1,6 +1,7 @@
 ---
 title: "香南市でイヤリングカラーを考えている方へ｜失敗しない選び方と仕上がりの目安"
 slug: "konanshi-earring-color-erabi-kata-mrsmclzk"
+merged_into: "inner-color-adult-bob-fleur-ami-mqt7crpq"
 category: "hair"
 salon: "fleurami"
 date: "2026-07-20"

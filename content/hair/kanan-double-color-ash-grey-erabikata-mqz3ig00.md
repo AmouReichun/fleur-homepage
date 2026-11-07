@@ -1,6 +1,7 @@
 ---
 title: "香南市でダブルカラーを選ぶ前に知っておきたいこと｜落ち着いたアッシュグレーを求める方へ"
 slug: "kanan-double-color-ash-grey-erabikata-mqz3ig00"
+merged_into: "silver-double-color-adult-women-mqrjz08r"
 category: "hair"
 salon: "fleurami"
 date: "2026-06-29"

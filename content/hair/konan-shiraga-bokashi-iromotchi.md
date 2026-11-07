@@ -1,6 +1,7 @@
 ---
 title: "香南市で白髪ぼかしカラーをしたとき、色持ちはどのくらい？｜高知県香南市fleur amiの大人女性向け施術ガイド"
 slug: "konan-shiraga-bokashi-iromotchi"
+merged_into: "40dai-shiraga-bokashi-highlight-shiagari-mqrjcjaq"
 category: "hair"
 salon: "fleurami"
 date: "2026-10-08"

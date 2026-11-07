@@ -1,6 +1,7 @@
 ---
 title: "髪質改善トリートメントで艶とまとまりを手に入れるには｜高知県高知市Riv. by fleur amiの40代向け施術事例と選び方"
 slug: "kochi-shitsukan-kaizen-tsuya-matome-40dai"
+merged_into: "kamishitsu-kaizen-tsuyakam-otona-josei"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-08-20"

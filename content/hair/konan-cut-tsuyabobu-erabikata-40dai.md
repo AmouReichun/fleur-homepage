@@ -1,6 +1,7 @@
 ---
 title: "香南市でカットを考えている40代女性へ｜ツヤのある丸みボブを選ぶ前に知っておきたいこと"
 slug: "konan-cut-tsuyabobu-erabikata-40dai"
+merged_into: "40dai-hair-menu-color-perm-shukumo"
 category: "hair"
 salon: "fleurami"
 date: "2026-07-10"

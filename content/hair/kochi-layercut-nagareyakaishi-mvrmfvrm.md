@@ -1,6 +1,7 @@
 ---
 title: "高知市でレイヤーカットを選ぶ前に｜長さ活かしたスタイルと選び方"
 slug: "kochi-layercut-nagareyakaishi-mvrmfvrm"
+merged_into: "kochi-layer-bob-matome-karusa-40dai-mtlh4j7e"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-11-05"

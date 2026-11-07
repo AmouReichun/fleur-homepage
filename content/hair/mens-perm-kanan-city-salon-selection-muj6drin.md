@@ -1,6 +1,7 @@
 ---
 title: "メンズパーマで髪が変わる理由｜香南市で選ぶべきサロンの判断基準と施術事例"
 slug: "mens-perm-kanan-city-salon-selection-muj6drin"
+merged_into: "kananshi-mens-perm-erabikata-fleur-ami"
 category: "hair"
 salon: "fleurami"
 date: "2026-09-27"

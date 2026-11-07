@@ -1,6 +1,7 @@
 ---
 title: "香南市でイヤリングカラーを選ぶなら｜大人女性向けの選び方と仕上がりを解説"
 slug: "kochi-kounan-earring-color-guide-mvrsvbkw"
+merged_into: "inner-color-adult-bob-fleur-ami-mqt7crpq"
 category: "hair"
 salon: "fleurami"
 date: "2026-10-29"

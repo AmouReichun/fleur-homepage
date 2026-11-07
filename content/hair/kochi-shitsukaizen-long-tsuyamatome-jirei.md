@@ -1,6 +1,7 @@
 ---
 title: "髪質改善トリートメントでツヤとまとまりを叶えるロングヘアの仕上がりとは｜高知県高知市Riv. by fleur amiの施術事例と選び方"
 slug: "kochi-shitsukaizen-long-tsuyamatome-jirei"
+merged_into: "kamishitsu-kaizen-tsuyakam-otona-josei"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-05-16"

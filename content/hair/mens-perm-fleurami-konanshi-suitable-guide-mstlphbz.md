@@ -1,6 +1,7 @@
 ---
 title: "香南市fleur amiのメンズパーマはこんな人に向いている｜担当スタイリストが解説する仕上がりと選び方"
 slug: "mens-perm-fleurami-konanshi-suitable-guide-mstlphbz"
+merged_into: "kananshi-mens-perm-erabikata-fleur-ami"
 category: "hair"
 salon: "fleurami"
 date: "2026-08-14"

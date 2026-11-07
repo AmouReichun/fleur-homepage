@@ -1,6 +1,7 @@
 ---
 title: "香南市でブリーチ・ハイトーンカラーを考えている方へ｜失敗しない選び方と仕上がりの目安"
 slug: "kananshi-bleach-high-tone-color-erabikata-mrek1xml"
+merged_into: "silver-double-color-adult-women-mqrjz08r"
 category: "hair"
 salon: "fleurami"
 date: "2026-07-10"

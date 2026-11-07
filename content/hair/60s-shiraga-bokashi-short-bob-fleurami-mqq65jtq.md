@@ -1,6 +1,7 @@
 ---
 title: "60代の白髪ぼかしショートボブ、仕上がりはどうなるの？"
 slug: "60s-shiraga-bokashi-short-bob-fleurami-mqq65jtq"
+merged_into: "40dai-shiraga-bokashi-highlight-shiagari-mqrjcjaq"
 category: "hair"
 salon: "fleurami"
 date: "2026-06-23"

@@ -1,6 +1,7 @@
 ---
 title: "香南市でボブスタイルの後ろ姿をすっきり整えるには？髪質とカットの関係を美容師が解説｜高知県香南市の美容室fleur ami"
 slug: "konan-bob-ushiro-sugata-katsu-shitsukaizen"
+merged_into: "40dai-hair-menu-color-perm-shukumo"
 category: "hair"
 salon: "fleurami"
 date: "2026-10-07"

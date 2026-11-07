@@ -1,6 +1,7 @@
 ---
 title: "高知市でインナーカラーを入れるなら｜赤・ピンク系の色選びと仕上がりの秘訣"
 slug: "kochi-inner-color-red-pink-erabikata-mvrkd2tf"
+merged_into: "kiriippanashi-bob-inner-color-shiatsu-jirei-kochi-mu5j5dyv"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-11-03"

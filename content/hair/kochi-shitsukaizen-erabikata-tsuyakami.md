@@ -1,6 +1,7 @@
 ---
 title: "高知市で髪質改善を考えている方へ｜サラサラ・ツヤ髪を選ぶ前に知っておきたいポイント"
 slug: "kochi-shitsukaizen-erabikata-tsuyakami"
+merged_into: "kamishitsu-kaizen-tsuyakam-otona-josei"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-06-30"

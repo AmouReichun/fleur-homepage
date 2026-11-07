@@ -1,6 +1,7 @@
 ---
 title: "ショートボブのカットだけで髪のまとまりは変わる？高知市で仕上がりに差が出る理由｜高知県高知市Riv. by fleur amiの施術事例"
 slug: "kochi-short-bob-cut-matome-jireishi-mtin6i50"
+merged_into: "bob-cut-kirei-otona-josei"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-08-26"

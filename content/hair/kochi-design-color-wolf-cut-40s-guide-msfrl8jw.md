@@ -1,6 +1,7 @@
 ---
 title: "デザインカラー×ウルフカットで印象を変えたい40代へ｜高知県高知市Riv. by fleur amiの施術事例と選び方"
 slug: "kochi-design-color-wolf-cut-40s-guide-msfrl8jw"
+merged_into: "kochi-wolf-cut-40dai-jissen-guide"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-08-05"

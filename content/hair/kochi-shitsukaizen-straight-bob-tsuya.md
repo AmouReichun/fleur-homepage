@@ -1,6 +1,7 @@
 ---
 title: "高知市で艶ストレートボブを叶えるには｜髪質改善の仕上がりと選ぶポイント"
 slug: "kochi-shitsukaizen-straight-bob-tsuya"
+merged_into: "kamishitsu-kaizen-tsuyakam-otona-josei"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-10-17"

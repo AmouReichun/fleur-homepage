@@ -1,6 +1,7 @@
 ---
 title: "40代の髪をまとめやすくするレイヤーカット｜香南市で白髪ぼかしと組み合わせる選択肢"
 slug: "kochi-layer-cut-hakusiro-bokashi-40s-mvrsptaz"
+merged_into: "40dai-shiraga-bokashi-highlight-shiagari-mqrjcjaq"
 category: "hair"
 salon: "fleurami"
 date: "2026-11-02"

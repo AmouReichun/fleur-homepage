@@ -1,6 +1,7 @@
 ---
 title: "高知市でボブスタイルの艶感を出したいなら｜担当スタイリスト沢村が解説する「切り方×カラー×ケア」の関係性"
 slug: "kochi-bob-tsuyaglow-cutting-color-care"
+merged_into: "kochi-color-cut-tsuyakami-40dai-riv-msib3hqw"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-05-12"

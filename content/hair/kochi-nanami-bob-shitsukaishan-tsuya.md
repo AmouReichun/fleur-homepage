@@ -1,6 +1,7 @@
 ---
 title: "香南市でボブをまとめたい40代へ｜髪質改善トリートメントで艶感を引き出す方法"
 slug: "kochi-nanami-bob-shitsukaishan-tsuya"
+merged_into: "kosanshi-hairquality-treatment-straight"
 category: "hair"
 salon: "fleurami"
 date: "2026-11-07"

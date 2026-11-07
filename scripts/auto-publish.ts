@@ -56,6 +56,7 @@ function collectEligibleDrafts(): Draft[] {
 
       if (data.draft !== true) continue;
       if (data.yakkihou_flag === true) continue;
+      if (data.merged_into) continue; // 親記事へまとめた記事は公開しない（公開枠を使わない）
 
       result.push({
         filePath,

@@ -1,6 +1,7 @@
 ---
 title: "透明感のある濃いめシルバーって、ダブルカラーじゃないと出せないの？"
 slug: "double-color-dark-silver-bob-fleurami-mqq638be"
+merged_into: "silver-double-color-adult-women-mqrjz08r"
 category: "hair"
 salon: "fleurami"
 date: "2026-06-23"

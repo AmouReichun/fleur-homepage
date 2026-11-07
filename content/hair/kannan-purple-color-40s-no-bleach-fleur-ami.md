@@ -1,6 +1,7 @@
 ---
 title: "パープル系カラーで深みと透明感を両立したい40代女性へ｜香南市fleur amiのブリーチなしカラー施術ガイド"
 slug: "kannan-purple-color-40s-no-bleach-fleur-ami"
+merged_into: "natural-glossy-hair-color-20s-30s-mqq68564"
 category: "hair"
 salon: "fleurami"
 date: "2026-08-02"

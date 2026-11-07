@@ -1,6 +1,7 @@
 ---
 title: "40代の髪質改善トリートメント、高知市で仕上がりを左右する3つのポイント"
 slug: "kochi-shitsukaizen-40s-pointo"
+merged_into: "kamishitsu-kaizen-tsuyakam-otona-josei"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-10-31"

@@ -1,6 +1,7 @@
 ---
 title: "赤みブラウンのツヤストレートボブで髪のまとまりを整えるには｜高知県高知市Riv. by fleur amiの施術事例"
 slug: "kochi-aka-brown-tsuyastraight-bob-matome"
+merged_into: "kochi-color-cut-tsuyakami-40dai-riv-msib3hqw"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-08-07"

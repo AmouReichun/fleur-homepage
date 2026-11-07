@@ -1,6 +1,7 @@
 ---
 title: "高知市でボブスタイルの艶感を引き出す秘訣｜大人女性向けカット×カラー×ケアの関係性をRiv. by fleur amiが解説"
 slug: "kochi-bob-tsuya-cut-color-care"
+merged_into: "kochi-color-cut-tsuyakami-40dai-riv-msib3hqw"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-09-26"

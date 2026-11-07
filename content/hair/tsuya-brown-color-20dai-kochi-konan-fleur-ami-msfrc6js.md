@@ -1,6 +1,7 @@
 ---
 title: "艶ブラウンカラーで自然な透明感を叶えるには｜香南市fleur amiの20代向け艶カラー施術事例"
 slug: "tsuya-brown-color-20dai-kochi-konan-fleur-ami-msfrc6js"
+merged_into: "natural-glossy-hair-color-20s-30s-mqq68564"
 category: "hair"
 salon: "fleurami"
 date: "2026-08-05"

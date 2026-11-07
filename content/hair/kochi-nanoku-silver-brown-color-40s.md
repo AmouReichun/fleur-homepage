@@ -1,6 +1,7 @@
 ---
 title: "透明感のある濃いめシルバーブラウンカラーを叶えるには｜高知県香南市fleur amiの40代向けカラー選び"
 slug: "kochi-nanoku-silver-brown-color-40s"
+merged_into: "natural-glossy-hair-color-20s-30s-mqq68564"
 category: "hair"
 salon: "fleurami"
 date: "2026-05-02"

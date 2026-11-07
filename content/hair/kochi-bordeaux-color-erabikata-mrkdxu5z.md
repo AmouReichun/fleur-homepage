@@ -1,6 +1,7 @@
 ---
 title: "高知市でボルドーカラーを選ぶ前に知っておきたいこと｜艶と深みのある赤み系カラーの選び方"
 slug: "kochi-bordeaux-color-erabikata-mrkdxu5z"
+merged_into: "kochi-color-cut-tsuyakami-40dai-riv-msib3hqw"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-07-14"

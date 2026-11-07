@@ -1,6 +1,7 @@
 ---
 title: "高知市で艶カラーを長持ちさせるには？深みのある赤みブラウンの色持ちと選び方｜高知県高知市Riv. by fleur ami"
 slug: "kochi-tsuya-color-akamibrown-irokimochi"
+merged_into: "kochi-color-cut-tsuyakami-40dai-riv-msib3hqw"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-09-30"

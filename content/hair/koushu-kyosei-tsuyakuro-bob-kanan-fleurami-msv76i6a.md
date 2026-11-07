@@ -1,6 +1,7 @@
 ---
 title: "縮毛矯正で艶のある黒髪ストレートボブを叶えるには何が違うのか｜高知県香南市fleur amiの40代向け施術事例"
 slug: "koushu-kyosei-tsuyakuro-bob-kanan-fleurami-msv76i6a"
+merged_into: "koshoku-kyosei-tsuyakuro-bob-konan-fleurami-mt2houmb"
 category: "hair"
 salon: "fleurami"
 date: "2026-08-16"

@@ -1,6 +1,7 @@
 ---
 title: "香南市でボブを長く楽しむ髪質改善トリートメント｜艶感と扱いやすさを両立させるコツ"
 slug: "kochi-koanmi-bob-shitsukaizen-tsuya"
+merged_into: "kosanshi-hairquality-treatment-straight"
 category: "hair"
 salon: "fleurami"
 date: "2026-10-31"

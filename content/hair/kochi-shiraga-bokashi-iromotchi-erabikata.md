@@ -1,6 +1,7 @@
 ---
 title: "高知市で白髪ぼかしカラー、色落ちを抑えるには？｜40代向け選び方ガイド"
 slug: "kochi-shiraga-bokashi-iromotchi-erabikata"
+merged_into: "shiraga-bokashi-short-bob-30-40dai-mqq6au6v"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-10-24"

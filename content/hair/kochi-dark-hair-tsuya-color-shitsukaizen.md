@@ -1,6 +1,7 @@
 ---
 title: "高知市でツヤのある暗髪を手に入れるには｜カラーと髪質改善の組み合わせ方"
 slug: "kochi-dark-hair-tsuya-color-shitsukaizen"
+merged_into: "color-cut-kamishitsu-kaizen-treatment-mqq5zqzx"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-10-28"

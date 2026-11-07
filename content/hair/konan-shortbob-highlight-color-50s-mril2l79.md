@@ -1,6 +1,7 @@
 ---
 title: "香南市でショートボブ×ハイライトカラーを考えている50代女性へ｜仕上がりと選び方のポイント"
 slug: "konan-shortbob-highlight-color-50s-mril2l79"
+merged_into: "otona-bob-highlight-change-mqq66hym"
 category: "hair"
 salon: "fleurami"
 date: "2026-07-13"

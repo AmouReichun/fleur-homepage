@@ -1,6 +1,7 @@
 ---
 title: "タッセルボブ×グラデーションカラーで仕上がりに差が出る理由とは｜高知県高知市Riv. by fleur amiの施術事例"
 slug: "kochi-tassel-bob-gradation-color-jirei-mu5jmm7t"
+merged_into: "adult-women-hair-menu-guide-color-cut-perm"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-10-02"

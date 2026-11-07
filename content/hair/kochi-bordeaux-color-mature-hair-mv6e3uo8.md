@@ -1,6 +1,7 @@
 ---
 title: "高知市でボルドカラーが似合う髪質に｜赤みを活かした大人の艶髪スタイル"
 slug: "kochi-bordeaux-color-mature-hair-mv6e3uo8"
+merged_into: "kochi-color-cut-tsuyakami-40dai-riv-msib3hqw"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-10-14"

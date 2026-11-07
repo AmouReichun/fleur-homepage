@@ -1,6 +1,7 @@
 ---
 title: "香南市のメンズパーマ、仕上がりで選ぶなら何を確認すべき？｜高知県香南市fleur amiの10代向け施術事例"
 slug: "kochi-konan-mens-perm-teen-jireishuu-msnvsfn0"
+merged_into: "kananshi-mens-perm-erabikata-fleur-ami"
 category: "hair"
 salon: "fleurami"
 date: "2026-08-10"

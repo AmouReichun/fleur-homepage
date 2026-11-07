@@ -1,6 +1,7 @@
 ---
 title: "香南市でトーンダウンカラーを選ぶときに確認すべき3つのポイント｜大人女性向け"
 slug: "kochi-konan-tonedown-color-point-mvsvgqh0"
+merged_into: "natural-glossy-hair-color-20s-30s-mqq68564"
 category: "hair"
 salon: "fleurami"
 date: "2026-11-04"

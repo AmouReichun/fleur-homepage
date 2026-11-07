@@ -1,6 +1,7 @@
 ---
 title: "ツヤツヤさらさらの髪って、どうすれば手に入るの？"
 slug: "tsuyatsuya-sarasara-kamishitsu-riv-by-fleur-ami"
+merged_into: "kamishitsu-kaizen-tsuyakam-otona-josei"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-05-31"

@@ -1,6 +1,7 @@
 ---
 title: "ブリーチ2回で叶えるピンクラベンダーカラー、40代が選ぶときに確認すべき3つのポイント｜高知県香南市fleur ami"
 slug: "bleach-pink-lavender-color-40s-kochi-konan-msci3nuq"
+merged_into: "silver-double-color-adult-women-mqrjz08r"
 category: "hair"
 salon: "fleurami"
 date: "2026-08-03"

@@ -1,6 +1,7 @@
 ---
 title: "高知市でメンズカットを選ぶ前に知っておきたい｜ツーブロック×テクスチャーパーマの選び方"
 slug: "kochi-mens-cut-two-block-texture-perm"
+merged_into: "mens-perm-finish-style-explanation-mqt1i8un"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-07-08"

@@ -1,6 +1,7 @@
 ---
 title: "ショコラブラウンで大人の印象を整えるには｜高知市の艶カラー施術と選び方のポイント"
 slug: "kochi-tsuyacolor-chocolat-brown-erabikata-mrvhhkcs"
+merged_into: "kochi-color-cut-tsuyakami-40dai-riv-msib3hqw"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-07-22"

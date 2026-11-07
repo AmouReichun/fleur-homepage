@@ -1,6 +1,7 @@
 ---
 title: "ネイビーパープルのデザインカラーで印象を変えるには｜香南市fleur amiの大人向けブリーチカラー施術事例"
 slug: "kananshi-design-color-navy-purple-fleur-ami-ms6s1cbv"
+merged_into: "silver-double-color-adult-women-mqrjz08r"
 category: "hair"
 salon: "fleurami"
 date: "2026-07-30"

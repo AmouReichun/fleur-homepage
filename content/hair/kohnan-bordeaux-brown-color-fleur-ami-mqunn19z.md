@@ -1,6 +1,7 @@
 ---
 title: "香南市でボルドーブラウンカラーに挑戦したい方へ｜派手すぎない赤みブラウンの魅力とは？"
 slug: "kohnan-bordeaux-brown-color-fleur-ami-mqunn19z"
+merged_into: "natural-glossy-hair-color-20s-30s-mqq68564"
 category: "hair"
 salon: "fleurami"
 date: "2026-06-26"

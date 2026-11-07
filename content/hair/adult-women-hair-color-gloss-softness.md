@@ -1,6 +1,7 @@
 ---
 title: "大人女性のカラーリング、ツヤ感とやわらかさを両立するには？"
 slug: "adult-women-hair-color-gloss-softness"
+merged_into: "natural-glossy-hair-color-20s-30s-mqq68564"
 category: "hair"
 salon: "fleurami"
 date: "2026-06-19"

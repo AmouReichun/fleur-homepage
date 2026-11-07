@@ -1,6 +1,7 @@
 ---
 title: "香南市でボブスタイルの艶と丸みを引き出す、ショートボブのカット＆トリートメント選び｜高知県香南市fleur amiの40代向け施術ガイド"
 slug: "kochi-nanshi-shortbob-shine-roundness-guide"
+merged_into: "40dai-hair-menu-color-perm-shukumo"
 category: "hair"
 salon: "fleurami"
 date: "2026-10-02"

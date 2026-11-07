@@ -1,6 +1,7 @@
 ---
 title: "艶のあるロングストレートを叶える髪質改善トリートメント｜高知県香南市fleur amiの大人女性向け施術事例"
 slug: "kagamishi-shitsukaizen-long-straight-fleurami"
+merged_into: "kosanshi-hairquality-treatment-straight"
 category: "hair"
 salon: "fleurami"
 date: "2026-05-16"

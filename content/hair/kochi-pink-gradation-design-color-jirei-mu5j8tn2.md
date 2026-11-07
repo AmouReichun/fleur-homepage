@@ -1,6 +1,7 @@
 ---
 title: "ピンクグラデーションで髪先に色を宿す。高知市でデザインカラーを選ぶ基準とは｜高知県高知市Riv. by fleur amiの施術事例"
 slug: "kochi-pink-gradation-design-color-jirei-mu5j8tn2"
+merged_into: "adult-women-hair-menu-guide-color-cut-perm"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-09-03"

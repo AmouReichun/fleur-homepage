@@ -1,6 +1,7 @@
 ---
 title: 大人女性に似合うボブカラーとは？艶感と深みのある赤みブラウンの魅力
 slug: adult-bob-red-brown-color-riv
+merged_into: "kochi-color-cut-tsuyakami-40dai-riv-msib3hqw"
 category: hair
 salon: Riv. by fleurami
 date: '2026-06-07'

@@ -1,6 +1,7 @@
 ---
 title: "香南市でショートボブを切るなら知っておきたい｜すっきりした後ろ姿に仕上げるための選び方"
 slug: "konan-short-bob-erabikata-fleurami-mrogy5gy"
+merged_into: "40dai-hair-menu-color-perm-shukumo"
 category: "hair"
 salon: "fleurami"
 date: "2026-07-17"

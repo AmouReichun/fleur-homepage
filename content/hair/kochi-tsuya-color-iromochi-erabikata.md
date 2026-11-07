@@ -1,6 +1,7 @@
 ---
 title: "高知市で艶カラーを長く楽しむには｜色持ちと仕上がりを両立させる選び方"
 slug: "kochi-tsuya-color-iromochi-erabikata"
+merged_into: "kochi-color-cut-tsuyakami-40dai-riv-msib3hqw"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-10-18"

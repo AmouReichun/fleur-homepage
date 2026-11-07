@@ -1,6 +1,7 @@
 ---
 title: "高知市で大人の髪、ツヤ感を出すボブカットとカラーの選び方"
 slug: "kochi-bob-tuyairo-otona"
+merged_into: "kochi-color-cut-tsuyakami-40dai-riv-msib3hqw"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-10-25"

@@ -1,6 +1,7 @@
 ---
 title: "香南市でショートボブをまとめるなら、艶カラーと白髪ぼかしどちらを選ぶ？"
 slug: "konan-shortbob-tsuya-shirayoke-erabikata"
+merged_into: "40dai-shiraga-bokashi-highlight-shiagari-mqrjcjaq"
 category: "hair"
 salon: "fleurami"
 date: "2026-10-24"

@@ -1,6 +1,7 @@
 ---
 title: "香南市のショートボブ、縮毛矯正で後ろ姿がきれいに見える理由｜40代向け施術ガイド"
 slug: "kochi-konan-shortbob-perm-straightening-guide-mv7elvd8"
+merged_into: "koshoku-kyosei-tsuyakuro-bob-konan-fleurami-mt2houmb"
 category: "hair"
 salon: "fleurami"
 date: "2026-10-14"

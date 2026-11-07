@@ -1,6 +1,7 @@
 ---
 title: "40代の白髪ぼかしカラー、艶と自然な色味を両立させるには何を見るべき？｜高知県香南市fleur amiの施術ガイド"
 slug: "40dai-shiraga-bokashi-color-tsuyakami-konanshi-fleurami-mt2630bn"
+merged_into: "40dai-shiraga-bokashi-highlight-shiagari-mqrjcjaq"
 category: "hair"
 salon: "fleurami"
 date: "2026-08-20"

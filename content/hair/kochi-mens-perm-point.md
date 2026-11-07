@@ -1,6 +1,7 @@
 ---
 title: "高知市でメンズパーマを選ぶなら｜仕上がりと持ちを決める3つのポイント"
 slug: "kochi-mens-perm-point"
+merged_into: "mens-perm-finish-style-explanation-mqt1i8un"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-10-16"

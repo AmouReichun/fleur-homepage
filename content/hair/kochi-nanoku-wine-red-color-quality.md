@@ -1,6 +1,7 @@
 ---
 title: "赤紫のくすみカラーで大人っぽさを引き出す｜香南市で艶感のあるワインレッドを叶える髪質改善×カラー"
 slug: "kochi-nanoku-wine-red-color-quality"
+merged_into: "konan-color-shitsukaizen-tsuyakami-bob"
 category: "hair"
 salon: "fleurami"
 date: "2026-09-26"

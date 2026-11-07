@@ -1,6 +1,7 @@
 ---
 title: "高知市で縮毛矯正＋髪質改善トリートメントを考えている40代女性へ｜2つの施術の違いと選び方"
 slug: "kochi-shukumo-shitsukaizen-erabikata-mr35i2d4"
+merged_into: "kochi-shitsukaizen-shukumou-chigai"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-07-02"

@@ -1,6 +1,7 @@
 ---
 title: "ショートボブの後ろ姿、丸みとすっきり感を両立するカットとは何が違うのか｜高知県香南市fleur amiの大人女性向け施術事例"
 slug: "kananshi-short-bob-ushiro-sugata-marumi-fleurami"
+merged_into: "40dai-hair-menu-color-perm-shukumo"
 category: "hair"
 salon: "fleurami"
 date: "2026-08-22"

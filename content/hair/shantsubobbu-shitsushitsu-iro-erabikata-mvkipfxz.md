@@ -1,6 +1,7 @@
 ---
 title: "ショートボブを長く楽しむなら、髪質と色選びをどう判断する？"
 slug: "shantsubobbu-shitsushitsu-iro-erabikata-mvkipfxz"
+merged_into: "40dai-hair-menu-color-perm-shukumo"
 category: "hair"
 salon: "fleurami"
 date: "2026-10-25"

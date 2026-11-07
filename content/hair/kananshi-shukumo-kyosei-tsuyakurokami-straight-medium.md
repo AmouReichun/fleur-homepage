@@ -1,6 +1,7 @@
 ---
 title: "縮毛矯正で艶のある黒髪ストレートミディアムを叶えるには何が違うのか｜高知県香南市fleur amiの大人女性向け施術事例"
 slug: "kananshi-shukumo-kyosei-tsuyakurokami-straight-medium"
+merged_into: "koshoku-kyosei-tsuyakuro-bob-konan-fleurami-mt2houmb"
 category: "hair"
 salon: "fleurami"
 date: "2026-08-20"

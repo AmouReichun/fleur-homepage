@@ -1,6 +1,7 @@
 ---
 title: "香南市でメンズカットを選ぶ前に知っておきたいこと｜刈り上げ×テクスチャーカットの仕上がりと選び方"
 slug: "konan-mens-cut-karriage-texture-erabikata-mrvwpquf"
+merged_into: "mens-cut-koubu-sukkiri-kanan-fleurami"
 category: "hair"
 salon: "fleurami"
 date: "2026-07-22"

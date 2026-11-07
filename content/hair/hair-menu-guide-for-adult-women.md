@@ -1,6 +1,7 @@
 ---
 title: "大人女性の髪、ツヤとまとまりを両立するカラーってどんな仕上がり？"
 slug: "hair-menu-guide-for-adult-women"
+merged_into: "kochi-color-cut-tsuyakami-40dai-riv-msib3hqw"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-06-12"

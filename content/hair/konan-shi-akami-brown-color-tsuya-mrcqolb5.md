@@ -1,6 +1,7 @@
 ---
 title: "香南市20代・30代に人気の赤みブラウン艶カラー｜施術事例と仕上がりの違いを解説"
 slug: "konan-shi-akami-brown-color-tsuya-mrcqolb5"
+merged_into: "natural-glossy-hair-color-20s-30s-mqq68564"
 category: "hair"
 salon: "fleurami"
 date: "2026-07-08"

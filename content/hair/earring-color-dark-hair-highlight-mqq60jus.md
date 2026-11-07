@@ -1,6 +1,7 @@
 ---
 title: "イヤリングカラーって何？暗髪のまま楽しめるさりげないカラーの魅力とは"
 slug: "earring-color-dark-hair-highlight-mqq60jus"
+merged_into: "inner-color-adult-bob-fleur-ami-mqt7crpq"
 category: "hair"
 salon: "fleurami"
 date: "2026-06-23"

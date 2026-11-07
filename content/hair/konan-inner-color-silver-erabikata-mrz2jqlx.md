@@ -1,6 +1,7 @@
 ---
 title: "香南市でインナーカラー（シルバー）を考えている方へ｜10代・若年層でも失敗しない選び方"
 slug: "konan-inner-color-silver-erabikata-mrz2jqlx"
+merged_into: "inner-color-adult-bob-fleur-ami-mqt7crpq"
 category: "hair"
 salon: "fleurami"
 date: "2026-07-24"

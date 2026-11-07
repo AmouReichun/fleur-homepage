@@ -1,6 +1,7 @@
 ---
 title: "高知市で縮毛矯正と髪質改善トリートメントを選ぶ前に知っておきたいこと｜40代女性のうねり・広がり対策"
 slug: "kochi-shukumo-shitsukaizen-erabikata-40dai-mrylknus"
+merged_into: "kochi-shitsukaizen-shukumou-chigai"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-07-24"

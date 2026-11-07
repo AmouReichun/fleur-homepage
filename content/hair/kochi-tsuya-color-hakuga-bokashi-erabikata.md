@@ -1,6 +1,7 @@
 ---
 title: "高知市で艶カラーと白髪ぼかしを迷っている40代女性へ｜どう選ぶ？仕上がりの違いと向き不向きを解説"
 slug: "kochi-tsuya-color-hakuga-bokashi-erabikata"
+merged_into: "shiraga-bokashi-short-bob-30-40dai-mqq6au6v"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-10-03"

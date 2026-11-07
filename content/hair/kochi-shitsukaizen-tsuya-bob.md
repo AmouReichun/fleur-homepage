@@ -1,6 +1,7 @@
 ---
 title: "高知市で艶ボブを叶える髪質改善｜大人女性の「まとまり」と「ツヤ」の両立"
 slug: "kochi-shitsukaizen-tsuya-bob"
+merged_into: "kamishitsu-kaizen-tsuyakam-otona-josei"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-10-15"

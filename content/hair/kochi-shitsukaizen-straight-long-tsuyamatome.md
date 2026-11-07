@@ -1,6 +1,7 @@
 ---
 title: "髪質改善トリートメントでツヤとまとまりのあるストレートロングを叶えるには｜高知県高知市Riv. by fleur amiの施術事例と向き不向き"
 slug: "kochi-shitsukaizen-straight-long-tsuyamatome"
+merged_into: "kamishitsu-kaizen-tsuyakam-otona-josei"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-05-23"

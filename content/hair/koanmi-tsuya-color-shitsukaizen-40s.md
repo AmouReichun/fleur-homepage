@@ -1,6 +1,7 @@
 ---
 title: "40代の大人女性向け、香南市で艶カラーと髪質改善を組み合わせる理由｜fleur ami"
 slug: "koanmi-tsuya-color-shitsukaizen-40s"
+merged_into: "konan-color-shitsukaizen-tsuyakami-bob"
 category: "hair"
 salon: "fleurami"
 date: "2026-10-17"

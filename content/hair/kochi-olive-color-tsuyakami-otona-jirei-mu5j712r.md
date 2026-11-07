@@ -1,6 +1,7 @@
 ---
 title: "オリーブ系カラーでツヤとまとまりを叶えるには｜高知県高知市Riv. by fleur amiの大人女性向け施術事例と選び方"
 slug: "kochi-olive-color-tsuyakami-otona-jirei-mu5j712r"
+merged_into: "kochi-color-cut-tsuyakami-40dai-riv-msib3hqw"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-09-03"

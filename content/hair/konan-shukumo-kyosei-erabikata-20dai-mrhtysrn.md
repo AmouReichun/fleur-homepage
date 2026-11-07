@@ -1,6 +1,7 @@
 ---
 title: "20代からの縮毛矯正でまとまる髪へ｜香南市fleur amiで施術前に確認すること"
 slug: "konan-shukumo-kyosei-erabikata-20dai-mrhtysrn"
+merged_into: "koshoku-kyosei-tsuyakuro-bob-konan-fleurami-mt2houmb"
 category: "hair"
 salon: "fleurami"
 date: "2026-07-12"

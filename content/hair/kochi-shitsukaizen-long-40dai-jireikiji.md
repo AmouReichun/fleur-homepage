@@ -1,6 +1,7 @@
 ---
 title: "髪質改善トリートメントでツヤとまとまりを叶える40代向け施術事例｜高知県高知市Riv. by fleur amiのロングヘア選び方ガイド"
 slug: "kochi-shitsukaizen-long-40dai-jireikiji"
+merged_into: "kamishitsu-kaizen-tsuyakam-otona-josei"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-09-04"

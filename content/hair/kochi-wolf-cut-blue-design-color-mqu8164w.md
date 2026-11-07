@@ -1,6 +1,7 @@
 ---
 title: "高知市でウルフカット×ブルーデザインカラーに挑戦したい方へ｜大人の個性派スタイルとは？"
 slug: "kochi-wolf-cut-blue-design-color-mqu8164w"
+merged_into: "kochi-wolf-cut-40dai-jissen-guide"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-06-26"

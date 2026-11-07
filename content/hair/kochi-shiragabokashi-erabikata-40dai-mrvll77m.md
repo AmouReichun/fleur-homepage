@@ -1,6 +1,7 @@
 ---
 title: "高知市で白髪ぼかしを考えている40代女性へ｜失敗しない選び方とRiv. by fleur amiの施術事例"
 slug: "kochi-shiragabokashi-erabikata-40dai-mrvll77m"
+merged_into: "shiraga-bokashi-short-bob-30-40dai-mqq6au6v"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-07-22"

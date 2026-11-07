@@ -1,6 +1,7 @@
 ---
 title: "メンズパーマで長さを活かしたスタイルを作るには？｜高知県香南市fleur amiの施術事例から分かる選び方"
 slug: "mens-perm-length-style-kochi-nankoku-muj95rfp"
+merged_into: "kananshi-mens-perm-erabikata-fleur-ami"
 category: "hair"
 salon: "fleurami"
 date: "2026-09-27"

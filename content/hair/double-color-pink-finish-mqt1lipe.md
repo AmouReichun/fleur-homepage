@@ -1,6 +1,7 @@
 ---
 title: "ダブルカラーでピンク系の色を入れるとどんな仕上がりになるの？"
 slug: "double-color-pink-finish-mqt1lipe"
+merged_into: "double-color-adult-hair-guide-mqt1l6m9"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-06-25"

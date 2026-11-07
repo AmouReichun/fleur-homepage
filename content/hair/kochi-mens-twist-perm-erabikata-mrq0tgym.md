@@ -1,6 +1,7 @@
 ---
 title: "高知市でメンズツイストパーマを選ぶ前に知っておきたいこと｜仕上がりと持ちの判断基準"
 slug: "kochi-mens-twist-perm-erabikata-mrq0tgym"
+merged_into: "mens-perm-finish-style-explanation-mqt1i8un"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-07-18"

@@ -1,6 +1,7 @@
 ---
 title: "艶感のあるロングカラーで広がりを整えたい40代女性へ｜香南市fleur amiの艶カラー施術事例"
 slug: "kanami-tsuya-long-color-40s-fleurami"
+merged_into: "natural-glossy-hair-color-20s-30s-mqq68564"
 category: "hair"
 salon: "fleurami"
 date: "2026-09-06"

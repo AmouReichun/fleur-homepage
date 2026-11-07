@@ -1,6 +1,7 @@
 ---
 title: "ツヤストレートロングヘアを叶えるには何が必要？｜高知県高知市の美容室Riv. by fleur amiの髪質改善施術事例と選び方"
 slug: "kochi-tuya-straight-long-shitsukaizen"
+merged_into: "kamishitsu-kaizen-tsuyakam-otona-josei"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-10-07"

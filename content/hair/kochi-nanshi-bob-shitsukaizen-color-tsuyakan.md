@@ -1,6 +1,7 @@
 ---
 title: "香南市でボブの艶感を引き出す｜髪質改善トリートメント×カラーの選び方"
 slug: "kochi-nanshi-bob-shitsukaizen-color-tsuyakan"
+merged_into: "konan-color-shitsukaizen-tsuyakami-bob"
 category: "hair"
 salon: "fleurami"
 date: "2026-11-01"

@@ -1,6 +1,7 @@
 ---
 title: "高知市でツヤカラーを選ぶ前に知っておきたいこと｜艶感と自然な色持ちを重視する40代女性へ"
 slug: "kochi-tsuya-color-erabikata-40dai"
+merged_into: "kochi-color-cut-tsuyakami-40dai-riv-msib3hqw"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-07-25"

@@ -1,6 +1,7 @@
 ---
 title: "香南市でツヤのある艶カラーを選ぶ前に知っておきたいこと｜40代女性の髪色選びの基準"
 slug: "konan-tsuya-color-erabikata-40dai"
+merged_into: "natural-glossy-hair-color-20s-30s-mqq68564"
 category: "hair"
 salon: "fleurami"
 date: "2026-06-28"

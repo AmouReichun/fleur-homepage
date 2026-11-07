@@ -1,6 +1,7 @@
 ---
 title: "40代が選ぶボブスタイル、香南市で艶感を引き出す髪質改善トリートメント｜fleur amiの施術事例"
 slug: "kochi-nanami-bob-shitsukaizentreatment-eyelash-case"
+merged_into: "kosanshi-hairquality-treatment-straight"
 category: "hair"
 salon: "fleurami"
 date: "2026-11-03"

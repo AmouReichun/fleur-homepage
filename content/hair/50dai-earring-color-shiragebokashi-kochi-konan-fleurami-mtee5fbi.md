@@ -1,6 +1,7 @@
 ---
 title: "50代のイヤリングカラーと白髪ぼかし、どちらから始めるべき？｜高知県香南市fleur amiの施術事例"
 slug: "50dai-earring-color-shiragebokashi-kochi-konan-fleurami-mtee5fbi"
+merged_into: "40dai-shiraga-bokashi-highlight-shiagari-mqrjcjaq"
 category: "hair"
 salon: "fleurami"
 date: "2026-08-25"

@@ -1,6 +1,7 @@
 ---
 title: "縮毛矯正で失敗しない選び方と仕上がりの目安｜香南市fleur amiの施術事例"
 slug: "konan-shukumou-kyosei-erabi-kata-mrbavop0"
+merged_into: "koshoku-kyosei-tsuyakuro-bob-konan-fleurami-mt2houmb"
 category: "hair"
 salon: "fleurami"
 date: "2026-07-07"

@@ -1,6 +1,7 @@
 ---
 title: "切りっぱなしボブの外ハネスタイルとWカラーの施術事例｜香南市fleur amiの仕上がり紹介"
 slug: "koanshi-w-color-kiripanashi-bob-sotohane-mrvvijde"
+merged_into: "silver-double-color-adult-women-mqrjz08r"
 category: "hair"
 salon: "fleurami"
 date: "2026-07-22"

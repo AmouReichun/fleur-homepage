@@ -1,6 +1,7 @@
 ---
 title: "高知市でレイヤーボブを選ぶ前に知っておきたいこと｜広がり・ペタンコ悩みを解消するカットの選び方"
 slug: "kochi-layer-bob-cut-erabikata"
+merged_into: "kochi-layer-bob-matome-karusa-40dai-mtlh4j7e"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-07-23"

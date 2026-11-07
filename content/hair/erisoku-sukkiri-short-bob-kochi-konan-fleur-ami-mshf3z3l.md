@@ -1,6 +1,7 @@
 ---
 title: "襟足スッキリショートボブで後ろ姿の印象を変えるには｜高知県香南市fleur amiの40代向け施術事例"
 slug: "erisoku-sukkiri-short-bob-kochi-konan-fleur-ami-mshf3z3l"
+merged_into: "40dai-hair-menu-color-perm-shukumo"
 category: "hair"
 salon: "fleurami"
 date: "2026-08-06"

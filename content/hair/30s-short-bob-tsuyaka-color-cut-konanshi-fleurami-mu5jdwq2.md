@@ -1,6 +1,7 @@
 ---
 title: "30代のショートボブ、後ろ姿の丸みと艶感を叶えるカラーとカットの選び方｜高知県香南市fleur amiの施術事例"
 slug: "30s-short-bob-tsuyaka-color-cut-konanshi-fleurami-mu5jdwq2"
+merged_into: "natural-glossy-hair-color-20s-30s-mqq68564"
 category: "hair"
 salon: "fleurami"
 date: "2026-09-05"

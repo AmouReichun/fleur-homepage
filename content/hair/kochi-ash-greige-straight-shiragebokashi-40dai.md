@@ -1,6 +1,7 @@
 ---
 title: "アッシュグレージュのツヤストレートで白髪を自然になじませるには｜高知市Riv. by fleur amiの40代向け施術事例"
 slug: "kochi-ash-greige-straight-shiragebokashi-40dai"
+merged_into: "shiraga-bokashi-short-bob-30-40dai-mqq6au6v"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-08-02"

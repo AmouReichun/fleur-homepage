@@ -1,6 +1,7 @@
 ---
 title: "ダークトーンからブルーグレーへ。グラデーションデザインカラーで仕上がりに差が出る理由とは｜高知県高知市Riv. by fleur amiの施術事例"
 slug: "kochi-design-color-gradation-blue-grey-bob-msiblaco"
+merged_into: "adult-women-hair-menu-guide-color-cut-perm"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-08-07"

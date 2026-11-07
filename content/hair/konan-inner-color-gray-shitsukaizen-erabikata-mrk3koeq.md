@@ -1,6 +1,7 @@
 ---
 title: "香南市でインナーカラー×髪質改善を考えている30代女性へ｜表面の艶と内側のデザインを両立する選び方"
 slug: "konan-inner-color-gray-shitsukaizen-erabikata-mrk3koeq"
+merged_into: "inner-color-adult-bob-fleur-ami-mqt7crpq"
 category: "hair"
 salon: "fleurami"
 date: "2026-07-14"

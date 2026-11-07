@@ -1,6 +1,7 @@
 ---
 title: "くくれるボブ×オリーブベージュで20代の印象を変えるには｜高知県香南市fleur amiのカット＆カラー施術事例"
 slug: "20s-bob-olive-beige-cut-color-konan-fleurami-mt2bnliv"
+merged_into: "natural-glossy-hair-color-20s-30s-mqq68564"
 category: "hair"
 salon: "fleurami"
 date: "2026-08-21"

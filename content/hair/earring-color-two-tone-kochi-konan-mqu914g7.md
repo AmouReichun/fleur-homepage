@@ -1,6 +1,7 @@
 ---
 title: "イヤリングカラーって2色使いでどんな印象になるの？"
 slug: "earring-color-two-tone-kochi-konan-mqu914g7"
+merged_into: "inner-color-adult-bob-fleur-ami-mqt7crpq"
 category: "hair"
 salon: "fleurami"
 date: "2026-06-26"

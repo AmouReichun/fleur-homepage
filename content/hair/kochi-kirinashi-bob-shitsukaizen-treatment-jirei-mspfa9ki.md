@@ -1,6 +1,7 @@
 ---
 title: "切りっぱなしボブ×髪質改善トリートメントで仕上がりに差が出る理由｜高知県高知市Riv. by fleur amiの施術事例"
 slug: "kochi-kirinashi-bob-shitsukaizen-treatment-jirei-mspfa9ki"
+merged_into: "kamishitsu-kaizen-tsuyakam-otona-josei"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-08-12"

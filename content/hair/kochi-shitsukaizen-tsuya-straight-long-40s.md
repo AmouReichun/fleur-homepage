@@ -1,6 +1,7 @@
 ---
 title: "高知市で艶ストレートロングを叶える髪質改善｜40代大人女性の選び方"
 slug: "kochi-shitsukaizen-tsuya-straight-long-40s"
+merged_into: "kamishitsu-kaizen-tsuyakam-otona-josei"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-10-21"

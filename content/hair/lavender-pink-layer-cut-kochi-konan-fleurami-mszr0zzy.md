@@ -1,6 +1,7 @@
 ---
 title: "ラベンダーピンク×レイヤーカットで柔らかな印象を叶えるには｜高知県香南市fleur amiの大人女性向け施術事例"
 slug: "lavender-pink-layer-cut-kochi-konan-fleurami-mszr0zzy"
+merged_into: "short-layered-bob-adult-women-mqq67b8n"
 category: "hair"
 salon: "fleurami"
 date: "2026-08-19"

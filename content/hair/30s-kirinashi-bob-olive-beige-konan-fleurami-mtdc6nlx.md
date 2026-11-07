@@ -1,6 +1,7 @@
 ---
 title: "切りっぱなしボブで艶とまとまりを叶えたい30代女性へ｜香南市fleur amiのオリーブベージュカラー施術事例"
 slug: "30s-kirinashi-bob-olive-beige-konan-fleurami-mtdc6nlx"
+merged_into: "kirinashi-bob-cut-matome-kochi-konanshi-fleurami"
 category: "hair"
 salon: "fleurami"
 date: "2026-08-25"

@@ -1,6 +1,7 @@
 ---
 title: "髪質改善トリートメント×カットの仕上がりの差とは｜高知市Riv.で体験する組み合わせ効果"
 slug: "kochi-shitsukaizen-treatment-cut-erabikata-mr35jmv3"
+merged_into: "kamishitsu-kaizen-tsuyakam-otona-josei"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-07-02"

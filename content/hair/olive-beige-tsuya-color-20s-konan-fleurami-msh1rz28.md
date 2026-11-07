@@ -1,6 +1,7 @@
 ---
 title: "明るめオリーブベージュで艶のある仕上がりを叶えるには｜香南市fleur amiの20代向け艶カラー施術ガイド"
 slug: "olive-beige-tsuya-color-20s-konan-fleurami-msh1rz28"
+merged_into: "natural-glossy-hair-color-20s-30s-mqq68564"
 category: "hair"
 salon: "fleurami"
 date: "2026-08-06"

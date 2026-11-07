@@ -1,6 +1,7 @@
 ---
 title: "ビビッドピンクのショートボブで後ろ姿の印象を変えるには｜高知県香南市fleur amiの大人向けカラー施術事例"
 slug: "vivid-pink-short-bob-color-kochi-kanan-fleurami"
+merged_into: "natural-glossy-hair-color-20s-30s-mqq68564"
 category: "hair"
 salon: "fleurami"
 date: "2026-09-04"

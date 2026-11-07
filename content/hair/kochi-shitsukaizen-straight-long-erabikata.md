@@ -1,6 +1,7 @@
 ---
 title: "高知市でツヤストレートロングを叶えるには｜髪質改善トリートメントの選び方と施術事例"
 slug: "kochi-shitsukaizen-straight-long-erabikata"
+merged_into: "kamishitsu-kaizen-tsuyakam-otona-josei"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-10-15"

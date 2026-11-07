@@ -1,6 +1,7 @@
 ---
 title: "落ち着いた色味の艶カラー、20代が仕上がりで選ぶときに確認すべき3つのポイント｜高知県香南市fleur amiの施術事例"
 slug: "kanan-tsuya-color-20s-ochitsuki-erabikata-msh1qbz4"
+merged_into: "natural-glossy-hair-color-20s-30s-mqq68564"
 category: "hair"
 salon: "fleurami"
 date: "2026-08-06"

@@ -1,6 +1,7 @@
 ---
 title: "高知市で艶カラー×ボブを考えている40代女性へ｜サロン選びで失敗しないための判断基準"
 slug: "kochi-tsuyacolor-bob-erabikata-40dai"
+merged_into: "kochi-color-cut-tsuyakami-40dai-riv-msib3hqw"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-07-17"

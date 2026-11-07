@@ -1,6 +1,7 @@
 ---
 title: "長さを活かしたツヤストレートで「毛先の流れ」を整えるには｜高知県高知市Riv. by fleur amiの髪質改善施術事例"
 slug: "kochi-shitsukaizen-nagasa-tsuyastraight-munpjvz9"
+merged_into: "kamishitsu-kaizen-tsuyakam-otona-josei"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-09-30"

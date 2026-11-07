@@ -1,6 +1,7 @@
 ---
 title: "香南市で軽めレイヤーカットを考えている30〜40代女性へ｜仕上がりで選ぶサロンの見極め方"
 slug: "konan-layer-cut-erabikata-30-40dai-mrvwkvbr"
+merged_into: "short-layered-bob-adult-women-mqq67b8n"
 category: "hair"
 salon: "fleurami"
 date: "2026-07-22"

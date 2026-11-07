@@ -1,6 +1,7 @@
 ---
 title: "香南市で艶カラーを長く楽しむには｜40代向けインナーカラーの選び方と施術事例"
 slug: "kochi-konan-inner-color-gloss-40s"
+merged_into: "inner-color-adult-bob-fleur-ami-mqt7crpq"
 category: "hair"
 salon: "fleurami"
 date: "2026-10-30"

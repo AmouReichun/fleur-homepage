@@ -1,6 +1,7 @@
 ---
 title: "サラサラのストレートヘア、どうやって手に入れる？大人女性の髪質とスタイルの選び方"
 slug: "40dai-hair-color-salon-erabi-kata"
+merged_into: "kamishitsu-kaizen-tsuyakam-otona-josei"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-06-14"

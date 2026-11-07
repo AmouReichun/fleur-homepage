@@ -1,6 +1,7 @@
 ---
 title: "ピンクヘアウルフで印象を一変させたい方へ｜高知県高知市Riv. by fleur amiのビビッドカラー×ウルフカット施術事例"
 slug: "kochi-pink-wolf-vivid-color-case-mt2fmprm"
+merged_into: "kochi-wolf-cut-40dai-jissen-guide"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-08-21"

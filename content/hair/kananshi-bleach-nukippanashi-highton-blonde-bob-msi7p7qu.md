@@ -1,6 +1,7 @@
 ---
 title: "ブリーチぬきっぱなしで叶えるハイトーンブロンドボブ、仕上がりで選ぶなら何を確認すべき？｜高知県香南市fleur amiの施術事例"
 slug: "kananshi-bleach-nukippanashi-highton-blonde-bob-msi7p7qu"
+merged_into: "silver-double-color-adult-women-mqrjz08r"
 category: "hair"
 salon: "fleurami"
 date: "2026-08-07"

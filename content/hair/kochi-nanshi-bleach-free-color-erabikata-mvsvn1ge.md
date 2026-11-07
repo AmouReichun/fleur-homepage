@@ -1,6 +1,7 @@
 ---
 title: "香南市でブリーチなしカラーを選ぶ際の判断基準｜大人向け艶カラーの仕上がり事例"
 slug: "kochi-nanshi-bleach-free-color-erabikata-mvsvn1ge"
+merged_into: "natural-glossy-hair-color-20s-30s-mqq68564"
 category: "hair"
 salon: "fleurami"
 date: "2026-11-05"

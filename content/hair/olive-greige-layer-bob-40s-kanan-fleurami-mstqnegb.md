@@ -1,6 +1,7 @@
 ---
 title: "オリーブグレージュ×レイヤーボブで艶と軽さを両立したい40代女性へ｜高知県香南市fleur amiの施術事例"
 slug: "olive-greige-layer-bob-40s-kanan-fleurami-mstqnegb"
+merged_into: "short-layered-bob-adult-women-mqq67b8n"
 category: "hair"
 salon: "fleurami"
 date: "2026-08-15"

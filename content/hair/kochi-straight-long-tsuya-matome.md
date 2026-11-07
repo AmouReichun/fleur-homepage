@@ -1,6 +1,7 @@
 ---
 title: "高知市でストレートロングを選ぶなら｜艶感とまとまりを両立させるコツ"
 slug: "kochi-straight-long-tsuya-matome"
+merged_into: "kamishitsu-kaizen-tsuyakam-otona-josei"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-10-12"

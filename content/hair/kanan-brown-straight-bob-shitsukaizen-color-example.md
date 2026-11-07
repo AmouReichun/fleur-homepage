@@ -1,6 +1,7 @@
 ---
 title: "艶のあるブラウンストレートボブで「まとまらない」を整えるには｜高知県香南市fleur amiの大人女性向け髪質改善カラー施術事例"
 slug: "kanan-brown-straight-bob-shitsukaizen-color-example"
+merged_into: "konan-color-shitsukaizen-tsuyakami-bob"
 category: "hair"
 salon: "fleurami"
 date: "2026-08-07"

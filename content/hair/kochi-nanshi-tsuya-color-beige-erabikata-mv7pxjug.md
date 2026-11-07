@@ -1,6 +1,7 @@
 ---
 title: "香南市で艶カラーを選ぶなら、ベージュ系の色選びをどう判断する？"
 slug: "kochi-nanshi-tsuya-color-beige-erabikata-mv7pxjug"
+merged_into: "natural-glossy-hair-color-20s-30s-mqq68564"
 category: "hair"
 salon: "fleurami"
 date: "2026-10-16"

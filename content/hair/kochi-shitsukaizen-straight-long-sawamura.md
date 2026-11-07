@@ -1,6 +1,7 @@
 ---
 title: "縮毛矯正なしでツヤのあるストレートロングを叶えるには｜高知県高知市Riv. by fleur amiの髪質改善施術事例"
 slug: "kochi-shitsukaizen-straight-long-sawamura"
+merged_into: "kamishitsu-kaizen-tsuyakam-otona-josei"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-08-09"

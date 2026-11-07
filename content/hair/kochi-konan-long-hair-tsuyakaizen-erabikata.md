@@ -1,6 +1,7 @@
 ---
 title: "香南市でロングヘア、艶感とまとまりを両立させるには｜髪質改善の選び方"
 slug: "kochi-konan-long-hair-tsuyakaizen-erabikata"
+merged_into: "kosanshi-hairquality-treatment-straight"
 category: "hair"
 salon: "fleurami"
 date: "2026-10-18"

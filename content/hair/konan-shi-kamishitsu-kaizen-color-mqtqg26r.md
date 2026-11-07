@@ -1,6 +1,7 @@
 ---
 title: "香南市で髪質改善カラーをするとどんな仕上がりになるの？"
 slug: "konan-shi-kamishitsu-kaizen-color-mqtqg26r"
+merged_into: "konan-color-shitsukaizen-tsuyakami-bob"
 category: "hair"
 salon: "fleurami"
 date: "2026-06-25"

@@ -1,6 +1,7 @@
 ---
 title: "メンズパーマで丸みと質感を出すには何が変わる？｜高知県高知市Riv. by fleur amiの施術事例と仕上がりの見極め方"
 slug: "kochi-mens-perm-marumi-shitsugan-jirei"
+merged_into: "mens-perm-finish-style-explanation-mqt1i8un"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-08-28"

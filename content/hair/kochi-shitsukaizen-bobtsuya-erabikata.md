@@ -1,6 +1,7 @@
 ---
 title: "高知市で艶髪ショートボブを作るなら何を見るべき？｜高知県高知市Riv. by fleur amiの施術ポイント解説"
 slug: "kochi-shitsukaizen-bobtsuya-erabikata"
+merged_into: "bob-cut-kirei-otona-josei"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-09-27"

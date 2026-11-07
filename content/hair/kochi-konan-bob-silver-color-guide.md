@@ -1,6 +1,7 @@
 ---
 title: "香南市でボブカットを考えている大人女性へ｜シルバーカラーで叶える洗練された印象の作り方"
 slug: "kochi-konan-bob-silver-color-guide"
+merged_into: "silver-double-color-adult-women-mqrjz08r"
 category: "hair"
 salon: "fleurami"
 date: "2026-10-03"

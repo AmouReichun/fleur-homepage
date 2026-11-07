@@ -1,6 +1,7 @@
 ---
 title: "香南市でショートヘアの後ろ姿をすっきり整えたい40代女性へ｜高知県香南市fleur amiのカット×カラー施術ガイド"
 slug: "kochi-konan-short-hair-back-view-40s-muj93r0v"
+merged_into: "natural-glossy-hair-color-20s-30s-mqq68564"
 category: "hair"
 salon: "fleurami"
 date: "2026-09-27"

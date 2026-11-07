@@ -1,6 +1,7 @@
 ---
 title: "香南市でショートボブ×艶カラーを考えている方へ｜仕上がりで選ぶサロンの基準とは"
 slug: "konan-short-bob-tsuya-color-erabikata-mrcqc9gn"
+merged_into: "natural-glossy-hair-color-20s-30s-mqq68564"
 category: "hair"
 salon: "fleurami"
 date: "2026-07-08"

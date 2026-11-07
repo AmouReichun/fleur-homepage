@@ -1,6 +1,7 @@
 ---
 title: 高知市で縮毛矯正を選ぶなら？くせ毛・うねりに悩む大人女性が確認したい基準｜高知県高知市の美容室Riv. by fleur ami
 slug: kochi-shukumou-kyousei-erabikata
+merged_into: "shukumo-kyosei-sarasara-shikumi-mqq629b3"
 category: hair
 salon: Riv. by fleurami
 date: '2026-10-05'

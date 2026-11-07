@@ -1,6 +1,7 @@
 ---
 title: "香南市で艶カラーを選ぶなら、白髪ぼかしと組み合わせる理由"
 slug: "konan-tsuya-color-shiraganobokashi-kumiawase"
+merged_into: "40dai-shiraga-bokashi-highlight-shiagari-mqrjcjaq"
 category: "hair"
 salon: "fleurami"
 date: "2026-10-25"

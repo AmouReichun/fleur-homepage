@@ -1,6 +1,7 @@
 ---
 title: "ナチュラルブラウンのショートボブ、40代が仕上がりで選ぶときに確認すべき3つのポイント｜高知県香南市fleur amiの施術事例"
 slug: "natural-brown-short-bob-40s-kanan-fleurami"
+merged_into: "natural-glossy-hair-color-20s-30s-mqq68564"
 category: "hair"
 salon: "fleurami"
 date: "2026-08-08"

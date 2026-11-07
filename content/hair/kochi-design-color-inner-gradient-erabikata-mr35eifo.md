@@ -1,6 +1,7 @@
 ---
 title: "高知市でデザインカラーを考えている方へ｜インナーカラー・グラデーションの選び方と失敗しないポイント"
 slug: "kochi-design-color-inner-gradient-erabikata-mr35eifo"
+merged_into: "kiriippanashi-bob-inner-color-shiatsu-jirei-kochi-mu5j5dyv"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-07-02"

@@ -1,6 +1,7 @@
 ---
 title: "白髪ぼかしダブルカラーで自然なグレースタイルを叶えるには｜高知県高知市Riv. by fleur amiの40代向け施術事例"
 slug: "kochi-shiraganobokashi-double-color-gray-bob-mt2fkx7z"
+merged_into: "shiraga-bokashi-short-bob-30-40dai-mqq6au6v"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-08-21"

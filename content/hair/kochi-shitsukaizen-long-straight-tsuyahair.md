@@ -1,6 +1,7 @@
 ---
 title: "高知市で長さを活かしたツヤストレートヘアを叶えるには｜髪質改善トリートメントの仕上がりと選び方"
 slug: "kochi-shitsukaizen-long-straight-tsuyahair"
+merged_into: "kamishitsu-kaizen-tsuyakam-otona-josei"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-05-08"

@@ -1,6 +1,7 @@
 ---
 title: "ブリーチなしで叶えるバーガンディカラー、20代が選ぶときに確認すべき3つのポイント｜香南市fleur amiの施術事例"
 slug: "burgundy-color-no-bleach-20s-kochi-konan-ms6sgymj"
+merged_into: "natural-glossy-hair-color-20s-30s-mqq68564"
 category: "hair"
 salon: "fleurami"
 date: "2026-07-30"

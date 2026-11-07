@@ -1,6 +1,7 @@
 ---
 title: "艶感のあるロングストレートを高知市で叶えるには｜髪質改善トリートメントの仕上がりと選び方を美容師が解説"
 slug: "kochi-shitsukaizen-long-straight-gloss"
+merged_into: "kamishitsu-kaizen-tsuyakam-otona-josei"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-09-26"

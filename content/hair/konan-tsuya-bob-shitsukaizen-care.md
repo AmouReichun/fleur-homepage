@@ -1,6 +1,7 @@
 ---
 title: "香南市で艶ボブを長く楽しむ髪質改善｜40代向けカラーと手触りの秘訣"
 slug: "konan-tsuya-bob-shitsukaizen-care"
+merged_into: "konan-color-shitsukaizen-tsuyakami-bob"
 category: "hair"
 salon: "fleurami"
 date: "2026-10-27"

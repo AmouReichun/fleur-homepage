@@ -1,6 +1,7 @@
 ---
 title: "ピンクハイライトで白髪ぼかしをするとどんな仕上がりになる？｜高知市の施術事例と選び方の基準"
 slug: "kochi-shiraganobashi-pink-highlight-jirei-ms5df2j5"
+merged_into: "shiraga-bokashi-short-bob-30-40dai-mqq6au6v"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-07-29"

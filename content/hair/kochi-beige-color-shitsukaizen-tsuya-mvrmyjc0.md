@@ -1,6 +1,7 @@
 ---
 title: "高知市でベージュカラーを長くツヤツヤに保つには｜髪質改善との組み合わせが鍵"
 slug: "kochi-beige-color-shitsukaizen-tsuya-mvrmyjc0"
+merged_into: "color-cut-kamishitsu-kaizen-treatment-mqq5zqzx"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-10-29"

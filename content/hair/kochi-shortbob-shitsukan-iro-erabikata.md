@@ -1,6 +1,7 @@
 ---
 title: "高知市で大人のショートボブを選ぶなら、質感と色選びが決め手｜高知県高知市Riv. by fleur amiの施術ガイド"
 slug: "kochi-shortbob-shitsukan-iro-erabikata"
+merged_into: "bob-cut-kirei-otona-josei"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-09-26"

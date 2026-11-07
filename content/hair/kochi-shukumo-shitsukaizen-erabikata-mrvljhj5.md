@@ -1,6 +1,7 @@
 ---
 title: "高知市で縮毛矯正と髪質改善トリートメント、どちらを選ぶべき？仕上がりから判断するポイント"
 slug: "kochi-shukumo-shitsukaizen-erabikata-mrvljhj5"
+merged_into: "kochi-shitsukaizen-shukumou-chigai"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-07-22"

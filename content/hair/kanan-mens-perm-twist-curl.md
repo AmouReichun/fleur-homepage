@@ -1,6 +1,7 @@
 ---
 title: "香南市でメンズパーマ｜クセ毛風ツイストカールで今どきスタイルに"
 slug: "kanan-mens-perm-twist-curl"
+merged_into: "kananshi-mens-perm-erabikata-fleur-ami"
 category: "hair"
 salon: "fleurami"
 date: "2026-06-26"

@@ -1,6 +1,7 @@
 ---
 title: "メンズパーマで動きとまとまりを両立したい方へ｜香南市fleur amiの仕上がりと施術ガイド"
 slug: "mens-perm-ugoki-matomari-konan-fleurami-mtoaa0sv"
+merged_into: "kananshi-mens-perm-erabikata-fleur-ami"
 category: "hair"
 salon: "fleurami"
 date: "2026-08-28"

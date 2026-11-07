@@ -1,6 +1,7 @@
 ---
 title: "高知市でレイヤーカットを考えている40代女性へ｜似合う軽さと動きの選び方"
 slug: "kochi-layer-cut-40dai-erabikata-mr076xs4"
+merged_into: "kochi-layer-bob-matome-karusa-40dai-mtlh4j7e"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-06-30"

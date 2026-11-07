@@ -1,6 +1,7 @@
 ---
 title: "ショートボブの毛先をまとめるには？香南市で選ぶ髪質改善トリートメント"
 slug: "knanmi-shortbob-hair-treatment-guide"
+merged_into: "kosanshi-hairquality-treatment-straight"
 category: "hair"
 salon: "fleurami"
 date: "2026-10-14"

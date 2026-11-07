@@ -1,6 +1,7 @@
 ---
 title: "高知市でハイトーンカラーを考えている40代へ｜色選びと褪色を防ぐために知っておきたいこと"
 slug: "kochi-high-tone-color-erabikata-40dai-mrx5r2l9"
+merged_into: "double-color-adult-hair-guide-mqt1l6m9"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-07-23"

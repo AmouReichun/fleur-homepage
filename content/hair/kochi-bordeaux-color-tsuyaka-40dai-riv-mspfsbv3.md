@@ -1,6 +1,7 @@
 ---
 title: "ボルドーカラーで深みと艶を出すには何が必要？｜高知県高知市Riv. by fleur amiの40代向け艶カラー施術事例"
 slug: "kochi-bordeaux-color-tsuyaka-40dai-riv-mspfsbv3"
+merged_into: "kochi-color-cut-tsuyakami-40dai-riv-msib3hqw"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-08-12"

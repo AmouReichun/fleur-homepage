@@ -1,6 +1,7 @@
 ---
 title: "艶と深みのあるブラウンカラーで40代の印象を変えるには｜高知県香南市fleur amiのハイライト×艶カラー施術事例"
 slug: "konanshi-brown-highlight-tsuya-color-40dai"
+merged_into: "otona-bob-highlight-change-mqq66hym"
 category: "hair"
 salon: "fleurami"
 date: "2026-08-30"

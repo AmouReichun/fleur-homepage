@@ -1,6 +1,7 @@
 ---
 title: "切りっぱなしボブ×Wカラーで仕上がりを重視する｜香南市の30代女性がサロンを選ぶ基準"
 slug: "kanan-w-color-kirippa-bob-30s-mroh9bu5"
+merged_into: "silver-double-color-adult-women-mqrjz08r"
 category: "hair"
 salon: "fleurami"
 date: "2026-07-17"

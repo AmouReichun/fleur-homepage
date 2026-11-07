@@ -1,6 +1,7 @@
 ---
 title: "根元の白髪もハイライトで自然になじむ白髪ケア｜高知市の40代女性に人気のカラー法"
 slug: "kochi-shiragas-bokashi-highlight-erabikata-mrkd6qs7"
+merged_into: "shiraga-bokashi-short-bob-30-40dai-mqq6au6v"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-07-14"

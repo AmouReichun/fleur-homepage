@@ -1,6 +1,7 @@
 ---
 title: "香南市でショートカットを考えている40代女性へ｜カットだけで印象が変わる？サロン選びの判断基準"
 slug: "konan-short-cut-erabikata-40dai"
+merged_into: "40dai-hair-menu-color-perm-shukumo"
 category: "hair"
 salon: "fleurami"
 date: "2026-06-14"

@@ -1,6 +1,7 @@
 ---
 title: "香南市で縮毛矯正を選ぶなら、艶感を重視したい40代へ"
 slug: "kochi-nanshi-tsuya-40s-mvkijokl"
+merged_into: "koshoku-kyosei-tsuyakuro-bob-konan-fleurami-mt2houmb"
 category: "hair"
 salon: "fleurami"
 date: "2026-10-24"

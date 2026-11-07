@@ -1,6 +1,7 @@
 ---
 title: "ショートボブの後ろ姿をすっきり丸く仕上げるカットとは｜高知県香南市fleur amiの大人女性向け施術事例"
 slug: "kanan-short-bob-back-round-cut-fleurami"
+merged_into: "40dai-hair-menu-color-perm-shukumo"
 category: "hair"
 salon: "fleurami"
 date: "2026-05-30"

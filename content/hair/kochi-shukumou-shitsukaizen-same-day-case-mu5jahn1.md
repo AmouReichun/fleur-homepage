@@ -1,6 +1,7 @@
 ---
 title: "縮毛矯正＋髪質改善トリートメントを同日に受けると仕上がりはどう変わる？｜高知県高知市Riv. by fleur amiの施術事例と選び方"
 slug: "kochi-shukumou-shitsukaizen-same-day-case-mu5jahn1"
+merged_into: "kochi-shukumo-shitsukaizen-onedaysession-guide-msh284gn"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-09-03"

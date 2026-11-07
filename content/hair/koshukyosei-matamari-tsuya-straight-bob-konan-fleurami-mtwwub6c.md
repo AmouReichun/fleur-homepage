@@ -1,6 +1,7 @@
 ---
 title: "縮毛矯正でまとまりのある艶ストレートボブを叶えるには何を見るべきか｜高知県香南市fleur amiの大人女性向け施術事例"
 slug: "koshukyosei-matamari-tsuya-straight-bob-konan-fleurami-mtwwub6c"
+merged_into: "koshoku-kyosei-tsuyakuro-bob-konan-fleurami-mt2houmb"
 category: "hair"
 salon: "fleurami"
 date: "2026-09-03"

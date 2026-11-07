@@ -1,6 +1,7 @@
 ---
 title: "40代の白髪染め、艶と自然な色味を両立するには？｜香南市fleur amiの施術事例と選び方"
 slug: "40dai-shiragasome-tsuya-shizenna-iromi-kananshi-fleur-ami-ms5m3uq0"
+merged_into: "shiragage-some-shizen-iroami-30-40dai-mqt5oyst"
 category: "hair"
 salon: "fleurami"
 date: "2026-07-29"

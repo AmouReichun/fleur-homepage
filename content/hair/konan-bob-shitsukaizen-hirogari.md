@@ -1,6 +1,7 @@
 ---
 title: "香南市でボブのおさまりを整える髪質改善トリートメント｜短めボブの広がりを抑える施術選び"
 slug: "konan-bob-shitsukaizen-hirogari"
+merged_into: "kosanshi-hairquality-treatment-straight"
 category: "hair"
 salon: "fleurami"
 date: "2026-10-22"

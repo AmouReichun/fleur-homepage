@@ -1,6 +1,7 @@
 ---
 title: "高知市でメンズカットを選ぶなら、スタイルと質感の両立が鍵｜失敗しない選び方"
 slug: "kochi-mens-cut-style-texture-216444"
+merged_into: "mens-cut-kochishi-fleur-group"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-11-07"

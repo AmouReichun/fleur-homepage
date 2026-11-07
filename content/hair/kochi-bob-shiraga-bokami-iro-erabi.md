@@ -1,6 +1,7 @@
 ---
 title: "高知市でボブスタイルに白髪ぼかしをするなら、色選びと透明感が決め手｜高知県高知市Riv. by fleur amiの大人女性向けカラー事例"
 slug: "kochi-bob-shiraga-bokami-iro-erabi"
+merged_into: "shiraga-bokashi-short-bob-30-40dai-mqq6au6v"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-09-24"

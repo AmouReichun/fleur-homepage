@@ -1,6 +1,7 @@
 ---
 title: "サラサラのツヤ髪って、大人の髪でも手に入るの？"
 slug: "perm-vs-shukumo-kyosei-chigai-erabi-kata"
+merged_into: "shukumo-kyosei-sarasara-shikumi-mqq629b3"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-06-18"

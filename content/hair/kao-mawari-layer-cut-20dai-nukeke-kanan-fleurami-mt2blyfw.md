@@ -1,6 +1,7 @@
 ---
 title: "顔周りレイヤーカットで20代のスタイルに抜け感を出すには何が違うのか｜高知県香南市fleur amiの施術事例"
 slug: "kao-mawari-layer-cut-20dai-nukeke-kanan-fleurami-mt2blyfw"
+merged_into: "20s-face-layer-cut-konan-fleurami-mt2bfahf"
 category: "hair"
 salon: "fleurami"
 date: "2026-08-21"

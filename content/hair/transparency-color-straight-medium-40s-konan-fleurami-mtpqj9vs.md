@@ -1,6 +1,7 @@
 ---
 title: "透明感カラーで艶のあるストレートミディアムを叶えるには｜高知県香南市fleur amiの40代向け施術事例"
 slug: "transparency-color-straight-medium-40s-konan-fleurami-mtpqj9vs"
+merged_into: "natural-glossy-hair-color-20s-30s-mqq68564"
 category: "hair"
 salon: "fleurami"
 date: "2026-08-28"

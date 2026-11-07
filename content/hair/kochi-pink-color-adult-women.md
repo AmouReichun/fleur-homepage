@@ -1,6 +1,7 @@
 ---
 title: "高知市でツヤのあるピンク系カラーを叶えるには｜40代の大人女性向け色選びと施術のポイント"
 slug: "kochi-pink-color-adult-women"
+merged_into: "kochi-color-cut-tsuyakami-40dai-riv-msib3hqw"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-09-30"

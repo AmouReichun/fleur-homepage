@@ -1,6 +1,7 @@
 ---
 title: "40代女性の艶カラー、透明感のある赤みブラウンの仕上がりとは｜高知市Riv.の施術事例"
 slug: "kochi-tsuya-color-aka-brown-40dai"
+merged_into: "kochi-color-cut-tsuyakami-40dai-riv-msib3hqw"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-06-28"

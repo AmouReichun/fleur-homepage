@@ -1,6 +1,7 @@
 ---
 title: "レイヤーボブで後ろ姿の軽さと艶を両立するには｜高知県香南市fleur amiの大人女性向け施術事例"
 slug: "kananshi-layer-bob-tsuyayaka-shitsuji-msfqlxrg"
+merged_into: "short-layered-bob-adult-women-mqq67b8n"
 category: "hair"
 salon: "fleurami"
 date: "2026-08-05"

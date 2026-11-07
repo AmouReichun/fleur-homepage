@@ -1,6 +1,7 @@
 ---
 title: "白髪ぼかしカラーの選び方ポイントをスタイリストが解説｜高知市の40代女性向けハイライト"
 slug: "kochi-shiragobokashi-highlight-erabikata-mrvlg7cb"
+merged_into: "shiraga-bokashi-short-bob-30-40dai-mqq6au6v"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-07-22"

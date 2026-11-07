@@ -1,6 +1,7 @@
 ---
 title: "香南市でメンズショートをスタイリングするなら｜高知県香南市fleur amiのシャープで清潔感のあるカット事例"
 slug: "konan-mens-short-styling-fleurami"
+merged_into: "mens-cut-koubu-sukkiri-kanan-fleurami"
 category: "hair"
 salon: "fleurami"
 date: "2026-10-04"

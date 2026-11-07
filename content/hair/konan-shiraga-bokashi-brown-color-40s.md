@@ -1,6 +1,7 @@
 ---
 title: "香南市で白髪ぼかしカラーを考えている40代女性へ｜艶感のあるブラウン系カラーの選び方と仕上がりの違い"
 slug: "konan-shiraga-bokashi-brown-color-40s"
+merged_into: "40dai-shiraga-bokashi-highlight-shiagari-mqrjcjaq"
 category: "hair"
 salon: "fleurami"
 date: "2026-10-04"

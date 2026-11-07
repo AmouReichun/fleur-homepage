@@ -1,6 +1,7 @@
 ---
 title: "ブリーチなしのピンクブラウンカラーで印象を変えたい｜香南市fleur amiの大人向け艶カラー施術事例"
 slug: "kananshi-no-bleach-pink-brown-color-fleur-ami-ms76qc9g"
+merged_into: "natural-glossy-hair-color-20s-30s-mqq68564"
 category: "hair"
 salon: "fleurami"
 date: "2026-07-30"

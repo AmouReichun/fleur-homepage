@@ -1,6 +1,7 @@
 ---
 title: "高知市の縮毛矯正料金はいくら？相場と施術の流れをRiv. by fleur amiが解説"
 slug: "kochishi-shukumou-kyosei-ryokin-sobou-riv-fleurami"
+merged_into: "shukumo-kyosei-sarasara-shikumi-mqq629b3"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-09-27"

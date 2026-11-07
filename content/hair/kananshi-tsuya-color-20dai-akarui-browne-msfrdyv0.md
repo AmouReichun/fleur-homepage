@@ -1,6 +1,7 @@
 ---
 title: "なるべく明るい艶カラーで仕上げたい20代へ｜香南市fleur amiの透明感ブラウン施術事例"
 slug: "kananshi-tsuya-color-20dai-akarui-browne-msfrdyv0"
+merged_into: "natural-glossy-hair-color-20s-30s-mqq68564"
 category: "hair"
 salon: "fleurami"
 date: "2026-08-05"

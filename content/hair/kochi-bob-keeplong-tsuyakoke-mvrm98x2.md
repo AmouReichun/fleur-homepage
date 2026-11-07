@@ -1,6 +1,7 @@
 ---
 title: "高知市でボブスタイルを長くキープするには｜艶感と毛先の整えが鍵"
 slug: "kochi-bob-keeplong-tsuyakoke-mvrm98x2"
+merged_into: "bob-cut-kirei-otona-josei"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-11-02"

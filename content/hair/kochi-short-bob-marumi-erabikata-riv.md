@@ -1,6 +1,7 @@
 ---
 title: "丸みショートボブで大人の印象を整えるには何が必要？｜高知県高知市Riv. by fleur amiの施術事例と選び方"
 slug: "kochi-short-bob-marumi-erabikata-riv"
+merged_into: "bob-cut-kirei-otona-josei"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-08-30"

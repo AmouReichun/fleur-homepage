@@ -1,6 +1,7 @@
 ---
 title: "香南市でメンズカットの刈り上げ、失敗しない選び方｜大人男性向けガイド"
 slug: "kochi-kounan-mens-karigae-cut-guide-mv7pyico"
+merged_into: "mens-cut-koubu-sukkiri-kanan-fleurami"
 category: "hair"
 salon: "fleurami"
 date: "2026-10-16"

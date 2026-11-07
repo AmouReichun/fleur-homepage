@@ -1,6 +1,7 @@
 ---
 title: "メンズパーマで柔らかな丸みシルエットを叶えるには｜高知県高知市Riv. by fleur amiの施術事例と選び方"
 slug: "kochi-mens-perm-marumi-silhouette-jirei"
+merged_into: "mens-perm-finish-style-explanation-mqt1i8un"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-08-15"

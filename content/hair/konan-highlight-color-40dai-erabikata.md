@@ -1,6 +1,7 @@
 ---
 title: "香南市でハイライトカラーを選ぶ前に知っておきたいこと｜40代女性の「明るくしたいけど傷めたくない」を整理します"
 slug: "konan-highlight-color-40dai-erabikata"
+merged_into: "otona-bob-highlight-change-mqq66hym"
 category: "hair"
 salon: "fleurami"
 date: "2026-07-15"

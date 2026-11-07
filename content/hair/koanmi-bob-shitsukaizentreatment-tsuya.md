@@ -1,6 +1,7 @@
 ---
 title: "香南市でボブをまとめるなら、艶感を引き出す髪質改善トリートメントをどう活かす？｜高知県香南市fleur amiのスタイリスト解説"
 slug: "koanmi-bob-shitsukaizentreatment-tsuya"
+merged_into: "kosanshi-hairquality-treatment-straight"
 category: "hair"
 salon: "fleurami"
 date: "2026-09-26"

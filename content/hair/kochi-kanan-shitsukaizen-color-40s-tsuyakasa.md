@@ -1,6 +1,7 @@
 ---
 title: "40代の艶感ロングヘア、香南市で髪質改善カラーを選ぶなら何を確認する？"
 slug: "kochi-kanan-shitsukaizen-color-40s-tsuyakasa"
+merged_into: "konan-color-shitsukaizen-tsuyakami-bob"
 category: "hair"
 salon: "fleurami"
 date: "2026-10-12"

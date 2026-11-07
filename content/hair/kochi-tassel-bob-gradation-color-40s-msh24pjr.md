@@ -1,6 +1,7 @@
 ---
 title: "タッセルボブで叶えるグラデーションカラーの仕上がりとは｜高知県高知市Riv. by fleur amiの40代向け施術事例"
 slug: "kochi-tassel-bob-gradation-color-40s-msh24pjr"
+merged_into: "adult-women-hair-menu-guide-color-cut-perm"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-08-06"

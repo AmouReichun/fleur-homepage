@@ -1,6 +1,7 @@
 ---
 title: "ブルーブラックのダブルカラーで深みと艶を出すには何が違うのか｜高知県香南市fleur amiの施術事例"
 slug: "blue-black-double-color-kanan-fleurami-mu5jc7dy"
+merged_into: "silver-double-color-adult-women-mqrjz08r"
 category: "hair"
 salon: "fleurami"
 date: "2026-09-04"

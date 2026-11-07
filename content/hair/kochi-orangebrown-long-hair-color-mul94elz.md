@@ -1,6 +1,7 @@
 ---
 title: "香南市でロングヘアのカラーをいかすなら、オレンジブラウンが選ばれる理由｜高知県香南市fleur amiの大人女性向けカラー選び"
 slug: "kochi-orangebrown-long-hair-color-mul94elz"
+merged_into: "natural-glossy-hair-color-20s-30s-mqq68564"
 category: "hair"
 salon: "fleurami"
 date: "2026-09-28"

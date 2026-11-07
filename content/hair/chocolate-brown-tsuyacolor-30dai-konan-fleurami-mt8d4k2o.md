@@ -1,6 +1,7 @@
 ---
 title: "赤みのあるチョコレートブラウンで艶感を叶えるには｜高知県香南市fleur amiの30代向け艶カラー施術事例"
 slug: "chocolate-brown-tsuyacolor-30dai-konan-fleurami-mt8d4k2o"
+merged_into: "natural-glossy-hair-color-20s-30s-mqq68564"
 category: "hair"
 salon: "fleurami"
 date: "2026-08-23"

@@ -47,8 +47,12 @@ const nextConfig = {
     unoptimized: false,
   },
   async redirects() {
-    return [
-      ...mergedPostRedirects(),
+    const merged = mergedPostRedirects();
+    const finalDest = new Map(merged.map((r) => [r.source, r.destination]));
+    // 古い転送の行き先が統合済みの記事なら、統合先へ直接飛ばす（転送の二重がけを防ぐ）
+    const resolve = (list) => list.map((r) => (finalDest.has(r.destination) ? { ...r, destination: finalDest.get(r.destination) } : r));
+    return resolve([
+      ...merged,
       // 同じ内容の記事（11/7 社長判断で1本に統合）→ 10/19の記事へ
       { source: "/blog/hair/kochi-biyoshitsu-erabikata-5pointo", destination: "/blog/hair/kochi-biyoushitsu-erabikata-5points", permanent: true },
       { source: "/blog/hair/kochi-biyoshitsu-erabikata-5points", destination: "/blog/hair/kochi-biyoushitsu-erabikata-5points", permanent: true },
@@ -123,7 +127,7 @@ const nextConfig = {
         destination: "/blog/hair/kananshi-design-color-navy-purple-fleur-ami-ms6s1cbv",
         permanent: true,
       },
-    ];
+    ]);
   },
   // 全ページ共通のセキュリティヘッダー。
   // ※ CSP は GA4・Instagram画像・OG等で誤遮断のリスクがあるため、テスト前提で別途導入する。

@@ -1,6 +1,7 @@
 ---
 title: "高知市で切りっぱなしボブを選ぶ前に知っておきたいこと｜仕上がりの差はどこで生まれる？"
 slug: "kochi-kirinashi-bob-erabikata-mr357s6h"
+merged_into: "kochi-kirinashi-bob-shiagaridiff-jirei-msh14thp"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-07-02"

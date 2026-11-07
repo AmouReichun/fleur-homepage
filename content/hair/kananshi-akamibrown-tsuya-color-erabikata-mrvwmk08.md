@@ -1,6 +1,7 @@
 ---
 title: "香南市で赤みブラウンのカラーを考えている20代女性へ｜深みのある艶カラーの選び方"
 slug: "kananshi-akamibrown-tsuya-color-erabikata-mrvwmk08"
+merged_into: "natural-glossy-hair-color-20s-30s-mqq68564"
 category: "hair"
 salon: "fleurami"
 date: "2026-07-22"

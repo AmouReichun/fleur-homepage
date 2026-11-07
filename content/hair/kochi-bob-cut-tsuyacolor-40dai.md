@@ -1,6 +1,7 @@
 ---
 title: "高知市でボブカットを考えている40代女性へ｜艶カラーと合わせた選び方と仕上がりの目安"
 slug: "kochi-bob-cut-tsuyacolor-40dai"
+merged_into: "kochi-color-cut-tsuyakami-40dai-riv-msib3hqw"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-07-23"

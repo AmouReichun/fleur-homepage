@@ -1,6 +1,7 @@
 ---
 title: "ツヤのある赤みボブで仕上げるには｜高知市Riv. by fleur amiの艶カラー×カット施術事例"
 slug: "kochi-tsuya-akami-bob-color-cut-riv"
+merged_into: "kochi-color-cut-tsuyakami-40dai-riv-msib3hqw"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-07-28"

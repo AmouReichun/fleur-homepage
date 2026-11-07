@@ -1,6 +1,7 @@
 ---
 title: "切りっぱなしボブって大人女性に似合うの？仕上がりと特徴を解説"
 slug: "kirinasshi-bob-otona-josei-mqq6909g"
+merged_into: "kochi-kirinashi-bob-shiagaridiff-jirei-msh14thp"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-06-23"

@@ -1,6 +1,7 @@
 ---
 title: "メンズパーマで毛流れを活かすなら｜香南市fleur amiの男性向けパーマ選びガイド"
 slug: "mens-perm-kaminagare-koushu-kounan-mum9iuhn"
+merged_into: "kananshi-mens-perm-erabikata-fleur-ami"
 category: "hair"
 salon: "fleurami"
 date: "2026-09-29"

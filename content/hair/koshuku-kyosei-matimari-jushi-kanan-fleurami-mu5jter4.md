@@ -1,6 +1,7 @@
 ---
 title: "縮毛矯正でまとまりを重視するなら何を見るべき？｜高知県香南市fleur amiの大人女性向け施術事例"
 slug: "koshuku-kyosei-matimari-jushi-kanan-fleurami-mu5jter4"
+merged_into: "koshoku-kyosei-tsuyakuro-bob-konan-fleurami-mt2houmb"
 category: "hair"
 salon: "fleurami"
 date: "2026-09-10"

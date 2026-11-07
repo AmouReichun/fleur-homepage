@@ -1,6 +1,7 @@
 ---
 title: "タッセルボブで切りっぱなしの美しさを叶えるには｜高知市Riv. by fleur amiの40代向け施術事例"
 slug: "kochi-tassel-bob-kirinashibo-40dai-riv-ms5k2js9"
+merged_into: "kochi-kirinashi-bob-shiagaridiff-jirei-msh14thp"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-07-29"

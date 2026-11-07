@@ -1,6 +1,7 @@
 ---
 title: "アッシュショートボブで後ろ姿の印象を変えるには何が違うのか｜高知県香南市fleur amiの40代向け施術事例"
 slug: "ash-short-bob-back-impression-kochi-konan-fleurami-msjua9tp"
+merged_into: "natural-glossy-hair-color-20s-30s-mqq68564"
 category: "hair"
 salon: "fleurami"
 date: "2026-08-08"

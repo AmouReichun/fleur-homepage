@@ -1,6 +1,7 @@
 ---
 title: "香南市で丸みショートボブを選ぶ前に知っておきたいこと｜失敗しない仕上がりの見極め方"
 slug: "konan-marumi-short-bob-erabikata-mrvwo1pg"
+merged_into: "40dai-hair-menu-color-perm-shukumo"
 category: "hair"
 salon: "fleurami"
 date: "2026-07-22"

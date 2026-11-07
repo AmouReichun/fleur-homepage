@@ -1,6 +1,7 @@
 ---
 title: "香南市でメンズハイトーンカラーをするならどこがいい？"
 slug: "mens-high-tone-bleach-kosanshi-mqv3lrz0"
+merged_into: "konan-mens-color-violet-fade-fleura-mi-mrohl97w"
 category: "hair"
 salon: "fleurami"
 date: "2026-06-26"

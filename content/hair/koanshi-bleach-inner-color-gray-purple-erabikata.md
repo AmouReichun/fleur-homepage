@@ -1,6 +1,7 @@
 ---
 title: "香南市でブリーチ×インナーカラーを考えている方へ｜グレー＋パープルブルーの仕上がりと選び方"
 slug: "koanshi-bleach-inner-color-gray-purple-erabikata"
+merged_into: "inner-color-adult-bob-fleur-ami-mqt7crpq"
 category: "hair"
 salon: "fleurami"
 date: "2026-07-19"

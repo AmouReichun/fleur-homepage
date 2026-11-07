@@ -164,11 +164,11 @@ async function generateKeywordArticle(task: NewArticleTask): Promise<void> {
   };
 
   // テーマ重複ガード（2026-11-07）：同じサロンにほぼ同じ記事・親記事のあるテーマなら保存しない
-  const sameSalonTitles = fs.readdirSync(outDir).filter((f) => f.endsWith(".md")).map((f) => {
+  const sameSalonPosts = fs.readdirSync(outDir).filter((f) => f.endsWith(".md")).map((f) => {
     const d = matter(fs.readFileSync(path.join(outDir, f), "utf-8")).data;
-    return d.salon === salonName ? String(d.title ?? "") : "";
-  }).filter(Boolean);
-  const gate = checkTopicGate(salonName, generated.title, sameSalonTitles);
+    return d.salon === salonName ? { title: String(d.title ?? ""), slug: f.replace(/\.md$/, ""), mergedInto: d.merged_into ? String(d.merged_into) : undefined } : null;
+  }).filter((x): x is { title: string; slug: string; mergedInto: string | undefined } => !!x && !!x.title);
+  const gate = checkTopicGate(salonName, generated.title, sameSalonPosts);
   if (!gate.ok) {
     console.log(`  ⏭ テーマ重複のため保存しない: ${generated.title}\n     理由: ${gate.reason}`);
     return;

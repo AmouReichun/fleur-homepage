@@ -1,6 +1,7 @@
 ---
 title: "ツヤのある黒髪ボブで「切り方」の差が出るのはなぜ？｜高知県高知市Riv. by fleur amiのカット施術事例"
 slug: "kochi-bob-cut-tsuyakami-jirei"
+merged_into: "bob-cut-kirei-otona-josei"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-05-30"

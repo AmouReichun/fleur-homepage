@@ -1,6 +1,7 @@
 ---
 title: "ショートボブの後ろ姿、丸みとまとまりはどうやって作るの？｜高知県香南市fleur amiの40代向け施術事例"
 slug: "kananshi-short-bob-marumi-matome-40dai-msi8ekm9"
+merged_into: "40dai-hair-menu-color-perm-shukumo"
 category: "hair"
 salon: "fleurami"
 date: "2026-08-07"

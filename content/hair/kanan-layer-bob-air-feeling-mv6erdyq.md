@@ -1,6 +1,7 @@
 ---
 title: "長めボブのレイヤーで叶う空気感｜香南市で仕上がりを左右するカットの工夫"
 slug: "kanan-layer-bob-air-feeling-mv6erdyq"
+merged_into: "short-layered-bob-adult-women-mqq67b8n"
 category: "hair"
 salon: "fleurami"
 date: "2026-10-14"

@@ -1,6 +1,7 @@
 ---
 title: "20代がオリーブベージュの艶カラーで柔らかな印象を出すには何を選ぶべき？｜高知県香南市fleur amiの施術事例"
 slug: "20dai-olive-beige-tsuyacolor-kashirakami-konanshi-fleurami-mt5hubb6"
+merged_into: "natural-glossy-hair-color-20s-30s-mqq68564"
 category: "hair"
 salon: "fleurami"
 date: "2026-08-23"

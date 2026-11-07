@@ -1,6 +1,7 @@
 ---
 title: "香南市で艶のあるロングストレートを叶えるには｜高知県香南市fleur amiの髪質改善トリートメント施術ガイド"
 slug: "kochi-konan-shitsukaizen-long-straight-tsuya"
+merged_into: "kosanshi-hairquality-treatment-straight"
 category: "hair"
 salon: "fleurami"
 date: "2026-09-28"

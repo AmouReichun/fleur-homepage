@@ -1,6 +1,7 @@
 ---
 title: "ツヤストレートロングで「サラサラ感」を叶えるには何が変わる？｜高知県高知市Riv. by fleur amiの髪質改善施術事例と選び方"
 slug: "kochi-shitsukaizen-tsuyastraight-long-jirei"
+merged_into: "kamishitsu-kaizen-tsuyakam-otona-josei"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-05-17"

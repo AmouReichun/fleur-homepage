@@ -1,6 +1,7 @@
 ---
 title: "丸みショートボブの後ろ姿をきれいに仕上げるには何が違うのか｜高知県香南市fleur amiの40代向け施術事例"
 slug: "short-bob-round-silhouette-konanshi-fleurami-msfq8jar"
+merged_into: "40dai-hair-menu-color-perm-shukumo"
 category: "hair"
 salon: "fleurami"
 date: "2026-08-05"

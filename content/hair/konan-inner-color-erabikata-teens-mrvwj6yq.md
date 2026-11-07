@@ -1,6 +1,7 @@
 ---
 title: "インナーカラーの仕上がり目安を知ってから選ぶ｜香南市の10代・20代向け選び方ガイド"
 slug: "konan-inner-color-erabikata-teens-mrvwj6yq"
+merged_into: "inner-color-adult-bob-fleur-ami-mqt7crpq"
 category: "hair"
 salon: "fleurami"
 date: "2026-07-22"

@@ -1,6 +1,7 @@
 ---
 title: "高知市で縮毛矯正を選ぶ前に｜40代向けの失敗しない基準と仕上がりの違い"
 slug: "kochi-shukumouyugi-40dai-erabikata-mv0fgsu9"
+merged_into: "shukumo-kyosei-sarasara-shikumi-mqq629b3"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-10-10"

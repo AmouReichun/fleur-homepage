@@ -1,6 +1,7 @@
 ---
 title: "60代の白髪ぼかしショートボブ、艶と自然な仕上がりを両立するには何が違うのか｜高知県香南市fleur amiの施術事例"
 slug: "60dai-shiragebokashi-shortbob-tsuya-konan-fleurami-msi8cujw"
+merged_into: "40dai-shiraga-bokashi-highlight-shiagari-mqrjcjaq"
 category: "hair"
 salon: "fleurami"
 date: "2026-08-07"

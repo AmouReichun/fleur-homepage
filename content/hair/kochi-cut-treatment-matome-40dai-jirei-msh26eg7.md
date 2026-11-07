@@ -1,6 +1,7 @@
 ---
 title: "カット＆トリートメントで髪のまとまりを整えるには｜高知県高知市Riv. by fleur amiの40代向け施術事例"
 slug: "kochi-cut-treatment-matome-40dai-jirei-msh26eg7"
+merged_into: "bob-cut-kirei-otona-josei"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-08-06"

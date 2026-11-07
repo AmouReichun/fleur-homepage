@@ -1,6 +1,7 @@
 ---
 title: "20代のカラーリング、どんな色がいまっぽい仕上がりになる？"
 slug: "20s-hair-color-warm-brown-wavy-mqt1mxo1"
+merged_into: "kochi-color-cut-tsuyakami-40dai-riv-msib3hqw"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-06-25"

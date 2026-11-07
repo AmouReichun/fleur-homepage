@@ -1,6 +1,7 @@
 ---
 title: "香南市で黒髪髪質改善ストレートってどんな仕上がりになるの？"
 slug: "konan-shi-kurokami-shitsushitsu-kaizen-straight-mquyh3u7"
+merged_into: "kosanshi-hairquality-treatment-straight"
 category: "hair"
 salon: "fleurami"
 date: "2026-06-26"

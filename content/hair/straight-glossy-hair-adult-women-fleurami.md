@@ -1,6 +1,7 @@
 ---
 title: "サラサラのストレートヘアを手に入れるには？大人女性に人気の施術とは"
 slug: "straight-glossy-hair-adult-women-fleurami"
+merged_into: "kosanshi-hairquality-treatment-straight"
 category: "hair"
 salon: "fleurami"
 date: "2026-05-31"

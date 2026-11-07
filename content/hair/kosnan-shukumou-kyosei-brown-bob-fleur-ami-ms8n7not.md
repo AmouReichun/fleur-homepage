@@ -1,6 +1,7 @@
 ---
 title: "縮毛矯正で艶のあるブラウンボブを叶えるには｜香南市fleur amiの大人女性向け施術事例"
 slug: "kosnan-shukumou-kyosei-brown-bob-fleur-ami-ms8n7not"
+merged_into: "koshoku-kyosei-tsuyakuro-bob-konan-fleurami-mt2houmb"
 category: "hair"
 salon: "fleurami"
 date: "2026-07-31"

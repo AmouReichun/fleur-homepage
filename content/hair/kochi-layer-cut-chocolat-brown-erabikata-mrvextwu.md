@@ -1,6 +1,7 @@
 ---
 title: "レイヤーカットとショコラブラウンで失敗しない色と切り方の選び方｜高知市の40代向け"
 slug: "kochi-layer-cut-chocolat-brown-erabikata-mrvextwu"
+merged_into: "kochi-layer-bob-matome-karusa-40dai-mtlh4j7e"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-07-22"

@@ -1,6 +1,7 @@
 ---
 title: "大人のショートボブ、艶と丸みはどうやって作るの？"
 slug: "adult-short-bob-gloss-roundness"
+merged_into: "40dai-hair-menu-color-perm-shukumo"
 category: "hair"
 salon: "fleurami"
 date: "2026-06-11"

@@ -1,6 +1,7 @@
 ---
 title: "グレージュで透明感を引き出すには｜高知県香南市fleur amiの大人女性向けカラー選び"
 slug: "kochi-greyage-transparency-haircolor-mul0kda3"
+merged_into: "natural-glossy-hair-color-20s-30s-mqq68564"
 category: "hair"
 salon: "fleurami"
 date: "2026-09-28"

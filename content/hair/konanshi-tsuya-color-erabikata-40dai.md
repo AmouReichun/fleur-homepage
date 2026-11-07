@@ -1,6 +1,7 @@
 ---
 title: "香南市で艶カラーを選ぶ前に知っておきたいこと｜40代女性の「色がすぐ沈む・広がりが気になる」を整えるヒント"
 slug: "konanshi-tsuya-color-erabikata-40dai"
+merged_into: "natural-glossy-hair-color-20s-30s-mqq68564"
 category: "hair"
 salon: "fleurami"
 date: "2026-07-17"

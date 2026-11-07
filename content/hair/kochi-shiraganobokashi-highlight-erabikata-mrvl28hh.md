@@ -1,6 +1,7 @@
 ---
 title: "伸びても白髪が目立たないカラー選び｜高知市の美容師が解説するハイライトの活用法"
 slug: "kochi-shiraganobokashi-highlight-erabikata-mrvl28hh"
+merged_into: "shiraga-bokashi-short-bob-30-40dai-mqq6au6v"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-07-22"

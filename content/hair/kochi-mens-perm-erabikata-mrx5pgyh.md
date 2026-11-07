@@ -1,6 +1,7 @@
 ---
 title: "メンズパーマで後悔しないサロン選び｜高知市で持ちと仕上がりを重視する方への判断基準"
 slug: "kochi-mens-perm-erabikata-mrx5pgyh"
+merged_into: "mens-perm-finish-style-explanation-mqt1i8un"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-07-23"

@@ -1,6 +1,7 @@
 ---
 title: "メンズカラーで深みのあるパープル系に仕上げるには何が違うのか｜高知県香南市fleur amiの施術事例"
 slug: "mens-purple-color-kochi-konan-fleurami"
+merged_into: "konan-mens-color-violet-fade-fleura-mi-mrohl97w"
 category: "hair"
 salon: "fleurami"
 date: "2026-08-23"

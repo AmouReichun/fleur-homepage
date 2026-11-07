@@ -1,6 +1,7 @@
 ---
 title: "ツヤのある黒髪ロングを手に入れるには｜高知市Riv. by fleur amiの艶カラー＆スタイリング施術事例"
 slug: "kochi-tsuyairo-kurokami-long-jirei"
+merged_into: "kochi-color-cut-tsuyakami-40dai-riv-msib3hqw"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-07-23"

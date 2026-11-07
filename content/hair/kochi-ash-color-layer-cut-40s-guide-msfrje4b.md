@@ -1,6 +1,7 @@
 ---
 title: "アッシュカラー×レイヤーカットで軽さと透明感を出すには｜高知市Riv. by fleur amiの40代向け施術事例"
 slug: "kochi-ash-color-layer-cut-40s-guide-msfrje4b"
+merged_into: "kochi-layer-bob-matome-karusa-40dai-mtlh4j7e"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-08-05"

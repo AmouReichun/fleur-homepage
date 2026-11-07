@@ -1,6 +1,7 @@
 ---
 title: "ツヤのある赤みブラウンカラーって何が違うの？仕上がりの秘密を美容師が解説"
 slug: "red-brown-color-glossy-finish-fleurami"
+merged_into: "natural-glossy-hair-color-20s-30s-mqq68564"
 category: "hair"
 salon: "fleurami"
 date: "2026-06-06"

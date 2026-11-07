@@ -1,6 +1,7 @@
 ---
 title: "高知市でレイヤーボブ×艶カラーってどんな仕上がりになるの？"
 slug: "kochi-layer-bob-tsuyacolor-mqu8dlv9"
+merged_into: "kochi-layer-bob-matome-karusa-40dai-mtlh4j7e"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-06-26"

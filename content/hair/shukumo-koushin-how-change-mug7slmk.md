@@ -1,6 +1,7 @@
 ---
 title: "縮毛矯正で髪がここまで変わる理由｜高知県香南市fleur amiの施術仕上がりから分かる選ぶポイント"
 slug: "shukumo-koushin-how-change-mug7slmk"
+merged_into: "koshoku-kyosei-tsuyakuro-bob-konan-fleurami-mt2houmb"
 category: "hair"
 salon: "fleurami"
 date: "2026-09-25"

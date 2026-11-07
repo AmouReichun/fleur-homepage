@@ -1,6 +1,7 @@
 ---
 title: "ツヤサラサラのストレートヘアに仕上げるには？美容室でできること"
 slug: "straight-glossy-hair-salon-finish"
+merged_into: "kamishitsu-kaizen-tsuyakam-otona-josei"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-06-21"

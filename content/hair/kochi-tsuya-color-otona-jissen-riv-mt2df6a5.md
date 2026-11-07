@@ -1,6 +1,7 @@
 ---
 title: "艶カラーで深みと透明感を同時に叶えるには｜高知県高知市Riv. by fleur amiの大人女性向け施術事例"
 slug: "kochi-tsuya-color-otona-jissen-riv-mt2df6a5"
+merged_into: "kochi-color-cut-tsuyakami-40dai-riv-msib3hqw"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-08-21"

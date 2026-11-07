@@ -1,6 +1,7 @@
 ---
 title: "香南市でオリーブグレージュカラーを考えている方へ｜ブリーチ履歴ありでも透明感と艶を両立できる？"
 slug: "konan-olive-greige-bleach-color-erabikata-mqwa7ur8"
+merged_into: "silver-double-color-adult-women-mqrjz08r"
 category: "hair"
 salon: "fleurami"
 date: "2026-06-27"

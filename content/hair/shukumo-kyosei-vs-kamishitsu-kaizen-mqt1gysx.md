@@ -1,6 +1,7 @@
 ---
 title: "縮毛矯正と髪質改善トリートメント、どちらが自分に合っている？"
 slug: "shukumo-kyosei-vs-kamishitsu-kaizen-mqt1gysx"
+merged_into: "kochi-shitsukaizen-shukumou-chigai"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-06-25"

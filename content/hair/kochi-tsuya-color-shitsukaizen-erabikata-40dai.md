@@ -1,6 +1,7 @@
 ---
 title: "高知市で艶カラー・髪質改善を考えている40代女性へ｜仕上がりで後悔しない選び方"
 slug: "kochi-tsuya-color-shitsukaizen-erabikata-40dai"
+merged_into: "color-cut-kamishitsu-kaizen-treatment-mqq5zqzx"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-06-27"

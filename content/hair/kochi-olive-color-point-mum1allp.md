@@ -1,6 +1,7 @@
 ---
 title: "高知市でオリーブカラーを選ぶときに確認すべき3つのポイント｜高知県高知市Riv. by fleur amiの色選び・仕上がりガイド"
 slug: "kochi-olive-color-point-mum1allp"
+merged_into: "kochi-color-cut-tsuyakami-40dai-riv-msib3hqw"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-09-29"

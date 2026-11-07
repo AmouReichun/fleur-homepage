@@ -1,6 +1,7 @@
 ---
 title: "メンズパーマってどんな仕上がりになるの？パーマスタイルの魅力と施術の流れを解説"
 slug: "mens-perm-style-fleurami-kochi-mqrjdb1g"
+merged_into: "kananshi-mens-perm-erabikata-fleur-ami"
 category: "hair"
 salon: "fleurami"
 date: "2026-06-24"

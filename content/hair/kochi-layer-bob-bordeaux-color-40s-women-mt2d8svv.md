@@ -1,6 +1,7 @@
 ---
 title: "レイヤーボブ×ボルドー系カラーで印象を変えたい40代女性へ｜高知県高知市Riv. by fleur amiの施術事例と選び方"
 slug: "kochi-layer-bob-bordeaux-color-40s-women-mt2d8svv"
+merged_into: "kochi-layer-bob-matome-karusa-40dai-mtlh4j7e"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-08-21"

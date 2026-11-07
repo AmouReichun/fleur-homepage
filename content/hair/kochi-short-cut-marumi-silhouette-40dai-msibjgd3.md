@@ -1,6 +1,7 @@
 ---
 title: "ショートカットで丸みシルエットを叶えるには何が必要？｜高知県高知市Riv. by fleur amiの40代向け施術事例"
 slug: "kochi-short-cut-marumi-silhouette-40dai-msibjgd3"
+merged_into: "bob-cut-kirei-otona-josei"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-08-07"

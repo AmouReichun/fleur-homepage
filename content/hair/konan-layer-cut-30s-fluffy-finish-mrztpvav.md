@@ -1,6 +1,7 @@
 ---
 title: "香南市でレイヤーカットを考えている30代女性へ｜ふんわり軽やかな仕上がりを選ぶ前に知っておきたいこと"
 slug: "konan-layer-cut-30s-fluffy-finish-mrztpvav"
+merged_into: "short-layered-bob-adult-women-mqq67b8n"
 category: "hair"
 salon: "fleurami"
 date: "2026-07-25"

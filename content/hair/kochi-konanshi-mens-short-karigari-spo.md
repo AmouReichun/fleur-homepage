@@ -1,6 +1,7 @@
 ---
 title: "香南市でメンズショートをスッキリまとめるなら｜高知県香南市fleur amiの刈り上げカット事例"
 slug: "kochi-konanshi-mens-short-karigari-spo"
+merged_into: "mens-cut-koubu-sukkiri-kanan-fleurami"
 category: "hair"
 salon: "fleurami"
 date: "2026-09-26"

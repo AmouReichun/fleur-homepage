@@ -1,6 +1,7 @@
 ---
 title: "高知市でショートカットを選ぶなら、刈り上げの質感と骨格に合わせた「切り方」が決め手｜高知県高知市Riv. by fleur amiのメンズ・ショート施術ガイド"
 slug: "kochi-short-haircut-kariage-guide-mum19j92"
+merged_into: "mens-cut-kochishi-fleur-group"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-09-29"

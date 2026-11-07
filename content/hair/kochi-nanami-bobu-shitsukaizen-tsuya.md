@@ -1,6 +1,7 @@
 ---
 title: "香南市でボブスタイルの艶感を引き出す髪質改善トリートメント｜高知県の美容室fleur amiの40代向け施術ガイド"
 slug: "kochi-nanami-bobu-shitsukaizen-tsuya"
+merged_into: "kosanshi-hairquality-treatment-straight"
 category: "hair"
 salon: "fleurami"
 date: "2026-09-30"

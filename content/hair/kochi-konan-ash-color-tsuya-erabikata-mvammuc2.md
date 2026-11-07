@@ -1,6 +1,7 @@
 ---
 title: "香南市でアッシュ系カラーを選ぶなら｜艶感を引き出す色選びと施術ポイント"
 slug: "kochi-konan-ash-color-tsuya-erabikata-mvammuc2"
+merged_into: "natural-glossy-hair-color-20s-30s-mqq68564"
 category: "hair"
 salon: "fleurami"
 date: "2026-10-17"

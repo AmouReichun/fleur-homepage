@@ -1,6 +1,7 @@
 ---
 title: "香南市で40代の白髪ぼかしハイライト、ブリーチなしでどこまでできる？"
 slug: "konan-shiragobokashi-highlight-no-bleach-40s-mqvr0p9k"
+merged_into: "40dai-shiraga-bokashi-highlight-shiagari-mqrjcjaq"
 category: "hair"
 salon: "fleurami"
 date: "2026-06-27"

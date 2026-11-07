@@ -1,6 +1,7 @@
 ---
 title: "オレンジベージュカラーで40代の髪印象を変えるには｜高知県高知市Riv. by fleur amiの施術事例と選び方"
 slug: "kochi-orange-beige-color-40dai-riv-msh22wkh"
+merged_into: "kochi-color-cut-tsuyakami-40dai-riv-msib3hqw"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-08-06"

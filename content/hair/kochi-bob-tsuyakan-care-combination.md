@@ -1,6 +1,7 @@
 ---
 title: "高知市でボブの艶感を引き出すには｜カット×カラー×ケアの関係性"
 slug: "kochi-bob-tsuyakan-care-combination"
+merged_into: "kochi-color-cut-tsuyakami-40dai-riv-msib3hqw"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-10-20"

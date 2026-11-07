@@ -1,6 +1,7 @@
 ---
 title: "香南市でブリーチカラーを考えている方へ｜ブルー系カラーの仕上がりと選び方を解説"
 slug: "kananshi-bleach-blue-color-erabikata"
+merged_into: "silver-double-color-adult-women-mqrjz08r"
 category: "hair"
 salon: "fleurami"
 date: "2026-07-25"

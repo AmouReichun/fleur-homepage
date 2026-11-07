@@ -1,6 +1,7 @@
 ---
 title: "赤みを消して艶のあるブラウンに仕上げるには何が違うのか｜高知県香南市fleur amiの20代向け艶カラー施術事例"
 slug: "20s-tsuya-brown-color-aka-nashi-kanan-fleurami-msvacbtn"
+merged_into: "natural-glossy-hair-color-20s-30s-mqq68564"
 category: "hair"
 salon: "fleurami"
 date: "2026-08-16"

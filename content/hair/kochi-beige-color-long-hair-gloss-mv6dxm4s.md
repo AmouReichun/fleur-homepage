@@ -1,6 +1,7 @@
 ---
 title: "高知市でロングヘアのツヤ感を引き出すベージュカラー｜色選びと施術のポイント"
 slug: "kochi-beige-color-long-hair-gloss-mv6dxm4s"
+merged_into: "kochi-color-cut-tsuyakami-40dai-riv-msib3hqw"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-10-14"

@@ -1,6 +1,7 @@
 ---
 title: "香南市で白髪ぼかしカラーをするなら｜40代向けの色選びと施術後のケア"
 slug: "kochi-kanan-shiraga-bokashi-color-40s"
+merged_into: "40dai-shiraga-bokashi-highlight-shiagari-mqrjcjaq"
 category: "hair"
 salon: "fleurami"
 date: "2026-10-28"

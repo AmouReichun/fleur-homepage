@@ -1,6 +1,7 @@
 ---
 title: "切りっぱなしボブのツヤ感と束感はどこで差がつく？｜高知県高知市Riv. by fleur amiの施術事例と見極め方"
 slug: "kochi-kirinashibo-tsuyakan-tazukan-chigai-mu5j3ngw"
+merged_into: "kochi-kirinashi-bob-shiagaridiff-jirei-msh14thp"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-09-03"

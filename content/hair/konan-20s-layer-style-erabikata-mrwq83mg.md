@@ -1,6 +1,7 @@
 ---
 title: "香南市で20代のレイヤースタイルを作るとき、どう選ぶ？失敗しないヘアカット選びのポイント"
 slug: "konan-20s-layer-style-erabikata-mrwq83mg"
+merged_into: "short-layered-bob-adult-women-mqq67b8n"
 category: "hair"
 salon: "fleurami"
 date: "2026-07-22"

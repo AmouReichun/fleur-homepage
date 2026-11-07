@@ -1,6 +1,7 @@
 ---
 title: "ハイトーンブロンドで艶のあるストレートボブを叶えるには｜香南市fleur amiの大人女性向けブリーチカラー施術事例"
 slug: "haitone-blond-straight-bob-kanan-fleurami"
+merged_into: "silver-double-color-adult-women-mqrjz08r"
 category: "hair"
 salon: "fleurami"
 date: "2026-07-31"

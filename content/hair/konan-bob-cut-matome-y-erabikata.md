@@ -1,6 +1,7 @@
 ---
 title: "香南市でボブカットを選ぶ前に知っておきたいこと｜まとまりやすい髪へ整えるポイントとは"
 slug: "konan-bob-cut-matome-y-erabikata"
+merged_into: "40dai-hair-menu-color-perm-shukumo"
 category: "hair"
 salon: "fleurami"
 date: "2026-07-04"

@@ -1,6 +1,7 @@
 ---
 title: "高知市でピンクパープルカラー｜色落ちが気になる方へ透明感あふれる発色へ"
 slug: "kochi-pink-purple-color-tomeika"
+merged_into: "kochi-color-cut-tsuyakami-40dai-riv-msib3hqw"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-06-23"

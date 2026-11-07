@@ -1,6 +1,7 @@
 ---
 title: "メンズのくせ毛・うねりをいかすパーマとは？刈り上げとの組み合わせが決め手"
 slug: "mens-perm-undercut-style"
+merged_into: "kananshi-mens-perm-erabikata-fleur-ami"
 category: "hair"
 salon: "fleurami"
 date: "2026-06-21"

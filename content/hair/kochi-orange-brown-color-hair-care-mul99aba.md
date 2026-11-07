@@ -1,6 +1,7 @@
 ---
 title: "香南市でオレンジブラウンカラーを選ぶなら知っておきたい、色選びと髪質ケアの関係｜高知県香南市fleur amiの大人女性向け施術ガイド"
 slug: "kochi-orange-brown-color-hair-care-mul99aba"
+merged_into: "natural-glossy-hair-color-20s-30s-mqq68564"
 category: "hair"
 salon: "fleurami"
 date: "2026-09-28"

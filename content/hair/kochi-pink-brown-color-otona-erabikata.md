@@ -1,6 +1,7 @@
 ---
 title: "高知市でピンクブラウンカラーを選ぶ前に知っておきたいこと｜大人女性の艶カラー選び方ガイド"
 slug: "kochi-pink-brown-color-otona-erabikata"
+merged_into: "kochi-color-cut-tsuyakami-40dai-riv-msib3hqw"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-07-19"

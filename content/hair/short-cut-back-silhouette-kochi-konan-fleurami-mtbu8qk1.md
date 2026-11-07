@@ -1,6 +1,7 @@
 ---
 title: "ショートカットの後ろ姿、すっきり×丸みを両立させるには何を見るべき？｜高知県香南市fleur amiの大人女性向け施術ガイド"
 slug: "short-cut-back-silhouette-kochi-konan-fleurami-mtbu8qk1"
+merged_into: "40dai-hair-menu-color-perm-shukumo"
 category: "hair"
 salon: "fleurami"
 date: "2026-08-25"

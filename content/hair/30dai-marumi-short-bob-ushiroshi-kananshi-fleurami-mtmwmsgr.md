@@ -1,6 +1,7 @@
 ---
 title: "30代の丸みショートボブ、後ろ姿の丸みとすっきり感を同時に叶えるには何が違うのか｜高知県香南市fleur amiの施術事例"
 slug: "30dai-marumi-short-bob-ushiroshi-kananshi-fleurami-mtmwmsgr"
+merged_into: "40dai-hair-menu-color-perm-shukumo"
 category: "hair"
 salon: "fleurami"
 date: "2026-08-27"

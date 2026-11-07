@@ -1,6 +1,7 @@
 ---
 title: "香南市でパーマを考えている40代女性へ｜失敗しない「大人のカールボブ」の選び方"
 slug: "konanshi-perm-curly-bob-erabikata-40dai"
+merged_into: "short-bob-perm-finish-mqq5yxm2"
 category: "hair"
 salon: "fleurami"
 date: "2026-07-04"

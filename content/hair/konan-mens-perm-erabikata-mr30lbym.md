@@ -1,6 +1,7 @@
 ---
 title: "香南市でメンズパーマを考えている方へ｜仕上がりで後悔しないサロンの選び方"
 slug: "konan-mens-perm-erabikata-mr30lbym"
+merged_into: "kananshi-mens-perm-erabikata-fleur-ami"
 category: "hair"
 salon: "fleurami"
 date: "2026-07-02"

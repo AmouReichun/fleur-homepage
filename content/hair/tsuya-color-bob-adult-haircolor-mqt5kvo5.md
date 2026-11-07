@@ -1,6 +1,7 @@
 ---
 title: "艶カラーって何？ツヤツヤのボブに仕上がる大人のヘアカラーを解説"
 slug: "tsuya-color-bob-adult-haircolor-mqt5kvo5"
+merged_into: "natural-glossy-hair-color-20s-30s-mqq68564"
 category: "hair"
 salon: "fleurami"
 date: "2026-06-25"

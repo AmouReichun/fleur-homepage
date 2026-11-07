@@ -1,6 +1,7 @@
 ---
 title: "髪質改善トリートメントで艶のあるストレートを叶えるには｜香南市fleur amiの40代向け施術事例"
 slug: "kananshi-shitsukaizen-treatment-40dai-jireii"
+merged_into: "kosanshi-hairquality-treatment-straight"
 category: "hair"
 salon: "fleurami"
 date: "2026-07-28"

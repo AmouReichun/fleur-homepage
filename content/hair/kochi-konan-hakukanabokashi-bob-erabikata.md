@@ -1,6 +1,7 @@
 ---
 title: "40代の白髪が目立つ短いボブ、香南市で色選びで失敗しない3つのポイント"
 slug: "kochi-konan-hakukanabokashi-bob-erabikata"
+merged_into: "40dai-shiraga-bokashi-highlight-shiagari-mqrjcjaq"
 category: "hair"
 salon: "fleurami"
 date: "2026-10-18"

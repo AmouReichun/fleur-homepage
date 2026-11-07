@@ -1,6 +1,7 @@
 ---
 title: "香南市でボブスタイルを長く楽しむなら、髪質と色選びをどう判断する？｜高知県香南市fleur amiの大人女性向けカラー×カット事例"
 slug: "kochi-konan-bob-hairquality-color-selection"
+merged_into: "natural-glossy-hair-color-20s-30s-mqq68564"
 category: "hair"
 salon: "fleurami"
 date: "2026-05-08"

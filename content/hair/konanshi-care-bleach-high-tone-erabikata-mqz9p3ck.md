@@ -1,6 +1,7 @@
 ---
 title: "香南市でケアブリーチ・ハイトーンカラーを考えている方へ｜ダメージを抑えながら白っぽいブロンドを目指す選び方"
 slug: "konanshi-care-bleach-high-tone-erabikata-mqz9p3ck"
+merged_into: "silver-double-color-adult-women-mqrjz08r"
 category: "hair"
 salon: "fleurami"
 date: "2026-06-29"

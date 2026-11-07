@@ -1,6 +1,7 @@
 ---
 title: "40代の長い髪を大人っぽく整える髪質改善トリートメント｜高知県香南市fleur amiの艶やか仕上げガイド"
 slug: "kochi-nanami-shitsukaizen-long-hair-40s"
+merged_into: "kosanshi-hairquality-treatment-straight"
 category: "hair"
 salon: "fleurami"
 date: "2026-09-20"

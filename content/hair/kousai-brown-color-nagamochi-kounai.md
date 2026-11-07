@@ -1,6 +1,7 @@
 ---
 title: "40代の赤みブラウンカラー、香南市で長く艶感を保つには｜fleur amiの色選び＆ケアガイド"
 slug: "kousai-brown-color-nagamochi-kounai"
+merged_into: "natural-glossy-hair-color-20s-30s-mqq68564"
 category: "hair"
 salon: "fleurami"
 date: "2026-10-21"

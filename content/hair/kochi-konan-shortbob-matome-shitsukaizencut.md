@@ -1,6 +1,7 @@
 ---
 title: "香南市でショートボブのまとまりを引き出すなら、カットと髪質改善はどう組み合わせるべき？｜高知県香南市fleur amiの大人女性向け施術ガイド"
 slug: "kochi-konan-shortbob-matome-shitsukaizencut"
+merged_into: "kosanshi-hairquality-treatment-straight"
 category: "hair"
 salon: "fleurami"
 date: "2026-09-26"

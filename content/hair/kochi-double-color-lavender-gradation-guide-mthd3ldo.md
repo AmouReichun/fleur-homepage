@@ -1,6 +1,7 @@
 ---
 title: "ブロンドベースにラベンダーグラデーションを入れるWカラーとは｜高知県高知市Riv. by fleur amiの施術事例と選び方"
 slug: "kochi-double-color-lavender-gradation-guide-mthd3ldo"
+merged_into: "adult-women-hair-menu-guide-color-cut-perm"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-08-26"

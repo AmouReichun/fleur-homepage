@@ -1,6 +1,7 @@
 ---
 title: "40代の白髪ぼかしで艶のあるストレートを叶えるには何が違うのか｜高知県香南市fleur amiの施術事例"
 slug: "40dai-shiragebokashi-tsuya-straight-kochi-konan-fleur-ami-msfrhlf2"
+merged_into: "40dai-shiraga-bokashi-highlight-shiagari-mqrjcjaq"
 category: "hair"
 salon: "fleurami"
 date: "2026-08-05"

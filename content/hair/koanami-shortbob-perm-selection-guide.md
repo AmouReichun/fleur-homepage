@@ -1,6 +1,7 @@
 ---
 title: "香南市でショートボブのパーマを検討中？仕上がりと持ちを決める選び方｜高知県香南市の美容室fleur ami"
 slug: "koanami-shortbob-perm-selection-guide"
+merged_into: "short-bob-perm-finish-mqq5yxm2"
 category: "hair"
 salon: "fleurami"
 date: "2026-09-27"

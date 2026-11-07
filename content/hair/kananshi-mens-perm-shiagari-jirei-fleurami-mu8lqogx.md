@@ -1,6 +1,7 @@
 ---
 title: "香南市fleur amiのメンズパーマはどんな仕上がりになる？後頭部の動きとまとまりで選ぶ施術事例｜高知県香南市の美容室"
 slug: "kananshi-mens-perm-shiagari-jirei-fleurami-mu8lqogx"
+merged_into: "kananshi-mens-perm-erabikata-fleur-ami"
 category: "hair"
 salon: "fleurami"
 date: "2026-10-06"

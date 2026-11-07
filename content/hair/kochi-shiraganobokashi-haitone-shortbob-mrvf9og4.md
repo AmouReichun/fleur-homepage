@@ -1,6 +1,7 @@
 ---
 title: "高知市で白髪ぼかしハイトーンショートボブを考えている40代へ｜失敗しない色選びと仕上がりの見極め方"
 slug: "kochi-shiraganobokashi-haitone-shortbob-mrvf9og4"
+merged_into: "shiraga-bokashi-short-bob-30-40dai-mqq6au6v"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-07-22"

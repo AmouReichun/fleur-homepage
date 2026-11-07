@@ -1,6 +1,7 @@
 ---
 title: "香南市でショートヘアをすっきり仕上げるには？後ろ姿が決まるカットと髪質の整え方｜高知県香南市fleur amiの大人女性向け施術ガイド"
 slug: "kochi-konan-short-hair-back-view-cut"
+merged_into: "40dai-hair-menu-color-perm-shukumo"
 category: "hair"
 salon: "fleurami"
 date: "2026-10-05"

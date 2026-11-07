@@ -1,6 +1,7 @@
 ---
 title: "香南市でブルーブラックのダブルカラーを考えている方へ｜仕上がりの差はどこで生まれるのか"
 slug: "konanshi-blue-black-double-color-erabikata-mrbaxke7"
+merged_into: "silver-double-color-adult-women-mqrjz08r"
 category: "hair"
 salon: "fleurami"
 date: "2026-07-07"

@@ -1,6 +1,7 @@
 ---
 title: "メンズパーマの持ちと向き不向きを解説｜高知市の美容師がスタイル選びで注意すること"
 slug: "kochi-mens-perm-erabikata-mrvhfs06"
+merged_into: "mens-perm-finish-style-explanation-mqt1i8un"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-07-22"

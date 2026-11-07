@@ -1,6 +1,7 @@
 ---
 title: "縮毛矯正と髪質改善、どちらを選べばいい？違いと選び方を美容師が解説"
 slug: "shukumokyosei-kamishitsukaizen-chigai-mqq69uxt"
+merged_into: "kochi-shitsukaizen-shukumou-chigai"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-06-23"

@@ -1,6 +1,7 @@
 ---
 title: "ショコラベージュで艶とまとまりを叶えるカラー選び｜高知市Riv. by fleur amiの大人女性向け施術事例"
 slug: "kochi-chocolat-beige-color-otona-jissen-msfrqgpz"
+merged_into: "kochi-color-cut-tsuyakami-40dai-riv-msib3hqw"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-08-05"

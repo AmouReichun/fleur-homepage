@@ -1,6 +1,7 @@
 ---
 title: "艶カラーで自然なトーンを叶えたい40代女性へ｜香南市fleur amiの施術事例と選び方ガイド"
 slug: "tsuya-color-natural-tone-40dai-konan-fleurami-mu5jrojk"
+merged_into: "natural-glossy-hair-color-20s-30s-mqq68564"
 category: "hair"
 salon: "fleurami"
 date: "2026-09-29"

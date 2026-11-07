@@ -1,6 +1,7 @@
 ---
 title: "チョコレートブラウンの顎ラインボブで艶と深みを叶えるには｜高知県香南市fleur amiの大人女性向け艶カラー施術事例"
 slug: "chocolate-brown-jaw-bob-tsuyacolor-kochi-konan-fleurami-mtu28bxf"
+merged_into: "natural-glossy-hair-color-20s-30s-mqq68564"
 category: "hair"
 salon: "fleurami"
 date: "2026-09-02"

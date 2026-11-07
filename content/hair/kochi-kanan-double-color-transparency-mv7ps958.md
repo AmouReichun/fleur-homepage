@@ -1,6 +1,7 @@
 ---
 title: "香南市でダブルカラーを選ぶ前に｜透明感と艶を両立させる条件"
 slug: "kochi-kanan-double-color-transparency-mv7ps958"
+merged_into: "silver-double-color-adult-women-mqrjz08r"
 category: "hair"
 salon: "fleurami"
 date: "2026-10-15"

@@ -1,6 +1,7 @@
 ---
 title: "タッセルボブで艶とまとまりを叶えるカラーの選び方とは｜高知県高知市Riv. by fleur amiの大人女性向け施術事例"
 slug: "kochi-tassel-bob-color-erabikata-riv-mu5jl1p0"
+merged_into: "kochi-kirinashi-bob-shiagaridiff-jirei-msh14thp"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-09-29"

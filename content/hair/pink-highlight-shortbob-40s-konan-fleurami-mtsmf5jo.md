@@ -1,6 +1,7 @@
 ---
 title: "ピンク系ハイライトカラーで後ろ姿の印象を変えたい40代女性へ｜香南市fleur amiのショートボブ施術事例"
 slug: "pink-highlight-shortbob-40s-konan-fleurami-mtsmf5jo"
+merged_into: "otona-bob-highlight-change-mqq66hym"
 category: "hair"
 salon: "fleurami"
 date: "2026-08-29"

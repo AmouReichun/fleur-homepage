@@ -1,6 +1,7 @@
 ---
 title: "40代の毛先まとめ、香南市で叶える艶のあるレイヤーボブとは"
 slug: "kochi-layer-bob-mature-women-fleurami"
+merged_into: "short-layered-bob-adult-women-mqq67b8n"
 category: "hair"
 salon: "fleurami"
 date: "2026-10-15"

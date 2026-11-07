@@ -1,6 +1,7 @@
 ---
 title: 高知 美容室の選び方｜大人世代が後悔しない5つの基準
 slug: kochi-biyoushitsu-erabikata-otona
+merged_into: "kochi-biyoushitsu-erabikata-5points"
 category: hair
 salon: Riv. by fleurami
 date: '2026-10-16'

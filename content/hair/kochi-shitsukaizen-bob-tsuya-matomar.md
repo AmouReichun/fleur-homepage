@@ -1,6 +1,7 @@
 ---
 title: "高知市で髪質改善ボブを選ぶなら｜短さを活かしたツヤまとまりの実現方法"
 slug: "kochi-shitsukaizen-bob-tsuya-matomar"
+merged_into: "kamishitsu-kaizen-tsuyakam-otona-josei"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-10-27"

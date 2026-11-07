@@ -1,6 +1,7 @@
 ---
 title: "メンズパーマで動きとまとまりを両立したいなら何を確認すべき？｜高知県香南市fleur amiの施術事例と選び方ガイド"
 slug: "mens-perm-ugoki-matomari-kanan-fleurami-mtyb33rz"
+merged_into: "kananshi-mens-perm-erabikata-fleur-ami"
 category: "hair"
 salon: "fleurami"
 date: "2026-09-03"

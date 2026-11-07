@@ -1,6 +1,7 @@
 ---
 title: "レイヤーボブで動きと軽さを求める大人女性が確認すべきこと｜高知県高知市Riv. by fleur amiの施術事例と仕上がりの見極め方"
 slug: "kochi-layer-bob-adult-women-guide-riv-fleurami-mu5jj99q"
+merged_into: "kochi-layer-bob-matome-karusa-40dai-mtlh4j7e"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-09-09"

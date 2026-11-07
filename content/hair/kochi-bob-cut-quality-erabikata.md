@@ -1,6 +1,7 @@
 ---
 title: "高知市でボブスタイルを整えるなら、カットと髪質感の両立が鍵｜高知県高知市Riv. by fleur amiの施術事例から学ぶ選び方"
 slug: "kochi-bob-cut-quality-erabikata"
+merged_into: "bob-cut-kirei-otona-josei"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-09-27"

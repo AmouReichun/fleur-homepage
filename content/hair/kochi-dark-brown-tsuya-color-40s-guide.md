@@ -1,6 +1,7 @@
 ---
 title: "ダークブラウンで艶とまとまりを出すには｜高知市Riv. by fleur amiの40代向け艶カラー施術ガイド"
 slug: "kochi-dark-brown-tsuya-color-40s-guide"
+merged_into: "kochi-color-cut-tsuyakami-40dai-riv-msib3hqw"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-07-30"

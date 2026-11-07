@@ -1,6 +1,7 @@
 ---
 title: "透明感のあるオリーブベージュで印象を変える｜香南市fleur amiの10代向け髪質改善カラー施術ガイド"
 slug: "olive-beige-color-teens-kochi-fleur-ami-ms45abrk"
+merged_into: "konan-color-shitsukaizen-tsuyakami-bob"
 category: "hair"
 salon: "fleurami"
 date: "2026-07-28"

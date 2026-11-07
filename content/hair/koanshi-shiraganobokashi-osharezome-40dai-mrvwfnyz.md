@@ -1,6 +1,7 @@
 ---
 title: "香南市で白髪ぼかしとおしゃれ染めを考えている40代女性へ｜失敗しないサロン選びの判断基準"
 slug: "koanshi-shiraganobokashi-osharezome-40dai-mrvwfnyz"
+merged_into: "40dai-shiraga-bokashi-highlight-shiagari-mqrjcjaq"
 category: "hair"
 salon: "fleurami"
 date: "2026-07-22"

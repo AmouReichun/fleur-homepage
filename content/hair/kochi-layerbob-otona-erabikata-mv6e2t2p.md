@@ -1,6 +1,7 @@
 ---
 title: "高知市でレイヤーボブを選ぶなら｜大人女性が失敗しない仕上がりの条件"
 slug: "kochi-layerbob-otona-erabikata-mv6e2t2p"
+merged_into: "kochi-layer-bob-matome-karusa-40dai-mtlh4j7e"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-10-14"

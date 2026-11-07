@@ -1,6 +1,7 @@
 ---
 title: "チョコレートブラウンで艶と深みのある仕上がりを叶えるには何を選ぶべき？｜高知県香南市fleur amiの大人女性向け艶カラー施術ガイド"
 slug: "chocolate-brown-tsuyacolor-kanamishi-fleurami-guide-mu5j2315"
+merged_into: "natural-glossy-hair-color-20s-30s-mqq68564"
 category: "hair"
 salon: "fleurami"
 date: "2026-09-03"

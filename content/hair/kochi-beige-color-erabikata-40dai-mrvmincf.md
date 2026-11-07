@@ -1,6 +1,7 @@
 ---
 title: "ベージュ系カラーの透明感を長持ちさせる選び方｜高知市の美容師が解説する基準"
 slug: "kochi-beige-color-erabikata-40dai-mrvmincf"
+merged_into: "kochi-color-cut-tsuyakami-40dai-riv-msib3hqw"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-07-22"

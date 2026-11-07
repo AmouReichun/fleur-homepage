@@ -1,6 +1,7 @@
 ---
 title: "香南市でメンズパーマを選ぶなら知っておきたい、仕上がりと持ちを左右するポイント｜高知県香南市fleur amiの施術ガイド"
 slug: "kochi-konan-mens-perm-point"
+merged_into: "kananshi-mens-perm-erabikata-fleur-ami"
 category: "hair"
 salon: "fleurami"
 date: "2026-10-01"

@@ -1,6 +1,7 @@
 ---
 title: "高知市でツヤのあるミディアムボブを叶えるには｜担当スタイリスト西森心大が解説する髪質改善と仕上がりの関係性"
 slug: "kochi-medium-bob-tsuyakashiki-kaizen"
+merged_into: "kamishitsu-kaizen-tsuyakam-otona-josei"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-10-01"

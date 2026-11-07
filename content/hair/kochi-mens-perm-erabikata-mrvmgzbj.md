@@ -1,6 +1,7 @@
 ---
 title: "メンズパーマの仕上がりに差が出る要因とは｜高知市の美容師が解説する施術の違い"
 slug: "kochi-mens-perm-erabikata-mrvmgzbj"
+merged_into: "mens-perm-finish-style-explanation-mqt1i8un"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-07-22"

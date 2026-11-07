@@ -1,6 +1,7 @@
 ---
 title: "縮毛矯正と髪質改善トリートメントの違いを詳しく比較｜くせ毛・うねりに悩む方への選び方"
 slug: "shukumokyosei-treatment-chigai-mqt1iflt"
+merged_into: "kochi-shitsukaizen-shukumou-chigai"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-06-25"

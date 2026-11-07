@@ -1,6 +1,7 @@
 ---
 title: "高知市で艶髪ストレートを叶える髪質改善｜大人女性が選ぶべきサロンの判断基準"
 slug: "kochi-shitsukaizen-tsuya-straight"
+merged_into: "kamishitsu-kaizen-tsuyakam-otona-josei"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-08-23"

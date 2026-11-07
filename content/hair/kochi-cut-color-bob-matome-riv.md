@@ -1,6 +1,7 @@
 ---
 title: "高知市でカット＆カラーなら｜ぺたんこ・広がりのまとまらない髪をツヤ感あるボブスタイルへ"
 slug: "kochi-cut-color-bob-matome-riv"
+merged_into: "kochi-color-cut-tsuyakami-40dai-riv-msib3hqw"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-06-26"

@@ -1,6 +1,7 @@
 ---
 title: "切りっぱなしボブで後ろ姿をすっきり見せるには何が違うのか｜高知県香南市fleur amiの大人向けカット施術事例"
 slug: "kirinashi-bob-ushiro-sugata-kochi-konanshi-fleurami"
+merged_into: "kirinashi-bob-cut-matome-kochi-konanshi-fleurami"
 category: "hair"
 salon: "fleurami"
 date: "2026-08-09"

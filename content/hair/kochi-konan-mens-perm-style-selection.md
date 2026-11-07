@@ -1,6 +1,7 @@
 ---
 title: "メンズパーマを香南市で選ぶなら何を見る？スタイル別の仕上がり判断基準"
 slug: "kochi-konan-mens-perm-style-selection"
+merged_into: "kananshi-mens-perm-erabikata-fleur-ami"
 category: "hair"
 salon: "fleurami"
 date: "2026-10-20"

@@ -19,16 +19,41 @@ const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
 
 const SALON_KEY: Record<string, string> = { fleurami: "fleurami", "Riv. by fleurami": "riv", Raffine: "raffine" };
 
-// 親記事から案内する「地域×メニュー」ページ（店選び・料金はこちらが担当）
-function areaLinksFor(title: string): string[] {
+// 親記事から案内する「地域×メニュー」ページ（店選び・料金はこちらが担当）。店ごとに出し分ける
+function areaLinksFor(salon: string, title: string): string[] {
   const links: string[] = [];
-  if (/パーマ|リフト|まつ毛|まつげ/.test(title)) links.push("[高知市のまつげパーマ（Raffineの料金・担当・よくある質問）](/area/kochi/matsuge-perm)");
-  if (/マツエク|エクステ/.test(title)) links.push("[高知市のまつげエクステ（Raffineの料金・本数・よくある質問）](/area/kochi/matsuek)");
-  if (/眉|まゆ|アイブロウ/.test(title)) links.push("[高知市の眉毛WAX（Raffineの料金・メンズ対応・よくある質問）](/area/kochi/mayuge-wax)");
-  if (/料金|相場/.test(title)) {
-    for (const l of ["[高知市のまつげパーマ](/area/kochi/matsuge-perm)", "[高知市のまつげエクステ](/area/kochi/matsuek)", "[高知市の眉毛WAX](/area/kochi/mayuge-wax)"]) links.push(l);
+  if (salon === "Raffine") {
+    if (/パーマ|リフト|まつ毛|まつげ/.test(title)) links.push("[高知市のまつげパーマ（Raffineの料金・担当・よくある質問）](/area/kochi/matsuge-perm)");
+    if (/マツエク|エクステ/.test(title)) links.push("[高知市のまつげエクステ（Raffineの料金・本数・よくある質問）](/area/kochi/matsuek)");
+    if (/眉|まゆ|アイブロウ/.test(title)) links.push("[高知市の眉毛WAX（Raffineの料金・メンズ対応・よくある質問）](/area/kochi/mayuge-wax)");
+    if (/料金|相場/.test(title)) {
+      for (const l of ["[高知市のまつげパーマ](/area/kochi/matsuge-perm)", "[高知市のまつげエクステ](/area/kochi/matsuek)", "[高知市の眉毛WAX](/area/kochi/mayuge-wax)"]) links.push(l);
+    }
+    return Array.from(new Set(links));
   }
-  return Array.from(new Set(links));
+  // 美容室：Riv.＝高知市、fleur ami＝香南市
+  const isRiv = salon.startsWith("Riv");
+  const area = isRiv ? "kochi" : "konan";
+  const place = isRiv ? "高知市" : "香南市";
+  const shop = isRiv ? "Riv. by fleur ami" : "fleur ami";
+  const rules: [RegExp, string, string][] = [
+    [/白髪|グレイ/, "shiraga-bokashi", "白髪ぼかし"],
+    [/酸性ストレート/, "sansei-straight", "酸性ストレート"],
+    [/縮毛|ストレート|くせ毛|うねり/, "shukumou-kyousei", "縮毛矯正"],
+    [/髪質改善|トリートメント|ミルボン|GM/, "kamishitsu-kaizen", "髪質改善"],
+    [/(?=.*(メンズ|男性))(?=.*(カラー|ブリーチ))/, "mens-color", "メンズカラー"],
+    [/(?=.*(メンズ|男性))(?=.*パーマ)/, "mens-twist-perm", "メンズパーマ"],
+    [/インナー|イヤリング/, "inner-color", "インナーカラー"],
+    [/ブリーチ|ダブルカラー|Wカラー|ハイトーン|トリプル/, "bleach", "ブリーチ・ダブルカラー"],
+    [/カラー|艶|髪色|ベージュ|アッシュ|ブラウン/, "tsuya-color", "艶カラー"],
+    [/ボブ/, "bob", "ボブ"],
+    [/カット|ショート|レイヤー|ウルフ|メンズ|男性/, "cut", "カット"],
+  ];
+  for (const [re, svc, label] of rules) {
+    if (re.test(title)) links.push(`[${place}の${label}（${shop}の料金・担当・よくある質問）](/area/${area}/${svc})`);
+    if (links.length >= 2) break;
+  }
+  return links;
 }
 
 type Child = { slug: string; title: string; body: string; faq: { q: string; a: string }[] };
@@ -60,7 +85,7 @@ async function rewriteParent(parentSlug: string, cat: string, children: Child[])
   const base = buildBasePrompt({ category, salonName, area: AREA_BY_KEY[key], articleType: "rewrite" });
   const per = Math.max(500, Math.floor(30000 / Math.max(1, children.length)));
   const childText = children.map((c, i) => `--- 統合した記事${i + 1}：${c.title}\n${c.body.slice(0, per)}\nFAQ: ${c.faq.map((f) => f.q).join(" / ")}`).join("\n\n");
-  const links = areaLinksFor(String(fm.title ?? ""));
+  const links = areaLinksFor(salonName, String(fm.title ?? ""));
 
   const instruction = `
 【統合リライト指示】
@@ -120,11 +145,14 @@ ${childText}`;
 }
 
 async function main() {
-  const only = process.argv.slice(2);
+  const args = process.argv.slice(2);
+  const catArg = args.find((a) => a.startsWith("--cat="))?.slice(6);
+  const only = args.filter((a) => !a.startsWith("--"));
   const groups = collect();
   let ok = 0, ng = 0;
   for (const [parent, { cat, children }] of Array.from(groups.entries())) {
     if (only.length && !only.includes(parent)) continue;
+    if (catArg && cat !== catArg) continue;
     try { await rewriteParent(parent, cat, children); ok++; } catch (e) { console.error(`  ❌ ${parent}`, e); ng++; }
   }
   console.log(`完了: ${ok}本 / 失敗 ${ng}本`);

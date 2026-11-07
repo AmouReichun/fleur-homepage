@@ -1,6 +1,7 @@
 ---
 title: "切りっぱなしボブの透明感ブラウンカラー、香南市で叶えるなら何をチェックすべき？｜高知県香南市fleur amiの大人女性向けカラー×カット事例"
 slug: "kiribanashi-bob-transparent-brown-kochi-nananyoshi-musbj2qz"
+merged_into: "kirinashi-bob-cut-matome-kochi-konanshi-fleurami"
 category: "hair"
 salon: "fleurami"
 date: "2026-10-03"

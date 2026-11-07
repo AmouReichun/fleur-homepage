@@ -1,6 +1,7 @@
 ---
 title: "40代の艶カラー、高知市で失敗しない選び方｜チェリーピンクの仕上がり"
 slug: "kochi-mature-color-cherry-pink-guide-mvrk7s5x"
+merged_into: "kochi-color-cut-tsuyakami-40dai-riv-msib3hqw"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-11-06"

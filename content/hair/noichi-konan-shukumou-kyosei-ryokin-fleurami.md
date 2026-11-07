@@ -1,6 +1,7 @@
 ---
 title: 香南市・野市で縮毛矯正の料金はいくら？選ぶ基準と持ちの目安｜高知県香南市の美容室fleur ami
 slug: noichi-konan-shukumou-kyosei-ryokin-fleurami
+merged_into: "koshoku-kyosei-tsuyakuro-bob-konan-fleurami-mt2houmb"
 category: hair
 salon: fleurami
 date: '2026-09-27'

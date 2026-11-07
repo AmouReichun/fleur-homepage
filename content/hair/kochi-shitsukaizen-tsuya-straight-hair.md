@@ -1,6 +1,7 @@
 ---
 title: "高知市で艶のあるストレートヘアを手に入れるには｜髪質改善トリートメントの仕上がりと選び方を美容師が解説"
 slug: "kochi-shitsukaizen-tsuya-straight-hair"
+merged_into: "kamishitsu-kaizen-tsuyakam-otona-josei"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-10-05"

@@ -1,6 +1,7 @@
 ---
 title: "高知市でレイヤーカットを考えている方へ｜動きと軽さを出すための選び方"
 slug: "kochi-layer-cut-erabikata-mr35537g"
+merged_into: "kochi-layer-bob-matome-karusa-40dai-mtlh4j7e"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-07-02"

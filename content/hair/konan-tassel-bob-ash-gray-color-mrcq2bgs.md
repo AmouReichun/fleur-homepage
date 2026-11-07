@@ -1,6 +1,7 @@
 ---
 title: "香南市でタッセルボブを考えている方へ｜アッシュグレーカラーとの組み合わせで選ぶポイント"
 slug: "konan-tassel-bob-ash-gray-color-mrcq2bgs"
+merged_into: "kirinashi-bob-cut-matome-kochi-konanshi-fleurami"
 category: "hair"
 salon: "fleurami"
 date: "2026-07-08"

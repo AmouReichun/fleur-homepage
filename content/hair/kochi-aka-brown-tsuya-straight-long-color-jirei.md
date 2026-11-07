@@ -1,6 +1,7 @@
 ---
 title: "赤みブラウンのツヤストレートロングで印象を変えるには｜高知県高知市Riv. by fleur amiの艶カラー施術事例と選び方"
 slug: "kochi-aka-brown-tsuya-straight-long-color-jirei"
+merged_into: "kochi-color-cut-tsuyakami-40dai-riv-msib3hqw"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-09-06"

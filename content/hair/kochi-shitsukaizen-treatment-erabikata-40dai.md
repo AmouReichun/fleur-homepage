@@ -1,6 +1,7 @@
 ---
 title: "ツヤとまとまりを求める40代向け髪質改善トリートメント｜高知市Riv.の選び方と効果"
 slug: "kochi-shitsukaizen-treatment-erabikata-40dai"
+merged_into: "kamishitsu-kaizen-tsuyakam-otona-josei"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-07-04"

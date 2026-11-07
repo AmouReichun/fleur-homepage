@@ -1,6 +1,7 @@
 ---
 title: "大人の短髪、どんなショートスタイルが似合う？丸みのあるシルエットが鍵です"
 slug: "adult-short-bob-silhouette-riv-fleur-ami-mqoxqq59"
+merged_into: "bob-cut-kirei-otona-josei"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-06-22"

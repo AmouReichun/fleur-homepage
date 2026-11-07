@@ -1,6 +1,7 @@
 ---
 title: "アッシュグレーカラーって40代でも似合う？大人女性こそ選びたいくすみカラーの魅力"
 slug: "ash-grey-color-adult-women-mqt5r8io"
+merged_into: "natural-glossy-hair-color-20s-30s-mqq68564"
 category: "hair"
 salon: "fleurami"
 date: "2026-06-25"

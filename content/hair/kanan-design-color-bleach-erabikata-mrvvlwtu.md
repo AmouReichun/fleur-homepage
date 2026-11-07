@@ -1,6 +1,7 @@
 ---
 title: "香南市でデザインカラー（ブリーチ）を考えている20代へ｜失敗しない選び方と仕上がりの目安"
 slug: "kanan-design-color-bleach-erabikata-mrvvlwtu"
+merged_into: "silver-double-color-adult-women-mqrjz08r"
 category: "hair"
 salon: "fleurami"
 date: "2026-07-22"

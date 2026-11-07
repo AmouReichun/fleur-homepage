@@ -1,6 +1,7 @@
 ---
 title: "香南市でショートボブを選ぶ50代女性へ｜失敗しない似合わせカットの見極め方"
 slug: "konanshi-short-bob-50dai-erabikata-mrg63w80"
+merged_into: "40dai-hair-menu-color-perm-shukumo"
 category: "hair"
 salon: "fleurami"
 date: "2026-07-11"

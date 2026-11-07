@@ -1,6 +1,7 @@
 ---
 title: "ミニボブで後ろ姿をすっきり整えるには何が違うのか｜高知県香南市fleur amiの大人女性向け施術事例"
 slug: "kananshi-mini-bob-ushirosugata-fleurami-mt2jzlht"
+merged_into: "40dai-hair-menu-color-perm-shukumo"
 category: "hair"
 salon: "fleurami"
 date: "2026-08-21"

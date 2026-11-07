@@ -1,6 +1,7 @@
 ---
 title: "高知市でツヤのあるロングヘアを叶えるなら、髪質改善と縮毛矯正のどちらを選ぶべき？｜高知県高知市Riv. by fleur amiの施術選択ガイド"
 slug: "kochi-long-hair-tsuya-shitsukaizen-syukumou"
+merged_into: "kochi-shitsukaizen-shukumou-chigai"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-10-02"

@@ -1,6 +1,7 @@
 ---
 title: "高知市でベージュ系カラーを考えている40代女性へ｜艶髪に仕上げるサロンの選び方"
 slug: "kochi-beige-color-erabikata-40dai-mryl7wfm"
+merged_into: "kochi-color-cut-tsuyakami-40dai-riv-msib3hqw"
 category: "hair"
 salon: "Riv. by fleurami"
 date: "2026-07-24"
