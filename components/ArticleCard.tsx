@@ -15,7 +15,8 @@ type Props = {
 
 export default function ArticleCard({ post, world, priority = false }: Props) {
   const isEyelash = world === "eyelash";
-  const href = `/blog/${world}/${post.linkSlug ?? post.slug}`;
+  // 親記事へまとめた実例は、親記事の中のその実例の場所（#case-◯◯）へ飛ぶ
+  const href = post.linkSlug ? `/blog/${world}/${post.linkSlug}#case-${post.slug}` : `/blog/${world}/${post.slug}`;
 
   if (isEyelash) {
     return (

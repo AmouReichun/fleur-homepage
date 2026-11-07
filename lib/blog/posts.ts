@@ -220,3 +220,10 @@ export function getMergedCaseMetas(category: Category): PostMeta[] {
   }
   return out;
 }
+
+/** 親記事にまとめた新しい実例（親記事のページに写真つきで並べる用）。新しい順 */
+export function getMergedCasesFor(category: Category, parentSlug: string): PostMeta[] {
+  return getMergedCaseMetas(category)
+    .filter((p) => p.linkSlug === parentSlug)
+    .sort((a, b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : 0));
+}

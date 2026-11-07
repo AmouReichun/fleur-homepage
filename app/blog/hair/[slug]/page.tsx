@@ -5,11 +5,12 @@ import { salonDisplayName, tagDisplayName } from "@/lib/salon-display";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
-import { getSlugs, getPost, getAllPosts, getAllTags } from "@/lib/blog/posts";
+import { getMergedCasesFor, getSlugs, getPost, getAllPosts, getAllTags } from "@/lib/blog/posts";
 import { getImageAspect } from "@/lib/blog/image-aspect";
 import { articleSchema, faqSchema, localBusinessSchema, breadcrumbSchema, personSchema, howToSchema, videoObjectSchema } from "@/lib/blog/structured-data";
 import { getContent } from "@/lib/content";
 import FAQSection from "@/components/FAQSection";
+import MergedCases from "@/components/MergedCases";
 import RelatedArticles from "@/components/RelatedArticles";
 import ArticleInternalLinks from "@/components/ArticleInternalLinks";
 import ConversationSection from "@/components/ConversationSection";
@@ -251,6 +252,9 @@ export default async function HairArticlePage({ params }: Props) {
 
           {/* Body（本文内に関連メニューへの内部リンクを自動挿入） */}
           <div className="prose-hair" dangerouslySetInnerHTML={{ __html: linkedHtml }} />
+
+          {/* この記事にまとめた実例（写真・担当・日付） */}
+          <MergedCases cases={getMergedCasesFor("hair", post.slug)} world="hair" />
 
           {/* FAQ */}
           <div id="faq-section">
