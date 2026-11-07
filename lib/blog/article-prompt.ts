@@ -132,6 +132,7 @@ ${menuPriceLines(key)}`;
 const STAFF_ALIASES: Record<string, string[]> = {
   やすい: ["安井未琉", "安井"],
   おざき: ["尾崎あい", "尾崎"],
+  くろせ: ["葉月"], // 下の名前（社長確認 2026-11-07）
 };
 
 /** 同じスタッフの表記ゆれ（例：HPの「やすい」と記事の「安井未琉」）をまとめて返す。空白は除く。 */
@@ -140,15 +141,16 @@ export function staffNameVariants(name: string | undefined | null): string[] {
   if (!n) return [];
   for (const [key, aliases] of Object.entries(STAFF_ALIASES)) {
     const all = [key, ...aliases].map((x) => x.replace(/[\s　]/g, ""));
-    if (all.includes(n)) return all.filter((x) => x.length >= 3 || x === key);
+    if (all.includes(n)) return all;
   }
   return [n];
 }
 
 /** 記事の担当者欄に書く名前（別名表にフルネームがあればそれを使い、既存記事の表記にそろえる） */
 function authorNameOf(name: string): string {
-  const aliases = STAFF_ALIASES[name.replace(/[\s　]/g, "")];
-  return aliases?.[0] ?? name;
+  const full = STAFF_ALIASES[name.replace(/[\s　]/g, "")]?.[0];
+  // 漢字3文字以上のフルネームのときだけ置き換える（「葉月」のような下の名前だけなら HP の表記のまま）
+  return full && /^[一-龥ぁ-んァ-ン]{3,}$/.test(full) && /[一-龥]/.test(full) ? full : name;
 }
 
 /**
