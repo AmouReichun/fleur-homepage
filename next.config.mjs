@@ -29,6 +29,9 @@ const nextConfig = {
   },
   async redirects() {
     return [
+      // 同じ内容の記事（11/7 社長判断で1本に統合）→ 10/19の記事へ
+      { source: "/blog/hair/kochi-biyoshitsu-erabikata-5pointo", destination: "/blog/hair/kochi-biyoushitsu-erabikata-5points", permanent: true },
+      { source: "/blog/hair/kochi-biyoshitsu-erabikata-5points", destination: "/blog/hair/kochi-biyoushitsu-erabikata-5points", permanent: true },
       {
         source: "/faq",
         destination: "/blog/faq",
