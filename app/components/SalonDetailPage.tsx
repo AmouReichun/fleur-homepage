@@ -22,6 +22,21 @@ const MENU_LINKS: Record<string, { href: string; name: string; desc: string }[]>
     { href: "/area/kochi/led-extension", name: "LEDマツエク", desc: "短時間装着・当日メイクや入浴もしやすい" },
     { href: "/area/kochi/mayuge-wax", name: "眉毛・アイブロウ", desc: "黄金比の眉WAX。メンズ眉WAXも対応" },
   ],
+  // 美容室2店（2026-11-07 追加）：売りの順番（艶カラー → ミルボンの髪質改善 → 白髪ぼかし・縮毛矯正）で並べる
+  riv: [
+    { href: "/area/kochi/tsuya-color", name: "艶カラー", desc: "艶と透明感のある似合わせカラー" },
+    { href: "/area/kochi/kamishitsu-kaizen", name: "髪質改善（ミルボンGM）", desc: "広がり・パサつきを抑えて扱いやすい髪に" },
+    { href: "/area/kochi/shiraga-bokashi", name: "白髪ぼかし", desc: "ハイライトで白髪をなじませ、伸びても目立ちにくく" },
+    { href: "/area/kochi/shukumou-kyousei", name: "縮毛矯正", desc: "くせ毛・うねりを自然なストレートに（カット込み）" },
+    { href: "/area/kochi/cut", name: "似合わせカット", desc: "骨格と毛量に合わせて、乾かすだけでまとまる形に" },
+  ],
+  fleurami: [
+    { href: "/area/konan/tsuya-color", name: "艶カラー", desc: "艶と透明感のある似合わせカラー" },
+    { href: "/area/konan/kamishitsu-kaizen", name: "髪質改善（ミルボンGM）", desc: "広がり・パサつきを抑えて扱いやすい髪に" },
+    { href: "/area/konan/shiraga-bokashi", name: "白髪ぼかし", desc: "ハイライトで白髪をなじませ、伸びても目立ちにくく" },
+    { href: "/area/konan/shukumou-kyousei", name: "縮毛矯正", desc: "くせ毛・うねりを自然なストレートに（カット込み）" },
+    { href: "/area/konan/cut", name: "似合わせカット", desc: "骨格と毛量に合わせて、乾かすだけでまとまる形に" },
+  ],
 };
 
 
