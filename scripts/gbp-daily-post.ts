@@ -34,6 +34,8 @@ type Article = {
   salonKey: string;
   salonName: string;
   date: string;
+  /** 投稿のリンク先（親記事へまとめた記事は親記事） */
+  linkSlug: string;
 };
 
 function readSlugsSet(filePath: string): Set<string> {
@@ -64,8 +66,11 @@ function collectPublishedArticles(): Article[] {
       try {
         const raw = fs.readFileSync(path.join(dir, name), "utf-8");
         const { data } = matter(raw);
-        if (data.draft === true) continue;
-        if (data.merged_into) continue; // 親記事へまとめた記事は投稿しない
+        // 親記事へまとめた記事（merged_into）も、スタッフの実例写真としてGBPには今まで通り投稿する（リンク先は親記事）。
+        // まとめた記事は自動公開されず draft のままになるので、draft でも merged_into があれば対象にする（2026-11-07）
+        const mergedInto = data.merged_into ? String(data.merged_into) : undefined;
+        if (data.draft === true && !mergedInto) continue;
+        if (data.yakkihou_flag === true) continue;
         const salonKey = SALON_NAME_TO_KEY[data.salon as string];
         if (!salonKey) {
           console.warn(`  ⚠ 未知のsalon名 "${data.salon}" (${name}) — SALON_NAME_TO_KEY に追加が必要`);
@@ -82,6 +87,7 @@ function collectPublishedArticles(): Article[] {
           salonKey,
           salonName: data.salon as string,
           date: (data.date as string | undefined) ?? "",
+          linkSlug: mergedInto ?? slug,
         });
       } catch {
         // ファイル読み取り失敗は無視
@@ -105,7 +111,7 @@ async function postTextToGbp(article: Article): Promise<void> {
     salonName: article.salonName,
     title: article.title,
     excerpt: article.excerpt,
-    articleUrl: `${SITE_ORIGIN}/blog/${article.category}/${article.slug}`,
+    articleUrl: `${SITE_ORIGIN}/blog/${article.category}/${article.linkSlug}`,
   };
   // thumbnailUrl が空の場合はフィールドごと省略（空文字をGBPに渡すと [500] になる）
   if (thumbnailUrl) payload.thumbnailUrl = thumbnailUrl;
@@ -132,7 +138,7 @@ async function postPhotoToGbp(article: Article): Promise<void> {
       salonName: article.salonName,
       sourceUrl,
       description: article.title,
-      articleUrl: `${SITE_ORIGIN}/blog/${article.category}/${article.slug}`,
+      articleUrl: `${SITE_ORIGIN}/blog/${article.category}/${article.linkSlug}`,
     }),
   });
   if (!res.ok) {
