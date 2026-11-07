@@ -12,7 +12,7 @@ import * as fs from "fs";
 import * as path from "path";
 import matter from "gray-matter";
 import Anthropic from "@anthropic-ai/sdk";
-import { buildBasePrompt, JSON_INSTRUCTION, AREA_BY_KEY, fixFixedPriceTilde } from "../lib/blog/article-prompt";
+import { buildBasePrompt, JSON_INSTRUCTION, AREA_BY_KEY, fixFixedPriceTilde, filterStoreBasicFaq } from "../lib/blog/article-prompt";
 import { autoFixNgWords, checkNgWords } from "../lib/blog/ng-words";
 
 const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
@@ -95,7 +95,7 @@ async function rewriteParent(parentSlug: string, cat: string, children: Child[])
 1. 読者の疑問（このテーマで高知の人が検索・AIに聞くこと）に、最初の段落で結論から答える
 2. 子記事から取り入れてよいのは「店の事実（上の店舗情報・メニュー表と一致する内容）」と「一般的に正しい説明・注意点」だけ。子記事にある架空のお客様の事例・会話・年齢・感想・「〜と好評」などは使わない
 3. 似た見出しの繰り返しをやめ、見出しは4〜6個にまとめる。「20代向け」などの年齢で分けない
-4. FAQは子記事の質問から、検索されそうなものを重複なく4〜5問に絞る
+4. FAQは子記事の質問から、このテーマの施術についての質問を重複なく4〜5問に絞る（予約方法・駐車場・アクセス・営業時間・支払いなど店の基本情報の質問は入れない）
 5. 本文の最後に「店の詳しい料金・担当・予約方法」として次のリンクを入れる：
 ${links.map((l) => "   - " + l).join("\n") || "   - （なし）"}
 6. タイトルは今の検索意図を保ちつつ、年齢を入れず、テーマが一目で分かる形にする（32字前後）
@@ -121,7 +121,7 @@ ${childText}`;
   if (!g) throw new Error(`生成失敗: ${parentSlug}`);
 
   const fix = (s: unknown) => fixFixedPriceTilde(salonName, autoFixNgWords(String(s ?? "")));
-  const faq = ((g.faq as { q: string; a: string }[]) ?? fm.faq ?? []).map((f) => ({ q: autoFixNgWords(f.q), a: fix(f.a) }));
+  const faq = filterStoreBasicFaq(((g.faq as { q: string; a: string }[]) ?? fm.faq ?? []).map((f) => ({ q: autoFixNgWords(f.q), a: fix(f.a) })));
   const newBody = fix(g.body ?? body);
   const ng = checkNgWords([g.title, g.excerpt, g.answer_summary, newBody, ...faq.map((f) => f.q + f.a)].join(" "));
 

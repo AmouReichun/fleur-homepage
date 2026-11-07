@@ -4,7 +4,7 @@ import * as path from "path";
 import Anthropic from "@anthropic-ai/sdk";
 import { IgMedia } from "./fetch-instagram";
 import { checkNgWords, autoFixNgWords } from "../lib/blog/ng-words";
-import { buildBasePrompt, JSON_INSTRUCTION, AREA_BY_NAME, detectStaff, fixFixedPriceTilde } from "../lib/blog/article-prompt";
+import { buildBasePrompt, JSON_INSTRUCTION, AREA_BY_NAME, detectStaff, fixFixedPriceTilde, filterStoreBasicFaq } from "../lib/blog/article-prompt";
 import { getAllPosts } from "../lib/blog/posts";
 
 dotenv.config({ path: ".env.local" });
@@ -254,7 +254,7 @@ export async function generateArticle(media: IgMedia): Promise<GeneratedArticle 
     tags: parsed.tags ?? [],
     question: parsed.question,
     answer_summary: parsed.answer_summary,
-    faq: parsed.faq ?? [],
+    faq: filterStoreBasicFaq(parsed.faq ?? []),
     conversation: parsed.conversation ?? [],
     author: stylist.name,
     author_role: stylist.role,
@@ -424,7 +424,7 @@ ${JSON_INSTRUCTION}`;
     tags: parsed.tags ?? [],
     question: parsed.question,
     answer_summary: parsed.answer_summary,
-    faq: parsed.faq ?? [],
+    faq: filterStoreBasicFaq(parsed.faq ?? []),
     conversation: parsed.conversation ?? [],
     author: stylist.name,
     author_role: stylist.role,

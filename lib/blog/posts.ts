@@ -4,6 +4,7 @@ import matter from "gray-matter";
 import { remark } from "remark";
 import html from "remark-html";
 import remarkGfm from "remark-gfm";
+import { filterStoreBasicFaq } from "./article-prompt";
 
 export type Category = "hair" | "eyelash";
 
@@ -75,7 +76,7 @@ export function getPostMeta(category: Category, slug: string): PostMeta & { draf
     tags: data.tags ?? [],
     question: data.question ?? "",
     answer_summary: data.answer_summary ?? "",
-    faq: data.faq ?? [],
+    faq: filterStoreBasicFaq(data.faq ?? []),
     author: data.author ?? "",
     author_role: data.author_role ?? "",
     steps: data.steps ?? [],
@@ -107,7 +108,7 @@ export async function getPost(category: Category, slug: string): Promise<Post & 
     tags: data.tags ?? [],
     question: data.question ?? "",
     answer_summary: data.answer_summary ?? "",
-    faq: data.faq ?? [],
+    faq: filterStoreBasicFaq(data.faq ?? []),
     author: data.author ?? "",
     author_role: data.author_role ?? "",
     steps: data.steps ?? [],

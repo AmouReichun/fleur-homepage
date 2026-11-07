@@ -7,7 +7,7 @@ import * as fs from "fs";
 import * as path from "path";
 import matter from "gray-matter";
 import Anthropic from "@anthropic-ai/sdk";
-import { buildBasePrompt, JSON_INSTRUCTION, AREA_BY_KEY } from "../lib/blog/article-prompt";
+import { buildBasePrompt, JSON_INSTRUCTION, AREA_BY_KEY, filterStoreBasicFaq } from "../lib/blog/article-prompt";
 import { getAllPosts } from "../lib/blog/posts";
 import { checkTopicGate } from "../lib/blog/topic-gate";
 
@@ -155,7 +155,7 @@ async function generateKeywordArticle(task: NewArticleTask): Promise<void> {
     answer_summary: generated.answer_summary ?? "",
     instagram_id: "",
     instagram_permalink: "",
-    faq: generated.faq ?? [],
+    faq: filterStoreBasicFaq(generated.faq ?? []),
     steps: generated.steps ?? [],
     conversation: generated.conversation ?? [],
     draft: false,

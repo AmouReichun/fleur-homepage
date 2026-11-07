@@ -1,6 +1,6 @@
 import Anthropic from "@anthropic-ai/sdk";
 import { checkNgWords, autoFixNgWords } from "./ng-words";
-import { buildBasePrompt, JSON_INSTRUCTION, detectStaff, fixFixedPriceTilde } from "./article-prompt";
+import { buildBasePrompt, JSON_INSTRUCTION, detectStaff, fixFixedPriceTilde, filterStoreBasicFaq } from "./article-prompt";
 import { getAllPosts } from "./posts";
 import type { IgPost } from "./instagram-api";
 
@@ -122,6 +122,7 @@ ${JSON_INSTRUCTION}`;
   parsed.excerpt        = fixFixedPriceTilde(post.salonName, parsed.excerpt);
   parsed.faq = parsed.faq.map((f) => ({ q: f.q, a: fixFixedPriceTilde(post.salonName, f.a) }));
   parsed.faq = parsed.faq.map((f) => ({ q: autoFixNgWords(f.q), a: autoFixNgWords(f.a) }));
+  parsed.faq = filterStoreBasicFaq(parsed.faq);
   if (parsed.steps) {
     parsed.steps = parsed.steps.map((s) => ({ name: s.name, text: autoFixNgWords(s.text) }));
   }
