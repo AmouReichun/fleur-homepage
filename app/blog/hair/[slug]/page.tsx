@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import { seoTitle } from "@/lib/blog/seo-title";
-import { salonDisplayName } from "@/lib/salon-display";
+import { salonDisplayName, tagDisplayName } from "@/lib/salon-display";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
@@ -156,7 +156,7 @@ export default async function HairArticlePage({ params }: Props) {
                 href={`/blog/hair/tag/${encodeURIComponent(tag)}`}
                 className="text-xs text-hair-muted tracking-wide hover:text-hair-accent-warm transition-colors"
               >
-                #{tag}
+                #{tagDisplayName(tag)}
               </Link>
             ))}
           </div>

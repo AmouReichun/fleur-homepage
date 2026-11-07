@@ -43,3 +43,16 @@ export function salonDisplayName(keyOrName: string | null | undefined): string {
   }
   return keyOrName;
 }
+
+/** 記事タグの表示名。旧店名のタグ（URL・データはそのまま）だけ正式表記にする。他のタグはそのまま */
+const SALON_NAME_TAG_LABELS: Record<string, string> = {
+  fleurami: "fleur ami",
+  "Riv. by fleurami": "Riv. by fleur ami",
+  "Riv.byfleurami": "Riv. by fleur ami",
+  "Riv by fleurami": "Riv. by fleur ami",
+  "高知県fleurami": "高知県fleur ami",
+  "高知県香南市fleurami": "高知県香南市fleur ami",
+};
+export function tagDisplayName(tag: string): string {
+  return SALON_NAME_TAG_LABELS[tag] ?? tag;
+}

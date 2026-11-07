@@ -1,3 +1,4 @@
+import { tagDisplayName } from "@/lib/salon-display";
 import { Metadata } from "next";
 import Link from "next/link";
 import { getAllPosts } from "@/lib/blog/posts";
@@ -101,7 +102,7 @@ export default function FleurAmiPage() {
                   className="text-xs px-3 py-1 border border-hair-accent-warm/40 text-hair-accent-warm bg-white/50 tracking-wide"
                   style={{ borderRadius: "2px" }}
                 >
-                  {tag}
+                  {tagDisplayName(tag)}
                 </span>
               )
             )}

@@ -1,3 +1,4 @@
+import { tagDisplayName } from "@/lib/salon-display";
 import { Metadata } from "next";
 import Link from "next/link";
 import { getAllPosts } from "@/lib/blog/posts";
@@ -137,7 +138,7 @@ export default function KamiushitsuKaizenPage() {
                 className="text-xs px-3 py-1 border border-hair-accent-warm/40 text-hair-accent-warm bg-white/50 tracking-wide"
                 style={{ borderRadius: "2px" }}
               >
-                {tag}
+                {tagDisplayName(tag)}
               </span>
             ))}
           </div>
@@ -217,7 +218,7 @@ export default function KamiushitsuKaizenPage() {
               <div className="flex flex-wrap gap-2 mb-5">
                 {["髪質改善", "縮毛矯正", "白髪ぼかし", "艶カラー"].map((t) => (
                   <span key={t} className="text-[11px] px-2 py-0.5 bg-hair-accent-warm/10 text-hair-accent-warm" style={{ borderRadius: "2px" }}>
-                    {t}
+                    {tagDisplayName(t)}
                   </span>
                 ))}
               </div>
@@ -253,7 +254,7 @@ export default function KamiushitsuKaizenPage() {
               <div className="flex flex-wrap gap-2 mb-5">
                 {["髪質改善", "縮毛矯正", "ハイライト", "白髪ぼかし"].map((t) => (
                   <span key={t} className="text-[11px] px-2 py-0.5 bg-hair-accent-warm/10 text-hair-accent-warm" style={{ borderRadius: "2px" }}>
-                    {t}
+                    {tagDisplayName(t)}
                   </span>
                 ))}
               </div>

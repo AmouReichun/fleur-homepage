@@ -1,3 +1,4 @@
+import { tagDisplayName } from "@/lib/salon-display";
 import { Metadata } from "next";
 import Link from "next/link";
 import { getAllPosts } from "@/lib/blog/posts";
@@ -121,7 +122,7 @@ export default function ShukumouKyouseiPage() {
                 className="text-xs px-3 py-1 border bg-white/50 tracking-wide"
                 style={{ borderRadius: "2px", borderColor: `${accent}60`, color: accent }}
               >
-                {tag}
+                {tagDisplayName(tag)}
               </span>
             ))}
           </div>
