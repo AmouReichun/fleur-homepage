@@ -41,7 +41,7 @@ const AREA_SEO: Record<string, { title: string; description: string }> = {
   harimayabashi: {
     title: "はりまや橋のアイラッシュサロン｜まつ毛パーマ・眉毛WAXのRaffine",
     description:
-      "高知市はりまや橋でまつ毛パーマ・マツエク・眉毛WAXをお探しなら「Raffine（ラフィーネ）」。ラッシュリフト・LEDエクステ・メンズ眉WAX対応、全席半個室・完全予約制。ホットペッパービューティー口コミ4.84点。Web・LINE予約受付中。",
+      "高知市はりまや橋でまつ毛パーマ・マツエク・眉毛WAXをお探しなら「Raffine（ラフィーネ）」。ラッシュリフト・LEDエクステ・メンズ眉WAX対応、全席半個室・予約優先制。ホットペッパービューティー口コミ4.84点。Web・LINE予約受付中。",
   },
 };
 

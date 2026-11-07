@@ -177,7 +177,7 @@ export const rivSalonSchema = {
   ],
   priceRange: "¥¥",
   currenciesAccepted: "JPY",
-  paymentAccepted: "現金, クレジットカード, PayPay, LINE Pay",
+  paymentAccepted: "現金, クレジットカード（VISA・Mastercard・JCB・American Express）, PayPay, 楽天ペイ, d払い, au PAY, 交通系電子マネー",
   openingHoursSpecification: [
     {
       "@type": "OpeningHoursSpecification",
@@ -248,7 +248,7 @@ export const fleuramiSalonSchema = {
   ],
   priceRange: "¥¥",
   currenciesAccepted: "JPY",
-  paymentAccepted: "現金, クレジットカード, PayPay, LINE Pay",
+  paymentAccepted: "現金, クレジットカード（VISA・Mastercard・JCB・American Express）, PayPay, 楽天ペイ, d払い, au PAY, 交通系電子マネー",
   openingHoursSpecification: [
     {
       "@type": "OpeningHoursSpecification",
@@ -316,7 +316,7 @@ export const raffineSalonSchema = {
   ],
   priceRange: "¥¥",
   currenciesAccepted: "JPY",
-  paymentAccepted: "現金, クレジットカード, PayPay",
+  paymentAccepted: "現金, クレジットカード（VISA・Mastercard・JCB・American Express）, PayPay, 楽天ペイ, d払い, au PAY, 交通系電子マネー",
   openingHoursSpecification: [
     {
       "@type": "OpeningHoursSpecification",
@@ -458,7 +458,7 @@ export const faqPageSchema = {
       name: "高知市Raffineの定休日と営業時間は？",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Raffineの営業時間は9:30〜18:30。定休日は不定休です（お休みはInstagram等でご案内）。住所：高知市はりまや町1-4-8 TNはりまやビル3F。全席半個室で完全予約制。",
+        text: "Raffineの営業時間は9:30〜18:30。定休日は不定休です（お休みはInstagram等でご案内）。住所：高知市はりまや町1-4-8 TNはりまやビル3F。全席半個室で予約優先制。",
       },
     },
     {

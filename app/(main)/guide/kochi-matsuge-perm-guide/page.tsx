@@ -220,7 +220,7 @@ export default function KochiMatugePermGuidePage() {
             <div className="flex gap-2"><dt className="text-site-text w-16 flex-shrink-0">住所</dt><dd>高知市はりまや町1-4-8 TNはりまやビル3F（はりまや橋から徒歩3分）</dd></div>
             <div className="flex gap-2"><dt className="text-site-text w-16 flex-shrink-0">電話</dt><dd>090-7120-5566</dd></div>
             <div className="flex gap-2"><dt className="text-site-text w-16 flex-shrink-0">営業時間</dt><dd>9:30〜18:30 / 不定休（Instagramでお知らせ）</dd></div>
-            <div className="flex gap-2"><dt className="text-site-text w-16 flex-shrink-0">特徴</dt><dd>全席半個室・完全予約制・まつげパーマ/エクステ/眉WAX専門・メンズ眉WAX対応</dd></div>
+            <div className="flex gap-2"><dt className="text-site-text w-16 flex-shrink-0">特徴</dt><dd>全席半個室・予約優先制・まつげパーマ/エクステ/眉WAX専門・メンズ眉WAX対応</dd></div>
             <div className="flex gap-2"><dt className="text-site-text w-16 flex-shrink-0">クチコミ</dt><dd>Google 5.0 ★（45件）</dd></div>
           </dl>
           <div className="mt-4 flex flex-col sm:flex-row gap-2">
@@ -352,7 +352,7 @@ export default function KochiMatugePermGuidePage() {
           <p className="text-xs tracking-[0.3em] text-site-accent uppercase mb-2">Booking</p>
           <p className="font-serif text-xl font-semibold text-site-text mb-2">高知市でまつげパーマを予約する</p>
           <p className="text-xs text-site-muted mb-6">
-            Raffine（高知市はりまや橋）にてご予約受付中。完全予約制。
+            Raffine（高知市はりまや橋）にてご予約受付中。予約優先制。
           </p>
           <Link href="/salon/raffine" className="inline-block px-8 py-3 bg-site-accent text-white text-xs tracking-wider hover:opacity-80 transition-opacity">
             Raffine の予約・店舗詳細を見る
