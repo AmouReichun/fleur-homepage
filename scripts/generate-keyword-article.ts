@@ -9,6 +9,7 @@ import matter from "gray-matter";
 import Anthropic from "@anthropic-ai/sdk";
 import { buildBasePrompt, JSON_INSTRUCTION, AREA_BY_KEY } from "../lib/blog/article-prompt";
 import { getAllPosts } from "../lib/blog/posts";
+import { checkTopicGate } from "../lib/blog/topic-gate";
 
 const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
 
@@ -161,6 +162,17 @@ async function generateKeywordArticle(task: NewArticleTask): Promise<void> {
     seo_generated: true,
     target_keyword: task.targetKeyword,
   };
+
+  // テーマ重複ガード（2026-11-07）：同じサロンにほぼ同じ記事・親記事のあるテーマなら保存しない
+  const sameSalonTitles = fs.readdirSync(outDir).filter((f) => f.endsWith(".md")).map((f) => {
+    const d = matter(fs.readFileSync(path.join(outDir, f), "utf-8")).data;
+    return d.salon === salonName ? String(d.title ?? "") : "";
+  }).filter(Boolean);
+  const gate = checkTopicGate(salonName, generated.title, sameSalonTitles);
+  if (!gate.ok) {
+    console.log(`  ⏭ テーマ重複のため保存しない: ${generated.title}\n     理由: ${gate.reason}`);
+    return;
+  }
 
   fs.mkdirSync(outDir, { recursive: true });
   fs.writeFileSync(outPath, matter.stringify(generated.body ?? "", fm), "utf-8");

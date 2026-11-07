@@ -1,6 +1,7 @@
 ---
 title: "高知市で立ち上げデザインのまつ毛パーマを叶えるには｜Raffineの仕上がり事例で見るサロン選びのコツ"
 slug: "kochi-matsuge-perm-tachiaige-design-mu99gls5"
+merged_into: "kochi-matsuge-perm-first-time-20s-impression"
 category: "eyelash"
 salon: "Raffine"
 date: "2026-10-03"
@@ -138,7 +139,7 @@ Raffineは、はりまや橋から徒歩約3分の立地にあり、20〜30代�
 **Raffine 高知店**
 - **住所：** 高知県高知市はりまや町1-4-8 TNはりまやビル3F
 - **アクセス：** はりまや橋から徒歩約3分
-- **環境：** 半個室・女性専用
+- **環境：** 半個室
 - **予約方法：** ホットペッパービューティーからご予約いただけます
 
 丁寧なカウンセリングと、自まつ毛を活かした自然で印象的な立ち上げデザイン。高知市でまつ毛パーマをお考えでしたら、ぜひRaffineをお選びください。

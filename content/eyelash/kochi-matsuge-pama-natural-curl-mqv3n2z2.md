@@ -1,6 +1,7 @@
 ---
 title: "高知市でまつげパーマするならどこがいい？自然なカールで印象的な目元へ"
 slug: "kochi-matsuge-pama-natural-curl-mqv3n2z2"
+merged_into: "kochi-matsuge-perm-first-time-20s-impression"
 category: "eyelash"
 salon: "Raffine"
 date: "2026-06-26"

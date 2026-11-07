@@ -1,6 +1,7 @@
 ---
 title: "まつ毛パーマ料金ガイド｜はりまや橋・高知市RaffineのLashLift対応サロン"
 slug: "matsuge-perm-ryokin-harimayabashi-raffine-kochi"
+merged_into: "kochi-matsuge-pama-matsuek-ryokin-souba"
 category: "eyelash"
 salon: "Raffine"
 date: "2026-09-27"

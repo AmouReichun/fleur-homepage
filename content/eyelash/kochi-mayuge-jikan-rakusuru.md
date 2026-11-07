@@ -1,6 +1,7 @@
 ---
 title: "高知市で眉毛を整える前に知っておきたい｜メイクの時間が短くなる理由"
 slug: "kochi-mayuge-jikan-rakusuru"
+merged_into: "kochi-eyebrow-salon-erabikata"
 category: "eyelash"
 salon: "Raffine"
 date: "2026-11-01"

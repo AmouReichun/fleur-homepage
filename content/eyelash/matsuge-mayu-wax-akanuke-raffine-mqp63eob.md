@@ -1,6 +1,7 @@
 ---
 title: "マツエク×眉ワックスで垢抜けるって本当？その組み合わせが正解な理由"
 slug: "matsuge-mayu-wax-akanuke-raffine-mqp63eob"
+merged_into: "kochi-lashperm-eyebrow-wax-set-raffine"
 category: "eyelash"
 salon: "Raffine"
 date: "2026-06-22"

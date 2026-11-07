@@ -1,6 +1,7 @@
 ---
 title: "高知市でまつ毛パーマを考えている20代へ｜目元の印象をガラッと変える仕上がりを見極める方法"
 slug: "kochi-matsuge-perm-20s-impression"
+merged_into: "kochi-matsuge-perm-first-time-20s-impression"
 category: "eyelash"
 salon: "Raffine"
 date: "2026-05-05"
@@ -183,4 +184,4 @@ Raffineは、高知市はりまや町のはりまや橋から徒歩約3分の立
 
 📱 ご予約：ホットペッパービューティー / お電話
 
-✨ 半個室・女性専用サロン
+✨ 半個室サロン

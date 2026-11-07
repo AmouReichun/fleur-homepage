@@ -1,6 +1,7 @@
 ---
 title: "高知市でナチュラルなまつ毛パーマを選ぶなら、仕上がりの「柔らかさ」がポイント｜高知県高知市Raffineの施術ガイド"
 slug: "kochi-matsuge-perm-natural-curl-guide-mu99mss5"
+merged_into: "kochi-matsuge-perm-first-time-20s-impression"
 category: "eyelash"
 salon: "Raffine"
 date: "2026-09-29"

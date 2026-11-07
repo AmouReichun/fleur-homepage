@@ -1,6 +1,7 @@
 ---
 title: "高知市でまつ毛パーマを考えている20代女性へ｜セパレート束感で毎日の目元が変わる理由"
 slug: "kochi-matsuge-perm-20s-separation"
+merged_into: "separate-lash-perm-rakuna-megashira"
 category: "eyelash"
 salon: "Raffine"
 date: "2026-10-04"

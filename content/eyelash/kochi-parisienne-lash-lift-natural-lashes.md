@@ -1,6 +1,7 @@
 ---
 title: "高知市でパリジェンヌラッシュリフト｜まつ毛が下がる・短いお悩みを自まつ毛で解決"
 slug: "kochi-parisienne-lash-lift-natural-lashes"
+merged_into: "kochi-parisienne-lash-lift-erabikata"
 category: "eyelash"
 salon: "Raffine"
 date: "2026-06-26"

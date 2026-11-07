@@ -1,6 +1,7 @@
 ---
 title: "高知市でまつ毛パーマ、ナチュラルに仕上げるコツ｜20代が選ぶべき理由"
 slug: "kochi-matsuge-perm-natural-finish"
+merged_into: "kochi-matsuge-perm-first-time-20s-impression"
 category: "eyelash"
 salon: "Raffine"
 date: "2026-10-30"

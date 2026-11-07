@@ -1,6 +1,7 @@
 ---
 title: "高知市でボリュームデザインのまつ毛エクステを選ぶなら｜理想の束感を叶える判断基準"
 slug: "kochi-matsuge-extension-volume-design-mu99l7fc"
+merged_into: "kochi-matsuge-eyelash-extension-supppin-meryoku-raffine"
 category: "eyelash"
 salon: "Raffine"
 date: "2026-09-20"

@@ -1,6 +1,7 @@
 ---
 title: "高知市のラッシュリフト・眉毛WAX料金ガイド｜Raffineが施術内容を解説"
 slug: "kochi-lashlift-mayu-wax-ryokin-raffine"
+merged_into: "kochi-matsuge-pama-matsuek-ryokin-souba"
 category: "eyelash"
 salon: "Raffine"
 date: "2026-09-27"

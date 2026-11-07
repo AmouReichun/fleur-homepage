@@ -1,6 +1,7 @@
 ---
 title: "束感まつ毛パーマって何？くるんと上がった繊細デザインの正体を解説"
 slug: "raffine-mejiri-design-mainichi-make-raku"
+merged_into: "kochi-matsuge-pama-me-jikara-shiagarichai"
 category: "eyelash"
 salon: "Raffine"
 date: "2026-06-18"

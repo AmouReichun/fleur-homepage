@@ -1,6 +1,7 @@
 ---
 title: "まつ毛パーマで束感セパレートまつ毛になれる？高知のサロンでできる仕上がりを解説"
 slug: "matsuge-perm-separate-lash-kochi-raffine"
+merged_into: "separate-lash-perm-rakuna-megashira"
 category: "eyelash"
 salon: "Raffine"
 date: "2026-06-07"

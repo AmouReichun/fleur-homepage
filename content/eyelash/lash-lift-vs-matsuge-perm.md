@@ -1,6 +1,7 @@
 ---
 title: "ラッシュリフトって何？まつげエクステとどう違うの？"
 slug: "lash-lift-vs-matsuge-perm"
+merged_into: "kochi-matsuek-vs-matsuge-pama-hikaku"
 category: "eyelash"
 salon: "Raffine"
 date: "2026-06-20"

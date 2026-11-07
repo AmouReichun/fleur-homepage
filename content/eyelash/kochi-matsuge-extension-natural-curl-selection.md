@@ -1,6 +1,7 @@
 ---
 title: "高知市でナチュラルなまつげエクステを選ぶなら｜自然な深みカールで目元印象を変える判断ポイント"
 slug: "kochi-matsuge-extension-natural-curl-selection"
+merged_into: "kochi-matsuge-eyelash-extension-supppin-meryoku-raffine"
 category: "eyelash"
 salon: "Raffine"
 date: "2026-09-24"
@@ -162,7 +163,7 @@ Raffineは、20〜30代の女性を中心に、ナチュラルながら上品で
 **【Raffineへのアクセス】**
 - **住所:** 高知県高知市はりまや町1-4-8 TNはりまやビル3F
 - **最寄り:** はりまや橋から徒歩約3分
-- **環境:** 半個室・女性専用
+- **環境:** 半個室
 - **予約方法:** ホットペッパービューティーまたは 090-7120-5566
 
 高知市でまつげエクステをご検討中の方は、お気軽にお問い合わせください。

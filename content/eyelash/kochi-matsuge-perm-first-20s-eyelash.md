@@ -1,6 +1,7 @@
 ---
 title: "高知市でまつ毛パーマを初めて受ける20代女性へ｜毎日のメイクがラクになる仕上がりを見極める方法"
 slug: "kochi-matsuge-perm-first-20s-eyelash"
+merged_into: "kochi-matsuge-perm-first-time-20s-impression"
 category: "eyelash"
 salon: "Raffine"
 date: "2026-09-27"

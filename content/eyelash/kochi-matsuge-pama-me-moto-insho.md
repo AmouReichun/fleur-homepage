@@ -1,6 +1,7 @@
 ---
 title: "高知市でまつげパーマ｜カールが落ちやすい・目元の印象が薄いとお悩みの方へ"
 slug: "kochi-matsuge-pama-me-moto-insho"
+merged_into: "kochi-matsuge-pama-mochi-hindo-nagamochi"
 category: "eyelash"
 salon: "Raffine"
 date: "2026-06-28"

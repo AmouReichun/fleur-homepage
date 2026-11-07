@@ -1,6 +1,7 @@
 ---
 title: "高知市でまつげエクステを選ぶなら、自然で上品な仕上がりが叶うサロンの見極め方｜高知県高知市Raffine"
 slug: "kochi-matsuge-ekste-shizenashiage-erabikata"
+merged_into: "kochi-matsuge-eyelash-extension-supppin-meryoku-raffine"
 category: "eyelash"
 salon: "Raffine"
 date: "2026-09-20"

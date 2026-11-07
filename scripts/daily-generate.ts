@@ -8,6 +8,7 @@ import { fetchSalonPosts, imageUrlToBase64, type SalonKey } from "../lib/blog/in
 import { generateArticleFromPost } from "../lib/blog/article-core";
 import { getUsedThumbnails } from "../lib/blog/thumbnail-dedup";
 import { getRemainingQuota, addToMonthlyCount, getMonthlyCount } from "../lib/blog/monthly-limit";
+import { checkTopicGate } from "../lib/blog/topic-gate";
 
 const SALONS: SalonKey[] = ["fleurami", "riv", "raffine"];
 
@@ -17,7 +18,42 @@ const SALON_ID_ENV: Record<SalonKey, string> = {
   raffine:  "IG_BUSINESS_ID_RAFFINE",
 };
 
-type GenerateConfig = { enabled: boolean; hourJST: number; perSalon: number; monthlyLimit: number };
+type GenerateConfig = {
+  enabled: boolean; hourJST: number; perSalon: number; monthlyLimit: number;
+  // サロンごとの最短間隔（日）。例 { "raffine": 7 } ＝ Raffineは週1本まで（2026-11-07 同じテーマの量産を防ぐため）
+  minDaysBetween?: Partial<Record<SalonKey, number>>;
+};
+
+const SALON_NAME: Record<SalonKey, string> = { fleurami: "fleurami", riv: "Riv. by fleurami", raffine: "Raffine" };
+
+/** そのサロンの全記事（統合済み・下書き含む）のタイトルと最新日付 */
+function salonHistory(salonName: string): { titles: string[]; latest: string } {
+  const titles: string[] = [];
+  let latest = "";
+  for (const cat of ["hair", "eyelash"]) {
+    const dir = path.join(process.cwd(), "content", cat);
+    if (!fs.existsSync(dir)) continue;
+    for (const f of fs.readdirSync(dir)) {
+      if (!f.endsWith(".md")) continue;
+      const raw = fs.readFileSync(path.join(dir, f), "utf-8");
+      const salon = raw.match(/^salon:\s*["']?(.+?)["']?\s*$/m)?.[1];
+      if (salon !== salonName) continue;
+      const t = raw.match(/^title:\s*["']?(.+?)["']?\s*$/m)?.[1];
+      if (t) titles.push(t);
+      const d = raw.match(/^date:\s*["']?([0-9-]{10})/m)?.[1] ?? "";
+      if (d > latest) latest = d;
+    }
+  }
+  return { titles, latest };
+}
+
+/** テーマ重複で見送った投稿を ig-ignored.json に足す（毎日同じ投稿で止まらないように） */
+function addIgnoredId(id: string) {
+  const p = path.join(process.cwd(), "data", "ig-ignored.json");
+  let arr: string[] = [];
+  try { arr = JSON.parse(fs.readFileSync(p, "utf-8")); } catch {}
+  if (!arr.includes(id)) { arr.push(id); fs.writeFileSync(p, JSON.stringify(arr, null, 2) + "\n"); }
+}
 
 function loadConfig(): GenerateConfig {
   const defaults: GenerateConfig = { enabled: true, hourJST: 10, perSalon: 1, monthlyLimit: 200 };
@@ -123,6 +159,17 @@ async function main() {
       continue;
     }
 
+    // サロンごとの最短間隔（Raffineは週1本まで など）
+    const history = salonHistory(SALON_NAME[salonKey]);
+    const minDays = config.minDaysBetween?.[salonKey] ?? 0;
+    if (minDays > 0 && history.latest) {
+      const days = (Date.now() - new Date(history.latest + "T00:00:00+09:00").getTime()) / 86400000;
+      if (days < minDays) {
+        console.log(`  最短間隔 ${minDays}日 未満（最新 ${history.latest}）→ スキップ`);
+        continue;
+      }
+    }
+
     // まだ記事化されていない投稿を設定件数選ぶ（残枠も考慮）
     const remainingNow = getRemainingQuota(config.monthlyLimit) - generated;
     if (remainingNow <= 0) {
@@ -158,6 +205,17 @@ async function main() {
         apiErrors++;
         continue;
       }
+
+      // テーマ重複ガード: 親記事があるテーマ・ほぼ同じタイトルは保存しない（親記事の更新で対応）
+      const genTitle = result.markdown.match(/^title:\s*["']?(.+?)["']?\s*$/m)?.[1] ?? "";
+      const gate = checkTopicGate(SALON_NAME[salonKey], genTitle, history.titles);
+      if (!gate.ok) {
+        console.log(`  ⏭ テーマ重複のため保存しない: ${genTitle}\n     理由: ${gate.reason}`);
+        addIgnoredId(post.id);
+        skipIds.add(post.id);
+        continue;
+      }
+      history.titles.push(genTitle);
 
       // サムネ重複ガード: 既存記事と同じサムネなら保存せずスキップ
       const thumbMatch = result.markdown.match(/^thumbnail:\s*["']?([^"'\n]+)["']?\s*$/m);

@@ -1,6 +1,7 @@
 ---
 title: "まつ毛パーマ×眉毛スタイリングを同時にすると、どんな目元になるの？"
 slug: "matsuge-paama-mayu-styling-mejiri"
+merged_into: "kochi-lashperm-eyebrow-wax-set-raffine"
 category: "eyelash"
 salon: "Raffine"
 date: "2026-06-18"

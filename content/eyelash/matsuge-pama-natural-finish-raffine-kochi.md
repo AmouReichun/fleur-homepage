@@ -1,6 +1,7 @@
 ---
 title: "まつ毛パーマで毎日のメイクがラクになるって本当？高知のサロンで見る自然仕上がりの実例"
 slug: "matsuge-pama-natural-finish-raffine-kochi"
+merged_into: "kochi-matsuge-perm-first-time-20s-impression"
 category: "eyelash"
 salon: "Raffine"
 date: "2026-06-11"

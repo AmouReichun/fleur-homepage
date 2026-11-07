@@ -1,6 +1,7 @@
 ---
 title: "高知市でまつげパーマと眉毛スタイリングを同時にすると目元印象がどう変わるのか｜高知県高知市Raffineの施術事例で検証"
 slug: "kochi-matsuge-perm-eyebrow-styling-combination"
+merged_into: "kochi-lashperm-eyebrow-wax-set-raffine"
 category: "eyelash"
 salon: "Raffine"
 date: "2026-09-18"

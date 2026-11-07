@@ -1,0 +1,55 @@
+name: Merge Rewrite Parents (manual)
+
+# 統合した記事（merged_into）の親記事を、子記事の要点を取り込んだ決定版に書き直す。
+# 手動実行のみ。parents を空にすると子記事を持つ親すべてが対象。
+on:
+  workflow_dispatch:
+    inputs:
+      parents:
+        description: "対象の親slug（スペース区切り。空なら全部）"
+        required: false
+        default: ""
+
+concurrency:
+  group: content-push
+  cancel-in-progress: false
+
+jobs:
+  rewrite:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v5
+        with:
+          node-version: '22'
+          cache: 'npm'
+      - run: npm ci
+      - name: Rewrite parents
+        run: npx tsx scripts/merge-rewrite-parents.ts ${{ github.event.inputs.parents }}
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      - name: Commit and push
+        id: commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add content/
+          if git diff --staged --quiet; then echo "committed=false" >> "$GITHUB_OUTPUT"; exit 0; fi
+          git commit -m "auto: 統合した親記事を書き直し $(date +'%Y-%m-%d')"
+          for i in 1 2 3 4 5; do
+            git pull --rebase --autostash origin main
+            if git push; then echo "committed=true" >> "$GITHUB_OUTPUT"; exit 0; fi
+            sleep $((RANDOM % 5 + 3))
+          done
+          exit 1
+      - name: Deploy to Vercel (Production)
+        if: steps.commit.outputs.committed == 'true'
+        run: npx vercel --prod --yes --token ${{ secrets.VERCEL_TOKEN }}
+        env:
+          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}

@@ -1,6 +1,7 @@
 ---
 title: "自然なまつげエクステって実際どんな仕上がり？高知市Raffineの施術例で解説"
 slug: "natural-matsuge-extension-kochi-raffine"
+merged_into: "kochi-matsuge-eyelash-extension-supppin-meryoku-raffine"
 category: "eyelash"
 salon: "Raffine"
 date: "2026-06-23"

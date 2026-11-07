@@ -1,6 +1,7 @@
 ---
 title: "高知市でまつげパーマ｜すっぴんでも印象的な目元へ、ナチュラルカールが叶う理由"
 slug: "kochi-matsuge-paama-natural-curl"
+merged_into: "kochi-matsuge-pama-me-jikara-shiagarichai"
 category: "eyelash"
 salon: "Raffine"
 date: "2026-06-27"

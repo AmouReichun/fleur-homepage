@@ -2,5 +2,8 @@
   "enabled": true,
   "hourJST": 17,
   "perSalon": 1,
-  "monthlyLimit": 60
+  "monthlyLimit": 60,
+  "minDaysBetween": {
+    "raffine": 7
+  }
 }

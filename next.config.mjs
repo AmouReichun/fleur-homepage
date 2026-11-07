@@ -1,3 +1,22 @@
+import fs from "node:fs";
+import path from "node:path";
+
+// 統合した記事（frontmatter に merged_into: "親slug" がある記事）→ 親記事へ恒久リダイレクト。
+// ファイルは残す（instagram_id の再生成防止・元に戻せるように）。2026-11-07 Raffine記事の整理で導入
+function mergedPostRedirects() {
+  const out = [];
+  for (const cat of ["hair", "eyelash"]) {
+    const dir = path.join(process.cwd(), "content", cat);
+    if (!fs.existsSync(dir)) continue;
+    for (const f of fs.readdirSync(dir)) {
+      if (!f.endsWith(".md")) continue;
+      const m = fs.readFileSync(path.join(dir, f), "utf8").match(/^merged_into:\s*["']?([a-z0-9-]+)["']?\s*$/m);
+      if (m) out.push({ source: `/blog/${cat}/${f.replace(/\.md$/, "")}`, destination: `/blog/${cat}/${m[1]}`, permanent: true });
+    }
+  }
+  return out;
+}
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   experimental: {
@@ -29,6 +48,7 @@ const nextConfig = {
   },
   async redirects() {
     return [
+      ...mergedPostRedirects(),
       // 同じ内容の記事（11/7 社長判断で1本に統合）→ 10/19の記事へ
       { source: "/blog/hair/kochi-biyoshitsu-erabikata-5pointo", destination: "/blog/hair/kochi-biyoushitsu-erabikata-5points", permanent: true },
       { source: "/blog/hair/kochi-biyoshitsu-erabikata-5points", destination: "/blog/hair/kochi-biyoushitsu-erabikata-5points", permanent: true },

@@ -1,6 +1,7 @@
 ---
 title: "ナチュラルなのに目力が出るまつ毛パーマ、仕上がりの差はどこで生まれる？｜高知県高知市Raffineの施術事例で解説"
 slug: "kochi-matsuge-pama-natural-mejikara-jireikai"
+merged_into: "kochi-matsuge-pama-me-jikara-shiagarichai"
 category: "eyelash"
 salon: "Raffine"
 date: "2026-08-08"
@@ -126,4 +127,4 @@ Raffineはカウンセリングと仕上がりの設計に時間をかける分�
 
 また、まつ毛パーマと合わせて眉毛WAXで眉の形も整えると、目元全体のバランスが取りやすくなります。目元を総合的に整えたい方は、セット施術もご検討ください。
 
-Raffineははりまや橋から徒歩約3分、高知市はりまや町のTNはりまやビル3Fにある女性専用の半個室サロンです。ご予約はホットペッパービューティーからお気軽にどうぞ。
+Raffineははりまや橋から徒歩約3分、高知市はりまや町のTNはりまやビル3Fにある半個室サロンです。ご予約はホットペッパービューティーからお気軽にどうぞ。

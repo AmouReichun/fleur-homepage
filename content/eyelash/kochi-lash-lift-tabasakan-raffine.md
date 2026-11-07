@@ -1,6 +1,7 @@
 ---
 title: "高知市でラッシュリフト｜毎朝のまつ毛ケアが楽になる似合わせ束感デザイン"
 slug: "kochi-lash-lift-tabasakan-raffine"
+merged_into: "kochi-matsuge-pama-me-jikara-shiagarichai"
 category: "eyelash"
 salon: "Raffine"
 date: "2026-06-20"

@@ -1,6 +1,7 @@
 ---
 title: "まつげエクステで目元の印象が変わるって本当？高知市Raffineの仕上がりを見てみて"
 slug: "matsuge-eyelash-extension-kochi-raffine"
+merged_into: "kochi-matsuge-eyelash-extension-supppin-meryoku-raffine"
 category: "eyelash"
 salon: "Raffine"
 date: "2026-06-21"
