@@ -215,7 +215,7 @@ export default function LpView({ lp, salons, preview = false }: { lp: LpContent;
                     <li key={r.id} className="rounded-[16px] bg-white border border-[#ECE5DC] p-6">
                       <p className="text-[14px] leading-[1.95] text-[#3A3430] whitespace-pre-line">{r.body}</p>
                       <p className="mt-4 text-[12px] text-[#8E857D]">
-                        {[r.attribute, r.menu, r.salon === "riv" ? "Riv. by fleurami" : r.salon === "fleurami" ? "fleurami" : ""].filter(Boolean).join("｜")}
+                        {[r.attribute, r.menu, r.salon === "riv" ? "Riv. by fleur ami" : r.salon === "fleurami" ? "fleur ami" : ""].filter(Boolean).join("｜")}
                       </p>
                       {r.source && <p className="mt-1 text-[11px] text-[#A39A92]">出典：{r.source}</p>}
                     </li>

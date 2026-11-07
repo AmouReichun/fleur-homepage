@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   title: TITLE,
   description: DESC,
   alternates: { canonical: `${BASE}/guide/kochi-salon-guide` },
-  openGraph: { title: TITLE, description: DESC, url: `${BASE}/guide/kochi-salon-guide` },
+  openGraph: { title: TITLE, description: DESC, url: `${BASE}/guide/kochi-salon-guide`, images: [`${BASE}/images/admin/hero-1782190629178.jpg`] },
 };
 
 const crumbs = [
@@ -210,7 +210,7 @@ export default function KochiSalonGuidePage() {
                   area: "高知市南川添",
                   rating: "Google 4.8（83件）",
                   type: "美容室",
-                  note: "白髪ぼかし・髪質改善・縮毛矯正を得意とする大人女性向けサロン。駐車場5台。",
+                  note: "艶カラー・ミルボンの髪質改善・白髪ぼかし・縮毛矯正を得意とする大人女性向けサロン。駐車場5台。",
                 },
                 {
                   href: "/salon/fleurami",
@@ -218,7 +218,7 @@ export default function KochiSalonGuidePage() {
                   area: "香南市野市町西野",
                   rating: "Google 4.5（81件）",
                   type: "美容室",
-                  note: "縮毛矯正・デザインカラー・髪質改善が得意。駐車場7台。のいち駅から車4分。",
+                  note: "艶カラー・ミルボンの髪質改善・白髪ぼかし・縮毛矯正が得意。駐車場7台。のいち駅から車4分。",
                 },
                 {
                   href: "/salon/raffine",

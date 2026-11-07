@@ -3,6 +3,7 @@
 import { useState, useMemo } from "react";
 import Link from "next/link";
 import type { PostMeta } from "@/lib/blog/posts";
+import { salonDisplayName } from "@/lib/salon-display";
 
 type Props = { posts: PostMeta[]; initialQuery?: string };
 
@@ -68,7 +69,7 @@ export default function SearchClient({ posts, initialQuery = "" }: Props) {
                     >
                       {p.category === "eyelash" ? "アイラッシュ" : "ヘア"}
                     </span>
-                    <span className="text-[11px] text-group-muted">{p.salon}</span>
+                    <span className="text-[11px] text-group-muted">{salonDisplayName(p.salon)}</span>
                   </div>
                   <p className="text-sm font-medium text-group-text group-hover:text-hair-accent transition-colors leading-snug">
                     {p.title}

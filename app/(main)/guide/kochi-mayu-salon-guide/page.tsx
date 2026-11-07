@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   title: TITLE,
   description: DESC,
   alternates: { canonical: `${BASE}/guide/kochi-mayu-salon-guide` },
-  openGraph: { title: TITLE, description: DESC, url: `${BASE}/guide/kochi-mayu-salon-guide` },
+  openGraph: { title: TITLE, description: DESC, url: `${BASE}/guide/kochi-mayu-salon-guide`, images: [`${BASE}/images/admin/salon-raffine-1782206000346.JPG`] },
 };
 
 const crumbs = [
@@ -47,7 +47,7 @@ const faqSchema = {
       name: "高知市で眉毛WAXができるサロンはありますか？",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Raffine（ラフィーヌ、高知市帯屋町2-1-40 TEL: 088-823-6622）が眉毛WAX・アイブロウデザインに対応しています。料金は3,300円〜（税込）、施術時間は30〜40分が目安です。まつ毛パーマ（ラッシュリフト）とのセット施術も可能です。",
+        text: "Raffine（ラフィーネ、高知市はりまや町1-4-8 TNはりまやビル3F TEL: 090-7120-5566）が眉毛WAX・アイブロウデザインに対応しています。料金は3,300円〜（税込）、施術時間は30〜40分が目安です。まつ毛パーマ（ラッシュリフト）とのセット施術も可能です。",
       },
     },
     {
@@ -87,7 +87,7 @@ const faqSchema = {
       name: "眉毛の形が分からない・どんな形にすればいいか相談できますか？",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "はい、カウンセリングで骨格・目の形・なりたいイメージをヒアリングし、お顔に合った眉毛の形をご提案します。「初めてで眉毛の形が分からない」という方も安心してご来店ください。Raffine（TEL: 088-823-6622）では初めてのお客様も多く担当しています。",
+        text: "はい、カウンセリングで骨格・目の形・なりたいイメージをヒアリングし、お顔に合った眉毛の形をご提案します。「初めてで眉毛の形が分からない」という方も安心してご来店ください。Raffine（TEL: 090-7120-5566）では初めてのお客様も多く担当しています。",
       },
     },
     {
@@ -95,7 +95,7 @@ const faqSchema = {
       name: "高知市のはりまや橋からRaffineへのアクセスは？",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Raffineは高知市帯屋町2-1-40に位置し、はりまや橋から徒歩約5分です。帯屋町商店街エリアの中心部にあります。お車の方は近隣の有料駐車場をご利用ください。TEL: 088-823-6622。",
+        text: "Raffineは高知市はりまや町1-4-8 TNはりまやビル3Fに位置し、はりまや橋から徒歩約3分です。お車の方は近辺のコインパーキング（徒歩1〜3分）をご利用ください。TEL: 090-7120-5566。",
       },
     },
   ],
@@ -150,7 +150,7 @@ export default function KochiMayuSalonGuidePage() {
               眉毛は顔の印象を大きく左右するパーツです。高知市内では眉毛専門サロンの数が限られており、まつ毛パーマと眉毛WAXを同時に施術できるサロンはさらに少ないのが現状です。
             </p>
             <p className="text-sm sm:text-base text-site-text leading-loose mt-3">
-              Raffine（ラフィーヌ、高知市帯屋町2-1-40）はまつ毛パーマ・まつ毛エクステ・眉毛WAXに対応するアイラッシュ専門サロンです。目元トータルのご相談をお受けしています。
+              Raffine（ラフィーネ、高知市はりまや町1-4-8 TNはりまやビル3F）はまつ毛パーマ・まつ毛エクステ・眉毛WAXに対応するアイラッシュ専門サロンです。目元トータルのご相談をお受けしています。
             </p>
           </section>
 
@@ -259,11 +259,11 @@ export default function KochiMayuSalonGuidePage() {
           <section className="bg-site-light border border-site-greige p-6">
             <h2 className="font-serif text-lg font-semibold text-site-text mb-3">ご予約・アクセス</h2>
             <div className="text-sm text-site-muted space-y-1">
-              <p className="font-medium text-site-text">Raffine（ラフィーヌ）</p>
-              <p>高知県高知市帯屋町2-1-40</p>
-              <p>TEL: 088-823-6622</p>
-              <p>営業時間: 10:00〜19:00（火曜定休）</p>
-              <p className="mt-2 text-xs">はりまや橋から徒歩約5分・帯屋町商店街エリア</p>
+              <p className="font-medium text-site-text">Raffine（ラフィーネ）</p>
+              <p>〒780-0822 高知県高知市はりまや町1-4-8 TNはりまやビル3F</p>
+              <p>TEL: 090-7120-5566</p>
+              <p>営業時間: 9:30〜18:30（不定休）</p>
+              <p className="mt-2 text-xs">はりまや橋から徒歩約3分・近辺にコインパーキングあり</p>
             </div>
             <div className="mt-4 flex flex-wrap gap-3">
               <Link

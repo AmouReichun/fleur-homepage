@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import type { StaffMember } from "@/lib/content";
+import { salonDisplayName } from "@/lib/salon-display";
 
 type Category = "hair" | "eyelash";
 type HairSalon = "fleurami" | "Riv. by fleurami";
@@ -18,7 +19,7 @@ function StaffCard({ member }: { member: StaffMember }) {
         {member.imageSrc ? (
           <Image
             src={member.imageSrc}
-            alt={`${member.name}（${member.salon}・${member.role}）`}
+            alt={`${member.name}（${salonDisplayName(member.salon)}・${member.role}）`}
             fill
             className="object-cover group-hover:scale-[1.03] transition-transform duration-500"
             sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
@@ -32,7 +33,7 @@ function StaffCard({ member }: { member: StaffMember }) {
       <div className="px-1">
         <div className="flex items-center gap-2 mb-2">
           <span className="text-[10px] tracking-[0.25em] text-site-accent uppercase">
-            {member.salon}
+            {salonDisplayName(member.salon)}
           </span>
           <span className="w-px h-3 bg-site-greige" />
           <span className="text-[10px] text-site-muted tracking-wider">{member.role}</span>
@@ -169,7 +170,7 @@ export default function StaffTabs({ staff }: { staff: StaffMember[] }) {
                     : "text-site-muted hover:text-site-text"
                 }`}
               >
-                {s}
+                {salonDisplayName(s)}
                 <span className="ml-1 text-[9px] text-site-muted/60">
                   ({staff.filter((m) => m.salon === s).length})
                 </span>
@@ -186,7 +187,7 @@ export default function StaffTabs({ staff }: { staff: StaffMember[] }) {
       <div className="flex items-center gap-3 mt-10 mb-10">
         <div className="w-6 h-px bg-site-accent" />
         <p className="text-[10px] tracking-[0.35em] text-site-accent uppercase">
-          {category === "hair" ? `${hairSalon} スタッフ` : "Raffine スタッフ"}
+          {category === "hair" ? `${salonDisplayName(hairSalon)} スタッフ` : "Raffine スタッフ"}
         </p>
         <span className="text-[10px] text-site-muted">— {filtered.length}名</span>
       </div>

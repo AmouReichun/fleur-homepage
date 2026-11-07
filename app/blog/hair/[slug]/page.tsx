@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import { seoTitle } from "@/lib/blog/seo-title";
+import { salonDisplayName } from "@/lib/salon-display";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
@@ -56,9 +57,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title,
       description: post.excerpt,
       type: "article",
+      url: `${SITE_URL}/blog/hair/${post.slug}`,
       publishedTime: post.date,
       images: [
-        `${SITE_URL}/api/og?title=${encodeURIComponent(post.title)}&salon=${encodeURIComponent(post.salon)}&category=hair`,
+        `${SITE_URL}/api/og?title=${encodeURIComponent(post.title)}&salon=${encodeURIComponent(salonDisplayName(post.salon))}&category=hair`,
       ],
     },
   };
@@ -90,7 +92,7 @@ export default async function HairArticlePage({ params }: Props) {
   const artSchema = articleSchema(post, params.slug, {
     authorId: staffUrl,
     salonId: `${SITE_BASE}/salon/${salonKey}`,
-    salonName: post.salon,
+    salonName: salonDisplayName(post.salon),
     salonType: "HairSalon",
     serviceName: primaryServiceName,
   });
@@ -107,7 +109,7 @@ export default async function HairArticlePage({ params }: Props) {
   // 担当スタッフページがあればそこへ、なければ著者アーカイブへ
   const authorLink = staffSlug ? `/staff/${staffSlug}` : `/blog/author/${encodeURIComponent(post.author)}`;
   const authorSc = post.author
-    ? personSchema(post.author, post.author_role || "スタイリスト", post.salon, "HairSalon", authorAddress, staffSlug ? `/staff/${staffSlug}` : `/blog/author/${encodeURIComponent(post.author)}`, undefined, undefined, authorHistory)
+    ? personSchema(post.author, post.author_role || "スタイリスト", salonDisplayName(post.salon), "HairSalon", authorAddress, staffSlug ? `/staff/${staffSlug}` : `/blog/author/${encodeURIComponent(post.author)}`, undefined, undefined, authorHistory)
     : null;
   const howTo = post.steps?.length
     ? howToSchema(post.title, post.excerpt, post.steps, `/blog/hair/${params.slug}`)
@@ -146,7 +148,7 @@ export default async function HairArticlePage({ params }: Props) {
           {/* ブランドラベル */}
           <div className="flex items-center gap-2 mb-4 flex-wrap">
             <span className="text-xs px-3 py-1 border border-hair-accent-warm/50 text-hair-accent-warm font-cormorant tracking-widest bg-white/60">
-              {post.salon}
+              {salonDisplayName(post.salon)}
             </span>
             {post.tags.slice(0, 3).map((tag) => (
               <Link
@@ -221,7 +223,7 @@ export default async function HairArticlePage({ params }: Props) {
             >
               <div>
                 <p className="text-[10px] tracking-[0.2em] text-hair-accent-warm uppercase font-cormorant mb-0.5">
-                  担当スタイリスト — {post.salon}
+                  担当スタイリスト — {salonDisplayName(post.salon)}
                 </p>
                 <p className="text-sm font-mincho text-hair-text font-medium">
                   {post.author}<span className="text-hair-muted font-normal">／{post.author_role || "スタイリスト"}</span>

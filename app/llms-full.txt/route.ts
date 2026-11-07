@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { getAllPostsMeta } from "@/lib/blog/posts";
+import { salonDisplayName } from "@/lib/salon-display";
 
 export const dynamic = "force-dynamic";
 
@@ -45,7 +46,7 @@ export async function GET() {
     lines.push(`## ${p.title}`);
     lines.push(`- URL: ${SITE_URL}/blog/${p.category}/${p.slug}`);
     lines.push(`- カテゴリ: ${p.category === "hair" ? "ヘア" : "アイラッシュ"}`);
-    lines.push(`- サロン: ${p.salon}（${p.category === "hair" ? "高知県" : "高知県高知市"}）`);
+    lines.push(`- サロン: ${salonDisplayName(p.salon)}（${p.category === "hair" ? "高知県" : "高知県高知市"}）`);
     if (p.author) lines.push(`- 著者: ${p.author}（${p.author_role || "スタイリスト"}）`);
     lines.push(`- 公開日: ${p.date}`);
     if (p.tags.length > 0) lines.push(`- タグ: ${p.tags.join("・")}`);

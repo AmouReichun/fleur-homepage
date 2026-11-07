@@ -13,7 +13,7 @@ export function generateMetadata({
   const base: Metadata = {
     title: "ヘア症例・コラム",
     description:
-      "香南市「fleurami」・高知市「Riv. by fleurami」のスタイリストによるヘアカラー・髪質改善・白髪ぼかし・縮毛矯正の施術例とコラム。あなたのお悩み・スタイル選びの参考にどうぞ。",
+      "香南市「fleur ami」・高知市「Riv. by fleur ami」のスタイリストによるヘアカラー・髪質改善・白髪ぼかし・縮毛矯正の施術例とコラム。あなたのお悩み・スタイル選びの参考にどうぞ。",
     alternates: { canonical: "/blog/hair" },
   };
   if (searchParams.tag) base.robots = { index: false, follow: true };
@@ -51,7 +51,7 @@ export default function HairPage({
   const col = collectionPageSchema(
     "ヘア症例・コラム",
     "/blog/hair",
-    "fleurami（香南市）・Riv.（高知市）のスタイリストによるヘアカラー・髪質改善・白髪ぼかし・縮毛矯正の症例とコラム",
+    "fleur ami（香南市）・Riv.（高知市）のスタイリストによるヘアカラー・髪質改善・白髪ぼかし・縮毛矯正の症例とコラム",
     posts,
   );
   const crumbItems = [
@@ -66,7 +66,7 @@ export default function HairPage({
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(crumb) }} />
       <div className="min-h-screen" style={{ background: "#F8F2EA" }}>
       <Breadcrumbs theme="hair" items={crumbItems} />
-      {/* Hero — fleurami / Riv. ヘッダー */}
+      {/* Hero — fleur ami / Riv. ヘッダー */}
       <div className="relative overflow-hidden py-14 px-4 border-b border-hair-border" style={woodBg}>
         {/* 装飾：背景の薄い透かし文字 */}
         <span
@@ -82,7 +82,7 @@ export default function HairPage({
           <div className="flex items-center gap-2 mb-5">
             <span className="w-1 h-1 rounded-full bg-hair-accent-warm" />
             <span className="text-xs tracking-[0.2em] text-hair-accent-warm font-cormorant">
-              fleurami &amp; Riv. — Hair Salon
+              fleur ami &amp; Riv. — Hair Salon
             </span>
             <span className="w-1 h-1 rounded-full bg-hair-accent-warm" />
           </div>
@@ -92,7 +92,7 @@ export default function HairPage({
           </h1>
 
           <p className="text-sm text-hair-muted leading-relaxed max-w-md">
-            fleurami（香南市）と Riv.（高知市）のスタイリストが、
+            fleur ami（香南市）と Riv.（高知市）のスタイリストが、
             <br className="hidden sm:block" />
             カラー・髪質改善・白髪ぼかしを症例とともに解説します。
           </p>

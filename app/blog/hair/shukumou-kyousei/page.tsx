@@ -5,9 +5,9 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import ArticleCard from "@/components/ArticleCard";
 
 export const metadata: Metadata = {
-  title: "縮毛矯正 高知｜くせ毛・うねり改善ならfleurami・Riv. by fleurami",
+  title: "縮毛矯正 高知｜くせ毛・うねり改善ならfleur ami・Riv. by fleur ami",
   description:
-    "高知市・香南市で縮毛矯正が受けられる美容室。くせ毛・チリチリ・うねりを半永久的にストレートに。施術時間・持ち・髪質改善との違いも解説。香南市のfleurami・高知市のRiv. by fleuramiが対応。",
+    "高知市・香南市で縮毛矯正が受けられる美容室。くせ毛・チリチリ・うねりを半永久的にストレートに。施術時間・持ち・髪質改善との違いも解説。香南市のfleur ami・高知市のRiv. by fleur amiが対応。",
   alternates: { canonical: "/blog/hair/shukumou-kyousei" },
   keywords: [
     "縮毛矯正 高知",
@@ -24,11 +24,11 @@ export const metadata: Metadata = {
 const faq = [
   {
     q: "高知市で縮毛矯正が得意な美容室は？",
-    a: "高知市南川添のRiv. by fleurami（TEL 088-884-5566）が縮毛矯正に対応しています。くせ毛・チリチリ・うねりが強い方にも、ダメージを最小限に抑えながらまっすぐな仕上がりをご提供します。",
+    a: "高知市南川添のRiv. by fleur ami（TEL 088-884-5566）が縮毛矯正に対応しています。くせ毛・チリチリ・うねりが強い方にも、ダメージを最小限に抑えながらまっすぐな仕上がりをご提供します。",
   },
   {
     q: "香南市・野市で縮毛矯正ができる美容院は？",
-    a: "香南市野市町のfleurami（TEL 0887-56-5566）が縮毛矯正を提供しています。野市駅から車4分のアクセスで駐車場7台完備。初回カウンセリングで髪の状態を確認してから施術します。",
+    a: "香南市野市町のfleur ami（TEL 0887-56-5566）が縮毛矯正を提供しています。野市駅から車4分のアクセスで駐車場7台完備。初回カウンセリングで髪の状態を確認してから施術します。",
   },
   {
     q: "縮毛矯正の施術時間はどのくらいかかりますか？",
@@ -51,7 +51,7 @@ const faq = [
 const pageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "縮毛矯正 高知｜fleurami・Riv. by fleurami",
+  name: "縮毛矯正 高知｜fleur ami・Riv. by fleur ami",
   description: "高知市・香南市で縮毛矯正が受けられる美容室。くせ毛・うねり改善。",
   url: "https://fleur-group.jp/blog/hair/shukumou-kyousei",
   breadcrumb: {
@@ -100,7 +100,7 @@ export default function ShukumouKyouseiPage() {
           <div className="flex items-center gap-2 mb-5">
             <span className="w-1 h-1 rounded-full" style={{ background: accent }} />
             <span className="text-xs tracking-[0.2em] font-cormorant" style={{ color: accent }}>
-              fleurami &amp; Riv. by fleurami — Curl Correction
+              fleur ami &amp; Riv. by fleur ami — Curl Correction
             </span>
             <span className="w-1 h-1 rounded-full" style={{ background: accent }} />
           </div>
@@ -110,7 +110,7 @@ export default function ShukumouKyouseiPage() {
           </h1>
           <p className="text-sm text-hair-muted leading-relaxed max-w-lg">
             くせ毛・うねり・チリチリにお悩みの方へ。<br className="hidden sm:block" />
-            fleurami（香南市）とRiv. by fleurami（高知市）が<br className="hidden sm:block" />
+            fleur ami（香南市）とRiv. by fleur ami（高知市）が<br className="hidden sm:block" />
             毎日扱いやすいサラサラのストレートヘアへ導きます。
           </p>
 
@@ -175,7 +175,7 @@ export default function ShukumouKyouseiPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
             <div className="bg-white/70 border border-hair-border p-6" style={{ borderRadius: "4px" }}>
               <p className="text-xs tracking-[0.2em] font-cormorant mb-1 uppercase" style={{ color: accent }}>香南市 / 野市</p>
-              <h3 className="font-mincho text-lg text-hair-text mb-3">fleurami</h3>
+              <h3 className="font-mincho text-lg text-hair-text mb-3">fleur ami</h3>
               <ul className="space-y-1.5 text-xs text-hair-muted mb-5">
                 <li>📍 高知県香南市野市町西野230</li>
                 <li>📞 0887-56-5566</li>
@@ -195,7 +195,7 @@ export default function ShukumouKyouseiPage() {
 
             <div className="bg-white/70 border border-hair-border p-6" style={{ borderRadius: "4px" }}>
               <p className="text-xs tracking-[0.2em] font-cormorant mb-1 uppercase" style={{ color: accent }}>高知市</p>
-              <h3 className="font-mincho text-lg text-hair-text mb-3">Riv. by fleurami</h3>
+              <h3 className="font-mincho text-lg text-hair-text mb-3">Riv. by fleur ami</h3>
               <ul className="space-y-1.5 text-xs text-hair-muted mb-5">
                 <li>📍 高知県高知市南川添9-21 2F</li>
                 <li>📞 088-884-5566</li>

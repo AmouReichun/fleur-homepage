@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   title: TITLE,
   description: DESC,
   alternates: { canonical: `${BASE}/guide/kochi-kamishitsu-kaizen-guide` },
-  openGraph: { title: TITLE, description: DESC, url: `${BASE}/guide/kochi-kamishitsu-kaizen-guide` },
+  openGraph: { title: TITLE, description: DESC, url: `${BASE}/guide/kochi-kamishitsu-kaizen-guide`, images: [`${BASE}/images/admin/hero-1782190629178.jpg`] },
 };
 
 const crumbs = [

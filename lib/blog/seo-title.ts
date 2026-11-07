@@ -9,7 +9,7 @@ import { salonKeyOf } from "./internal-links";
  */
 const SUFFIX: Record<ReturnType<typeof salonKeyOf>, { short: string; names: RegExp }> = {
   riv: { short: "高知市の美容室Riv.", names: /Riv\.?|リヴ|リブ/ },
-  fleurami: { short: "香南市の美容室fleurami", names: /fleur ?ami|フルールアミー/i },
+  fleurami: { short: "香南市の美容室fleur ami", names: /fleur ?ami|フルールアミー/i },
   raffine: { short: "高知市のまつげ眉毛サロンRaffine", names: /Raffine|ラフィーネ/ },
 };
 

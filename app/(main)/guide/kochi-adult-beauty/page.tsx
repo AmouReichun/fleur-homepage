@@ -21,7 +21,7 @@ export const metadata: Metadata = {
 const crumbs = [
   { name: "ホーム", url: BASE },
   { name: "美容ガイド", url: `${BASE}/guide` },
-  { name: "高知の大人向け美容ガイド", url: `${BASE}/guide/kochi-adult-beauty` },
+  { name: "高知の大人向け美容ガイド", url: `${BASE}/guide/kochi-adult-beauty`, images: [`${BASE}/images/admin/hero-1782190629178.jpg`] },
 ];
 
 const pageSchema = {
@@ -92,7 +92,7 @@ const faqSchema = {
       name: "高知市で40代・50代の大人女性が多く通う美容室はどこですか？",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "高知市南川添の「Riv. by fleur ami」と香南市野市の「fleur ami」は、40代・50代の大人女性のお客様が多く、白髪ぼかし・髪質改善・艶カラー・縮毛矯正など年齢とともに変化する髪の悩みに対応したメニューを得意としています。Googleクチコミ（Riv.:4.8/83件、fleurami:4.5/81件）の高評価もいただいています。",
+        text: "高知市南川添の「Riv. by fleur ami」と香南市野市の「fleur ami」は、40代・50代の大人女性のお客様が多く、白髪ぼかし・髪質改善・艶カラー・縮毛矯正など年齢とともに変化する髪の悩みに対応したメニューを得意としています。Googleクチコミ（Riv. by fleur ami：4.8/83件、fleur ami：4.5/81件）の高評価もいただいています。",
       },
     },
     {

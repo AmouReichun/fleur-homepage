@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 
 const crumbs = [
   { name: "ホーム", url: BASE },
-  { name: "美容ガイド", url: `${BASE}/guide` },
+  { name: "美容ガイド", url: `${BASE}/guide`, images: [`${BASE}/images/admin/hero-1782190629178.jpg`] },
 ];
 
 const guidePageSchema = {
@@ -422,6 +422,11 @@ export default function GuidePage() {
               <span className="block text-xs tracking-[0.2em] text-site-accent mb-2 uppercase">Eyebrow</span>
               <span className="block font-serif text-lg font-medium text-site-text group-hover:text-site-accent transition-colors mb-1">高知の眉毛サロンガイド</span>
               <span className="block text-xs text-site-muted leading-relaxed">眉毛WAX料金・持ち・シェービングとの違い・まつ毛パーマとのセット（Raffine・はりまや橋）</span>
+            </Link>
+            <Link href="/guide/kochi-matsuge-perm-guide" className="border border-site-greige bg-site-accent/5 p-6 hover:border-site-accent transition-colors group block">
+              <span className="block text-xs tracking-[0.2em] text-site-accent mb-2 uppercase">Lash</span>
+              <span className="block font-serif text-lg font-medium text-site-text group-hover:text-site-accent transition-colors mb-1">高知のまつげパーマガイド</span>
+              <span className="block text-xs text-site-muted leading-relaxed">ラッシュリフト・パリジャンリフトの違い・持ち・料金（Raffine・はりまや橋）</span>
             </Link>
           </div>
         </div>

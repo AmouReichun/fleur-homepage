@@ -5,9 +5,9 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import ArticleCard from "@/components/ArticleCard";
 
 export const metadata: Metadata = {
-  title: "白髪ぼかし・グレイカラー 高知｜fleurami・Riv. by fleurami",
+  title: "白髪ぼかし・グレイカラー 高知｜fleur ami・Riv. by fleur ami",
   description:
-    "高知市・香南市で白髪ぼかし（グレイカラー）が受けられる美容室。染めずに活かすグレイヘアへのシフト、白髪を馴染ませるイルミナカラー・ハイライトで自然な仕上がりに。香南市のfleurami・高知市のRiv. by fleuramiが対応。",
+    "高知市・香南市で白髪ぼかし（グレイカラー）が受けられる美容室。染めずに活かすグレイヘアへのシフト、白髪を馴染ませるイルミナカラー・ハイライトで自然な仕上がりに。香南市のfleur ami・高知市のRiv. by fleur amiが対応。",
   alternates: { canonical: "/blog/hair/shiraga-bokashi" },
   keywords: [
     "白髪ぼかし 高知",
@@ -25,11 +25,11 @@ export const metadata: Metadata = {
 const faq = [
   {
     q: "高知市で白髪ぼかしができる美容室は？",
-    a: "高知市南川添のRiv. by fleurami（TEL 088-884-5566）が白髪ぼかしに対応しています。白髪を染めず、ハイライトやグレイカラーで自然に馴染ませるメニューをご用意しています。",
+    a: "高知市南川添のRiv. by fleur ami（TEL 088-884-5566）が白髪ぼかしに対応しています。白髪を染めず、ハイライトやグレイカラーで自然に馴染ませるメニューをご用意しています。",
   },
   {
     q: "香南市で白髪ぼかしを得意とする美容院は？",
-    a: "香南市野市町のfleurami（TEL 0887-56-5566）が白髪ぼかしを得意としています。40〜50代の大人女性のお客様を多く担当し、白髪の自然な活かし方をご提案します。",
+    a: "香南市野市町のfleur ami（TEL 0887-56-5566）が白髪ぼかしを得意としています。40〜50代の大人女性のお客様を多く担当し、白髪の自然な活かし方をご提案します。",
   },
   {
     q: "白髪ぼかしと白髪染めの違いは？",
@@ -48,7 +48,7 @@ const faq = [
 const pageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "白髪ぼかし・グレイカラー 高知｜fleurami・Riv. by fleurami",
+  name: "白髪ぼかし・グレイカラー 高知｜fleur ami・Riv. by fleur ami",
   description: "高知市・香南市で白髪ぼかし（グレイカラー）が受けられる美容室。",
   url: "https://fleur-group.jp/blog/hair/shiraga-bokashi",
   breadcrumb: {
@@ -97,7 +97,7 @@ export default function ShiragaBokashiPage() {
           <div className="flex items-center gap-2 mb-5">
             <span className="w-1 h-1 rounded-full" style={{ background: accent }} />
             <span className="text-xs tracking-[0.2em] font-cormorant" style={{ color: accent }}>
-              fleurami &amp; Riv. by fleurami — White Hair Solution
+              fleur ami &amp; Riv. by fleur ami — White Hair Solution
             </span>
             <span className="w-1 h-1 rounded-full" style={{ background: accent }} />
           </div>
@@ -179,7 +179,7 @@ export default function ShiragaBokashiPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
             <div className="bg-white/70 border border-hair-border p-6" style={{ borderRadius: "4px" }}>
               <p className="text-xs tracking-[0.2em] font-cormorant mb-1 uppercase" style={{ color: accent }}>香南市</p>
-              <h3 className="font-mincho text-lg text-hair-text mb-3">fleurami</h3>
+              <h3 className="font-mincho text-lg text-hair-text mb-3">fleur ami</h3>
               <ul className="space-y-1.5 text-xs text-hair-muted mb-5">
                 <li>📍 高知県香南市野市町西野230</li>
                 <li>📞 0887-56-5566</li>
@@ -199,7 +199,7 @@ export default function ShiragaBokashiPage() {
 
             <div className="bg-white/70 border border-hair-border p-6" style={{ borderRadius: "4px" }}>
               <p className="text-xs tracking-[0.2em] font-cormorant mb-1 uppercase" style={{ color: accent }}>高知市</p>
-              <h3 className="font-mincho text-lg text-hair-text mb-3">Riv. by fleurami</h3>
+              <h3 className="font-mincho text-lg text-hair-text mb-3">Riv. by fleur ami</h3>
               <ul className="space-y-1.5 text-xs text-hair-muted mb-5">
                 <li>📍 高知県高知市南川添9-21 2F</li>
                 <li>📞 088-884-5566</li>

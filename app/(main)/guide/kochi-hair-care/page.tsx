@@ -21,7 +21,7 @@ export const metadata: Metadata = {
 const crumbs = [
   { name: "ホーム", url: BASE },
   { name: "美容ガイド", url: `${BASE}/guide` },
-  { name: "高知のヘアケアガイド", url: `${BASE}/guide/kochi-hair-care` },
+  { name: "高知のヘアケアガイド", url: `${BASE}/guide/kochi-hair-care`, images: [`${BASE}/images/admin/hero-1782190629178.jpg`] },
 ];
 
 const pageSchema = {

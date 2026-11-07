@@ -1,4 +1,5 @@
 import { Post, PostMeta } from "./posts";
+import { salonDisplayName } from "@/lib/salon-display";
 
 const SITE_URL = process.env.SITE_URL ?? "https://fleur-group.jp";
 
@@ -6,8 +7,8 @@ export const SALONS = {
   fleurami: {
     "@type": "HairSalon",
     "@id": `${SITE_URL}/salon/fleurami`,
-    name: "fleurami",
-    alternateName: "フルールアミー",
+    name: "fleur ami",
+    alternateName: ["フルールアミー", "fleurami"],
     telephone: "0887-56-5566",
     image: {
       "@type": "ImageObject",
@@ -43,7 +44,7 @@ export const SALONS = {
             "@type": "Service",
             name: "髪質改善トリートメント",
             description:
-              "うねり・ダメージ・広がりを改善し、サラサラのツヤ髪へ近づける施術。施術時間90〜120分程度、1〜2ヶ月ごとの定期ケアが目安。香南市・fleuramiで施術可能。",
+              "うねり・ダメージ・広がりを改善し、サラサラのツヤ髪へ近づける施術。施術時間90〜120分程度、1〜2ヶ月ごとの定期ケアが目安。香南市・fleur amiで施術可能。",
           },
         },
         {
@@ -84,8 +85,8 @@ export const SALONS = {
   riv: {
     "@type": "HairSalon",
     "@id": `${SITE_URL}/salon/riv`,
-    name: "Riv. by fleurami",
-    alternateName: "リヴ バイ フルールアミー",
+    name: "Riv. by fleur ami",
+    alternateName: ["リヴ バイ フルールアミー", "Riv. by fleurami", "Riv.byfleurami"],
     telephone: "088-884-5566",
     image: {
       "@type": "ImageObject",
@@ -110,7 +111,7 @@ export const SALONS = {
       },
     ],
     description:
-      "高知市の20〜40代に人気のヘアサロン。髪質改善・縮毛矯正・ハイライト・白髪ぼかし。資生堂の似合わせカット。高知IC車4分、駐車場5台無料。",
+      "高知市の20〜40代に人気のヘアサロン。艶カラー・ミルボンの髪質改善・白髪ぼかし・縮毛矯正・ハイライト。資生堂の似合わせカット。高知IC車4分、駐車場5台無料。定休日：月曜・第1第3火曜。",
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: "得意メニュー",
@@ -163,7 +164,7 @@ export const SALONS = {
     "@type": "BeautySalon",
     "@id": `${SITE_URL}/salon/raffine`,
     name: "Raffine",
-    alternateName: "ラフィーネ",
+    alternateName: ["ラフィーネ", "まつげとまゆげの専門店Raffine【ラフィーネ】"],
     telephone: "090-7120-5566",
     image: {
       "@type": "ImageObject",
@@ -217,7 +218,7 @@ export function organizationSchema() {
       "https://g.page/r/CbD8dVZGgEeuEAE",
     ],
     description:
-      "高知県（高知市・香南市）で美容室2店舗（Riv. by fleurami・fleurami）とアイラッシュサロン（Raffine）を展開するfleur GROUP。髪質改善・白髪ぼかし・縮毛矯正・まつげパーマ・眉毛WAXが得意。2006年設立。",
+      "高知県（高知市・香南市）で美容室2店舗（Riv. by fleur ami・fleur ami）とアイラッシュサロン（Raffine）を展開するfleur GROUP。髪質改善・白髪ぼかし・縮毛矯正・まつげパーマ・眉毛WAXが得意。2006年設立。",
     member: [SALONS.fleurami, SALONS.riv, SALONS.raffine],
   };
 }
@@ -249,7 +250,7 @@ export function articleSchema(
           name: post.author,
           ...(opts?.authorId ? { "@id": opts.authorId, url: opts.authorId } : {}),
         }
-      : { "@type": "Organization", name: post.salon || "フルールグループ" };
+      : { "@type": "Organization", name: salonDisplayName(post.salon) || "フルールグループ" };
   return {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -264,7 +265,7 @@ export function articleSchema(
           mentions: {
             "@type": opts.salonType || "HairSalon",
             "@id": opts.salonId,
-            name: opts.salonName || post.salon,
+            name: salonDisplayName(opts.salonName || post.salon),
             url: opts.salonId,
           },
         }
@@ -355,7 +356,7 @@ export function webSiteSchema() {
     "@type": "WebSite",
     name: "フルールグループ 症例・コラム",
     url: SITE_URL,
-    description: "高知県のヘアサロン（fleurami・Riv.）とアイラッシュサロン（Raffine）による施術例・コラムメディア",
+    description: "高知県のヘアサロン（fleur ami・Riv. by fleur ami）とアイラッシュサロン（Raffine）による施術例・コラムメディア",
     potentialAction: {
       "@type": "SearchAction",
       target: {
@@ -403,6 +404,7 @@ export function personSchema(
   awards?: string[],
   history?: string,
 ) {
+  salonName = salonDisplayName(salonName);
   const schema: Record<string, unknown> = {
     "@context": "https://schema.org",
     "@type": "Person",

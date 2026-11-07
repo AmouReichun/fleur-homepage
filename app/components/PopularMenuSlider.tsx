@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import type { PopularMenu } from "@/lib/content";
+import { salonDisplayName } from "@/lib/salon-display";
 
 const INTERVAL = 4000;
 
@@ -66,8 +67,8 @@ export default function PopularMenuSlider({
                 <p className="text-sm text-site-muted leading-relaxed mb-2">{item.desc}</p>
                 <p className="text-[10px] text-site-accent tracking-wider">
                   {item.salons && item.salons.length > 0
-                    ? item.salons.map((k) => salonNames[k] ?? k).join(" / ")
-                    : item.salon}
+                    ? item.salons.map((k) => salonNames[k] ?? salonDisplayName(k)).join(" / ")
+                    : salonDisplayName(item.salon)}
                 </p>
               </div>
             </div>

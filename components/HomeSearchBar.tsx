@@ -3,6 +3,7 @@
 import { useState, useMemo, useRef, useEffect } from "react";
 import Link from "next/link";
 import type { SearchPostMeta } from "@/lib/blog/posts";
+import { salonDisplayName } from "@/lib/salon-display";
 
 type Props = { posts: SearchPostMeta[] };
 
@@ -121,7 +122,7 @@ export default function HomeSearchBar({ posts }: Props) {
                       {p.title}
                     </p>
                     <p className="text-[11px] text-group-muted mt-0.5 truncate">
-                      {p.salon}
+                      {salonDisplayName(p.salon)}
                     </p>
                   </div>
                 </Link>

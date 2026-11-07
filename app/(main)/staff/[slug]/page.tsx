@@ -8,6 +8,7 @@ import { getCaseStudies } from "@/lib/blog/case-studies";
 import ReservationChannels from "@/app/components/ReservationChannels";
 import CaseStudySection from "@/app/components/CaseStudySection";
 import type { SalonContent } from "@/lib/content";
+import { salonDisplayName } from "@/lib/salon-display";
 
 const BASE = "https://fleur-group.jp";
 
@@ -52,20 +53,47 @@ export async function generateStaticParams() {
     .map((m) => ({ slug: m.slug! }));
 }
 
+/** メタディスクリプション（120字以内）。プロフィール文の重複（「美容師歴14年。」が経歴と本文の両方にある等）も除く */
+function staffDescription(member: { salon: string; role: string; name: string; history?: string; bio?: string }): string {
+  const MAX = 120;
+  const head = `${salonDisplayName(member.salon)}の${member.role}・${member.name}。${member.history ? member.history + "。" : ""}`;
+  // 文単位に分けて、head と同じ文・連続する同じ文を除く
+  const seen = new Set(head.split("。").map((t) => t.trim()).filter(Boolean));
+  const sentences = (member.bio ?? "")
+    .split("。")
+    .map((t) => t.trim())
+    .filter((t) => {
+      if (!t || seen.has(t)) return false;
+      seen.add(t);
+      return true;
+    });
+  let out = head;
+  for (const t of sentences) {
+    const next = `${out}${t}。`;
+    if (next.length > MAX) {
+      if (out.length < 60) out = `${next.slice(0, MAX - 1)}…`;
+      break;
+    }
+    out = next;
+  }
+  return out.length > MAX ? `${out.slice(0, MAX - 1)}…` : out;
+}
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const content = await getContentCached();
   const member = content.staff.find((m) => m.slug === params.slug);
   if (!member) return {};
 
-  const title = `${member.name}（${member.role}）| ${member.salon} | fleur GROUP`;
-  const description = `${member.salon}の${member.role}・${member.name}。${member.history ? member.history + "。" : ""}${member.bio}`;
+  // サイト共通テンプレート（app/layout.tsx）が「| fleur GROUP」を付けるので、ここでは付けない
+  const title = `${member.name}（${member.role}）| ${salonDisplayName(member.salon)}`;
+  const description = staffDescription(member);
   const url = `${BASE}/staff/${member.slug}`;
   return {
     title,
     description,
     alternates: { canonical: url },
     openGraph: {
-      title,
+      title: `${title} | fleur GROUP`,
       description,
       url,
       images: member.imageSrc ? [member.imageSrc.startsWith("http") ? member.imageSrc : `${BASE}${member.imageSrc}`] : [],
@@ -153,7 +181,7 @@ export default async function StaffProfilePage({ params }: Props) {
                 {member.imageSrc ? (
                   <Image
                     src={member.imageSrc}
-                    alt={`${member.name}（${member.salon}・${member.role}）`}
+                    alt={`${member.name}（${salonDisplayName(member.salon)}・${member.role}）`}
                     fill
                     priority
                     className="object-cover"
@@ -170,7 +198,7 @@ export default async function StaffProfilePage({ params }: Props) {
             {/* プロフィール */}
             <div className="flex-1">
               <div className="flex items-center gap-2 mb-3">
-                <span className="text-[10px] tracking-[0.35em] text-site-accent uppercase">{member.salon}</span>
+                <span className="text-[10px] tracking-[0.35em] text-site-accent uppercase">{salonDisplayName(member.salon)}</span>
                 <span className="w-px h-3 bg-site-greige" />
                 <span className="text-[10px] text-site-muted tracking-wider">{member.role}</span>
               </div>
@@ -287,7 +315,7 @@ export default async function StaffProfilePage({ params }: Props) {
           <div className="flex items-center gap-4">
             <div>
               <Link href={salonUrl} className="font-serif text-lg text-site-text hover:text-site-accent transition-colors">
-                {member.salon}
+                {salonDisplayName(member.salon)}
               </Link>
               <p className="text-xs text-site-muted mt-0.5">
                 {member.salon === "fleurami" && "高知県香南市野市町西野230"}
@@ -311,7 +339,7 @@ export default async function StaffProfilePage({ params }: Props) {
           posts={staffPosts}
           world={isEyelash ? "eyelash" : "hair"}
           heading="このスタイリストの施術事例"
-          subheading={`${member.name}（${member.role}・${member.salon}）が担当した症例・ビフォーアフター写真`}
+          subheading={`${member.name}（${member.role}・${salonDisplayName(member.salon)}）が担当した症例・ビフォーアフター写真`}
           moreHref={`/blog/author/${encodeURIComponent(member.name)}`}
           moreLabel="この担当者の記事をすべて見る"
           bg="bg-white"

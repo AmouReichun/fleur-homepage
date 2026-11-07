@@ -4,6 +4,7 @@ import Image from "next/image";
 import { getContentCached } from "@/lib/content";
 import { breadcrumbSchema, rivSalonSchema, fleuramiSalonSchema, raffineSalonSchema } from "@/lib/structured-data";
 import SalonReserveIcons from "@/app/components/SalonReserveIcons";
+import { salonDisplayName } from "@/lib/salon-display";
 
 const BASE = "https://fleur-group.jp";
 
@@ -16,8 +17,8 @@ const salonItemListSchema = {
   url: `${BASE}/salon`,
   numberOfItems: 3,
   itemListElement: [
-    { "@type": "ListItem", position: 1, url: `${BASE}/salon/riv`, name: "Riv. by fleurami", item: { "@type": "HairSalon", "@id": `${BASE}/salon/riv`, name: "Riv. by fleurami", address: { "@type": "PostalAddress", addressLocality: "高知市", streetAddress: "南川添9-21" } } },
-    { "@type": "ListItem", position: 2, url: `${BASE}/salon/fleurami`, name: "fleurami", item: { "@type": "HairSalon", "@id": `${BASE}/salon/fleurami`, name: "fleurami", address: { "@type": "PostalAddress", addressLocality: "香南市", streetAddress: "野市町西野230" } } },
+    { "@type": "ListItem", position: 1, url: `${BASE}/salon/riv`, name: salonDisplayName("riv"), item: { "@type": "HairSalon", "@id": `${BASE}/salon/riv`, name: salonDisplayName("riv"), address: { "@type": "PostalAddress", addressLocality: "高知市", streetAddress: "南川添9-21" } } },
+    { "@type": "ListItem", position: 2, url: `${BASE}/salon/fleurami`, name: salonDisplayName("fleurami"), item: { "@type": "HairSalon", "@id": `${BASE}/salon/fleurami`, name: salonDisplayName("fleurami"), address: { "@type": "PostalAddress", addressLocality: "香南市", streetAddress: "野市町西野230" } } },
     { "@type": "ListItem", position: 3, url: `${BASE}/salon/raffine`, name: "Raffine", item: { "@type": "BeautySalon", "@id": `${BASE}/salon/raffine`, name: "Raffine", address: { "@type": "PostalAddress", addressLocality: "高知市", streetAddress: "はりまや町1-4-8" } } },
   ],
 };

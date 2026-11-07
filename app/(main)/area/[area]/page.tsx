@@ -13,10 +13,18 @@ const BASE = "https://fleur-group.jp";
 // content.staff の salon 表記 → salonKey
 const STAFF_SALON: Record<string, string> = { riv: "Riv. by fleurami", fleurami: "fleurami", raffine: "Raffine" };
 
+// OGP画像（エリアの代表店舗の写真）
+const DEFAULT_OG_IMAGE = `${BASE}/images/admin/hero-1782190629178.jpg`;
+const AREA_OG_IMAGE: Record<string, string> = {
+  riv: `${BASE}/images/admin/salon-riv-1782197568767.jpg`,
+  fleurami: `${BASE}/images/admin/salon-fleurami-1782197558743.jpg`,
+  raffine: `${BASE}/images/admin/salon-raffine-1782206000346.JPG`,
+};
+
 // エリア別のSEO上書き（主LPの検索意図を明確化。未指定は既存の自動生成を使用）
 const AREA_SEO: Record<string, { title: string; description: string }> = {
   kochi: {
-    title: "高知市の美容室・美容院｜髪質改善・白髪ぼかしのRiv. by fleur ami",
+    title: "高知市の美容室・美容院｜艶カラー・髪質改善・白髪ぼかしのRiv. by fleur ami",
     description:
       "高知市で美容室をお探しの方へ。高知市南川添の「Riv. by fleur ami」は艶カラー・ミルボンの髪質改善・白髪ぼかし・縮毛矯正・似合わせカットが得意な大人女性向けの美容室です。所在地・営業時間・スタッフ・メニュー・料金・ご予約方法をまとめて掲載。はりまや橋のアイラッシュサロンRaffineもご紹介。",
   },
@@ -39,15 +47,15 @@ const AREA_SEO: Record<string, { title: string; description: string }> = {
 
 const AREA_H1: Record<string, string> = {
   kochi: "高知市の美容室・アイラッシュサロン",
-  konan: "香南市（野市）の美容室 fleurami",
-  noichi: "野市（のいち）の美容室 fleurami",
+  konan: "香南市（野市）の美容室 fleur ami",
+  noichi: "野市（のいち）の美容室 fleur ami",
   harimayabashi: "はりまや橋のアイラッシュサロン Raffine",
 };
 
 const AREA_INTRO: Record<string, string> = {
-  kochi: "高知市には「Riv. by fleur ami（南川添）」と「Raffine（はりまや橋）」の2店舗があります。美容室では髪質改善・白髪ぼかし・縮毛矯正・カット・カラーを、アイラッシュサロンではまつげパーマ・まつげエクステ・眉毛WAXをご提供しています。骨格や髪質・目元のお悩みに合わせた丁寧なカウンセリングのうえで施術を行い、毎日扱いやすく、自分らしく綺麗でいられるスタイルをご提案します。ご予約はホットペッパービューティーまたはLINEからお気軽にどうぞ。",
-  konan: "香南市には「fleur ami（野市町西野）」があります。縮毛矯正・髪質改善・白髪ぼかし・艶カラー・カットを得意とし、大人女性を中心に地域の皆様に選ばれているヘアサロンです。のいち駅から車で約4分、無料駐車場7台完備でアクセスも便利です。カウンセリングを大切にし、扱いやすく再現しやすいスタイルをご提案しています。ご予約はホットペッパービューティーまたはLINEから承っています。",
-  noichi: "野市（香南市野市町）には「fleur ami（野市町西野230）」があります。縮毛矯正・髪質改善・白髪ぼかし・カラー・カットが得意なヘアサロンで、くせ毛・うねりにお悩みの方や扱いやすい髪にしたいとお考えの方に数多くご来店いただいています。のいち駅から車で約4分、無料駐車場7台完備です。初めての方もカウンセリングでお気軽にご相談ください。ご予約はホットペッパービューティーまたはLINEから受け付けています。",
+  kochi: "高知市には「Riv. by fleur ami（南川添）」と「Raffine（はりまや橋）」の2店舗があります。美容室では艶カラー・ミルボンの髪質改善・白髪ぼかし・縮毛矯正・カットを、アイラッシュサロンではまつげパーマ・まつげエクステ・眉毛WAXをご提供しています。骨格や髪質・目元のお悩みに合わせた丁寧なカウンセリングのうえで施術を行い、毎日扱いやすく、自分らしく綺麗でいられるスタイルをご提案します。ご予約はホットペッパービューティーまたはLINEからお気軽にどうぞ。",
+  konan: "香南市には「fleur ami（野市町西野）」があります。艶カラー・ミルボンの髪質改善・白髪ぼかし・縮毛矯正・カットを得意とし、大人女性を中心に地域の皆様に選ばれているヘアサロンです。のいち駅から車で約4分、無料駐車場7台完備でアクセスも便利です。カウンセリングを大切にし、扱いやすく再現しやすいスタイルをご提案しています。ご予約はホットペッパービューティーまたはLINEから承っています。",
+  noichi: "野市（香南市野市町）には「fleur ami（野市町西野230）」があります。艶カラー・ミルボンの髪質改善・白髪ぼかし・縮毛矯正・カットが得意なヘアサロンで、くせ毛・うねりにお悩みの方や扱いやすい髪にしたいとお考えの方に数多くご来店いただいています。のいち駅から車で約4分、無料駐車場7台完備です。初めての方もカウンセリングでお気軽にご相談ください。ご予約はホットペッパービューティーまたはLINEから受け付けています。",
   harimayabashi: "はりまや橋（高知市はりまや町）には、まつげ・眉毛の専門サロン「Raffine（ラフィーネ）」があります。まつげパーマ（パリジャンリフト・ラッシュリフト）・まつげエクステ・LEDエクステ・眉毛WAX（メンズ対応）をご提供しています。全席半個室のプライベートな空間で、落ち着いた雰囲気のなかで施術を受けていただけます。Googleクチコミ5.0（45件）・ホットペッパービューティー4.86（232件）の高評価サロンです。ご予約はホットペッパービューティーまたはInstagram DMから受け付けています。",
 };
 
@@ -70,10 +78,10 @@ export function generateMetadata({ params }: Props): Metadata {
     ? "アイラッシュサロン"
     : "美容室";
   const serviceHint = hasHair && hasEyelash
-    ? "髪質改善・白髪ぼかし・縮毛矯正・艶カラー・まつげパーマ・眉毛WAX"
+    ? "艶カラー・髪質改善・白髪ぼかし・縮毛矯正・まつげパーマ・眉毛WAX"
     : hasEyelash
     ? "まつげパーマ・ラッシュリフト・まつげエクステ・眉毛WAX"
-    : "髪質改善・白髪ぼかし・縮毛矯正・艶カラー・デザインカット";
+    : "艶カラー・髪質改善・白髪ぼかし・縮毛矯正・デザインカット";
   const override = AREA_SEO[area.slug];
   const title = override?.title ?? `${area.name}の${salonLabel}`;
   const description = override?.description ?? `高知県${area.name}の${salonLabel}「fleur GROUP」。${serviceHint}など、${area.name}で受けられるメニュー一覧と各店舗のご予約案内。`;
@@ -82,7 +90,7 @@ export function generateMetadata({ params }: Props): Metadata {
     title,
     description,
     alternates: { canonical: url },
-    openGraph: { title, description, url },
+    openGraph: { title, description, url, images: [AREA_OG_IMAGE[area.salonKeys[0]] ?? DEFAULT_OG_IMAGE] },
   };
 }
 

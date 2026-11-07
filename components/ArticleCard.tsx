@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import type { PostMeta } from "@/lib/blog/posts";
+import { salonDisplayName } from "@/lib/salon-display";
 
 function tagHref(world: "hair" | "eyelash", tag: string) {
   return `/blog/${world}/tag/${tag}`;
@@ -103,7 +104,7 @@ export default function ArticleCard({ post, world, priority = false }: Props) {
             className="text-[11px] px-2.5 py-0.5 border border-hair-accent-warm/40 text-hair-accent-warm font-cormorant tracking-widest bg-white/70"
             style={{ borderRadius: "1px" }}
           >
-            {post.salon}
+            {salonDisplayName(post.salon)}
           </span>
           {post.tags.slice(0, 2).map((tag) => (
             <Link

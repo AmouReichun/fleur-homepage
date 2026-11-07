@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   title: TITLE,
   description: DESC,
   alternates: { canonical: `${BASE}/guide/kochi-matsuge-perm-guide` },
-  openGraph: { title: TITLE, description: DESC, url: `${BASE}/guide/kochi-matsuge-perm-guide` },
+  openGraph: { title: TITLE, description: DESC, url: `${BASE}/guide/kochi-matsuge-perm-guide`, images: [`${BASE}/images/admin/salon-raffine-1782206000346.JPG`] },
 };
 
 const crumbs = [

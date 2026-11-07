@@ -4,6 +4,7 @@ import { getContentCached } from "@/lib/content";
 import { breadcrumbSchema } from "@/lib/structured-data";
 import StaffTabs from "@/app/components/StaffTabs";
 import ReservationChannels from "@/app/components/ReservationChannels";
+import { salonDisplayName } from "@/lib/salon-display";
 
 export const metadata: Metadata = {
   title: "スタッフ紹介",
@@ -62,7 +63,7 @@ export default async function StaffPage() {
       worksFor: {
         "@type": SALON_TYPE[m.salon] ?? "HairSalon",
         "@id": SALON_URLS[m.salon] ?? `${BASE}/salon`,
-        name: m.salon,
+        name: salonDisplayName(m.salon),
         url: SALON_URLS[m.salon] ?? `${BASE}/salon`,
         telephone: SALON_PHONES[m.salon],
         address: SALON_ADDRESSES[m.salon],

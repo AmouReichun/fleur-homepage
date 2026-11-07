@@ -366,9 +366,9 @@ export const DEFAULT_LP: LpContent = {
   line: { fleurami: "", riv: "" },
   stickyCtaLabel: "LINEで相談・予約",
   seo: {
-    title: "髪質改善・白髪ぼかし・似合わせカット｜高知市・香南市の美容室 fleur ami／Riv. by fleur ami",
+    title: "艶カラー・髪質改善・白髪ぼかし｜高知市・香南市の美容室 fleur ami／Riv. by fleur ami",
     description:
-      "高知県香南市の fleur ami、高知市の Riv. by fleur ami。髪の広がり・白髪・似合う髪型のお悩みに、髪質改善トリートメント・白髪ぼかしカラー・似合わせ科学カットでお応えします。ご相談・ご予約は公式LINEから。",
+      "高知県香南市の fleur ami、高知市の Riv. by fleur ami。艶・髪の広がり・白髪・似合う髪型のお悩みに、艶カラー・ミルボンの髪質改善・白髪ぼかしカラー・似合わせ科学カットでお応えします。ご相談・ご予約は公式LINEから。",
     ogImage: "https://0oxripuo8b9stzsz.public.blob.vercel-storage.com/admin/hero-1790487252859.png",
   },
   experiment: { enabled: false, id: "hero-copy-1", heroTitleB: "", heroSubtitleB: "", ctaLabelB: "" },

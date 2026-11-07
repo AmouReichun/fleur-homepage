@@ -7,8 +7,8 @@ const STRUCTURE = [
     categoryLabel: "美容室",
     en: "Hair Salon",
     salons: [
-      { label: "fleurami", match: (p: PostMeta) => p.category === "hair" && p.salon === "fleurami" },
-      { label: "Riv. by fleurami", match: (p: PostMeta) => p.category === "hair" && p.salon === "Riv. by fleurami" },
+      { label: "fleur ami", match: (p: PostMeta) => p.category === "hair" && p.salon === "fleurami" },
+      { label: "Riv. by fleur ami", match: (p: PostMeta) => p.category === "hair" && p.salon === "Riv. by fleurami" },
     ],
   },
   {

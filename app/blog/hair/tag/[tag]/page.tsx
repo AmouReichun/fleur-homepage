@@ -6,6 +6,14 @@ import { breadcrumbSchema, tagPageSchema } from "@/lib/blog/structured-data";
 import { getHairTagDescription } from "@/lib/blog/tag-descriptions";
 import ArticleCard from "@/components/ArticleCard";
 
+// 旧店名のタグ（URLは残す）→ 表示名と、正規URLにする店舗ハブ
+const SALON_NAME_TAGS: Record<string, { label: string; hub: string }> = {
+  fleurami: { label: "fleur ami", hub: "/blog/hair/fleur-ami" },
+  "Riv. by fleurami": { label: "Riv. by fleur ami", hub: "/blog/hair/riv" },
+  "Riv.byfleurami": { label: "Riv. by fleur ami", hub: "/blog/hair/riv" },
+};
+const tagLabel = (t: string) => SALON_NAME_TAGS[t]?.label ?? t;
+
 type Props = { params: { tag: string } };
 
 // 存在しないタグは実404を返す（ソフト404回避）。タグは記事から生成されるため全網羅。
@@ -21,10 +29,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const posts = getAllPosts("hair").filter((p) => p.tags.includes(tag));
   // 5件以上あるタグはインデックス対象にする（薄いコンテンツを避けるための閾値）
   const shouldIndex = posts.length >= 5;
+  const label = tagLabel(tag);
+  const salonTag = SALON_NAME_TAGS[tag];
   return {
-    title: `${tag}の施術例・ヘアコラム一覧 | 高知のヘアサロン`,
-    description: `高知県の美容室 fleurami・Riv. by fleuramiによる「${tag}」に関する施術例とスタイルコラム${posts.length}件をまとめました。髪質改善・白髪ぼかし・縮毛矯正・艶カラー・似合わせカットなど、${tag}のメニュー選びやスタイルの参考にご覧ください。`,
-    alternates: { canonical: `/blog/hair/tag/${encodeURIComponent(tag)}` },
+    title: `${label}の施術例・ヘアコラム一覧 | 高知のヘアサロン`,
+    description: `高知県の美容室 fleur ami・Riv. by fleur amiによる「${label}」に関する施術例とスタイルコラム${posts.length}件をまとめました。艶カラー・髪質改善・白髪ぼかし・縮毛矯正・似合わせカットなど、${label}のメニュー選びやスタイルの参考にご覧ください。`,
+    // 旧店名タグは店舗ハブを正規URLにする（重複ページ扱いを避ける）
+    alternates: { canonical: salonTag ? salonTag.hub : `/blog/hair/tag/${encodeURIComponent(tag)}` },
     robots: { index: shouldIndex, follow: true },
   };
 }
@@ -48,7 +59,7 @@ export default function HairTagPage({ params }: Props) {
   const crumb = breadcrumbSchema([
     { name: "トップ", url: "/" },
     { name: "ヘア", url: "/blog/hair" },
-    { name: tag, url: `/blog/hair/tag/${encodeURIComponent(tag)}` },
+    { name: tagLabel(tag), url: `/blog/hair/tag/${encodeURIComponent(tag)}` },
   ]);
   const tagSchema = tagPageSchema(tag, "hair", posts);
 
@@ -65,7 +76,7 @@ export default function HairTagPage({ params }: Props) {
             <span className="text-hair-border">›</span>
             <Link href="/blog/hair" className="hover:text-hair-text transition-colors">ヘア</Link>
             <span className="text-hair-border">›</span>
-            <span className="text-hair-text">{tag}</span>
+            <span className="text-hair-text">{tagLabel(tag)}</span>
           </div>
         </nav>
 
@@ -74,10 +85,10 @@ export default function HairTagPage({ params }: Props) {
           <div className="max-w-wide mx-auto">
             <p className="text-xs tracking-[0.25em] uppercase text-hair-accent-warm font-cormorant mb-2">Tag</p>
             <h1 className="font-mincho text-2xl sm:text-3xl font-medium text-hair-text mb-3">
-              {tag}
+              {tagLabel(tag)}
             </h1>
             <p className="text-sm text-hair-muted mb-4">
-              {tag} に関する記事 {posts.length} 件
+              {tagLabel(tag)} に関する記事 {posts.length} 件
             </p>
             {description && (
               <p className="text-sm text-hair-text leading-loose max-w-2xl">
@@ -110,7 +121,7 @@ export default function HairTagPage({ params }: Props) {
                     href={`/blog/hair/tag/${encodeURIComponent(t)}`}
                     className="text-xs px-3 py-1.5 rounded-full border border-hair-border text-hair-muted hover:border-hair-accent hover:text-hair-accent transition-colors"
                   >
-                    {t}
+                    {tagLabel(t)}
                   </Link>
                 ))}
               </div>

@@ -70,7 +70,7 @@ export default function RaffinePage() {
             {/* サロン情報 */}
             <div className="flex flex-wrap gap-4 text-xs text-eye-muted mb-6">
               <span>📍 高知県高知市はりまや町1-4-8 TNはりまやビル3F</span>
-              <span>🕐 10:00〜19:00（不定休）</span>
+              <span>🕐 9:30〜18:30（不定休）</span>
             </div>
 
             {/* 得意メニュー（noindexタグページへのリンクを避け、ハブ・インデックス済みページのみ） */}

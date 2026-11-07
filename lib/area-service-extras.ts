@@ -182,7 +182,7 @@ export const AREA_SERVICE_EXTRAS: Record<string, AreaServiceExtra> = {
         a: "はい。fleur amiには白髪ぼかし・グレイカラーを得意とする西内 みゆきが在籍しています。ホットペッパービューティーから指名してご予約いただけます（指名料300円）。",
       },
       {
-        q: "fleuramiに駐車場はありますか？",
+        q: "fleur amiに駐車場はありますか？",
         a: "店舗に無料駐車場が7台あります（先着順）。のいち駅から車で約4分です。",
       },
     ],

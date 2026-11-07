@@ -5,6 +5,7 @@ import { getAllAuthors, getPostsByAuthor } from "@/lib/blog/posts";
 import { personSchema, breadcrumbSchema } from "@/lib/blog/structured-data";
 import { getContent } from "@/lib/content";
 import ArticleCard from "@/components/ArticleCard";
+import { salonDisplayName } from "@/lib/salon-display";
 
 type Props = { params: { name: string } };
 
@@ -23,10 +24,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const staffMemberForMeta = getContent().staff.find((s) => s.name === name);
   const historyLabel = staffMemberForMeta?.history ? `${staffMemberForMeta.history}の` : "";
   return {
-    title: `${name} | ${author.role} — ${author.salon}`,
+    title: `${name} | ${author.role} — ${salonDisplayName(author.salon)}`,
     description:
       author.category === "hair"
-        ? `高知県の美容室${author.salon}の${historyLabel}${author.role}${name}による施術例・スタイルコラムの一覧です。髪質改善・白髪ぼかし・縮毛矯正・艶カラー・似合わせカットなど、大人女性に向けた提案を実際の症例写真とともに紹介します。`
+        ? `高知県の美容室${salonDisplayName(author.salon)}の${historyLabel}${author.role}${name}による施術例・スタイルコラムの一覧です。髪質改善・白髪ぼかし・縮毛矯正・艶カラー・似合わせカットなど、大人女性に向けた提案を実際の症例写真とともに紹介します。`
         : `高知市はりまや橋のまつげ・まゆげ専門店Raffineの${historyLabel}${author.role}${name}による施術例・コラムの一覧です。まつげパーマ・ラッシュリフト・マツエク・LEDマツエク・眉毛WAXの実例を、写真とともに詳しく紹介します。`,
     alternates: { canonical: `/blog/author/${name}` },
   };
@@ -95,10 +96,10 @@ export default function AuthorPage({ params }: Props) {
               {name}
             </h1>
             <p className="text-sm" style={{ color: "#9A8A7A" }}>
-              {author.salon}
+              {salonDisplayName(author.salon)}
             </p>
             <p className="text-sm mt-3 leading-relaxed max-w-lg" style={{ color: "#5A5050" }}>
-              {author.salon}で{staffMember?.history ? `${staffMember.history}の経験を持つ` : ""}{author.role}として活動しています。このページでは{name}が担当した施術の症例やコラムをご覧いただけます。{isEyelash ? "まつ毛パーマ・まつげエクステ・眉毛WAXなどアイラッシュメニューの仕上がりや選び方について" : "ヘアカラー・カット・パーマ・縮毛矯正など各種ヘアメニューの施術例や選び方について"}、カウンセリングのポイントも交えながらご紹介しています。ご来店前の参考にお役立てください。
+              {salonDisplayName(author.salon)}で{staffMember?.history ? `${staffMember.history}の経験を持つ` : ""}{author.role}として活動しています。このページでは{name}が担当した施術の症例やコラムをご覧いただけます。{isEyelash ? "まつ毛パーマ・まつげエクステ・眉毛WAXなどアイラッシュメニューの仕上がりや選び方について" : "ヘアカラー・カット・パーマ・縮毛矯正など各種ヘアメニューの施術例や選び方について"}、カウンセリングのポイントも交えながらご紹介しています。ご来店前の参考にお役立てください。
             </p>
             <p className="text-sm mt-3" style={{ color: "#7A7070" }}>
               担当記事 {posts.length} 件

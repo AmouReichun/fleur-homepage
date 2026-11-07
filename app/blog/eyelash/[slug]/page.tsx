@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import { seoTitle } from "@/lib/blog/seo-title";
+import { salonDisplayName } from "@/lib/salon-display";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
@@ -37,9 +38,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title,
       description: post.excerpt,
       type: "article",
+      url: `${SITE_URL}/blog/eyelash/${post.slug}`,
       publishedTime: post.date,
       images: [
-        `${SITE_URL}/api/og?title=${encodeURIComponent(post.title)}&salon=${encodeURIComponent(post.salon)}&category=eyelash`,
+        `${SITE_URL}/api/og?title=${encodeURIComponent(post.title)}&salon=${encodeURIComponent(salonDisplayName(post.salon))}&category=eyelash`,
       ],
     },
   };
@@ -68,7 +70,7 @@ export default async function EyelashArticlePage({ params }: Props) {
   const artSchema = articleSchema(post, params.slug, {
     authorId: staffSlug ? `${SITE_BASE}/staff/${staffSlug}` : undefined,
     salonId: `${SITE_BASE}/salon/raffine`,
-    salonName: post.salon,
+    salonName: salonDisplayName(post.salon),
     salonType: "BeautySalon",
     serviceName: relatedMenus[0]?.label,
   });
@@ -82,7 +84,7 @@ export default async function EyelashArticlePage({ params }: Props) {
   ]);
   const authorHistory = staffMember?.history;
   const authorSc = post.author
-    ? personSchema(post.author, post.author_role || "アイリスト", post.salon, "BeautySalon", "はりまや町1-4-8", staffSlug ? `/staff/${staffSlug}` : `/blog/author/${encodeURIComponent(post.author)}`, undefined, undefined, authorHistory)
+    ? personSchema(post.author, post.author_role || "アイリスト", salonDisplayName(post.salon), "BeautySalon", "はりまや町1-4-8", staffSlug ? `/staff/${staffSlug}` : `/blog/author/${encodeURIComponent(post.author)}`, undefined, undefined, authorHistory)
     : null;
   const howTo = post.steps?.length
     ? howToSchema(post.title, post.excerpt, post.steps, `/blog/eyelash/${params.slug}`)

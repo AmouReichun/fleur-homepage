@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
+import { salonDisplayName } from "@/lib/salon-display";
 
 type BlogPost = {
   title: string;
@@ -89,7 +90,7 @@ export default function BlogSlider({
                 <h3 className="font-serif text-base font-light leading-snug mb-2 group-hover:text-site-accent transition-colors duration-200">
                   {post.title}
                 </h3>
-                <p className="text-[10px] text-site-muted tracking-wider">{post.salon} — {dateLabel}</p>
+                <p className="text-[10px] text-site-muted tracking-wider">{salonDisplayName(post.salon)} — {dateLabel}</p>
               </a>
             </div>
           );

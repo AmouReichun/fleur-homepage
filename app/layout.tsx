@@ -39,9 +39,7 @@ export const metadata: Metadata = {
     "Raffine",
     "Riv. by fleur ami",
   ],
-  alternates: {
-    canonical: BASE_URL,
-  },
+  // canonical は各ページで指定する（ここで指定すると、指定し忘れたページが全部トップ扱いになるため）
   openGraph: {
     type: "website",
     locale: "ja_JP",

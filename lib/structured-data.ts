@@ -281,8 +281,8 @@ export const raffineSalonSchema = {
   "@context": "https://schema.org",
   "@type": "BeautySalon",
   "@id": `${BASE}/salon/raffine`,
-  name: "まつげとまゆげの専門店Raffine【ラフィーネ】",
-  alternateName: ["まつげとまゆげの専門店 Raffine【ラフィーネ】", "Raffine", "ラフィーネ", "Raffine高知", "ラフィーネ高知", "まつげサロン Raffine"],
+  name: "Raffine",
+  alternateName: ["まつげとまゆげの専門店Raffine【ラフィーネ】", "まつげとまゆげの専門店 Raffine【ラフィーネ】", "ラフィーネ", "Raffine高知", "ラフィーネ高知", "まつげサロン Raffine"],
   description:
     "高知市はりまや橋のまつげ・眉毛専門サロン。まつげパーマ（パリジャンリフト）・ラッシュリフト・韓国束感まつエク・LEDエクステ・眉毛WAX・メンズ眉WAXに対応。全席半個室。Googleクチコミ5.0（45件）。高知市で口コミ評価が高いアイラッシュサロン。",
   image: {

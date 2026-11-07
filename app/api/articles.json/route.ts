@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { getAllPostsMeta } from "@/lib/blog/posts";
+import { salonDisplayName } from "@/lib/salon-display";
 
 export const dynamic = "force-dynamic";
 
@@ -17,7 +18,7 @@ export async function GET() {
     "@context": "https://schema.org",
     "@type": "Dataset",
     name: "フルールグループ 症例・コラム 記事データ",
-    description: "高知県のヘアサロン（fleurami・Riv.）とまつげ・まゆげサロン（Raffine）の施術症例・コラム記事の構造化データ。",
+    description: "高知県のヘアサロン（fleur ami・Riv. by fleur ami）とまつげ・まゆげサロン（Raffine）の施術症例・コラム記事の構造化データ。",
     url: `${SITE_URL}/api/articles.json`,
     publisher: {
       "@type": "Organization",
@@ -34,7 +35,7 @@ export async function GET() {
       dateModified: p.updated || p.date,
       author: p.author
         ? { "@type": "Person", name: p.author, jobTitle: p.author_role }
-        : { "@type": "Organization", name: p.salon },
+        : { "@type": "Organization", name: salonDisplayName(p.salon) },
       description: p.excerpt,
       about: {
         "@type": "Thing",
@@ -43,7 +44,7 @@ export async function GET() {
       keywords: p.tags.join(", "),
       isPartOf: {
         "@type": p.category === "hair" ? "HairSalon" : "BeautySalon",
-        name: p.salon,
+        name: salonDisplayName(p.salon),
       },
       mainEntity: {
         "@type": "Question",

@@ -6,13 +6,13 @@ import { breadcrumbSchema } from "@/lib/structured-data";
 const BASE = "https://fleur-group.jp";
 const TITLE = "高知市の縮毛矯正ガイド｜料金・持ち・酸性ストレートとの違いを解説";
 const DESC =
-  "高知市・香南市で縮毛矯正を検討中の方へ。料金相場・施術時間・持ち・向いている髪質・酸性ストレートとの違いをfleur GROUPが解説。Riv.byfleurami（高知市）・fleur ami（香南市）で対応。";
+  "高知市・香南市で縮毛矯正を検討中の方へ。料金相場・施術時間・持ち・向いている髪質・酸性ストレートとの違いをfleur GROUPが解説。Riv. by fleur ami（高知市）・fleur ami（香南市）で対応。";
 
 export const metadata: Metadata = {
   title: TITLE,
   description: DESC,
   alternates: { canonical: `${BASE}/guide/kochi-shukumou-kyosei-guide` },
-  openGraph: { title: TITLE, description: DESC, url: `${BASE}/guide/kochi-shukumou-kyosei-guide` },
+  openGraph: { title: TITLE, description: DESC, url: `${BASE}/guide/kochi-shukumou-kyosei-guide`, images: [`${BASE}/images/admin/hero-1782190629178.jpg`] },
 };
 
 const crumbs = [
@@ -47,7 +47,7 @@ const faqSchema = {
       name: "高知市で縮毛矯正ができる美容室と料金は？",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "高知市南川添9-21のRiv. by fleur ami（TEL: 088-884-5566）では縮毛矯正に対応しています。料金はショート15,000円〜、ミディアム17,000円〜、セミロング19,000円〜、ロング22,000円〜（税込・長さ・状態により変動）が目安です。香南市野市のfleur ami（TEL: 0887-56-1005）でも縮毛矯正をご提供しています。",
+        text: "高知市南川添9-21のRiv. by fleur ami（TEL: 088-884-5566）では縮毛矯正に対応しています。料金はショート15,000円〜、ミディアム17,000円〜、セミロング19,000円〜、ロング22,000円〜（税込・長さ・状態により変動）が目安です。香南市野市のfleur ami（TEL: 0887-56-5566）でも縮毛矯正をご提供しています。",
       },
     },
     {
@@ -300,15 +300,15 @@ export default function KochiShukumouKyoseiGuidePage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-site-muted">
               <div>
                 <p className="font-medium text-site-text mb-1">Riv. by fleur ami（高知市）</p>
-                <p>高知市南川添9-21 2F</p>
+                <p>高知市南川添9-21 フルールアミー3 2F</p>
                 <p>TEL: 088-884-5566</p>
                 <p>営業: 9:30〜18:30（月・第1第3火 定休）</p>
               </div>
               <div>
                 <p className="font-medium text-site-text mb-1">fleur ami（香南市）</p>
-                <p>香南市野市町みどりが丘1-182</p>
-                <p>TEL: 0887-56-1005</p>
-                <p>営業: 9:00〜18:00（月・第2第4火 定休）</p>
+                <p>香南市野市町西野230</p>
+                <p>TEL: 0887-56-5566</p>
+                <p>営業: 9:00〜18:00（月・第1第3火 定休）</p>
               </div>
             </div>
             <div className="mt-4 flex flex-wrap gap-3">
