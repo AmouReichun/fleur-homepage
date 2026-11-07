@@ -59,6 +59,19 @@ async function ga() {
 
 (async () => {
   await gsc().catch((e) => console.error("GSC error", e.message));
+  if (!process.env.GA4_PROPERTY_ID) {
+    // 鍵（サービスアカウント）が見られるGA4のプロパティを一覧して、IDを探す
+    try {
+      const admin = google.analyticsadmin({ version: "v1beta", auth });
+      const r = await admin.accountSummaries.list({ pageSize: 50 });
+      const props = (r.data.accountSummaries ?? []).flatMap((a) => (a.propertySummaries ?? []).map((p) => ({ account: a.displayName, property: p.property, name: p.displayName })));
+      console.log("GA4 properties:", JSON.stringify(props));
+      const hit = props.find((p) => /fleur|フルール/i.test(`${p.name}`)) ?? props[0];
+      if (hit?.property) process.env.GA4_PROPERTY_ID = hit.property;
+    } catch (e) {
+      console.error("GA4 admin error", (e as Error).message);
+    }
+  }
   if (process.env.GA4_PROPERTY_ID) await ga().catch((e) => console.error("GA4 error", e.message));
-  else console.log("GA4_PROPERTY_ID 未設定 → GA4はスキップ");
+  else console.log("GA4のプロパティが見つからない → GA4はスキップ");
 })();
