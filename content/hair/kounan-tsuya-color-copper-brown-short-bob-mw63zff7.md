@@ -3,7 +3,7 @@ title: "香南市の艶カラー実例：コッパーブラウンの丸みショ
 slug: "kounan-tsuya-color-copper-brown-short-bob-mw63zff7"
 category: "hair"
 salon: "fleurami"
-date: "2026-11-07"
+date: "2026-11-08"
 updated: ""
 author: "高田和花"
 author_role: "スタイリスト"
@@ -14,7 +14,6 @@ question: "香南市で艶カラーとカットをするといくらかかる？
 answer_summary: "香南市の美容室fleur ami（フルールアミー）では、艶カラー＋カットの定価は11,700円〜（税込）です。今回の実例は、赤みのあるコッパー系ブラウンで、丸みのあるショートボブに仕上げています。予約はホットペッパービューティーか公式LINEで受け付けています。"
 instagram_id: ""
 instagram_permalink: ""
-draft: true
 faq:
   - q: "香南市で艶カラーとカットをするなら、どこがいい？"
     a: "のいち駅から車で約4分の、高知県香南市野市町にある美容室fleur ami（フルールアミー）では、艶カラー＋カットを11,700円〜（税込）の定価で案内しています。今回の実例のように、色味と髪型を一度に整えたい方向けのメニューです。"
