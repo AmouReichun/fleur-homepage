@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { fleuramiSalonSchema, breadcrumbSchema } from "@/lib/structured-data";
 import SalonDetailPage from "@/app/components/SalonDetailPage";
+import { getContentCached } from "@/lib/content";
+import { withMenuPrices } from "@/lib/menu-offers";
 
 const TITLE = "fleur ami | 香南市・野市の美容室 - 艶カラー・髪質改善";
 const DESC = "高知県香南市野市の美容室「fleur ami」。一番人気の艶カラーとミルボンの髪質改善トリートメントが得意なサロン。縮毛矯正・白髪ぼかし・デザインカラーにも対応。経験14年の店長をはじめ実力派スタイリスト在籍。無料駐車場7台完備。Web・LINE予約受付中。";
@@ -23,7 +25,7 @@ const crumbs = [
 const fleuramiSpeakableSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "@id": "https://fleur-group.jp/salon/fleurami",
+  "@id": "https://fleur-group.jp/salon/fleurami#webpage",
   name: "fleur ami | 香南市の美容室 - 縮毛矯正・カラー",
   url: "https://fleur-group.jp/salon/fleurami",
   speakable: {
@@ -33,10 +35,12 @@ const fleuramiSpeakableSchema = {
   about: { "@type": "Organization", "@id": "https://fleur-group.jp/#organization", name: "fleur GROUP" },
 };
 
-export default function FleuramiPage() {
+export default async function FleuramiPage() {
+  const content = await getContentCached();
+  const salonSchema = withMenuPrices(fleuramiSalonSchema, "fleurami", content.menus["fleurami"] ?? []);
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(fleuramiSalonSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(salonSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(fleuramiSpeakableSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema(crumbs)) }} />
       <SalonDetailPage salonKey="fleurami" />

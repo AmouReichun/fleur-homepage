@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { rivSalonSchema, breadcrumbSchema } from "@/lib/structured-data";
 import SalonDetailPage from "@/app/components/SalonDetailPage";
+import { getContentCached } from "@/lib/content";
+import { withMenuPrices } from "@/lib/menu-offers";
 
 const TITLE = "高知市の美容室 Riv. by fleur ami｜艶カラー・髪質改善・白髪ぼかし";
 const DESC = "高知市南川添の美容室「Riv. by fleur ami」。Googleクチコミ4.8・81件、ホットペッパー4.66・619件。30〜50代の大人女性に人気の艶カラーとミルボンの髪質改善。白髪ぼかしハイライト・縮毛矯正も得意。駐車場5台完備、土日OK、当日Web予約受付中。";
@@ -23,7 +25,7 @@ const crumbs = [
 const rivSpeakableSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "@id": "https://fleur-group.jp/salon/riv",
+  "@id": "https://fleur-group.jp/salon/riv#webpage",
   name: "高知市の美容室 Riv. by fleur ami｜髪質改善・白髪ぼかし・縮毛矯正",
   url: "https://fleur-group.jp/salon/riv",
   speakable: {
@@ -33,10 +35,12 @@ const rivSpeakableSchema = {
   about: { "@type": "Organization", "@id": "https://fleur-group.jp/#organization", name: "fleur GROUP" },
 };
 
-export default function RivPage() {
+export default async function RivPage() {
+  const content = await getContentCached();
+  const salonSchema = withMenuPrices(rivSalonSchema, "riv", content.menus["riv"] ?? []);
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(rivSalonSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(salonSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(rivSpeakableSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema(crumbs)) }} />
       <SalonDetailPage salonKey="riv" />

@@ -5,13 +5,14 @@ import { breadcrumbSchema, organizationSchema } from "@/lib/structured-data";
 import MenuTabs from "@/app/components/MenuTabs";
 import ReservationChannels from "@/app/components/ReservationChannels";
 import { SERVICES } from "@/lib/services";
+import { salonMenuOfferCatalog } from "@/lib/menu-offers";
 
 const BASE = "https://fleur-group.jp";
 
 const menuOfferCatalogSchema = {
   "@context": "https://schema.org",
   "@type": "OfferCatalog",
-  "@id": `${BASE}/menu`,
+  "@id": `${BASE}/menu#services`,
   name: "fleur GROUP メニュー・料金一覧",
   description: "高知市・香南市の美容室・アイラッシュサロン fleur GROUP の全メニュー。カット・カラー・縮毛矯正・髪質改善・パーマ・まつ毛パーマ・まつエク・眉毛WAX",
   url: `${BASE}/menu`,
@@ -51,7 +52,7 @@ const crumbs = [
 const menuSpeakableSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "@id": `${BASE}/menu`,
+  "@id": `${BASE}/menu#webpage`,
   name: "fleur GROUP メニュー・料金一覧",
   url: `${BASE}/menu`,
   speakable: {
@@ -68,10 +69,23 @@ export default async function MenuPage() {
   const menus = content.menus as unknown as Record<string, import("@/lib/content").MenuCategory[]>;
   const salons = content.salons as unknown as Record<string, import("@/lib/content").SalonContent>;
 
+  // 店ごとの全メニュー・料金（画面の料金表と同じデータから作る）
+  const salonPriceCatalogSchema = {
+    "@context": "https://schema.org",
+    "@type": "OfferCatalog",
+    "@id": `${BASE}/menu#prices`,
+    name: "fleur GROUP 店舗別メニュー・料金（税込）",
+    url: `${BASE}/menu`,
+    itemListElement: content.salonOrder
+      .filter((k) => (menus[k] ?? []).length > 0)
+      .map((k) => salonMenuOfferCatalog(k, salons[k]?.name ?? k, menus[k] ?? [])),
+  };
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema(crumbs)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(menuOfferCatalogSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(salonPriceCatalogSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(menuSpeakableSchema) }} />
 
