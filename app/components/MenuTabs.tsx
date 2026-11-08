@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import type { MenuCategory, SalonContent } from "@/lib/content";
 
 type Category = "hair" | "eyelash";
@@ -102,10 +102,12 @@ export default function MenuTabs({ salonOrder, menus, salons }: MenuTabsProps) {
   const hairKeys = salonOrder.filter((k) => (HAIR_KEYS as readonly string[]).includes(k));
   const eyelashKeys = salonOrder.filter((k) => (EYELASH_KEYS as readonly string[]).includes(k));
 
-  // 表示するキー
-  const visibleKeys = category === "hair"
-    ? hairKeys.filter((k) => k === salonKey)
-    : eyelashKeys;
+  // 最初のHTML（JSなしで読むAI・検索ロボット向け）には3店全部の料金表を出す。
+  // ブラウザでJSが動いたあと（mounted）に、選んでいない店だけ hidden で隠す。
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
+  const activeKeys = category === "hair" ? hairKeys.filter((k) => k === salonKey) : eyelashKeys;
+  const allKeys = [...hairKeys, ...eyelashKeys];
 
   return (
     <div>
@@ -161,28 +163,24 @@ export default function MenuTabs({ salonOrder, menus, salons }: MenuTabsProps) {
         </div>
       )}
 
-      {/* メニュー本体 */}
+      {/* メニュー本体（全店をHTMLに出し、選んでいない店はJSが動いてから隠す） */}
       <div className="mt-12">
-        {visibleKeys.length === 0 ? (
+        {allKeys.length === 0 ? (
           <p className="text-center text-site-muted text-sm py-16">メニュー情報がありません</p>
-        ) : visibleKeys.length === 1 ? (
-          <SalonMenuBlock
-            salonKey={visibleKeys[0]}
-            salon={salons[visibleKeys[0]]}
-            categories={menus[visibleKeys[0]] ?? []}
-          />
         ) : (
-          <div className="space-y-16 divide-y divide-site-greige">
-            {visibleKeys.map((key, i) => (
-              <div key={key} className={i > 0 ? "pt-16" : ""}>
-                <SalonMenuBlock
-                  salonKey={key}
-                  salon={salons[key]}
-                  categories={menus[key] ?? []}
-                />
+          allKeys.map((key, i) => {
+            const isActive = activeKeys.includes(key);
+            return (
+              <div
+                key={key}
+                id={`menu-${key}`}
+                hidden={mounted && !isActive}
+                className={!mounted && i > 0 ? "mt-16 pt-16 border-t border-site-greige" : ""}
+              >
+                <SalonMenuBlock salonKey={key} salon={salons[key]} categories={menus[key] ?? []} />
               </div>
-            ))}
-          </div>
+            );
+          })
         )}
       </div>
     </div>
