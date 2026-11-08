@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import type { StaffMember } from "@/lib/content";
@@ -116,12 +116,17 @@ export default function StaffTabs({ staff }: { staff: StaffMember[] }) {
     setCategory(cat);
   }
 
-  const filtered = staff.filter((m) => {
-    if (category === "hair") {
-      return m.salon === hairSalon;
-    }
-    return EYELASH_SALONS.includes(m.salon);
-  });
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
+  const groups = [
+    ...HAIR_SALONS.map((h) => ({
+      key: h as string,
+      label: `${salonDisplayName(h)} スタッフ`,
+      members: staff.filter((m) => m.salon === h),
+    })),
+    { key: "eyelash", label: "Raffine スタッフ", members: staff.filter((m) => EYELASH_SALONS.includes(m.salon)) },
+  ];
+  const activeKey = category === "hair" ? (hairSalon as string) : "eyelash";
 
   const countHair = staff.filter((m) => HAIR_SALONS.includes(m.salon as HairSalon)).length;
   const countEyelash = staff.filter((m) => EYELASH_SALONS.includes(m.salon)).length;
@@ -183,25 +188,30 @@ export default function StaffTabs({ staff }: { staff: StaffMember[] }) {
         </div>
       )}
 
-      {/* 絞り込みラベル */}
-      <div className="flex items-center gap-3 mt-10 mb-10">
-        <div className="w-6 h-px bg-site-accent" />
-        <p className="text-[10px] tracking-[0.35em] text-site-accent uppercase">
-          {category === "hair" ? `${salonDisplayName(hairSalon)} スタッフ` : "Raffine スタッフ"}
-        </p>
-        <span className="text-[10px] text-site-muted">— {filtered.length}名</span>
-      </div>
-
-      {/* スタッフグリッド */}
-      {filtered.length === 0 ? (
-        <p className="text-center text-site-muted text-sm py-16">スタッフ情報がありません</p>
-      ) : (
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-12">
-          {filtered.map((member, i) => (
-            <StaffCard key={`${member.name}-${i}`} member={member} />
-          ))}
+      {/* 店ごとのスタッフ（最初のHTMLには全店を出し、JSが動いてから選んでいない店を隠す＝AI・検索ロボットにも全員が読める） */}
+      {groups.map((g, gi) => (
+        <div
+          key={g.key}
+          id={`staff-${g.key}`}
+          hidden={mounted && g.key !== activeKey}
+          className={!mounted && gi > 0 ? "mt-16 pt-6 border-t border-site-greige" : ""}
+        >
+          <div className="flex items-center gap-3 mt-10 mb-10">
+            <div className="w-6 h-px bg-site-accent" />
+            <p className="text-[10px] tracking-[0.35em] text-site-accent uppercase">{g.label}</p>
+            <span className="text-[10px] text-site-muted">— {g.members.length}名</span>
+          </div>
+          {g.members.length === 0 ? (
+            <p className="text-center text-site-muted text-sm py-16">スタッフ情報がありません</p>
+          ) : (
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-12">
+              {g.members.map((member, i) => (
+                <StaffCard key={`${member.name}-${i}`} member={member} />
+              ))}
+            </div>
+          )}
         </div>
-      )}
+      ))}
     </div>
   );
 }

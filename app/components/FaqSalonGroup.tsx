@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import type { FaqItem } from "@/lib/content";
 
 const LIMIT = 3;
@@ -32,7 +32,9 @@ export default function FaqSalonGroup({
   items: FaqItem[];
 }) {
   const [expanded, setExpanded] = useState(false);
-  const visible = expanded ? items : items.slice(0, LIMIT);
+  // 最初のHTMLには全問を出し（AI・検索ロボット向け）、JSが動いてから4問目以降を「もっと見る」で隠す
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
   const hasMore = items.length > LIMIT;
 
   return (
@@ -45,8 +47,10 @@ export default function FaqSalonGroup({
       </div>
 
       <div className="divide-y divide-site-greige">
-        {visible.map((faq, i) => (
-          <FaqRow key={i} faq={faq} />
+        {items.map((faq, i) => (
+          <div key={i} hidden={mounted && !expanded && i >= LIMIT}>
+            <FaqRow faq={faq} />
+          </div>
         ))}
       </div>
 

@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import type { NewsItem } from "@/lib/content";
 
 export type NewsSalonMeta = {
@@ -38,6 +38,9 @@ export default function NewsTabs({
 
   const [cat, setCat] = useState<"hair" | "eyelash">(availableCats[0].key);
   const [store, setStore] = useState<string>(""); // "" = すべて
+  // 最初のHTMLには全部のお知らせを出し（AI・検索ロボット向け）、JSが動いてからタブで絞り込む
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
 
   const storesInCat = salons.filter((s) => s.category === cat);
   const catSalonKeys = storesInCat.map((s) => s.key);
@@ -116,13 +119,13 @@ export default function NewsTabs({
       )}
 
       {/* 一覧 */}
-      {filtered.length === 0 ? (
+      {(mounted ? filtered : sorted).length === 0 ? (
         <p className="text-center text-site-muted text-sm py-16">
           現在お知らせはありません
         </p>
       ) : (
         <div className="divide-y divide-site-greige">
-          {filtered.map((item) => (
+          {(mounted ? filtered : sorted).map((item) => (
             <article key={item.id} className="py-8 first:pt-0">
               <div className="flex flex-wrap items-center gap-3 mb-3">
                 <time dateTime={item.date} className="text-xs text-site-muted tabular-nums">
