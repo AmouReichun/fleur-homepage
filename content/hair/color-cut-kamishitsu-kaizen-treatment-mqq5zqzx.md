@@ -4,12 +4,12 @@ slug: color-cut-kamishitsu-kaizen-treatment-mqq5zqzx
 category: hair
 salon: Riv. by fleurami
 date: '2026-06-23'
-updated: '2026-11-07'
+updated: '2026-11-09'
 author: ''
 author_role: ''
 excerpt: >-
-  高知県高知市の美容室Riv. by fleur
-  amiで、カラーと髪質改善トリートメントを同日に組み合わせるときの定価と、ブラウン系の仕上がり実例をまとめました。
+  高知市でカラーと髪質改善を同日にしたい方へ。艶カラー＋カット＋GMの定価18,700円〜や、ブラウン系の仕上がり実例、組み合わせ別の料金目安が分かります。Riv.
+  by fleur ami（高知県高知市）。
 thumbnail: /images/uploads/fleurami/fleurami-mqq268i5.webp
 tags:
   - 高知市 美容室
@@ -44,6 +44,7 @@ steps: []
 conversation: []
 yakkihou_flag: false
 yakkihou_words: []
+seoTitle: '高知市でカラーと髪質改善を同日に｜ブラウン系実例と定価18,700円〜'
 ---
 高知県高知市の美容室 Riv. by fleur ami では、艶カラー＋カット＋髪質改善（GM／グローバルミルボン）の組み合わせを、定価18,700円〜（税込）で案内しています。艶カラー＋カットは11,700円〜、髪質改善（GM）＋カットは11,700円〜（税込）です。この記事では、同日に組み合わせたブラウン系の実例と、メニューごとの定価、選び分けの目安をまとめます。
 

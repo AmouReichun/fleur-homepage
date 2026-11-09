@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-02",
+  "generatedAt": "2026-11-09",
   "mode": "gsc",
   "tasks": [
     {
@@ -9,12 +9,12 @@
       "slug": "/blog/hair/shukumo-kyosei-sarasara-shikumi-mqq629b3",
       "category": "hair",
       "salon": "riv",
-      "currentTitle": "高知市で縮毛矯正がサラサラに見える仕組みとは？向いている人を担当スタイリストが解説｜高知県高知市の美容室Riv. by fleurami",
-      "currentPosition": 8.2,
-      "impressions": 66,
+      "currentTitle": "高知市の縮毛矯正でサラサラに見える仕組みと料金・向く人｜Riv. by fleur ami",
+      "currentPosition": 8.5,
+      "impressions": 52,
       "clicks": 0,
       "ctr": 0,
-      "reason": "順位8.2位・表示66回とポテンシャルが高いのにCTR0%。タイトルが長く検索意図への訴求が弱い。冒頭に悩み解決型の数字やベネフィットを入れ、タイトル前半を最適化すればクリック獲得が見込める最優先案件。",
+      "reason": "順位8.5位で表示52回ながらCTR0%。上位表示されているのにクリックが0で損失が最大。タイトルに数字や悩み訴求（うねり・広がり解消）を追加しクリック誘因を強化すべき最優先ページ。",
       "filePath": "/home/runner/work/fleur-homepage/fleur-homepage/content/hair/shukumo-kyosei-sarasara-shikumi-mqq629b3.md"
     },
     {
@@ -24,12 +24,12 @@
       "slug": "/blog/hair/color-cut-kamishitsu-kaizen-treatment-mqq5zqzx",
       "category": "hair",
       "salon": "riv",
-      "currentTitle": "高知市でカラーと髪質改善を同日に受けると色持ち・ツヤはどう変わる？｜高知県高知市の美容室Riv. by fleurami",
-      "currentPosition": 8.6,
-      "impressions": 49,
+      "currentTitle": "高知市のカラー＋髪質改善を同日に｜ブラウン系の実例と定価（Riv. by fleur ami）",
+      "currentPosition": 8.2,
+      "impressions": 38,
       "clicks": 1,
-      "ctr": 2,
-      "reason": "順位8.6位で1ページ目圏内だがCTR2%と低迷。色持ち・ツヤの具体的効果や料金・所要時間を見出しとタイトルに追記し、検索ユーザーの意思決定を後押しすればクリック率を大きく改善できる。",
+      "ctr": 0.026,
+      "reason": "順位8.2位でCTR2.6%と低く、滞在35秒・直帰で離脱傾向。タイトルにベネフィット（時短・ツヤ）を強化し、本文冒頭に結論と施術例を追加して直帰率を改善すべき。",
       "filePath": "/home/runner/work/fleur-homepage/fleur-homepage/content/hair/color-cut-kamishitsu-kaizen-treatment-mqq5zqzx.md"
     },
     {
@@ -38,10 +38,10 @@
       "targetKeyword": "高知 美容室",
       "category": "hair",
       "salon": "riv",
-      "impressions": 24,
+      "impressions": 29,
       "clicks": 0,
       "ctr": 0,
-      "reason": "最重要KW「高知 美容室」の強化記事。現在4.7位・24回表示。目標3位以内。"
+      "reason": "最重要KW「高知 美容室」の強化記事。現在4.7位・29回表示。目標3位以内。"
     },
     {
       "type": "new_article",
@@ -49,10 +49,10 @@
       "targetKeyword": "高知市 美容室",
       "category": "hair",
       "salon": "riv",
-      "impressions": 41,
+      "impressions": 46,
       "clicks": 0,
       "ctr": 0,
-      "reason": "最重要KW「高知市 美容室」の強化記事。現在3.5位・41回表示。目標3位以内。"
+      "reason": "最重要KW「高知市 美容室」の強化記事。現在3.3位・46回表示。目標3位以内。"
     },
     {
       "type": "new_article",
@@ -82,10 +82,10 @@
       "targetKeyword": "高知市 髪質改善",
       "category": "hair",
       "salon": "riv",
-      "impressions": 23,
+      "impressions": 27,
       "clicks": 0,
       "ctr": 0,
-      "reason": "最重要KW「高知市 髪質改善」の強化記事。現在1.2位・23回表示。目標1位以内。"
+      "reason": "最重要KW「高知市 髪質改善」の強化記事。現在1.2位・27回表示。目標1位以内。"
     },
     {
       "type": "new_article",
@@ -93,10 +93,10 @@
       "targetKeyword": "高知市 縮毛矯正",
       "category": "hair",
       "salon": "riv",
-      "impressions": 27,
-      "clicks": 0,
-      "ctr": 0,
-      "reason": "最重要KW「高知市 縮毛矯正」の強化記事。現在3.3位・27回表示。目標3位以内。"
+      "impressions": 35,
+      "clicks": 2,
+      "ctr": 0.0571,
+      "reason": "最重要KW「高知市 縮毛矯正」の強化記事。現在4.5位・35回表示。目標3位以内。"
     },
     {
       "type": "new_article",
@@ -104,10 +104,10 @@
       "targetKeyword": "高知 まつ毛パーマ",
       "category": "eyelash",
       "salon": "raffine",
-      "impressions": 3,
+      "impressions": 12,
       "clicks": 0,
       "ctr": 0,
-      "reason": "最重要KW「高知 まつ毛パーマ」の強化記事。現在9.7位・3回表示。目標3位以内。"
+      "reason": "最重要KW「高知 まつ毛パーマ」の強化記事。現在9.7位・12回表示。目標3位以内。"
     },
     {
       "type": "new_article",
