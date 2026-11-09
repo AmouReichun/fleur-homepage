@@ -3,7 +3,7 @@ import { staffNameVariants } from "./article-prompt";
 // 既存の記事メタ（frontmatter）と、internal-links の店舗判定・メニューキーワード定義を再利用し、
 // 「店舗 × メニュー × 担当スタッフ」の条件で最新の施術事例を取り出す。
 // メニューLP・スタッフページ・店舗ページに「最新の施術事例」を自動表示するために使う（手動リンク不要）。
-import { getAllPostsMeta, getMergedCaseMetas, type PostMeta } from "./posts";
+import { getAllAuthors, getAllPostsMeta, getAllTags, getMergedCaseMetas, getPostsByAuthor, type PostMeta } from "./posts";
 import { salonKeyOf, servicesFor, type SalonKey } from "./internal-links";
 
 /** 氏名の表記ゆれ吸収（全角/半角スペース差など）。記事のauthorとスタッフ名の照合に使う。 */
@@ -33,7 +33,13 @@ export type CaseStudyQuery = {
 export function getCaseStudies(query: CaseStudyQuery): PostMeta[] {
   const { salonKeys, serviceSlug, author, category, limit = 6 } = query;
   // 公開記事＋親記事へまとめた新しい実例（写真は本物なので事例欄には出す。リンク先は親記事）
-  let posts = [...getAllPostsMeta(), ...getMergedCaseMetas("hair"), ...getMergedCaseMetas("eyelash")];
+  // 親へまとめた実例のタグは、もう一覧ページが無いことがある（→404リンクになる）ので、今あるタグだけ残す
+  const liveTags = { hair: new Set(getAllTags("hair")), eyelash: new Set(getAllTags("eyelash")) };
+  const merged = [...getMergedCaseMetas("hair"), ...getMergedCaseMetas("eyelash")].map((p) => ({
+    ...p,
+    tags: (p.tags ?? []).filter((t) => liveTags[p.category].has(t)),
+  }));
+  let posts = [...getAllPostsMeta(), ...merged];
   // 同じ写真の重複を除く
   const seenThumb = new Set<string>();
   posts = posts.filter((p) => { if (!p.thumbnail || seenThumb.has(p.thumbnail)) return !p.thumbnail; seenThumb.add(p.thumbnail); return true; });
@@ -46,4 +52,13 @@ export function getCaseStudies(query: CaseStudyQuery): PostMeta[] {
   if (salonKeys && salonKeys.length > 0) posts = posts.filter((p) => salonKeys.includes(salonKeyOf(p)));
   if (serviceSlug) posts = posts.filter((p) => matchesService(p, serviceSlug));
   return posts.sort((a, b) => (a.date < b.date ? 1 : -1)).slice(0, limit);
+}
+
+/** スタッフ名（「沢村 瑞希」「やすい」など）から、実際にある著者ページ（/blog/author/◯◯）の名前を探す。無ければ null。 */
+export function findAuthorPageName(staffName: string): string | null {
+  const targets = new Set([normalizeName(staffName), ...staffNameVariants(staffName)]);
+  const hits = getAllAuthors().filter((a) => targets.has(normalizeName(a.name)));
+  if (hits.length === 0) return null;
+  hits.sort((a, b) => getPostsByAuthor(b.name).length - getPostsByAuthor(a.name).length);
+  return hits[0].name;
 }

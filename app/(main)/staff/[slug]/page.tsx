@@ -4,7 +4,7 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { getContentCached } from "@/lib/content";
 import { breadcrumbSchema } from "@/lib/structured-data";
-import { getCaseStudies } from "@/lib/blog/case-studies";
+import { findAuthorPageName, getCaseStudies } from "@/lib/blog/case-studies";
 import ReservationChannels from "@/app/components/ReservationChannels";
 import CaseStudySection from "@/app/components/CaseStudySection";
 import type { SalonContent } from "@/lib/content";
@@ -157,6 +157,7 @@ export default async function StaffProfilePage({ params }: Props) {
 
   // このスタイリストが担当した施術事例（記事のauthorと氏名で照合。自動更新）
   const staffPosts = getCaseStudies({ author: member.name, limit: 6 });
+  const authorPageName = findAuthorPageName(member.name);
 
   return (
     <>
@@ -340,7 +341,7 @@ export default async function StaffProfilePage({ params }: Props) {
           world={isEyelash ? "eyelash" : "hair"}
           heading="このスタイリストの施術事例"
           subheading={`${member.name}（${member.role}・${salonDisplayName(member.salon)}）が担当した症例・ビフォーアフター写真`}
-          moreHref={`/blog/author/${encodeURIComponent(member.name)}`}
+          moreHref={authorPageName ? `/blog/author/${encodeURIComponent(authorPageName)}` : undefined}
           moreLabel="この担当者の記事をすべて見る"
           bg="bg-white"
         />
