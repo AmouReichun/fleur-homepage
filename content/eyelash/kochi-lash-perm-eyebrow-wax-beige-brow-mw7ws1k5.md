@@ -3,7 +3,7 @@ title: "高知市のまつげパーマ×眉毛WAX｜明るいベージュ眉と�
 slug: "kochi-lash-perm-eyebrow-wax-beige-brow-mw7ws1k5"
 category: "eyelash"
 salon: "Raffine"
-date: "2026-11-07"
+date: "2026-11-09"
 updated: ""
 author: "尾崎あい"
 author_role: "アイリスト"
@@ -14,7 +14,6 @@ question: "高知市でまつげパーマと眉毛WAXを受けると、目元は
 answer_summary: "高知県高知市のまつげ・眉毛専門店Raffine（ラフィーネ）では、まつげパーマ（ラッシュリフト）が¥5,500（税込）、美眉デザインWAXが¥5,500（税込）です。今回の実例は、まつげパーマと眉毛WAXで目元全体のバランスを整えた仕上がりで、担当は尾崎あいです。2つの定価を足すと¥11,000（税込）です。"
 instagram_id: ""
 instagram_permalink: ""
-draft: true
 faq:
   - q: "高知市でまつげパーマと眉毛WAXを一緒にやるなら、どこがいい？"
     a: "はりまや橋電停から徒歩約1分の、まつげ・眉毛専門店Raffine（高知県高知市）があります。まつげパーマ（ラッシュリフト）は¥5,500（税込）、美眉デザインWAXは¥5,500（税込）で、定価を足すと¥11,000（税込）です。今回の実例も、まつげパーマと眉毛WAXの組み合わせです。"
