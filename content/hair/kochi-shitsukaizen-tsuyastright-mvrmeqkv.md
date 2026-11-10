@@ -3,7 +3,7 @@ title: "高知市でツヤのあるストレートを叶えるなら｜髪質改
 slug: "kochi-shitsukaizen-tsuyastright-mvrmeqkv"
 category: "hair"
 salon: "Riv. by fleurami"
-date: "2026-10-28"
+date: "2026-11-10"
 updated: ""
 author: "細川彩香"
 author_role: "スタイリスト"
@@ -14,7 +14,6 @@ question: "高知市で髪がまとまってツヤツヤに見えるストレー
 answer_summary: "現在の髪のクセの強さ、理想のツヤ感、持続期間によって選び方が変わります。高知市のRiv. by fleur amiでは、カウンセリングで髪の状態を見極め、あなたに最適な施術をご提案しています。"
 instagram_id: ""
 instagram_permalink: ""
-draft: true
 faq:
   - q: "髪質改善トリートメントと縮毛矯正、施術時間はどのくらい違う？"
     a: "髪質改善トリートメントは約90〜120分程度、縮毛矯正は髪の長さやクセの強さによって異なりますが、約120〜180分程度が目安です。高知市のRiv. by fleur amiでは初回カウンセリングで正確な時間をお伝えします。"
