@@ -3,7 +3,7 @@ title: "高知市でショートウルフが似合う髪質とは｜40代向け�
 slug: "kochi-short-wolf-hairquality-40s-mvrmowl7"
 category: "hair"
 salon: "Riv. by fleurami"
-date: "2026-10-28"
+date: "2026-11-11"
 updated: ""
 author: "沢村瑞希"
 author_role: "スタイリスト"
@@ -14,7 +14,6 @@ question: "ショートウルフは40代の髪質でも似合う？高知市で�
 answer_summary: "ショートウルフは髪のまとまりやすさと、頭の形・顔型とのバランスが重要です。高知市のRiv. by fleur amiでは、カウンセリングで髪質と頭の形を確認し、あなたに似合うシルエットを提案します。ケアの方法次第で、大人っぽい仕上がりを叶えやすくなります。"
 instagram_id: ""
 instagram_permalink: ""
-draft: true
 faq:
   - q: "ショートウルフって何ですか？"
     a: "ショートウルフは、トップに丸みを持たせ、えり足や側面にレイヤーを入れて動きを出したショートスタイルです。毛束感が特徴で、大人っぽく見える傾向があります。高知市のRiv. by fleur amiでも人気が高まっているスタイルのひとつです。"

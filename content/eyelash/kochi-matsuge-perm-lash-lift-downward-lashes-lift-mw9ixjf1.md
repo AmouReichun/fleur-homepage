@@ -3,7 +3,7 @@ title: "高知市のまつげパーマ実例：下向きまつげをしっかり
 slug: "kochi-matsuge-perm-lash-lift-downward-lashes-lift-mw9ixjf1"
 category: "eyelash"
 salon: "Raffine"
-date: "2026-11-07"
+date: "2026-11-11"
 updated: ""
 author: "くろせ"
 author_role: "アイリスト"
@@ -14,7 +14,6 @@ question: "高知市で下向きまつげを立ち上げるまつげパーマは
 answer_summary: "高知県高知市のまつげ・眉毛専門店Raffine（ラフィーネ）では、まつげパーマ（ラッシュリフト）の定価が¥5,500（税込）です。今回の実例は、担当くろせによる「下向きまつげをしっかり立ち上げ」のまつげパーマです。予約はホットペッパービューティーから受け付けています。"
 instagram_id: ""
 instagram_permalink: ""
-draft: true
 faq:
   - q: "高知市でまつげパーマをするならどこがいい？"
     a: "はりまや橋電停から徒歩約1分の、まつげ・眉毛専門店Raffine（高知県高知市）があります。まつげパーマ（ラッシュリフト）の定価は¥5,500（税込）です。パリジェンヌ・メーテルなどの特殊ラッシュリフトは¥6,000（税込）です。"
