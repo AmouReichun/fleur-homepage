@@ -9,6 +9,17 @@ on:
       # ── ブログ統合: 管理画面/外部PATからの記事コミットも本番反映 ──
       - "content/**"
       - "public/images/**"
+      # ── スタッフ写真アップロードのキュー（写真＋メタ情報）は除外 ──
+      # 1回のアップロードで2コミット＝2ビルド走っていた（11/7は1日86ビルド）。
+      # キューは記事生成（staff-upload-generate）が処理し、その中でデプロイするので、ここでは不要。
+      - "!content/uploads/**"
+      - "!public/images/uploads/**"
+
+# 連続して管理画面から保存したとき、待ち行列のデプロイは最新の1回にまとめる
+# （実行中のものは止めず、待っている古いものだけGitHubが自動で取り消す）。
+concurrency:
+  group: deploy-on-content-change
+  cancel-in-progress: false
 
 jobs:
   deploy:
