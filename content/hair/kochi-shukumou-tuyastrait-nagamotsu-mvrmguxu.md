@@ -3,7 +3,7 @@ title: "高知市で縮毛矯正後のツヤストレート、長持ちさせる
 slug: "kochi-shukumou-tuyastrait-nagamotsu-mvrmguxu"
 category: "hair"
 salon: "Riv. by fleurami"
-date: "2026-10-28"
+date: "2026-11-12"
 updated: ""
 author: "西森心大"
 author_role: "スタイリスト"
@@ -14,7 +14,6 @@ question: "高知市で縮毛矯正を受けた後、ツヤとまとまりを長
 answer_summary: "縮毛矯正後のツヤを維持するには、自宅でのトリートメントケアと定期的な来店（3ヶ月程度）が鍵になります。高知市のRiv. by fleur amiでは、施術直後のカウンセリングで自宅ケアのポイントをお伝えしながら、次回来店時期を一緒に計画することで、長期的にまとまりのある髪を保つお手伝いをしています。"
 instagram_id: ""
 instagram_permalink: ""
-draft: true
 faq:
   - q: "高知市のRiv. by fleur amiで縮毛矯正を受けた後、いつから髪を洗えますか？"
     a: "施術当日の洗髪は避け、翌日以降からのご使用をおすすめしています。最初の洗髪時は、ぬるめのお湯で優しく洗い、その後は毎日のトリートメントを欠かさないことで、ツヤとまとまりが長く保ちやすくなります。"

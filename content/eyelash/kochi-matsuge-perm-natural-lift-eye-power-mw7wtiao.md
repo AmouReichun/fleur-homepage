@@ -3,7 +3,7 @@ title: "高知市のまつげパーマ実例：自然な立ち上げで目力を
 slug: "kochi-matsuge-perm-natural-lift-eye-power-mw7wtiao"
 category: "eyelash"
 salon: "Raffine"
-date: "2026-11-07"
+date: "2026-11-12"
 updated: ""
 author: "尾崎あい"
 author_role: "アイリスト"
@@ -14,7 +14,6 @@ question: "高知市で自然な立ち上げのまつげパーマはいくら？
 answer_summary: "高知県高知市のまつげ・眉毛専門店Raffine（ラフィーネ）では、ラッシュリフト（まつ毛パーマ）が定価¥5,500（税込）です。今回の実例は、まつげパーマで自然に立ち上げて目力を出した仕上がりで、担当は尾崎あいです。予約はホットペッパービューティーから受け付けています。"
 instagram_id: ""
 instagram_permalink: ""
-draft: true
 faq:
   - q: "高知市でまつげパーマをするならどこがいい？"
     a: "はりまや橋電停から徒歩約1分の、高知県高知市にあるまつげ・眉毛専門店Raffine（ラフィーネ）があります。ラッシュリフト（まつ毛パーマ）は定価¥5,500（税込）です。今回の実例のように、自然な立ち上げで目力を出す仕上がりも選べます。"
