@@ -3,7 +3,7 @@ title: "高知市でストレートロングのツヤを出すなら｜ブルー
 slug: "kochi-straight-long-blue-black-gloss-mvrm2yi3"
 category: "hair"
 salon: "Riv. by fleurami"
-date: "2026-10-28"
+date: "2026-11-13"
 updated: ""
 author: "沢村瑞希"
 author_role: "スタイリスト"
@@ -14,7 +14,6 @@ question: "ストレートロングにブルーブラックカラーを入れる
 answer_summary: "ブルーブラックカラーは透明感と深みが魅力ですが、髪の質感で仕上がりが大きく変わります。髪質改善トリートメントと組み合わせることで、光を反射するツヤのある質感になり、カラーの透明度がより際立ちやすくなります。"
 instagram_id: ""
 instagram_permalink: ""
-draft: true
 faq:
   - q: "高知市のRiv. by fleur amiでカラーと髪質改善を同日に受けられますか？"
     a: "はい、可能です。カラーを先に入れてから髪質改善トリートメントを施術することで、カラーの発色を整えながら髪のツヤとまとまりを整えられます。施術時間は2時間程度が目安です。詳しくはご予約時にお問い合わせください。"
