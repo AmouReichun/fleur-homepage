@@ -3,7 +3,7 @@ title: "高知市で白髪ぼかしカラーを選ぶ前に｜大人女性が知
 slug: "kochi-shiragazobokashi-erabikata"
 category: "hair"
 salon: "Riv. by fleurami"
-date: "2026-11-01"
+date: "2026-11-14"
 updated: ""
 author: "細川彩香"
 author_role: "スタイリスト"
@@ -14,7 +14,6 @@ question: "白髪ぼかしカラーで理想の仕上がりを叶えるには、
 answer_summary: "白髪ぼかしカラーは、色の入り方・透明感・深さのバランスが重要です。高知市で信頼できるサロンを選ぶときは、カラーの提案力・髪質への理解・通う周期の説明を確認することがポイントになります。"
 instagram_id: "18144078952597174"
 instagram_permalink: "https://www.instagram.com/reel/DfLjMLRS5rY/"
-draft: true
 faq:
   - q: "高知市で白髪ぼかしカラーはどのくらいの頻度で通う必要がありますか？"
     a: "白髪ぼかしカラーの色持ちは一般的に3～4週間程度が目安です。白髪の生えてくるペースと根元の見え方で判断します。高知市のRiv. by fleur amiではカウンセリング時に、お客様の白髪の量・生え方に合わせた通う周期をご提案しています。"
