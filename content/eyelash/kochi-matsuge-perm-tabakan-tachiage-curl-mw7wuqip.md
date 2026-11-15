@@ -3,7 +3,7 @@ title: "高知市はりまや橋のまつげパーマ：束感の立ち上げカ
 slug: "kochi-matsuge-perm-tabakan-tachiage-curl-mw7wuqip"
 category: "eyelash"
 salon: "Raffine"
-date: "2026-11-07"
+date: "2026-11-15"
 updated: ""
 author: "くろせ"
 author_role: "アイリスト"
@@ -14,7 +14,6 @@ question: "高知市で束感のある立ち上げカールのまつげパーマ
 answer_summary: "高知県高知市のまつげ・眉毛専門店Raffine（ラフィーネ）では、束感のある立ち上げカールをまつげパーマ（ラッシュリフト）で行っています。定価は¥5,500（税込）です。はりまや橋電停から徒歩約1分、予約はホットペッパービューティーから受け付けています。"
 instagram_id: ""
 instagram_permalink: ""
-draft: true
 faq:
   - q: "高知市で束感のある立ち上げカールのまつげパーマをするなら、どこがいい？"
     a: "はりまや橋電停から徒歩約1分の、まつげ・眉毛専門店Raffine（高知県高知市）でまつげパーマ（ラッシュリフト）を行っています。今回の実例は「束感のある立ち上げカール」で、定価は¥5,500（税込）です。男性も利用できます。"
