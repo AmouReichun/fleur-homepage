@@ -3,7 +3,7 @@ title: "高知市の眉毛WAX実例：ナチュラルなアーチ眉｜毛流れ
 slug: "kochi-mayu-wax-natural-arch-brow-mw64kq8n"
 category: "eyelash"
 salon: "Raffine"
-date: "2026-11-07"
+date: "2026-11-16"
 updated: ""
 author: "安井未琉"
 author_role: "アイリスト"
@@ -14,7 +14,6 @@ question: "高知市で眉の形を整える眉毛WAXはいくらで、どんな
 answer_summary: "高知県高知市のまつげ・眉毛専門店Raffine（ラフィーネ）の眉毛WAXは、美眉デザインWAXが¥5,500（税込）です。男性向けのメンズ美眉デザインWAXも¥5,500（税込）です。今回の実例では、ゆるやかなアーチで毛流れが見える、自然ですっきりした眉に仕上がっています。"
 instagram_id: ""
 instagram_permalink: ""
-draft: true
 faq:
   - q: "高知市で眉毛WAXをするならどこがいい？"
     a: "はりまや橋電停から徒歩約1分の、まつげ・眉毛専門店Raffine（ラフィーネ／高知県高知市）では、眉毛WAXとして美眉デザインWAXを¥5,500（税込）で受けられます。全席半個室で、予約優先制です。"
