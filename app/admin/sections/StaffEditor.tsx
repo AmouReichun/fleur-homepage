@@ -17,8 +17,13 @@ export default function StaffEditor({
   salons: Record<string, SalonContent>;
   salonOrder: string[];
 }) {
-  const SALON_TABS = salonOrder.map((k) => ({ label: salons[k]?.name ?? k, value: salons[k]?.name ?? k }));
   const [data, setData] = useState<StaffMember[]>(initial);
+  // タブは「スタッフの実際の所属(salon)」で絞り込む。公開ページ(StaffTabs)と同じ基準。
+  // salons[].name（表示名）はデータの salon 値とズレることがあるため、ここでは使わない。
+  const salonValues = Array.from(new Set(data.map((m) => m.salon).filter(Boolean)));
+  const SALON_TABS = (salonValues.length > 0 ? salonValues : salonOrder.map((k) => salons[k]?.name ?? k)).map(
+    (v) => ({ label: v, value: v })
+  );
   const [activeTab, setActiveTab] = useState<string>(SALON_TABS[0]?.value ?? "");
   const [isPending, startTransition] = useTransition();
   const [saveStatus, setSaveStatus] = useState<"idle" | "success" | "error">("idle");
