@@ -1,6 +1,5 @@
 import fs from "fs";
 import path from "path";
-import type { LpStore } from "./lp";
 
 export interface FaqItem {
   q: string;
@@ -200,8 +199,6 @@ export interface SiteContent {
   contact: {
     note: string;
   };
-  /** LINE誘導LP（/lp）。未作成なら lib/lp.ts の既定値を使う */
-  lp?: LpStore;
 }
 
 const CONTENT_PATH = path.join(process.cwd(), "data/content.json");
