@@ -5,6 +5,7 @@ import { getAllPosts } from "@/lib/blog/posts";
 import ArticleCard from "@/components/ArticleCard";
 import { localBusinessSchema, breadcrumbSchema, collectionPageSchema } from "@/lib/blog/structured-data";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import StoreHubLinks from "@/components/StoreHubLinks";
 
 export const metadata: Metadata = {
   title: "fleur ami ヘア症例・コラム",
@@ -147,6 +148,7 @@ export default function FleurAmiPage() {
           </div>
         )}
       </div>
+      <StoreHubLinks keys={["fleurami"]} world="hair" />
     </div>
   );
 }

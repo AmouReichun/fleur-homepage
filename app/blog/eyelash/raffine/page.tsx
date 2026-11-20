@@ -3,6 +3,7 @@ import Link from "next/link";
 import { getAllPosts } from "@/lib/blog/posts";
 import { localBusinessSchema, breadcrumbSchema } from "@/lib/blog/structured-data";
 import ArticleCard from "@/components/ArticleCard";
+import StoreHubLinks from "@/components/StoreHubLinks";
 
 export const metadata: Metadata = {
   title: "Raffine アイラッシュ症例・コラム | まつ毛パーマ・マツエク・まゆげ",
@@ -140,6 +141,7 @@ export default function RaffinePage() {
             </div>
           )}
         </div>
+      <StoreHubLinks keys={["raffine"]} world="eyelash" />
       </div>
     </>
   );

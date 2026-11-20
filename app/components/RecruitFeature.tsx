@@ -37,8 +37,9 @@ export default function RecruitFeature({ stats, voices }: { stats?: Stat[]; voic
               <span className="text-xs tracking-[0.4em] text-site-accent uppercase">Recruit</span>
             </Reveal>
             <Reveal delay={100}>
-              <h2 id="recruit-feature-title" className="font-serif text-3xl sm:text-5xl font-light text-white leading-[1.5] tracking-[0.05em] mb-8">
-                あなたの技術と感性を、<br />高知で咲かせませんか。
+              <h2 id="recruit-feature-title" className="font-serif text-[26px] sm:text-5xl font-light text-white leading-[1.5] tracking-[0.05em] mb-8">
+                <span className="inline-block">あなたの技術と感性を、</span><br />
+                <span className="inline-block">高知で咲かせませんか。</span>
               </h2>
             </Reveal>
             <Reveal delay={200}>

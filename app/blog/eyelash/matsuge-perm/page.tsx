@@ -3,6 +3,7 @@ import Link from "next/link";
 import { getAllPosts } from "@/lib/blog/posts";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import ArticleCard from "@/components/ArticleCard";
+import StoreHubLinks from "@/components/StoreHubLinks";
 
 export const metadata: Metadata = {
   title: "まつげパーマ・ラッシュリフト 高知｜Raffine（ラフィーネ）はりまや橋",
@@ -239,6 +240,7 @@ export default function MatsugePermPage() {
           </Link>
         </div>
       </div>
+      <StoreHubLinks keys={["raffine"]} world="eyelash" />
     </div>
   );
 }

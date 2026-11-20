@@ -70,7 +70,7 @@ export default function GalleryGrid({ posts }: { posts: PostMeta[] }) {
         <div className="mb-10 sm:mb-14">
           <div className="flex items-center gap-3 mb-4">
             <div className="w-6 h-px bg-site-accent" />
-            <span className="text-[10px] tracking-[0.45em] text-site-accent uppercase">Gallery</span>
+            <span className="text-[10px] tracking-[0.45em] text-site-accent uppercase">05. Gallery</span>
           </div>
           <div className="flex items-end justify-between">
             <h2 className="font-serif text-3xl sm:text-4xl font-light text-site-text">施術ギャラリー</h2>

@@ -4,6 +4,7 @@ import Link from "next/link";
 import { getAllPosts } from "@/lib/blog/posts";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import ArticleCard from "@/components/ArticleCard";
+import StoreHubLinks from "@/components/StoreHubLinks";
 
 export const metadata: Metadata = {
   title: "白髪ぼかし・グレイカラー 高知｜fleur ami・Riv. by fleur ami",
@@ -261,6 +262,7 @@ export default function ShiragaBokashiPage() {
           </Link>
         </div>
       </div>
+      <StoreHubLinks keys={["riv", "fleurami"]} world="hair" />
     </div>
   );
 }

@@ -51,7 +51,7 @@ export default function ReservationChannels({
           <div className="w-6 h-px bg-site-accent" />
         </div>
         <h2 className="font-serif text-2xl sm:text-3xl font-light text-site-text">{heading}</h2>
-        {note && <p className="text-xs text-site-muted mt-2">{note}</p>}
+        {note && <p className="text-xs text-site-muted mt-2 whitespace-pre-line sm:whitespace-normal">{note}</p>}
       </div>
 
       {groupByType ? (

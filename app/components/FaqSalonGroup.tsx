@@ -9,9 +9,9 @@ function FaqRow({ faq }: { faq: FaqItem }) {
   return (
     <details className="group py-6">
       <summary className="flex items-start justify-between gap-6 cursor-pointer list-none">
-        <span className="font-serif text-base font-light leading-relaxed">
-          <span className="text-site-accent mr-3 text-sm">Q</span>
-          {faq.q}
+        <span className="flex items-baseline gap-3 font-serif text-base font-light leading-relaxed">
+          <span className="text-site-accent text-sm flex-shrink-0">Q</span>
+          <span>{faq.q}</span>
         </span>
         <span className="flex-shrink-0 w-5 h-5 border border-site-greige flex items-center justify-center text-site-muted text-sm group-open:rotate-45 transition-transform duration-300">
           +

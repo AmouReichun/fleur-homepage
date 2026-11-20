@@ -4,6 +4,7 @@ import Link from "next/link";
 import { getAllPosts } from "@/lib/blog/posts";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import ArticleCard from "@/components/ArticleCard";
+import StoreHubLinks from "@/components/StoreHubLinks";
 
 export const metadata: Metadata = {
   title: "高知の髪質改善サロン｜fleur ami（香南市）・Riv.（高知市）",
@@ -328,6 +329,7 @@ export default function KamiushitsuKaizenPage() {
           </Link>
         </div>
       </div>
+      <StoreHubLinks keys={["riv", "fleurami"]} world="hair" />
     </div>
   );
 }

@@ -127,6 +127,22 @@ export default async function HomePage() {
           店舗を選んで予約
           <span aria-hidden="true">↓</span>
         </a>
+        {/* 店舗ページへの直接リンク（Googleマップから来た人が1回で自分の店へ。2026-11-21） */}
+        <dl
+          style={{ animation: "fadeinup 0.9s ease-out 0.8s both" }}
+          className="mt-5 grid grid-cols-[auto_1fr] gap-x-3 gap-y-1 text-[11px] sm:text-xs text-white/80 tracking-[0.12em] leading-loose"
+        >
+          <dt>美容室</dt>
+          <dd>
+            <Link href="/salon/riv" className="underline underline-offset-4 decoration-white/40 hover:text-white">Riv.（高知市）</Link>
+            <span className="mx-1.5 text-white/40">・</span>
+            <Link href="/salon/fleurami" className="underline underline-offset-4 decoration-white/40 hover:text-white">fleur ami（香南市）</Link>
+          </dd>
+          <dt>まつげ・眉毛</dt>
+          <dd>
+            <Link href="/salon/raffine" className="underline underline-offset-4 decoration-white/40 hover:text-white">Raffine（はりまや橋）</Link>
+          </dd>
+        </dl>
       </HeroSlideshow>
 
       {/* ─── Quick Links ─── */}
@@ -219,7 +235,7 @@ export default async function HomePage() {
       {/* ─── FAQ ─── */}
       <section className="py-20 sm:py-24 glow-surface">
         <div className="max-w-4xl mx-auto px-6 sm:px-10">
-          <SectionLabel index="04" en="FAQ" ja="よくあるご質問" />
+          <SectionLabel index="07" en="FAQ" ja="よくあるご質問" />
 
           {/* 共通FAQ（サロン指定なし） */}
           {commonFaqs.length > 0 && (
@@ -260,7 +276,7 @@ export default async function HomePage() {
             salonOrder={content.salonOrder}
             salons={content.salons}
             heading="ご予約はこちら"
-            note="お電話・Web・LINE・ホットペッパーからご予約いただけます"
+            note={"お電話・Web・LINE・ホットペッパーから\nご予約いただけます"}
             groupByType
           />
         </div>

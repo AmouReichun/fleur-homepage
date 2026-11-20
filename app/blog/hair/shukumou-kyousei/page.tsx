@@ -4,6 +4,7 @@ import Link from "next/link";
 import { getAllPosts } from "@/lib/blog/posts";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import ArticleCard from "@/components/ArticleCard";
+import StoreHubLinks from "@/components/StoreHubLinks";
 
 export const metadata: Metadata = {
   title: "縮毛矯正 高知｜くせ毛・うねり改善ならfleur ami・Riv. by fleur ami",
@@ -257,6 +258,7 @@ export default function ShukumouKyouseiPage() {
           </Link>
         </div>
       </div>
+      <StoreHubLinks keys={["riv", "fleurami"]} world="hair" />
     </div>
   );
 }

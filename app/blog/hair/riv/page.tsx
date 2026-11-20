@@ -5,6 +5,7 @@ import { getAllPosts } from "@/lib/blog/posts";
 import ArticleCard from "@/components/ArticleCard";
 import { localBusinessSchema, breadcrumbSchema, collectionPageSchema } from "@/lib/blog/structured-data";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import StoreHubLinks from "@/components/StoreHubLinks";
 
 export const metadata: Metadata = {
   title: "Riv. by fleur ami ヘア症例・コラム",
@@ -149,6 +150,7 @@ export default function RivPage() {
           </div>
         )}
       </div>
+      <StoreHubLinks keys={["riv"]} world="hair" />
     </div>
   );
 }
