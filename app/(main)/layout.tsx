@@ -1,5 +1,6 @@
 import Header from "@/app/components/Header";
 import Footer from "@/app/components/Footer";
+import MobileReserveBar from "@/app/components/MobileReserveBar";
 import { organizationSchema, webSiteSchema } from "@/lib/structured-data";
 
 const BASE = "https://fleur-group.jp";
@@ -30,6 +31,7 @@ export default function MainLayout({ children }: { children: React.ReactNode }) 
       <Header />
       <main>{children}</main>
       <Footer />
+      <MobileReserveBar />
     </>
   );
 }

@@ -114,15 +114,39 @@ export default async function SalonDetailPage({ salonKey }: { salonKey: string }
 
       {/* 予約ボタン */}
       <div className="max-w-6xl mx-auto px-4 sm:px-6 pb-8 flex flex-col sm:flex-row gap-3">
-        {salon.hotpepperUrl && (
-          <a
-            href={salon.hotpepperUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex-1 sm:flex-none sm:w-64 text-center bg-site-accent text-white py-4 text-sm font-medium tracking-wider hover:bg-opacity-90 transition-all duration-200"
-          >
-            ホットペッパーで予約する
-          </a>
+        {/* 一番大きい予約ボタン：美容室2店＝Web予約、Raffine＝ホットペッパー（2026-11-21 社長決定） */}
+        {salonKey !== "raffine" && salon.webReserveUrl ? (
+          <>
+            <a
+              href={salon.webReserveUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-1 sm:flex-none sm:w-64 text-center bg-site-accent text-white py-4 text-sm font-medium tracking-wider hover:bg-opacity-90 transition-all duration-200"
+            >
+              Web予約する
+            </a>
+            {salon.hotpepperUrl && (
+              <a
+                href={salon.hotpepperUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 sm:flex-none sm:w-64 text-center border border-site-greige text-site-text py-4 text-sm font-medium tracking-wider hover:border-site-accent hover:text-site-accent transition-all duration-200"
+              >
+                ホットペッパーで予約する
+              </a>
+            )}
+          </>
+        ) : (
+          salon.hotpepperUrl && (
+            <a
+              href={salon.hotpepperUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-1 sm:flex-none sm:w-64 text-center bg-site-accent text-white py-4 text-sm font-medium tracking-wider hover:bg-opacity-90 transition-all duration-200"
+            >
+              ホットペッパーで予約する
+            </a>
+          )
         )}
         {salon.instagramUrl && (
           <a

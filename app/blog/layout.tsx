@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Noto_Sans_JP, Shippori_Mincho, Cormorant_Garamond, Zen_Kaku_Gothic_New, Plus_Jakarta_Sans } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import MobileReserveBar from "@/app/components/MobileReserveBar";
 import { organizationSchema, webSiteSchema } from "@/lib/blog/structured-data";
 
 // ブログ専用フォント。全て preload:false でメインサイトの LCP に影響させない。
@@ -32,6 +33,7 @@ export default function BlogLayout({ children }: { children: React.ReactNode }) 
         <Header />
         <main>{children}</main>
         <Footer />
+        <MobileReserveBar />
       </div>
     </>
   );

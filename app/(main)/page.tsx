@@ -118,21 +118,22 @@ export default async function HomePage() {
             {content.hero.subtitle}
           </p>
         )}
-        <Link
-          href="/salon"
-          style={{ animation: "fadeinup 0.9s ease-out 0.7s both" }}
-          className="inline-flex items-center gap-4 text-xs text-white/75 tracking-[0.3em] hover:text-white transition-colors duration-300 group"
+        {/* 最初の画面の予約ボタン（2026-11-21）：同じページの店舗一覧へ */}
+        <a
+          href="#salons"
+          style={{ animation: "fadeinup 0.9s ease-out 0.6s both" }}
+          className="inline-flex items-center justify-center gap-3 bg-white/95 text-site-text text-sm tracking-[0.2em] px-8 py-4 hover:bg-white transition-colors duration-300"
         >
-          <span>{content.hero.cta1 || "店舗を見る"}</span>
-          <span className="w-12 h-px bg-white/40 group-hover:w-16 transition-all duration-400 group-hover:bg-white/70" />
-        </Link>
+          店舗を選んで予約
+          <span aria-hidden="true">↓</span>
+        </a>
       </HeroSlideshow>
 
       {/* ─── Quick Links ─── */}
       <QuickLinkGrid cards={content.quickLinks ?? []} />
 
       {/* ─── Salons ─── */}
-      <section className="py-20 sm:py-24 glow-surface-white overflow-hidden">
+      <section id="salons" className="scroll-mt-16 py-20 sm:py-24 glow-surface-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
           <SectionLabel index="01" en="Salon" ja="店舗案内" />
           <Reveal delay={80} className="-mt-8 mb-12 sm:mb-16">
