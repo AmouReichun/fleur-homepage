@@ -96,6 +96,15 @@ export default function RootLayout({
 
         {GA_ID && (
           <>
+            {/* スタッフ除外：管理画面・スタッフ投稿ページを開いたブラウザは以後GA4に送らない（2026-11-21） */}
+            <Script id="ga-staff-optout" strategy="afterInteractive">
+              {`
+                try {
+                  if (/^\\/(admin|blog\\/staff)(\\/|$)/.test(location.pathname)) localStorage.setItem('fleur_staff', '1');
+                  if (localStorage.getItem('fleur_staff') === '1') window['ga-disable-${GA_ID}'] = true;
+                } catch (e) {}
+              `}
+            </Script>
             <Script
               src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
               strategy="lazyOnload"
