@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-16",
+  "generatedAt": "2026-11-23",
   "mode": "gsc",
   "tasks": [
     {
@@ -10,53 +10,38 @@
       "category": "hair",
       "salon": "riv",
       "currentTitle": "高知市の縮毛矯正でサラサラに見える仕組みと料金・向く人｜Riv. by fleur ami",
-      "currentPosition": 8.9,
-      "impressions": 51,
+      "currentPosition": 9.2,
+      "impressions": 49,
       "clicks": 0,
       "ctr": 0,
-      "reason": "順位8.9位で表示51回ありながらCTR0%と全くクリックされていない。タイトルに具体的な価格・ビフォーアフター・悩み訴求を加えクリック率改善で最優先。",
+      "reason": "順位9.2位と1ページ目直前なのにCTR0%。表示49回でクリック0は機会損失。タイトル冒頭に数字やベネフィット（持続期間・ダメージレス等）を加え、クリック誘導でCTR改善を優先。",
       "filePath": "/home/runner/work/fleur-homepage/fleur-homepage/content/hair/shukumo-kyosei-sarasara-shikumi-mqq629b3.md"
     },
     {
-      "type": "rewrite",
+      "type": "new_article",
       "priority": 2,
-      "targetKeyword": "高知市 カラー 髪質改善 同日",
-      "slug": "/blog/hair/color-cut-kamishitsu-kaizen-treatment-mqq5zqzx",
+      "targetKeyword": "高知 美容室",
       "category": "hair",
       "salon": "riv",
-      "currentTitle": "高知市のカラー＋髪質改善を同日に｜ブラウン系の実例と定価（Riv. by fleur ami）",
-      "currentPosition": 8.2,
-      "impressions": 37,
-      "clicks": 1,
-      "ctr": 2.7,
-      "reason": "順位8.2位で表示37回だがCTR2.7%と低く改善余地あり。滞在35秒・直帰率データからコンテンツ深掘りと施術時間・料金詳細を補強しタイトル最適化で向上見込み。",
-      "filePath": "/home/runner/work/fleur-homepage/fleur-homepage/content/hair/color-cut-kamishitsu-kaizen-treatment-mqq5zqzx.md"
+      "impressions": 44,
+      "clicks": 0,
+      "ctr": 0,
+      "reason": "最重要KW「高知 美容室」の強化記事。現在5.2位・44回表示。目標3位以内。"
     },
     {
       "type": "new_article",
       "priority": 3,
-      "targetKeyword": "高知 美容室",
-      "category": "hair",
-      "salon": "riv",
-      "impressions": 41,
+      "targetKeyword": "眉毛サロン 高知",
+      "category": "eyelash",
+      "salon": "raffine",
+      "impressions": 1,
       "clicks": 0,
       "ctr": 0,
-      "reason": "最重要KW「高知 美容室」の強化記事。現在4.8位・41回表示。目標3位以内。"
+      "reason": "最重要KW「眉毛サロン 高知」の強化記事。現在8.0位・1回表示。目標3位以内。"
     },
     {
       "type": "new_article",
       "priority": 4,
-      "targetKeyword": "眉毛サロン 高知",
-      "category": "eyelash",
-      "salon": "raffine",
-      "impressions": 2,
-      "clicks": 0,
-      "ctr": 0,
-      "reason": "最重要KW「眉毛サロン 高知」の強化記事。現在8.5位・2回表示。目標3位以内。"
-    },
-    {
-      "type": "new_article",
-      "priority": 5,
       "targetKeyword": "高知 眉毛WAX",
       "category": "eyelash",
       "salon": "raffine",
@@ -67,47 +52,36 @@
     },
     {
       "type": "new_article",
-      "priority": 6,
+      "priority": 5,
       "targetKeyword": "高知市 髪質改善",
       "category": "hair",
       "salon": "riv",
-      "impressions": 39,
+      "impressions": 42,
       "clicks": 0,
       "ctr": 0,
-      "reason": "最重要KW「高知市 髪質改善」の強化記事。現在9.4位・39回表示。目標1位以内。"
+      "reason": "最重要KW「高知市 髪質改善」の強化記事。現在10.8位・42回表示。目標1位以内。"
+    },
+    {
+      "type": "new_article",
+      "priority": 6,
+      "targetKeyword": "高知市 縮毛矯正",
+      "category": "hair",
+      "salon": "riv",
+      "impressions": 43,
+      "clicks": 2,
+      "ctr": 0.0465,
+      "reason": "最重要KW「高知市 縮毛矯正」の強化記事。現在4.3位・43回表示。目標3位以内。"
     },
     {
       "type": "new_article",
       "priority": 7,
-      "targetKeyword": "高知市 縮毛矯正",
-      "category": "hair",
-      "salon": "riv",
-      "impressions": 40,
-      "clicks": 2,
-      "ctr": 0.05,
-      "reason": "最重要KW「高知市 縮毛矯正」の強化記事。現在4.7位・40回表示。目標3位以内。"
-    },
-    {
-      "type": "new_article",
-      "priority": 8,
       "targetKeyword": "高知 まつ毛パーマ",
       "category": "eyelash",
       "salon": "raffine",
-      "impressions": 18,
+      "impressions": 22,
       "clicks": 0,
       "ctr": 0,
-      "reason": "最重要KW「高知 まつ毛パーマ」の強化記事。現在9.7位・18回表示。目標3位以内。"
-    },
-    {
-      "type": "new_article",
-      "priority": 9,
-      "targetKeyword": "高知 マツエク",
-      "category": "eyelash",
-      "salon": "raffine",
-      "impressions": 0,
-      "clicks": 0,
-      "ctr": 0,
-      "reason": "最重要KW「高知 マツエク」の強化記事。現在GSCデータなし。目標3位以内。"
+      "reason": "最重要KW「高知 まつ毛パーマ」の強化記事。現在9.0位・22回表示。目標3位以内。"
     }
   ]
 }
