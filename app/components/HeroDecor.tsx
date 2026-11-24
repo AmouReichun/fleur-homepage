@@ -9,12 +9,18 @@ export const handJaFont = Yomogi({ subsets: ["latin"], weight: "400", display: "
 const PINK = "rgb(var(--site-rose))"; // アクセントのローズピンク
 
 /** Stellé風のギザギザ星（starburst） */
-export function StarBurst({ className = "", children, points = 12, inner = 34, spin = true }: { className?: string; children?: React.ReactNode; points?: number; inner?: number; spin?: boolean }) {
+export function StarBurst({ className = "", children, points = 12, inner = 34, spin = true, irregular = false }: { className?: string; children?: React.ReactNode; points?: number; inner?: number; spin?: boolean; irregular?: boolean }) {
   const pts: string[] = [];
   const n = points;
+  // 不規則なトゲ用：決まった並びのばらつき（毎回同じ形＝表示がズレない）
+  const LEN = [1, 0.8, 0.94, 0.72, 1, 0.86, 0.68, 0.97, 0.78, 0.9, 0.74, 0.99, 0.83, 0.7];
+  const ANG = [0, 0.28, -0.22, 0.12, -0.3, 0.2, -0.08, 0.32, -0.18, 0.06, 0.24, -0.26, 0.14, -0.12];
+  const IN = [1, 1.08, 0.9, 1.04, 0.94, 1.1, 0.96, 0.88, 1.06, 1, 0.92, 1.05, 0.97, 1.02];
   for (let i = 0; i < n * 2; i++) {
-    const r = i % 2 === 0 ? 50 : inner;
-    const a = (Math.PI * i) / n - Math.PI / 2;
+    const k = Math.floor(i / 2) % LEN.length;
+    const isTip = i % 2 === 0;
+    const r = isTip ? (irregular ? 50 * LEN[k] : 50) : irregular ? inner * IN[k] : inner;
+    const a = (Math.PI * (i + (irregular && isTip ? ANG[k] : 0))) / n - Math.PI / 2;
     pts.push(`${(50 + r * Math.cos(a)).toFixed(2)},${(50 + r * Math.sin(a)).toFixed(2)}`);
   }
   return (

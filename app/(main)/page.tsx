@@ -113,7 +113,7 @@ export default async function HomePage() {
       <HeroSlideshow images={heroImages} hasImage={hasImage}>
         {/* 飾り：ピンクの星（ギザギザ）・キラッ・ステッカー */}
         {/* 大きいピンクの星（白い枠をまたぐ）＋下からのぞく星 */}
-        <StarBurst className="absolute z-10 right-[4px] top-[58px] sm:right-[5%] sm:top-[80px] lg:right-[6%] lg:top-[64px] w-[160px] h-[160px] sm:w-[240px] sm:h-[240px] lg:w-[300px] lg:h-[300px] rotate-[-10deg]" inner={30}>
+        <StarBurst className="absolute z-10 right-[4px] top-[58px] sm:right-[5%] sm:top-[80px] lg:right-[6%] lg:top-[64px] w-[176px] h-[176px] sm:w-[240px] sm:h-[240px] lg:w-[300px] lg:h-[300px] rotate-[-10deg]" inner={36} points={13} irregular>
           <span className={`${handJaFont.className} text-[14px] sm:text-[21px] lg:text-[26px] leading-[1.4] -rotate-6`}>髪と目元で、<br />なりたい自分へ。</span>
           <span className="mt-2.5 sm:mt-3.5 text-[6px] sm:text-[9px] tracking-[0.06em] sm:tracking-[0.2em] whitespace-nowrap border-b border-white/80 pb-0.5">HAIR &amp; EYELASH SALON</span>
         </StarBurst>
