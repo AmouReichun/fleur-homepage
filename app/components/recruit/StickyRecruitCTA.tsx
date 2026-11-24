@@ -43,8 +43,8 @@ export default function StickyRecruitCTA({
     </svg>
   );
 
-  const roundCls = `fixed right-4 z-40 flex items-center justify-center w-12 h-12 rounded-full bg-white shadow-lg border border-site-greige text-lav-deep transition-all duration-300 hover:scale-105 ${
-    show ? "bottom-24 sm:bottom-8 opacity-100" : "bottom-8 opacity-0 pointer-events-none"
+  const roundCls = `fixed right-4 z-40 hidden lg:flex items-center justify-center w-12 h-12 rounded-full bg-white shadow-lg border border-site-greige text-lav-deep transition-all duration-300 hover:scale-105 ${
+    show ? "bottom-8 opacity-100" : "bottom-8 opacity-0 pointer-events-none"
   }`;
 
   return (
@@ -64,7 +64,7 @@ export default function StickyRecruitCTA({
       {open && (
         <>
           <button type="button" aria-label="閉じる" onClick={() => setOpen(false)} className="fixed inset-0 z-40 bg-black/20" />
-          <div className="recruit-pop fixed right-4 bottom-40 sm:bottom-24 z-50 w-60 bg-white rounded-2xl border-[3px] border-site-text shadow-[4px_4px_0_#2A2A2A] p-3">
+          <div className="recruit-pop fixed right-4 bottom-24 z-50 w-60 bg-white rounded-2xl border-[3px] border-site-text shadow-[4px_4px_0_#2A2A2A] p-3">
             <p className="text-[11px] font-bold text-site-text/70 px-1 pb-2">どのお店のInstagramを見る？</p>
             <ul className="space-y-1.5">
               {instagrams.map((ig) => (
@@ -88,7 +88,7 @@ export default function StickyRecruitCTA({
 
       {/* 下部固定CTAバー */}
       <div
-        className={`recruit-pop fixed bottom-0 left-0 right-0 z-40 transition-transform duration-300 ${
+        className={`recruit-pop lg:hidden fixed bottom-0 left-0 right-0 z-40 transition-transform duration-300 ${
           show ? "translate-y-0" : "translate-y-full"
         }`}
       >

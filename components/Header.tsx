@@ -19,7 +19,7 @@ export default function Header() {
       <div className="max-w-wide mx-auto px-4 sm:px-6 h-14 sm:h-16 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2 shrink-0">
           <span
-            className={`text-xl sm:text-2xl tracking-widest font-medium ${
+            className={`text-lg sm:text-2xl tracking-wider sm:tracking-widest font-medium ${
               isEyelash ? "text-eye-accent font-kaku" : "text-hair-accent font-mincho"
             }`}
           >
@@ -60,10 +60,9 @@ export default function Header() {
           })}
           <Link
             href="/"
-            className="px-1.5 sm:px-3 py-1.5 text-[11px] tracking-[0.08em] rounded transition-colors text-group-muted hover:text-group-text whitespace-nowrap"
+            className="hidden sm:inline-block px-3 py-1.5 text-[11px] tracking-[0.08em] rounded transition-colors text-group-muted hover:text-group-text whitespace-nowrap"
           >
-            <span className="sm:hidden">ホーム</span>
-            <span className="hidden sm:inline">ホーム</span>
+            ホーム
           </Link>
         </nav>
       </div>
