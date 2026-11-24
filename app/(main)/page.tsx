@@ -107,14 +107,19 @@ export default async function HomePage() {
 
       {/* ─── Hero ─── */}
       <HeroSlideshow images={heroImages} hasImage={hasImage}>
-        <h1 className="text-xs sm:text-sm tracking-[0.3em] text-white/85 mb-8 animate-fadeinup">
+        {/* 文字の大きさは黄金比：13 → 21 → 34 → 55px */}
+        <p aria-hidden className="whitespace-nowrap font-serif italic text-[34px] xl:text-[55px] leading-none text-site-accent/80 mb-[13px] animate-fadeinup">
+          fleur <span className="text-site-pop">GROUP</span>
+        </p>
+        <h1 className="flex items-center gap-[13px] text-[13px] tracking-[0.3em] text-site-muted mb-[21px] lg:mb-[34px] animate-fadeinup">
+          <span aria-hidden className="w-[21px] h-px bg-site-pop" />
           高知県の美容室・アイラッシュサロン
         </h1>
-        <p className="font-serif text-5xl sm:text-6xl lg:text-7xl font-light text-white leading-[1.25] mb-6 whitespace-pre-line animate-fadeinup-slow">
+        <p className="hero-catch font-serif text-[34px] sm:text-[42px] xl:text-[55px] font-light text-site-text leading-[1.382] mb-[21px] whitespace-pre-line animate-fadeinup-slow">
           {content.hero.title || "上品なのに、\n抜け感。"}
         </p>
         {content.hero.subtitle && (
-          <p className="text-sm text-white/75 leading-relaxed mb-12 whitespace-pre-line animate-fadeinup-late">
+          <p className="text-[13px] sm:text-sm text-site-muted leading-[1.618] mb-[34px] whitespace-pre-line animate-fadeinup-late">
             {content.hero.subtitle}
           </p>
         )}
@@ -122,7 +127,7 @@ export default async function HomePage() {
         <a
           href="#salons"
           style={{ animation: "fadeinup 0.9s ease-out 0.6s both" }}
-          className="inline-flex items-center justify-center gap-3 bg-white/95 text-site-text text-sm tracking-[0.2em] px-8 py-4 hover:bg-white transition-colors duration-300"
+          className="self-start inline-flex items-center justify-center gap-[13px] bg-site-pop text-white text-sm tracking-[0.2em] px-[34px] py-[13px] sm:py-[21px] hover:opacity-90 transition-opacity duration-300"
         >
           店舗を選んで予約
           <span aria-hidden="true">↓</span>
@@ -130,17 +135,17 @@ export default async function HomePage() {
         {/* 店舗ページへの直接リンク（Googleマップから来た人が1回で自分の店へ。2026-11-21） */}
         <dl
           style={{ animation: "fadeinup 0.9s ease-out 0.8s both" }}
-          className="mt-5 grid grid-cols-[auto_1fr] gap-x-3 gap-y-1 text-[11px] sm:text-xs text-white/80 tracking-[0.12em] leading-loose"
+          className="mt-[21px] grid grid-cols-[auto_1fr] gap-x-[13px] gap-y-1 text-[11px] sm:text-xs text-site-muted tracking-[0.12em] leading-loose"
         >
           <dt>美容室</dt>
           <dd>
-            <Link href="/salon/riv" className="underline underline-offset-4 decoration-white/40 hover:text-white">Riv.（高知市）</Link>
-            <span className="mx-1.5 text-white/40">・</span>
-            <Link href="/salon/fleurami" className="underline underline-offset-4 decoration-white/40 hover:text-white">fleur ami（香南市）</Link>
+            <Link href="/salon/riv" className="underline underline-offset-4 decoration-site-accent/50 hover:text-site-pop">Riv.（高知市）</Link>
+            <span className="mx-1.5 text-site-greige">・</span>
+            <Link href="/salon/fleurami" className="underline underline-offset-4 decoration-site-accent/50 hover:text-site-pop">fleur ami（香南市）</Link>
           </dd>
           <dt>まつげ・眉毛</dt>
           <dd>
-            <Link href="/salon/raffine" className="underline underline-offset-4 decoration-white/40 hover:text-white">Raffine（はりまや橋）</Link>
+            <Link href="/salon/raffine" className="underline underline-offset-4 decoration-site-accent/50 hover:text-site-pop">Raffine（はりまや橋）</Link>
           </dd>
         </dl>
       </HeroSlideshow>

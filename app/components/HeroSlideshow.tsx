@@ -46,67 +46,71 @@ export default function HeroSlideshow({ images, children, hasImage }: HeroSlides
     };
   }, [images.length, advance]);
 
+  /*
+   * 黄金比（1 : 1.618）のトップ（2026-11-24 社長「黄金比で考えて」）
+   * - 画面の分け方：文字 38.2% ｜ 写真 61.8%（スマホは 写真 61.8% → 文字）
+   * - 余白・文字の大きさ：8 → 13 → 21 → 34 → 55 → 89（1つ前×1.618）
+   * - 写真に暗い膜はかけない（明るく見せる）
+   */
   return (
-    <section className="relative min-h-screen flex flex-col justify-end overflow-hidden">
-      {hasImage ? (
-        <>
-          <div className="absolute inset-0">
-            {images.map((src, i) =>
-              loaded.has(i) ? (
-                <Image
-                  key={src}
-                  src={src}
-                  alt=""
-                  aria-hidden="true"
-                  fill
-                  sizes="100vw"
-                  quality={75}
-                  priority={i === 0}
-                  className="object-cover animate-kenburns"
-                  style={{
-                    opacity: i === active ? 1 : 0,
-                    transition: "opacity 1.5s ease-in-out",
-                  }}
-                />
-              ) : null
-            )}
-          </div>
-          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/20" />
-        </>
-      ) : (
-        <div className="absolute inset-0 bg-gradient-to-br from-[#1a1a1a] via-[#2a2420] to-[#1a1a1a]" />
-      )}
+    <section className="relative bg-site-bg pt-14 sm:pt-16 lg:min-h-[100svh] lg:grid lg:grid-cols-[38.2fr_61.8fr]">
+      {/* 写真（61.8%） */}
+      <div className="relative h-[61.8svh] lg:h-auto lg:order-2 overflow-hidden">
+        {hasImage ? (
+          images.map((src, i) =>
+            loaded.has(i) ? (
+              <Image
+                key={src}
+                src={src}
+                alt=""
+                aria-hidden="true"
+                fill
+                sizes="(max-width: 1024px) 100vw, 62vw"
+                quality={75}
+                priority={i === 0}
+                className="object-cover animate-kenburns"
+                style={{
+                  opacity: i === active ? 1 : 0,
+                  transition: "opacity 1.5s ease-in-out",
+                }}
+              />
+            ) : null
+          )
+        ) : (
+          <div className="absolute inset-0 bg-gradient-to-br from-[#1a1a1a] via-[#2a2420] to-[#1a1a1a]" />
+        )}
 
-      {/* content */}
-      <div className="relative w-full max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 pb-20 sm:pb-28">
-        {children}
+        {/* 黄金比の補助線（写真を 61.8 : 38.2 で区切る細い金の線） */}
+        <div aria-hidden className="pointer-events-none absolute inset-[13px] sm:inset-[21px] border border-white/50">
+          <span className="absolute top-0 bottom-0 left-[61.8%] w-px bg-white/40" />
+          <span className="absolute left-[61.8%] right-0 top-[61.8%] h-px bg-white/40" />
+        </div>
+
+        {/* dot indicators */}
+        {images.length > 1 && (
+          <div className="absolute bottom-[34px] right-[34px] flex gap-2 z-10">
+            {images.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => {
+                  setLoaded((s) => addToSet(s, i));
+                  setActive(i);
+                }}
+                aria-label={`画像 ${i + 1}`}
+                className="h-px transition-all duration-500"
+                style={{
+                  width: i === active ? 34 : 13,
+                  backgroundColor: i === active ? "rgba(255,255,255,0.95)" : "rgba(255,255,255,0.5)",
+                }}
+              />
+            ))}
+          </div>
+        )}
       </div>
 
-      {/* dot indicators */}
-      {images.length > 1 && (
-        <div className="absolute bottom-6 right-6 sm:right-10 flex gap-2 z-10">
-          {images.map((_, i) => (
-            <button
-              key={i}
-              onClick={() => {
-                setLoaded((s) => addToSet(s, i));
-                setActive(i);
-              }}
-              aria-label={`画像 ${i + 1}`}
-              className="h-px transition-all duration-500"
-              style={{
-                width: i === active ? 24 : 12,
-                backgroundColor: i === active ? "rgba(255,255,255,0.9)" : "rgba(255,255,255,0.35)",
-              }}
-            />
-          ))}
-        </div>
-      )}
-
-      {/* scroll indicator */}
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 hidden sm:flex flex-col items-center gap-2 opacity-50">
-        <span className="text-[9px] tracking-[0.35em] text-white uppercase">Scroll</span>
-        <div className="w-px h-8 bg-white/60 animate-pulse" />
+      {/* 文字（38.2%） */}
+      <div className="relative lg:order-1 flex flex-col justify-center px-[21px] sm:px-[34px] lg:px-[55px] xl:px-[89px] py-[34px] sm:py-[55px]">
+        {children}
       </div>
     </section>
   );

@@ -56,7 +56,8 @@ export default function Header() {
     setIsOpen(false);
   }, [pathname]);
 
-  const solid = !isHome || scrolled || isOpen;
+  // 2026-11-24 黄金比のトップ（写真と文字を分けた形）にしたので、トップでも最初から白い帯にする
+  const solid = true || !isHome || scrolled || isOpen;
 
   return (
     <header
