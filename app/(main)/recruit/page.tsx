@@ -260,15 +260,15 @@ export default async function RecruitPage() {
               <PopLabel dark>Working Conditions</PopLabel>
               <h2 className="text-xl sm:text-2xl font-black text-site-text">選ばれる理由は、<span className="text-lav-deep">働き方</span>にある。</h2>
             </Reveal>
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6">
               {[
                 { value: "月給22万〜", label: "給与" },
                 { value: "定時退勤", label: "退勤" },
                 { value: "週休2日", label: "休日" },
                 { value: "有給100%", label: "有給" },
               ].map((b, i) => (
-                <Reveal key={b.label} delay={i * 80} className="text-center bg-white rounded-3xl py-8 px-4 border-[3px] border-site-text shadow-[5px_5px_0_#2A2A2A]">
-                  <p className="text-3xl font-bold text-lav-deep leading-tight">{b.value}</p>
+                <Reveal key={b.label} delay={i * 80} className="text-center bg-white rounded-3xl py-7 sm:py-8 px-2 sm:px-4 border-[3px] border-site-text shadow-[5px_5px_0_#2A2A2A]">
+                  <p className="text-[22px] sm:text-3xl font-bold text-lav-deep leading-tight whitespace-nowrap">{b.value}</p>
                   <div className="w-6 h-px bg-lime mx-auto mt-3 mb-2.5" />
                   <p className="text-[10px] tracking-widest text-site-muted uppercase">{b.label}</p>
                 </Reveal>
@@ -296,7 +296,7 @@ export default async function RecruitPage() {
                 <Reveal key={i} delay={i * 50}>
                   <div className="flex items-start gap-3 bg-white rounded-2xl px-5 py-4 border-[3px] border-site-text shadow-[4px_4px_0_#C697EF]">
                     <span className="w-6 h-6 rounded-full bg-lime border-2 border-site-text flex items-center justify-center text-site-text font-black text-xs flex-shrink-0">✓</span>
-                    <p className="text-sm text-site-text leading-relaxed">{text}</p>
+                    <p className="rp-phrase text-sm text-site-text leading-relaxed">{text}</p>
                   </div>
                 </Reveal>
               ))}
@@ -417,7 +417,7 @@ export default async function RecruitPage() {
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-y-10 gap-x-4">
               {stats.map((s, i) => (
                 <Reveal key={s.label || i} delay={(i % 3) * 70} className="text-center">
-                  <StatNumber value={s.value} suffix={s.suffix} />
+                  <div className="h-9 sm:h-11 flex items-end justify-center"><StatNumber value={s.value} suffix={s.suffix} /></div>
                   <p className="text-[11px] sm:text-xs text-white/70 mt-3 tracking-wide">{s.label}</p>
                 </Reveal>
               ))}
@@ -558,7 +558,7 @@ export default async function RecruitPage() {
               {faq.map((f, i) => (
                 <details key={i} className="group bg-white rounded-2xl border-[3px] border-site-text px-5 py-4 shadow-[4px_4px_0_#C7F500]">
                   <summary className="flex items-start justify-between gap-5 cursor-pointer list-none">
-                    <span className="text-base font-black leading-relaxed">
+                    <span className="rp-phrase text-base font-black leading-relaxed">
                       <span className="text-lav-deep font-bold mr-2.5 text-sm">Q</span>{f.q}
                     </span>
                     <span className="flex-shrink-0 w-7 h-7 rounded-full bg-lime border-2 border-site-text flex font-black items-center justify-center text-site-text text-sm group-open:rotate-45 transition-transform duration-300 mt-1">+</span>

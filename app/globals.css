@@ -345,6 +345,20 @@ html {
   font-family: inherit;
 }
 
+/* 採用ページ：スマホでの変な改行を防ぐ
+   ・最後の行が1〜2文字だけになるのを防ぐ（pretty）
+   ・見出しや中央寄せの短い文は、言葉の切れ目で折り返し、行の長さをそろえる（auto-phrase / balance） */
+.recruit-pop :is(p, li, dd, dt, label, summary) {
+  text-wrap: pretty;
+  line-break: strict;
+}
+.recruit-pop :is(h1, h2, h3, h4, summary),
+.recruit-pop .text-center :is(p, h2, h3, a, span),
+.recruit-pop .rp-phrase {
+  word-break: auto-phrase;
+  text-wrap: balance;
+}
+
 /* ── 採用ページのPOPな動き（.recruit-pop の中だけ） ── */
 @keyframes rp-float { 0%,100% { translate: 0 0; rotate: 0deg; } 50% { translate: 12px -16px; rotate: 8deg; } }
 @keyframes rp-float2 { 0%,100% { translate: 0 0; rotate: 0deg; } 50% { translate: -14px 12px; rotate: -10deg; } }
