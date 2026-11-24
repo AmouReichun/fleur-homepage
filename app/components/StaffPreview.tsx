@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { StaffMember } from "@/lib/content";
+import { ScriptLabel } from "@/app/components/HeroDecor";
 
 const STRUCTURE = [
   {
@@ -77,10 +78,7 @@ export default function StaffPreview({ staff }: { staff: StaffMember[] }) {
 
         {/* セクションヘッダー */}
         <div className="mb-10 sm:mb-14">
-          <div className="flex items-center gap-3 mb-4">
-            <div className="w-6 h-px bg-site-pop" />
-            <span className="text-[10px] tracking-[0.45em] text-site-accent uppercase">06. Staff</span>
-          </div>
+          <ScriptLabel text="Our Staff" />
           <div className="flex items-end justify-between">
             <h2 className="font-serif text-3xl sm:text-4xl font-light text-site-text">スタッフ紹介</h2>
             <Link

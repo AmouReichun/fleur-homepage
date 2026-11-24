@@ -372,18 +372,18 @@ html {
   .recruit-pop .rp-marker { background-size: 100% 100%; }
 }
 
-/* ── トップの手書き風デザインの動き（.hero-script の中だけ・2026-11-24） ── */
+/* ── 手書き風デザインの動き（hd-*・トップと各段の見出し・2026-11-24） ── */
 @keyframes hd-spin { to { rotate: 360deg; } }
 @keyframes hd-twinkle { 0%,100% { scale: 0.7; opacity: 0.6; rotate: 0deg; } 50% { scale: 1.15; opacity: 1; rotate: 20deg; } }
 @keyframes hd-draw { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }
 @keyframes hd-wobble { 0%,100% { rotate: -3deg; } 50% { rotate: 3deg; } }
 @keyframes hd-write { from { clip-path: inset(0 100% 0 0); } to { clip-path: inset(0 0 0 0); } }
-.hero-script .hd-spin { animation: hd-spin 40s linear infinite; }
-.hero-script .hd-twinkle { animation: hd-twinkle 2.6s ease-in-out infinite; }
-.hero-script .hd-draw { stroke-dasharray: 1; animation: hd-draw 1s cubic-bezier(0.65,0,0.35,1) 1.6s both; }
-.hero-script .hd-wobble { animation: hd-wobble 4s ease-in-out infinite; }
-.hero-script .hd-write { animation: hd-write 1.6s cubic-bezier(0.65,0,0.35,1) 0.2s both; }
+.hd-spin { animation: hd-spin 40s linear infinite; }
+.hd-twinkle { animation: hd-twinkle 2.6s ease-in-out infinite; }
+.hd-draw { stroke-dasharray: 1; animation: hd-draw 1s cubic-bezier(0.65,0,0.35,1) 1.6s both; }
+.hd-wobble { animation: hd-wobble 4s ease-in-out infinite; }
+.hd-write { animation: hd-write 1.6s cubic-bezier(0.65,0,0.35,1) 0.2s both; }
 @media (prefers-reduced-motion: reduce) {
   .hero-script *, .hero-script *::before, .hero-script *::after { animation: none !important; }
-  .hero-script .hd-draw { stroke-dashoffset: 0; }
+  .hd-draw { stroke-dashoffset: 0; }
 }

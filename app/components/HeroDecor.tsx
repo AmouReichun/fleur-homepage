@@ -54,3 +54,18 @@ export function OvalSticker({ className = "" }: { className?: string }) {
     </div>
   );
 }
+
+/** 各段の見出しの上に置く、手書き風の英字（ピンク）＋線＋キラッ */
+export function ScriptLabel({ text, center = false }: { text: string; center?: boolean }) {
+  return (
+    <div className={center ? "flex justify-center mb-[8px]" : "mb-[8px]"} aria-hidden>
+      <div className="relative inline-block">
+        <span className={`${scriptFont.className} block text-[34px] sm:text-[42px] leading-none text-site-pop -rotate-3 ${center ? "origin-center" : "origin-left"}`}>
+          {text}
+        </span>
+        <Swoosh className={`block w-[110px] sm:w-[150px] h-[10px] -mt-[2px] ${center ? "mx-auto" : "ml-[21px]"}`} />
+        <Spark className="absolute -top-[8px] -right-[21px] w-[14px] h-[14px]" />
+      </div>
+    </div>
+  );
+}

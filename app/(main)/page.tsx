@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 import { getContentCached } from "@/lib/content";
 import { rivSalonSchema, fleuramiSalonSchema, raffineSalonSchema, founderPersonSchema } from "@/lib/structured-data";
 import HeroSlideshow from "@/app/components/HeroSlideshow";
-import { scriptFont, StarBurst, Spark, Swoosh, OvalSticker } from "@/app/components/HeroDecor";
+import { scriptFont, StarBurst, Spark, Swoosh, OvalSticker, ScriptLabel } from "@/app/components/HeroDecor";
 import QuickLinkGrid from "@/app/components/QuickLinkGrid";
 import SalonCards from "@/app/components/SalonCards";
 import PopularMenuSlider from "@/app/components/PopularMenuSlider";
@@ -31,12 +31,15 @@ const BrandMovieSection = dynamic(() => import("@/app/components/BrandMovieSecti
   loading: () => <div className="py-20 sm:py-28 bg-[#111111]" aria-hidden="true" />,
 });
 
+const SCRIPT_EN: Record<string, string> = { Salon: "Our Salon", Menu: "Popular Menu", Blog: "Blog", FAQ: "Q & A" };
+
 function SectionLabel({ index, en, ja }: { index: string; en: string; ja: string }) {
   return (
     <div className="mb-12 sm:mb-16">
-      <Reveal className="flex items-center gap-3 mb-4">
-        <div className="w-6 h-px bg-site-pop" />
-        <span className="text-[10px] tracking-[0.45em] text-site-accent uppercase">{index}. {en}</span>
+      <Reveal>
+        {/* 手書き風の英字（2026-11-24 トップのデザインに合わせて） */}
+        <span className="sr-only">{index}. {en}</span>
+        <ScriptLabel text={SCRIPT_EN[en] ?? en} />
       </Reveal>
       <Reveal delay={120}>
         <h2 className="font-serif text-4xl sm:text-5xl font-light text-site-text">{ja}</h2>
