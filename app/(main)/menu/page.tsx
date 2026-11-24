@@ -128,8 +128,8 @@ export default async function MenuPage() {
           <p className="text-xs text-site-muted text-center mb-8">お悩み・効果・FAQ・対応店舗をサービスごとにご紹介しています</p>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
             {SERVICES.map((s) => (
-              <Link key={s.slug} href={`/service/${s.slug}`} className="group border border-site-greige bg-white hover:border-site-accent transition-colors px-4 py-3 text-center">
-                <span className="text-sm font-medium text-site-text group-hover:text-site-accent transition-colors">{s.name}</span>
+              <Link key={s.slug} href={`/service/${s.slug}`} className="group border border-site-greige bg-white hover:border-site-accent transition-colors px-2 sm:px-4 py-3 text-center">
+                <span className="wrap-phrase text-[13px] sm:text-sm font-medium text-site-text group-hover:text-site-accent transition-colors">{s.name}</span>
               </Link>
             ))}
           </div>

@@ -201,7 +201,7 @@ export default async function StaffProfilePage({ params }: Props) {
               <div className="flex items-center gap-2 mb-3">
                 <span className="text-[10px] tracking-[0.35em] text-site-accent uppercase">{salonDisplayName(member.salon)}</span>
                 <span className="w-px h-3 bg-site-greige" />
-                <span className="text-[10px] text-site-muted tracking-wider">{member.role}</span>
+                <span className="text-[10px] text-site-muted tracking-wider whitespace-nowrap">{member.role}</span>
               </div>
 
               <h1 className="font-serif text-3xl sm:text-4xl font-light text-site-text mb-1">{member.name}</h1>

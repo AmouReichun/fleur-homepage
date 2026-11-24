@@ -139,7 +139,7 @@ export default function AboutPage() {
               style={{ background: "linear-gradient(to right, transparent, #C8A860)" }}
             />
             <span
-              className="text-[9px] sm:text-[10px] tracking-[0.4em] font-cormorant uppercase"
+              className="text-[9px] sm:text-[10px] tracking-[0.25em] sm:tracking-[0.4em] font-cormorant uppercase whitespace-nowrap"
               style={{ color: "#C8A860" }}
             >
               Fleur Group — Kochi, Japan
@@ -152,7 +152,7 @@ export default function AboutPage() {
 
           {/* ── メインタイトル ── */}
           <h1
-            className="font-kaku font-normal text-3xl sm:text-[2.75rem] leading-loose tracking-[0.55em] text-center mb-8"
+            className="font-kaku font-normal text-3xl sm:text-[2.75rem] leading-loose tracking-[0.3em] sm:tracking-[0.55em] text-center mb-8"
             style={{ color: "#DDD0B8" }}
           >
             フルールグループ
@@ -164,7 +164,9 @@ export default function AboutPage() {
           >
             高知県に3店舗を展開する美容グループ。
             <br />
-            ヘアと目元、それぞれの専門性で「なりたい」に向き合います。
+            ヘアと目元、それぞれの専門性で
+            <br className="sm:hidden" />
+            「なりたい」に向き合います。
           </p>
 
           {/* ── 3店舗バッジ ── */}

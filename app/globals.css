@@ -402,3 +402,21 @@ html {
   .hero-script *, .hero-script *::before, .hero-script *::after { animation: none !important; }
   .hd-draw { stroke-dashoffset: 0; }
 }
+
+/* ── サイト全体：スマホでの変な改行を防ぐ（2026-11-25） ──
+   ・文章は最後の行が1〜2文字だけにならないように（pretty）
+   ・見出し・Q&Aの質問・表の項目名は、言葉の切れ目で折り返して行の長さをそろえる（auto-phrase / balance） */
+:where(p, li, dd, td, figcaption, blockquote, span.block, a) {
+  text-wrap: pretty;
+  line-break: strict;
+}
+:where(h1, h2, h3, h4, dt, summary, th, td:first-child) {
+  text-wrap: balance;
+  word-break: auto-phrase;
+  line-break: strict;
+}
+.wrap-phrase {
+  text-wrap: balance;
+  word-break: auto-phrase;
+  line-break: strict;
+}

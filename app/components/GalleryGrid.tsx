@@ -96,7 +96,7 @@ export default function GalleryGrid({ posts }: { posts: PostMeta[] }) {
                 <div className="flex items-center gap-4 mb-8">
                   <div className="flex items-center gap-2">
                     <div className="w-1 h-5 bg-site-pop" />
-                    <span className="font-serif text-xl sm:text-2xl font-light text-site-text">{group.categoryLabel}</span>
+                    <span className="font-serif text-xl sm:text-2xl font-light text-site-text whitespace-nowrap">{group.categoryLabel}</span>
                   </div>
                   <span className="text-[10px] tracking-[0.3em] text-site-muted uppercase">{group.en}</span>
                   <div className="flex-1 h-px bg-site-greige" />

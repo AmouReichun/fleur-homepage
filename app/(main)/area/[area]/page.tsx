@@ -281,10 +281,10 @@ export default async function AreaPage({ params }: Props) {
                   <Link
                     key={svc.slug}
                     href={`/area/${area.slug}/${svc.slug}`}
-                    className="border border-site-greige bg-white p-5 hover:border-site-accent transition-colors group"
+                    className="border border-site-greige bg-white p-4 sm:p-5 hover:border-site-accent transition-colors group"
                   >
-                    <span className="block text-sm font-medium text-site-text group-hover:text-site-accent transition-colors">
-                      {area.name}の{svc.name}
+                    <span className="block text-[13px] sm:text-sm font-medium text-site-text group-hover:text-site-accent transition-colors">
+                      <span className="inline-block">{area.name}の</span><span className="inline-block">{svc.name}</span>
                     </span>
                     <span className="block text-[11px] text-site-muted mt-1.5 leading-relaxed">
                       {svc.forWhom[0]}

@@ -36,7 +36,7 @@ function StaffCard({ member }: { member: StaffMember }) {
             {salonDisplayName(member.salon)}
           </span>
           <span className="w-px h-3 bg-site-greige" />
-          <span className="text-[10px] text-site-muted tracking-wider">{member.role}</span>
+          <span className="text-[10px] text-site-muted tracking-wider whitespace-nowrap">{member.role}</span>
         </div>
         <div className="flex items-center gap-2 mb-1">
           <h3 className="font-serif text-xl font-light">{member.name}</h3>

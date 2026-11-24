@@ -225,7 +225,7 @@ export default async function AreaServicePage({ params }: Props) {
                       <th scope="row" className="text-left font-normal text-site-text p-4 leading-relaxed">{r.name}</th>
                       <td className="text-right text-site-text p-4 whitespace-nowrap align-top">
                         <span className="font-medium">{r.price}</span>
-                        {r.note && <span className="block text-[11px] text-site-muted">{r.note}</span>}
+                        {r.note && <span className="block text-[11px] text-site-muted whitespace-normal leading-snug mt-1 max-w-[10rem] sm:max-w-none ml-auto">{r.note}</span>}
                       </td>
                     </tr>
                   ))}

@@ -200,7 +200,7 @@ export default async function SalonDetailPage({ salonKey }: { salonKey: string }
                     {cat.items.map((item) => (
                       <div key={item.name} className="bg-white border border-site-greige p-4 flex justify-between items-start gap-3">
                         <div>
-                          <p className="font-serif text-sm font-semibold mb-0.5">{item.name}</p>
+                          <p className="wrap-phrase font-serif text-sm font-semibold mb-0.5">{item.name}</p>
                           {item.desc && <p className="text-xs text-site-muted">{item.desc}</p>}
                         </div>
                         <p className="text-sm font-medium text-site-accent whitespace-nowrap">{item.price}</p>
@@ -276,7 +276,7 @@ export default async function SalonDetailPage({ salonKey }: { salonKey: string }
               {salon.faq.map((faq, i) => (
                 <details key={i} className="bg-white border border-site-greige group">
                   <summary className="flex items-start justify-between gap-4 p-5 cursor-pointer list-none">
-                    <span className="text-sm font-medium leading-relaxed">
+                    <span className="wrap-phrase text-sm font-medium leading-relaxed">
                       <span className="text-site-accent mr-2">Q.</span>{faq.q}
                     </span>
                     <span className="flex-shrink-0 text-site-muted text-lg leading-none group-open:rotate-45 transition-transform duration-200">+</span>

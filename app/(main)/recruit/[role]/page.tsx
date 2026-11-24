@@ -204,7 +204,7 @@ export default function RecruitRolePage({ params }: Props) {
             {role.faq.map((f, i) => (
               <details key={i} className="group p-5">
                 <summary className="flex items-start justify-between gap-4 cursor-pointer list-none">
-                  <span className="text-sm font-medium leading-relaxed"><span className="text-site-accent mr-2">Q.</span>{f.q}</span>
+                  <span className="wrap-phrase text-sm font-medium leading-relaxed"><span className="text-site-accent mr-2">Q.</span>{f.q}</span>
                   <span className="flex-shrink-0 text-site-muted text-lg leading-none group-open:rotate-45 transition-transform duration-200">+</span>
                 </summary>
                 <p className="mt-4 text-sm text-site-muted leading-relaxed border-t border-site-greige pt-4"><span className="text-site-accent mr-2">A.</span>{f.a}</p>
