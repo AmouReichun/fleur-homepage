@@ -13,6 +13,7 @@ export const metadata: Metadata = {
 import { getContentCached } from "@/lib/content";
 import { rivSalonSchema, fleuramiSalonSchema, raffineSalonSchema, founderPersonSchema } from "@/lib/structured-data";
 import HeroSlideshow from "@/app/components/HeroSlideshow";
+import { scriptFont, StarBurst, Spark, Swoosh, OvalSticker } from "@/app/components/HeroDecor";
 import QuickLinkGrid from "@/app/components/QuickLinkGrid";
 import SalonCards from "@/app/components/SalonCards";
 import PopularMenuSlider from "@/app/components/PopularMenuSlider";
@@ -107,45 +108,52 @@ export default async function HomePage() {
 
       {/* ─── Hero ─── */}
       <HeroSlideshow images={heroImages} hasImage={hasImage}>
-        {/* 文字の大きさは黄金比：13 → 21 → 34 → 55px */}
-        <p aria-hidden className="whitespace-nowrap font-serif italic text-[34px] xl:text-[55px] leading-none text-site-accent/80 mb-[13px] animate-fadeinup">
-          fleur <span className="text-site-pop">GROUP</span>
-        </p>
-        <h1 className="flex items-center gap-[13px] text-[13px] tracking-[0.3em] text-site-muted mb-[21px] lg:mb-[34px] animate-fadeinup">
-          <span aria-hidden className="w-[21px] h-px bg-site-pop" />
+        {/* 飾り：ピンクの星（ギザギザ）・キラッ・ステッカー */}
+        <StarBurst className="absolute z-10 right-[13px] top-[76px] sm:right-[8%] sm:top-[110px] lg:right-[13%] lg:top-[16%] w-[122px] h-[122px] sm:w-[190px] sm:h-[190px] lg:w-[233px] lg:h-[233px] rotate-[-8deg]">
+          <span className="font-serif text-[12px] sm:text-[15px] lg:text-[17px] leading-[1.6] font-medium">髪と目元で、<br />なりたい自分へ。</span>
+          <span className="mt-1 text-[7px] sm:text-[9px] tracking-[0.25em] border-b border-white/80 pb-0.5">HAIR &amp; EYELASH</span>
+        </StarBurst>
+        <Spark className="absolute top-[30%] left-[13%] w-[21px] h-[21px]" />
+        <Spark className="absolute top-[22%] right-[42%] w-[16px] h-[16px]" style={{ animationDelay: "-1s" }} />
+        <Spark className="absolute bottom-[34%] right-[8%] w-[13px] h-[13px] hidden sm:block" style={{ animationDelay: "-1.8s" }} />
+        <OvalSticker className="absolute right-[55px] bottom-[55px] lg:right-[89px] lg:bottom-[55px] hidden sm:block" />
+
+        <h1 className="relative text-[11px] sm:text-[13px] tracking-[0.3em] text-site-text/80 mb-[8px] animate-fadeinup">
           高知県の美容室・アイラッシュサロン
         </h1>
-        <p className="hero-catch font-serif text-[34px] sm:text-[42px] xl:text-[55px] font-light text-site-text leading-[1.382] mb-[21px] whitespace-pre-line animate-fadeinup-slow">
+        {/* 手書き風の英字（書いていくように出る） */}
+        <p aria-hidden className={`${scriptFont.className} hd-write relative text-site-text text-[55px] sm:text-[72px] lg:text-[89px] leading-[0.95] -rotate-6 origin-left mb-[8px]`}>
+          Find your<br />
+          <span className="pl-[34px] sm:pl-[55px]">Beauty</span>
+          <Swoosh className="block w-[200px] sm:w-[260px] lg:w-[320px] h-[18px] sm:h-[22px] ml-[55px] sm:ml-[89px] -mt-[8px]" />
+        </p>
+        <p className="hero-catch relative font-serif text-[21px] sm:text-[26px] font-medium text-site-text leading-[1.5] mb-[21px] whitespace-pre-line animate-fadeinup-slow">
           {content.hero.title || "上品なのに、\n抜け感。"}
         </p>
-        {content.hero.subtitle && (
-          <p className="text-[13px] sm:text-sm text-site-muted leading-[1.618] mb-[34px] whitespace-pre-line animate-fadeinup-late">
-            {content.hero.subtitle}
-          </p>
-        )}
+        {content.hero.subtitle && <p className="sr-only">{content.hero.subtitle}</p>}
         {/* 最初の画面の予約ボタン（2026-11-21）：同じページの店舗一覧へ */}
         <a
           href="#salons"
           style={{ animation: "fadeinup 0.9s ease-out 0.6s both" }}
-          className="self-start inline-flex items-center justify-center gap-[13px] bg-site-pop text-white text-sm tracking-[0.2em] px-[34px] py-[13px] sm:py-[21px] hover:opacity-90 transition-opacity duration-300"
+          className="relative inline-flex items-center justify-center gap-[13px] rounded-full bg-site-pop text-white text-[13px] tracking-[0.2em] px-[34px] py-[13px] shadow-[0_8px_21px_rgba(200,56,154,0.35)] hover:scale-105 transition-transform duration-300"
         >
           店舗を選んで予約
-          <span aria-hidden="true">↓</span>
+          <span aria-hidden="true" className="inline-block w-[34px] h-px bg-white relative after:absolute after:right-0 after:-top-[3px] after:w-[7px] after:h-[7px] after:border-r after:border-t after:border-white after:rotate-45" />
         </a>
         {/* 店舗ページへの直接リンク（Googleマップから来た人が1回で自分の店へ。2026-11-21） */}
         <dl
           style={{ animation: "fadeinup 0.9s ease-out 0.8s both" }}
-          className="mt-[21px] grid grid-cols-[auto_1fr] gap-x-[13px] gap-y-1 text-[11px] sm:text-xs text-site-muted tracking-[0.12em] leading-loose"
+          className="relative mt-[21px] grid grid-cols-[auto_1fr] gap-x-[13px] gap-y-1 text-[11px] sm:text-xs text-site-text/80 tracking-[0.12em] leading-loose"
         >
           <dt>美容室</dt>
           <dd>
-            <Link href="/salon/riv" className="underline underline-offset-4 decoration-site-accent/50 hover:text-site-pop">Riv.（高知市）</Link>
-            <span className="mx-1.5 text-site-greige">・</span>
-            <Link href="/salon/fleurami" className="underline underline-offset-4 decoration-site-accent/50 hover:text-site-pop">fleur ami（香南市）</Link>
+            <Link href="/salon/riv" className="underline underline-offset-4 decoration-site-pop/50 hover:text-site-pop">Riv.（高知市）</Link>
+            <span className="mx-1.5 text-site-text/30">・</span>
+            <Link href="/salon/fleurami" className="underline underline-offset-4 decoration-site-pop/50 hover:text-site-pop">fleur ami（香南市）</Link>
           </dd>
           <dt>まつげ・眉毛</dt>
           <dd>
-            <Link href="/salon/raffine" className="underline underline-offset-4 decoration-site-accent/50 hover:text-site-pop">Raffine（はりまや橋）</Link>
+            <Link href="/salon/raffine" className="underline underline-offset-4 decoration-site-pop/50 hover:text-site-pop">Raffine（はりまや橋）</Link>
           </dd>
         </dl>
       </HeroSlideshow>

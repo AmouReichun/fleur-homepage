@@ -47,17 +47,15 @@ export default function HeroSlideshow({ images, children, hasImage }: HeroSlides
   }, [images.length, advance]);
 
   /*
-   * 黄金比（1 : 1.618）のトップ（2026-11-24 社長「黄金比で考えて」）
-   * - 画面の分け方：文字 38.2% ｜ 写真 61.8%（スマホは 写真 61.8% → 文字）
-   * - 余白・文字の大きさ：8 → 13 → 21 → 34 → 55 → 89（1つ前×1.618）
-   * - 写真に暗い膜はかけない（明るく見せる）
+   * トップ：写真の上に手書き風の文字（2026-11-24 社長「Stelléみたいな手書き風・写真の上に文字は残す」）
+   * - 写真は画面いっぱい。暗い膜はかけず、文字側だけ白っぽくぼかして読みやすく
+   * - 白い細枠（Stellé風）。余白は黄金比の段（13/21/34/55）
    */
   return (
-    <section className="relative bg-site-bg pt-14 sm:pt-16 lg:min-h-[100svh] lg:grid lg:grid-cols-[38.2fr_61.8fr]">
-      {/* 写真（61.8%） */}
-      <div className="relative h-[61.8svh] lg:h-auto lg:order-2 overflow-hidden">
-        {hasImage ? (
-          images.map((src, i) =>
+    <section className="hero-script relative min-h-[100svh] flex flex-col justify-end lg:justify-center overflow-hidden pt-14 sm:pt-16">
+      {hasImage ? (
+        <div className="absolute inset-0">
+          {images.map((src, i) =>
             loaded.has(i) ? (
               <Image
                 key={src}
@@ -65,7 +63,7 @@ export default function HeroSlideshow({ images, children, hasImage }: HeroSlides
                 alt=""
                 aria-hidden="true"
                 fill
-                sizes="(max-width: 1024px) 100vw, 62vw"
+                sizes="100vw"
                 quality={75}
                 priority={i === 0}
                 className="object-cover animate-kenburns"
@@ -75,41 +73,38 @@ export default function HeroSlideshow({ images, children, hasImage }: HeroSlides
                 }}
               />
             ) : null
-          )
-        ) : (
-          <div className="absolute inset-0 bg-gradient-to-br from-[#1a1a1a] via-[#2a2420] to-[#1a1a1a]" />
-        )}
-
-        {/* 黄金比の補助線（写真を 61.8 : 38.2 で区切る細い金の線） */}
-        <div aria-hidden className="pointer-events-none absolute inset-[13px] sm:inset-[21px] border border-white/50">
-          <span className="absolute top-0 bottom-0 left-[61.8%] w-px bg-white/40" />
-          <span className="absolute left-[61.8%] right-0 top-[61.8%] h-px bg-white/40" />
+          )}
         </div>
+      ) : (
+        <div className="absolute inset-0 bg-site-light" />
+      )}
+      {/* 文字側だけ白くぼかす（スマホ＝下から、パソコン＝左から） */}
+      <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-white/95 via-white/55 to-transparent lg:bg-gradient-to-r lg:from-white/85 lg:via-white/40 lg:to-transparent" />
 
-        {/* dot indicators */}
-        {images.length > 1 && (
-          <div className="absolute bottom-[34px] right-[34px] flex gap-2 z-10">
-            {images.map((_, i) => (
-              <button
-                key={i}
-                onClick={() => {
-                  setLoaded((s) => addToSet(s, i));
-                  setActive(i);
-                }}
-                aria-label={`画像 ${i + 1}`}
-                className="h-px transition-all duration-500"
-                style={{
-                  width: i === active ? 34 : 13,
-                  backgroundColor: i === active ? "rgba(255,255,255,0.95)" : "rgba(255,255,255,0.5)",
-                }}
-              />
-            ))}
-          </div>
-        )}
-      </div>
+      {/* 白い細枠 */}
+      <div aria-hidden className="pointer-events-none absolute inset-x-[13px] sm:inset-x-[21px] bottom-[13px] sm:bottom-[21px] top-[69px] sm:top-[85px] border-2 border-white/90" />
 
-      {/* 文字（38.2%） */}
-      <div className="relative lg:order-1 flex flex-col justify-center px-[21px] sm:px-[34px] lg:px-[55px] xl:px-[89px] py-[34px] sm:py-[55px]">
+      {/* 右側のスライド番号（01 02 03） */}
+      {images.length > 1 && (
+        <div className="absolute right-[26px] sm:right-[42px] top-1/2 -translate-y-1/2 z-10 hidden sm:flex flex-col items-center gap-[13px]">
+          {images.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => {
+                setLoaded((s) => addToSet(s, i));
+                setActive(i);
+              }}
+              aria-label={`画像 ${i + 1}`}
+              className={`text-[11px] tracking-widest transition-colors ${i === active ? "text-site-text font-bold" : "text-site-text/40"}`}
+            >
+              {String(i + 1).padStart(2, "0")}
+            </button>
+          ))}
+        </div>
+      )}
+
+      {/* 飾りは section 基準で置くので、この箱には relative を付けない */}
+      <div className="w-full max-w-7xl mx-auto px-[34px] sm:px-[55px] lg:px-[89px] pb-[55px] lg:pb-[34px]">
         {children}
       </div>
     </section>
