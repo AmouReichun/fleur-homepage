@@ -18,6 +18,9 @@ const config: Config = {
         "site-light": "#F5F0EA",
         "site-pink": "#F0E8E8",
         "site-greige": "#E8E4E0",
+        // ── 採用ページ（ライムグリーン×ラベンダー）──
+        lime: { DEFAULT: "#C7F500", soft: "#F5FDD6" },
+        lav: { DEFAULT: "#C697EF", soft: "#F4ECFD", deep: "#7A45C9" },
         // ── ブログ統合分 ──
         hair: {
           bg: "#F7F5F2",

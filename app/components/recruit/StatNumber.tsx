@@ -60,7 +60,7 @@ export default function StatNumber({
   return (
     <p
       ref={ref}
-      className="font-serif text-3xl sm:text-4xl text-site-accent leading-none tabular-nums"
+      className="font-serif text-3xl sm:text-4xl text-lime leading-none tabular-nums"
     >
       {isNumeric ? display : value}
       {suffix && <span className="text-lg ml-0.5">{suffix}</span>}

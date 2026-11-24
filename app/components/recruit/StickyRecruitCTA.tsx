@@ -28,7 +28,7 @@ export default function StickyRecruitCTA({
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Instagramで見る・DMで相談"
-        className={`fixed right-4 z-40 flex items-center justify-center w-12 h-12 rounded-full bg-white shadow-lg border border-site-greige text-site-accent transition-all duration-300 hover:scale-105 ${
+        className={`fixed right-4 z-40 flex items-center justify-center w-12 h-12 rounded-full bg-white shadow-lg border border-site-greige text-lav-deep transition-all duration-300 hover:scale-105 ${
           show ? "bottom-24 sm:bottom-8 opacity-100" : "bottom-8 opacity-0 pointer-events-none"
         }`}
       >
@@ -48,7 +48,7 @@ export default function StickyRecruitCTA({
         <div className="bg-white/95 backdrop-blur border-t border-site-greige px-3 py-3 flex gap-2.5 max-w-2xl mx-auto">
           <a
             href="#entry"
-            className="flex-1 text-center bg-site-accent text-white py-3 text-sm font-medium tracking-wide rounded-sm hover:bg-opacity-90 transition-all"
+            className="flex-1 text-center bg-lime text-site-text py-3 text-sm font-bold tracking-wide rounded-full hover:brightness-95 transition-all"
           >
             サロン見学・応募する
           </a>
@@ -56,7 +56,7 @@ export default function StickyRecruitCTA({
             href={instagramUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex-shrink-0 text-center border border-site-accent text-site-accent px-4 py-3 text-sm font-medium tracking-wide rounded-sm hover:bg-site-light transition-all"
+            className="flex-shrink-0 text-center border-2 border-lav text-lav-deep px-4 py-3 text-sm font-bold tracking-wide rounded-full hover:bg-lav-soft transition-all"
           >
             Instagram
           </a>

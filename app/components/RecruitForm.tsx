@@ -53,7 +53,7 @@ export default function RecruitForm({
 
   const labelCls = "block text-xs font-medium text-site-text mb-1.5";
   const fieldCls =
-    "w-full border border-site-greige px-3 py-2.5 text-sm text-site-text bg-white focus:outline-none focus:border-site-accent transition-colors duration-200";
+    "w-full border border-site-greige px-3 py-2.5 text-sm text-site-text bg-white focus:outline-none focus:border-lav transition-colors duration-200";
 
   return (
     <div className="border border-site-greige bg-white p-6 sm:p-8 text-left">
@@ -178,7 +178,7 @@ export default function RecruitForm({
         <button
           type="submit"
           disabled={isPending}
-          className="w-full bg-site-accent text-white py-3.5 text-sm font-medium tracking-wider hover:bg-opacity-90 transition-all duration-200 disabled:opacity-50"
+          className="w-full bg-lime text-site-text py-3.5 text-sm font-bold tracking-wider rounded-full hover:brightness-95 transition-all duration-200 disabled:opacity-50"
         >
           {isPending ? "送信中..." : "この内容で応募する"}
         </button>
