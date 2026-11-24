@@ -106,7 +106,7 @@ export default function BlogSlider({
               onClick={() => goTo(i)}
               aria-label={`ブログ ${i + 1}`}
               className={`block h-px transition-all duration-300 ${
-                i === current ? "w-6 bg-site-accent" : "w-2.5 bg-site-greige hover:bg-site-muted"
+                i === current ? "w-6 bg-site-pop" : "w-2.5 bg-site-greige hover:bg-site-muted"
               }`}
             />
           ))}

@@ -69,7 +69,7 @@ export default function GalleryGrid({ posts }: { posts: PostMeta[] }) {
         {/* セクションヘッダー */}
         <div className="mb-10 sm:mb-14">
           <div className="flex items-center gap-3 mb-4">
-            <div className="w-6 h-px bg-site-accent" />
+            <div className="w-6 h-px bg-site-pop" />
             <span className="text-[10px] tracking-[0.45em] text-site-accent uppercase">05. Gallery</span>
           </div>
           <div className="flex items-end justify-between">
@@ -97,7 +97,7 @@ export default function GalleryGrid({ posts }: { posts: PostMeta[] }) {
                 {/* 大分類ラベル */}
                 <div className="flex items-center gap-4 mb-8">
                   <div className="flex items-center gap-2">
-                    <div className="w-1 h-5 bg-site-accent" />
+                    <div className="w-1 h-5 bg-site-pop" />
                     <span className="font-serif text-xl sm:text-2xl font-light text-site-text">{group.categoryLabel}</span>
                   </div>
                   <span className="text-[10px] tracking-[0.3em] text-site-muted uppercase">{group.en}</span>

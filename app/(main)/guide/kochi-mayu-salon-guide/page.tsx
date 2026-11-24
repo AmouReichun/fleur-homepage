@@ -230,7 +230,7 @@ export default function KochiMayuSalonGuidePage() {
                 ["アフターケア案内", "施術後の注意事項（当日は強い摩擦を避ける等）をお伝えします。"],
               ].map(([step, desc], i) => (
                 <li key={i} className="flex gap-4">
-                  <span className="shrink-0 w-7 h-7 rounded-full bg-site-accent text-white text-xs flex items-center justify-center font-medium">
+                  <span className="shrink-0 w-7 h-7 rounded-full bg-site-pop text-white text-xs flex items-center justify-center font-medium">
                     {i + 1}
                   </span>
                   <div>
@@ -268,7 +268,7 @@ export default function KochiMayuSalonGuidePage() {
             <div className="mt-4 flex flex-wrap gap-3">
               <Link
                 href="/salon/raffine"
-                className="text-xs px-4 py-2 border border-site-accent text-site-accent hover:bg-site-accent hover:text-white transition-colors"
+                className="text-xs px-4 py-2 border border-site-accent text-site-accent hover:bg-site-pop hover:text-white transition-colors"
               >
                 Raffine 詳細・予約
               </Link>

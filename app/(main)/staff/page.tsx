@@ -96,7 +96,7 @@ export default async function StaffPage() {
             <span>スタッフ紹介</span>
           </nav>
           <div className="flex items-center gap-3 mb-4">
-            <div className="w-6 h-px bg-site-accent" />
+            <div className="w-6 h-px bg-site-pop" />
             <span className="text-[10px] tracking-[0.45em] text-site-accent uppercase">Staff</span>
           </div>
           <h1 className="font-serif text-4xl sm:text-5xl font-light text-site-text">スタッフ紹介</h1>

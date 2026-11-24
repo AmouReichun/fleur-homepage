@@ -247,7 +247,7 @@ export default async function AreaPage({ params }: Props) {
                             </div>
                           </div>
                         )}
-                        <Link href={`/salon/${k}`} className="inline-flex items-center gap-3 bg-site-accent text-white px-5 py-3 text-sm font-medium hover:bg-opacity-90 transition-all group">
+                        <Link href={`/salon/${k}`} className="inline-flex items-center gap-3 bg-site-pop text-white px-5 py-3 text-sm font-medium hover:bg-opacity-90 transition-all group">
                           <span>{s.name}の店舗ページを見る</span>
                           <span className="w-5 h-px bg-current group-hover:w-8 transition-all duration-300" />
                         </Link>

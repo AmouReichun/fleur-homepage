@@ -242,7 +242,7 @@ export default function KochiShukumouKyoseiGuidePage() {
                 ["仕上げ・ホームケア案内", "スタイリングで完成後、施術後の過ごし方・おすすめのホームケアをお伝えします。"],
               ].map(([step, desc], i) => (
                 <li key={i} className="flex gap-4">
-                  <span className="shrink-0 w-7 h-7 rounded-full bg-site-accent text-white text-xs flex items-center justify-center font-medium">
+                  <span className="shrink-0 w-7 h-7 rounded-full bg-site-pop text-white text-xs flex items-center justify-center font-medium">
                     {i + 1}
                   </span>
                   <div>
@@ -314,13 +314,13 @@ export default function KochiShukumouKyoseiGuidePage() {
             <div className="mt-4 flex flex-wrap gap-3">
               <Link
                 href="/salon/riv"
-                className="text-xs px-4 py-2 border border-site-accent text-site-accent hover:bg-site-accent hover:text-white transition-colors"
+                className="text-xs px-4 py-2 border border-site-accent text-site-accent hover:bg-site-pop hover:text-white transition-colors"
               >
                 Riv. by fleur ami 詳細
               </Link>
               <Link
                 href="/salon/fleurami"
-                className="text-xs px-4 py-2 border border-site-accent text-site-accent hover:bg-site-accent hover:text-white transition-colors"
+                className="text-xs px-4 py-2 border border-site-accent text-site-accent hover:bg-site-pop hover:text-white transition-colors"
               >
                 fleur ami 詳細
               </Link>

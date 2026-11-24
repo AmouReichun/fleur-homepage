@@ -3,14 +3,16 @@
 @tailwind utilities;
 
 :root {
-  /* 配色：Stellé（ライトグレー × ダークブラウン × ローズピンク）2026-11-24 試し */
-  --site-bg: 246 246 247;      /* #F6F6F7 */
-  --site-text: 79 36 7;        /* #4F2407 ダークブラウン */
-  --site-muted: 125 112 106;   /* #7D706A */
-  --site-accent: 230 0 63;     /* #E6003F ローズピンク（白の上でも読める濃さ） */
-  --site-light: 228 227 230;   /* #E4E3E6 ライトグレー */
-  --site-pink: 255 227 234;    /* #FFE3EA */
-  --site-greige: 217 216 220;  /* #D9D8DC */
+  /* 配色：As Design（オフホワイト × ラズベリーピンク × シャンパンゴールド）2026-11-24 試し
+     金色（accent）は文字・線に残し、ボタンや目印（pop）をラズベリーピンクにする */
+  --site-bg: 255 253 252;      /* #FFFDFC オフホワイト */
+  --site-text: 42 42 42;       /* #2A2A2A */
+  --site-muted: 136 128 128;   /* #888080 */
+  --site-accent: 184 149 106;  /* #B8956A 今の金色（シャンパンゴールド系） */
+  --site-pop: 200 56 154;      /* #C8389A ラズベリーピンク（白文字が読める濃さ） */
+  --site-light: 250 243 247;   /* #FAF3F7 ほんのりピンク */
+  --site-pink: 248 228 240;    /* #F8E4F0 */
+  --site-greige: 236 228 226;  /* #ECE4E2 */
   --background: rgb(var(--site-bg));
   --foreground: rgb(var(--site-text));
 }
@@ -24,6 +26,7 @@
   --site-light: 245 240 234;
   --site-pink: 240 232 232;
   --site-greige: 232 228 224;
+  --site-pop: 184 149 106;
 }
 
 body {
@@ -48,16 +51,16 @@ h1, h2, h3, h4, h5, h6 {
 .glow-surface {
   background-color: #F6F1EB;
   background-image:
-    radial-gradient(70% 90% at 12% -5%, rgba(230, 0, 63, 0.07), transparent 60%),
+    radial-gradient(70% 90% at 12% -5%, rgba(200, 56, 154, 0.07), transparent 60%),
     radial-gradient(60% 80% at 92% 30%, rgba(240, 232, 232, 0.60), transparent 58%),
-    radial-gradient(80% 70% at 55% 110%, rgba(230, 0, 63, 0.05), transparent 62%);
+    radial-gradient(80% 70% at 55% 110%, rgba(184, 149, 106, 0.08), transparent 62%);
 }
 /* 白セクションにも極々薄く光を差して全体を温かく（コントラストは維持） */
 .glow-surface-white {
   background-color: #ffffff;
   background-image:
     radial-gradient(65% 80% at 88% 0%, rgba(240, 232, 232, 0.35), transparent 60%),
-    radial-gradient(70% 70% at 8% 100%, rgba(79, 36, 7, 0.04), transparent 60%);
+    radial-gradient(70% 70% at 8% 100%, rgba(200, 56, 154, 0.04), transparent 60%);
 }
 
 /* アンカー移動をなめらかに（固定ヘッダー分は各要素の scroll-mt で調整済み） */

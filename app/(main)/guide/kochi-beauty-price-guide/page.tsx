@@ -371,10 +371,10 @@ export default function KochiBeautyPriceGuidePage() {
             各店舗の詳細な料金・クーポンはホットペッパービューティーでご確認ください。
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <Link href="/salon/riv" className="inline-block px-6 py-2.5 bg-site-accent text-white text-xs tracking-wider hover:opacity-80 transition-opacity">
+            <Link href="/salon/riv" className="inline-block px-6 py-2.5 bg-site-pop text-white text-xs tracking-wider hover:opacity-80 transition-opacity">
               Riv. by fleur ami（高知市）
             </Link>
-            <Link href="/salon/fleurami" className="inline-block px-6 py-2.5 border border-site-accent text-site-accent text-xs tracking-wider hover:bg-site-accent hover:text-white transition-colors">
+            <Link href="/salon/fleurami" className="inline-block px-6 py-2.5 border border-site-accent text-site-accent text-xs tracking-wider hover:bg-site-pop hover:text-white transition-colors">
               fleur ami（香南市）
             </Link>
             <Link href="/salon/raffine" className="inline-block px-6 py-2.5 border border-site-greige text-site-text text-xs tracking-wider hover:border-site-accent hover:text-site-accent transition-colors">

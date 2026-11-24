@@ -154,7 +154,7 @@ export default function StaffTabs({ staff }: { staff: StaffMember[] }) {
                 ({tab.count})
               </span>
               {category === tab.value && (
-                <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-site-accent" />
+                <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-site-pop" />
               )}
             </button>
           ))}
@@ -197,7 +197,7 @@ export default function StaffTabs({ staff }: { staff: StaffMember[] }) {
           className={!mounted && gi > 0 ? "mt-16 pt-6 border-t border-site-greige" : ""}
         >
           <div className="flex items-center gap-3 mt-10 mb-10">
-            <div className="w-6 h-px bg-site-accent" />
+            <div className="w-6 h-px bg-site-pop" />
             <p className="text-[10px] tracking-[0.35em] text-site-accent uppercase">{g.label}</p>
             <span className="text-[10px] text-site-muted">— {g.members.length}名</span>
           </div>

@@ -77,7 +77,7 @@ export default function NewsTabs({
               onClick={() => selectCat(c.key)}
               className={`px-6 sm:px-8 py-2 rounded-full text-sm tracking-wider transition-colors ${
                 cat === c.key
-                  ? "bg-site-accent text-white"
+                  ? "bg-site-pop text-white"
                   : "text-site-muted hover:text-site-text"
               }`}
             >

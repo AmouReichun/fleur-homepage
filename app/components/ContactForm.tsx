@@ -127,7 +127,7 @@ export default function ContactForm() {
         <button
           type="submit"
           disabled={isPending}
-          className="w-full bg-site-accent text-white py-3.5 text-sm font-medium tracking-wider hover:bg-opacity-90 transition-all duration-200 disabled:opacity-50"
+          className="w-full bg-site-pop text-white py-3.5 text-sm font-medium tracking-wider hover:bg-opacity-90 transition-all duration-200 disabled:opacity-50"
         >
           {isPending ? "送信中..." : "送信する"}
         </button>

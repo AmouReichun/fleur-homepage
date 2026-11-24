@@ -224,10 +224,10 @@ export default function KochiMatugePermGuidePage() {
             <div className="flex gap-2"><dt className="text-site-text w-16 flex-shrink-0">クチコミ</dt><dd>Google 4.9 ★（46件）</dd></div>
           </dl>
           <div className="mt-4 flex flex-col sm:flex-row gap-2">
-            <Link href="/salon/raffine" className="inline-block px-5 py-2 bg-site-accent text-white text-xs tracking-wider hover:opacity-80 transition-opacity text-center">
+            <Link href="/salon/raffine" className="inline-block px-5 py-2 bg-site-pop text-white text-xs tracking-wider hover:opacity-80 transition-opacity text-center">
               Raffine 店舗詳細
             </Link>
-            <Link href="/service/matsuge-perm" className="inline-block px-5 py-2 border border-site-accent text-site-accent text-xs tracking-wider hover:bg-site-accent hover:text-white transition-colors text-center">
+            <Link href="/service/matsuge-perm" className="inline-block px-5 py-2 border border-site-accent text-site-accent text-xs tracking-wider hover:bg-site-pop hover:text-white transition-colors text-center">
               まつげパーマのサービス詳細
             </Link>
           </div>
@@ -354,7 +354,7 @@ export default function KochiMatugePermGuidePage() {
           <p className="text-xs text-site-muted mb-6">
             Raffine（高知市はりまや橋）にてご予約受付中。予約優先制。
           </p>
-          <Link href="/salon/raffine" className="inline-block px-8 py-3 bg-site-accent text-white text-xs tracking-wider hover:opacity-80 transition-opacity">
+          <Link href="/salon/raffine" className="inline-block px-8 py-3 bg-site-pop text-white text-xs tracking-wider hover:opacity-80 transition-opacity">
             Raffine の予約・店舗詳細を見る
           </Link>
         </section>

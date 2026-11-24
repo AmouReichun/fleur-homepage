@@ -46,9 +46,9 @@ export default function ReservationChannels({
     <div className="max-w-4xl mx-auto">
       <div className="text-center mb-8">
         <div className="flex items-center gap-3 mb-3 justify-center">
-          <div className="w-6 h-px bg-site-accent" />
+          <div className="w-6 h-px bg-site-pop" />
           <span className="text-[10px] tracking-[0.4em] text-site-accent uppercase">Reservation</span>
-          <div className="w-6 h-px bg-site-accent" />
+          <div className="w-6 h-px bg-site-pop" />
         </div>
         <h2 className="font-serif text-2xl sm:text-3xl font-light text-site-text">{heading}</h2>
         {note && <p className="text-xs text-site-muted mt-2 whitespace-pre-line sm:whitespace-normal">{note}</p>}

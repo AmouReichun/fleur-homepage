@@ -34,7 +34,7 @@ export default function Error({
       <div className="flex gap-4">
         <button
           onClick={() => window.location.reload()}
-          className="bg-site-accent text-white px-8 py-3 text-sm font-medium tracking-wider hover:bg-opacity-90 transition-all duration-200"
+          className="bg-site-pop text-white px-8 py-3 text-sm font-medium tracking-wider hover:bg-opacity-90 transition-all duration-200"
         >
           再読み込み
         </button>

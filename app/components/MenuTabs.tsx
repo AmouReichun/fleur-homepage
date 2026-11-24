@@ -38,7 +38,7 @@ function SalonMenuBlock({
               href={salon.hotpepperUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 text-xs tracking-[0.2em] text-white bg-site-accent px-5 py-2.5 hover:bg-opacity-90 transition-all"
+              className="inline-flex items-center gap-3 text-xs tracking-[0.2em] text-white bg-site-pop px-5 py-2.5 hover:bg-opacity-90 transition-all"
             >
               予約する
             </a>
@@ -132,7 +132,7 @@ export default function MenuTabs({ salonOrder, menus, salons }: MenuTabsProps) {
                 ({tab.count})
               </span>
               {category === tab.value && (
-                <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-site-accent" />
+                <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-site-pop" />
               )}
             </button>
           ))}

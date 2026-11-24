@@ -79,7 +79,7 @@ export default function ServiceIndexPage() {
             <span>サービス一覧</span>
           </nav>
           <div className="flex items-center gap-3 mb-4">
-            <div className="w-6 h-px bg-site-accent" />
+            <div className="w-6 h-px bg-site-pop" />
             <span className="text-[10px] tracking-[0.45em] text-site-accent uppercase">Service</span>
           </div>
           <h1 className="font-serif text-4xl sm:text-5xl font-light text-site-text">サービス一覧</h1>

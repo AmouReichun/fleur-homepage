@@ -136,7 +136,7 @@ export default function SalonSlider({ salons }: { salons: SalonSlide[] }) {
                 onClick={() => { pause(); setCurrent(i); }}
                 aria-label={`スライド ${i + 1}`}
                 className={`block h-px transition-all duration-300 ${
-                  i === current ? "w-8 bg-site-accent" : "w-3 bg-site-greige hover:bg-site-muted"
+                  i === current ? "w-8 bg-site-pop" : "w-3 bg-site-greige hover:bg-site-muted"
                 }`}
               />
             ))}

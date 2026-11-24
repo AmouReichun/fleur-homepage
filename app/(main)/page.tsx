@@ -34,7 +34,7 @@ function SectionLabel({ index, en, ja }: { index: string; en: string; ja: string
   return (
     <div className="mb-12 sm:mb-16">
       <Reveal className="flex items-center gap-3 mb-4">
-        <div className="w-6 h-px bg-site-accent" />
+        <div className="w-6 h-px bg-site-pop" />
         <span className="text-[10px] tracking-[0.45em] text-site-accent uppercase">{index}. {en}</span>
       </Reveal>
       <Reveal delay={120}>

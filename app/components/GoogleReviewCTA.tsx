@@ -32,7 +32,7 @@ export default function GoogleReviewCTA({
                 href={s.reviewUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-xs font-medium text-white bg-site-accent px-4 py-2 rounded-full hover:opacity-90 transition-opacity whitespace-nowrap"
+                className="inline-flex items-center gap-2 text-xs font-medium text-white bg-site-pop px-4 py-2 rounded-full hover:opacity-90 transition-opacity whitespace-nowrap"
               >
                 ★ クチコミを書く
               </a>

@@ -84,7 +84,7 @@ export default function MobileReserveBar() {
               href={primaryOf(current).href}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex-[2] text-center text-[13px] tracking-[0.02em] text-white bg-site-accent py-3"
+              className="flex-[2] text-center text-[13px] tracking-[0.02em] text-white bg-site-pop py-3"
             >
               {primaryOf(current).label}
             </a>
@@ -101,7 +101,7 @@ export default function MobileReserveBar() {
           <button
             type="button"
             onClick={() => setOpen(true)}
-            className="w-full text-center text-sm tracking-[0.15em] text-white bg-site-accent py-3"
+            className="w-full text-center text-sm tracking-[0.15em] text-white bg-site-pop py-3"
           >
             ご予約（店舗を選ぶ）
           </button>
@@ -128,7 +128,7 @@ export default function MobileReserveBar() {
                     href={primaryOf(s).href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block text-center text-sm tracking-[0.1em] text-white bg-site-accent py-3"
+                    className="block text-center text-sm tracking-[0.1em] text-white bg-site-pop py-3"
                   >
                     {primaryOf(s).label}
                   </a>

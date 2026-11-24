@@ -324,10 +324,10 @@ export default function KochiHairCareGuidePage() {
             初めての方も丁寧なカウンセリングで最適な施術をご提案します。
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <Link href="/salon/riv" className="text-xs px-6 py-3 border border-site-accent text-site-accent hover:bg-site-accent hover:text-white transition-colors tracking-wider">
+            <Link href="/salon/riv" className="text-xs px-6 py-3 border border-site-accent text-site-accent hover:bg-site-pop hover:text-white transition-colors tracking-wider">
               Riv. by fleur ami（高知市）
             </Link>
-            <Link href="/salon/fleurami" className="text-xs px-6 py-3 border border-site-accent text-site-accent hover:bg-site-accent hover:text-white transition-colors tracking-wider">
+            <Link href="/salon/fleurami" className="text-xs px-6 py-3 border border-site-accent text-site-accent hover:bg-site-pop hover:text-white transition-colors tracking-wider">
               fleur ami（香南市）
             </Link>
           </div>

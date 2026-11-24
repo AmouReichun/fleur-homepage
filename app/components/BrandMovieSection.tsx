@@ -69,7 +69,7 @@ export default function BrandMovieSection() {
       <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
         <Reveal className="mb-14">
           <div className="flex items-center gap-3 mb-4">
-            <div className="w-6 h-px bg-site-accent" />
+            <div className="w-6 h-px bg-site-pop" />
             <span className="text-[10px] tracking-[0.45em] text-site-accent uppercase">04. Film</span>
           </div>
           <h2 className="font-serif text-4xl sm:text-5xl font-light text-white">ブランドムービー</h2>

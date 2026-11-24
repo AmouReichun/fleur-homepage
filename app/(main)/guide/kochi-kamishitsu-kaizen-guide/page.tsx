@@ -329,13 +329,13 @@ export default function KochiKamishitsuKaizenGuidePage() {
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link
               href="/salon/riv"
-              className="inline-block px-6 py-2.5 bg-site-accent text-white text-xs tracking-wider hover:opacity-80 transition-opacity"
+              className="inline-block px-6 py-2.5 bg-site-pop text-white text-xs tracking-wider hover:opacity-80 transition-opacity"
             >
               Riv. by fleur ami を見る
             </Link>
             <Link
               href="/salon/fleurami"
-              className="inline-block px-6 py-2.5 border border-site-accent text-site-accent text-xs tracking-wider hover:bg-site-accent hover:text-white transition-colors"
+              className="inline-block px-6 py-2.5 border border-site-accent text-site-accent text-xs tracking-wider hover:bg-site-pop hover:text-white transition-colors"
             >
               fleur ami を見る
             </Link>

@@ -121,7 +121,7 @@ export default async function SalonDetailPage({ salonKey }: { salonKey: string }
               href={salon.webReserveUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex-1 sm:flex-none sm:w-64 text-center bg-site-accent text-white py-4 text-sm font-medium tracking-wider hover:bg-opacity-90 transition-all duration-200"
+              className="flex-1 sm:flex-none sm:w-64 text-center bg-site-pop text-white py-4 text-sm font-medium tracking-wider hover:bg-opacity-90 transition-all duration-200"
             >
               Web予約する
             </a>
@@ -142,7 +142,7 @@ export default async function SalonDetailPage({ salonKey }: { salonKey: string }
               href={salon.hotpepperUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex-1 sm:flex-none sm:w-64 text-center bg-site-accent text-white py-4 text-sm font-medium tracking-wider hover:bg-opacity-90 transition-all duration-200"
+              className="flex-1 sm:flex-none sm:w-64 text-center bg-site-pop text-white py-4 text-sm font-medium tracking-wider hover:bg-opacity-90 transition-all duration-200"
             >
               ホットペッパーで予約する
             </a>

@@ -32,7 +32,7 @@ export default function AreaHubPage() {
               <span>エリアから探す</span>
             </nav>
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-6 h-px bg-site-accent" />
+              <div className="w-6 h-px bg-site-pop" />
               <span className="text-[10px] tracking-[0.45em] text-site-accent uppercase">Area</span>
             </div>
             <h1 className="font-serif text-4xl sm:text-5xl font-light text-site-text mb-4">エリアから探す</h1>
@@ -103,7 +103,7 @@ export default function AreaHubPage() {
                 <Link
                   key={s.href}
                   href={s.href}
-                  className="text-xs px-6 py-3 border border-site-accent text-site-accent hover:bg-site-accent hover:text-white transition-colors tracking-wider"
+                  className="text-xs px-6 py-3 border border-site-accent text-site-accent hover:bg-site-pop hover:text-white transition-colors tracking-wider"
                   style={{ borderRadius: "2px" }}
                 >
                   {s.name}

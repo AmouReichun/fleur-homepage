@@ -98,7 +98,7 @@ export default async function MenuPage() {
             <span>メニュー</span>
           </nav>
           <div className="flex items-center gap-3 mb-4">
-            <div className="w-6 h-px bg-site-accent" />
+            <div className="w-6 h-px bg-site-pop" />
             <span className="text-[10px] tracking-[0.45em] text-site-accent uppercase">Menu</span>
           </div>
           <h1 className="font-serif text-4xl sm:text-5xl font-light text-site-text">メニュー一覧</h1>
@@ -120,9 +120,9 @@ export default async function MenuPage() {
       <section className="py-14 sm:py-16 bg-site-bg border-t border-site-greige">
         <div className="max-w-4xl mx-auto px-6 sm:px-10">
           <div className="flex items-center gap-3 mb-3 justify-center">
-            <div className="w-6 h-px bg-site-accent" />
+            <div className="w-6 h-px bg-site-pop" />
             <span className="text-[10px] tracking-[0.4em] text-site-accent uppercase">Service Guide</span>
-            <div className="w-6 h-px bg-site-accent" />
+            <div className="w-6 h-px bg-site-pop" />
           </div>
           <h2 className="font-serif text-2xl sm:text-3xl font-light text-site-text text-center mb-3">サービス別の詳しい解説</h2>
           <p className="text-xs text-site-muted text-center mb-8">お悩み・効果・FAQ・対応店舗をサービスごとにご紹介しています</p>
@@ -140,9 +140,9 @@ export default async function MenuPage() {
       <section className="py-14 sm:py-16 bg-white border-t border-site-greige">
         <div className="max-w-4xl mx-auto px-6 sm:px-10">
           <div className="flex items-center gap-3 mb-3 justify-center">
-            <div className="w-6 h-px bg-site-accent" />
+            <div className="w-6 h-px bg-site-pop" />
             <span className="text-[10px] tracking-[0.4em] text-site-accent uppercase">Blog</span>
-            <div className="w-6 h-px bg-site-accent" />
+            <div className="w-6 h-px bg-site-pop" />
           </div>
           <h2 className="font-serif text-2xl sm:text-3xl font-light text-site-text text-center mb-3">メニューに関する記事</h2>
           <p className="text-xs text-site-muted text-center mb-8">各メニューの仕上がり・施術例は症例ブログで詳しくご紹介しています</p>
