@@ -89,50 +89,10 @@ export default function HeroEditor({ initial }: { initial: HeroData }) {
     });
   }
 
-  const hasImage = data.images.length > 0;
-
-  const preview = (
-    <section className={`relative overflow-hidden min-h-[300px] flex items-center ${hasImage ? "" : "bg-[#F5F0EA]"}`}>
-      {hasImage ? (
-        <>
-          <div className="absolute inset-0">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={data.images[0]} alt="" className="w-full h-full object-cover" />
-          </div>
-          <div className="absolute inset-0 bg-black/45" />
-        </>
-      ) : (
-        <div className="absolute inset-0 bg-gradient-to-br from-[#F0E8E8]/40 via-[#F5F0EA] to-white/60" />
-      )}
-      <div className="relative w-full max-w-4xl mx-auto px-4 py-16 text-center">
-        <p className={`text-xs tracking-[0.3em] mb-4 uppercase ${hasImage ? "text-white/80" : "text-[#B8956A]"}`}>
-          fleur GROUP
-        </p>
-        <h1 className={`text-xl font-semibold leading-snug mb-4 ${hasImage ? "text-white" : "text-[#2A2A2A]"}`}>
-          {data.title || "（タイトルを入力）"}
-        </h1>
-        <p className={`text-sm leading-relaxed max-w-2xl mx-auto mb-8 ${hasImage ? "text-white/80" : "text-[#888888]"}`}>
-          {data.subtitle || "（サブタイトルを入力）"}
-        </p>
-        <div className="flex flex-col sm:flex-row gap-3 justify-center">
-          <span className="inline-block bg-[#B8956A] text-white px-8 py-3 text-sm font-medium tracking-wider">
-            {data.cta1 || "店舗を選ぶ"}
-          </span>
-          <span className={`inline-block px-8 py-3 text-sm font-medium tracking-wider ${hasImage ? "border border-white text-white" : "border border-[#2A2A2A] text-[#2A2A2A]"}`}>
-            {data.cta2 || "ブログを読む"}
-          </span>
-        </div>
-        {data.images.length > 1 && (
-          <p className="text-xs text-white/60 mt-4">※ {data.images.length}枚の画像がスライドショーで表示されます</p>
-        )}
-      </div>
-    </section>
-  );
-
   return (
     <SectionLayout
       title="ヒーローセクション"
-      preview={preview}
+      previewPath={"/"}
       onSave={handleSave}
       saving={isPending}
       saveStatus={saveStatus}

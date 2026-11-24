@@ -143,34 +143,10 @@ export default function RecruitEditor({ initial }: { initial: RecruitData }) {
     });
   }
 
-  const preview = (
-    <div className="bg-white">
-      <div className="bg-[#2A2A2A] text-white py-12 px-5 text-center">
-        <p className="text-[10px] tracking-[0.3em] text-[#B8956A] mb-3 uppercase">Recruit</p>
-        <h1 className="text-xl font-semibold whitespace-pre-line">{data.heroTitle || "（ヘッドライン）"}</h1>
-      </div>
-      <div className="p-5 space-y-2 text-xs text-[#666]">
-        <p>ブランドFV: {data.brands?.length ?? 0}件 / 私たちについて: {data.values?.length ?? 0}件</p>
-        <p>スタッフ紹介: {data.staffVoices?.length ?? 0}件 / 数字: {data.stats?.length ?? 0}件</p>
-        <p>1日の流れ: 美容師{data.dayHair?.length ?? 0} / アイリスト{data.dayEye?.length ?? 0}</p>
-        <p>教育: {data.education?.length ?? 0}件 / キャリア: 美{data.careerHair?.length ?? 0}・アイ{data.careerEye?.length ?? 0}</p>
-        <p>募集要項: {data.requirements?.length ?? 0}件 / FAQ: {data.faq?.length ?? 0}件</p>
-        <div className="grid grid-cols-3 gap-2 pt-3">
-          {(data.stats ?? []).map((s, i) => (
-            <div key={i} className="text-center border border-[#eee] rounded p-2">
-              <p className="text-[#B8956A] font-semibold text-sm">{s.value}{s.suffix ?? ""}</p>
-              <p className="text-[9px] text-[#999] mt-1">{s.label}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
-
   return (
     <SectionLayout
       title="採用情報"
-      preview={preview}
+      previewPath={"/recruit"}
       onSave={handleSave}
       saving={isPending}
       saveStatus={saveStatus}

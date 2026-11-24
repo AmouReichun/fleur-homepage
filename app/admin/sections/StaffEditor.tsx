@@ -6,7 +6,6 @@ import SectionLayout from "../components/SectionLayout";
 import ImageUpload from "../components/ImageUpload";
 import { TextField, StringListField } from "../components/FormField";
 import type { StaffMember, SalonContent } from "@/lib/content";
-import Image from "next/image";
 
 export default function StaffEditor({
   initial,
@@ -93,46 +92,10 @@ export default function StaffEditor({
     });
   }
 
-  const preview = (
-    <div className="py-12 px-4">
-      <p className="text-xs tracking-[0.3em] text-[#B8956A] mb-2 uppercase text-center">Staff</p>
-      <h2 className="text-2xl font-semibold text-[#2A2A2A] mb-2 text-center">スタッフ紹介</h2>
-      <p className="text-xs text-[#888] text-center mb-6">{activeTab}</p>
-      <div className="grid grid-cols-2 gap-4 max-w-3xl mx-auto">
-        {tabEntries.map(({ member, index }) => (
-          <div key={index} className="border border-[#E8E4E0] overflow-hidden">
-            {member.imageSrc ? (
-              <div className="relative h-40 w-full">
-                <Image src={member.imageSrc} alt={member.name} fill className="object-cover" unoptimized />
-              </div>
-            ) : (
-              <div className="bg-[#F5F0EA] h-40 flex items-center justify-center">
-                <span className="text-[#888] text-xs">[写真]</span>
-              </div>
-            )}
-            <div className="p-4">
-              <div className="flex items-center gap-2 mb-1">
-                <span className="text-xs bg-[#F5F0EA] text-[#2A2A2A] px-2 py-0.5 rounded-full">
-                  {member.salon || "サロン"}
-                </span>
-                <span className="text-xs text-[#888]">{member.role || "役職"}</span>
-              </div>
-              <p className="text-sm font-semibold mb-1">{member.name || "（名前）"}</p>
-              <p className="text-xs text-[#888] leading-relaxed">{member.bio || "（紹介文）"}</p>
-            </div>
-          </div>
-        ))}
-        {tabEntries.length === 0 && (
-          <p className="text-sm text-[#888] col-span-2 text-center">スタッフがいません</p>
-        )}
-      </div>
-    </div>
-  );
-
   return (
     <SectionLayout
       title="スタッフ紹介"
-      preview={preview}
+      previewPath={"/staff"}
       onSave={handleSave}
       saving={isPending}
       saveStatus={saveStatus}

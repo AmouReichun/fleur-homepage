@@ -70,96 +70,10 @@ export default function SalonEditor({ salonKey, initial }: SalonEditorProps) {
     handleSave(updated);
   }
 
-  const bgClass = "bg-[#F5F0EA]";
-
-  const preview = (
-    <div>
-      <div className={`${bgClass} py-10`}>
-        <div className="max-w-6xl mx-auto px-4">
-          <p className="text-xs tracking-[0.3em] text-[#B8956A] mb-2 uppercase">
-            {data.area}
-          </p>
-          <h1 className="text-3xl font-semibold text-[#2A2A2A] mb-3">
-            {data.name || "（店舗名）"}
-          </h1>
-          <p className="text-sm text-[#888888] max-w-xl leading-relaxed">
-            {data.tagline || "（タグライン）"}
-          </p>
-        </div>
-      </div>
-
-      {/* Image placeholder */}
-      <div className="max-w-6xl mx-auto px-4 py-6">
-        {data.imageSrc ? (
-          // eslint-disable-next-line @next/next/no-img-element
-          <img
-            src={data.imageSrc}
-            alt={data.name}
-            className="w-full h-48 object-cover border border-[#E8E4E0]"
-          />
-        ) : (
-          <div className="bg-[#F5F0EA] h-48 flex items-center justify-center border border-[#E8E4E0]">
-            <span className="text-[#888] text-sm">[店舗写真]</span>
-          </div>
-        )}
-      </div>
-
-      {/* Features */}
-      <div className="max-w-4xl mx-auto px-4 pb-6">
-        <p className="text-sm font-semibold text-[#2A2A2A] mb-3">特徴</p>
-        <div className="flex flex-wrap gap-2">
-          {data.features.map((f, i) => (
-            <span key={i} className="text-xs bg-[#F5F0EA] text-[#2A2A2A] px-3 py-1 rounded-full">
-              {f}
-            </span>
-          ))}
-        </div>
-      </div>
-
-      {/* Info table */}
-      <div className="max-w-4xl mx-auto px-4 pb-6">
-        <div className="border border-[#E8E4E0] overflow-hidden">
-          {[
-            { label: "住所", value: data.address },
-            { label: "電話", value: data.phone },
-            { label: "平日", value: data.hoursWeekday },
-            { label: "土曜", value: data.hoursSaturday },
-            { label: "定休日", value: data.closed },
-            { label: "駐車場", value: data.parking },
-          ].map((row) => (
-            <div key={row.label} className="flex border-b border-[#E8E4E0] last:border-b-0">
-              <div className="w-24 bg-[#FAFAF8] px-3 py-2.5 text-xs font-medium text-[#2A2A2A] flex-shrink-0">
-                {row.label}
-              </div>
-              <div className="px-3 py-2.5 text-xs text-[#888]">{row.value || "—"}</div>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* FAQ preview */}
-      <div className="max-w-3xl mx-auto px-4 pb-8">
-        <p className="text-sm font-semibold text-[#2A2A2A] mb-3">FAQ</p>
-        <div className="space-y-3">
-          {data.faq.map((item, i) => (
-            <div key={i} className="bg-[#FAFAF8] border border-[#E8E4E0] p-4">
-              <p className="text-xs font-medium mb-1">
-                <span className="text-[#B8956A] mr-1">Q.</span>{item.q || "（質問）"}
-              </p>
-              <p className="text-xs text-[#888]">
-                <span className="text-[#B8956A] mr-1">A.</span>{item.a || "（回答）"}
-              </p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
-
   return (
     <SectionLayout
       title={`${data.name} 店舗情報`}
-      preview={preview}
+      previewPath={`/salon/${salonKey}`}
       onSave={handleSave}
       saving={isPending}
       saveStatus={saveStatus}

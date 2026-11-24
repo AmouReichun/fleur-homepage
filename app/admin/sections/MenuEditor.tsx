@@ -93,38 +93,10 @@ export default function MenuEditor({
     });
   }
 
-  const activeName = salons[activeTab]?.name ?? activeTab;
-
-  const preview = (
-    <div className="p-6">
-      <p className="text-xs tracking-[0.3em] text-[#B8956A] mb-1 uppercase">{activeName}</p>
-      <h2 className="text-xl font-semibold text-[#2A2A2A] mb-6">メニュー</h2>
-      {categories.map((cat, i) => (
-        <div key={i} className="mb-6">
-          <p className="text-sm font-semibold text-[#2A2A2A] mb-3 border-b border-[#E8E4E0] pb-2">
-            {cat.category || "（カテゴリー）"}
-          </p>
-          <div className="space-y-2">
-            {cat.items.map((item, j) => (
-              <div key={j} className="bg-[#FAFAF8] border border-[#E8E4E0] p-4 flex justify-between items-start gap-4">
-                <div>
-                  <p className="text-sm font-semibold text-[#2A2A2A]">{item.name || "（名前）"}</p>
-                  {item.desc && <p className="text-xs text-[#888]">{item.desc}</p>}
-                </div>
-                <p className="text-sm font-medium text-[#B8956A] whitespace-nowrap">{item.price || "—"}</p>
-              </div>
-            ))}
-            {cat.items.length === 0 && <p className="text-xs text-[#888] italic">（メニューなし）</p>}
-          </div>
-        </div>
-      ))}
-    </div>
-  );
-
   return (
     <SectionLayout
       title="メニュー編集"
-      preview={preview}
+      previewPath={"/menu"}
       onSave={handleSave}
       saving={isPending}
       saveStatus={saveStatus}

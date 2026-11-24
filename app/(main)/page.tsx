@@ -164,7 +164,7 @@ export default async function HomePage() {
       </section>
 
       {/* ─── Menu ─── */}
-      <section className="py-20 sm:py-24 glow-surface">
+      <section id="popular-menu" className="scroll-mt-16 py-20 sm:py-24 glow-surface">
         <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
           <SectionLabel index="02" en="Menu" ja="人気メニュー" />
 
@@ -233,7 +233,7 @@ export default async function HomePage() {
       <StaffPreview staff={content.staff.filter((m) => !m.hidden)} />
 
       {/* ─── FAQ ─── */}
-      <section className="py-20 sm:py-24 glow-surface">
+      <section id="faq" className="scroll-mt-16 py-20 sm:py-24 glow-surface">
         <div className="max-w-4xl mx-auto px-6 sm:px-10">
           <SectionLabel index="07" en="FAQ" ja="よくあるご質問" />
 

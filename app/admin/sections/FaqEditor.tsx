@@ -48,61 +48,8 @@ export default function FaqEditor({
     });
   }
 
-  // グループ化（プレビュー用）
-  const grouped = SALON_OPTIONS.map((s) => ({
-    ...s,
-    items: data.filter((f) => f.salon === s.key),
-  })).filter((g) => g.items.length > 0);
-  const common = data.filter((f) => !f.salon);
-
-  const preview = (
-    <div className="bg-[#F5F0EA] py-10 px-4">
-      <p className="text-[9px] tracking-[0.4em] text-[#B8956A] uppercase mb-1 text-center">04. FAQ</p>
-      <h2 className="text-lg font-semibold text-[#2A2A2A] mb-8 text-center">よくあるご質問</h2>
-
-      {common.length > 0 && (
-        <div className="max-w-sm mx-auto mb-8 space-y-3">
-          {common.map((item, i) => (
-            <div key={i} className="bg-white border border-[#E8E4E0] p-3">
-              <p className="text-[11px] font-medium text-[#2A2A2A]">
-                <span className="text-[#B8956A] mr-1">Q.</span>{item.q || "（質問を入力）"}
-              </p>
-              <p className="text-[10px] text-[#888] mt-1.5">
-                <span className="text-[#B8956A] mr-1">A.</span>{item.a || "（回答を入力）"}
-              </p>
-            </div>
-          ))}
-        </div>
-      )}
-
-      <div className="max-w-sm mx-auto space-y-8">
-        {grouped.map((g) => (
-          <div key={g.key}>
-            <div className="flex items-center gap-2 mb-3">
-              <span className="text-[9px] tracking-[0.3em] text-[#999] uppercase whitespace-nowrap">{g.label}</span>
-              <div className="flex-1 h-px bg-[#E8E4E0]" />
-            </div>
-            <div className="space-y-2">
-              {g.items.map((item, i) => (
-                <div key={i} className="bg-white border border-[#E8E4E0] p-3">
-                  <p className="text-[11px] font-medium text-[#2A2A2A]">
-                    <span className="text-[#B8956A] mr-1">Q.</span>{item.q || "（質問を入力）"}
-                  </p>
-                  <p className="text-[10px] text-[#888] mt-1.5">
-                    <span className="text-[#B8956A] mr-1">A.</span>{item.a || "（回答を入力）"}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        ))}
-        {data.length === 0 && <p className="text-xs text-[#888] text-center py-6">FAQがありません</p>}
-      </div>
-    </div>
-  );
-
   return (
-    <SectionLayout title="よくある質問（トップページ）" preview={preview} onSave={handleSave} saving={isPending} saveStatus={saveStatus} saveError={saveError}>
+    <SectionLayout title="よくある質問（トップページ）" previewPath={"/#faq"} onSave={handleSave} saving={isPending} saveStatus={saveStatus} saveError={saveError}>
       <p className="text-xs text-[#888] mb-4">各質問にサロンを紐付けると、トップページでサロン別にグループ表示されます。</p>
       <div className="space-y-3">
         {data.map((item, i) => (

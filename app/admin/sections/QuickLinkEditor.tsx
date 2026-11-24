@@ -93,43 +93,10 @@ export default function QuickLinkEditor({ initial }: { initial: QuickLinkCard[] 
     });
   }
 
-  const preview = (
-    <div className="p-4 bg-white">
-      <div className="grid grid-cols-2 gap-2 max-w-sm mx-auto">
-        {cards.slice(0, 8).map((card, i) => (
-          <div
-            key={card.id}
-            className="relative overflow-hidden"
-            style={{ height: 90 }}
-          >
-            {card.imageSrc ? (
-              <Image src={card.imageSrc} alt={card.title} fill className="object-cover" unoptimized />
-            ) : (
-              <div className="w-full h-full bg-stone-800" />
-            )}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-            <div className="absolute bottom-0 left-0 right-0 p-2">
-              <p className="text-white text-[10px] font-medium leading-tight">{card.title || `カード ${i + 1}`}</p>
-              {card.description && (
-                <p className="text-white/50 text-[8px] leading-tight">{card.description}</p>
-              )}
-            </div>
-          </div>
-        ))}
-        {cards.length === 0 && (
-          <p className="col-span-2 text-center text-[#888] text-xs py-6">カードがありません</p>
-        )}
-      </div>
-      {cards.length > 8 && (
-        <p className="text-center text-xs text-[#888] mt-2">＋{cards.length - 8}枚（プレビューは先頭8枚）</p>
-      )}
-    </div>
-  );
-
   return (
     <SectionLayout
       title="クイックリンク（トップページ）"
-      preview={preview}
+      previewPath={"/"}
       onSave={handleSave}
       saving={isPending}
       saveStatus={saveStatus}

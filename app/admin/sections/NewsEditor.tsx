@@ -48,9 +48,6 @@ export default function NewsEditor({
     ...catSalonKeys.map((k) => ({ value: k, label: salons[k]?.name ?? k })),
   ];
 
-  const salonLabel = (key?: string) =>
-    key ? salons[key]?.name ?? key : "全店舗共通";
-
   // 現在のタブに表示する記事（全店舗共通は両タブに表示）
   const sorted = [...data]
     .filter((item) => {
@@ -101,50 +98,10 @@ export default function NewsEditor({
     });
   }
 
-  const preview = (
-    <div className="p-6">
-      <p className="text-xs tracking-[0.3em] text-[#B8956A] mb-1 uppercase">News</p>
-      <h2 className="text-xl font-semibold text-[#2A2A2A] mb-4">最新情報</h2>
-      {/* 業態タブ（プレビュー） */}
-      <div className="inline-flex border border-[#E8E4E0] rounded-full p-0.5 bg-[#F4F2EF] mb-6">
-        {CATEGORY_TABS.map((t) => (
-          <span
-            key={t.key}
-            className={`px-4 py-1 rounded-full text-xs ${
-              activeCat === t.key ? "bg-[#B8956A] text-white" : "text-[#888]"
-            }`}
-          >
-            {t.label}
-          </span>
-        ))}
-      </div>
-      {sorted.length === 0 ? (
-        <p className="text-xs text-[#888] text-center py-8">お知らせがありません</p>
-      ) : (
-        <div className="divide-y divide-[#E8E4E0]">
-          {sorted.map((item) => (
-            <div key={item.id} className="py-5 first:pt-0">
-              <div className="flex items-center gap-2 mb-2">
-                <span className="text-[10px] text-[#888]">{item.date.replace(/-/g, ".")}</span>
-                <span className="text-[10px] text-[#B8956A] border border-[#B8956A]/40 px-1.5 py-0.5">
-                  {salonLabel(item.salon)}
-                </span>
-              </div>
-              <p className="text-sm font-semibold text-[#2A2A2A] mb-1">{item.title || "（タイトル）"}</p>
-              <p className="text-xs text-[#888] leading-relaxed whitespace-pre-line line-clamp-3">
-                {item.body || "（内容）"}
-              </p>
-            </div>
-          ))}
-        </div>
-      )}
-    </div>
-  );
-
   return (
     <SectionLayout
       title="最新情報"
-      preview={preview}
+      previewPath={"/news"}
       onSave={handleSave}
       saving={isPending}
       saveStatus={saveStatus}

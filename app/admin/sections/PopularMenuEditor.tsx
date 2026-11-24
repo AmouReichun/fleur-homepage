@@ -4,7 +4,7 @@ import { useState, useTransition } from "react";
 import { saveContent } from "../actions";
 import SectionLayout from "../components/SectionLayout";
 import type { PopularMenu, SalonContent } from "@/lib/content";
-import { popularMenuSalonKeys, popularMenuSalonLabel } from "@/lib/popular-menu";
+import { popularMenuSalonKeys } from "@/lib/popular-menu";
 
 export default function PopularMenuEditor({
   initial,
@@ -81,57 +81,10 @@ export default function PopularMenuEditor({
     });
   }
 
-  const hairItems = items.filter((m) => m.category === "hair");
-  const eyelashItems = items.filter((m) => m.category === "eyelash");
-
-  const renderPreviewItem = (item: PopularMenu, i: number) => (
-    <div key={i} className="flex items-start gap-4 py-3 border-b border-[#E8E4E0]">
-      <span className="text-[10px] text-[#B8956A] font-mono pt-0.5 flex-shrink-0 w-5">
-        {String(i + 1).padStart(2, "0")}
-      </span>
-      <div>
-        <p className="text-sm font-medium text-[#2A2A2A]">{item.name || "（名前未入力）"}</p>
-        <p className="text-[11px] text-[#888] mt-0.5">{item.desc}</p>
-        <p className="text-[10px] text-[#B8956A] mt-1">{popularMenuSalonLabel(item, salons, salonOrder)}</p>
-      </div>
-    </div>
-  );
-
-  const preview = (
-    <div className="bg-[#FAFAF8] py-8 px-4">
-      <p className="text-[9px] tracking-[0.4em] text-[#B8956A] uppercase mb-1 text-center">02. Menu</p>
-      <h2 className="text-lg font-semibold text-[#2A2A2A] mb-6 text-center">人気メニュー</h2>
-
-      {hairItems.length > 0 && (
-        <div className="mb-6 max-w-sm mx-auto">
-          <div className="flex items-center gap-2 mb-3">
-            <span className="text-[9px] tracking-[0.3em] text-[#999] uppercase">Hair Salon</span>
-            <div className="flex-1 h-px bg-[#E8E4E0]" />
-          </div>
-          {hairItems.map(renderPreviewItem)}
-        </div>
-      )}
-
-      {eyelashItems.length > 0 && (
-        <div className="max-w-sm mx-auto">
-          <div className="flex items-center gap-2 mb-3">
-            <span className="text-[9px] tracking-[0.3em] text-[#999] uppercase">Eyelash Salon</span>
-            <div className="flex-1 h-px bg-[#E8E4E0]" />
-          </div>
-          {eyelashItems.map(renderPreviewItem)}
-        </div>
-      )}
-
-      {items.length === 0 && (
-        <p className="text-center text-[#888] text-xs py-6">メニューがありません</p>
-      )}
-    </div>
-  );
-
   return (
     <SectionLayout
       title="人気メニュー（トップページ）"
-      preview={preview}
+      previewPath={"/#popular-menu"}
       onSave={handleSave}
       saving={isPending}
       saveStatus={saveStatus}

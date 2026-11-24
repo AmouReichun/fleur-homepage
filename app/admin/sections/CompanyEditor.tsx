@@ -44,40 +44,10 @@ export default function CompanyEditor({ initial }: { initial: CompanyData }) {
     });
   }
 
-  const rows = [
-    { label: "グループ名", value: "fleur GROUP" },
-    { label: "会社名", value: data.name },
-    { label: "代表者", value: data.representative },
-    { label: "設立", value: data.founded },
-    { label: "所在地", value: data.address },
-    { label: "電話番号", value: data.phone },
-    { label: "メール", value: data.email },
-    { label: "事業内容", value: data.business },
-  ];
-
-  const preview = (
-    <div className="py-12 px-4">
-      <div className="max-w-4xl mx-auto">
-        <p className="text-xs tracking-[0.3em] text-[#B8956A] mb-2 uppercase">Company</p>
-        <h1 className="text-2xl font-semibold text-[#2A2A2A] mb-8">会社概要</h1>
-        <div className="border border-[#E8E4E0] overflow-hidden">
-          {rows.map((row) => (
-            <div key={row.label} className="flex border-b border-[#E8E4E0] last:border-b-0">
-              <div className="w-32 bg-[#FAFAF8] px-4 py-3 text-xs font-medium text-[#2A2A2A] flex-shrink-0">
-                {row.label}
-              </div>
-              <div className="px-4 py-3 text-sm text-[#888] whitespace-pre-line">{row.value || "—"}</div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
-
   return (
     <SectionLayout
       title="会社概要"
-      preview={preview}
+      previewPath={"/company"}
       onSave={handleSave}
       saving={isPending}
       saveStatus={saveStatus}

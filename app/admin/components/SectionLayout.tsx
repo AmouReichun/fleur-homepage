@@ -1,9 +1,12 @@
 "use client";
 
+import LivePreview from "./LivePreview";
+
 interface SectionLayoutProps {
   title: string;
   children: React.ReactNode;
-  preview: React.ReactNode;
+  /** 右側に映す公開ページのパス（例："/recruit"、"/#faq"） */
+  previewPath: string;
   onSave: () => void;
   saving: boolean;
   saveStatus: "idle" | "success" | "error";
@@ -13,7 +16,7 @@ interface SectionLayoutProps {
 export default function SectionLayout({
   title,
   children,
-  preview,
+  previewPath,
   onSave,
   saving,
   saveStatus,
@@ -62,12 +65,9 @@ export default function SectionLayout({
           <div className="p-4 md:p-5 space-y-4">{children}</div>
         </div>
 
-        {/* 右：プレビュー */}
-        <div className="w-full md:w-1/2 md:overflow-y-auto bg-white">
-          <div className="px-4 py-3 bg-gray-50 border-b border-gray-200 sticky top-0 z-10">
-            <p className="text-xs font-semibold text-[#666] uppercase tracking-wider">👁　プレビュー（実際の見た目）</p>
-          </div>
-          <div className="text-[#2A2A2A]">{preview}</div>
+        {/* 右：プレビュー（本物の公開ページをそのまま映す） */}
+        <div className="w-full md:w-1/2 h-[80vh] md:h-auto flex flex-col bg-white">
+          <LivePreview path={previewPath} saveStatus={saveStatus} />
         </div>
       </div>
     </div>
