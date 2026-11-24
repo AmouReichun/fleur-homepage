@@ -13,10 +13,6 @@ const PHOTOS = [
   { src: "/images/admin/staff-7-1782195080215.webp", alt: "Raffine アイリストのスタッフ写真", cls: "col-span-1 translate-y-0" },
 ];
 
-function manen(n: number) {
-  return `${Math.round(n / 1000) / 10}`.replace(/\.0$/, "");
-}
-
 type Voice = { name?: string; role?: string; brand?: string; image?: string };
 
 export default function RecruitFeature({ stats, voices }: { stats?: Stat[]; voices?: Voice[] }) {
@@ -93,7 +89,7 @@ export default function RecruitFeature({ stats, voices }: { stats?: Stat[]; voic
                     <span>
                       <span className="block text-white text-base sm:text-lg">{r.title}</span>
                       <span className="block text-xs text-white/55 mt-1">
-                        月給 {manen(r.salaryRange.min)}万〜{manen(r.salaryRange.max)}万円 ／ {r.areas.join("・")}
+                        {r.salaryShort} ／ {r.areas.join("・")}
                       </span>
                     </span>
                     <span className="text-xs tracking-[0.2em] text-site-accent group-hover:translate-x-1 transition-transform">詳しく見る →</span>

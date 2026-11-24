@@ -35,7 +35,10 @@ export interface RoleDef {
   tasks: string[];        // 仕事内容
   forWhom: string[];      // こんな方を歓迎
   salary: SalaryRow[];    // 給与（見える化）
-  salaryRange: { min: number; max: number };
+  /** Google向けの月給。max は「上限が決まっている」ときだけ（無い＝〜） */
+  salaryRange: { min: number; max?: number };
+  /** 一覧で出す短い給与表記（ページの給与欄と同じ内容） */
+  salaryShort: string;
   conditions: { label: string; value: string }[]; // 待遇（見える化）
   career: CareerStep[];   // キャリアパス（見える化）
   faq: { q: string; a: string }[];
@@ -78,7 +81,8 @@ export const ROLES: RoleDef[] = [
     salary: [
       { label: "スタイリスト", amount: "月給 23万円〜 ＋歩合", note: "経験・実績により優遇" },
     ],
-    salaryRange: { min: 230000, max: 350000 },
+    salaryRange: { min: 230000 },
+    salaryShort: "月給23万円〜＋歩合",
     conditions: [
       { label: "休日", value: "毎週月曜・第1,3火曜＋シフト休（完全週休2日制）" },
       ...COMMON_CONDITIONS,
@@ -120,7 +124,8 @@ export const ROLES: RoleDef[] = [
     salary: [
       { label: "アシスタント", amount: "月給 22万円", note: "技術習得に応じてスタイリストへ昇給" },
     ],
-    salaryRange: { min: 220000, max: 230000 },
+    salaryRange: { min: 220000, max: 220000 },
+    salaryShort: "月給22万円",
     conditions: [
       { label: "休日", value: "毎週月曜・第1,3火曜＋シフト休（完全週休2日制）" },
       ...COMMON_CONDITIONS,
@@ -163,7 +168,8 @@ export const ROLES: RoleDef[] = [
       { label: "アイリスト（経験者）", amount: "月給 22万円〜 ＋歩合" },
       { label: "アイリスト（未経験）", amount: "月給 20万円〜", note: "研修からスタート" },
     ],
-    salaryRange: { min: 200000, max: 300000 },
+    salaryRange: { min: 200000 },
+    salaryShort: "月給20万円〜（経験者22万円〜＋歩合）",
     conditions: [
       { label: "休日", value: "4週8休制＋シフト休" },
       ...COMMON_CONDITIONS,

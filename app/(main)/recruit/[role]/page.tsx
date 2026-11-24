@@ -5,7 +5,19 @@ import { getRole, getAllRoleSlugs, ROLES } from "@/lib/recruit-roles";
 import { breadcrumbSchema } from "@/lib/structured-data";
 
 const BASE = "https://fleur-group.jp";
-const HIRING_ORG = { "@type": "Organization", name: "fleur GROUP", sameAs: BASE };
+// 雇い主＝登記上の会社名（Riv.・fleur ami＝株式会社フルール・アミー、Raffine＝株式会社フルール・ロータス）。店名・グループ名も別名で添える
+function hiringOrg(salonName: string) {
+  const isRaffine = salonName === "Raffine";
+  return {
+    "@type": "Organization",
+    name: isRaffine ? "株式会社フルール・ロータス" : "株式会社フルール・アミー",
+    alternateName: isRaffine
+      ? ["Raffine", "ラフィーネ", "fleur GROUP", "フルールグループ"]
+      : [salonName, salonName === "fleur ami" ? "フルールアミー" : "リヴ バイ フルールアミー", "fleur GROUP", "フルールグループ"],
+    sameAs: BASE,
+    logo: `${BASE}/icon.png`,
+  };
+}
 const DATE_POSTED = "2026-06-01";
 const VALID_THROUGH = "2027-06-30";
 
@@ -50,7 +62,7 @@ export default function RecruitRolePage({ params }: Props) {
     datePosted: DATE_POSTED,
     validThrough: VALID_THROUGH,
     employmentType: "FULL_TIME",
-    hiringOrganization: HIRING_ORG,
+    hiringOrganization: hiringOrg(loc.salonName),
     industry: "美容業",
     occupationalCategory: role.occupation,
     jobLocation: {
@@ -67,7 +79,9 @@ export default function RecruitRolePage({ params }: Props) {
     baseSalary: {
       "@type": "MonetaryAmount",
       currency: "JPY",
-      value: { "@type": "QuantitativeValue", minValue: role.salaryRange.min, maxValue: role.salaryRange.max, unitText: "MONTH" },
+      value: role.salaryRange.max === role.salaryRange.min
+        ? { "@type": "QuantitativeValue", value: role.salaryRange.min, unitText: "MONTH" }
+        : { "@type": "QuantitativeValue", minValue: role.salaryRange.min, ...(role.salaryRange.max ? { maxValue: role.salaryRange.max } : {}), unitText: "MONTH" },
     },
     directApply: true,
   }));

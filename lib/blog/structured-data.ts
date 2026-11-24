@@ -1,3 +1,4 @@
+import { firstAndThirdTuesdayClosures } from "../salon-holidays";
 import { Post, PostMeta } from "./posts";
 import { salonDisplayName } from "@/lib/salon-display";
 
@@ -32,6 +33,7 @@ export const SALONS = {
         closes: "18:00",
       },
     ],
+    specialOpeningHoursSpecification: firstAndThirdTuesdayClosures(),
     description:
       "香南市の大人女性向けヘアサロン。艶カラー・髪質改善・白髪ぼかし・縮毛矯正を得意とする。のいち駅から車4分。駐車場7台無料。定休日：月曜・第1第3火曜。",
     hasOfferCatalog: {
@@ -110,6 +112,7 @@ export const SALONS = {
         closes: "18:30",
       },
     ],
+    specialOpeningHoursSpecification: firstAndThirdTuesdayClosures(),
     description:
       "高知市の20〜40代に人気のヘアサロン。艶カラー・ミルボンの髪質改善・白髪ぼかし・縮毛矯正・ハイライト。資生堂の似合わせカット。高知IC車4分、駐車場5台無料。定休日：月曜・第1第3火曜。",
     hasOfferCatalog: {

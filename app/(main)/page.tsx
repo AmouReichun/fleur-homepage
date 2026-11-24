@@ -115,7 +115,7 @@ export default async function HomePage() {
         {/* 大きいピンクの星（白い枠をまたぐ）＋下からのぞく星 */}
         <StarBurst className="absolute z-10 right-[4px] top-[58px] sm:right-[5%] sm:top-[80px] lg:right-[6%] lg:top-[64px] w-[160px] h-[160px] sm:w-[240px] sm:h-[240px] lg:w-[300px] lg:h-[300px] rotate-[-10deg]" inner={30}>
           <span className={`${handJaFont.className} text-[14px] sm:text-[21px] lg:text-[26px] leading-[1.4] -rotate-6`}>髪と目元で、<br />なりたい自分へ。</span>
-          <span className="mt-1.5 text-[6px] sm:text-[9px] tracking-[0.2em] border-b border-white/80 pb-0.5">HAIR &amp; EYELASH SALON</span>
+          <span className="mt-2.5 sm:mt-3.5 text-[6px] sm:text-[9px] tracking-[0.06em] sm:tracking-[0.2em] whitespace-nowrap border-b border-white/80 pb-0.5">HAIR &amp; EYELASH SALON</span>
         </StarBurst>
         <StarBurst className="absolute z-10 left-[34%] -bottom-[55px] w-[110px] h-[110px] sm:w-[150px] sm:h-[150px] lg:left-[30%] lg:-bottom-[60px] lg:w-[170px] lg:h-[170px]" points={8} inner={20} spin={false} />
         <Spark className="absolute top-[18%] left-[38%] w-[34px] h-[34px] lg:top-[16%] lg:left-[30%]" />
@@ -123,7 +123,7 @@ export default async function HomePage() {
         <Spark className="absolute top-[52%] right-[10%] w-[21px] h-[21px] lg:top-[64%] lg:right-[36%]" style={{ animationDelay: "-1.8s" }} />
         <OvalSticker className="absolute right-[55px] bottom-[55px] lg:right-[89px] lg:bottom-[55px] hidden sm:block" />
 
-        <h1 className="relative text-[11px] sm:text-[12px] tracking-[0.3em] text-site-text/80 mb-[8px] animate-fadeinup">
+        <h1 className="relative self-start w-fit text-[11px] sm:text-[12px] tracking-[0.2em] sm:tracking-[0.3em] text-site-text sm:text-site-text/80 bg-[#CCCBCE]/90 sm:bg-transparent px-2 py-0.5 sm:p-0 mb-[8px] animate-fadeinup">
           高知県の美容室・アイラッシュサロン
         </h1>
         {/* 手書き風の英字：3行で大きく（書いていくように出る） */}
@@ -153,13 +153,13 @@ export default async function HomePage() {
         >
           <dt>美容室</dt>
           <dd>
-            <Link href="/salon/riv" className="underline underline-offset-4 decoration-site-accent/40 hover:text-site-rose">Riv.（高知市）</Link>
-            <span className="mx-1.5 text-site-text/30">・</span>
-            <Link href="/salon/fleurami" className="underline underline-offset-4 decoration-site-accent/40 hover:text-site-rose">fleur ami（香南市）</Link>
+            <Link href="/salon/riv" className="whitespace-nowrap underline underline-offset-4 decoration-site-accent/40 hover:text-site-rose">Riv.（高知市）</Link>
+            <span className="hidden sm:inline mx-1.5 text-site-text/30">・</span><br className="sm:hidden" />
+            <Link href="/salon/fleurami" className="whitespace-nowrap underline underline-offset-4 decoration-site-accent/40 hover:text-site-rose">fleur ami（香南市）</Link>
           </dd>
           <dt>まつげ・眉毛</dt>
           <dd>
-            <Link href="/salon/raffine" className="underline underline-offset-4 decoration-site-accent/40 hover:text-site-rose">Raffine（はりまや橋）</Link>
+            <Link href="/salon/raffine" className="whitespace-nowrap underline underline-offset-4 decoration-site-accent/40 hover:text-site-rose">Raffine（はりまや橋）</Link>
           </dd>
         </dl>
       </HeroSlideshow>

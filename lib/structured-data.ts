@@ -1,3 +1,4 @@
+import { firstAndThirdTuesdayClosures } from "./salon-holidays";
 const BASE = "https://fleur-group.jp";
 
 export const founderPersonSchema = {
@@ -186,6 +187,7 @@ export const rivSalonSchema = {
       closes: "18:30",
     },
   ],
+  specialOpeningHoursSpecification: firstAndThirdTuesdayClosures(),
   hasOfferCatalog: {
     "@type": "OfferCatalog",
     name: "得意メニュー",
@@ -257,6 +259,7 @@ export const fleuramiSalonSchema = {
       closes: "18:00",
     },
   ],
+  specialOpeningHoursSpecification: firstAndThirdTuesdayClosures(),
   hasOfferCatalog: {
     "@type": "OfferCatalog",
     name: "得意メニュー",
