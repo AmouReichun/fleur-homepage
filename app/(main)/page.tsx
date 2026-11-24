@@ -113,8 +113,8 @@ export default async function HomePage() {
       <HeroSlideshow images={heroImages} hasImage={hasImage}>
         {/* 飾り：ピンクの星（ギザギザ）・キラッ・ステッカー */}
         {/* 大きいピンクの星（白い枠をまたぐ）＋下からのぞく星 */}
-        <StarBurst className="absolute z-30 -right-[10px] top-[48px] sm:right-[4%] sm:top-[64px] lg:right-[5%] lg:top-[70px] w-[210px] h-[210px] sm:w-[280px] sm:h-[280px] lg:w-[340px] lg:h-[340px] rotate-[-10deg]" inner={31} points={9} irregular>
-          <span className={`${handJaFont.className} text-[14px] sm:text-[21px] lg:text-[26px] leading-[1.4] -rotate-6`}>髪と目元で、<br />なりたい自分へ。</span>
+        <StarBurst className="absolute z-30 -right-[34px] top-[34px] sm:right-[3%] sm:top-[50px] lg:right-[4%] lg:top-[56px] w-[240px] h-[240px] sm:w-[310px] sm:h-[310px] lg:w-[380px] lg:h-[380px] rotate-[-10deg]" inner={24} points={8} irregular>
+          <span className={`${handJaFont.className} text-[13px] sm:text-[18px] lg:text-[23px] leading-[1.4] -rotate-6`}>髪と目元で、<br />なりたい自分へ。</span>
           <span className="mt-2.5 sm:mt-3.5 text-[6px] sm:text-[9px] tracking-[0.06em] sm:tracking-[0.2em] whitespace-nowrap border-b border-white/80 pb-0.5">HAIR &amp; EYELASH SALON</span>
         </StarBurst>
         <StarBurst className="absolute z-10 left-[34%] -bottom-[55px] w-[110px] h-[110px] sm:w-[150px] sm:h-[150px] lg:left-[30%] lg:-bottom-[60px] lg:w-[170px] lg:h-[170px]" points={8} inner={20} spin={false} />
