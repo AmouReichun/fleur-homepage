@@ -123,7 +123,7 @@ export default async function HomePage() {
         <Spark className="absolute top-[52%] right-[10%] w-[21px] h-[21px] lg:top-[64%] lg:right-[36%]" style={{ animationDelay: "-1.8s" }} />
         <OvalSticker className="absolute right-[55px] bottom-[55px] lg:right-[89px] lg:bottom-[55px] hidden sm:block" />
 
-        <h1 className="relative self-start w-fit text-[11px] sm:text-[12px] tracking-[0.2em] sm:tracking-[0.3em] text-site-text sm:text-site-text/80 bg-[#CCCBCE]/90 sm:bg-transparent px-2 py-0.5 sm:p-0 mb-[8px] animate-fadeinup">
+        <h1 className="relative self-start w-fit text-[11px] sm:text-[12px] lg:text-[13px] font-medium tracking-[0.2em] sm:tracking-[0.3em] text-site-text bg-[#CCCBCE]/90 lg:bg-transparent px-2 py-0.5 lg:p-0 z-20 mb-[21px] sm:mb-[34px] lg:mb-[55px] animate-fadeinup">
           高知県の美容室・アイラッシュサロン
         </h1>
         {/* 手書き風の英字：3行で大きく（書いていくように出る） */}
