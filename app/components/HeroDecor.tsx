@@ -1,22 +1,25 @@
-import { Yellowtail } from "next/font/google";
+import { Kaushan_Script, Yomogi } from "next/font/google";
 
 /** トップの手書き風デザイン用（2026-11-24 社長：Stelléみたいな手書き風・写真の上に文字） */
-export const scriptFont = Yellowtail({ subsets: ["latin"], weight: "400", display: "swap", preload: true });
+// 筆で書いたような太めの筆記体（Stellé の「Find Your Style」に寄せる）
+export const scriptFont = Kaushan_Script({ subsets: ["latin"], weight: "400", display: "swap", preload: true });
+// 星の中の手書き風の日本語
+export const handJaFont = Yomogi({ subsets: ["latin"], weight: "400", display: "swap", preload: false });
 
 const PINK = "rgb(var(--site-rose))"; // アクセントのローズピンク
 
 /** Stellé風のギザギザ星（starburst） */
-export function StarBurst({ className = "", children }: { className?: string; children?: React.ReactNode }) {
+export function StarBurst({ className = "", children, points = 12, inner = 34, spin = true }: { className?: string; children?: React.ReactNode; points?: number; inner?: number; spin?: boolean }) {
   const pts: string[] = [];
-  const n = 12;
+  const n = points;
   for (let i = 0; i < n * 2; i++) {
-    const r = i % 2 === 0 ? 50 : 34;
+    const r = i % 2 === 0 ? 50 : inner;
     const a = (Math.PI * i) / n - Math.PI / 2;
     pts.push(`${(50 + r * Math.cos(a)).toFixed(2)},${(50 + r * Math.sin(a)).toFixed(2)}`);
   }
   return (
     <div className={className}>
-      <svg viewBox="0 0 100 100" className="absolute inset-0 w-full h-full hd-spin" aria-hidden>
+      <svg viewBox="0 0 100 100" className={`absolute inset-0 w-full h-full ${spin ? "hd-spin" : ""}`} aria-hidden>
         <polygon points={pts.join(" ")} fill={PINK} />
       </svg>
       <div className="relative h-full flex flex-col items-center justify-center text-center text-white">{children}</div>

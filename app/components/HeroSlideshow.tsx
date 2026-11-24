@@ -52,10 +52,11 @@ export default function HeroSlideshow({ images, children, hasImage }: HeroSlides
    * - 白い細枠（Stellé風）。余白は黄金比の段（13/21/34/55）
    */
   return (
-    <section className="hero-script relative min-h-[100svh] flex flex-col justify-end lg:justify-center overflow-hidden pt-14 sm:pt-16">
-      {hasImage ? (
-        <div className="absolute inset-0">
-          {images.map((src, i) =>
+    <section className="hero-script relative min-h-[100svh] flex flex-col justify-end lg:justify-center overflow-hidden pt-14 sm:pt-16 bg-[#CCCBCE]">
+      {/* 写真：スマホは上 62%、パソコンは右 62%。グレーの無地になじませる（Stellé風） */}
+      <div className="absolute inset-x-0 top-14 sm:top-16 h-[62%] lg:h-auto lg:bottom-0 lg:left-auto lg:w-[62%] overflow-hidden">
+        {hasImage ? (
+          images.map((src, i) =>
             loaded.has(i) ? (
               <Image
                 key={src}
@@ -63,23 +64,20 @@ export default function HeroSlideshow({ images, children, hasImage }: HeroSlides
                 alt=""
                 aria-hidden="true"
                 fill
-                sizes="100vw"
+                sizes="(max-width: 1024px) 100vw, 62vw"
                 quality={75}
                 priority={i === 0}
-                className="object-cover animate-kenburns"
+                className="object-cover object-top lg:object-center animate-kenburns"
                 style={{
                   opacity: i === active ? 1 : 0,
                   transition: "opacity 1.5s ease-in-out",
                 }}
               />
             ) : null
-          )}
-        </div>
-      ) : (
-        <div className="absolute inset-0 bg-site-light" />
-      )}
-      {/* 文字側だけ白くぼかす（スマホ＝下から、パソコン＝左から） */}
-      <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-site-light/95 via-site-light/55 to-transparent lg:bg-gradient-to-r lg:from-site-light/90 lg:via-site-light/40 lg:to-transparent" />
+          )
+        ) : null}
+        <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-[#CCCBCE] via-[#CCCBCE]/10 to-transparent lg:bg-gradient-to-r lg:from-[#CCCBCE] lg:via-[#CCCBCE]/0 lg:to-transparent" />
+      </div>
 
       {/* 白い細枠 */}
       <div aria-hidden className="pointer-events-none absolute inset-x-[13px] sm:inset-x-[21px] bottom-[13px] sm:bottom-[21px] top-[69px] sm:top-[85px] border-2 border-white/90" />

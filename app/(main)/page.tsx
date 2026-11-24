@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 import { getContentCached } from "@/lib/content";
 import { rivSalonSchema, fleuramiSalonSchema, raffineSalonSchema, founderPersonSchema } from "@/lib/structured-data";
 import HeroSlideshow from "@/app/components/HeroSlideshow";
-import { scriptFont, StarBurst, Spark, Swoosh, OvalSticker, ScriptLabel } from "@/app/components/HeroDecor";
+import { scriptFont, handJaFont, StarBurst, Spark, Swoosh, OvalSticker, ScriptLabel } from "@/app/components/HeroDecor";
 import QuickLinkGrid from "@/app/components/QuickLinkGrid";
 import SalonCards from "@/app/components/SalonCards";
 import PopularMenuSlider from "@/app/components/PopularMenuSlider";
@@ -112,25 +112,28 @@ export default async function HomePage() {
       {/* ─── Hero ─── */}
       <HeroSlideshow images={heroImages} hasImage={hasImage}>
         {/* 飾り：ピンクの星（ギザギザ）・キラッ・ステッカー */}
-        <StarBurst className="absolute z-10 right-[13px] top-[76px] sm:right-[8%] sm:top-[110px] lg:right-[13%] lg:top-[16%] w-[122px] h-[122px] sm:w-[190px] sm:h-[190px] lg:w-[233px] lg:h-[233px] rotate-[-8deg]">
-          <span className="font-serif text-[12px] sm:text-[15px] lg:text-[17px] leading-[1.6] font-medium">髪と目元で、<br />なりたい自分へ。</span>
-          <span className="mt-1 text-[7px] sm:text-[9px] tracking-[0.25em] border-b border-white/80 pb-0.5">HAIR &amp; EYELASH</span>
+        {/* 大きいピンクの星（白い枠をまたぐ）＋下からのぞく星 */}
+        <StarBurst className="absolute z-10 right-[4px] top-[58px] sm:right-[5%] sm:top-[80px] lg:right-[6%] lg:top-[64px] w-[160px] h-[160px] sm:w-[240px] sm:h-[240px] lg:w-[300px] lg:h-[300px] rotate-[-10deg]" inner={30}>
+          <span className={`${handJaFont.className} text-[14px] sm:text-[21px] lg:text-[26px] leading-[1.4] -rotate-6`}>髪と目元で、<br />なりたい自分へ。</span>
+          <span className="mt-1.5 text-[6px] sm:text-[9px] tracking-[0.2em] border-b border-white/80 pb-0.5">HAIR &amp; EYELASH SALON</span>
         </StarBurst>
-        <Spark className="absolute top-[30%] left-[13%] w-[21px] h-[21px]" />
-        <Spark className="absolute top-[22%] right-[42%] w-[16px] h-[16px]" style={{ animationDelay: "-1s" }} />
-        <Spark className="absolute bottom-[34%] right-[8%] w-[13px] h-[13px] hidden sm:block" style={{ animationDelay: "-1.8s" }} />
+        <StarBurst className="absolute z-10 left-[34%] -bottom-[55px] w-[110px] h-[110px] sm:w-[150px] sm:h-[150px] lg:left-[30%] lg:-bottom-[60px] lg:w-[170px] lg:h-[170px]" points={8} inner={20} spin={false} />
+        <Spark className="absolute top-[18%] left-[38%] w-[34px] h-[34px] lg:top-[16%] lg:left-[30%]" />
+        <Spark className="absolute top-[46%] left-[6%] w-[26px] h-[26px] lg:top-[58%] lg:left-[5%]" style={{ animationDelay: "-1s" }} />
+        <Spark className="absolute top-[52%] right-[10%] w-[21px] h-[21px] lg:top-[64%] lg:right-[36%]" style={{ animationDelay: "-1.8s" }} />
         <OvalSticker className="absolute right-[55px] bottom-[55px] lg:right-[89px] lg:bottom-[55px] hidden sm:block" />
 
-        <h1 className="relative text-[11px] sm:text-[13px] tracking-[0.3em] text-site-text/80 mb-[8px] animate-fadeinup">
+        <h1 className="relative text-[11px] sm:text-[12px] tracking-[0.3em] text-site-text/80 mb-[8px] animate-fadeinup">
           高知県の美容室・アイラッシュサロン
         </h1>
-        {/* 手書き風の英字（書いていくように出る） */}
-        <p aria-hidden className={`${scriptFont.className} hd-write relative text-site-accent text-[55px] sm:text-[72px] lg:text-[89px] leading-[0.95] -rotate-6 origin-left mb-[8px]`}>
-          Find your<br />
-          <span className="pl-[34px] sm:pl-[55px]">Beauty</span>
-          <Swoosh className="block w-[200px] sm:w-[260px] lg:w-[320px] h-[18px] sm:h-[22px] ml-[55px] sm:ml-[89px] -mt-[8px]" />
+        {/* 手書き風の英字：3行で大きく（書いていくように出る） */}
+        <p aria-hidden className={`${scriptFont.className} hd-write relative text-site-accent text-[58px] sm:text-[80px] lg:text-[104px] leading-[0.92] -rotate-[8deg] origin-left mb-[13px] mt-[8px]`}>
+          Find<br />
+          <span className="pl-[34px] sm:pl-[55px]">your</span><br />
+          <span className="pl-[55px] sm:pl-[89px]">Beauty</span>
+          <Swoosh className="block w-[210px] sm:w-[300px] lg:w-[380px] h-[20px] sm:h-[26px] ml-[55px] sm:ml-[89px] -mt-[13px]" />
         </p>
-        <p className="hero-catch relative font-serif text-[21px] sm:text-[26px] font-medium text-site-text leading-[1.5] mb-[21px] whitespace-pre-line animate-fadeinup-slow">
+        <p className="hero-catch relative font-sans text-[13px] sm:text-[15px] font-medium tracking-[0.25em] text-site-text leading-[2] mb-[21px] whitespace-pre-line animate-fadeinup-slow">
           {content.hero.title || "上品なのに、\n抜け感。"}
         </p>
         {content.hero.subtitle && <p className="sr-only">{content.hero.subtitle}</p>}

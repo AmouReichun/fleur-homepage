@@ -62,7 +62,9 @@ export default function Header() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        solid ? "bg-white/95 backdrop-blur-md border-b border-gray-100" : ""
+        isHome && !scrolled && !isOpen
+          ? "bg-[#CCCBCE]" /* トップの一番上はStellé風に背景と同じグレーで一体に見せる */
+          : solid ? "bg-white/95 backdrop-blur-md border-b border-gray-100" : ""
       }`}
     >
       {/* ヒーロー上（未スクロール時）は明るい写真で白文字が埋もれるため、薄い暗color scrim を敷いて可読性を確保 */}
