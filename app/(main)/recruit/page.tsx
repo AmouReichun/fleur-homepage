@@ -145,7 +145,6 @@ const jobPostings = [
 export default async function RecruitPage() {
   const { salonOrder, salons, recruit } = await getContentCached();
   const salonNames = salonOrder.map((key) => salons[key as keyof typeof salons]?.name).filter((n): n is string => Boolean(n));
-  const stickyInstagram = "https://www.instagram.com/fleurami_info";
 
   // content.json に値があればそれを、なければデフォルトを使用
   const heroTitle = recruit.heroTitle || DEFAULT_HERO_TITLE;
@@ -173,7 +172,7 @@ export default async function RecruitPage() {
         <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jp) }} />
       ))}
 
-      <StickyRecruitCTA instagramUrl={stickyInstagram} />
+      <StickyRecruitCTA instagrams={brands.filter((b) => b.instagram).map((b) => ({ name: b.name, url: b.instagram }))} />
 
       <main className={`bg-white text-site-text overflow-hidden recruit-pop ${popFont.className}`}>
         <Breadcrumbs theme="site" items={[{ name: "ホーム", url: "/" }, { name: "採用情報", url: "/recruit" }]} />
@@ -200,7 +199,7 @@ export default async function RecruitPage() {
             <p className="mt-6 text-sm sm:text-base text-site-text font-bold leading-loose whitespace-pre-line animate-fadeinup-late">{heroLead}</p>
             <div className="mt-9 flex flex-col sm:flex-row gap-3 justify-center animate-fadeinup-late">
               <a href="#entry" className="rp-bounce rp-jelly bg-lime text-site-text px-8 py-3.5 text-sm font-black tracking-wider rounded-full border-[3px] border-site-text shadow-[4px_4px_0_#2A2A2A] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0_#2A2A2A] transition-all">サロン見学はこちら</a>
-              <a href={stickyInstagram} target="_blank" rel="noopener noreferrer" className="rp-jelly bg-lav text-site-text px-8 py-3.5 text-sm font-black tracking-wider rounded-full border-[3px] border-site-text shadow-[4px_4px_0_#2A2A2A] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0_#2A2A2A] transition-all">Instagramで見る</a>
+              <a href="#instagram" className="rp-jelly bg-lav text-site-text px-8 py-3.5 text-sm font-black tracking-wider rounded-full border-[3px] border-site-text shadow-[4px_4px_0_#2A2A2A] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0_#2A2A2A] transition-all">Instagramで見る</a>
             </div>
             <div className="mt-7 flex flex-wrap justify-center gap-2 animate-fadeinup-late">
               {["月給22万円〜", "残業ゼロ", "週休2日制", "有給100%消化", "社保完備"].map((tag, ti) => (
@@ -585,7 +584,7 @@ export default async function RecruitPage() {
                 <br />応募の前に、まずは雰囲気を見にきてください。
                 <br className="sm:hidden" />Instagramのお気軽なDMでもお待ちしています。
               </p>
-              <div className="flex flex-col sm:flex-row gap-3 justify-center mb-14">
+              <div id="instagram" className="scroll-mt-24 flex flex-col sm:flex-row gap-3 justify-center mb-14">
                 {brands.map((b) => (
                   <a key={b.key} href={b.instagram} target="_blank" rel="noopener noreferrer" className="bg-white text-site-text border-[3px] border-site-text px-5 py-3 text-xs font-black tracking-wide rounded-full shadow-[4px_4px_0_#C7F500] hover:bg-lime transition-all">{b.name} のInstagram</a>
                 ))}
