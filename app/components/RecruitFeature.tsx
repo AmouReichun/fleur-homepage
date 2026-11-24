@@ -28,7 +28,7 @@ export default function RecruitFeature({ stats, voices }: { stats?: Stat[]; voic
   const shown = FEATURE_STAT_LABELS.map((l) => (stats ?? []).find((s) => s.label === l)).filter(Boolean) as Stat[];
   return (
     <section className="relative py-24 sm:py-32 bg-[#1a1a1a] overflow-hidden" aria-labelledby="recruit-feature-title">
-      <div className="absolute inset-0 opacity-[0.07] pointer-events-none" style={{ backgroundImage: "radial-gradient(circle at 80% 20%, #B8956A 0, transparent 55%)" }} />
+      <div className="absolute inset-0 opacity-[0.07] pointer-events-none" style={{ backgroundImage: "radial-gradient(circle at 80% 20%, #E6003F 0, transparent 55%)" }} />
       <div className="relative max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
         <div className="grid lg:grid-cols-12 gap-14 lg:gap-10 items-center">
           <div className="lg:col-span-6">

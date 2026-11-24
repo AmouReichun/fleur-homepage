@@ -11,13 +11,14 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        "site-bg": "#FAFAF8",
-        "site-text": "#2A2A2A",
-        "site-muted": "#888888",
-        "site-accent": "#B8956A",
-        "site-light": "#F5F0EA",
-        "site-pink": "#F0E8E8",
-        "site-greige": "#E8E4E0",
+        // サイト全体の色は globals.css の --site-* で決める（2026-11-24 Stellé配色の試し。採用ページは .recruit-pop で元の色）
+        "site-bg": "rgb(var(--site-bg) / <alpha-value>)",
+        "site-text": "rgb(var(--site-text) / <alpha-value>)",
+        "site-muted": "rgb(var(--site-muted) / <alpha-value>)",
+        "site-accent": "rgb(var(--site-accent) / <alpha-value>)",
+        "site-light": "rgb(var(--site-light) / <alpha-value>)",
+        "site-pink": "rgb(var(--site-pink) / <alpha-value>)",
+        "site-greige": "rgb(var(--site-greige) / <alpha-value>)",
         // ── 採用ページ（ライムグリーン×ラベンダー）──
         lime: { DEFAULT: "#C7F500", soft: "#F5FDD6" },
         lav: { DEFAULT: "#C697EF", soft: "#F4ECFD", deep: "#7A45C9" },
