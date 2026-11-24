@@ -63,6 +63,8 @@ export default function MobileReserveBar() {
 
   // スタッフ用の投稿ページには出さない
   if (pathname.startsWith("/blog/staff")) return null;
+  // 採用ページ（/recruit 以下）には出さない：採用用の「サロン見学・応募する」バーと重なるため（2026-11-24 社長）
+  if (pathname === "/recruit" || pathname.startsWith("/recruit/")) return null;
 
   const current = reserveSalons.find((s) => pathname === s.href || pathname.startsWith(`${s.href}/`));
 
