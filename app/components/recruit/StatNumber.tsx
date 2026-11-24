@@ -51,7 +51,7 @@ export default function StatNumber({
 
   if (!value) {
     return (
-      <p className="font-serif text-3xl sm:text-4xl leading-none">
+      <p className="font-black text-3xl sm:text-4xl leading-none">
         <span className="text-base text-white/40 font-sans">集計中</span>
       </p>
     );
@@ -60,7 +60,7 @@ export default function StatNumber({
   return (
     <p
       ref={ref}
-      className="font-serif text-3xl sm:text-4xl text-lime leading-none tabular-nums"
+      className="font-black text-3xl sm:text-4xl text-lime leading-none tabular-nums"
     >
       {isNumeric ? display : value}
       {suffix && <span className="text-lg ml-0.5">{suffix}</span>}

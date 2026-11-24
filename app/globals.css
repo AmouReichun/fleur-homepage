@@ -316,3 +316,8 @@ html {
   background: linear-gradient(to right, transparent, #EDD9DC, transparent);
   margin: 2rem 0;
 }
+
+/* 採用ページ（POPデザイン）：見出しも丸ゴシックに */
+.recruit-pop :is(h1, h2, h3, h4) {
+  font-family: inherit;
+}

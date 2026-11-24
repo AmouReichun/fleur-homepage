@@ -9,6 +9,11 @@ import { ROLES } from "@/lib/recruit-roles";
 import Reveal from "@/app/components/recruit/Reveal";
 import StickyRecruitCTA from "@/app/components/recruit/StickyRecruitCTA";
 import StatNumber from "@/app/components/recruit/StatNumber";
+import { Blob, Smiley, Squiggle, Spark, VibesSticker, PopLabel } from "@/app/components/recruit/PopDecor";
+import { M_PLUS_Rounded_1c, Caveat } from "next/font/google";
+
+const popFont = M_PLUS_Rounded_1c({ weight: ["400", "700", "800"], subsets: ["latin"], display: "swap", preload: false });
+const handFont = Caveat({ weight: ["600"], subsets: ["latin"], display: "swap" });
 
 export const metadata: Metadata = {
   title: "採用情報 | 高知市・香南市の美容師・アイリスト求人",
@@ -170,31 +175,45 @@ export default async function RecruitPage() {
 
       <StickyRecruitCTA instagramUrl={stickyInstagram} />
 
-      <main className="bg-white text-site-text overflow-hidden">
+      <main className={`bg-white text-site-text overflow-hidden recruit-pop ${popFont.className}`}>
         <Breadcrumbs theme="site" items={[{ name: "ホーム", url: "/" }, { name: "採用情報", url: "/recruit" }]} />
         {/* ══════ 1. ファーストビュー ══════ */}
         <section className="relative overflow-hidden">
-          <div className="absolute -top-24 -right-24 w-[560px] h-[560px] rounded-full bg-lav/40 blur-3xl pointer-events-none" />
-          <div className="absolute top-48 -left-36 w-[320px] h-[320px] rounded-full bg-lime/40 blur-3xl pointer-events-none" />
+          <Blob variant={0} color="lav" className="absolute -top-16 -left-20 w-56 sm:w-80 opacity-90" />
+          <Blob variant={2} color="lime" className="absolute top-6 right-[-60px] w-52 sm:w-72" />
+          <Blob variant={1} color="lime" className="absolute top-[340px] -left-16 w-36 sm:w-48" />
+          <Blob variant={1} color="lav" className="absolute top-[300px] -right-10 w-32 sm:w-44 opacity-90" />
+          <Spark className="absolute top-24 left-[22%] w-5 h-5 hidden sm:block" />
+          <Spark shape="x" className="absolute top-14 right-[30%] w-4 h-4" />
+          <Spark className="absolute top-[260px] right-[12%] w-5 h-5" />
+          <Smiley className="absolute top-[200px] left-[8%] w-9 h-9 sm:w-11 sm:h-11 -rotate-12" />
+          <Squiggle color="lav" className="absolute top-[150px] right-[6%] w-24 sm:w-32 rotate-12" />
+          <p aria-hidden className={`${handFont.className} absolute top-[110px] left-[4%] sm:left-[12%] text-2xl sm:text-3xl leading-[0.95] text-site-text -rotate-12 hidden sm:block`}>Meet<br />&nbsp;Connect<br />&nbsp;&nbsp;Create</p>
+          <p aria-hidden className={`${handFont.className} absolute top-[70px] right-[8%] sm:right-[14%] text-xl sm:text-2xl leading-tight text-site-text rotate-6 hidden sm:block`}>同じ「好き」から、<br />新しい仲間を。</p>
           <div className="max-w-3xl mx-auto px-5 pt-16 sm:pt-24 pb-10 text-center relative">
-            <span className="inline-block bg-lime text-site-text font-bold text-[10px] tracking-[0.3em] uppercase rounded-full px-5 py-1.5 mb-5 animate-fadeinup">Recruit</span>
-            <h1 className="font-serif text-[30px] leading-[1.45] sm:text-5xl sm:leading-[1.35] font-medium text-balance whitespace-pre-line animate-fadeinup-slow">{heroTitle}</h1>
-            <p className="mt-6 text-sm sm:text-base text-site-muted leading-loose whitespace-pre-line animate-fadeinup-late">{heroLead}</p>
+            <span className="inline-block bg-site-text text-lime font-black text-[11px] tracking-[0.3em] uppercase rounded-full px-5 py-1.5 mb-6 -rotate-3 animate-fadeinup">Recruit</span>
+            <h1 className="text-[30px] leading-[1.55] sm:text-5xl sm:leading-[1.45] font-black text-balance animate-fadeinup-slow">
+              {heroTitle.split("\n").map((line, i) => (
+                <span key={i} className="block"><span className="bg-[linear-gradient(transparent_58%,#C7F500_58%,#C7F500_92%,transparent_92%)] px-1">{line}</span></span>
+              ))}
+            </h1>
+            <p className="mt-6 text-sm sm:text-base text-site-text font-bold leading-loose whitespace-pre-line animate-fadeinup-late">{heroLead}</p>
             <div className="mt-9 flex flex-col sm:flex-row gap-3 justify-center animate-fadeinup-late">
-              <a href="#entry" className="bg-lime text-site-text px-8 py-3.5 text-sm font-bold tracking-wider rounded-full hover:brightness-95 transition-all">サロン見学はこちら</a>
-              <a href={stickyInstagram} target="_blank" rel="noopener noreferrer" className="border-2 border-lav text-lav-deep px-8 py-3.5 text-sm font-bold tracking-wider rounded-full hover:bg-lav-soft transition-all">Instagramで見る</a>
+              <a href="#entry" className="bg-lime text-site-text px-8 py-3.5 text-sm font-black tracking-wider rounded-full border-[3px] border-site-text shadow-[4px_4px_0_#2A2A2A] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0_#2A2A2A] transition-all">サロン見学はこちら</a>
+              <a href={stickyInstagram} target="_blank" rel="noopener noreferrer" className="bg-lav text-site-text px-8 py-3.5 text-sm font-black tracking-wider rounded-full border-[3px] border-site-text shadow-[4px_4px_0_#2A2A2A] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0_#2A2A2A] transition-all">Instagramで見る</a>
             </div>
             <div className="mt-7 flex flex-wrap justify-center gap-2 animate-fadeinup-late">
-              {["月給22万円〜", "残業ゼロ", "週休2日制", "有給100%消化", "社保完備"].map((tag) => (
-                <span key={tag} className="text-[11px] text-lav-deep bg-lav-soft border border-lav px-4 py-1.5 rounded-full font-medium">{tag}</span>
+              {["月給22万円〜", "残業ゼロ", "週休2日制", "有給100%消化", "社保完備"].map((tag, ti) => (
+                <span key={tag} className={`text-xs text-site-text border-2 border-site-text px-4 py-1.5 rounded-full font-black ${ti % 2 ? "bg-lav rotate-2" : "bg-lime -rotate-2"}`}>{tag}</span>
               ))}
             </div>
           </div>
 
-          <div className="space-y-4 sm:space-y-6 px-4 sm:px-6 max-w-5xl mx-auto pb-8">
+          <div className="relative space-y-8 sm:space-y-10 px-5 sm:px-8 max-w-5xl mx-auto pb-14">
+            <VibesSticker className="absolute -right-1 sm:-right-4 -top-6 z-10" />
             {brands.map((b, i) => (
               <Reveal key={b.key || i} delay={i * 80}>
-                <div className="relative h-[64vw] max-h-[440px] sm:h-[360px] rounded-2xl overflow-hidden group">
+                <div className={`relative h-[64vw] max-h-[440px] sm:h-[360px] rounded-[2rem] overflow-hidden group border-[3px] border-site-text ${i % 2 ? "shadow-[8px_8px_0_#C7F500] sm:rotate-[0.8deg]" : "shadow-[8px_8px_0_#C697EF] sm:rotate-[-0.8deg]"}`}>
                   <Image src={b.image} alt={`${b.name}（${b.area}の${b.type}）`} fill className="object-cover transition-transform duration-[1.2s] group-hover:scale-105" sizes="(max-width: 768px) 100vw, 960px" priority={i === 0} />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/10" />
                   <div className="absolute inset-0 flex flex-col justify-end p-6 sm:p-9">
@@ -203,10 +222,10 @@ export default async function RecruitPage() {
                       <span className="w-1 h-1 rounded-full bg-white/50" />
                       <span className="text-[10px] tracking-[0.15em] text-white/70">{b.area}・{b.type}</span>
                     </div>
-                    <p className="font-serif text-white text-xl sm:text-3xl font-medium leading-[1.55] whitespace-pre-line text-balance">{b.copy}</p>
+                    <p className="text-white text-xl sm:text-3xl font-black leading-[1.55] whitespace-pre-line text-balance">{b.copy}</p>
                     <div className="mt-4 flex flex-wrap gap-2">
                       {b.strengths.map((s) => (
-                        <span key={s} className="text-[10px] sm:text-xs text-white/90 border border-white/40 rounded-full px-3 py-1">{s}</span>
+                        <span key={s} className="text-[10px] sm:text-xs text-site-text bg-lime font-bold rounded-full px-3 py-1">{s}</span>
                       ))}
                     </div>
                   </div>
@@ -217,11 +236,13 @@ export default async function RecruitPage() {
         </section>
 
         {/* ══════ 働き方ハイライト ══════ */}
-        <section className="py-16 sm:py-20 px-5 bg-lime">
-          <div className="max-w-4xl mx-auto">
+        <section className="relative overflow-hidden py-16 sm:py-20 px-5 bg-lime">
+          <Blob variant={2} color="lav" className="absolute -bottom-16 -left-16 w-56 opacity-80" />
+          <Smiley className="absolute top-8 right-[8%] w-10 h-10 rotate-12" />
+          <div className="relative max-w-4xl mx-auto">
             <Reveal className="text-center mb-12">
-              <p className="text-[11px] tracking-[0.35em] text-site-text uppercase font-bold mb-3">Working Conditions</p>
-              <h2 className="font-serif text-xl sm:text-2xl font-medium text-site-text">選ばれる理由は、<span className="text-lav-deep">働き方</span>にある。</h2>
+              <PopLabel dark>Working Conditions</PopLabel>
+              <h2 className="text-xl sm:text-2xl font-black text-site-text">選ばれる理由は、<span className="text-lav-deep">働き方</span>にある。</h2>
             </Reveal>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
               {[
@@ -230,8 +251,8 @@ export default async function RecruitPage() {
                 { value: "週休2日", label: "休日" },
                 { value: "有給100%", label: "有給" },
               ].map((b, i) => (
-                <Reveal key={b.label} delay={i * 80} className="text-center bg-white rounded-2xl py-8 px-4 shadow-sm">
-                  <p className="font-serif text-3xl font-bold text-lav-deep leading-tight">{b.value}</p>
+                <Reveal key={b.label} delay={i * 80} className="text-center bg-white rounded-3xl py-8 px-4 border-[3px] border-site-text shadow-[5px_5px_0_#2A2A2A]">
+                  <p className="text-3xl font-bold text-lav-deep leading-tight">{b.value}</p>
                   <div className="w-6 h-px bg-lime mx-auto mt-3 mb-2.5" />
                   <p className="text-[10px] tracking-widest text-site-muted uppercase">{b.label}</p>
                 </Reveal>
@@ -244,8 +265,8 @@ export default async function RecruitPage() {
         <section className="py-20 sm:py-24 px-5 bg-lav-soft">
           <div className="max-w-3xl mx-auto">
             <Reveal className="text-center mb-10">
-              <p className="text-[11px] tracking-[0.35em] text-lav-deep font-bold uppercase mb-4">For You</p>
-              <h2 className="font-serif text-2xl sm:text-3xl font-medium">こんな方、歓迎します</h2>
+              <PopLabel>For You</PopLabel>
+              <h2 className="text-2xl sm:text-3xl font-black">こんな方、歓迎します</h2>
             </Reveal>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {[
@@ -257,8 +278,8 @@ export default async function RecruitPage() {
                 "まずはどんな雰囲気か見てみたい",
               ].map((text, i) => (
                 <Reveal key={i} delay={i * 50}>
-                  <div className="flex items-start gap-3 bg-white rounded-xl px-5 py-4 border-l-4 border-lime shadow-sm">
-                    <span className="text-lav-deep font-bold text-sm mt-0.5 flex-shrink-0">✓</span>
+                  <div className="flex items-start gap-3 bg-white rounded-2xl px-5 py-4 border-[3px] border-site-text shadow-[4px_4px_0_#C697EF]">
+                    <span className="w-6 h-6 rounded-full bg-lime border-2 border-site-text flex items-center justify-center text-site-text font-black text-xs flex-shrink-0">✓</span>
                     <p className="text-sm text-site-text leading-relaxed">{text}</p>
                   </div>
                 </Reveal>
@@ -275,13 +296,13 @@ export default async function RecruitPage() {
           <div className="max-w-5xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
               <Reveal>
-                <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
+                <div className="relative aspect-[4/3] rounded-[2rem] overflow-hidden border-[3px] border-site-text shadow-[8px_8px_0_#C7F500] -rotate-1">
                   <Image src="/images/admin/salon-fleurami-1782197558743.jpg" alt="fleur GROUP 代表メッセージ" fill className="object-cover" sizes="(max-width: 768px) 100vw, 50vw" />
                 </div>
               </Reveal>
               <Reveal delay={100}>
-                <p className="text-[11px] tracking-[0.35em] text-lav-deep font-bold uppercase mb-4">Our Message</p>
-                <h2 className="font-serif text-xl sm:text-[1.625rem] font-medium mb-6 leading-relaxed">
+                <PopLabel>Our Message</PopLabel>
+                <h2 className="text-xl sm:text-[1.625rem] font-black mb-6 leading-relaxed">
                   美容師・アイリストとして<br />長く、輝き続けてほしい。
                 </h2>
                 <div className="space-y-4 text-sm text-site-muted leading-loose">
@@ -299,8 +320,8 @@ export default async function RecruitPage() {
         <section className="bg-lime-soft py-20 sm:py-28 px-5">
           <div className="max-w-4xl mx-auto">
             <Reveal className="text-center mb-12 sm:mb-16">
-              <p className="text-[11px] tracking-[0.35em] text-lav-deep font-bold uppercase mb-4">About us</p>
-              <h2 className="font-serif text-2xl sm:text-3xl font-medium mb-6">私たちについて</h2>
+              <PopLabel>About us</PopLabel>
+              <h2 className="text-2xl sm:text-3xl font-black mb-6">私たちについて</h2>
               <div className="max-w-2xl mx-auto space-y-3">
                 {aboutLead.split("\n").filter((l) => l.trim()).map((line, i) => (
                   <p key={i} className="text-sm sm:text-base text-site-muted leading-loose text-balance">{line}</p>
@@ -310,9 +331,9 @@ export default async function RecruitPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
               {values.map((v, i) => (
                 <Reveal key={v.title || i} delay={i * 70}>
-                  <div className="h-full bg-white rounded-xl p-7 border border-site-greige">
-                    <span className="inline-flex items-center justify-center w-11 h-11 rounded-full bg-lav text-white text-lg mb-4">{v.icon}</span>
-                    <h3 className="font-serif text-lg font-medium mb-2.5">{v.title}</h3>
+                  <div className="h-full bg-white rounded-3xl p-7 border-[3px] border-site-text shadow-[5px_5px_0_#C697EF]">
+                    <span className="inline-flex items-center justify-center w-11 h-11 rounded-full bg-lav border-2 border-site-text text-site-text font-black text-lg mb-4">{v.icon}</span>
+                    <h3 className="text-lg font-black mb-2.5">{v.title}</h3>
                     <p className="text-sm text-site-muted leading-relaxed">{v.text}</p>
                   </div>
                 </Reveal>
@@ -324,27 +345,27 @@ export default async function RecruitPage() {
         {/* ══════ 3. スタッフ紹介 ══════ */}
         <section className="py-20 sm:py-28 px-5 relative overflow-hidden">
           <div className="absolute inset-0 pointer-events-none select-none flex items-start justify-center overflow-hidden pt-4">
-            <p className="font-serif text-[120px] sm:text-[200px] leading-none text-lav-soft font-bold tracking-wider">MEMBERS</p>
+            <p className="text-[110px] sm:text-[190px] leading-none text-lav-soft font-black tracking-wider">MEMBERS</p>
           </div>
           <div className="max-w-5xl mx-auto relative">
             <Reveal className="text-center mb-12 sm:mb-16">
-              <p className="text-[11px] tracking-[0.35em] text-lav-deep font-bold uppercase mb-4">Members</p>
-              <h2 className="font-serif text-2xl sm:text-3xl font-medium mb-4">スタッフ紹介</h2>
+              <PopLabel>Members</PopLabel>
+              <h2 className="text-2xl sm:text-3xl font-black mb-4">スタッフ紹介</h2>
               <p className="text-sm text-site-muted leading-loose">一緒に働く仲間の、リアルな声。</p>
             </Reveal>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {staffVoices.map((s, i) => (
                 <Reveal key={s.name || i} delay={(i % 3) * 80}>
-                  <article className="h-full bg-white rounded-2xl overflow-hidden border border-site-greige">
+                  <article className={`h-full bg-white rounded-3xl overflow-hidden border-[3px] border-site-text ${i % 2 ? "shadow-[6px_6px_0_#C697EF]" : "shadow-[6px_6px_0_#C7F500]"}`}>
                     {s.joy && (
-                      <div className="bg-lime px-5 py-3.5">
+                      <div className={`px-5 py-3.5 border-b-[3px] border-site-text ${i % 2 ? "bg-lav" : "bg-lime"}`}>
                         <p className="text-[13px] text-site-text font-bold text-center leading-snug text-balance">{s.joy}</p>
                       </div>
                     )}
                     <div className="relative aspect-[4/5] overflow-hidden">
                       <Image src={s.image} alt={`${s.name}（${s.brand}・${s.role}）`} fill className="object-cover" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" />
                       <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/65 to-transparent p-4">
-                        <p className="text-white font-serif text-base">{s.name}</p>
+                        <p className="text-white text-base">{s.name}</p>
                         <p className="text-white/80 text-[11px] mt-0.5">{s.role}・{s.brand}{s.years ? `／${s.years}` : ""}</p>
                       </div>
                     </div>
@@ -369,11 +390,13 @@ export default async function RecruitPage() {
         </section>
 
         {/* ══════ 4. 数字で見る ══════ */}
-        <section className="bg-site-text text-white py-20 sm:py-28 px-5">
-          <div className="max-w-4xl mx-auto">
+        <section className="relative overflow-hidden bg-site-text text-white py-20 sm:py-28 px-5">
+          <Blob variant={0} color="lav" className="absolute -top-24 -right-24 w-52 sm:w-64 opacity-90" />
+          <Blob variant={2} color="lime" className="absolute -bottom-28 -left-36 w-56 sm:w-64 opacity-90" />
+          <div className="relative max-w-4xl mx-auto">
             <Reveal className="text-center mb-12 sm:mb-16">
-              <p className="text-[11px] tracking-[0.35em] text-lime uppercase mb-4">Numbers</p>
-              <h2 className="font-serif text-2xl sm:text-3xl font-medium">数字で見るfleur GROUP</h2>
+              <PopLabel>Numbers</PopLabel>
+              <h2 className="text-2xl sm:text-3xl font-black">数字で見るfleur GROUP</h2>
             </Reveal>
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-y-10 gap-x-4">
               {stats.map((s, i) => (
@@ -390,8 +413,8 @@ export default async function RecruitPage() {
         <section className="py-20 sm:py-28 px-5">
           <div className="max-w-4xl mx-auto">
             <Reveal className="text-center mb-12 sm:mb-16">
-              <p className="text-[11px] tracking-[0.35em] text-lav-deep font-bold uppercase mb-4">A day</p>
-              <h2 className="font-serif text-2xl sm:text-3xl font-medium">1日の流れ</h2>
+              <PopLabel>A day</PopLabel>
+              <h2 className="text-2xl sm:text-3xl font-black">1日の流れ</h2>
             </Reveal>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12">
               {[
@@ -399,15 +422,15 @@ export default async function RecruitPage() {
                 { title: "アイリスト", note: dayEyeNote, data: dayEye },
               ].map((col) => (
                 <Reveal key={col.title}>
-                  <h3 className="font-serif text-lg font-medium mb-6 flex items-center gap-2">
-                    <span className="w-6 h-px bg-lime" />{col.title}の1日
+                  <h3 className="text-lg font-black mb-6 flex items-center gap-2">
+                    <span className="w-8 h-2 rounded-full bg-lime" />{col.title}の1日
                     {col.note && <span className="text-[11px] text-site-muted font-sans">（{col.note}）</span>}
                   </h3>
-                  <ol className="relative border-l border-site-greige ml-2">
+                  <ol className="relative border-l-[3px] border-dashed border-lav ml-2">
                     {col.data.map((d, di) => (
                       <li key={di} className="relative pl-6 pb-7 last:pb-0">
-                        <span className="absolute -left-[5px] top-1.5 w-2.5 h-2.5 rounded-full bg-lav" />
-                        <p className="text-sm font-serif font-bold text-lav-deep">{d.time}</p>
+                        <span className="absolute -left-[8px] top-1 w-4 h-4 rounded-full bg-lime border-2 border-site-text" />
+                        <p className="text-sm font-bold text-lav-deep">{d.time}</p>
                         <p className="text-sm text-site-text mt-0.5">{d.text}</p>
                       </li>
                     ))}
@@ -422,17 +445,17 @@ export default async function RecruitPage() {
         <section className="bg-lav-soft py-20 sm:py-28 px-5">
           <div className="max-w-4xl mx-auto">
             <Reveal className="text-center mb-12 sm:mb-16">
-              <p className="text-[11px] tracking-[0.35em] text-lav-deep font-bold uppercase mb-4">Education</p>
-              <h2 className="font-serif text-2xl sm:text-3xl font-medium mb-4">教育制度</h2>
+              <PopLabel>Education</PopLabel>
+              <h2 className="text-2xl sm:text-3xl font-black mb-4">教育制度</h2>
               <p className="text-sm text-site-muted leading-loose">未経験から一人立ちまで、段階を踏んで成長できます。</p>
             </Reveal>
             <div className="space-y-3">
               {education.map((e, i) => (
                 <Reveal key={e.step || i} delay={i * 60}>
-                  <div className="flex items-start gap-4 bg-white rounded-xl p-5 border border-site-greige">
-                    <span className="font-serif text-2xl font-bold text-lav leading-none w-10 flex-shrink-0">{e.step}</span>
+                  <div className="flex items-center gap-4 bg-white rounded-3xl p-5 border-[3px] border-site-text shadow-[4px_4px_0_#C7F500]">
+                    <span className="w-12 h-12 rounded-full bg-lav border-2 border-site-text flex items-center justify-center text-lg font-black text-site-text flex-shrink-0">{e.step}</span>
                     <div>
-                      <h3 className="font-serif text-base font-medium mb-1">{e.title}</h3>
+                      <h3 className="text-base font-black mb-1">{e.title}</h3>
                       <p className="text-sm text-site-muted leading-relaxed">{e.text}</p>
                     </div>
                   </div>
@@ -446,8 +469,8 @@ export default async function RecruitPage() {
         <section className="py-20 sm:py-28 px-5">
           <div className="max-w-4xl mx-auto">
             <Reveal className="text-center mb-12 sm:mb-16">
-              <p className="text-[11px] tracking-[0.35em] text-lav-deep font-bold uppercase mb-4">Career</p>
-              <h2 className="font-serif text-2xl sm:text-3xl font-medium">キャリアプラン</h2>
+              <PopLabel>Career</PopLabel>
+              <h2 className="text-2xl sm:text-3xl font-black">キャリアプラン</h2>
             </Reveal>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
               {[
@@ -455,12 +478,12 @@ export default async function RecruitPage() {
                 { title: "アイリスト", steps: careerEye },
               ].map((c) => (
                 <Reveal key={c.title}>
-                  <h3 className="font-serif text-lg font-medium mb-6 text-center">{c.title}</h3>
+                  <h3 className="text-lg font-black mb-6 text-center">{c.title}</h3>
                   <div className="flex flex-col items-center gap-0">
                     {c.steps.map((step, i) => (
                       <div key={i} className="w-full flex flex-col items-center">
-                        <div className="w-full max-w-xs text-center bg-white border border-site-greige rounded-full py-3 text-sm font-medium shadow-sm">{step}</div>
-                        {i < c.steps.length - 1 && <span className="text-lav my-1.5 text-lg">↓</span>}
+                        <div className={`w-full max-w-xs text-center border-[3px] border-site-text rounded-full py-3 text-sm font-black shadow-[3px_3px_0_#2A2A2A] ${i === c.steps.length - 1 ? "bg-lime" : "bg-white"}`}>{step}</div>
+                        {i < c.steps.length - 1 && <span className="text-lav-deep font-black my-1.5 text-xl">↓</span>}
                       </div>
                     ))}
                   </div>
@@ -474,10 +497,10 @@ export default async function RecruitPage() {
         <section className="bg-lime-soft py-20 sm:py-28 px-5">
           <div className="max-w-3xl mx-auto">
             <Reveal className="text-center mb-12 sm:mb-16">
-              <p className="text-[11px] tracking-[0.35em] text-lav-deep font-bold uppercase mb-4">Requirements</p>
-              <h2 className="font-serif text-2xl sm:text-3xl font-medium">募集要項</h2>
+              <PopLabel>Requirements</PopLabel>
+              <h2 className="text-2xl sm:text-3xl font-black">募集要項</h2>
             </Reveal>
-            <div className="bg-white rounded-2xl border border-site-greige overflow-hidden">
+            <div className="bg-white rounded-3xl border-[3px] border-site-text shadow-[6px_6px_0_#C697EF] overflow-hidden">
               {requirements.map((r, i) => (
                 <Reveal key={r.label || i} delay={i * 40}>
                   <div className="flex flex-col sm:flex-row gap-1 sm:gap-4 px-6 py-5 border-b border-site-greige last:border-b-0">
@@ -497,10 +520,10 @@ export default async function RecruitPage() {
                   <Link
                     key={r.slug}
                     href={`/recruit/${r.slug}`}
-                    className="bg-white border border-site-greige rounded-xl p-5 hover:border-lav transition-colors group text-center"
+                    className="bg-lime border-[3px] border-site-text rounded-2xl p-5 shadow-[4px_4px_0_#2A2A2A] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0_#2A2A2A] transition-all group text-center"
                   >
-                    <span className="block text-sm font-medium text-site-text group-hover:text-lav-deep transition-colors">{r.title}</span>
-                    <span className="block text-[11px] text-site-muted mt-1">{r.areas.join("・")}</span>
+                    <span className="block text-sm font-black text-site-text">{r.title}</span>
+                    <span className="block text-[11px] text-site-text mt-1">{r.areas.join("・")}</span>
                   </Link>
                 ))}
               </div>
@@ -512,17 +535,17 @@ export default async function RecruitPage() {
         <section className="py-20 sm:py-28 px-5">
           <div className="max-w-2xl mx-auto">
             <Reveal className="text-center mb-12 sm:mb-16">
-              <p className="text-[11px] tracking-[0.35em] text-lav-deep font-bold uppercase mb-4">FAQ</p>
-              <h2 className="font-serif text-2xl sm:text-3xl font-medium">よくある質問</h2>
+              <PopLabel>FAQ</PopLabel>
+              <h2 className="text-2xl sm:text-3xl font-black">よくある質問</h2>
             </Reveal>
-            <div className="divide-y divide-site-greige border-y border-site-greige">
+            <div className="space-y-3">
               {faq.map((f, i) => (
-                <details key={i} className="group py-5">
+                <details key={i} className="group bg-white rounded-2xl border-[3px] border-site-text px-5 py-4 shadow-[4px_4px_0_#C7F500]">
                   <summary className="flex items-start justify-between gap-5 cursor-pointer list-none">
-                    <span className="font-serif text-base font-medium leading-relaxed">
+                    <span className="text-base font-black leading-relaxed">
                       <span className="text-lav-deep font-bold mr-2.5 text-sm">Q</span>{f.q}
                     </span>
-                    <span className="flex-shrink-0 w-5 h-5 rounded-full bg-lime border border-lime flex items-center justify-center text-site-text text-sm group-open:rotate-45 transition-transform duration-300 mt-1">+</span>
+                    <span className="flex-shrink-0 w-7 h-7 rounded-full bg-lime border-2 border-site-text flex font-black items-center justify-center text-site-text text-sm group-open:rotate-45 transition-transform duration-300 mt-1">+</span>
                   </summary>
                   <p className="mt-4 text-sm text-site-muted leading-loose pl-5 border-l-2 border-lav whitespace-pre-line">{f.a}</p>
                 </details>
@@ -532,11 +555,14 @@ export default async function RecruitPage() {
         </section>
 
         {/* ══════ 10. 最終CTA / 応募フォーム ══════ */}
-        <section id="entry" className="bg-site-text text-white pt-20 sm:pt-28 px-5 scroll-mt-20">
-          <div className="max-w-2xl mx-auto text-center">
+        <section id="entry" className="relative overflow-hidden bg-site-text text-white pt-20 sm:pt-28 px-5 scroll-mt-20">
+          <Blob variant={1} color="lime" className="absolute -top-16 -left-16 w-60" />
+          <Blob variant={0} color="lav" className="absolute top-40 -right-24 w-72 opacity-90" />
+          <Spark shape="x" className="absolute top-16 right-[20%] w-5 h-5 invert" />
+          <div className="relative max-w-2xl mx-auto text-center">
             <Reveal>
-              <p className="text-[11px] tracking-[0.35em] text-lime uppercase mb-5">Entry</p>
-              <h2 className="font-serif text-2xl sm:text-4xl font-medium leading-snug mb-6">まずは、サロン見学から。</h2>
+              <PopLabel>Entry</PopLabel>
+              <h2 className="text-2xl sm:text-4xl font-black leading-snug mb-6">まずは、サロン見学から。</h2>
               <p className="text-sm text-white/70 leading-loose mb-10">
                 「ちょっと気になる」で大丈夫です。
                 <br />応募の前に、まずは雰囲気を見にきてください。
@@ -544,13 +570,13 @@ export default async function RecruitPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center mb-14">
                 {brands.map((b) => (
-                  <a key={b.key} href={b.instagram} target="_blank" rel="noopener noreferrer" className="border border-white/30 text-white px-5 py-3 text-xs font-medium tracking-wide rounded-sm hover:border-lime hover:text-lime transition-all">{b.name} のInstagram</a>
+                  <a key={b.key} href={b.instagram} target="_blank" rel="noopener noreferrer" className="bg-white text-site-text border-[3px] border-site-text px-5 py-3 text-xs font-black tracking-wide rounded-full shadow-[4px_4px_0_#C7F500] hover:bg-lime transition-all">{b.name} のInstagram</a>
                 ))}
               </div>
             </Reveal>
           </div>
 
-          <div className="max-w-2xl mx-auto pb-20 sm:pb-28">
+          <div className="relative max-w-2xl mx-auto pb-20 sm:pb-28">
             <RecruitForm salons={salonNames} />
             <p className="text-center text-xs text-white/50 mt-6">
               一般的なお問い合わせは
