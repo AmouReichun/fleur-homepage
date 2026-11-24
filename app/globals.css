@@ -321,3 +321,31 @@ html {
 .recruit-pop :is(h1, h2, h3, h4) {
   font-family: inherit;
 }
+
+/* ── 採用ページのPOPな動き（.recruit-pop の中だけ） ── */
+@keyframes rp-float { 0%,100% { translate: 0 0; rotate: 0deg; } 50% { translate: 12px -16px; rotate: 8deg; } }
+@keyframes rp-float2 { 0%,100% { translate: 0 0; rotate: 0deg; } 50% { translate: -14px 12px; rotate: -10deg; } }
+@keyframes rp-wiggle { 0%,100% { rotate: -10deg; } 50% { rotate: 12deg; } }
+@keyframes rp-twinkle { 0%,100% { scale: 1; rotate: 0deg; } 50% { scale: 1.45; rotate: 90deg; } }
+@keyframes rp-wobble { 0%,100% { rotate: 0deg; scale: 1; } 25% { rotate: 6deg; scale: 1.05; } 75% { rotate: -5deg; } }
+@keyframes rp-marker { from { background-size: 0% 100%; } to { background-size: 100% 100%; } }
+@keyframes rp-pop { 0% { opacity: 0; scale: 0.4; } 70% { opacity: 1; scale: 1.12; } 100% { opacity: 1; scale: 1; } }
+@keyframes rp-bounce { 0%,80%,100% { translate: 0 0; } 86% { translate: 0 -7px; } 92% { translate: 0 0; } 96% { translate: 0 -3px; } }
+@keyframes rp-jelly { 0%,100% { scale: 1 1; } 30% { scale: 1.08 0.92; } 50% { scale: 0.95 1.05; } 70% { scale: 1.03 0.97; } }
+@keyframes rp-marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+.recruit-pop .rp-float { animation: rp-float 7s ease-in-out infinite; }
+.recruit-pop .rp-float2 { animation: rp-float2 9s ease-in-out infinite; }
+.recruit-pop .rp-wiggle { animation: rp-wiggle 2.4s ease-in-out infinite; }
+.recruit-pop .rp-twinkle { animation: rp-twinkle 2.2s ease-in-out infinite; }
+.recruit-pop .rp-wobble { animation: rp-wobble 3s ease-in-out infinite; }
+.recruit-pop .rp-marker { background-repeat: no-repeat; animation: rp-marker 0.8s cubic-bezier(0.65,0,0.35,1) both; }
+.recruit-pop .rp-pop { animation: rp-pop 0.6s cubic-bezier(0.34,1.56,0.64,1) both; }
+.recruit-pop .rp-bounce { animation: rp-bounce 3.5s ease-in-out infinite; }
+.recruit-pop .rp-jelly:hover, .recruit-pop .rp-jelly:active { animation: rp-jelly 0.5s ease both; }
+.recruit-pop .rp-marquee { animation: rp-marquee 22s linear infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  .recruit-pop *, .recruit-pop *::before, .recruit-pop *::after { animation: none !important; transition: none !important; }
+  .recruit-pop .rp-marker { background-size: 100% 100%; }
+}

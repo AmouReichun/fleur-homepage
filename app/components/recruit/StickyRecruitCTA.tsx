@@ -41,14 +41,14 @@ export default function StickyRecruitCTA({
 
       {/* 下部固定CTAバー */}
       <div
-        className={`fixed bottom-0 left-0 right-0 z-40 transition-transform duration-300 ${
+        className={`recruit-pop fixed bottom-0 left-0 right-0 z-40 transition-transform duration-300 ${
           show ? "translate-y-0" : "translate-y-full"
         }`}
       >
         <div className="bg-white/95 backdrop-blur border-t border-site-greige px-3 py-3 flex gap-2.5 max-w-2xl mx-auto">
           <a
             href="#entry"
-            className="flex-1 text-center bg-lime text-site-text py-3 text-sm font-bold tracking-wide rounded-full hover:brightness-95 transition-all"
+            className="rp-jelly flex-1 text-center bg-lime text-site-text py-3 text-sm font-bold tracking-wide rounded-full hover:brightness-95 transition-all"
           >
             サロン見学・応募する
           </a>

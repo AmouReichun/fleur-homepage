@@ -179,38 +179,38 @@ export default async function RecruitPage() {
         <Breadcrumbs theme="site" items={[{ name: "ホーム", url: "/" }, { name: "採用情報", url: "/recruit" }]} />
         {/* ══════ 1. ファーストビュー ══════ */}
         <section className="relative overflow-hidden">
-          <Blob variant={0} color="lav" className="absolute -top-16 -left-20 w-56 sm:w-80 opacity-90" />
-          <Blob variant={2} color="lime" className="absolute top-6 right-[-60px] w-52 sm:w-72" />
-          <Blob variant={1} color="lime" className="absolute top-[340px] -left-16 w-36 sm:w-48" />
-          <Blob variant={1} color="lav" className="absolute top-[300px] -right-10 w-32 sm:w-44 opacity-90" />
-          <Spark className="absolute top-24 left-[22%] w-5 h-5 hidden sm:block" />
-          <Spark shape="x" className="absolute top-14 right-[30%] w-4 h-4" />
-          <Spark className="absolute top-[260px] right-[12%] w-5 h-5" />
-          <Smiley className="absolute top-[200px] left-[8%] w-9 h-9 sm:w-11 sm:h-11 -rotate-12" />
-          <Squiggle color="lav" className="absolute top-[150px] right-[6%] w-24 sm:w-32 rotate-12" />
+          <Blob variant={0} color="lav" className="absolute -top-16 -left-20 w-56 sm:w-80 opacity-90 rp-float" />
+          <Blob variant={2} color="lime" className="absolute top-6 right-[-60px] w-52 sm:w-72 rp-float2" />
+          <Blob variant={1} color="lime" className="absolute top-[340px] -left-16 w-36 sm:w-48 rp-float2" />
+          <Blob variant={1} color="lav" className="absolute top-[300px] -right-10 w-32 sm:w-44 opacity-90 rp-float" />
+          <Spark className="absolute top-24 left-[22%] w-5 h-5 hidden sm:block rp-twinkle" />
+          <Spark shape="x" className="absolute top-14 right-[30%] w-4 h-4 rp-twinkle [animation-delay:0.7s]" />
+          <Spark className="absolute top-[260px] right-[12%] w-5 h-5 rp-twinkle [animation-delay:1.3s]" />
+          <Smiley className="absolute top-[200px] left-[8%] w-9 h-9 sm:w-11 sm:h-11 rp-wiggle" />
+          <Squiggle color="lav" className="absolute top-[150px] right-[6%] w-24 sm:w-32 rotate-12 rp-wiggle [animation-duration:3.2s]" />
           <p aria-hidden className={`${handFont.className} absolute top-[110px] left-[4%] sm:left-[12%] text-2xl sm:text-3xl leading-[0.95] text-site-text -rotate-12 hidden sm:block`}>Meet<br />&nbsp;Connect<br />&nbsp;&nbsp;Create</p>
           <p aria-hidden className={`${handFont.className} absolute top-[70px] right-[8%] sm:right-[14%] text-xl sm:text-2xl leading-tight text-site-text rotate-6 hidden sm:block`}>同じ「好き」から、<br />新しい仲間を。</p>
           <div className="max-w-3xl mx-auto px-5 pt-16 sm:pt-24 pb-10 text-center relative">
             <span className="inline-block bg-site-text text-lime font-black text-[11px] tracking-[0.3em] uppercase rounded-full px-5 py-1.5 mb-6 -rotate-3 animate-fadeinup">Recruit</span>
             <h1 className="text-[30px] leading-[1.55] sm:text-5xl sm:leading-[1.45] font-black text-balance animate-fadeinup-slow">
               {heroTitle.split("\n").map((line, i) => (
-                <span key={i} className="block"><span className="bg-[linear-gradient(transparent_58%,#C7F500_58%,#C7F500_92%,transparent_92%)] px-1">{line}</span></span>
+                <span key={i} className="block"><span className="rp-marker bg-[linear-gradient(transparent_58%,#C7F500_58%,#C7F500_92%,transparent_92%)] px-1" style={{ animationDelay: `${0.7 + i * 0.35}s` }}>{line}</span></span>
               ))}
             </h1>
             <p className="mt-6 text-sm sm:text-base text-site-text font-bold leading-loose whitespace-pre-line animate-fadeinup-late">{heroLead}</p>
             <div className="mt-9 flex flex-col sm:flex-row gap-3 justify-center animate-fadeinup-late">
-              <a href="#entry" className="bg-lime text-site-text px-8 py-3.5 text-sm font-black tracking-wider rounded-full border-[3px] border-site-text shadow-[4px_4px_0_#2A2A2A] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0_#2A2A2A] transition-all">サロン見学はこちら</a>
-              <a href={stickyInstagram} target="_blank" rel="noopener noreferrer" className="bg-lav text-site-text px-8 py-3.5 text-sm font-black tracking-wider rounded-full border-[3px] border-site-text shadow-[4px_4px_0_#2A2A2A] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0_#2A2A2A] transition-all">Instagramで見る</a>
+              <a href="#entry" className="rp-bounce rp-jelly bg-lime text-site-text px-8 py-3.5 text-sm font-black tracking-wider rounded-full border-[3px] border-site-text shadow-[4px_4px_0_#2A2A2A] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0_#2A2A2A] transition-all">サロン見学はこちら</a>
+              <a href={stickyInstagram} target="_blank" rel="noopener noreferrer" className="rp-jelly bg-lav text-site-text px-8 py-3.5 text-sm font-black tracking-wider rounded-full border-[3px] border-site-text shadow-[4px_4px_0_#2A2A2A] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0_#2A2A2A] transition-all">Instagramで見る</a>
             </div>
             <div className="mt-7 flex flex-wrap justify-center gap-2 animate-fadeinup-late">
               {["月給22万円〜", "残業ゼロ", "週休2日制", "有給100%消化", "社保完備"].map((tag, ti) => (
-                <span key={tag} className={`text-xs text-site-text border-2 border-site-text px-4 py-1.5 rounded-full font-black ${ti % 2 ? "bg-lav rotate-2" : "bg-lime -rotate-2"}`}>{tag}</span>
+                <span key={tag} className="rp-pop inline-block" style={{ animationDelay: `${1.2 + ti * 0.12}s` }}><span className={`rp-jelly inline-block text-xs text-site-text border-2 border-site-text px-4 py-1.5 rounded-full font-black ${ti % 2 ? "bg-lav rotate-2" : "bg-lime -rotate-2"}`}>{tag}</span></span>
               ))}
             </div>
           </div>
 
           <div className="relative space-y-8 sm:space-y-10 px-5 sm:px-8 max-w-5xl mx-auto pb-14">
-            <VibesSticker className="absolute -right-1 sm:-right-4 -top-6 z-10" />
+            <VibesSticker className="absolute -right-1 sm:-right-4 -top-6 z-10 rp-wobble" />
             {brands.map((b, i) => (
               <Reveal key={b.key || i} delay={i * 80}>
                 <div className={`relative h-[64vw] max-h-[440px] sm:h-[360px] rounded-[2rem] overflow-hidden group border-[3px] border-site-text ${i % 2 ? "shadow-[8px_8px_0_#C7F500] sm:rotate-[0.8deg]" : "shadow-[8px_8px_0_#C697EF] sm:rotate-[-0.8deg]"}`}>
@@ -235,10 +235,27 @@ export default async function RecruitPage() {
           </div>
         </section>
 
+        {/* ══════ 流れる帯 ══════ */}
+        <div aria-hidden className="bg-site-text border-y-[3px] border-site-text overflow-hidden py-3 -rotate-1 scale-[1.03]">
+          <div className="rp-marquee flex w-max whitespace-nowrap">
+            {[0, 1].map((k) => (
+              <div key={k} className="flex">
+                {Array.from({ length: 4 }).map((_, j) => (
+                  <span key={j} className="flex items-center gap-4 pr-4 text-sm sm:text-base font-black tracking-widest">
+                    <span className="text-lime">GOOD PEOPLE</span><span className="text-white">✳</span>
+                    <span className="text-lav">GOOD VIBES</span><span className="text-white">☺</span>
+                    <span className="text-lime">MEET CONNECT CREATE</span><span className="text-white">✳</span>
+                  </span>
+                ))}
+              </div>
+            ))}
+          </div>
+        </div>
+
         {/* ══════ 働き方ハイライト ══════ */}
         <section className="relative overflow-hidden py-16 sm:py-20 px-5 bg-lime">
-          <Blob variant={2} color="lav" className="absolute -bottom-16 -left-16 w-56 opacity-80" />
-          <Smiley className="absolute top-8 right-[8%] w-10 h-10 rotate-12" />
+          <Blob variant={2} color="lav" className="absolute -bottom-16 -left-16 w-56 opacity-80 rp-float" />
+          <Smiley className="absolute top-8 right-[8%] w-10 h-10 rp-wiggle" />
           <div className="relative max-w-4xl mx-auto">
             <Reveal className="text-center mb-12">
               <PopLabel dark>Working Conditions</PopLabel>
@@ -356,7 +373,7 @@ export default async function RecruitPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {staffVoices.map((s, i) => (
                 <Reveal key={s.name || i} delay={(i % 3) * 80}>
-                  <article className={`h-full bg-white rounded-3xl overflow-hidden border-[3px] border-site-text ${i % 2 ? "shadow-[6px_6px_0_#C697EF]" : "shadow-[6px_6px_0_#C7F500]"}`}>
+                  <article className={`h-full bg-white rounded-3xl overflow-hidden border-[3px] border-site-text transition-transform duration-300 hover:-translate-y-1.5 hover:-rotate-1 ${i % 2 ? "shadow-[6px_6px_0_#C697EF]" : "shadow-[6px_6px_0_#C7F500]"}`}>
                     {s.joy && (
                       <div className={`px-5 py-3.5 border-b-[3px] border-site-text ${i % 2 ? "bg-lav" : "bg-lime"}`}>
                         <p className="text-[13px] text-site-text font-bold text-center leading-snug text-balance">{s.joy}</p>
@@ -391,8 +408,8 @@ export default async function RecruitPage() {
 
         {/* ══════ 4. 数字で見る ══════ */}
         <section className="relative overflow-hidden bg-site-text text-white py-20 sm:py-28 px-5">
-          <Blob variant={0} color="lav" className="absolute -top-24 -right-24 w-52 sm:w-64 opacity-90" />
-          <Blob variant={2} color="lime" className="absolute -bottom-28 -left-36 w-56 sm:w-64 opacity-90" />
+          <Blob variant={0} color="lav" className="absolute -top-24 -right-24 w-52 sm:w-64 opacity-90 rp-float" />
+          <Blob variant={2} color="lime" className="absolute -bottom-28 -left-36 w-56 sm:w-64 opacity-90 rp-float2" />
           <div className="relative max-w-4xl mx-auto">
             <Reveal className="text-center mb-12 sm:mb-16">
               <PopLabel>Numbers</PopLabel>
@@ -556,9 +573,9 @@ export default async function RecruitPage() {
 
         {/* ══════ 10. 最終CTA / 応募フォーム ══════ */}
         <section id="entry" className="relative overflow-hidden bg-site-text text-white pt-20 sm:pt-28 px-5 scroll-mt-20">
-          <Blob variant={1} color="lime" className="absolute -top-16 -left-16 w-60" />
-          <Blob variant={0} color="lav" className="absolute top-40 -right-24 w-72 opacity-90" />
-          <Spark shape="x" className="absolute top-16 right-[20%] w-5 h-5 invert" />
+          <Blob variant={1} color="lime" className="absolute -top-16 -left-16 w-60 rp-float2" />
+          <Blob variant={0} color="lav" className="absolute top-40 -right-24 w-72 opacity-90 rp-float" />
+          <Spark shape="x" className="absolute top-16 right-[20%] w-5 h-5 invert rp-twinkle" />
           <div className="relative max-w-2xl mx-auto text-center">
             <Reveal>
               <PopLabel>Entry</PopLabel>
