@@ -79,7 +79,7 @@ export default function HeroSlideshow({ images, children, hasImage }: HeroSlides
         <div className="absolute inset-0 bg-site-light" />
       )}
       {/* 文字側だけ白くぼかす（スマホ＝下から、パソコン＝左から） */}
-      <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-white/95 via-white/55 to-transparent lg:bg-gradient-to-r lg:from-white/85 lg:via-white/40 lg:to-transparent" />
+      <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-site-light/95 via-site-light/55 to-transparent lg:bg-gradient-to-r lg:from-site-light/90 lg:via-site-light/40 lg:to-transparent" />
 
       {/* 白い細枠 */}
       <div aria-hidden className="pointer-events-none absolute inset-x-[13px] sm:inset-x-[21px] bottom-[13px] sm:bottom-[21px] top-[69px] sm:top-[85px] border-2 border-white/90" />

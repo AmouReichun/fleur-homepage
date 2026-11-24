@@ -11,7 +11,8 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        // サイト全体の色は globals.css の --site-* で決める（2026-11-24 As Design配色の試し。採用ページは .recruit-pop で元の色）
+        // サイト全体の色は globals.css の --site-* で決める（2026-11-24 Stellé配色。採用ページは .recruit-pop で元の色）
+        "site-rose": "rgb(var(--site-rose) / <alpha-value>)",
         "site-pop": "rgb(var(--site-pop) / <alpha-value>)",
         "site-bg": "rgb(var(--site-bg) / <alpha-value>)",
         "site-text": "rgb(var(--site-text) / <alpha-value>)",

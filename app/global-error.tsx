@@ -23,7 +23,7 @@ export default function GlobalError({
     <html lang="ja">
       <body style={{ fontFamily: "sans-serif", display: "flex", alignItems: "center", justifyContent: "center", minHeight: "100vh", margin: 0, background: "#FAF8F5" }}>
         <div style={{ textAlign: "center", padding: "2rem" }}>
-          <p style={{ fontSize: "11px", letterSpacing: "0.3em", color: "#C8389A", marginBottom: "1.5rem" }}>ERROR</p>
+          <p style={{ fontSize: "11px", letterSpacing: "0.3em", color: "#4F2407", marginBottom: "1.5rem" }}>ERROR</p>
           <h2 style={{ fontWeight: 300, fontSize: "1.5rem", color: "#2A2A2A", marginBottom: "1rem" }}>
             ページの読み込みに失敗しました
           </h2>
@@ -32,7 +32,7 @@ export default function GlobalError({
           </p>
           <button
             onClick={() => window.location.reload()}
-            style={{ background: "#C8389A", color: "#fff", border: "none", padding: "0.75rem 2rem", fontSize: "0.875rem", cursor: "pointer" }}
+            style={{ background: "#4F2407", color: "#fff", border: "none", padding: "0.75rem 2rem", fontSize: "0.875rem", cursor: "pointer" }}
           >
             再読み込み
           </button>

@@ -3,7 +3,7 @@ import { Yellowtail } from "next/font/google";
 /** トップの手書き風デザイン用（2026-11-24 社長：Stelléみたいな手書き風・写真の上に文字） */
 export const scriptFont = Yellowtail({ subsets: ["latin"], weight: "400", display: "swap", preload: true });
 
-const PINK = "rgb(var(--site-pop))";
+const PINK = "rgb(var(--site-rose))"; // アクセントのローズピンク
 
 /** Stellé風のギザギザ星（starburst） */
 export function StarBurst({ className = "", children }: { className?: string; children?: React.ReactNode }) {
@@ -60,7 +60,7 @@ export function ScriptLabel({ text, center = false }: { text: string; center?: b
   return (
     <div className={center ? "flex justify-center mb-[8px]" : "mb-[8px]"} aria-hidden>
       <div className="relative inline-block">
-        <span className={`${scriptFont.className} block text-[34px] sm:text-[42px] leading-none text-site-pop -rotate-3 ${center ? "origin-center" : "origin-left"}`}>
+        <span className={`${scriptFont.className} block text-[34px] sm:text-[42px] leading-none text-site-accent -rotate-3 ${center ? "origin-center" : "origin-left"}`}>
           {text}
         </span>
         <Swoosh className={`block w-[110px] sm:w-[150px] h-[10px] -mt-[2px] ${center ? "mx-auto" : "ml-[21px]"}`} />

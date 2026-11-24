@@ -125,7 +125,7 @@ export default async function HomePage() {
           高知県の美容室・アイラッシュサロン
         </h1>
         {/* 手書き風の英字（書いていくように出る） */}
-        <p aria-hidden className={`${scriptFont.className} hd-write relative text-site-text text-[55px] sm:text-[72px] lg:text-[89px] leading-[0.95] -rotate-6 origin-left mb-[8px]`}>
+        <p aria-hidden className={`${scriptFont.className} hd-write relative text-site-accent text-[55px] sm:text-[72px] lg:text-[89px] leading-[0.95] -rotate-6 origin-left mb-[8px]`}>
           Find your<br />
           <span className="pl-[34px] sm:pl-[55px]">Beauty</span>
           <Swoosh className="block w-[200px] sm:w-[260px] lg:w-[320px] h-[18px] sm:h-[22px] ml-[55px] sm:ml-[89px] -mt-[8px]" />
@@ -138,7 +138,7 @@ export default async function HomePage() {
         <a
           href="#salons"
           style={{ animation: "fadeinup 0.9s ease-out 0.6s both" }}
-          className="relative inline-flex items-center justify-center gap-[13px] rounded-full bg-site-pop text-white text-[13px] tracking-[0.2em] px-[34px] py-[13px] shadow-[0_8px_21px_rgba(200,56,154,0.35)] hover:scale-105 transition-transform duration-300"
+          className="relative inline-flex items-center justify-center gap-[13px] rounded-full bg-site-rose text-white text-[13px] tracking-[0.2em] px-[34px] py-[13px] shadow-[0_8px_21px_rgba(255,0,70,0.3)] hover:scale-105 transition-transform duration-300"
         >
           店舗を選んで予約
           <span aria-hidden="true" className="inline-block w-[34px] h-px bg-white relative after:absolute after:right-0 after:-top-[3px] after:w-[7px] after:h-[7px] after:border-r after:border-t after:border-white after:rotate-45" />
@@ -150,13 +150,13 @@ export default async function HomePage() {
         >
           <dt>美容室</dt>
           <dd>
-            <Link href="/salon/riv" className="underline underline-offset-4 decoration-site-pop/50 hover:text-site-pop">Riv.（高知市）</Link>
+            <Link href="/salon/riv" className="underline underline-offset-4 decoration-site-accent/40 hover:text-site-rose">Riv.（高知市）</Link>
             <span className="mx-1.5 text-site-text/30">・</span>
-            <Link href="/salon/fleurami" className="underline underline-offset-4 decoration-site-pop/50 hover:text-site-pop">fleur ami（香南市）</Link>
+            <Link href="/salon/fleurami" className="underline underline-offset-4 decoration-site-accent/40 hover:text-site-rose">fleur ami（香南市）</Link>
           </dd>
           <dt>まつげ・眉毛</dt>
           <dd>
-            <Link href="/salon/raffine" className="underline underline-offset-4 decoration-site-pop/50 hover:text-site-pop">Raffine（はりまや橋）</Link>
+            <Link href="/salon/raffine" className="underline underline-offset-4 decoration-site-accent/40 hover:text-site-rose">Raffine（はりまや橋）</Link>
           </dd>
         </dl>
       </HeroSlideshow>
