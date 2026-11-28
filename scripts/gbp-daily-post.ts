@@ -103,8 +103,22 @@ function toAbsoluteUrl(src?: string): string | undefined {
   return `${SITE_ORIGIN}${src.startsWith("/") ? "" : "/"}${src}`;
 }
 
+/**
+ * GBPは .webp を受け付けない（[400] Image format is not supported）。
+ * サイトの .webp には同名の .jpg が public/ に残っているので、GBPへ送るときだけ .jpg に差し替える。
+ * .jpg が無い場合は .webp のまま（失敗するが、他の記事は止めない）。（2026-11-29）
+ */
+function toGbpImageUrl(src?: string): string | undefined {
+  if (src && /\.webp$/i.test(src) && !/^https?:\/\//.test(src)) {
+    const jpg = src.replace(/\.webp$/i, ".jpg");
+    const local = path.join(process.cwd(), "public", jpg.replace(/^\//, ""));
+    if (fs.existsSync(local)) return toAbsoluteUrl(jpg);
+  }
+  return toAbsoluteUrl(src);
+}
+
 async function postTextToGbp(article: Article): Promise<void> {
-  const thumbnailUrl = toAbsoluteUrl(article.thumbnail);
+  const thumbnailUrl = toGbpImageUrl(article.thumbnail);
   const payload: Record<string, string> = {
     type: "post",
     salonKey: article.salonKey,
@@ -126,7 +140,7 @@ async function postTextToGbp(article: Article): Promise<void> {
 }
 
 async function postPhotoToGbp(article: Article): Promise<void> {
-  const sourceUrl = toAbsoluteUrl(article.thumbnail);
+  const sourceUrl = toGbpImageUrl(article.thumbnail);
   if (!sourceUrl) throw new Error("thumbnail なし");
 
   const res = await fetch(WEBHOOK_URL!, {
